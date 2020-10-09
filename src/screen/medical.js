@@ -7,6 +7,7 @@ import dr from "../images/Dr.jpg";
 import MedicalServices from "../components/medicalServices";
 import MedicalClinics from "../components/medicalClinics";
 import MedicalOPD from "../components/medicalOPD";
+import MainHeader from '../components/Home/MainHeader'
 
 export default class Medical extends React.Component {
   constructor(props) {
@@ -16,11 +17,7 @@ export default class Medical extends React.Component {
   render() {
     return (
       <div>
-        <div className="Header p-3 text-left">
-          <div className="container">
-            <img src={logo} width="180px" />
-          </div>
-        </div>
+        <MainHeader />
         <div
           style={{ backgroundImage: `url(${dr})`, backgroundSize: "cover" }}
           className="p-5"

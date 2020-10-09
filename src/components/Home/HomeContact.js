@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import './Home.css'
+import "./Home.css";
 import logo from "../../images/logo.png";
 
 export default class HomeContact extends React.Component {
@@ -11,116 +11,94 @@ export default class HomeContact extends React.Component {
   }
   render() {
     return (
-<>
-
-<div className="container-fluid" style={{backgroundColor:'white',marginBottom:40}}>
-<h1 className="pt-4 " style={{}}><strong>Contact us</strong></h1>
-
-<div className="container-fluid" style={{marginTop:40}}>
-    <div className="row">
-
-
-{/* HEAD OFFICE INFO  */}
-<div className="col-md-4" style={{}}>
-  <div >
-
-  <h6 className="addBorder">Head Office</h6>
-  <div>
-  <h6 style={{width:300,marginLeft:10}}>A-25, Bahadurabad Chowrangi Karachi, Pakistan</h6>
-  <div className='row' style={{marginLeft:10}}>
-  <p style={{ fontSize: "1em" }}>
-                  <i class="fas fa-phone-alt"></i>
-                </p>
- <h6  style={{width:300,marginLeft:10}}>UAN: 111-729-526</h6>
-  </div>
-  <div className='row' style={{marginLeft:10}}>
-  <p style={{ fontSize: "1em" }}>
-                  <i class="fas fa-mobile"></i>
-                </p>
- <h6  style={{width:300,marginLeft:10}}>CELL: 92-311-1729526</h6>
-  </div>
-  <div className='row' style={{marginLeft:10}}>
-  <p style={{ fontSize: "1em" }}>
-                  <i class="fas fa-globe"></i>
-                </p>
- <h6  style={{width:300,marginLeft:10}}>(+0092-213) 4130786-90</h6>
-  </div>
-  </div>
-  </div>
-</div>
-
-
-{/* UK OFFICE */}
-<div className="col-md-4" style={{}}>
-<div >
-  <h6 className="addBorderUsa">USA Office</h6>
-  <div>
-  <h6 style={{width:300,marginLeft:10}}>A-25, Bahadurabad Chowrangi Karachi, Pakistan</h6>
-  <div className='row' style={{marginLeft:10}}>
-  <p style={{ fontSize: "1em" }}>
-                  <i class="fas fa-phone-alt"></i>
-                </p>
- <h6  style={{width:300,marginLeft:10}}>NO +1(716)941 7792</h6>
-  </div>
-  </div>
-  </div>
-</div>
-
-{/* UK OFFICE */}
-<div className="col-md-4 " style={{}}>
-<div >
-  <h6 className="addBorderUK">UK Office</h6>
-  <div>
-  <h6 style={{width:300,marginLeft:10}}>A-25, Bahadurabad Chowrangi Karachi, Pakistan</h6>
-  <div className='row' style={{marginLeft:10}}>
-  <p style={{ fontSize: "1em" }}>
-                  <i class="fas fa-phone-alt"></i>
-                </p>
- <h6  style={{width:300,marginLeft:10}}>NO (+44)115 970 6256</h6>
-  </div>
-  </div>
-</div>
-
-</div>
-    </div>
-    </div>
-
-{/* QUERIES BOX */}
-<div className="container-fluid" style={{marginTop: 20}}>
-<h3 style={{textAlign:'left',marginTop:10}}>For any query :</h3>
-
-<div className="row" style={{marginTop:20}}>
-<div className=" col-md-4 form-group ">
-              <p className="text-left">Your Name ( required )</p>
-              <input type="text" id="author" class="form-control"  name="author"  size="45" />
-            </div>
-            <div className="col-md-4 form-group ">
-              <p className="text-left">Your Email ( required )</p>
-              <input type="text" id="author" class="form-control"  name="author"  size="45" />
-            </div>
-            <div className="col-md-4 form-group ">
-              <p className="text-left">Subject ( required )</p>
-              <input type="text" id="author" class="form-control"  name="author"  size="45" />
-            </div>
-          
+      <div className="container">
+        <h1 className="Heading">Contact us</h1>
+        <div className="row">
+          {/* <div className="col-md-6">
+            <form>
+              <div className="row">
+                <div className="col-md-6 pt-4">
+                  <label for="name" className="labl">
+                    Your Name (required)
+                  </label>
+                  <input id="name" className="inp" />
+                </div>
+                <div className="col-md-6 pt-4">
+                  <label for="Subject" className="labl">
+                    Your Subject (required)
+                  </label>
+                  <input id="Subject" className="inp" />
+                </div>
+                <div className="col-md-12 pt-4">
+                  <label for="email" className="labl">
+                    Your Email (required)
+                  </label>
+                  <input id="email" className="inp" />
+                </div>
+                <div className="col-md-12 pt-4">
+                  <label for="message" className="labl">
+                    Your Message
+                  </label>
+                  <textarea id="message" className="inp" rows="8"></textarea>
+                </div>
               </div>
-         
-
-            <div className="col-md-6 form-group ">
-            <p className="text-left">Your Message</p>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows='8'></textarea>
+            </form>
+          </div> */}
+          <div className="row text-left">
+            <div className="col-md-6 p-3 border-bottom">
+              <p style={{ fontWeight: "bold" }}>Head Office</p>
+              <p className="text-muted">
+                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
+                Chowrangi Karachi, Pakistan
+              </p>
+              <div>
+                <p>
+                  <i class="fas fa-phone-alt"></i>{" "}
+                  <a href="">UAN: 111-729-526</a>
+                </p>
               </div>
-            
-   <div className="col-md-4">
-<button type="button" class="btn btn-primary btn-lg btn-block" >Submit</button>
-</div>
-</div>     
-           
-
-
-
-</div>
-</>
-);
-}
+              <div>
+                <p>
+                  <i class="fas fa-mobile"></i>{" "}
+                  <a href="">CELL: 92-311-1729526</a>
+                </p>
+              </div>
+              <div>
+                <p>
+                  <i class="fas fa-globe"></i>{" "}
+                  <a href="">(+0092-213) 4130786-90</a>
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 p-3 border-bottom">
+              <p style={{ fontWeight: "bold" }}>USA Office</p>
+              <p className="text-muted">
+                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
+                Chowrangi Karachi, Pakistan
+              </p>
+              <div>
+                <p>
+                  <i class="fas fa-phone-alt"></i>{" "}
+                  <a href="">UAN: +1(716)941 7792</a>
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 p-3 border-bottom">
+              <p style={{ fontWeight: "bold" }}>UK Office</p>
+              <p className="text-muted">
+                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
+                Chowrangi Karachi, Pakistan
+              </p>
+              <div>
+                <p>
+                  <i class="fas fa-phone-alt"></i>{" "}
+                  <a href="">UAN: (+44)115 970 6256</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }

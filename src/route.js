@@ -5,11 +5,13 @@ import Welfare from './screen/Welfare'
 import ChairmenMessage from './screen/chairmenMessage'
 import Medical from './screen/medical'
 import Main from './screen/Main'
-import Services from './screen/Services'
+import Services from './screen/Services';
+import Contact from './screen/contact'
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
+      <Route exact path="/contact" component={Contact} />
       <Route exact path="/chairmenmessage" component={ChairmenMessage} />
       <Route exact path="/Smit" component={Smit} />
       <Route exact path="/Welfare" component={Welfare} />
