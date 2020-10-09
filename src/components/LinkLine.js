@@ -17,8 +17,8 @@ style={{ backgroundColor: "rgb(50,50,50)" }}
 className="container-fluid"
 >
 <div className="container">
-  <div className="row">
-    <div className="social col-md-3 p-1">
+  {/* <div className="row"> */}
+    {/* <div className="social col-md-3 p-1">
       <a href="#">
         <i class="fab fa-facebook"></i>
       </a>
@@ -34,13 +34,13 @@ className="container-fluid"
       <a href="#">
         <i class="fab fa-whatsapp"></i>
       </a>
-    </div>
-    <div className="col-md-9 p-2 text-light">
+    </div> */}
+    <div className="col-md-12 p-2 text-light">
       Millions of people's life has changed, millions more awaiting
       your donation
     </div>
   </div>
-</div>
+{/* </div> */}
 </div>
 
 );

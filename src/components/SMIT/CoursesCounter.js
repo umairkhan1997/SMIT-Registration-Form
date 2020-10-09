@@ -1,8 +1,9 @@
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import CountUp from "react-countup";
-import "../App.css";
+import '../../App.css'
 import Zoom from "react-reveal/Zoom";
 
 export default class ServiceCounter extends React.Component {
@@ -12,7 +13,14 @@ export default class ServiceCounter extends React.Component {
   }
   render() {
     return (
-      <div className="back bg-image">
+        
+        <>
+        <div className="container mt-6 ">
+          <div className="p-3">
+            <h1 className="Heading font-weight-bold">Passed Out Students</h1>
+          </div>
+        </div>
+        <div className="back bg-image">
         <div
           className="pt-5 pb-5"
           style={{ backgroundColor: "rgba(212, 60, 24,.5)" }}
@@ -23,16 +31,16 @@ export default class ServiceCounter extends React.Component {
                 <Zoom>
                   <div className="p-3">
                     <p style={{ fontSize: "3em" }}>
-                      <i class="fas fa-utensils"></i>
+                      <i class="fas fa-laptop-code"></i>
                     </p>
                     <CountUp
                       style={{ fontSize: "2.5em" }}
-                      start={100000}
-                      end={150000}
+                      start={1000}
+                      end={15000}
                       duration={4}
                     />{" "}
                     <br />
-                    Daily Dastarkhwan (Monthly)
+                    Web and Mobile App Development
                   </div>
                 </Zoom>
               </div>
@@ -40,7 +48,7 @@ export default class ServiceCounter extends React.Component {
                 <Zoom>
                   <div className="p-3">
                     <p style={{ fontSize: "3em" }}>
-                      <i class="fas fa-user-friends"></i>
+                      <i class="fas fa-network-wired"></i>
                     </p>
                     <CountUp
                       style={{ fontSize: "2.5em" }}
@@ -49,7 +57,7 @@ export default class ServiceCounter extends React.Component {
                       duration={4}
                     />
                     <br />
-                    Family Adoption (Monthly)
+                    Cisco Certified Networking Academy (CCNA)
                   </div>
                 </Zoom>
               </div>
@@ -57,16 +65,16 @@ export default class ServiceCounter extends React.Component {
               <Zoom>
                 <div className="p-3">
                   <p style={{ fontSize: "3em" }}>
-                    <i class="fas fa-user-md"></i>
+                    <i class="fas fa-pen-nib"></i>
                   </p>
                   <CountUp
                     style={{ fontSize: "2.5em" }}
-                    start={10000}
-                    end={53749}
+                    start={1000}
+                    end={5349}
                     duration={4}
                   />{" "}
                   <br />
-                  Medical (Monthly)
+                  Graphic Designing 
                 </div>
                 </Zoom>
               </div>
@@ -74,16 +82,16 @@ export default class ServiceCounter extends React.Component {
               <Zoom>
                 <div className="p-3">
                   <p style={{ fontSize: "3em" }}>
-                    <i class="fas fa-user-graduate"></i>
+                    <i class="fab fa-windows"></i>
                   </p>
                   <CountUp
                     style={{ fontSize: "2.5em" }}
-                    start={100000}
-                    end={180000}
+                    start={1000}
+                    end={3000}
                     duration={4}
                   />
                   <br />
-                  Education (Monthly)
+                 CCO & CCA
                 </div>
                 </Zoom>
               </div>
@@ -91,6 +99,8 @@ export default class ServiceCounter extends React.Component {
           </div>
         </div>
       </div>
-    );
-  }
-}
+</>
+    )
+    }
+    }
+    
