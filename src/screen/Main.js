@@ -20,7 +20,7 @@ export default class Main extends React.Component {
         <ImgSlider />
         <Introduction />
         <HomeNews />
-        <HomeContact />
+        {/* <HomeContact /> */}
         <Footer />
       </div>
     );

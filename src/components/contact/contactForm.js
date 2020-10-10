@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./contact.css";
-import logo from '../../images/logo.png'
+import logo from "../../images/logo.png";
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -13,10 +13,10 @@ export default class ContactForm extends React.Component {
     return (
       <div>
         <div className="container-fluid bg-light pt-5 pb-5">
-          <div className='p-5 bg-primary text-white rounded'>
-            <h2>Get In Touch</h2>
+          <div className="p-5 bg-primary text-white rounded">
+            <h2 className="p-5">Get In Touch</h2>
           </div>
-          <div style={{marginTop:'-20px'}} className="container pl-5 pr-5">
+          <div style={{ marginTop: "-40px" }} className="container pl-5 pr-5">
             <div className="row shadow">
               <div className="col-md-8 bg-white p-5">
                 <h2>Send us a message</h2>
@@ -55,9 +55,64 @@ export default class ContactForm extends React.Component {
                   </div>
                 </form>
               </div>
-              <div className="col-md-4 bg-dark">
-                <div className='p-5'>
-                  <img src={logo} width='180px' />
+              <div style={{ backgroundColor: "#103f6e" }} className="col-md-4">
+                <div className="p-5">
+                  <img src={logo} width="180px" />
+                </div>
+                <div className="p-5">
+                  <div className="text-white text-left">
+                    <p style={{fontSize:'1.2em'}}>Saylani Welfare Head Office</p>
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
+                      Chowrangi Karachi, Pakistan
+                    </p>
+                    <div className="pt-2 pb-2">
+                      <p>
+                        <i class="fas fa-phone-alt"></i>{" "}
+                        <a style={{color:'white'}} href="tel:111729526">UAN: 111-729-526</a>
+                      </p>
+                    </div>
+                    <div className="pt-2 pb-2">
+                      <p>
+                        <i class="fas fa-globe"></i>{" "}
+                        <a style={{color:'white'}} href="tel:+0092-2134130786-90">
+                          (+0092-213) 4130786-90
+                        </a>
+                      </p>
+                    </div>
+                    <div className="pt-2 pb-2">
+                      <p>
+                        <i class="fas fa-envelope"></i>{" "}
+                        <a style={{color:'white'}} href="mailto:info@saylaniwelfare.com">
+                          info@saylaniwelfare.com
+                        </a>
+                      </p>
+                    </div>
+                    <div className="pt-2 pb-2">
+                      <div>
+                        <span className="socialLink">
+                          <a href="https://www.facebook.com/saylaniwelfare/">
+                            <i class="fab fa-facebook"></i>
+                          </a>
+                        </span>
+                        <span className="socialLink">
+                          <a href="https://www.youtube.com/c/SaylaniWelfareTrustOfficialPage">
+                            <i class="fab fa-youtube"></i>
+                          </a>
+                        </span>
+                        <span className="socialLink">
+                          <a href="https://www.instagram.com/saylaniwelfare/">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </span>
+                        <span className="socialLink">
+                          <a href="https://twitter.com/OfficialSwit">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

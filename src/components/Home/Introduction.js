@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
-import Reveal from 'react-reveal/Reveal';
+import Fade from "react-reveal/Fade";
 
 export default class Introduction extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class Introduction extends React.Component {
           <div className="p-3">
             <h1 className="Heading">Introduction</h1>
           </div>
-          <Reveal effect="fadeInUp">
+          <Fade left cascade>
             <p className="text-muted text-justify">
               Established in May 1999 by famous spiritual and religious scholar
               Maulana Bashir Ahmed Farooqui, Saylani Welfare International Trust
@@ -24,6 +24,8 @@ export default class Introduction extends React.Component {
               alleviating the financial troubles of the poor, giving people a
               chance to live a dignified life and spreading happiness.
             </p>
+          </Fade>
+          <Fade left cascade>
             <p className="text-muted text-justify">
               We are an organization that believes in lighting up the lives of
               underprivileged people across the world. We endeavor to provide
@@ -51,7 +53,7 @@ export default class Introduction extends React.Component {
               graciously lent us a hand by supporting our causes and enabling us
               to serve the needs of people in need.
             </p> */}
-          </Reveal>
+          </Fade>
         </div>
       </div>
     );
