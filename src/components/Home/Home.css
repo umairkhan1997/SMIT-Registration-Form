@@ -20,14 +20,21 @@
   width: 100%;
   padding: 10px;
   font-size: 1em;
-  border: 1.5px solid grey;
+  border: 2px solid lightgrey;
   outline: none;
 }
 .inp:focus{
-  border: 1.5px solid dodgerblue;
+  border: 2px solid dodgerblue;
 }
 .labl{
   display: block;
   text-align: left;
   font-weight: bold;
+}
+.location{
+  font-weight: bold;
+}
+.location:hover{
+  color: dodgerblue;
+  cursor: pointer;
 }
