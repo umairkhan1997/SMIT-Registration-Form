@@ -50,7 +50,7 @@ export default class MainHeader extends React.Component {
                       </a>
                     </li>
 
-                    <li className="nav-item dropdown">
+                    {/* <li className="nav-item dropdown">
                       <a
                         className="nav-link dropdown-toggle"
                         href="#"
@@ -60,37 +60,7 @@ export default class MainHeader extends React.Component {
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        About
-                      </a>
-                      <Fade>
-                        <div
-                          className="dropdown-menu headingList"
-                          aria-labelledby="navbarDropdown"
-                        >
-                          <a className="dropdown-item" href="#">
-                            Action
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            Another action
-                          </a>
-                          <div className="dropdown-divider"></div>
-                          <a className="dropdown-item" href="#">
-                            Something else here
-                          </a>
-                        </div>
-                      </Fade>
-                    </li>
-                    <li className="nav-item dropdown">
-                      <a
-                        className="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Projects
+                        Projects - Services
                       </a>
                       <Fade>
                         <div
@@ -100,7 +70,7 @@ export default class MainHeader extends React.Component {
                           <a className="dropdown-item" href="Smit">
                             Education
                           </a>
-                          <a className="dropdown-item" href="#">
+                          <a className="dropdown-item" href="welfare">
                             Welfare
                           </a>
                           <a className="dropdown-item" href="#">
@@ -108,7 +78,13 @@ export default class MainHeader extends React.Component {
                           </a>
                         </div>
                       </Fade>
+                    </li> */}
+                         <li className="nav-item">
+                      <a className="nav-link" href="services">
+                      Projects - Services
+                      </a>
                     </li>
+
                     <li className="nav-item">
                       <a
                         className="nav-link"
@@ -127,6 +103,18 @@ export default class MainHeader extends React.Component {
                         aria-disabled="true"
                       >
                         Contact
+                      </a>
+                    </li>
+                    
+                    <li className="nav-item bg-primary rounded">
+                      <a
+                        className="nav-link"
+                        href="#"
+                        tabindex="-1"
+                        aria-disabled="true"
+                        style={{color:'white'}}
+                      >
+                        Donate
                       </a>
                     </li>
                   </ul>

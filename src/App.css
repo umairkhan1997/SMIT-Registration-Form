@@ -50,7 +50,6 @@
   color: #d43c18;
   margin-top: 20px;
   text-align: left;
-
 }
 
 /* .coursesBlog {
@@ -259,7 +258,7 @@ margin-left: -80px;
  
 }
 .countDivWel{
-  border: 3px solid #d43c18;
+  border: 3px solid dodgerblue;
   /* padding:30px; */
   height: 140px;
   width: 140px;
