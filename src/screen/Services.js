@@ -71,12 +71,14 @@ export default class Services extends React.Component {
               </a>
             </div>
             <div className="col-md-3 p-3">
+            <a href="medical">
               <div className="small" style={{borderColor:"dodgerblue"}}>
                 <p style={{ fontSize: "3.5em" }}>
                   <i class="fas fa-hand-holding-medical" style={{color:"dodgerblue"}}></i>
                 </p>
                 <p style={{ fontSize: "1.5em",color:"dodgerblue" }}>Medical</p>
               </div>
+              </a>
             </div>
             <div className="col-md-3 p-3">
               <div className="small"style={{borderColor:"dodgerblue"}}>

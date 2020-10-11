@@ -1,115 +1,64 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import '../App.css'
+import "../App.css";
+import logo from "../images/logo.png";
 
 export default class Footer extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {};
-    }
-    render() {
-      return (
-  <>
-  
-  <div className="container-fluid" style={{backgroundColor:'#292825'}}>
-  <div className="row d-flex justify-content-left" style={{paddingTop:50}}>
- 
-  <div className="col-md-2" >
-  <h3 style={{color:'white'}}>Saylani Service</h3>
-  {/* <ul>
-  <li style={{color:'white'}}>Hajj Application Form</li>
-  <li style={{color:'white'}}>Saylani Dastarkhwan</li>
-  <li style={{color:'white'}}>Online Sadqa Form</li>
-  <li style={{color:'white'}}>Saylani Job Bank</li>
-  </ul> */}
-   <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-   <h6 style={{color:'gray',textAlign:'left'}}>Hajj Application Form</h6>
-   </div>
-   <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-  <h6 style={{color:'gray',textAlign:'left'}}>Saylani Dastarkhwan</h6>
-  </div>
-  <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-                  <h6 style={{color:'gray',textAlign:'left'}}>Online Sadqa Form</h6>
-  </div>
-  <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-                  <h6 style={{color:'gray',textAlign:'left'}}>Saylani Job Bank</h6>
-  </div>
-  </div>
-  <div className="col-md-2">
-  <h3 style={{color:'white',marginLeft:-60}}>Education</h3>
-  <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-   <h6 style={{color:'gray',textAlign:'left'}}>Saylani Mass IT</h6>
-   </div>
-   <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-  <h6 style={{color:'gray',textAlign:'left'}}>Saylani Incubation Center</h6>
-  </div>
-  <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-                  <h6 style={{color:'gray',textAlign:'left'}}>Saylani Green house</h6>
-  </div>
-  <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-                  <h6 style={{color:'gray',textAlign:'left'}}>Saylani Job Bank</h6>
-  </div>
-  </div>
-  <div className="col-md-2">
-  <h3 style={{color:'white'}}>Future Project</h3>
- 
-  <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-   <h6 style={{color:'gray',textAlign:'left'}}>Saylani University</h6>
-   </div>
-   <div className='row' style={{marginLeft:25}}>
-    <h6 style={{ fontSize: "1em",color:'gray',marginRight:10 }}>
-                    {/* <i className="keyboard_arrow_right "></i> */}
-                    <i className="material-icons">keyboard_arrow_right</i>
-                  </h6>
-  <h6 style={{color:'gray',textAlign:'left'}}>Saylani City</h6>
-  </div>
-  
- 
-  </div>
- 
-  </div>
-  </div>
-  <div className="cotainer" style={{backgroundColor:'#242320',height:60}}>
-  <h6 style={{paddingTop:20,color:'white'}}>Copyright © 2020 Saylani Welfare</h6>
-  </div>
-</>
-      )
-}
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div style={{ backgroundColor: "#292825" }} className="container-fluid">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4 text-left p-5">
+              <img width="180px" src={logo} />
+              <div className="pt-3 text-white">
+                <p>A-25, Bahadurabad Chowrangi Karachi, Pakistan</p>
+                <p>UAN: 111-729-526</p>
+              </div>
+            </div>
+
+            <div className="col-md-4 text-left p-5">
+              <ul>
+                <li className="footerList">
+                  <a href="/">Home</a>
+                </li>
+                <li className="footerList">
+                  <a href="/contact">Contact</a>
+                </li>
+                <li className="footerList">
+                  <a href="/media">Media</a>
+                </li>
+                <li className="footerList">
+                  <a href="/services">Services</a>
+                </li>
+                <li className="footerList">
+                  <a href="/welfare">Welfare</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-4 text-left p-5">
+              <iframe
+                style={{ borderRadius: "8px" }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.447066649314!2d67.06596461432055!3d24.882727750494166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33eebb56aaaab%3A0x27ab04809ef5020a!2sSaylani%20Welfare%20Head%20Office.!5e0!3m2!1sen!2s!4v1602339523746!5m2!1sen!2s"
+                width="100%"
+                height="250"
+                frameborder="0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div className="bg-image p-2" style={{ backgroundColor: "#242320" }}>
+          <p className="text-white">Copyright © 2020 Saylani Welfare</p>
+        </div>
+      </div>
+    );
+  }
 }

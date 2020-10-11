@@ -1,0 +1,9 @@
+.searchMedia{
+    padding: 10px;
+    border: 2px solid lightgrey;
+    width: 80%;
+    outline: none;
+}
+.searchMedia:focus{
+    border: 2px solid green;
+}

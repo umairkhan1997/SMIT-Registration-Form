@@ -3,8 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import logo from "../../images/logo.png";
 // import "../App.css";
-import './Home.css'
-import $ from "jquery";
+import "./Home.css";
 import Fade from "react-reveal/Fade";
 export default class MainHeader extends React.Component {
   constructor(props) {
@@ -70,10 +69,10 @@ export default class MainHeader extends React.Component {
                           <a className="dropdown-item" href="Smit">
                             Education
                           </a>
-                          <a className="dropdown-item" href="welfare">
+                          <a className="dropdown-item" href="/welfare">
                             Welfare
                           </a>
-                          <a className="dropdown-item" href="#">
+                          <a className="dropdown-item" href="/medical">
                             Medical
                           </a>
                         </div>
@@ -88,7 +87,7 @@ export default class MainHeader extends React.Component {
                     <li className="nav-item">
                       <a
                         className="nav-link"
-                        href="#"
+                        href="/media"
                         tabindex="-1"
                         aria-disabled="true"
                       >
@@ -98,7 +97,7 @@ export default class MainHeader extends React.Component {
                     <li className="nav-item">
                       <a
                         className="nav-link"
-                        href="#"
+                        href="/contact"
                         tabindex="-1"
                         aria-disabled="true"
                       >
