@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import MainHeader from "../components/MainHeader";
+import MainHeader from "../components/Home/MainHeader";
 import LinkLine from "../components/LinkLine";
 import img6 from "../images/familyadop.jpg";
 import CountUp from "react-countup";

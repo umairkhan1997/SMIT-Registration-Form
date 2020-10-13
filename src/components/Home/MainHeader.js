@@ -96,6 +96,9 @@ export default class MainHeader extends React.Component {
                           className="dropdown-menu headingList"
                           aria-labelledby="navbarDropdown"
                         >
+                          <a className="dropdown-item" href="services">
+                            Services
+                          </a>
                           <a className="dropdown-item" href="Smit">
                             Education
                           </a>

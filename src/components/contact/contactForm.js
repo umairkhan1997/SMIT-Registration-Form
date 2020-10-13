@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./contact.css";
 import logo from "../../images/logo.png";
+import Fade from 'react-reveal'
 
 export default class ContactForm extends React.Component {
   constructor(props) {

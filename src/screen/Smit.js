@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import MainHeader from "../components/MainHeader";
+import MainHeader from "../components/Home/MainHeader";
 import MainCourses from "../components/SMIT/MainCourses";
 import img7 from "../images/human.JPG";
 import LinkLine from "../components/LinkLine";
@@ -17,7 +17,6 @@ export default class Smit extends React.Component {
     super(props);
     this.state = {};
   }
-
   render() {
     return (
       <div style={{ backgroundColor: "white" }}>

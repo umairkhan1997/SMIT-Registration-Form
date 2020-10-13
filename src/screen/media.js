@@ -6,7 +6,7 @@ import MainHeader from "../components/Home/MainHeader";
 import cover from "../images/media.jpg";
 import "../components/media/media.css";
 import Fade from "react-reveal/Fade";
-import Video from '../components/media/video'
+import Video from '../components/media/video';
 
 export default class Media extends React.Component {
   constructor(props) {

@@ -5,7 +5,7 @@ import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
 import HomeContact from "../components/Home/HomeContact";
 import ContactForm from "../components/contact/contactForm";
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -18,8 +18,8 @@ export default class Contact extends React.Component {
         <MainHeader />
         <ContactForm />
         <div className="container-fluid pt-5 pb-5 bg-light">
-          <div className="container">
             <HomeContact />
+          <div className="container">
           </div>
         </div>
         <div className="bg-image">

@@ -42,12 +42,8 @@
 }
 
 .Heading {
-  background-image: url("./images/logo-round.png");
-  background-repeat: no-repeat;
-  background-size: 50px;
   padding: 8px;
-  padding-left: 65px;
-  color: #d43c18;
+  color: #028de5;
   margin-top: 20px;
   text-align: left;
 }
@@ -58,18 +54,7 @@
   font-weight: bold;
 } */
 
-.small {
-  padding: 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 2px solid #d43c18;
-  color: #d43c18;
-}
-.small:hover {
-  background-color: white;
-  box-shadow: 0 10px 15px lightgrey;
-  border: 2px solid white;
-}
+
 .date {
   width: 120px;
   /* padding: 10px; */
@@ -125,9 +110,7 @@
   text-align: left;
   overflow: hidden;
 }
-.heading {
-  height: 100vh;
-}
+
 
 .upCour {
   background-image: url("./images/upco.jpg");

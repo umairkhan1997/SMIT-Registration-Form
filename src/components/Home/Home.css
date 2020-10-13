@@ -4,11 +4,7 @@
   font-weight: bold;
 }
 .Heading{
-  background-image: url("../../images/logo-round.png");
-  background-repeat: no-repeat;
-  background-size: 50px;
   padding: 8px;
-  padding-left: 65px;
   color: #007BB1 ;
   margin-bottom: 20px;
   text-align: left;
