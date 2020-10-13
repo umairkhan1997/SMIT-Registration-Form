@@ -2,8 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
-import Fade from "react-reveal/Fade";
-
+import Reveal from 'react-reveal/Reveal';
+import hazrat from '../../images/hazrat.jpg'
 export default class Introduction extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +16,7 @@ export default class Introduction extends React.Component {
           <div className="p-3">
             <h1 className="Heading">Introduction</h1>
           </div>
-          <Fade left cascade>
+          {/* <Fade left cascade>
             <p className="text-muted text-justify">
               Established in May 1999 by famous spiritual and religious scholar
               Maulana Bashir Ahmed Farooqui, Saylani Welfare International Trust
@@ -37,23 +37,34 @@ export default class Introduction extends React.Component {
               tomorrow and several are given the opportunity to stand on their
               feet financially.
             </p>
-            {/* <p className="text-muted text-justify">
-              Today, we are proud to say that our physical presence extends
-              throughout Pakistan with a vast network of 125 branches operating
-              in major cities including Karachi, Lahore, Islamabad, Rawalpindi,
-              Hyderabad and Faisalabad. Apart from Pakistan, we have overseas
-              offices in the UK, USA and UAE as well. Our worldwide branches are
-              operating under the guidance of a team of over 3,500 working
-              professionals who help almost 150,000 people on a daily basis.
-            </p> */}
-            {/* <p className="text-muted text-justify">
-              We strongly believe that a little help goes a long way and our
-              work would not be possible without the generous support of our
-              valuable donors. Our local and international donors have
-              graciously lent us a hand by supporting our causes and enabling us
-              to serve the needs of people in need.
-            </p> */}
-          </Fade>
+          </Fade> */}
+          <div className='col-md-12 row'>
+<div className="col-md-6">
+<img src={hazrat} style={{width:'100%',height:330}}/>
+</div>
+<div className="col-md-6">
+          <Reveal effect="fadeInUp">
+            <p className="text-muted text-justify">
+              Established in May 1999 by famous spiritual and religious scholar
+              Maulana Bashir Ahmed Farooqui, Saylani Welfare International Trust
+              was built on the fundamentals of breaking the cycle of poverty,
+              alleviating the financial troubles of the poor, giving people a
+              chance to live a dignified life and spreading happiness.
+            </p>
+            <p className="text-muted text-justify">
+              We are an organization that believes in lighting up the lives of
+              underprivileged people across the world. We endeavor to provide
+              the best quality services in areas including food, education,
+              medical and social welfare free of cost to people living in the
+              dark. With over 60 different sectors, we feed thousands of hungry
+              people each day, hundreds more are given the hope of life through
+              medical health care, many are educated to become leaders of
+              tomorrow and several are given the opportunity to stand on their
+              feet financially.
+            </p>
+          </Reveal>
+</div>
+          </div>
         </div>
       </div>
     );
