@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
 import logo from "../../images/logo.png";
+import Fade from "react-reveal";
 
 export default class HomeContact extends React.Component {
   constructor(props) {
@@ -11,138 +12,362 @@ export default class HomeContact extends React.Component {
   }
   render() {
     return (
-      <div className="container">
-        <h1 className="Heading">Over Branches</h1>
-        <div className="row">
-          <div className="row text-left">
-            <div className="col-md-4 p-3 border-bottom">
-              <p
-                data-toggle="modal"
-                data-target="#exampleModalLong"
-                className="location"
+      <div
+        style={{
+          backgroundColor: "#d8dfe6",
+        }}
+        className="bg-image"
+      >
+        <div className="container">
+          <h1 className="Heading">Over Branches</h1>
+        </div>
+        <div class="container-fluid">
+          <div className="container">
+            <div
+              id="carouselContent"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active text-center p-4">
+                  <div className="row text-left">
+                    <Fade left>
+                      <div className="col-md-4 p-3 border-bottom">
+                        <p
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          className="location"
+                        >
+                          Head Office
+                        </p>
+                        <p className="text-muted">
+                          <i class="fas fa-map-marker-alt"></i> A-25,
+                          Bahadurabad Chowrangi Karachi, Pakistan
+                        </p>
+                        <div>
+                          <p>
+                            <i class="fas fa-phone-alt"></i>{" "}
+                            <a href="tel:111729526">UAN: 111-729-526</a>
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            <i class="fas fa-mobile"></i>{" "}
+                            <a href="tel:923111729526">CELL: 92-311-1729526</a>
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            <i class="fas fa-globe"></i>{" "}
+                            <a href="tel:+0092-2134130786-90">
+                              (+0092-213) 4130786-90
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </Fade>
+                    <Fade up>
+                      <div className="col-md-4 p-3 border-bottom">
+                        <p
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          className="location"
+                        >
+                          USA Office
+                        </p>
+                        <p className="text-muted">
+                          <i class="fas fa-map-marker-alt"></i> A-25,
+                          Bahadurabad Chowrangi Karachi, Pakistan
+                        </p>
+                        <div>
+                          <p>
+                            <i class="fas fa-phone-alt"></i>{" "}
+                            <a href="tel:+1716941 7792">UAN: +1(716)941 7792</a>
+                          </p>
+                        </div>
+                      </div>
+                    </Fade>
+                    <Fade right>
+                      <div className="col-md-4 p-3 border-bottom">
+                        <p
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          className="location"
+                        >
+                          UK Office
+                        </p>
+                        <p className="text-muted">
+                          <i class="fas fa-map-marker-alt"></i> A-25,
+                          Bahadurabad Chowrangi Karachi, Pakistan
+                        </p>
+                        <div>
+                          <p>
+                            <i class="fas fa-phone-alt"></i>{" "}
+                            <a href="tel:+44115 970 6256">
+                              UAN: (+44)115 970 6256
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </Fade>
+                    <Fade left>
+                      <div className="col-md-4 p-3 border-bottom">
+                        <p
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          className="location"
+                        >
+                          Faisalabad Office
+                        </p>
+                        <p className="text-muted">
+                          <i class="fas fa-map-marker-alt"></i> A-25,
+                          Bahadurabad Chowrangi Karachi, Pakistan
+                        </p>
+                        <div>
+                          <p>
+                            <i class="fas fa-phone-alt"></i>{" "}
+                            <a href="tel:+44115 970 6256">
+                              UAN: (+44)115 970 6256
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </Fade>
+                    <Fade up>
+                      <div className="col-md-4 p-3 border-bottom">
+                        <p
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          className="location"
+                        >
+                          Haiderabad Office
+                        </p>
+                        <p className="text-muted">
+                          <i class="fas fa-map-marker-alt"></i> A-25,
+                          Bahadurabad Chowrangi Karachi, Pakistan
+                        </p>
+                        <div>
+                          <p>
+                            <i class="fas fa-phone-alt"></i>{" "}
+                            <a href="tel:+44115 970 6256">
+                              UAN: (+44)115 970 6256
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </Fade>
+                    <Fade right>
+                      <div className="col-md-4 p-3 border-bottom">
+                        <p
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          className="location"
+                        >
+                          Pishawar Office
+                        </p>
+                        <p className="text-muted">
+                          <i class="fas fa-map-marker-alt"></i> A-25,
+                          Bahadurabad Chowrangi Karachi, Pakistan
+                        </p>
+                        <div>
+                          <p>
+                            <i class="fas fa-phone-alt"></i>{" "}
+                            <a href="tel:+44115 970 6256">
+                              UAN: (+44)115 970 6256
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </Fade>
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="row text-left">
+                      <Fade left>
+                        <div className="col-md-4 p-3 border-bottom">
+                          <p
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            className="location"
+                          >
+                            Head Office
+                          </p>
+                          <p className="text-muted">
+                            <i class="fas fa-map-marker-alt"></i> A-25,
+                            Bahadurabad Chowrangi Karachi, Pakistan
+                          </p>
+                          <div>
+                            <p>
+                              <i class="fas fa-phone-alt"></i>{" "}
+                              <a href="tel:111729526">UAN: 111-729-526</a>
+                            </p>
+                          </div>
+                          <div>
+                            <p>
+                              <i class="fas fa-mobile"></i>{" "}
+                              <a href="tel:923111729526">
+                                CELL: 92-311-1729526
+                              </a>
+                            </p>
+                          </div>
+                          <div>
+                            <p>
+                              <i class="fas fa-globe"></i>{" "}
+                              <a href="tel:+0092-2134130786-90">
+                                (+0092-213) 4130786-90
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </Fade>
+                      <Fade up>
+                        <div className="col-md-4 p-3 border-bottom">
+                          <p
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            className="location"
+                          >
+                            USA Office
+                          </p>
+                          <p className="text-muted">
+                            <i class="fas fa-map-marker-alt"></i> A-25,
+                            Bahadurabad Chowrangi Karachi, Pakistan
+                          </p>
+                          <div>
+                            <p>
+                              <i class="fas fa-phone-alt"></i>{" "}
+                              <a href="tel:+1716941 7792">
+                                UAN: +1(716)941 7792
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </Fade>
+                      <Fade right>
+                        <div className="col-md-4 p-3 border-bottom">
+                          <p
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            className="location"
+                          >
+                            UK Office
+                          </p>
+                          <p className="text-muted">
+                            <i class="fas fa-map-marker-alt"></i> A-25,
+                            Bahadurabad Chowrangi Karachi, Pakistan
+                          </p>
+                          <div>
+                            <p>
+                              <i class="fas fa-phone-alt"></i>{" "}
+                              <a href="tel:+44115 970 6256">
+                                UAN: (+44)115 970 6256
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </Fade>
+                      <Fade left>
+                        <div className="col-md-4 p-3 border-bottom">
+                          <p
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            className="location"
+                          >
+                            Faisalabad Office
+                          </p>
+                          <p className="text-muted">
+                            <i class="fas fa-map-marker-alt"></i> A-25,
+                            Bahadurabad Chowrangi Karachi, Pakistan
+                          </p>
+                          <div>
+                            <p>
+                              <i class="fas fa-phone-alt"></i>{" "}
+                              <a href="tel:+44115 970 6256">
+                                UAN: (+44)115 970 6256
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </Fade>
+                      <Fade up>
+                        <div className="col-md-4 p-3 border-bottom">
+                          <p
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            className="location"
+                          >
+                            Haiderabad Office
+                          </p>
+                          <p className="text-muted">
+                            <i class="fas fa-map-marker-alt"></i> A-25,
+                            Bahadurabad Chowrangi Karachi, Pakistan
+                          </p>
+                          <div>
+                            <p>
+                              <i class="fas fa-phone-alt"></i>{" "}
+                              <a href="tel:+44115 970 6256">
+                                UAN: (+44)115 970 6256
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </Fade>
+                      <Fade right>
+                        <div className="col-md-4 p-3 border-bottom">
+                          <p
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            className="location"
+                          >
+                            Pishawar Office
+                          </p>
+                          <p className="text-muted">
+                            <i class="fas fa-map-marker-alt"></i> A-25,
+                            Bahadurabad Chowrangi Karachi, Pakistan
+                          </p>
+                          <div>
+                            <p>
+                              <i class="fas fa-phone-alt"></i>{" "}
+                              <a href="tel:+44115 970 6256">
+                                UAN: (+44)115 970 6256
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </Fade>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselContent"
+                role="button"
+                data-slide="prev"
               >
-                Head Office
-              </p>
-              <p className="text-muted">
-                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
-                Chowrangi Karachi, Pakistan
-              </p>
-              <div>
-                <p>
-                  <i class="fas fa-phone-alt"></i>{" "}
-                  <a href="tel:111729526">UAN: 111-729-526</a>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <i class="fas fa-mobile"></i>{" "}
-                  <a href="tel:923111729526">CELL: 92-311-1729526</a>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <i class="fas fa-globe"></i>{" "}
-                  <a href="tel:+0092-2134130786-90">(+0092-213) 4130786-90</a>
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4 p-3 border-bottom">
-              <p
-                data-toggle="modal"
-                data-target="#exampleModalLong"
-                className="location"
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselContent"
+                role="button"
+                data-slide="next"
               >
-                USA Office
-              </p>
-              <p className="text-muted">
-                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
-                Chowrangi Karachi, Pakistan
-              </p>
-              <div>
-                <p>
-                  <i class="fas fa-phone-alt"></i>{" "}
-                  <a href="tel:+1716941 7792">UAN: +1(716)941 7792</a>
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4 p-3 border-bottom">
-              <p
-                data-toggle="modal"
-                data-target="#exampleModalLong"
-                className="location"
-              >
-                UK Office
-              </p>
-              <p className="text-muted">
-                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
-                Chowrangi Karachi, Pakistan
-              </p>
-              <div>
-                <p>
-                  <i class="fas fa-phone-alt"></i>{" "}
-                  <a href="tel:+44115 970 6256">UAN: (+44)115 970 6256</a>
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4 p-3 border-bottom">
-              <p
-                data-toggle="modal"
-                data-target="#exampleModalLong"
-                className="location"
-              >
-                Faisalabad Office
-              </p>
-              <p className="text-muted">
-                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
-                Chowrangi Karachi, Pakistan
-              </p>
-              <div>
-                <p>
-                  <i class="fas fa-phone-alt"></i>{" "}
-                  <a href="tel:+44115 970 6256">UAN: (+44)115 970 6256</a>
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4 p-3 border-bottom">
-              <p
-                data-toggle="modal"
-                data-target="#exampleModalLong"
-                className="location"
-              >
-                Haiderabad Office
-              </p>
-              <p className="text-muted">
-                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
-                Chowrangi Karachi, Pakistan
-              </p>
-              <div>
-                <p>
-                  <i class="fas fa-phone-alt"></i>{" "}
-                  <a href="tel:+44115 970 6256">UAN: (+44)115 970 6256</a>
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4 p-3 border-bottom">
-              <p
-                data-toggle="modal"
-                data-target="#exampleModalLong"
-                className="location"
-              >
-                Pishawar Office
-              </p>
-              <p className="text-muted">
-                <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
-                Chowrangi Karachi, Pakistan
-              </p>
-              <div>
-                <p>
-                  <i class="fas fa-phone-alt"></i>{" "}
-                  <a href="tel:+44115 970 6256">UAN: (+44)115 970 6256</a>
-                </p>
-              </div>
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
           </div>
         </div>
+
         <div
           class="modal fade"
           id="exampleModalLong"

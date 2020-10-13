@@ -1,0 +1,15 @@
+.small{
+    padding: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(to bottom right, #3375cc, #58a6f0);
+    transition: .5s;
+    border: 2px solid dodgerblue;
+}
+.small:hover{
+    transform: scale(1.1,1.1);
+    background-color: white;
+    box-shadow: 0 10px 15px lightgrey;
+    border: 2px solid white;
+}

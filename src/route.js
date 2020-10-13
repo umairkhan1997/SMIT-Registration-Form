@@ -7,7 +7,8 @@ import Medical from './screen/medical'
 import Main from './screen/Main'
 import Services from './screen/Services';
 import Contact from './screen/contact';
-import Media from './screen/media'
+import Media from './screen/media';
+import Donation from './screen/Donation'
 export default function MyRoute() {
   return (
     <Router>
@@ -19,6 +20,7 @@ export default function MyRoute() {
       <Route exact path="/Welfare" component={Welfare} />
       <Route exact path="/medical" component={Medical} />
       <Route exact path="/Services" component={Services} />
+      <Route exact path="/Donation" component={Donation} />
     </Router>
   );
 }
