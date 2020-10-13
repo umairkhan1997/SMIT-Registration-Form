@@ -34,3 +34,15 @@
   color: dodgerblue;
   cursor: pointer;
 }
+.donate{
+  padding: 9px 30px;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 25px;
+}
+.donate:hover{
+  background-color: rgb(240, 240, 240);
+  color: dodgerblue;
+  box-shadow: 0 8px 10px lightgray;
+}

@@ -81,9 +81,9 @@ export default class MainHeader extends React.Component {
                         </div>
                       </Fade>
                     </li> */}
-                         <li className="nav-item">
+                    <li className="nav-item">
                       <a className="nav-link" href="services">
-                      Projects - Services
+                        Projects Services
                       </a>
                     </li>
 
@@ -107,17 +107,18 @@ export default class MainHeader extends React.Component {
                         Contact
                       </a>
                     </li>
-                    
-                    <li className="nav-item bg-primary rounded">
-                      <a
+
+                    <li className="nav-item">
+                      {/* <a
                         className="nav-link"
                         href="Donation"
                         tabindex="-1"
                         aria-disabled="true"
-                        style={{color:'white'}}
+                        style={{ color: "white" }}
                       >
                         Donate
-                      </a>
+                      </a> */}
+                      <button className='donate'>Donate</button>
                     </li>
                   </ul>
                 </div>
