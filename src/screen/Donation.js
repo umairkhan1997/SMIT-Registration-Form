@@ -6,9 +6,16 @@ import Footer from "../components/Footer";
 export default class Donation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      sadqa:true,aqiqa:false,otherDonation:false,coronaEffec:false
+    };
+    // this.donationType = this.donationType.bind
   }
 
+
+  donationType=(e)=>{
+    console.log(e.target.value,'asdsa')
+  }
   render() {
     return <div>
         <MainHeader />
@@ -34,17 +41,29 @@ export default class Donation extends React.Component {
                 <div className='col-6'>
                 <input type="text" class="form-control" placeholder='Number' />
                 </div>
-                <div className='col-6'>
+                {/* <div className='col-6'>
                 <input type="text" class="form-control" placeholder='Credit Card/ Visa Card' />
-                </div>
+                </div> */}
+                  <div class="form-group col-6" >
+    {/* <label for="exampleFormControlSelect1">Example select</label> */}
+    <select class="form-control text-muted" id="exampleFormControlSelect1">
+      <option >Payment Method</option>
+      <option>Credit Card</option>
+    </select>
+  </div>
                 </div>
                 <div className='row mt-3'>
-                <div className='col-6'>
-                <input type="text" class="form-control" placeholder='Number' />
-                </div>
-                <div className='col-6'>
-                <input type="text" class="form-control" placeholder='Credit Card/ Visa Card' />
-                </div>
+                <select class="form-control text-muted" id="exampleFormControlSelect1" onChange={(e)=>this.donationType(e)}>
+      <option >Donation Type</option>
+      <option>Sadqa</option>
+      <option>Aqiqa</option>
+      <option>Other Donation</option>
+      <option>Corona Effecties</option>
+    </select>
+                <select class="form-control text-muted" id="exampleFormControlSelect1">
+      <option >Payment Method</option>
+      <option>Credit Card</option>
+    </select>
                 </div>
             </div>
 
