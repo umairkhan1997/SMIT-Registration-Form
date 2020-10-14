@@ -4,9 +4,9 @@ import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import logo from "../images/logo.png";
 import dr from "../images/Dr.jpg";
-import MedicalServices from "../components/medicalServices";
-import MedicalClinics from "../components/medicalClinics";
-import MedicalOPD from "../components/medicalOPD";
+import MedicalServices from "../components/medical/medicalServices";
+import MedicalClinics from "../components/medical/medicalClinics";
+import MedicalOPD from "../components/medical/medicalOPD";
 import MainHeader from '../components/Home/MainHeader'
 
 export default class Medical extends React.Component {
@@ -29,19 +29,7 @@ export default class Medical extends React.Component {
         <MedicalServices />
         <MedicalOPD />
         <MedicalClinics />
-        <div className="container p-5">
-          <div className="row">
-            <div
-              style={{ backgroundColor: "#f5f8ff" }}
-              className="col-md-4 p-5 border border-primary"
-            >
-              <h2>Yearly Patient</h2>
-            </div>
-            <div className="col-md-3 bg-primary text-white p-5">
-              <h1>45454</h1>
-            </div>
-          </div>
-        </div>
+        
       </div>
     );
   }

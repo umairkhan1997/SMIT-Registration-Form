@@ -118,14 +118,9 @@ export default class MainHeader extends React.Component {
                       >
                         Donate
                       </a> */}
-                       <a
-                        className="nav-link"
-                        href="/Donation"
-                        tabindex="-1"
-                        aria-disabled="true"
-                      >
+                      
                         <button className='donate'>Donate</button>
-                        </a> 
+                       
                     </li>
                   </ul>
                 </div>
