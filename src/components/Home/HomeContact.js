@@ -12,23 +12,25 @@ export default class HomeContact extends React.Component {
   }
   render() {
     return (
+      <div>
+        <div className='container'>
+        <h1 className='Heading'>Over Branches</h1>
+        </div>
       <div
         style={{
           backgroundColor: "#d8dfe6",
         }}
         className="bg-image"
       >
-        <div className="container">
-          <h1 className="Heading">Over Branches</h1>
-        </div>
         <div class="container-fluid">
-          <div className="container">
+        
             <div
               id="carouselContent"
               class="carousel slide"
               data-ride="carousel"
             >
               <div class="carousel-inner" role="listbox">
+                <div className='container'>
                 <div class="carousel-item active text-center p-4">
                   <div className="row text-left">
                     <Fade left>
@@ -140,7 +142,7 @@ export default class HomeContact extends React.Component {
                           data-target="#exampleModalLong"
                           className="location"
                         >
-                          Haiderabad Office
+                          Hyderabad Office
                         </p>
                         <p className="text-muted">
                           <i class="fas fa-map-marker-alt"></i> A-25,
@@ -163,7 +165,7 @@ export default class HomeContact extends React.Component {
                           data-target="#exampleModalLong"
                           className="location"
                         >
-                          Pishawar Office
+                          Peshawar Office
                         </p>
                         <p className="text-muted">
                           <i class="fas fa-map-marker-alt"></i> A-25,
@@ -297,7 +299,7 @@ export default class HomeContact extends React.Component {
                             data-target="#exampleModalLong"
                             className="location"
                           >
-                            Haiderabad Office
+                            Hyderabad Office
                           </p>
                           <p className="text-muted">
                             <i class="fas fa-map-marker-alt"></i> A-25,
@@ -320,7 +322,7 @@ export default class HomeContact extends React.Component {
                             data-target="#exampleModalLong"
                             className="location"
                           >
-                            Pishawar Office
+                            Peshawar Office
                           </p>
                           <p className="text-muted">
                             <i class="fas fa-map-marker-alt"></i> A-25,
@@ -339,9 +341,10 @@ export default class HomeContact extends React.Component {
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
               <a
-                class="carousel-control-prev"
+                class="carousel-control-prev carlStl"
                 href="#carouselContent"
                 role="button"
                 data-slide="prev"
@@ -353,7 +356,7 @@ export default class HomeContact extends React.Component {
                 <span class="sr-only">Previous</span>
               </a>
               <a
-                class="carousel-control-next"
+                class="carousel-control-next carlStl"
                 href="#carouselContent"
                 role="button"
                 data-slide="next"
@@ -365,7 +368,7 @@ export default class HomeContact extends React.Component {
                 <span class="sr-only">Next</span>
               </a>
             </div>
-          </div>
+         
         </div>
 
         <div
@@ -417,6 +420,7 @@ export default class HomeContact extends React.Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

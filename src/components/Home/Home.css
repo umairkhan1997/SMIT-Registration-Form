@@ -1,48 +1,53 @@
-.nav-item{
+.nav-item {
   transition: 0.5s;
   font-size: 1em;
   font-weight: bold;
 }
-.Heading{
+.Heading {
   padding: 8px;
-  color: #007BB1 ;
+  color: #007bb1;
   margin-bottom: 20px;
   text-align: left;
 }
-.news{
+.news {
   border-left: 3px solid dodgerblue;
 }
-.inp{
+.inp {
   width: 100%;
   padding: 10px;
   font-size: 1em;
   border: 2px solid lightgrey;
   outline: none;
 }
-.inp:focus{
+.inp:focus {
   border: 2px solid dodgerblue;
 }
-.labl{
+.labl {
   display: block;
   text-align: left;
   font-weight: bold;
 }
-.location{
+.location {
   font-weight: bold;
 }
-.location:hover{
+.location:hover {
   color: dodgerblue;
   cursor: pointer;
 }
-.donate{
+.donate {
   padding: 9px 30px;
   border: none;
   background-color: dodgerblue;
   color: white;
   border-radius: 25px;
 }
-.donate:hover{
+.donate:hover {
   background-color: rgb(240, 240, 240);
   color: dodgerblue;
   box-shadow: 0 8px 10px lightgray;
+}
+
+.carlStl:hover {
+  background-color: rgba(0, 0, 0, .3);
+  padding: 10px;
 }

@@ -38,6 +38,14 @@ export default class Donation extends React.Component {
                 <input type="text" class="form-control" placeholder='Credit Card/ Visa Card' />
                 </div>
                 </div>
+                <div className='row mt-3'>
+                <div className='col-6'>
+                <input type="text" class="form-control" placeholder='Number' />
+                </div>
+                <div className='col-6'>
+                <input type="text" class="form-control" placeholder='Credit Card/ Visa Card' />
+                </div>
+                </div>
             </div>
 
 
