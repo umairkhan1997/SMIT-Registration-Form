@@ -11,7 +11,7 @@ export default class medicalClinics extends React.Component {
   render() {
     return (
       <div>
-        <div className="container pt-5 pb-5">
+        <div className="container text-left pt-5 pb-5">
           <h1 className="medicalHeading">Over Clinics</h1>
 
           <div className="row">
@@ -21,7 +21,7 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>
-                Head Office
+                Bahadurabad
               </div>
             </div>
             <div className="col-md-3">
@@ -30,7 +30,7 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>
-                Head Office
+                Clifton
               </div>
             </div>
             <div className="col-md-3">
@@ -39,7 +39,7 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>
-                Head Office
+                Gulshan-e-Iqbal
               </div>
             </div>
             <div className="col-md-3">
@@ -48,7 +48,34 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>{" "}
-                Head Office
+               Gulistan-e-Johar
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="text-primary p-5">
+                <i
+                  style={{ fontSize: "2em" }}
+                  class="fas fa-map-marker-alt"
+                ></i>{" "}
+               North Karachi
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="text-primary p-5">
+                <i
+                  style={{ fontSize: "2em" }}
+                  class="fas fa-map-marker-alt"
+                ></i>{" "}
+               Old Sabzi Mandi
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="text-primary p-5">
+                <i
+                  style={{ fontSize: "2em" }}
+                  class="fas fa-map-marker-alt"
+                ></i>{" "}
+               Baldia Town
               </div>
             </div>
           </div>

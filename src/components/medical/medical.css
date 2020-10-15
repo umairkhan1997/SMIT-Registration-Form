@@ -1,14 +1,25 @@
 .medicalHeading {
-    padding-left: 20px;
-    text-align: left;
-  }
-  .clinicCard {
-    background-color: #f5f8ff;
-    border-top: 2px solid dodgerblue;
-    cursor: pointer;
-  }
- 
-  .DrName {
-    color: grey;
-    font-style: italic;
-  }  
+  padding-left: 20px;
+  text-align: left;
+}
+.clinicCard {
+  background-color: #f5f8ff;
+  border-top: 2px solid dodgerblue;
+  cursor: pointer;
+}
+
+.DrName {
+  color: grey;
+  font-style: italic;
+}
+.sevicesCard {
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.sevicesCard:hover {
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 10px 15px lightgrey;
+  color: dodgerblue;
+}

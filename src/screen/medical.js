@@ -22,7 +22,7 @@ export default class Medical extends React.Component {
           style={{ backgroundImage: `url(${dr})`, backgroundSize: "cover" }}
           className="p-5"
         >
-          <p className="p-5" style={{ fontSize: "4em" }}>
+          <p className="p-5" style={{ fontSize: "3em" }}>
             We Serve Humanity
           </p>
         </div>
