@@ -23,3 +23,19 @@
   box-shadow: 0 10px 15px lightgrey;
   color: dodgerblue;
 }
+.intenForm {
+  border-radius: 7px;
+  box-shadow: 0 0 12px #064384;
+}
+.internInp {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+}
+.internInp::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
