@@ -12,7 +12,7 @@ export default class HomeNews extends React.Component {
   }
   render() {
     return (
-      <div className="container-fluid bg-light pt-3 pb-3">
+      <div style={{backgroundColor:'rgb(245, 248, 255)'}} className="container-fluid pt-3 pb-3">
         <div className="container">
           <h1 className="Heading">News</h1>
 
