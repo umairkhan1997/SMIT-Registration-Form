@@ -118,8 +118,10 @@ export default class MainHeader extends React.Component {
                       >
                         Donate
                       </a> */}
-                     <button style={{backgroundColor:'white',border:0,marginTop:5}}><a href='Donation' className='donate' >Donate</a></button>
+                     <button style={{backgroundColor:'#f8f9fa',border:0,marginTop:5}}><a href='Donation' className='donate' >Donate</a></button>
                      {/* <button className='donate' >Donate</button> */}
+                      
+                       
                     </li>
                   </ul>
                 </div>

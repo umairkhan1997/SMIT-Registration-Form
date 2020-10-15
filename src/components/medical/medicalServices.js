@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import "../App.css";
+import "./medical.css";
 
 export default class MedicalServices extends React.Component {
   constructor(props) {
@@ -90,7 +90,7 @@ export default class MedicalServices extends React.Component {
               <div className="col-md-2 col-sm-4 mt-5 mb-5">
                 <div className="shadow">
                   <div className="bg-white p-4 text-primary">
-                  <i style={{ fontSize: "2.5em" }} class="fas fa-syringe"></i>
+                    <i style={{ fontSize: "2.5em" }} class="fas fa-syringe"></i>
                   </div>
                   <div className="text-white bg-primary p-2">Vaccine</div>
                 </div>
@@ -98,9 +98,20 @@ export default class MedicalServices extends React.Component {
               <div className="col-md-2 col-sm-4 mt-5 mb-5">
                 <div className="shadow">
                   <div className="bg-white p-4 text-primary">
-                  <i style={{ fontSize: "2.5em" }} class="fas fa-crutch"></i>
+                    <i style={{ fontSize: "2.5em" }} class="fas fa-crutch"></i>
                   </div>
-                  <div className="text-white bg-primary p-2">Medical Equipement</div>
+                  <div className="text-white bg-primary p-2">Equipement</div>
+                </div>
+              </div>
+              <div className="col-md-2 col-sm-4 mt-5 mb-5">
+                <div className="shadow">
+                  <div className="bg-white p-4 text-primary">
+                    <i
+                      style={{ fontSize: "2.5em" }}
+                      class="fas fa-low-vision"
+                    ></i>
+                  </div>
+                  <div className="text-white bg-primary p-2">Eye Clinic</div>
                 </div>
               </div>
             </div>
