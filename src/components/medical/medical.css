@@ -24,18 +24,28 @@
   color: dodgerblue;
 }
 .intenForm {
+  background-color: white;
   border-radius: 7px;
-  box-shadow: 0 0 12px #064384;
+  box-shadow: 0 0 12px lightgrey;
 }
 .internInp {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
   padding: 10px;
   outline: none;
   width: 100%;
 }
-.internInp::placeholder {
+.internInp:focus{
+  border-bottom: 2px solid dodgerblue;
+}
+.lab{
+  display: block;
+  text-align: left;
   color: white;
-  opacity: 1; /* Firefox */
+}
+.medicalBack{
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }

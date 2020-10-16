@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./medical.css";
-import intern from '../../images/intern.png'
+import intern from "../../images/intern.png";
 
 export default class Internship extends React.Component {
   constructor(props) {
@@ -12,20 +12,19 @@ export default class Internship extends React.Component {
   render() {
     return (
       <div>
-        <div style={{backgroundColor:'#459fff'}} className="container-fluid">
+        <div className="container-fluid bg-light">
           <div className="container">
             <div className="row pt-5 pb-5">
               <div className="col-md-4">
-              <img src={intern} width='100%' />
+                <img style={{boxShadow:'0 0 15px grey',borderRadius:'200px'}} src={intern} width="100%" />
                 {/* <button>Apply for Internship</button>
                 <button>Apply for Camp</button> */}
               </div>
-              
               <div className="col-md-8">
                 <div className="intenForm">
                   <div>
-                    <h2 className="text-white text-left p-5">
-                    Form For The Medical Interns
+                    <h2 className="text-left p-5">
+                      Form For The Medical Interns
                     </h2>
                   </div>
                   <form>
@@ -59,16 +58,30 @@ export default class Internship extends React.Component {
                         </select>
                       </div>
                       <div className="col-md-12 pt-4 pb-4">
-                        <input className="internInp" type='email' placeholder="email" />
+                        <input
+                          className="internInp"
+                          type="email"
+                          placeholder="email"
+                        />
                       </div>
                       <div className="col-md-6 pt-4 pb-4">
-                        <input className="internInp" type='number' placeholder="Contact No" />
+                        <input
+                          className="internInp"
+                          type="number"
+                          placeholder="Contact No"
+                        />
                       </div>
                       <div className="col-md-6 pt-4 pb-4">
-                        <input className="internInp" type='number' placeholder="CNIC No" />
+                        <input
+                          className="internInp"
+                          type="number"
+                          placeholder="CNIC No"
+                        />
                       </div>
                       <div className="col-md-12 pt-4 pb-4">
-                          <button className='btn btn-light btn-block'>Submit</button>
+                        <button className="btn btn-primary btn-block">
+                          Submit
+                        </button>
                       </div>
                     </div>
                   </form>
