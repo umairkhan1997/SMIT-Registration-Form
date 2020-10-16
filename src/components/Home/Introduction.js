@@ -14,7 +14,7 @@ export default class Introduction extends React.Component {
       <div className="container-fluid">
         <div className="container pt-5 pb-5">
           <div className="p-3">
-            <h1 className="Heading">Introduction</h1>
+            <h1 className="Heading" style={{color:'dodgerblue'}}>Introduction</h1>
           </div>
           {/* <Fade left cascade>
             <p className="text-muted text-justify">

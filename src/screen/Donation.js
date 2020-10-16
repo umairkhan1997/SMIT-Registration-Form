@@ -208,6 +208,7 @@ this.state.coronaEffec ?
 :
 <div className='container-fluid '>
   <div className="row d-flex justify-content-center ">
+<div className='col-10'>
     <div className="table-responsive">
 <table class="table mt-5 thead-primary" >
   <thead class="thead-light" >
@@ -278,6 +279,7 @@ this.state.coronaEffec ?
 </div>
 </div>
 </div>
+</div>
 }
 
 
@@ -334,6 +336,7 @@ this.state.coronaEffec ?
 </div> */}
 
             </div>
+            <div className="mt-5"></div>
         <Footer />
     </div>;
   }
