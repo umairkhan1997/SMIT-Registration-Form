@@ -7,7 +7,10 @@ import dr from "../images/Dr.jpg";
 import MedicalServices from "../components/medical/medicalServices";
 import MedicalClinics from "../components/medical/medicalClinics";
 import MedicalOPD from "../components/medical/medicalOPD";
-import MainHeader from '../components/Home/MainHeader'
+import MainHeader from '../components/Home/MainHeader';
+import Internship from '../components/medical/internship';
+import MedicalContact from '../components/medical/medicalContact';
+import Footer from '../components/Footer'
 
 export default class Medical extends React.Component {
   constructor(props) {
@@ -29,7 +32,9 @@ export default class Medical extends React.Component {
         <MedicalServices />
         <MedicalOPD />
         <MedicalClinics />
-        
+        <Internship />
+        <MedicalContact />
+        <Footer />
       </div>
     );
   }
