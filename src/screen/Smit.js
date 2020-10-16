@@ -11,6 +11,7 @@ import UpcomingCourses from "../components/SMIT/UpcomingCourses";
 import WhyLearnSmit from "../components/SMIT/WhyLearnSmit";
 import VocaTrain from "../components/SMIT/VocaTrain";
 import SmitContact from "../components/SMIT/SmitContact";
+import Faculty from '../components/SMIT/faculty'
 
 export default class Smit extends React.Component {
   constructor(props) {
@@ -20,27 +21,23 @@ export default class Smit extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: "white" }}>
-        {/* LinkLine Start*/}
-        <LinkLine />
-        {/* LinkLine End*/}
-
         {/* MainHeader Start*/}
         <MainHeader />
         {/* MainHeader End*/}
-
+      <Faculty />
         {/* START UPCOMING COURSES  */}
 
-        <UpcomingCourses />
+        {/* <UpcomingCourses /> */}
 
         {/* END UPCOMING COURSES  */}
 
         {/* START SmitCounter  */}
 
-        <SmitCounter />
+        {/* <SmitCounter /> */}
         {/* END SmitCounter  */}
 
         {/* <Start WHy LEarn  */}
-        <WhyLearnSmit />
+        {/* <WhyLearnSmit /> */}
         {/* END END END */}
 
         {/* {MAIN SMIT COURSES} */}
@@ -49,38 +46,11 @@ export default class Smit extends React.Component {
 
         {/* VOCATIOnAL TRANING */}
 
-        <VocaTrain />
+        {/* <VocaTrain /> */}
         {/* VOCATIOnAL TRANING END */}
 
         {/* HUMAN AND TEXT  */}
 
-        <div className="container-fluid pt-5">
-          <div className="row determineTxt">
-            <div className="col-md-2 "></div>
-            <div className="col-md-4 ">
-              <img src={img7} style={{ width: "100%", height: 400 }} />
-            </div>
-            <div className="col-md-5 ">
-              <p className="p-1 pText determineTxt">
-                Determine the right learning path for you
-              </p>
-              <p className="p-1 pTextTwo">
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* SmitContact START */}
         <SmitContact />

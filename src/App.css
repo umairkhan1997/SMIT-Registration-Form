@@ -41,12 +41,7 @@
   background-color: #d43c18;
 }
 
-.Heading {
-  padding: 8px;
-  color: #028de5;
-  margin-top: 20px;
-  text-align: left;
-}
+
 
 /* .coursesBlog {
   color: #d43c18;
@@ -254,6 +249,7 @@
   background-repeat: no-repeat !important;
   /* Full height */
   height: 100%;
+
 
   /* Center and scale the image nicely */
   background-position: center !important;
