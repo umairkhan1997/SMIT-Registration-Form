@@ -59,6 +59,30 @@ export default class WhatweDo extends React.Component {
               </Fade>
             </div>
             <div className="col-md-4 p-3">
+              <Fade right>
+                <Link to="/medical">
+                  <div className="small">
+                    <p style={{ fontSize: "3.5em" }}>
+                      <i class="fas fa-hand-holding-medical"></i>
+                    </p>
+                    <p style={{ fontSize: "1.5em" }}>Medical</p>
+                  </div>
+                </Link>
+              </Fade>
+            </div>
+            <div className="col-md-4 p-3">
+              <Fade up>
+                <Link to="">
+                  <div className="small">
+                    <p style={{ fontSize: "3.5em" }}>
+                      <i class="fas fa-tint"></i>
+                    </p>
+                    <p style={{ fontSize: "1.5em" }}>Blood Donation</p>
+                  </div>
+                </Link>
+              </Fade>
+            </div>
+            <div className="col-md-4 p-3">
               <Fade up>
                 <Link to="">
                   <div className="small">
@@ -82,18 +106,7 @@ export default class WhatweDo extends React.Component {
                 </Link>
               </Fade>
             </div>
-            <div className="col-md-4 p-3">
-              <Fade right>
-                <Link to="/medical">
-                  <div className="small">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-hand-holding-medical"></i>
-                    </p>
-                    <p style={{ fontSize: "1.5em" }}>Medical</p>
-                  </div>
-                </Link>
-              </Fade>
-            </div>
+     
             <div className="col-md-4 p-3">
               <Fade left>
                 <Link to="">

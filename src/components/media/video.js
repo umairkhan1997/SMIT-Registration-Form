@@ -33,132 +33,154 @@ export default class Video extends React.Component {
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
             <div className="col-md-2 ">
               <Zoom>
                 <iframe
+                 allowfullscreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
                   src="https://www.youtube.com/embed/L1BmJyE4Os0"
-                  frameborder="0"
+                  // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  
                 ></iframe>
               </Zoom>
             </div>
