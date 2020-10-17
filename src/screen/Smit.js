@@ -11,7 +11,9 @@ import UpcomingCourses from "../components/SMIT/UpcomingCourses";
 import WhyLearnSmit from "../components/SMIT/WhyLearnSmit";
 import VocaTrain from "../components/SMIT/VocaTrain";
 import SmitContact from "../components/SMIT/SmitContact";
-import Faculty from '../components/SMIT/faculty'
+import Faculty from "../components/SMIT/faculty";
+import Collaboration from "../components/SMIT/collaboration";
+import SMITeacher from '../components/SMIT/teacher'
 
 export default class Smit extends React.Component {
   constructor(props) {
@@ -21,41 +23,16 @@ export default class Smit extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: "white" }}>
-        {/* MainHeader Start*/}
         <MainHeader />
-        {/* MainHeader End*/}
-      <Faculty />
-        {/* START UPCOMING COURSES  */}
-
+        <Faculty />
         {/* <UpcomingCourses /> */}
-
-        {/* END UPCOMING COURSES  */}
-
-        {/* START SmitCounter  */}
-
-        {/* <SmitCounter /> */}
-        {/* END SmitCounter  */}
-
-        {/* <Start WHy LEarn  */}
+        <SmitCounter />
         {/* <WhyLearnSmit /> */}
-        {/* END END END */}
-
-        {/* {MAIN SMIT COURSES} */}
         <MainCourses />
-        {/* END END END */}
-
-        {/* VOCATIOnAL TRANING */}
-
         {/* <VocaTrain /> */}
-        {/* VOCATIOnAL TRANING END */}
-
-        {/* HUMAN AND TEXT  */}
-
-
-        {/* SmitContact START */}
+        <SMITeacher />
+        <Collaboration />
         <SmitContact />
-        {/* SmitContact END */}
-
         <Footer />
       </div>
     );

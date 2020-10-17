@@ -11,14 +11,10 @@ export default class MainCourses extends React.Component {
   render() {
     return (
       <div>
-        <div lassName="container-fluid  " style={{ marginTop: 40 }}>
-          <h1 className="HeadingSmit p-3 text-center">
-            Discover Courses Developed by Saylani Mass IT
-          </h1>
-        </div>
-
-        {/* Heading` */}
         <div className="container pt-5 pb-5 ">
+          <h2 className="Heading p-3">
+            Discover Courses Developed by Saylani Mass IT
+          </h2>
           <div className="row">
             <div className="col-md-4 p-4">
               <div className="courseCard">

@@ -25,7 +25,7 @@ export default class Donation extends React.Component {
           Donation
         </h1>
         <p>
-          For Sadqa , Aqiqa , Corona Effecties or other Donation select Donation
+          For Sadqa, Aqiqa, Corona Effecties or other Donation select Donation
           Form and for Bank Details select Bank Details option.
         </p>
         <div className="container-fluid mt-5">
@@ -37,7 +37,6 @@ export default class Donation extends React.Component {
               Bank Details
             </button>
           </div>
-
           <div className="container mt-5">
             <div className="row">
               <div className="col-6">

@@ -48,42 +48,9 @@ export default class MainHeader extends React.Component {
                         Home
                       </a>
                     </li>
-
-                    {/* <li className="nav-item dropdown">
-                      <a
-                        className="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Projects - Services
-                      </a>
-                      <Fade>
-                        <div
-                          className="dropdown-menu headingList"
-                          aria-labelledby="navbarDropdown"
-                        >
-                          <a className="dropdown-item" href="services">
-                            Services
-                          </a>
-                          <a className="dropdown-item" href="Smit">
-                            Education
-                          </a>
-                          <a className="dropdown-item" href="/welfare">
-                            Welfare
-                          </a>
-                          <a className="dropdown-item" href="/medical">
-                            Medical
-                          </a>
-                        </div>
-                      </Fade>
-                    </li> */}
                     <li className="nav-item">
                       <a className="nav-link" href="services">
-                        Projects
+                        Services
                       </a>
                     </li>
 
@@ -109,18 +76,7 @@ export default class MainHeader extends React.Component {
                     </li>
 
                     <li className="nav-item">
-                      {/* <a
-                        className="nav-link"
-                        href="Donation"
-                        tabindex="-1"
-                        aria-disabled="true"
-                        style={{ color: "white" }}
-                      >
-                        Donate
-                      </a> */}
-                      
-                        <button className='donate'>Donate</button>
-                       
+                      <button className="donate">Donate</button>
                     </li>
                   </ul>
                 </div>

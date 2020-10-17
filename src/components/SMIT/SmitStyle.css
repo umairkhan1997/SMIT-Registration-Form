@@ -1,11 +1,3 @@
-.courseCardSec {
-  display: inline-block;
-  /* border-top: 4px solid black; */
-  background-color: white;
-  box-shadow: 3px 3px 20px lightgrey !important;
-  margin-top: 10px;
-  height: "80%" !important;
-}
 
 .coursesBlog {
   color: #d43c18;
@@ -13,7 +5,7 @@
   font-weight: bold;
 }
 .HeadingSmit {
-  color: #d43c18;
+  color: dodgerblue;
   background-color: white;
 }
 .messageBoxTxt {
@@ -32,7 +24,7 @@
 
 .courseDateInfo {
   margin-left: 40px;
-  color: #d43c18;
+  color: dodgerblue;
 }
 
 .courseCard {
@@ -60,8 +52,49 @@
   display: inline-block;
 }
 .facultyContent{
-  background-color: rgb(230, 230, 230);
+  background-color: dodgerblue;
+  color: white;
+  text-align: justify;
 }
 .facultyContent p{
   font-size: 1.1em;
+}
+.smitCounter{
+  background-image: url('../../images/achieve.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.achieve{
+  border: 3px solid white;
+  border-radius: 7px;
+}
+.achieve:hover{
+  border: 3px solid dodgerblue;
+}
+.collaborationPartner{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 0 15px lightgrey;
+  background-color: rgb(250, 250, 250);
+}
+.teacher{
+  background-position: center;
+  background-size: cover;
+  transition: .5s;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.teacher div{
+  color: transparent;
+}
+.teacher:hover{
+  background-size: 120%;
+}
+.teacher:hover div{
+  background-color: rgba(30, 144, 255, .5);
+  color: white;
 }

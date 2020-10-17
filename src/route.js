@@ -8,11 +8,13 @@ import Main from './screen/Main'
 import Services from './screen/Services';
 import Contact from './screen/contact';
 import Media from './screen/media';
-import Donation from './screen/Donation'
+import Donation from './screen/Donation';
+import Dasterkhwan from './screen/dastarkhwan'
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
+      <Route exact path="/dastarkhwan" component={Dasterkhwan} />
       <Route exact path="/media" component={Media} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/chairmenmessage" component={ChairmenMessage} />
