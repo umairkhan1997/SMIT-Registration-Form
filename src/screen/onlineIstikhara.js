@@ -1,8 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainHeader from "../components/Home/MainHeader";
+import IstikharaForm from '../components/onlineIstikhara/istikharaForm'
 
-export default class Services extends React.Component {
+export default class Istikhara extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -10,6 +11,7 @@ export default class Services extends React.Component {
   render() {
     return <div>
         <MainHeader />
+      <IstikharaForm />
     </div>;
   }
 }

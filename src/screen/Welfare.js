@@ -6,6 +6,7 @@ import LinkLine from "../components/LinkLine";
 import img6 from "../images/familyadop.jpg";
 import wedding from "../images/wedding.jpg";
 import CountUp from "react-countup";
+import welfare from '../images/welfare.jpg'
 
 export default class Welfare extends React.Component {
   constructor(props) {
@@ -17,7 +18,11 @@ export default class Welfare extends React.Component {
     return (
       <div>
         <MainHeader />
-
+      <div style={{backgroundImage:`url(${welfare})`}} className='back'>
+        <div style={{backgroundColor:'rgba(0,0,0,.5)'}} className='p-5'>
+          <h1 className='p-3 text-white'>Welfare</h1>
+        </div>
+      </div>
         <div className="container mt-6">
           <div className="p-3">
             <h1 className="Heading">Family Adoption</h1>

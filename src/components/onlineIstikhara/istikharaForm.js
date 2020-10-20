@@ -1,10 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import "./medical.css";
-import intern from "../../images/intern.png";
+import "./istikhara.css";
+import istikhara from "../../images/istikhara.jpg";
 
-export default class Internship extends React.Component {
+export default class IstikharaForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -12,11 +12,89 @@ export default class Internship extends React.Component {
   render() {
     return (
       <div>
+        <div className="back" style={{ backgroundImage: `url(${istikhara})` }}>
+          <div style={{ backgroundColor: "rgba(0,0,0,.5)" }} className="p-5">
+            <h1 className="text-white p-3">Online Istikhara</h1>
+          </div>
+        </div>
         <div className="container">
-            <form>
-                <div></div>
-                <input />
-            </form>
+          <form>
+            <div className="row">
+              <div className="col-md-8">
+                <label className="inpLab">Select Istikhara Type</label>
+                <select className="inp">
+                  <option>Select Istikhara Type</option>
+                  <option>Shadi</option>
+                  <option>Karobar</option>
+                  <option>Jadu</option>
+                  <option></option>
+                </select>
+              </div>
+              <div className="col-md-6 pt-3 pb-3">
+                <label for="maleName" className="inpLab">
+                  Enter Male Name
+                </label>
+                <input
+                  id="maleName"
+                  className="inp"
+                  placeholder="Enter Male Name"
+                />
+              </div>
+              <div className="col-md-6 pt-3 pb-3">
+                <label for="maleMotherName" className="inpLab">
+                  Enter Male Mother Name
+                </label>
+                <input
+                  id="maleMotherName"
+                  className="inp"
+                  placeholder="Enter Male Mother Name"
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6 pt-3 pb-3">
+                <label for="femaleName" className="inpLab">
+                  Enter Female Name
+                </label>
+                <input
+                  id="femaleName"
+                  className="inp"
+                  placeholder="Enter Female Name"
+                />
+              </div>
+              <div className="col-md-6 pt-3 pb-3">
+                <label for="femaleMotherName" className="inpLab">
+                  Enter Female Mother Name
+                </label>
+                <input
+                  id="femaleMotherName"
+                  className="inp"
+                  placeholder="Enter Female Mother Name"
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6 pt-3 pb-3">
+                <label for="contact" className="inpLab">
+                  Contact
+                </label>
+                <input id="contact" className="inp" placeholder="Contact" />
+              </div>
+              <div className="col-md-6 pt-3 pb-3">
+                <label for="contact" className="inpLab">
+                  Enter Istikhara Details
+                </label>
+                <textarea
+                  placeholder="Enter Istikhara Details"
+                  rows="8"
+                  className="inp"
+                ></textarea>
+              </div>
+              <div className="col-md-12 p-5">
+                <button className="btn btn-block btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     );

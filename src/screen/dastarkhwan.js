@@ -4,8 +4,9 @@ import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
 import HomeContact from "../components/Home/HomeContact";
-import ContactForm from "../components/contact/contactForm";
 import Footer from "../components/Footer";
+import saylanidastarkhwan from '../images/saylaniDastarkhwan.jpg';
+import Cost from '../components/dastarkhwan/cost'
 
 export default class Dasterkhwan extends React.Component {
   constructor(props) {
@@ -13,9 +14,19 @@ export default class Dasterkhwan extends React.Component {
     this.state = {};
   }
   render() {
-    return <div>
+    return (
+      <div>
         <MainHeader />
-        <h1>Dastarkhwan</h1>
-    </div>;
+        <div style={{ backgroundImage: `url(${saylanidastarkhwan})` }} className="back">
+          <div style={{ backgroundColor: "rgba(0,0,0,.5)" }} className="p-5">
+            <h1 className="p-3 text-white">Dastarkhwan</h1>
+          </div>
+        </div>
+        <div className='container'>
+          <Cost />
+        </div>
+       
+      </div>
+    );
   }
 }
