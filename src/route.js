@@ -10,11 +10,13 @@ import Contact from './screen/contact';
 import Media from './screen/media';
 import Donation from './screen/Donation';
 import Dasterkhwan from './screen/dastarkhwan';
-import Istikhara from './screen/onlineIstikhara'
+import Istikhara from './screen/onlineIstikhara';
+import ROplant from './screen/roplant'
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
+      <Route exact path="/roplant" component={ROplant} />
       <Route exact path="/istikhara" component={Istikhara} />
       <Route exact path="/dastarkhwan" component={Dasterkhwan} />
       <Route exact path="/media" component={Media} />
