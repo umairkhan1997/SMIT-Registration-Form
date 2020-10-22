@@ -15,7 +15,7 @@ export default class ROCounter extends React.Component {
       <div>
         <div className="container pt-5 pb-5">
           <div className="row">
-            <div className="col-md-3 p-3">
+            <div className="col-md-3 col-sm-6 p-3">
               <h4 className="counterHeading">Installed RO Plants</h4>
               <Fade down>
                 <div className="roCounter p-4">
@@ -28,7 +28,7 @@ export default class ROCounter extends React.Component {
                 </div>
               </Fade>
             </div>
-            <div className="col-md-3 p-3">
+            <div className="col-md-3 col-sm-6 p-3">
               <h4 className="counterHeading">Under Construction</h4>
               <Fade down>
                 <div className="roCounter p-4">
@@ -41,7 +41,7 @@ export default class ROCounter extends React.Component {
                 </div>
               </Fade>
             </div>
-            <div className="col-md-3 p-3">
+            <div className="col-md-3 col-sm-6 p-3">
               <h4 className="counterHeading">Dug Water Well</h4>
               <Fade down>
                 <div className="roCounter p-4">
@@ -54,7 +54,7 @@ export default class ROCounter extends React.Component {
                 </div>
               </Fade>
             </div>
-            <div className="col-md-3 p-3">
+            <div className="col-md-3 col-sm-6 p-3">
               <h4 className="counterHeading">Water Chillers</h4>
               <Fade down>
                 <div className="roCounter p-4">

@@ -72,52 +72,6 @@ export default class Donation extends React.Component {
             </div>
           </div>
 
-          {/* <table class="table mt-5">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Bank Name</th>
-      <th scope="col">Swift Code</th>
-      <th scope="col">Currency</th>
-      <th scope="col">IBAN</th>
-      <th scope="col">Account Number</th>
-      <th scope="col">Account Title</th>
-      <th scope="col">Branch Code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-    </tr>
-  </tbody>
-</table> */}
         </div>
         <Footer />
       </div>

@@ -32,6 +32,7 @@ export default class Dasterkhwan extends React.Component {
         <LangarCounter />
         <Dailyserve />
         <Cost />
+        <Footer />
       </div>
     );
   }

@@ -8,7 +8,10 @@ import ContactForm from "../components/contact/contactForm";
 import Footer from "../components/Footer";
 import water from "../images/water.jpeg";
 import ROCounter from "../components/RO_Plant/RO_counter";
-import roplant from '../images/ROPLANT.jpg'
+import roplant from "../images/ROPLANT.jpg";
+import ROLocation from "../components/RO_Plant/rolocation";
+import ProjectCost from "../components/RO_Plant/projectcost";
+import GovtAff from "../components/RO_Plant/governmentaff";
 
 export default class ROplant extends React.Component {
   constructor(props) {
@@ -35,12 +38,16 @@ export default class ROplant extends React.Component {
                 marginalized communities.
               </p>
             </div>
-            <div className='col-md-6 p-5'>
-                <img className='rounded shadow' src={roplant} width='100%' />
+            <div className="col-md-6 p-5">
+              <img className="rounded shadow" src={roplant} width="100%" />
             </div>
           </div>
         </div>
         <ROCounter />
+        <ROLocation />
+        <ProjectCost />
+        <GovtAff />
+        <Footer />
       </div>
     );
   }
