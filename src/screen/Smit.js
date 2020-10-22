@@ -11,6 +11,9 @@ import UpcomingCourses from "../components/SMIT/UpcomingCourses";
 import WhyLearnSmit from "../components/SMIT/WhyLearnSmit";
 import VocaTrain from "../components/SMIT/VocaTrain";
 import SmitContact from "../components/SMIT/SmitContact";
+import Faculty from "../components/SMIT/faculty";
+import Collaboration from "../components/SMIT/collaboration";
+import SMITeacher from '../components/SMIT/teacher'
 
 export default class Smit extends React.Component {
   constructor(props) {
@@ -20,72 +23,16 @@ export default class Smit extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: "white" }}>
-        {/* LinkLine Start*/}
-        <LinkLine />
-        {/* LinkLine End*/}
-
-        {/* MainHeader Start*/}
         <MainHeader />
-        {/* MainHeader End*/}
-
-        {/* START UPCOMING COURSES  */}
-
-        <UpcomingCourses />
-
-        {/* END UPCOMING COURSES  */}
-
-        {/* START SmitCounter  */}
-
+        <Faculty />
+        {/* <UpcomingCourses /> */}
         <SmitCounter />
-        {/* END SmitCounter  */}
-
-        {/* <Start WHy LEarn  */}
-        <WhyLearnSmit />
-        {/* END END END */}
-
-        {/* {MAIN SMIT COURSES} */}
+        {/* <WhyLearnSmit /> */}
         <MainCourses />
-        {/* END END END */}
-
-        {/* VOCATIOnAL TRANING */}
-
-        <VocaTrain />
-        {/* VOCATIOnAL TRANING END */}
-
-        {/* HUMAN AND TEXT  */}
-
-        <div className="container-fluid pt-5">
-          <div className="row determineTxt">
-            <div className="col-md-2 "></div>
-            <div className="col-md-4 ">
-              <img src={img7} style={{ width: "100%", height: 400 }} />
-            </div>
-            <div className="col-md-5 ">
-              <p className="p-1 pText determineTxt">
-                Determine the right learning path for you
-              </p>
-              <p className="p-1 pTextTwo">
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-                Determine the right learning path for you Determine the right
-                learning path for you Determine the right learning path for you
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* SmitContact START */}
+        {/* <VocaTrain /> */}
+        <SMITeacher />
+        <Collaboration />
         <SmitContact />
-        {/* SmitContact END */}
-
         <Footer />
       </div>
     );

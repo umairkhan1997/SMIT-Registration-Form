@@ -4,6 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import CountUp from "react-countup";
 import "../App.css";
 import Zoom from "react-reveal/Zoom";
+import lab from "../images/lab.jpg";
 
 export default class ServiceCounter extends React.Component {
   constructor(props) {
@@ -12,80 +13,59 @@ export default class ServiceCounter extends React.Component {
   }
   render() {
     return (
-      <div className="back bg-image">
+      <div className="smitCounter mt-5 mb-5 bg-image">
         <div
           className="pt-5 pb-5"
-          style={{ backgroundColor: "rgba(212, 60, 24,.5)" }}
+          style={{ backgroundColor: "rgba(0, 0, 0,.7)" }}
         >
           <div className="container p-5">
             <div className="row text-white">
-              <div className="col-md-3">
-                <Zoom>
-                  <div className="p-3">
-                    <p style={{ fontSize: "3em" }}>
-                      <i class="fas fa-laptop-code"></i>
-                    </p>
-                    <CountUp
-                      style={{ fontSize: "2.5em" }}
-                      start={1000}
-                      end={15000}
-                      duration={4}
-                    />{" "}
-                    <br />
-                    Web and Mobile App Development
-                  </div>
-                </Zoom>
-              </div>
-              <div className="col-md-3">
-                <Zoom>
-                  <div className="p-3">
-                    <p style={{ fontSize: "3em" }}>
-                      <i class="fas fa-network-wired"></i>
-                    </p>
-                    <CountUp
-                      style={{ fontSize: "2.5em" }}
-                      start={1000}
-                      end={8500}
-                      duration={4}
-                    />
-                    <br />
-                    Cisco Certified Networking Academy (CCNA)
-                  </div>
-                </Zoom>
-              </div>
-              <div className="col-md-3">
-              <Zoom>
-                <div className="p-3">
-                  <p style={{ fontSize: "3em" }}>
-                    <i class="fas fa-pen-nib"></i>
-                  </p>
-                  <CountUp
-                    style={{ fontSize: "2.5em" }}
-                    start={1000}
-                    end={5349}
-                    duration={4}
-                  />{" "}
-                  <br />
-                  Graphic Designing 
+              <div className="col-md-4 p-3">
+                <div className="achieve p-3">
+                  <Zoom>
+                    <div className="p-3">
+                      <p style={{ fontSize: "2em" }}>No Of Trained Students</p>
+                      <CountUp
+                        style={{ fontSize: "2.5em" }}
+                        start={100000}
+                        end={125000}
+                        duration={4}
+                      />
+                    </div>
+                  </Zoom>
                 </div>
-                </Zoom>
               </div>
-              <div className="col-md-3">
-              <Zoom>
-                <div className="p-3">
-                  <p style={{ fontSize: "3em" }}>
-                    <i class="fab fa-windows"></i>
-                  </p>
-                  <CountUp
-                    style={{ fontSize: "2.5em" }}
-                    start={1000}
-                    end={3000}
-                    duration={4}
-                  />
-                  <br />
-                 CCO & CCA
+              <div className="col-md-4 p-3">
+                <div className="p-3 achieve">
+                  <Zoom>
+                    <div className="p-3">
+                      <p style={{ fontSize: "2em" }}>
+                        Number Of Enrolled Students
+                      </p>
+                      <CountUp
+                        style={{ fontSize: "2.5em" }}
+                        start={10000}
+                        end={55000}
+                        duration={4}
+                      />
+                    </div>
+                  </Zoom>
                 </div>
-                </Zoom>
+              </div>
+              <div className="col-md-4 p-3">
+                <div className="p-3 achieve">
+                  <Zoom>
+                    <div className="p-3">
+                      <p style={{ fontSize: "2em" }}>Number Of Courses</p>
+                      <CountUp
+                        style={{ fontSize: "2.5em" }}
+                        start={1}
+                        end={20}
+                        duration={4}
+                      />
+                    </div>
+                  </Zoom>
+                </div>
               </div>
             </div>
           </div>

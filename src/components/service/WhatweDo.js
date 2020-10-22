@@ -22,18 +22,18 @@ export default class WhatweDo extends React.Component {
             <h1 className="Heading">What We Do</h1>
           </div> */}
           <div className="row">
-            <div className="col-md-4 p-3">
-              <Fade left>
-                <Link to="">
+            {/* <div className="col-md-4 p-3">
+              <Fade right>
+                <Link to="/smit">
                   <div className="small">
                     <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-donate"></i>
+                    <i class="fas fa-desktop"></i>
                     </p>
-                    <p style={{ fontSize: "1.5em" }}>Online Sadqa</p>
+                    <p style={{ fontSize: "1.5em" }}>SMIT</p>
                   </div>
                 </Link>
               </Fade>
-            </div>
+            </div> */}
             <div className="col-md-4 p-3">
               <Fade left>
                 <Link to="/smit">
@@ -58,6 +58,31 @@ export default class WhatweDo extends React.Component {
                 </Link>
               </Fade>
             </div>
+            <div className="col-md-4 p-3">
+              <Fade up>
+                <Link to="/welfare">
+                  <div className="small">
+                    <p style={{ fontSize: "3.5em" }}>
+                    <i class="fas fa-book-open"></i>
+                    </p>
+                    <p style={{ fontSize: "1.5em" }}>Green House School</p>
+                  </div>
+                </Link>
+              </Fade>
+            </div>
+            <div className="col-md-4 p-3">
+              <Fade left>
+                <Link to="/welfare">
+                  <div className="small">
+                    <p style={{ fontSize: "3.5em" }}>
+                      <i class="fas fa-donate"></i>
+                    </p>
+                    <p style={{ fontSize: "1.5em" }}>Online Sadqa</p>
+                  </div>
+                </Link>
+              </Fade>
+            </div>
+
             <div className="col-md-4 p-3">
               <Fade right>
                 <Link to="/medical">
@@ -84,7 +109,7 @@ export default class WhatweDo extends React.Component {
             </div>
             <div className="col-md-4 p-3">
               <Fade up>
-                <Link to="">
+                <Link to="incubation">
                   <div className="small">
                     <p style={{ fontSize: "3.5em" }}>
                       <i class="fas fa-school"></i>
@@ -108,8 +133,8 @@ export default class WhatweDo extends React.Component {
             </div>
      
             <div className="col-md-4 p-3">
-              <Fade left>
-                <Link to="">
+                <Fade up>
+                <Link to="/dastarkhwan">
                   <div className="small">
                     <p style={{ fontSize: "3.5em" }}>
                       <i class="fas fa-utensils"></i>
@@ -121,7 +146,7 @@ export default class WhatweDo extends React.Component {
             </div>
             <div className="col-md-4 p-3">
               <Fade up>
-                <Link to="">
+                <Link to="RoPlant">
                   <div className="small">
                     <p style={{ fontSize: "3.5em" }}>
                       <i class="fas fa-faucet"></i>
@@ -143,6 +168,7 @@ export default class WhatweDo extends React.Component {
                 </Link>
               </Fade>
             </div>
+
             <div className="col-md-4 p-3">
               <Fade left>
                 <Link to="">
