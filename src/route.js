@@ -9,13 +9,16 @@ import Services from './screen/Services';
 import Contact from './screen/contact';
 import Media from './screen/media';
 import Donation from './screen/Donation';
-import Dasterkhwan from './screen/dastarkhwan'
-import RoPlant from './screen/RoPlant'
 import incubation from './components/Incubation/incubationMain'
+import Dasterkhwan from './screen/dastarkhwan';
+import Istikhara from './screen/onlineIstikhara';
+import ROplant from './screen/roplant'
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
+      <Route exact path="/roplant" component={ROplant} />
+      <Route exact path="/istikhara" component={Istikhara} />
       <Route exact path="/dastarkhwan" component={Dasterkhwan} />
       <Route exact path="/media" component={Media} />
       <Route exact path="/contact" component={Contact} />
@@ -26,7 +29,7 @@ export default function MyRoute() {
       <Route exact path="/Services" component={Services} />
       <Route exact path="/Donation" component={Donation} />
       <Route exact path="/incubation" component={incubation} />
-      <Route exact pat="/RoPlant" component={RoPlant} />
+      {/* <Route exact pat="/RoPlant" component={ROplant} /> */}
       
     </Router>
   );

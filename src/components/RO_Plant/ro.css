@@ -1,0 +1,11 @@
+.roCounter{
+    background-color: dodgerblue;
+    border-radius:0 0 15px 15px;
+    color: white;
+    box-shadow: 0 10px 12px lightgrey;
+}
+.counterHeading{
+    padding: 10px;
+    border: 2px solid dodgerblue;
+    color: dodgerblue;
+}
