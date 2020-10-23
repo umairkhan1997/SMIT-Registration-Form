@@ -21,7 +21,7 @@ export default class IstikharaForm extends React.Component {
           <form>
             <div className="row">
               <div className="col-md-8">
-                <label className="inpLab">Select Istikhara Type</label>
+                <label className="inpLab font-weight-bold">Select Istikhara Type</label>
                 <select className="inp">
                   <option>Select Istikhara Type</option>
                   <option>Shadi</option>
@@ -31,7 +31,7 @@ export default class IstikharaForm extends React.Component {
                 </select>
               </div>
               <div className="col-md-6 pt-3 pb-3">
-                <label for="maleName" className="inpLab">
+                <label for="maleName" className="inpLab font-weight-bold">
                   Enter Male Name
                 </label>
                 <input
@@ -41,7 +41,7 @@ export default class IstikharaForm extends React.Component {
                 />
               </div>
               <div className="col-md-6 pt-3 pb-3">
-                <label for="maleMotherName" className="inpLab">
+                <label for="maleMotherName" className="inpLab font-weight-bold">
                   Enter Male Mother Name
                 </label>
                 <input
@@ -53,7 +53,7 @@ export default class IstikharaForm extends React.Component {
             </div>
             <div className="row">
               <div className="col-md-6 pt-3 pb-3">
-                <label for="femaleName" className="inpLab">
+                <label for="femaleName" className="inpLab font-weight-bold">
                   Enter Female Name
                 </label>
                 <input
@@ -63,7 +63,7 @@ export default class IstikharaForm extends React.Component {
                 />
               </div>
               <div className="col-md-6 pt-3 pb-3">
-                <label for="femaleMotherName" className="inpLab">
+                <label for="femaleMotherName" className="inpLab font-weight-bold">
                   Enter Female Mother Name
                 </label>
                 <input
@@ -75,13 +75,13 @@ export default class IstikharaForm extends React.Component {
             </div>
             <div className="row">
               <div className="col-md-6 pt-3 pb-3">
-                <label for="contact" className="inpLab">
+                <label for="contact" className="inpLab font-weight-bold">
                   Contact
                 </label>
                 <input id="contact" className="inp" placeholder="Contact" />
               </div>
               <div className="col-md-6 pt-3 pb-3">
-                <label for="contact" className="inpLab">
+                <label for="contact" className="inpLab font-weight-bold">
                   Enter Istikhara Details
                 </label>
                 <textarea

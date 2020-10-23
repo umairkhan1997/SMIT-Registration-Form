@@ -11,26 +11,30 @@ import Media from './screen/media';
 import Donation from './screen/Donation';
 import incubation from './components/Incubation/incubationMain'
 import Dasterkhwan from './screen/dastarkhwan';
+import BookStoreScreen from './screen/BookStoreScreen'
 import Istikhara from './screen/onlineIstikhara';
 import ROplant from './screen/roplant'
+import OnlineQu from './screen/OnlineQu'
+import OnlineM from './components/OnlineM/OnlineM'
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
-      <Route exact path="/roplant" component={ROplant} />
-      <Route exact path="/istikhara" component={Istikhara} />
-      <Route exact path="/dastarkhwan" component={Dasterkhwan} />
-      <Route exact path="/media" component={Media} />
-      <Route exact path="/contact" component={Contact} />
-      <Route exact path="/chairmenmessage" component={ChairmenMessage} />
-      <Route exact path="/Smit" component={Smit} />
-      <Route exact path="/Welfare" component={Welfare} />
-      <Route exact path="/medical" component={Medical} />
-      <Route exact path="/Services" component={Services} />
-      <Route exact path="/Donation" component={Donation} />
-      <Route exact path="/incubation" component={incubation} />
-      {/* <Route exact pat="/RoPlant" component={ROplant} /> */}
-      
+      <Route  path="/roplant" component={ROplant} />
+      <Route  path="/istikhara" component={Istikhara} />
+      <Route  path="/dastarkhwan" component={Dasterkhwan} />
+      <Route  path="/media" component={Media} />
+      <Route  path="/contact" component={Contact} />
+      <Route  path="/bookStore" component={BookStoreScreen} />
+      <Route  path="/chairmenmessage" component={ChairmenMessage} />
+      <Route  path="/Smit" component={Smit} />
+      <Route  path="/Welfare" component={Welfare} />
+      <Route  path="/medical" component={Medical} />
+      <Route  path="/incubation" component={incubation} />
+      <Route  path="/Services" component={Services} />
+      <Route  path="/Donation" component={Donation} />
+      <Route  path="/OnlineQ" component={OnlineQu} />
+      <Route  path="/OnlineM" component={OnlineM} />
     </Router>
   );
 }
