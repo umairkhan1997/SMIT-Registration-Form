@@ -27,7 +27,7 @@ export default class WhatweDo extends React.Component {
                 <Link to="/smit">
                   <div className="small">
                     <p style={{ fontSize: "3.5em" }}>
-                    <i class="fas fa-desktop"></i>
+                      <i class="fas fa-desktop"></i>
                     </p>
                     <p style={{ fontSize: "1.5em" }}>SMIT</p>
                   </div>
@@ -51,9 +51,9 @@ export default class WhatweDo extends React.Component {
                 <Link to="/welfare">
                   <div className="small">
                     <p style={{ fontSize: "3.5em" }}>
-                    <i class="fas fa-book-open"></i>
+                      <i class="fas fa-book-open"></i>
                     </p>
-                    <p style={{ fontSize: "1.5em" }}>Green House School</p>
+                    <p style={{ fontSize: "1.5em" }}>Eductaion</p>
                   </div>
                 </Link>
               </Fade>
@@ -79,6 +79,18 @@ export default class WhatweDo extends React.Component {
                       <i class="fas fa-hand-holding-medical"></i>
                     </p>
                     <p style={{ fontSize: "1.5em" }}>Medical</p>
+                  </div>
+                </Link>
+              </Fade>
+            </div>
+            <div className="col-md-4 p-3">
+              <Fade right>
+                <Link to="/bloodbank">
+                  <div className="small">
+                    <p style={{ fontSize: "3.5em" }}>
+                    <i class="fas fa-tint"></i>
+                    </p>
+                    <p style={{ fontSize: "1.5em" }}>Blood bank</p>
                   </div>
                 </Link>
               </Fade>

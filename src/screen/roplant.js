@@ -44,9 +44,9 @@ export default class ROplant extends React.Component {
           </div>
         </div>
         <ROCounter />
-        <ROLocation />
         <ProjectCost />
         <GovtAff />
+        <ROLocation />
         <Footer />
       </div>
     );

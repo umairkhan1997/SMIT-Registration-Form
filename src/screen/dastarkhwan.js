@@ -10,6 +10,7 @@ import Cost from "../components/dastarkhwan/cost";
 import LangarCounter from "../components/dastarkhwan/counter";
 import Dailyserve from "../components/dastarkhwan/dailylife";
 import PrimeMinister from "../components/dastarkhwan/primeMinister";
+import RotiBank from '../components/dastarkhwan/rotibank'
 
 export default class Dasterkhwan extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ export default class Dasterkhwan extends React.Component {
         <PrimeMinister />
         <LangarCounter />
         <Dailyserve />
+        <RotiBank />
         <Cost />
         <Footer />
       </div>
