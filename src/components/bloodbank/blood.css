@@ -1,0 +1,23 @@
+.aims{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .6);
+    border: 2px solid dodgerblue;
+    color: dodgerblue;
+    font-size: 1.4em;
+    border-radius: 8px;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.topRight{
+    border-radius: 20px 0 0 0;
+}
+.topLeft{
+    border-radius: 0 20px 0 0;
+}
+.bottomRight{
+    border-radius: 0 0 0 20px;
+}
+.bottomLeft{
+    border-radius: 0 0 20px 0;
+}
