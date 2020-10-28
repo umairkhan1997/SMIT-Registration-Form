@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
+import DonationForm from '../components/donate/donationForm'
 
 export default class Donation extends React.Component {
   constructor(props) {
@@ -13,66 +14,7 @@ export default class Donation extends React.Component {
     return (
       <div>
         <MainHeader />
-
-        <h1
-          style={{
-            color: "dodgerblue",
-            marginTop: 30,
-            marginBottom: 30,
-            fontWeight: "bold",
-          }}
-        >
-          Donation
-        </h1>
-        <p>
-          For Sadqa, Aqiqa, Corona Effecties or other Donation select Donation
-          Form and for Bank Details select Bank Details option.
-        </p>
-        <div className="container-fluid mt-5">
-          <div className="d-flex justify-content-center">
-            <button type="button" class="btn btn-primary mr-5 btn-lg">
-              Donation Form{" "}
-            </button>
-            <button type="button" class="btn btn-secondary ml-5 btn-lg">
-              Bank Details
-            </button>
-          </div>
-          <div className="container mt-5">
-            <div className="row">
-              <div className="col-6">
-                <input type="text" class="form-control" placeholder="Name" />
-              </div>
-              <div className="col-6">
-                <input type="text" class="form-control" placeholder="Email" />
-              </div>
-            </div>
-            <div className="row mt-3">
-              <div className="col-6">
-                <input type="text" class="form-control" placeholder="Number" />
-              </div>
-              <div className="col-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Credit Card/ Visa Card"
-                />
-              </div>
-            </div>
-            <div className="row mt-3">
-              <div className="col-6">
-                <input type="text" class="form-control" placeholder="Number" />
-              </div>
-              <div className="col-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Credit Card/ Visa Card"
-                />
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <DonationForm />
         <Footer />
       </div>
     );

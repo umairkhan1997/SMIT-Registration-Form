@@ -14,12 +14,12 @@ export default class BloodBankAims extends React.Component {
     return (
       <div>
         <div className="container pt-5 pb-5">
-          <div className='p-5'>
-            <h2 className='Heading'>Blood Bank Services</h2>
+          <div className="p-5">
+            <h2 className="Heading">Blood Bank Services</h2>
           </div>
           <div className="row">
             <div className="col-md-3 p-3 mt-3 mb-3">
-              <div className="shadow p-3">laboratory Services</div>
+              <div className="shadow p-3">Diagnostic Services</div>
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="shadow p-3">Blood Bank</div>
@@ -27,12 +27,16 @@ export default class BloodBankAims extends React.Component {
             <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="shadow p-3">Thalessimia Care</div>
             </div>
+
             <div className="col-md-3 p-3 mt-3 mb-3">
-              <div className="shadow p-3">General Physicians</div>
+              <div className="shadow p-3">Peads Heamatologist</div>
+            </div>
+            <div className="col-md-3 p-3 mt-3 mb-3">
+              <div className="shadow p-3">Child Specialist</div>
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="shadow p-3">
-                Bloods and its components Trandfusion
+                Bloods and its components Transfusion
               </div>
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
@@ -40,6 +44,12 @@ export default class BloodBankAims extends React.Component {
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="shadow p-3">Medication</div>
+            </div>
+            <div className="col-md-3 p-3 mt-3 mb-3">
+              <div className="shadow p-3">Blood Donation Mobile Services</div>
+            </div>
+            <div className="col-md-3 p-3 mt-3 mb-3">
+              <div className="shadow p-3">Hep B Vaccination</div>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function MyRoute() {
       <Route exact path="/Welfare" component={Welfare} />
       <Route exact path="/medical" component={Medical} />
       <Route exact path="/Services" component={Services} />
-      <Route exact path="/Donation" component={Donation} />
+      <Route exact path="/donation" component={Donation} />
     </Router>
   );
 }
