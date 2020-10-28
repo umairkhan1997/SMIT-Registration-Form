@@ -24,7 +24,7 @@ export default class ProjectCost extends React.Component {
                 <h2>Estimated Costs of the Proposed Project</h2>
               </div>
               <Zoom>
-                <table className="costTable">
+                <table className="costTable table-responsive-sm">
                   <thead>
                     <tr>
                       <th>Activities Description</th>

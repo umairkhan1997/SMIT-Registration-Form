@@ -18,7 +18,7 @@ export default class Cost extends React.Component {
           <div className="p-5">
             <h2>Donate In Langarkhana</h2>
           </div>
-          <table className="text-left mt-5 mb-5" width="100%">
+          <table className="text-left mt-5 mb-5 table-responsive-sm" width="100%">
             <thead className="tableHead">
               <tr>
                 <th>Description</th>

@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
-import HomeContact from "../components/Home/HomeContact";
-import ContactForm from "../components/contact/contactForm";
 import Footer from "../components/Footer";
 import water from "../images/water.jpeg";
 import ROCounter from "../components/RO_Plant/RO_counter";
@@ -44,9 +42,9 @@ export default class ROplant extends React.Component {
           </div>
         </div>
         <ROCounter />
-        <ROLocation />
         <ProjectCost />
         <GovtAff />
+        <ROLocation />
         <Footer />
       </div>
     );
