@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
 import img4 from "../../images/course.jpg";
+import img5 from "../../images/course1.jpeg";
 export default class MainCourses extends React.Component {
   constructor(props) {
     super(props);
@@ -15,99 +16,86 @@ export default class MainCourses extends React.Component {
           <h2 className="Heading p-3">
             Discover Courses Developed by Saylani Mass IT
           </h2>
+        </div>
+        <div className="container pb-5 ">
           <div className="row">
-            <div className="col-md-4 p-4">
-              <div className="courseCard">
-                <img width="100%" src={img4} />
-                <div className="text-left p-3">
-                  <h2 className="coursesBlog">Web and Mobile</h2>
-                  <p className="text-muted">Duration: 1 Year</p>
-                  <hr />
-                  <div>
-                    <button className="btn btn-primary">Read More</button>
-                  </div>
-                </div>
-              </div>
+            <div className="col-md-8 p-4">
+              <img className="courseimg" src={img5} width="100%" />
             </div>
-            <div className="col-md-4 p-4">
-              <div className="courseCard">
-                <img width="100%" src={img4} />
-                <div className="p-3 text-left">
-                  <h2 className="coursesBlog">Graphic Designing</h2>
-                  <p className="text-muted">Duration: 6 Months</p>
-                  <hr />
-                  <div>
-                    <button className="btn btn-primary">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 p-4">
-              <div className="courseCard">
-                <img width="100%" src={img4} />
-                <div className="p-3 text-left">
-                  <h2 className="coursesBlog">CCNA</h2>
-                  <p className="text-muted">Duration: 5 Months</p>
-                  <hr />
-                  <div>
-                    <button className="btn btn-primary">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 p-4">
-              <div className="courseCard">
-                <img width="100%" src={img4} />
-                <div className="p-3 text-left">
-                  <h2 className="coursesBlog">CCO</h2>
-                  <p className="text-muted">Duration: 3 Months</p>
-                  <hr />
-                  <div>
-                    <button className="btn btn-primary">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 p-4">
-              <div className="courseCard">
-                <img width="100%" src={img4} />
-                <div className="p-3 text-left">
-                  <h2 className="coursesBlog">CCA</h2>
-                  <p className="text-muted">Duration: 3 Months</p>
-                  <hr />
-                  <div>
-                    <button className="btn btn-primary">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 p-4">
-              <div className="courseCard">
-                <img width="100%" src={img4} />
-                <div className="p-3 text-left">
-                  <h2 className="coursesBlog">Video Editing</h2>
-                  <p className="text-muted">Duration: 3 Months</p>
-                  <hr />
-                  <div>
-                    <button className="btn btn-primary">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 p-4">
-              <div className="courseCard">
-                <img width="100%" src={img4} />
-                <div className="p-3 text-left">
-                  <h2 className="coursesBlog">Artificial Intelligence</h2>
-                  <p className="text-muted">Duration: 3 Months</p>
-                  <hr />
-                  <div>
-                    <button className="btn btn-primary">Read More</button>
-                  </div>
-                </div>
-              </div>
+            <div className="col-md-4 p-4 text-left">
+              <h3 className="text-primary">
+                Web And Mobile Application Development
+              </h3>
+              <ul className="p-3 text-muted">
+                <li>HTML 5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>React Native</li>
+                <li>Mongo DB</li>
+                <li>Express JS</li>
+                <li>Node JS</li>
+              </ul>
+              <hr />
+              <h4>Duration: 1 Year</h4>
             </div>
           </div>
+          <hr />
+          <div className="row">
+            <div className="col-md-8 p-4">
+              <img className="courseimg" src={img5} width="100%" />
+            </div>
+            <div className="col-md-4 p-4 text-left">
+              <h3 className="text-primary">
+               CCA
+              </h3>
+              <ul className="p-3 text-muted">
+                <li>Quick Book</li>
+                <li>PeachTree</li>
+                <li>Excell</li>
+              </ul>
+              <hr />
+              <h4>Duration: 3 Months</h4>
+            </div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="col-md-8 p-4">
+              <img className="courseimg" src={img5} width="100%" />
+            </div>
+            <div className="col-md-4 p-4 text-left">
+              <h3 className="text-primary">
+               CCO
+              </h3>
+              <ul className="p-3 text-muted">
+                <li>MS Word</li>
+                <li>MS Excel</li>
+                <li>MS PowerPoint</li>
+                <li>MS Access</li>
+              </ul>
+              <hr />
+              <h4>Duration: 3 Months</h4>
+            </div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="col-md-8 p-4">
+              <img className="courseimg" src={img5} width="100%" />
+            </div>
+            <div className="col-md-4 p-4 text-left">
+              <h3 className="text-primary">
+               Graphic Designing
+              </h3>
+              <ul className="p-3 text-muted">
+                <li>Adobe illustrator</li>
+                <li>Adobe Photoshop</li>
+                <li>Urdu Inpage</li>
+              </ul>
+              <hr />
+              <h4>Duration: 6 Months</h4>
+            </div>
+          </div>
+          <hr />
         </div>
       </div>
     );

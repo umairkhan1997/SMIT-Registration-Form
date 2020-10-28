@@ -98,3 +98,7 @@
   background-color: rgba(30, 144, 255, .5);
   color: white;
 }
+.courseimg{
+  border-radius: 10px;
+  box-shadow: 0 10px 15px lightgrey;
+}
