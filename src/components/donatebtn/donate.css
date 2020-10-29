@@ -1,0 +1,19 @@
+.donateBtn{
+    padding: 20px;
+    font-size: 1.2em;
+    position: fixed;
+    left: 0;
+    top: 20%;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 0 35px 35px 0;
+    margin-left: -80px;
+    cursor: pointer;
+}
+.donateBtn Link{
+    color: white!important;
+    text-decoration: none;
+}
+.donateBtn:hover{
+    margin-left: 0;
+}

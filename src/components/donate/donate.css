@@ -1,0 +1,67 @@
+.quantity {
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid grey;
+  outline: none;
+}
+.incrementbtn {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 10px 10px lightgrey;
+}
+.incrementbtn:focus {
+  outline: none;
+}
+.bankDetailsCard {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px lightgrey;
+  background-color: white;
+  height: 100%;
+}
+.grad {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(215, 215, 215, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.bankDetails {
+  width: 100%;
+  text-align: left;
+}
+.bankDetails thead {
+  background-color: dodgerblue;
+  color: white;
+}
+.bankDetails tbody tr {
+  background-color: lightgrey;
+}
+@media only screen and (max-width: 600px) {
+  .bankDetails thead {
+    position: absolute;
+    left: 0;
+  }
+  .bankDetails tbody {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .bankDetails th,
+  .bankDetails td {
+    width: 100%;
+    display: block;
+  }
+  .bankDetails tr {
+    display: inline-block;
+  }
+}
