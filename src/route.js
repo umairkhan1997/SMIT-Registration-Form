@@ -17,7 +17,7 @@ import ROplant from './screen/roplant';
 import OnlineQu from './screen/OnlineQu';
 import OnlineM from './components/OnlineM/OnlineM';
 import BloodBank from './screen/bloodBank';
-
+import JobBank from './screen/JobBankScreen';
 export default function MyRoute() {
   return (
     <Router>
@@ -38,6 +38,7 @@ export default function MyRoute() {
       <Route  path="/Donation" component={Donation} />
       <Route  path="/OnlineQ" component={OnlineQu} />
       <Route  path="/OnlineM" component={OnlineM} />
+      <Route  path="/JobBank" component={JobBank} />
     </Router>
   );
 }

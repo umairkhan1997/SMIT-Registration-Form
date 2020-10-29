@@ -10,7 +10,7 @@ export default class Services extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div >
         <MainHeader />
         <WhatweDo />
       </div>

@@ -16,41 +16,27 @@ export default class WhatweDo extends React.Component {
   };
   render() {
     return (
-      <div className="container-fluid bg-light">
+      <div className="container-fluid" style={{backgroundColor:'white'}}>
 
-        <div>
-          
-        </div>
+<div className="container" >
+<p className="text-center font-weight-bold m-5" style={{fontSize:26,color:'dodgerblue'}}>Saylani Welfare International Trust</p>
+      <select className="form-control text-muted mb-4" id="exampleFormControlSelect1" style={{height:50,marginTop:-10,backgroundColor:'#e9ebec'}} >
+      <option >Saylani Mass IT Training</option>
+      <option >Education</option>
+      <option >Isthikhara</option>
+      <option >Welfare</option>
+      <option >Medical</option>
+      <option>Blood Bank</option>
+      <option>Job Bank</option>
+      <option>Hajj Application</option>
+    </select>
+    </div>
 
         <div className="container">
           {/* <div className="p-3">
             <h1 className="Heading">What We Do</h1>
           </div> */}
           <div className="row">
-          <div className="col-md-4 p-3">
-              <Fade left>
-                <Link to="/OnlineM">
-                  <div className="small">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-mosque"></i>
-                    </p>
-                    <p style={{ fontSize: "1.5em" }}>Saylani Online Masjid</p>
-                  </div>
-                </Link>
-              </Fade>
-            </div> 
-            <div className="col-md-4 p-3">
-              <Fade left>
-                <Link to="/OnlineQ">
-                  <div className="small">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-quran"></i>
-                    </p>
-                    <p style={{ fontSize: "1.5em" }}>Quran Pak Registeration</p>
-                  </div>
-                </Link>
-              </Fade>
-            </div> 
             <div className="col-md-4 p-3">
               <Fade left>
                 <Link to="/smit">
@@ -148,7 +134,30 @@ export default class WhatweDo extends React.Component {
                 </Link>
               </Fade>
             </div>
-     
+            <div className="col-md-4 p-3">
+              <Fade left>
+                <Link to="/OnlineM">
+                  <div className="small">
+                    <p style={{ fontSize: "3.5em" }}>
+                      <i class="fas fa-mosque"></i>
+                    </p>
+                    <p style={{ fontSize: "1.5em" }}>Saylani Online Masjid</p>
+                  </div>
+                </Link>
+              </Fade>
+            </div> 
+            <div className="col-md-4 p-3">
+              <Fade left>
+                <Link to="/OnlineQ">
+                  <div className="small">
+                    <p style={{ fontSize: "3.5em" }}>
+                      <i class="fas fa-quran"></i>
+                    </p>
+                    <p style={{ fontSize: "1.5em" }}>Quran Pak Registeration</p>
+                  </div>
+                </Link>
+              </Fade>
+            </div> 
             <div className="col-md-4 p-3">
                 <Fade up>
                 <Link to="/dastarkhwan">
@@ -188,7 +197,7 @@ export default class WhatweDo extends React.Component {
 
             <div className="col-md-4 p-3">
               <Fade left>
-                <Link to="">
+                <Link to="JobBank">
                   <div className="small">
                     <p style={{ fontSize: "3.5em" }}>
                       <i class="fas fa-user-tie"></i>
