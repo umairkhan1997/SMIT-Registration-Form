@@ -58,6 +58,23 @@ export default class WhatweDo extends React.Component {
             </div>
             <div className="col-md-6 p-3">
               <Fade up>
+                <Link to="/news">
+                  <div className="row small">
+                    <div className="col-md-3 p-5 d-flex justify-content-center align-items-center">
+                      <p style={{ fontSize: "3.5em" }}>
+                      <i class="far fa-newspaper"></i>
+                      </p>
+                    </div>
+                    <div className="col-md-9 p-5 text-left">
+                      <h3 className="text-muted">NEWS</h3>
+                      <p className='text-muted'>Saylani News And Media</p>
+                    </div>
+                  </div>
+                </Link>
+              </Fade>
+            </div>
+            <div className="col-md-6 p-3">
+              <Fade up>
                 <Link to="/welfare">
                   <div className="row small">
                     <div className="col-md-3 p-5 d-flex justify-content-center align-items-center">
