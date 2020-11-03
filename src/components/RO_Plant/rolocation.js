@@ -31,12 +31,12 @@ export default class ROLocation extends React.Component {
           style={{
             backgroundColor: "#d8dfe6",
           }}
-          className="bg-image"
+          className="bg-image "
         >
-          <div class="container-fluid">
+          <div className="">
             <div
               id="carouselContent"
-              class="carousel slide"
+              className="carousel slide"
               data-ride="carousel"
             >
               <div class="carousel-inner" role="listbox">
@@ -128,8 +128,7 @@ export default class ROLocation extends React.Component {
                       </Fade>
                     </div>
                   </div>
-                  <div class="carousel-item text-center p-4">
-                    <div className="row">
+                  <div class="carousel-item  text-center p-4">
                       <div className="row text-left">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
@@ -215,10 +214,8 @@ export default class ROLocation extends React.Component {
                           </div>
                         </Fade>
                       </div>
-                    </div>
                   </div>
                   <div class="carousel-item text-center p-4">
-                    <div className="row">
                       <div className="row text-left">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
@@ -302,10 +299,8 @@ export default class ROLocation extends React.Component {
                           </div>
                         </Fade>
                       </div>
-                    </div>
                   </div>
                   <div class="carousel-item text-center p-4">
-                    <div className="row">
                       <div className="row text-left">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
@@ -389,10 +384,8 @@ export default class ROLocation extends React.Component {
                           </div>
                         </Fade>
                       </div>
-                    </div>
                   </div>
                   <div class="carousel-item text-center p-4">
-                    <div className="row">
                       <div className="row text-left">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
@@ -433,7 +426,6 @@ export default class ROLocation extends React.Component {
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
               <a
                 class="carousel-control-prev carlStl"

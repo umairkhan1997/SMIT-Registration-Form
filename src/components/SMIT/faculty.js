@@ -45,7 +45,7 @@ export default class Faculty extends React.Component {
               </Fade>
             </div>
           </div>
-          <div className="text-right pt-3 pb-3">
+          {/* <div className="text-right pt-3 pb-3">
             <div>
               <Fade left>
                 <div className="facultyName p-3 pt-5">
@@ -68,7 +68,7 @@ export default class Faculty extends React.Component {
                 </p>
               </Fade>
             </div>
-          </div>
+          </div> */}
           <div className="text-left pt-3 pb-3">
             <div>
               <Fade left>

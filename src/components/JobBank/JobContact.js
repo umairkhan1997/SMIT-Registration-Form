@@ -54,7 +54,7 @@ export default class SmitContact extends React.Component {
                 </div>
                 <div className="col-md-11 text-left">
                   <h6>
-                    4th Floor , A-25, Bahadurabad Chowrangi Karachi, Pakistan
+                    5 th Floor , A-25, Bahadurabad Chowrangi Karachi, Pakistan
                   </h6>
                 </div>
 
@@ -73,7 +73,7 @@ export default class SmitContact extends React.Component {
                   </p>
                 </div>
                 <div className="col-md-11 text-left">
-                  <h6>education@saylaniwelfare.com</h6>
+                  <h6>info@saylaniwelfare.com</h6>
                 </div>
               </div>
             </div>

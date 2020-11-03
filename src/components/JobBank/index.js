@@ -19,15 +19,15 @@ export default class JobBank extends React.Component {
       <div className="">
         {/* POPULAR JOBS START =============>>>>>>>>*/}
         <div>
-          <h3 className="mt-4 font-weight-bold">Popular Categories</h3>
+          <h3 className="mt-4 font-weight-bold" style={{color:'dodgerblue'}}>Popular Categories</h3>
           <div className="container-fluid">
             <div className="row mt-4 justify-content-center">
               <div
-                className="col-md-2 shadow divStl m-3"
+                className="col-md-2 shadow divStl m-3 small"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
-                <p style={{ fontSize: "3.5em" }}>
-                  <img src={manager} width="80px" height="80px" />
+                <p style={{ fontSize: "3.5em", }}>
+                  <img src={manager} style={{marginTop:20}} width="80px" height="80px" />
                 </p>
                 <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>
                   Supervisor
@@ -35,33 +35,33 @@ export default class JobBank extends React.Component {
               </div>
 
               <div
-                className="col-md-2 shadow m-3"
+                className="col-md-2 shadow m-3 small"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
-                <p style={{ fontSize: "3.5em" }}>
+                <p style={{ fontSize: "3.5em", }}>
                   {/* <i class="fas fa-laptop-code"></i>operator */}
-                  <img src={operator} width="80px" height="80px" />
+                  <img src={operator} style={{marginTop:20}} width="80px" height="80px" />
                 </p>
                 <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>
                   Operator
                 </p>
               </div>
               <div
-                className="col-md-2 shadow m-3"
+                className="col-md-2 shadow m-3 small"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
-                <p style={{ fontSize: "3.5em" }}>
-                  <img src={taxiDriver} width="80px" height="80px" />
+                <p style={{ fontSize: "3.5em", }}>
+                  <img src={taxiDriver} style={{marginTop:20}} width="80px" height="80px" />
                 </p>
                 <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>Driver</p>
               </div>
               <div
-                className="col-md-2 shadow m-3"
+                className="col-md-2 shadow m-3 small"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
-                <p style={{ fontSize: "3.5em" }}>
+                <p style={{ fontSize: "3.5em", }}>
                   {/* <i class="fas fa-laptop-code"></i> */}
-                  <img src={img1} width="80px" height="80px" />
+                  <img src={img1} style={{marginTop:20}} width="80px" height="80px" />
                 </p>
                 <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>Labour</p>
               </div>
@@ -93,7 +93,7 @@ export default class JobBank extends React.Component {
 
 {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
 <div className='container mt-5'>
-  <h4 className='text-left font-weight-bold'>Featured Jobs</h4>
+  <h4 className='text-left font-weight-bold' style={{color:'dodgerblue'}}>Featured Jobs</h4>
 </div>
 <div className='container mt-1 feaDiv  mb-5'>
 <div className='row'>

@@ -1,0 +1,19 @@
+.head{
+    color: dodgerblue;
+    font-weight: bold;
+    /* text-align: left; */
+    margin-top:50px ;
+}
+
+.para{
+    text-align: left;
+
+}
+.back {
+    background-image: url("../../images/apptafseer.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+  }

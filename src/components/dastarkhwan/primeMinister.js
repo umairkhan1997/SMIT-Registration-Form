@@ -14,7 +14,7 @@ export default class PrimeMinister extends React.Component {
   render() {
     return (
       <div>
-        <div className="container mt-5 mb-5">
+        <div className="container mt-5 mb-3">
           <div className="row p-5">
             <div className="col-md-6">
               <img className="roundImage" src={primeMinister} width="100%" />
@@ -24,7 +24,7 @@ export default class PrimeMinister extends React.Component {
                 Honorable Prime Minister Imran Khan, inaugurated the Islamabad
                 Langar Khana
               </h2>
-              <p>Over Target is to open 112 more langer Khana</p>
+              <p className='text-left ml-2 font-weight-bold'>Over Target is to open 112 more langer Khana</p>
             </div>
           </div>
         </div>

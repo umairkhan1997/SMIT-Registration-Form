@@ -13,7 +13,7 @@ export default class LangarCounter extends React.Component {
   render() {
     return (
       <div>
-        <div className="bg-image pt-5 pb-5">
+        <div className="bg-image pb-5">
           <div className="container">
             <div className="row">
               <div className="col-md-4 pt-5 pb-5">
