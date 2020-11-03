@@ -16,18 +16,14 @@ export default class MainHeader extends React.Component {
       <header className="bg-light border-bottom sticky-top">
         <div className="container-fluid bg-light">
           <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
+            <nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light">
               <div>
                 <a class="navbar-brand" href="#">
-                  <img
-                    className="d-inline-block align-top"
-                    src={logo}
-                    width="180px"
-                  />
+                  <img src={logo} width="180px" />
                 </a>
               </div>
               <button
-                className="navbar-toggler"
+                class="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -35,14 +31,14 @@ export default class MainHeader extends React.Component {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span className="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
               </button>
-              <form>
+              <div>
                 <div
-                  className="collapse  navbar-collapse"
+                  class="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  <ul className="navbar-nav mr-auto">
+                  <ul class="navbar-nav mr-auto">
                     <li className="nav-item">
                       <a className="nav-link" href="/">
                         Home
@@ -80,8 +76,8 @@ export default class MainHeader extends React.Component {
                     </li>
                   </ul>
                 </div>
-              </form>
-            </nav>
+              </div>
+            </nav>{" "}
           </div>
         </div>
       </header>

@@ -43,9 +43,7 @@
   background-color: dodgerblue;
   color: white;
 }
-.bankDetails tbody tr {
-  background-color: lightgrey;
-}
+
 @media only screen and (max-width: 600px) {
   .bankDetails thead {
     position: absolute;
@@ -64,4 +62,17 @@
   .bankDetails tr {
     display: inline-block;
   }
+  .select{
+    width: 50%;
+  }
+}
+.select{
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgb(215, 215, 215);
+  /* background-color:rgb(215, 215, 215) */
+  cursor: pointer;
+}
+.select:hover{
+  background-color: rgb(240, 240, 240);
 }
