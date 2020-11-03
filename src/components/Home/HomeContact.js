@@ -12,7 +12,7 @@ export default class HomeContact extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div >
         <div className="container">
           <h1 className="Heading">Over Branches</h1>
         </div>
@@ -20,9 +20,9 @@ export default class HomeContact extends React.Component {
           style={{
             backgroundColor: "#d8dfe6",
           }}
-          className="bg-image"
+          className="bg-image co"
         >
-          <div class="container-fluid">
+          <div class="">
             <div
               id="carouselContent"
               class="carousel slide"
@@ -30,7 +30,7 @@ export default class HomeContact extends React.Component {
             >
               <div class="carousel-inner" role="listbox">
                 <div className="container">
-                  <div class="carousel-item active text-center p-4">
+                  <div class="carousel-item active text-center p-5">
                     <div className="row text-left">
                       <Fade left>
                         <div className="col-md-4 p-3 border-bottom">
@@ -186,7 +186,7 @@ export default class HomeContact extends React.Component {
                       </Fade>
                     </div>
                   </div>
-                  <div class="carousel-item text-center p-4">
+                  <div class="carousel-item text-center p-5">
                     <div className="row">
                       <div className="row text-left">
                         <Fade left>

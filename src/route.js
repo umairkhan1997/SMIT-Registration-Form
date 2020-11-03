@@ -19,10 +19,13 @@ import OnlineM from './components/OnlineM/OnlineM';
 import BloodBank from './screen/bloodBank';
 import JobBank from './screen/JobBankScreen';
 import QuranApp from './components/QuranApp/QuranApp'
+import News from './screen/news'
+
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
+      <Route exact path="/news" component={News} />
       <Route exact path="/bloodbank" component={BloodBank} />
       <Route  path="/roplant" component={ROplant} />
       <Route  path="/istikhara" component={Istikhara} />  

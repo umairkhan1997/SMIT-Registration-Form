@@ -45,7 +45,7 @@ export default class BankDetails extends React.Component {
           </div>
         </div>
 
-        <div>
+        <div className='container'>
           {/* <div className='row'>
                 <div className='col-md-1'>#</div>
                 <div className='col-md-2'>Bank Details</div>

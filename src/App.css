@@ -63,12 +63,7 @@
   background-color: dodgerblue;
   color: white;
 }
-.newsDetail {
-  display: inline-block;
-  width: 70%;
-  vertical-align: top;
-  padding: 20px;
-}
+
 
 .headingList {
   border: none !important;
@@ -117,14 +112,8 @@
   margin-left: 10%;
 }
 
-.upCourTwo {
-  background-color: rgba(51, 0, 0, 0.7);
-}
-.ComCourses {
-  color: white;
-  font-size: 18;
-  font-weight: bold;
-}
+
+
 
 .messagebox {
   text-align: left;
@@ -158,61 +147,8 @@
   margin-top: 2px;
 }
 
-.messageBtn {
-  padding: 12px;
-  width: 200px;
-  margin: 5px;
-  border: none;
-  background-color: #d43c18;
-  color: white;
-  font-weight: bold;
-  font-size: 0.9em;
-  border-radius: 25px;
-  box-shadow: 0 8px 10px lightgrey;
-}
-.determineTxt {
-  background-color: white !important;
-  color: #d43c18;
-}
 
-.bottomStl {
-  justify-content: space-between !important;
-  text-align: left;
-}
 
-.bottomTxt {
-  border-bottom: 3px solid #d43c18;
-  font-size: 20px;
-  width: 120px;
-}
-
-.bottomUl {
-  list-style-type: none;
-}
-
-.bottomDiv {
-  margin-left: -150px;
-}
-
-.bottomDivTw0 {
-  margin-left: 50px;
-  margin-right: 0px;
-}
-.bottomDivThre {
-  margin-left: 50px;
-}
-@media only screen and (max-width: 600px) {
-  .bottomDiv {
-    margin-left: 0px;
-  }
-  .bottomDivTw0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .bottomDivThre {
-    margin-left: 0px;
-  }
-}
 
 .li {
   border-bottom: 0.001em solid #c0c0c0;
@@ -220,23 +156,6 @@
   margin-left: -40px;
   font-size: 18px;
   margin-bottom: 5px;
-}
-
-.mainSlider {
-  z-index: 1;
-}
-.SliderImage {
-}
-.countDivWel {
-  border: 3px solid #d43c18;
-  /* padding:30px; */
-  height: 140px;
-  width: 140px;
-  padding: 20px;
-  padding-top: 35px;
-  padding-bottom: 40px;
-  border-radius: 100%;
-  margin-top: 10px;
 }
 
 
