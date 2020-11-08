@@ -17,7 +17,7 @@ export default class Video extends React.Component {
         <div className="bg-image mt-5 ">
           {/* <div id="ytplayer"></div> */}
           <div className="row d-flex justify-content-left">
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -30,7 +30,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -44,7 +44,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -58,7 +58,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -72,7 +72,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -86,7 +86,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -100,7 +100,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -114,7 +114,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -128,7 +128,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -142,7 +142,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -156,7 +156,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"
@@ -170,7 +170,7 @@ export default class Video extends React.Component {
                 ></iframe>
               </Zoom>
             </div>
-            <div className="col-md-2 ">
+            <div className="col-md-3 ">
               <Zoom>
                 <iframe
                  allowfullscreen="allowfullscreen"

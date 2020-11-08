@@ -1,0 +1,18 @@
+.date{
+    background-color: dodgerblue;
+    display: inline-block;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    color: white;
+    border-radius: 0 0 8px 8px;
+}
+.bTop{
+    border-top: 2px solid dodgerblue;
+}
+.date p{
+    margin: 0;
+} 
+.light{
+    background-color: rgb(240, 240, 240);
+}

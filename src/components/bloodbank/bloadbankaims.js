@@ -14,7 +14,7 @@ export default class BloodBankServices extends React.Component {
   render() {
     return (
       <div>
-        <div className="back bg-image">
+        <div className="backImg bg-image">
           <div className='pt-5 pb-5' style={{ backgroundColor: "rgba(0,0,0,.5)" }}>
             <div className="container pt-5 pb-5">
               <div className="row">

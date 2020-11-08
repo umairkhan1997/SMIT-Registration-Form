@@ -7,7 +7,7 @@ import Scrollable from "../components/scrollable";
 import logo from "../images/logo.png";
 import BloodBankServices from '../components/bloodbank/bloodservices';
 import BloodBankAims from '../components/bloodbank/bloadbankaims'
-
+import Footer from '../components/Footer';
 export default class BloodBank extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +19,7 @@ export default class BloodBank extends React.Component {
         <MainHeader />
         <BloodBankServices />
         <BloodBankAims />
+        <Footer />
       </div>
     );
   }

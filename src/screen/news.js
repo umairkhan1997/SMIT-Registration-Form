@@ -12,9 +12,7 @@ export default class News extends React.Component {
   render() {
     return <div>
         <MainHeader />
-        <div>News</div>
         <NewsSection />
-
     </div>;
   }
 }

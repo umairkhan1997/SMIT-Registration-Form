@@ -21,8 +21,6 @@ export default class Contact extends React.Component {
         <ContactForm />
         <div className="container-fluid pt-5 pb-5 bg-light">
             <HomeContact />
-          <div className="container">
-          </div>
         </div>
         <div className="bg-image">
           <iframe

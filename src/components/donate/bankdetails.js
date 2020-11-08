@@ -14,7 +14,7 @@ export default class BankDetails extends React.Component {
   render() {
     return (
       <div>
-        <div className="pt-5 pb-5 grad">
+        <div className="pt-3 pb-5 grad">
           <div className="container">
             <div className="row mt-5 mb-5">
               <div className="col-md-4 p-4">

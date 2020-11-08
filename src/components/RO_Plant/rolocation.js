@@ -42,7 +42,7 @@ export default class ROLocation extends React.Component {
               <div class="carousel-inner" role="listbox">
                 <div className="container">
                   <div class="carousel-item active text-center p-4">
-                    <div className="row text-left">
+                    <div className="row ">
                       <Fade left>
                         <div className="col-md-4 p-3 border-bottom">
                           <p className="location">High Way RO Plant</p>
@@ -129,7 +129,7 @@ export default class ROLocation extends React.Component {
                     </div>
                   </div>
                   <div class="carousel-item  text-center p-4">
-                      <div className="row text-left">
+                      <div className="row ">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
                             <p className="location">Razakabad RO Plant</p>
@@ -216,7 +216,7 @@ export default class ROLocation extends React.Component {
                       </div>
                   </div>
                   <div class="carousel-item text-center p-4">
-                      <div className="row text-left">
+                      <div className="row ">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
                             <p className="location">Eid Gah Road</p>
@@ -301,7 +301,7 @@ export default class ROLocation extends React.Component {
                       </div>
                   </div>
                   <div class="carousel-item text-center p-4">
-                      <div className="row text-left">
+                      <div className="row ">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
                             <p className="location">G7-4 Islamabad</p>
@@ -386,7 +386,7 @@ export default class ROLocation extends React.Component {
                       </div>
                   </div>
                   <div class="carousel-item text-center p-4">
-                      <div className="row text-left">
+                      <div className="row ">
                         <Fade left>
                           <div className="col-md-4 p-3 border-bottom">
                             <p className="location">Civil Hospital Ro Plant</p>

@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
             </div>
 
             <div className="col-md-4 text-left p-5">
-              <ul>
+              {/* <ul>
                 <li className="footerList">
                   <a href="/">Home</a>
                 </li>
@@ -39,7 +39,7 @@ export default class Footer extends React.Component {
                 <li className="footerList">
                   <a href="/welfare">Welfare</a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="col-md-4 text-left p-5">
               <iframe

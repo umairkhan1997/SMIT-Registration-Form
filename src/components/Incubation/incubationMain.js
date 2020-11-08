@@ -14,6 +14,7 @@ import img6 from '../../images/mar.png'
 import img7 from '../../images/aliMughal.png'
 import img8 from '../../images/uma.jpg'
 import img9 from '../../images/zeeshan.png'
+import Footer from "../Footer";
 export default class incubationMain extends React.Component {
   constructor(props) {
     super(props);
@@ -247,7 +248,7 @@ export default class incubationMain extends React.Component {
 </div>
 
 {/* EVENTS END */}
-
+<Footer />
       </div>
     );
   }

@@ -123,8 +123,8 @@ bgClrBtnOne:'#0069d9',bgClrBtnTwo:'#5a6268'
         <MainHeader />
         <DonateBtn />
         <div className="container">
-          <div className="row">
-            <div className="col-md-3 p-5">
+          <div className="row justify-content-center">
+            <div className="col-md-2 p-3 pt-5">
               <div
                 onClick={() =>
                   this.setState({
@@ -138,7 +138,7 @@ bgClrBtnOne:'#0069d9',bgClrBtnTwo:'#5a6268'
                 Sadqa
               </div>
             </div>
-            <div className="col-md-3 p-5">
+            <div className="col-md-2 p-3 pt-5">
               <div
                 onClick={() =>
                   this.setState({
@@ -152,7 +152,7 @@ bgClrBtnOne:'#0069d9',bgClrBtnTwo:'#5a6268'
                 Aqeeqa
               </div>
             </div>
-            <div className="col-md-3 p-5">
+            <div className="col-md-2 p-3 pt-5">
               <div
                 onClick={() =>
                   this.setState({
@@ -166,7 +166,7 @@ bgClrBtnOne:'#0069d9',bgClrBtnTwo:'#5a6268'
                 Other Donation
               </div>
             </div>
-            <div className="col-md-3 p-5">
+            <div className="col-md-2 p-3 pt-5">
               <div
                 onClick={() =>
                   this.setState({
@@ -180,7 +180,7 @@ bgClrBtnOne:'#0069d9',bgClrBtnTwo:'#5a6268'
                 Corona Rashan
               </div>
             </div>
-            <div className="col-md-3 p-5">
+            <div className="col-md-2 p-3 pt-5">
               <div
                 onClick={() =>
                   this.setState({ donationForm: false, bankDetails: true })

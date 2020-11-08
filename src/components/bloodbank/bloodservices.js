@@ -34,11 +34,7 @@ export default class BloodBankAims extends React.Component {
             <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="shadow p-3">Child Specialist</div>
             </div>
-            <div className="col-md-3 p-3 mt-3 mb-3">
-              <div className="shadow p-3">
-                Bloods and its components Transfusion
-              </div>
-            </div>
+           
             <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="shadow p-3">Effective Screening</div>
             </div>
@@ -46,10 +42,15 @@ export default class BloodBankAims extends React.Component {
               <div className="shadow p-3">Medication</div>
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
+              <div className="shadow p-3">Hep B Vaccination</div>
+            </div>
+            <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="shadow p-3">Blood Donation Mobile Services</div>
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
-              <div className="shadow p-3">Hep B Vaccination</div>
+              <div className="shadow p-3">
+                Bloods and its components Transfusion
+              </div>
             </div>
           </div>
         </div>

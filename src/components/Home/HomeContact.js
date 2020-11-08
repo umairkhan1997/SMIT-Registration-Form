@@ -20,7 +20,7 @@ export default class HomeContact extends React.Component {
           style={{
             backgroundColor: "#d8dfe6",
           }}
-          className="bg-image co"
+          className="bg-image "
         >
           <div class="">
             <div

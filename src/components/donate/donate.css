@@ -62,17 +62,13 @@
   .bankDetails tr {
     display: inline-block;
   }
-  .select{
-    width: 50%;
-  }
 }
 .select{
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 10px 15px rgb(215, 215, 215);
-  /* background-color:rgb(215, 215, 215) */
   cursor: pointer;
 }
 .select:hover{
-  background-color: rgb(240, 240, 240);
+  background-color: dodgerblue;
+  color: white;
 }

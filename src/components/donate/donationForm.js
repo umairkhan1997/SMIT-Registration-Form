@@ -22,10 +22,10 @@ export default class DonationForm extends React.Component {
           <div className="text-left">
             <h1>Donation Form</h1>
           </div>
-          <p className="text-muted">
+          {/* <p className="text-muted">
             For Sadqa, Aqiqa, Corona Effecties or other Donation select Donation
             Form and for Bank Details select Bank Details option.
-          </p>
+          </p> */}
           <div className="container mt-5">
             <div className="row">
               <div className="col-md-7 bg-light p-5">

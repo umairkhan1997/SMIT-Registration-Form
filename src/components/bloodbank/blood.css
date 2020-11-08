@@ -21,3 +21,9 @@
 .bottomLeft{
     border-radius: 0 0 20px 0;
 }
+
+.backImg{
+    background-image: '../../images/BloodBankBack.jpg';
+    background-repeat: no-repeat;
+    background-size: cover;
+}
