@@ -1,6 +1,6 @@
-* {
-  font-family: "Alata";
-  transition: 0.5s;
+*{
+  font-family: 'Alata';
+  transition: .5s;
 }
 .App {
   text-align: center;

@@ -16,9 +16,6 @@
     width: 100%;
 }
 
-*{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 .featDiv{
     background-color: rgb(244,245,250);   
 }
@@ -77,4 +74,7 @@
     background-color: white;
     box-shadow: 0 13px 25px lightgrey;
     border: 2px solid white;
+}
+.jobTable{
+    width: 100%;
 }
