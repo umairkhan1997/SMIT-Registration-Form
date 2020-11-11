@@ -8,6 +8,7 @@ import operator from "../../images/operator.png";
 import manager from "../../images/manager.png";
 import taxiDriver from "../../images/taxi-driver.png";
 import JobContact from "./JobContact";
+
 export default class JobBank extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +20,7 @@ export default class JobBank extends React.Component {
       <div className="">
         {/* POPULAR JOBS START =============>>>>>>>>*/}
         <div>
-          <h3 className="mt-4 font-weight-bold" style={{ color: "dodgerblue" }}>
+          <h3 className="my-4" style={{ color: "dodgerblue" }}>
             Popular Categories
           </h3>
           <div className="container">
@@ -36,9 +37,7 @@ export default class JobBank extends React.Component {
                     height="80px"
                   />
                 </p>
-                <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>
-                  Supervisor
-                </p>
+                <p style={{ fontSize: "1.5em" }}>Supervisor</p>
               </div>
 
               <div
@@ -54,9 +53,7 @@ export default class JobBank extends React.Component {
                     height="80px"
                   />
                 </p>
-                <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>
-                  Operator
-                </p>
+                <p style={{ fontSize: "1.5em" }}>Operator</p>
               </div>
               <div
                 className="col-md-2 shadow m-3 small"
@@ -70,7 +67,7 @@ export default class JobBank extends React.Component {
                     height="80px"
                   />
                 </p>
-                <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>Driver</p>
+                <p style={{ fontSize: "1.5em" }}>Driver</p>
               </div>
               <div
                 className="col-md-2 shadow m-3 small"
@@ -85,7 +82,7 @@ export default class JobBank extends React.Component {
                     height="80px"
                   />
                 </p>
-                <p style={{ fontSize: "1.5em", fontWeight: "bold" }}>Labour</p>
+                <p style={{ fontSize: "1.5em" }}>Labour</p>
               </div>
             </div>
           </div>
@@ -102,7 +99,7 @@ export default class JobBank extends React.Component {
                   So we do have a suitable Job according to your requirment
                 </h6>
                 <button
-                  className="btn btn-outline-dark mt-3"
+                  className="vieMor my-3"
                   data-toggle="modal"
                   data-target="#jobSeekar"
                 >
@@ -117,7 +114,7 @@ export default class JobBank extends React.Component {
                 <h6>
                   So we do have a suitable employee according to your requirment
                 </h6>
-                <button className="btn btn-outline-dark mt-3">
+                <button className="vieMor my-3">
                   Register new job
                 </button>
               </div>
@@ -127,9 +124,7 @@ export default class JobBank extends React.Component {
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
         <div className="container my-5">
-          <h3 style={{ color: "dodgerblue" }}>
-            Featured Jobs
-          </h3>
+          <h3 style={{ color: "dodgerblue" }}>Featured Jobs</h3>
         </div>
         <div className="container">
           <table
@@ -203,7 +198,7 @@ export default class JobBank extends React.Component {
               </tr>
             </tbody>
           </table>
-            <button className="vieMor">View More</button>
+          <button className="vieMor">View More</button>
         </div>
 
         {/* COUNT OF JOBS================> */}
@@ -263,7 +258,7 @@ export default class JobBank extends React.Component {
                     <div className="col-md-6 py-3">
                       <input className="inp" placeholder="Enter Father Name" />
                     </div>
-                    <div className="col-md-12 py-3">
+                    <div className="col-md-6 py-3">
                       <select className="inp">
                         <option>Select Gender</option>
                         <option>Male</option>
@@ -288,9 +283,6 @@ export default class JobBank extends React.Component {
                     <div className="col-md-6 py-3">
                       <input className="inp" placeholder="Tell-Number" />
                     </div>
-                    <div className="col-md-12 py-3">
-                      <input className="inp" placeholder="Address" />
-                    </div>
                     <div className="col-md-6 py-3">
                       <input className="inp" placeholder="Mobile Number" />
                     </div>
@@ -298,7 +290,7 @@ export default class JobBank extends React.Component {
                       <input className="inp" placeholder="Merital Status" />
                     </div>
                     <div className="col-md-6 py-3">
-                      <select className='inp'>
+                      <select className="inp">
                         <option>Select Resident Type</option>
                         <option>Owner</option>
                         <option>On Rent</option>
@@ -308,27 +300,36 @@ export default class JobBank extends React.Component {
                       <input className="inp" placeholder="Monthly Rent" />
                     </div>
                     <div className="col-md-6 py-3">
-                      <select className='inp'>
+                      <select className="inp">
                         <option>Disability</option>
                         <option>Yes</option>
                         <option>No</option>
                       </select>
                     </div>
+                    <div className="col-md-12 py-3">
+                      <input className="inp" placeholder="Address" />
+                    </div>
+                    <div className="col-md-12 py-3">
+                      <textarea
+                        className="inp"
+                        placeholder="Type Details"
+                        rows="7"
+                      ></textarea>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
+              <div
+                style={{ backgroundColor: "rgb(250,250,250)" }}
+                class="modal-footer d-flex justify-content-center"
+              >
+                <button type="button" class="donate" data-dismiss="modal">
                   Close
                 </button>
                 {/* <button type="button" class="btn btn-primary">
                   Previous
                 </button> */}
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="donate">
                   Next
                 </button>
               </div>

@@ -19,7 +19,8 @@ import OnlineM from './components/OnlineM/OnlineM';
 import BloodBank from './screen/bloodBank';
 import JobBank from './screen/JobBankScreen';
 import QuranApp from './components/QuranApp/QuranApp'
-import News from './screen/news'
+import News from './screen/news';
+import Admin from './adminscreen/mainadminscreen'
 
 export default function MyRoute() {
   return (
@@ -43,6 +44,7 @@ export default function MyRoute() {
       <Route  path="/onlineQ" component={OnlineQu} />
       <Route  path="/onlineM" component={OnlineM} />
       <Route  path="/jobBank" component={JobBank} />
+      <Route  path="/admin" component={Admin} />
       <Route  path="/quranApp" component={QuranApp} />
     </Router>
   );
