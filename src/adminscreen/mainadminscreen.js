@@ -8,29 +8,28 @@ export default class Admin extends React.Component {
     super(props);
     this.state = {
       dept: [
-        "Home",
-        "Services",
-        "Blood Bank",
-        "Chaireman Message",
-        "Contact Us",
-        "Dastarkhwan",
-        "Job Bank",
-        "Medical",
-        "Media",
-        "NEWS",
-        "Online Istikhara",
-        "Online Quran",
-        "Ro Plant",
-        "Services",
-        "SMIT",
-        "Welfare",
+        {displayName:'SMIT',route:'adminsmit'},
+        {displayName:'Home',route:'adminHome'},
+        {displayName:'Service',route:'adminServices'},
+        {displayName:'Blood Bank',route:'adminbloodbank'},
+        {displayName:'Contact Us',route:'admincontact'},
+        {displayName:'Chaireman Message',route:'adminchairmenmessage'},
+        {displayName:'Dastarkhwan',route:'admindasterkhwan'},
+        {displayName:'Job Bank',route:'adminjobbank'},
+        {displayName:'Medical',route:'adminmedical'},
+        {displayName:'Media',route:'adminmedia'},
+        {displayName:'NEWS',route:'adminnews'},
+        {displayName:'Online Istikhara',route:'administikhara'},
+        {displayName:'Online Quran',route:'adminquran'},
+        {displayName:'RO Plant',route:'adminro'},
+        {displayName:'Welfare',route:'adminwelfare'},
       ],
     };
   }
   search(e) {
     console.log(e.target.value);
-    this.state.dept.filter((a = e.target.value) => {
-      let b = a ? e.target.value:false;
+    this.state.dept.filter((a) => {
+      let b = a.displayName == e.target.value ? e.target.value:true;
       console.log(b)
     });
   }
@@ -48,10 +47,10 @@ export default class Admin extends React.Component {
                 />
               </div>
               <ul className="list">
-                {dept.map((item) => {
+                {dept.map((item,i) => {
                   return (
-                    <li>
-                      <Link to="adminHome">{item}</Link>
+                    <li key={i}>
+                      <Link to={item.route}>{item.displayName}</Link>
                     </li>
                   );
                 })}

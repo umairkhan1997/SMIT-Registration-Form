@@ -20,7 +20,22 @@ import BloodBank from './screen/bloodBank';
 import JobBank from './screen/JobBankScreen';
 import QuranApp from './components/QuranApp/QuranApp'
 import News from './screen/news';
-import Admin from './adminscreen/mainadminscreen'
+import Admin from './adminscreen/mainadminscreen';
+import HomeAdmin from './adminscreen/subadminscreen/adminhome';
+import SMITAdmin from './adminscreen/subadminscreen/adminsmit';
+import ServicesAdmin from './adminscreen/subadminscreen/adminservices';
+import BloodBankAdmin from './adminscreen/subadminscreen/adminbloodbank';
+import ContactAdmin from './adminscreen/subadminscreen/admincontact';
+import ChairmenAdmin from './adminscreen/subadminscreen/adminchairmenmessage';
+import DasterkhwanAdmin from './adminscreen/subadminscreen/admindasterkhwan';
+import JobBankAdmin from './adminscreen/subadminscreen/adminjobbank';
+import MedicalAdmin from './adminscreen/subadminscreen/adminmedical';
+import MediaAdmin from './adminscreen/subadminscreen/adminmedia';
+import NEWSAdmin from './adminscreen/subadminscreen/adminnews';
+import OnlineIstikharaAdmin from './adminscreen/subadminscreen/adminonlineistikhara';
+import OnlineQuranAdmin from './adminscreen/subadminscreen/adminonlinequran';
+import ROPlantAdmin from './adminscreen/subadminscreen/adminroplant';
+import WelfareAdmin from './adminscreen/subadminscreen/adminwelfare';
 
 export default function MyRoute() {
   return (
@@ -46,6 +61,21 @@ export default function MyRoute() {
       <Route  path="/jobBank" component={JobBank} />
       <Route  path="/admin" component={Admin} />
       <Route  path="/quranApp" component={QuranApp} />
+      <Route  path="/adminHome" component={HomeAdmin} />
+      <Route  path="/adminsmit" component={SMITAdmin} />
+      <Route  path="/adminServices" component={ServicesAdmin} />
+      <Route  path="/adminbloodbank" component={BloodBankAdmin} />
+      <Route  path="/admincontact" component={ContactAdmin} />l
+      <Route  path="/adminchairmenmessage" component={ChairmenAdmin} />
+      <Route  path="/admindasterkhwan" component={DasterkhwanAdmin} />
+      <Route  path="/adminjobbank" component={JobBankAdmin} />
+      <Route  path="/adminmedical" component={MedicalAdmin} />
+      <Route  path="/adminmedia" component={MediaAdmin} />
+      <Route  path="/adminnews" component={NEWSAdmin} />
+      <Route  path="/administikhara" component={OnlineIstikharaAdmin} />
+      <Route  path="/adminquran" component={OnlineQuranAdmin} />
+      <Route  path="/adminro" component={ROPlantAdmin} />
+      <Route  path="/adminwelfare" component={WelfareAdmin} />
     </Router>
   );
 }
