@@ -8,30 +8,30 @@ export default class Admin extends React.Component {
     super(props);
     this.state = {
       dept: [
-        {displayName:'SMIT',route:'adminsmit'},
-        {displayName:'Home',route:'adminHome'},
-        {displayName:'Service',route:'adminServices'},
-        {displayName:'Blood Bank',route:'adminbloodbank'},
-        {displayName:'Contact Us',route:'admincontact'},
-        {displayName:'Chaireman Message',route:'adminchairmenmessage'},
-        {displayName:'Dastarkhwan',route:'admindasterkhwan'},
-        {displayName:'Job Bank',route:'adminjobbank'},
-        {displayName:'Medical',route:'adminmedical'},
-        {displayName:'Media',route:'adminmedia'},
-        {displayName:'NEWS',route:'adminnews'},
-        {displayName:'Online Istikhara',route:'administikhara'},
-        {displayName:'Online Quran',route:'adminquran'},
-        {displayName:'RO Plant',route:'adminro'},
-        {displayName:'Welfare',route:'adminwelfare'},
+        {displayName:'smit',route:'adminsmit'},
+        {displayName:'home',route:'adminHome'},
+        {displayName:'service',route:'adminServices'},
+        {displayName:'blood bank',route:'adminbloodbank'},
+        {displayName:'contact us',route:'admincontact'},
+        {displayName:'chaireman message',route:'adminchairmenmessage'},
+        {displayName:'dastarkhwan',route:'admindasterkhwan'},
+        {displayName:'job bank',route:'adminjobbank'},
+        {displayName:'medical',route:'adminmedical'},
+        {displayName:'media',route:'adminmedia'},
+        {displayName:'news',route:'adminnews'},
+        {displayName:'online istikhara',route:'administikhara'},
+        {displayName:'online quran',route:'adminquran'},
+        {displayName:'ro plant',route:'adminro'},
+        {displayName:'welfare',route:'adminwelfare'},
       ],
+      searchItem:[]
     };
   }
   search(e) {
     console.log(e.target.value);
-    this.state.dept.filter((a) => {
-      let b = a.displayName == e.target.value ? e.target.value:true;
-      console.log(b)
-    });
+    let result = this.state.dept.filter(word => word.displayName.includes(e.target.value));
+    console.log(result)
+    this.setState({searchItem:result})
   }
   render() {
     const { dept } = this.state;
@@ -46,15 +46,25 @@ export default class Admin extends React.Component {
                   placeholder="Search Bar"
                 />
               </div>
-              <ul className="list">
+                  {this.state.searchItem?<ul className="list">
+                    {this.state.searchItem.map((item,i) => {
+                      return (
+                        <li key={i}>
+                          <Link style={{textTransform:'capitalize'}} to={item.route}>{item.displayName}</Link>
+                        </li>
+                      );
+                    })}
+                  </ul>:false}
+                  <hr />
+              {this.state.dept?<ul className="list">
                 {dept.map((item,i) => {
                   return (
                     <li key={i}>
-                      <Link to={item.route}>{item.displayName}</Link>
+                      <Link style={{textTransform:'capitalize'}} to={item.route}>{item.displayName}</Link>
                     </li>
                   );
                 })}
-              </ul>
+              </ul>:false}
             </div>
           </div>
         </div>

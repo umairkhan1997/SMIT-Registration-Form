@@ -1,10 +1,7 @@
 .small{
-    /* padding: 15px; */
     margin: 5px;
     border-radius: 8px;
     cursor: pointer;
-    /* color: white; */
-    /* background-image: linear-gradient(to bottom right, #3375cc, #58a6f0); */
     transition: .5s;
     border: 1.5px solid dodgerblue;
     box-shadow: 0 10px 15px lightgrey;
@@ -14,4 +11,21 @@
     background-color: white;
     box-shadow: 0 13px 25px lightgrey;
     border: 2px solid white;
+}
+.search{
+    padding: 13px 13px 13px 50px;
+    outline: none;
+    background-image: url('../../images/search.png');
+    background-size: 50px;
+    border-radius: 35px;
+    background-repeat: no-repeat;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+}
+.search:focus{
+    box-shadow: 0 10px 12px lightgrey;
+    border: 2px solid dodgerblue;
+    width: 100%;
+    cursor: text;
 }
