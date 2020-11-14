@@ -11,21 +11,19 @@ export default class WhatweDo extends React.Component {
     super(props);
     this.state = {
       dept: [
-        { displayName: "smit", route: "adminsmit" },
-        { displayName: "home", route: "adminHome" },
-        { displayName: "service", route: "adminServices" },
-        { displayName: "blood bank", route: "adminbloodbank" },
-        { displayName: "contact us", route: "admincontact" },
-        { displayName: "chaireman message", route: "adminchairmenmessage" },
-        { displayName: "dastarkhwan", route: "admindasterkhwan" },
-        { displayName: "job bank", route: "adminjobbank" },
-        { displayName: "medical", route: "adminmedical" },
-        { displayName: "media", route: "adminmedia" },
-        { displayName: "news", route: "adminnews" },
-        { displayName: "online istikhara", route: "administikhara" },
-        { displayName: "online quran", route: "adminquran" },
-        { displayName: "ro plant", route: "adminro" },
-        { displayName: "welfare", route: "adminwelfare" },
+        { displayName: "smit", route: "smit" },
+        { displayName: "blood bank", route: "bloodbank" },
+        { displayName: "dastarkhwan", route: "dastarkhwan" },
+        { displayName: "job bank", route: "jobBank" },
+        { displayName: "medical", route: "medical" },
+        { displayName: "media", route: "media" },
+        { displayName: "news", route: "news" },
+        { displayName: "online istikhara", route: "istikhara" },
+        { displayName: "online quran", route: "onlineQ" },
+        { displayName: "ro plant", route: "roplant" },
+        { displayName: "welfare", route: "welfare" },
+        { displayName: "incubation", route: "incubation" },
+        { displayName: "online sadqa", route: "donation" },
       ],
       searchItem: [],
     };
@@ -63,16 +61,13 @@ export default class WhatweDo extends React.Component {
                       <Fade top>
                         <Link to={item.route}>
                           <div className="row small">
-                            <div className="col-md-3 p-5 d-flex justify-content-center align-items-center">
-                              <p style={{ fontSize: "3.5em" }}>
-                                <i class="fas fa-desktop"></i>
-                              </p>
-                            </div>
                             <div className="col-md-9 p-5 text-left">
-                              <h3 className="text-muted">{item.displayName}</h3>
-                              <p className="text-muted">
-                                Best free IT Education In Pakistan
-                              </p>
+                              <h3
+                                style={{ textTransform: "capitalize" }}
+                                className="text-muted"
+                              >
+                                {item.displayName}
+                              </h3>
                             </div>
                           </div>
                         </Link>
