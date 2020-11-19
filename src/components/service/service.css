@@ -24,8 +24,8 @@
     cursor: pointer;
 }
 .search:focus{
-    box-shadow: 0 10px 12px lightgrey;
-    border: 2px solid dodgerblue;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+    /* border: 2px solid dodgerblue; */
     width: 100%;
     cursor: text;
 }

@@ -24,6 +24,7 @@ export default class WhatweDo extends React.Component {
         { displayName: "welfare", route: "welfare" },
         { displayName: "incubation", route: "incubation" },
         { displayName: "online sadqa", route: "donation" },
+        { displayName: "saylani school", route: "education" },
       ],
       searchItem: [],
     };
@@ -150,7 +151,7 @@ export default class WhatweDo extends React.Component {
             </div>
             <div className="col-md-6 p-3">
               <Fade bottom>
-                <Link to="/welfare">
+                <Link to="/education">
                   <div className="row small">
                     <div className="col-md-3 p-5 d-flex justify-content-center align-items-center">
                       <p style={{ fontSize: "3.5em" }}>
@@ -158,7 +159,7 @@ export default class WhatweDo extends React.Component {
                       </p>
                     </div>
                     <div className="col-md-9 p-5 text-left">
-                      <h3 className="text-muted">Education</h3>
+                      <h3 className="text-muted">Saylani Schools</h3>
                       <p className="text-muted">
                         Schooling Education for Needy Person
                       </p>

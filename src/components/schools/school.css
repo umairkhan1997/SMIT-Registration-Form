@@ -1,0 +1,53 @@
+.teacherCard:hover .teacherDetail {
+  /* border: 1.2px solid dodgerblue; */
+  color: dodgerblue;
+}
+.teacherCard {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: rgb(240, 240, 240);
+  border-radius: 8px;
+  overflow: hidden;
+  /* border: 1.2px solid white; */
+}
+.counterCard {
+  /* border: 2px solid dodgerblue; */
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.mainBoard {
+  background-image: radial-gradient(
+    circle,
+    #dcdcdc,
+    #e5e5e5,
+    #ededed,
+    #f6f6f6,
+    #ffffff
+  );
+}
+.facultyDetail{
+    /* background-color: dodgerblue; */
+    color: transparent;
+    overflow: hidden;
+}
+.facultyCard{
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, .5);
+}
+.facultyCard:hover .facultyDetail{
+    color: white;
+    background-color: rgba(0, 128, 255, 0.5);
+}
+.locationCard{
+  background-color: dodgerblue;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+  padding: 25px;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+}
+.locationCard:hover{
+  background-color: rgba(30, 144, 255, .8);
+}

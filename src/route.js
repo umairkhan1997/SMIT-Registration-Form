@@ -36,6 +36,7 @@ import OnlineIstikharaAdmin from './adminscreen/subadminscreen/adminonlineistikh
 import OnlineQuranAdmin from './adminscreen/subadminscreen/adminonlinequran';
 import ROPlantAdmin from './adminscreen/subadminscreen/adminroplant';
 import WelfareAdmin from './adminscreen/subadminscreen/adminwelfare';
+import Education from './screen/education'
 
 export default function MyRoute() {
   return (
@@ -59,6 +60,7 @@ export default function MyRoute() {
       <Route  path="/onlineQ" component={OnlineQu} />
       <Route  path="/onlineM" component={OnlineM} />
       <Route  path="/jobBank" component={JobBank} />
+      <Route  path="/education" component={Education} />
       <Route  path="/admin" component={Admin} />
       <Route  path="/quranApp" component={QuranApp} />
       <Route  path="/adminHome" component={HomeAdmin} />

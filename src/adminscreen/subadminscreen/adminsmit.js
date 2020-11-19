@@ -244,7 +244,7 @@ export default class SMITAdmin extends React.Component {
               </div>
             </div>
             <div className="container px-5 py-3">
-              <h2 className="text-left">Courses</h2>
+              <h2 className="text-left">Teachers</h2>
             </div>
             <div className="container p-5">
               <div className="row">
