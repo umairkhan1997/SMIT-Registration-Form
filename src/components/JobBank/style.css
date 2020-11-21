@@ -1,4 +1,4 @@
-.jobre{
+d.jobre{
     background-color: rgba(255,255,255,.8);
     background-image:  url("../../images/jobrecru.jpg");
     background-blend-mode: lighten;
@@ -71,4 +71,24 @@
 }
 .jobTable{
     width: 100%;
+}
+.displayFullForm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    height: 100;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100vw;
+}
+.roundadd{
+    padding: 10px;
+    border: none;
+    background-color: lightgrey;
+    color: dodgerblue;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow:  0 0 10px rgba(0, 0, 0, .5);
 }

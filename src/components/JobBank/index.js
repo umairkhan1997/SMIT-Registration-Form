@@ -12,7 +12,10 @@ import JobContact from "./JobContact";
 export default class JobBank extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      jobseekarForm: true,
+      jobrecruter: false,
+    };
   }
 
   render() {
@@ -98,13 +101,7 @@ export default class JobBank extends React.Component {
                 <h6>
                   So we do have a suitable Job according to your requirment
                 </h6>
-                <button
-                  className="vieMor my-3"
-                  data-toggle="modal"
-                  data-target="#jobSeekar"
-                >
-                  Apply for job
-                </button>
+                <button className="vieMor my-3">Apply for job</button>
               </div>
             </div>
             <div className="col-md-6 jobre shadow text-center">
@@ -114,9 +111,7 @@ export default class JobBank extends React.Component {
                 <h6>
                   So we do have a suitable employee according to your requirment
                 </h6>
-                <button className="vieMor my-3">
-                  Register new job
-                </button>
+                <button className="vieMor my-3">Register new job</button>
               </div>
             </div>
           </div>
@@ -223,30 +218,16 @@ export default class JobBank extends React.Component {
         </div>
 
         <JobContact />
-        <div
-          class="modal fade"
-          id="jobSeekar"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Job Seekar
-                </h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
+        {this.state.jobseekarForm ? (
+          <div className="displayFullForm">
+            <div style={{ overflow: "scroll", height: "100%" }}>
+              <div>
+                <h5>Job Seekar</h5>
+                <button>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div>
                 <div className="container">
                   <div className="p-3">
                     <h2>Personal Details</h2>
@@ -335,7 +316,7 @@ export default class JobBank extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        ) : null}
       </div>
     );
   }
