@@ -1,12 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
+import { Link } from "react-router-dom";
+import logo from "../../images/logo.png";
+import image from "../../images/Dr.jpg";
 import slide1 from "../../images/slider2.png";
 import slide2 from "../../images/EhsaanSaylani.jpeg";
 import hazrat from "../../images/hazrat.jpg";
-import "../admin.css";
-import logo from "../../images/logo.png";
-
 export default class HomeAdmin extends React.Component {
   constructor(props) {
     super(props);
@@ -15,19 +15,27 @@ export default class HomeAdmin extends React.Component {
   render() {
     return (
       <div>
-        <div className="bg-light">
-          <div className="container">
-            <div className="row p-4">
-              <div className="col-md-3">
-                <img width="100%" src={logo} />
-              </div>
-              <div className="col-md-8 border-left text-left p-3">
-                <h2>Home Admin Panel</h2>
-              </div>
+        <div className="row">
+          <div className="col-md-3 bg-light text-primary shadow p-5">
+            <div className="p-4">
+              <img src={logo} width="100%" />
+            </div>
+            <div className='p-5'>
+              <h2>Home</h2>
+            </div>
+            <div className="p-4">
+              <ul>
+                <li>Slider</li>
+                <li>Introduction</li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div className="container p-5">
+          <div
+            style={{ height: "100vh", overflow: "scroll" }}
+            className="col-md-9"
+          >
+            <div className="container">
+            <div className="container p-5">
           <h2 className="text-left">Slider Image</h2>
           <div className="row">
             <div className="col-md-4 py-3">
@@ -104,7 +112,17 @@ export default class HomeAdmin extends React.Component {
             </div>
           </div>
         </div>
+            </div>
+          </div>
+        </div>
       </div>
-    );
+    )
   }
 }
+
+
+
+
+
+
+

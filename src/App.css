@@ -214,20 +214,3 @@
   color: #1371b8;
   padding: 20px 0;
 }
-.selectBtn{
-  cursor: pointer;
-  padding: 10px;
-  border: 1.5px solid #1371b8;
-  background-color: #1371b8;
-  box-shadow: 0 8px 10px lightgrey;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  transition: .5s ease;
-}
-.selectBtn:hover{
-  border: 1.5px solid #1371b8;
-  box-shadow: 0 12px 15px lightgrey;
-  background-color: rgb(250, 250, 250);
-  color: #1371b8;
-}
