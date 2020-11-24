@@ -5,7 +5,6 @@ import { createBrowserHistory } from "history";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import HajjPdf from "../HajjPdf/HAJJ.pdf";
-const history = createBrowserHistory();
 export default class WhatweDo extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +26,9 @@ export default class WhatweDo extends React.Component {
         { displayName: "saylani school", route: "education" },
       ],
       searchItem: [],
+      obj: {
+        type: 'top'
+      }
     };
   }
   search(e) {
@@ -44,7 +46,7 @@ export default class WhatweDo extends React.Component {
         <div className="container">
           <p
             className="text-center m-5"
-            style={{ fontSize: 26, color: "dodgerblue" }}
+            style={{ fontSize: 30, color: "dodgerblue", fontWeight: 'bold' }}
           >
             Saylani Welfare International Trust
           </p>
@@ -86,8 +88,8 @@ export default class WhatweDo extends React.Component {
                 })}
               </div>
             ) : (
-              false
-            )}
+                false
+              )}
           </ul>
         </div>
 
@@ -96,18 +98,23 @@ export default class WhatweDo extends React.Component {
             <h1 className="Heading">What We Do</h1>
           </div> */}
           <div className="row">
-            <div className="col-md-6 p-3">
+            <div className="col-md-6 pt-3 pb-3 pl-3">
               <Fade top>
                 <Link to="/smit">
                   <div className="row small">
-                    <div className="col-md-3 p-5 d-flex justify-content-center align-items-center">
-                      <p style={{ fontSize: "3.5em" }}>
-                        <i class="fas fa-desktop"></i>
+                    <div className="col-md-3 pt-5 pb-5 pl-3 pr-2 d-flex justify-content-center align-items-center">
+                      <p style={{ fontSize: "3.5em", marginTop: -5 }}>
+                        <i
+                          class="fas fa-desktop"
+                          style={{ color: "#316DC3" }}
+                        ></i>
                       </p>
                     </div>
-                    <div className="col-md-9 p-5 text-left">
-                      <h3 className="text-muted">Saylani Mass Training</h3>
-                      <p className="text-muted">
+                    <div className="col-md-9 pt-5 pb-3 pl-2 text-left">
+                      <h3 style={{ color: "#316DC3", fontWeight: "bolder" }}>
+                        Saylani Mass Training
+                      </h3>
+                      <p className="text-muted" style={{ marginTop: -5 }}>
                         Best free IT Education In Pakistan
                       </p>
                     </div>
@@ -115,6 +122,32 @@ export default class WhatweDo extends React.Component {
                 </Link>
               </Fade>
             </div>
+
+            <div className="col-md-6 pt-3 pb-3 pl-3">
+              <Fade top>
+                <Link to="/smit">
+                  <div className="row small">
+                    <div className="col-md-3 pt-5 pb-5 pl-3 pr-2 d-flex justify-content-center align-items-center">
+                      <p style={{ fontSize: "3.5em", marginTop: -5 }}>
+                        <i
+                          className="fas fa-people-arrows"
+                          style={{ color: "#316DC3" }}
+                        ></i>
+                      </p>
+                    </div>
+                    <div className="col-md-9 pt-5 pb-3 pl-2 text-left">
+                      <h3 style={{ color: "#316DC3", fontWeight: "bolder" }}>
+                        Welfare
+                      </h3>
+                      <p className="text-muted" style={{ marginTop: -5 }}>
+                        Help for Needy Person
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </Fade>
+            </div>
+
             <div className="col-md-6 p-3">
               <Fade left>
                 <Link to="/welfare">

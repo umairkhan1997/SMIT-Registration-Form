@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 .donate {
-  padding: 9px 30px;
+  padding: 6px 20px;
   border: none;
   background-color: dodgerblue;
   color: white;
@@ -45,9 +45,10 @@
   background-color: rgb(240, 240, 240);
   color: dodgerblue;
   box-shadow: 0 8px 10px lightgray;
+  text-decoration: none;
 }
 
 .carlStl:hover {
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
 }

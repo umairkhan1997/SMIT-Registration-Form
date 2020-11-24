@@ -18,4 +18,20 @@ function homeSlideImg() {
   };
 }
 
-export { homeSlideImg };
+function homeIntroGet() {
+  return (dispatch) => {
+    const headers = { "Content-Type": "application/json" };
+    fetch("http://localhost:3000/home/homeIntroGet", { headers })
+      .then((res) =>
+        res.json().then(async (response) => {
+          console.log(response, "data");
+          dispatch({ type: ActionTypes.homeIntro, payload: response });
+        })
+      )
+      .catch((err) => {
+        console.log(err, "err");
+      });
+  };
+}
+
+export { homeSlideImg, homeIntroGet };

@@ -12,9 +12,14 @@ export default class HomeNews extends React.Component {
   }
   render() {
     return (
-      <div style={{backgroundColor:'rgb(245, 248, 255)'}} className="container-fluid pt-3 pb-3">
+      <div
+        style={{ backgroundColor: "rgb(245, 248, 255)" }}
+        className="container-fluid pt-3 pb-3"
+      >
         <div className="container">
-          <h1 className="Heading" style={{color:'dodgerblue'}}>News</h1>
+          <h1 className="Heading" style={{ color: "#316DC3", marginLeft: -8 }}>
+            News
+          </h1>
 
           <div className="row">
             <div className="col-md-6">
@@ -27,7 +32,7 @@ export default class HomeNews extends React.Component {
                   <p className="text-muted">
                     On 21 Sep,2020 Hazrat Moulana Bashir Sahab Visit Punjab ...
                   </p>
-                  <a href='#'>Read More</a>
+                  <a href="#">Read More</a>
                 </div>
               </div>
               <div className="news row mt-2 mb-2 bg-white">
@@ -37,9 +42,10 @@ export default class HomeNews extends React.Component {
                 <div className="col-md-7 col-sm-3 text-left">
                   <p> Dr. Arif Alvi (President of Pakistan)</p>
                   <p className="text-muted">
-                    On 23 Feb,2020 Dr. Arif Alvi (President of Pakistan) Visit ...
+                    On 23 Feb,2020 Dr. Arif Alvi (President of Pakistan) Visit
+                    ...
                   </p>
-                  <a href='#'>Read More</a>
+                  <a href="#">Read More</a>
                 </div>
               </div>
               <div className="news row mt-2 mb-2 bg-white">
@@ -51,11 +57,11 @@ export default class HomeNews extends React.Component {
                   <p className="text-muted">
                     On 21 Sep,2020 Hazrat Moulana Bashir Sahab Visit Punjab ...
                   </p>
-                  <a href='#'>Read More</a>
+                  <a href="#">Read More</a>
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mt-2">
               <iframe
                 width="100%"
                 height="315"

@@ -19,13 +19,14 @@
     background-size: 50px;
     border-radius: 35px;
     background-repeat: no-repeat;
+    border-width: 10px;
     width: 40px;
     border: none;
     cursor: pointer;
 }
 .search:focus{
     box-shadow: 0 0 12px rgba(0, 0, 0, .3);
-    /* border: 2px solid dodgerblue; */
+    border: 2px solid dodgerblue;
     width: 100%;
     cursor: text;
 }

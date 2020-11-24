@@ -1,5 +1,6 @@
 const ActionTypes = {
-    homeSlideImg: "homeSlideImg",
-}
+  homeSlideImg: "homeSlideImg",
+  homeIntro: "homeIntro",
+};
 
 export default ActionTypes;

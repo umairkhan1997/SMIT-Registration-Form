@@ -40,13 +40,17 @@ export default class MainHeader extends React.Component {
                 >
                   <ul class="navbar-nav mr-auto">
                     <li className="nav-item">
-                      <a className="nav-link" href="/">
-                        Home
+                      <a className="nav-link" href="/" style={{ fontSize: 14 }}>
+                        HOME
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="projects">
-                        Projects
+                      <a
+                        className="nav-link"
+                        href="projects"
+                        style={{ fontSize: 14 }}
+                      >
+                        PROJECTS
                       </a>
                     </li>
 
@@ -56,8 +60,9 @@ export default class MainHeader extends React.Component {
                         href="/media"
                         tabindex="-1"
                         aria-disabled="true"
+                        style={{ fontSize: 14 }}
                       >
-                        Media
+                        MEDIA
                       </a>
                     </li>
                     <li className="nav-item">
@@ -66,8 +71,9 @@ export default class MainHeader extends React.Component {
                         href="/contact"
                         tabindex="-1"
                         aria-disabled="true"
+                        style={{ fontSize: 14 }}
                       >
-                        Contact
+                        CONTACT
                       </a>
                     </li>
 
@@ -81,10 +87,19 @@ export default class MainHeader extends React.Component {
                       >
                         Donate
                       </a> */}
-                     <button style={{backgroundColor:'#f8f9fa',border:0,marginTop:5}}><a href='Donation' className='donate' >Donate</a></button>
-                     {/* <button className='donate' >Donate</button> */}
-                      
-                       
+                      <button
+                        style={{
+                          backgroundColor: "#f8f9fa",
+                          border: 0,
+                          marginTop: 5,
+                          fontSize: 14,
+                        }}
+                      >
+                        <a href="Donation" className="donate">
+                          DONATE
+                        </a>
+                      </button>
+                      {/* <button className='donate' >Donate</button> */}
                     </li>
                   </ul>
                 </div>
