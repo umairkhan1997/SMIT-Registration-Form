@@ -11,9 +11,83 @@ export default class DonationForm extends React.Component {
     super(props);
     this.state = {
       data: this.props.data,
+      title: "",
+      aqiqaDropDown: [
+        "Aqiqa Goat (8000)",
+        "Aqiqa Goat (9000)",
+        "Aqiqa Goat (10000)",
+        "Aqiqa Goat (12000)",
+        "Aqiqa Goat (15000)",
+        "Aqiqa Cow (40000)",
+        "Aqiqa Cow (45000)",
+        "Aqiqa Cow (50000)",
+        "Aqiqa Camel (55000)",
+        "Aqiqa Camel (60000)",
+        "Aqiqa Camel (65000)",
+      ],
+      sadqaDropDown: [
+        "Sadqa Goat (5500)",
+        "Sadqa Goat (6000)",
+        "Sadqa Goat (7000)",
+        "Sadqa Goat (8000)",
+        "Sadqa Goat (9000)",
+        "Sadqa Goat (10000)",
+        "Sadqa Goat (12000)",
+        "Sadqa Goat (15000)",
+        "Sadqa Cow (30000)",
+        "Sadqa Cow (35000)",
+        "Sadqa Cow (40000)",
+        "Sadqa Cow (45000)",
+        "Sadqa Camel (55000)",
+        "Sadqa Camel (60000)",
+        "Sadqa Camel (65000)",
+        "Sadqa Hen (400)",
+      ],
+      coronaDropDown: ["Corona Effecties Rashan Bag Rs.(1500)"],
+      otherDonationDropDown: [
+        "Donation",
+        "Marriage",
+        "Zakat",
+        "Food",
+        "Education",
+        "Water Well",
+        "Monthly Rashan",
+        "Thar Fund",
+        "Flood Victim",
+        "Fitra (Overseas)",
+        "Saaf Pani",
+        "Heat Stroke",
+        "Syrian Crisis",
+        "Masjid Construction",
+        "Medical Projects",
+      ],
+      currentData: [],
     };
   }
+  donationType = (e) => {
+    // console.log(e.target.value,'asdsa')
 
+    if (e.target.value === 'Sadqa') {
+      this.setState({
+        currentData:sadqaDropDown
+      })
+    }
+    if (e.target.value === 'Aqiqa') {
+      this.setState({
+        currentData:aqiqaDropDown
+      })
+    }
+    if (e.target.value === 'Other Donation') {
+      this.setState({
+        currentData:otherDonation
+      })
+    }
+    if (e.target.value === 'Corona Effecties') {
+      this.setState({
+       currentData:coronaDropDown
+      })
+    }
+  }
   render() {
     console.log(this.state.data);
     return (

@@ -14,7 +14,9 @@ export default class HomeContact extends React.Component {
     return (
       <div >
         <div className="container">
-          <h1 className="Heading">Over Branches</h1>
+          <div className='displayheading'>
+            <h1>Over Branches</h1>
+          </div>
         </div>
         <div
           style={{
@@ -353,9 +355,9 @@ export default class HomeContact extends React.Component {
                 data-slide="prev"
               >
                 <span
-                  class="carousel-control-prev-icon"
+                  class="p-3 bg-white shadow rounded"
                   aria-hidden="true"
-                ></span>
+                ><i class="fas fa-chevron-left"></i></span>
                 <span class="sr-only">Previous</span>
               </a>
               <a
@@ -365,9 +367,9 @@ export default class HomeContact extends React.Component {
                 data-slide="next"
               >
                 <span
-                  class="carousel-control-next-icon"
+                  class="p-3 bg-white shadow rounded"
                   aria-hidden="true"
-                ></span>
+                ><i class="fas fa-chevron-right"></i></span>
                 <span class="sr-only">Next</span>
               </a>
             </div>

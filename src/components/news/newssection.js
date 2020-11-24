@@ -51,53 +51,69 @@ export default class NewsSection extends React.Component {
     ];
     return (
       <div>
-        <div className="container">
-          <div className="row bTop light my-4">
-            <div className="col-md-2">
-              <div className="date">
-                <p style={{ fontSize: "2em" }}>05</p>
-                <p>Oct</p>
-              </div>
+        <div className='row'>
+          <div style={{backgroundColor:'rgb(240, 240, 240)'}} className='col-md-2'>
+            <div className='p-5'>
+              <input placeholder='Search Date' type='date' className='inp' />
             </div>
-            <div className="col-md-7">
-              <Gallery images={displayimages} />
-            </div>
-            <div className="col-md-3 text-left py-5">
-              <div>
-                <div>
-                  <h3>Basheer Farooqui Meet With GOVT Officer</h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+            <ul className='list p-4'>
+              <li >11/12/2020</li>
+              <li >11/12/2020</li>
+              <li >11/12/2020</li>
+              <li >11/12/2020</li>
+              <li >11/12/2020</li>
+            </ul>
+          </div>
+          <div className='col-md-10'>
+            <div className='container'>
+              <div className="row bTop light my-4">
+                <div className="col-md-2">
+                  <div className="date">
+                    <p style={{ fontSize: "2em" }}>05</p>
+                    <p>Oct 2020</p>
+                  </div>
+                </div>
+                <div className="col-md-7">
+                  <Gallery images={displayimages} />
+                </div>
+                <div className="col-md-3 text-left py-5">
+                  <div>
+                    <div>
+                      <h3>Basheer Farooqui Meet With GOVT Officer</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        the release of Letraset sheets containing Lorem Ipsum
+                        passages, and more recently with desktop publishing software
+                        like Aldus PageMaker including versions of Lorem Ipsum.
                   </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="row bTop light my-4">
-            <div className="col-md-2">
-              <div className="date">
-                <p style={{ fontSize: "2em" }}>23</p>
-                <p>Feb</p>
-              </div>
-            </div>
-            <div className="col-md-7">
-              <Gallery images={displayimages} />
-            </div>
-            <div className="col-md-3 text-left py-5">
-              <div>
-                <div>
-                  <h3>President Of Pakistan Visited Saylani Welfare</h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    printer took a galley of type and scrambled it to make a
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+              <div className="row bTop light my-4">
+                <div className="col-md-2">
+                  <div className="date">
+                    <p style={{ fontSize: "2em" }}>23</p>
+                    <p>Feb 2020</p>
+                  </div>
+                </div>
+                <div className="col-md-7">
+                  <Gallery images={displayimages} />
+                </div>
+                <div className="col-md-3 text-left py-5">
+                  <div>
+                    <div>
+                      <h3>President Of Pakistan Visited Saylani Welfare</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        printer took a galley of type and scrambled it to make a
+                        passages, and more recently with desktop publishing software
+                        like Aldus PageMaker including versions of Lorem Ipsum.
                   </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 .tableHead{
     color: white;
-    background-color: dodgerblue;
+    background-color: #1371b8;
 }
 th{
     padding: 7px;
@@ -22,7 +22,7 @@ tfoot{
     font-weight: bold;
 }
 .round{
-    background-color: dodgerblue;
+    background-color: #1371b8;
     color: white;
     width: 200px;
     height: 200px;
@@ -30,13 +30,15 @@ tfoot{
     border-radius: 100px;
     box-shadow: 0 10px 12px gray;
     margin: auto;
+    text-align: center;
 }
 .Name{
     font-size: 2em;
-    color: dodgerblue;
+    color: #1371b8;
     padding: 10px;
-    border: 2px solid dodgerblue;
+    border: 2px solid #1371b8;
     margin-top: 20px;
+    text-align: center;
 }
 .full{
     height: 100vh;
@@ -45,6 +47,7 @@ tfoot{
 .largeHeading{
     padding: 20px;
     font-size: 2em;
+    text-align: center;
 }
 .largeCounter{
     display: block;

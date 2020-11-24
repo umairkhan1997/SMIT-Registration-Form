@@ -15,16 +15,16 @@ export default class Cost extends React.Component {
     return (
       <div>
         <div className='container'>
-          <div className="p-5">
+          <div className="displayheading">
             <h2>Donate In Langarkhana</h2>
           </div>
           <table className="text-left mt-5 mb-5 table-responsive-sm" width="100%">
             <thead className="tableHead">
               <tr>
-                <th>Description</th>
-                <th>Per Day</th>
-                <th>Per Month</th>
-                <th>Per Year</th>
+                <td>Description</td>
+                <td>Per Day</td>
+                <td>Per Month</td>
+                <td>Per Year</td>
               </tr>
             </thead>
             <tbody>

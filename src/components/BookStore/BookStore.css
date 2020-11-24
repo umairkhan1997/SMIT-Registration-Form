@@ -1,0 +1,25 @@
+.download{
+    background-color: #1371b8;
+    color: white;
+}
+.singleBook{
+    border-radius: 8px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+.bookDetails{
+    /* height: 0; */
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 90%;
+    color: white;
+    height: 92%;
+}
+.singleBook:hover .bookDetails{
+    display: block;
+    /* height: auto; */
+}

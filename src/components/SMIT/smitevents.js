@@ -54,7 +54,7 @@ export default class SmitEvents extends React.Component {
                 <div className='bg-light'>
                     <div className='container py-5'>
                         <div className='displayHeading'>
-                            <h1 style={{color:'#0569b4'}}>SMIT Events</h1>
+                            <h1 style={{color:'#0569b4'}}>SMIT Events</ h1>
                         </div>
                         <div className='py-4'>
                             <Gallery style={{ display: 'block' }} images={displayimages} />
