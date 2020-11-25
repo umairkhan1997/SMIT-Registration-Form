@@ -15,9 +15,9 @@
     position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, .5);
-    width: 90%;
+    width: 85%;
     color: white;
-    height: 92%;
+    height: 90%;
 }
 .singleBook:hover .bookDetails{
     display: block;

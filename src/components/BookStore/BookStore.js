@@ -35,7 +35,7 @@ export default class BookStore extends React.Component {
                         <div className='col-md-9 py-5 border'>
                             <div className='container '>
                                 <div className='row'>
-                                    <div className='col-md-4 my-3'>
+                                    <div className='col-md-3 my-3'>
                                         <div className='singleBook'>
 
                                             <img src={bookTwo} width='100%' />
@@ -48,7 +48,7 @@ export default class BookStore extends React.Component {
                                             <button type="button" className="btn-block btn download">Download</button>
                                         </div>
                                     </div>
-                                    <div className='col-md-4 my-3'>
+                                    <div className='col-md-3 my-3'>
                                         <div className='singleBook'>
                                             <img src={bookTwo} width='100%' />
                                             <div className='p-3 bookDetails'>
@@ -60,7 +60,7 @@ export default class BookStore extends React.Component {
                                             <button type="button" className="btn-block btn download">Download</button>
                                         </div>
                                     </div>
-                                    <div className='col-md-4 my-3'>
+                                    <div className='col-md-3 my-3'>
                                         <div className='singleBook'>
                                             <img src={bookTwo} width='100%' />
                                             <div className='p-3 bookDetails'>
@@ -72,7 +72,7 @@ export default class BookStore extends React.Component {
                                             <button type="button" className="btn-block btn download">Download</button>
                                         </div>
                                     </div>
-                                    <div className='col-md-4 my-3'>
+                                    <div className='col-md-3 my-3'>
                                         <div className='singleBook'>
                                             <img src={bookTwo} width='100%' />
                                             <div className='p-3 bookDetails'>

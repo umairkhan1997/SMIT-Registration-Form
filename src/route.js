@@ -36,13 +36,15 @@ import OnlineIstikharaAdmin from './adminscreen/subadminscreen/adminonlineistikh
 import OnlineQuranAdmin from './adminscreen/subadminscreen/adminonlinequran';
 import ROPlantAdmin from './adminscreen/subadminscreen/adminroplant';
 import WelfareAdmin from './adminscreen/subadminscreen/adminwelfare';
-import Education from './screen/education'
+import Education from './screen/education';
+import JobForm from './screen/jobform';
 
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
       <Route exact path="/news" component={News} />
+      <Route exact path="/job" component={JobForm} />
       <Route exact path="/bloodbank" component={BloodBank} />
       <Route  path="/roplant" component={ROplant} />
       <Route  path="/istikhara" component={Istikhara} />  
