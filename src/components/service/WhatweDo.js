@@ -5,7 +5,10 @@ import { createBrowserHistory } from "history";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import HajjPdf from "../HajjPdf/HAJJ.pdf";
-export default class WhatweDo extends React.Component {
+import { connect } from "react-redux";
+import { projectCat } from "../../Redux/action/homeAction"
+
+class WhatweDo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,6 +34,11 @@ export default class WhatweDo extends React.Component {
       }
     };
   }
+
+  componentDidMount() {
+    this.props.projectCat();
+  }
+
   search(e) {
     console.log(e.target.value);
     let result = this.state.dept.filter((word) =>
@@ -94,36 +102,34 @@ export default class WhatweDo extends React.Component {
         </div>
 
         <div className="container">
-          {/* <div className="p-3">
-            <h1 className="Heading">What We Do</h1>
-          </div> */}
           <div className="row">
-            <div className="col-md-6 pt-3 pb-3 pl-3">
-              <Fade top>
-                <Link to="/smit">
-                  <div className="row small">
-                    <div className="col-md-3 pt-5 pb-5 pl-3 pr-2 d-flex justify-content-center align-items-center">
-                      <p style={{ fontSize: "3.5em", marginTop: -5 }}>
-                        <i
-                          class="fas fa-desktop"
-                          style={{ color: "#316DC3" }}
-                        ></i>
-                      </p>
+            {this.props.projectCats.map((each, index) => (
+              <div className="col-md-6 pt-3 pb-3 pl-3">
+                <Fade top>
+                  <Link to={each.proHrefVal}>
+                    <div className="row small">
+                      <div className="col-md-3 pt-5 pb-5 pl-3 pr-2 d-flex justify-content-center align-items-center">
+                        <p style={{ fontSize: "3.5em", marginTop: -5 }}>
+                          <i
+                            class={each.proIcon}
+                            style={{ color: "#316DC3" }}
+                          ></i>
+                        </p>
+                      </div>
+                      <div className="col-md-9 pt-5 pb-3 pl-2 text-left">
+                        <h3 style={{ color: "#316DC3", fontWeight: "bolder" }}>
+                          {each.proName}
+                        </h3>
+                        <p className="text-muted" style={{ marginTop: -5 }}>
+                          {each.proDescrip}
+                        </p>
+                      </div>
                     </div>
-                    <div className="col-md-9 pt-5 pb-3 pl-2 text-left">
-                      <h3 style={{ color: "#316DC3", fontWeight: "bolder" }}>
-                        Saylani Mass Training
-                      </h3>
-                      <p className="text-muted" style={{ marginTop: -5 }}>
-                        Best free IT Education In Pakistan
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </Fade>
-            </div>
-
-            <div className="col-md-6 pt-3 pb-3 pl-3">
+                  </Link>
+                </Fade>
+              </div>
+            ))}
+            {/* <div className="col-md-6 pt-3 pb-3 pl-3">
               <Fade top>
                 <Link to="/smit">
                   <div className="row small">
@@ -294,7 +300,7 @@ export default class WhatweDo extends React.Component {
                         Saylani Online Masajid Registeration
                       </h3>
                       <p className="text-muted">
-                        Blood Transfusion service in all over Pakistan
+                        Deeni Madrasa Education service in all over Pakistan
                       </p>
                     </div>
                   </div>
@@ -313,7 +319,7 @@ export default class WhatweDo extends React.Component {
                     <div className="col-md-9 p-5 text-left">
                       <h3 className="text-muted">Quran Pak Registeration</h3>
                       <p className="text-muted">
-                        Blood Transfusion service in all over Pakistan
+                        Quran Pak Education service in all over Pakistan
                       </p>
                     </div>
                   </div>
@@ -358,18 +364,6 @@ export default class WhatweDo extends React.Component {
                 </Link>
               </Fade>
             </div>
-            {/* <div className="col-md-4 p-3">
-              <Fade right>
-                <Link to="">
-                  <div className="small">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-book-open"></i>
-                    </p>
-                    <p style={{ fontSize: "1.5em" }}>Education</p>
-                  </div>
-                </Link>
-              </Fade>
-            </div> */}
 
             <div className="col-md-6 p-3">
               <Fade top>
@@ -461,10 +455,24 @@ export default class WhatweDo extends React.Component {
                   </div>
                 </Link>
               </Fade>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    projectCats: state.root.projectCat,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    projectCat: () => {
+      dispatch(projectCat());
+    },
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(WhatweDo);

@@ -10,7 +10,10 @@
   text-align: left;
 }
 .news {
-  border-left: 3px solid dodgerblue;
+  border-left: 3px solid #1371b8;
+}
+.news Link{
+  color:#1371b8;
 }
 .inp {
   width: 100%;
@@ -48,7 +51,12 @@
   text-decoration: none;
 }
 
+.carlStl span{
+  color: #1371b8;
+  font-size: 1.5em;
+}
 .carlStl:hover {
   background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, .3); */
   padding: 10px;
 }

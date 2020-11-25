@@ -13,9 +13,11 @@ export default class ContactForm extends React.Component {
   render() {
     return (
       <div>
-        <div className="container-fluid bg-light pt-5 pb-5">
+        <div className="bg-light pt-5 pb-5">
           <div className="p-5 bg-primary text-white rounded">
-            <h2 className="p-5">Get In Touch</h2>
+            <div className='container py-5'>
+              <h2>Get In Touch</h2>
+            </div>
           </div>
           <div style={{ marginTop: "-40px" }} className="container pl-5 pr-5">
             <div className="row shadow">
@@ -62,7 +64,7 @@ export default class ContactForm extends React.Component {
                 </div>
                 <div className="p-5">
                   <div className="text-white text-left">
-                    <p style={{fontSize:'1.2em'}}>Saylani Welfare Head Office</p>
+                    <p style={{ fontSize: '1.2em' }}>Saylani Welfare Head Office</p>
                     <p>
                       <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
                       Chowrangi Karachi, Pakistan
@@ -70,13 +72,13 @@ export default class ContactForm extends React.Component {
                     <div className="pt-2 pb-2">
                       <p>
                         <i class="fas fa-phone-alt"></i>{" "}
-                        <a style={{color:'white'}} href="tel:111729526">UAN: 111-729-526</a>
+                        <a style={{ color: 'white' }} href="tel:111729526">UAN: 111-729-526</a>
                       </p>
                     </div>
                     <div className="pt-2 pb-2">
                       <p>
                         <i class="fas fa-globe"></i>{" "}
-                        <a style={{color:'white'}} href="tel:+0092-2134130786-90">
+                        <a style={{ color: 'white' }} href="tel:+0092-2134130786-90">
                           (+0092-213) 4130786-90
                         </a>
                       </p>
@@ -84,7 +86,7 @@ export default class ContactForm extends React.Component {
                     <div className="pt-2 pb-2">
                       <p>
                         <i class="fas fa-envelope"></i>{" "}
-                        <a style={{color:'white'}} href="mailto:info@saylaniwelfare.com">
+                        <a style={{ color: 'white' }} href="mailto:info@saylaniwelfare.com">
                           info@saylaniwelfare.com
                         </a>
                       </p>

@@ -5,7 +5,6 @@ import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
 import HomeContact from "../components/Home/HomeContact";
 import ContactForm from "../components/contact/contactForm";
-import DonateBtn from '../components/donatebtn/donateBtn'
 import Footer from '../components/Footer';
 
 export default class Contact extends React.Component {
@@ -17,9 +16,8 @@ export default class Contact extends React.Component {
     return (
       <div>
         <MainHeader />
-        <DonateBtn />
         <ContactForm />
-        <div className="container-fluid pt-5 pb-5 bg-light">
+        <div className=" pt-5 pb-5 bg-light">
             <HomeContact />
         </div>
         <div className="bg-image">

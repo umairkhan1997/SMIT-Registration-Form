@@ -34,4 +34,21 @@ function homeIntroGet() {
   };
 }
 
-export { homeSlideImg, homeIntroGet };
+
+function projectCat() {
+  return (dispatch) => {
+    const headers = { "Content-Type": "application/json" };
+    fetch("http://localhost:3000/project/allProjectCategoryGet", { headers })
+      .then((res) =>
+        res.json().then(async (response) => {
+          console.log(response, "data");
+          dispatch({ type: ActionTypes.projectCat, payload: response });
+        })
+      )
+      .catch((err) => {
+        console.log(err, "err");
+      });
+  };
+}
+
+export { homeSlideImg, homeIntroGet, projectCat };

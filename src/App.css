@@ -4,13 +4,14 @@
   scroll-behavior: smooth;
 }
 .App {
-  text-align: center;
+  text-align: center!important;
 }
 .nav-item {
   padding: 8px;
   transition: 0.5s;
   font-size: 1em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .nav-item:hover a {
   color: #028de5 !important;
@@ -208,4 +209,25 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+.displayheading{
+  color: #1371b8;
+  padding: 20px 0;
+}
+.selectBtn{
+  cursor: pointer;
+  padding: 10px;
+  border: 1.5px solid #1371b8;
+  background-color: #1371b8;
+  box-shadow: 0 8px 10px lightgrey;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: .5s ease;
+}
+.selectBtn:hover{
+  border: 1.5px solid #1371b8;
+  box-shadow: 0 12px 15px lightgrey;
+  background-color: rgb(250, 250, 250);
+  color: #1371b8;
 }

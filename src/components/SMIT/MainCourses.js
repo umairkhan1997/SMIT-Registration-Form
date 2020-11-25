@@ -36,8 +36,7 @@ export default class MainCourses extends React.Component {
                 <li>Express JS</li>
                 <li>Node JS</li>
               </ul>
-              <hr />
-              <h4>Duration: 1 Year</h4>
+              <h4 className='border-top border-primary py-3'>Duration: 1 Year</h4>
             </div>
           </div>
           <hr />
@@ -54,8 +53,7 @@ export default class MainCourses extends React.Component {
                 <li>PeachTree</li>
                 <li>Excell</li>
               </ul>
-              <hr />
-              <h4>Duration: 3 Months</h4>
+              <h4 className='border-top border-primary py-3'>Duration: 3 Months</h4>
             </div>
           </div>
           <hr />
@@ -73,8 +71,7 @@ export default class MainCourses extends React.Component {
                 <li>MS PowerPoint</li>
                 <li>MS Access</li>
               </ul>
-              <hr />
-              <h4>Duration: 3 Months</h4>
+              <h4 className='border-top border-primary py-3'>Duration: 3 Months</h4>
             </div>
           </div>
           <hr />
@@ -91,8 +88,7 @@ export default class MainCourses extends React.Component {
                 <li>Adobe Photoshop</li>
                 <li>Urdu Inpage</li>
               </ul>
-              <hr />
-              <h4>Duration: 6 Months</h4>
+              <h4 className='border-top border-primary py-3'>Duration: 6 Months</h4>
             </div>
           </div>
           <hr />

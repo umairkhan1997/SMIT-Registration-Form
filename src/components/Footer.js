@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
   }
   render() {
     return (
-      <div style={{ backgroundColor: "#292825" }} className="container-fluid">
+      <div style={{ backgroundColor: "#292825" }}>
         <div className="container">
           <div className="row">
             <div className="col-md-4 text-left p-5">
@@ -55,7 +55,7 @@ export default class Footer extends React.Component {
             </div>
           </div>
         </div>
-        <div className="bg-image p-2" style={{ backgroundColor: "#242320" }}>
+        <div className="p-2 text-center" style={{ backgroundColor: "rgb(29 28 26)" }}>
           <p className="text-white">Copyright © 2020 Saylani Welfare</p>
         </div>
       </div>

@@ -21,7 +21,9 @@ export default class RotiBank extends React.Component {
             <div className="col-md-6 border-right border-primary p-5">
               <Fade right>
                 <div>
-                  <h2 className="Heading">Saylani Roti Bank</h2>
+                  <div className='displayheading'>
+                    <h2>Saylani Roti Bank</h2>
+                  </div>
                   <p className="text-left">
                     Saylani is providing pack food to deserving and hungry
                     peoples for the first time in Pakistan through “SAYLANI ROTI
@@ -56,7 +58,9 @@ export default class RotiBank extends React.Component {
             <div className="col-md-6 p-5">
               <Fade left>
                 <div>
-                  <h2 className="Heading">Saylani Mobile Dastarkhwan</h2>
+                  <div className='displayheading'>
+                    <h2>Saylani Mobile Dastarkhwan</h2>
+                  </div>
                   <p className="text-left">
                     In an effort to go the extra mile in the service of
                     humanity, we don’t wait for the hungry to come to us, but

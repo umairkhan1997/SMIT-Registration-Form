@@ -2,6 +2,7 @@ import ActionTypes from "../constant/constant";
 const initial_state = {
   homeSlideImgs: [],
   homeIntro: [],
+  projectCat: []
 };
 
 const reducer = (state = initial_state, action) => {
@@ -11,6 +12,9 @@ const reducer = (state = initial_state, action) => {
     }
     case ActionTypes.homeIntro: {
       return { ...state, homeIntro: action.payload.data };
+    }
+    case ActionTypes.projectCat: {
+      return { ...state, projectCat: action.payload.data }
     }
     default: {
       return state;

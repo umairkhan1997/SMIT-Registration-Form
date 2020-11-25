@@ -14,8 +14,8 @@ export default class BloodBankAims extends React.Component {
     return (
       <div>
         <div className="container pt-5 pb-5">
-          <div className="p-5">
-            <h2 className="Heading">Blood Bank Services</h2>
+          <div className="displayheading">
+            <h2>Blood Bank Services</h2>
           </div>
           <div className="row">
             <div className="col-md-3 p-3 mt-3 mb-3">

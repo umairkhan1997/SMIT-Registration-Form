@@ -67,7 +67,7 @@ export default function MyRoute() {
       <Route  path="/adminsmit" component={SMITAdmin} />
       <Route  path="/adminServices" component={ServicesAdmin} />
       <Route  path="/adminbloodbank" component={BloodBankAdmin} />
-      <Route  path="/admincontact" component={ContactAdmin} />l
+      <Route  path="/admincontact" component={ContactAdmin} />
       <Route  path="/adminchairmenmessage" component={ChairmenAdmin} />
       <Route  path="/admindasterkhwan" component={DasterkhwanAdmin} />
       <Route  path="/adminjobbank" component={JobBankAdmin} />
