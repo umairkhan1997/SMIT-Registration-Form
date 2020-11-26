@@ -14,7 +14,8 @@ import SmitContact from "../components/SMIT/SmitContact";
 import Faculty from "../components/SMIT/faculty";
 import Collaboration from "../components/SMIT/collaboration";
 import SMITeacher from '../components/SMIT/teacher';
-import SmitEvents from '../components/SMIT/smitevents'
+import SmitEvents from '../components/SMIT/smitevents';
+import Cover from '../components/SMIT/cover'
 
 export default class Smit extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class Smit extends React.Component {
     return (
       <div style={{ backgroundColor: "white" }}>
         <MainHeader />
+        <Cover />
         <Faculty />
         <SmitCounter />
         <SmitEvents />

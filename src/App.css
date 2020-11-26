@@ -214,3 +214,9 @@
   color: #1371b8;
   padding: 20px 0;
 }
+.dob{
+  border: none;
+  border-bottom: 2px solid #028de5;
+  outline: none;
+  margin: 3px;
+}

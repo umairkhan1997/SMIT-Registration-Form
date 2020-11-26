@@ -140,8 +140,13 @@ d.jobre{
     border: none;
 }
 .prevbtn:focus{
-    outline: none;   
+    outline: none;
 }
 .prevbtn:hover{
     background-color: #033861;
+}
+.uploadCV{
+    width: 100%;
+    border: 2px dashed #0267b4;
+    padding: 50px;
 }
