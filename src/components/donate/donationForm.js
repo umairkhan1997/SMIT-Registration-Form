@@ -65,28 +65,33 @@ export default class DonationForm extends React.Component {
     };
   }
   donationType = (e) => {
+    const { sadqaDropDown, aqiqaDropDown, coronaDropDown, otherDonationDropDown } = this.state
     // console.log(e.target.value,'asdsa')
-    const { sadqaDropDown, aqiqaDropDown,
-      otherDonation,
-      coronaDropDown } = this.state
+    // const { sadqaDropDown, aqiqaDropDown,
+    //   otherDonation,
+    //   coronaDropDown } = this.state
     if (e.target.value === 'Sadqa') {
+      let arr = sadqaDropDown
       this.setState({
-        currentData: sadqaDropDown
+        currentData: arr
       })
     }
     if (e.target.value === 'Aqiqa') {
+      let arr = aqiqaDropDown
       this.setState({
-        currentData: aqiqaDropDown
+        currentData: arr
       })
     }
     if (e.target.value === 'Other Donation') {
+      let arr = otherDonationDropDown
       this.setState({
-        currentData: otherDonation
+        currentData: arr
       })
     }
     if (e.target.value === 'Corona Effecties') {
+      let arr = coronaDropDown
       this.setState({
-        currentData: coronaDropDown
+        currentData: arr
       })
     }
   }
@@ -126,9 +131,22 @@ export default class DonationForm extends React.Component {
                     <label className="lab text-dark">
                       Select Donation Type
                     </label>
-                    <select className="inp">
+                    <select onChange={(e) => this.donationType(e)} className="inp">
                       <option>Select Donation Type</option>
-                      {this.state.data.map((i, index) => {
+                      <option>Sadqa</option>
+                      <option>Aqiqa</option>
+                      <option>Other Donation</option>
+                      <option>Corona Effecties</option>
+
+                    </select>
+                  </div>
+                  <div className="col-md-12 mt-3 mb-3">
+                    <label className="lab text-dark">
+                      Select Donation category
+                    </label>
+                    <select className="inp">
+                      <option>Select Donation Category</option>
+                      {this.state.currentData.map((i, index) => {
                         return <option key={index}>{i}</option>;
                       })}
                     </select>

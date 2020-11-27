@@ -28,7 +28,7 @@ class WhatweDo extends React.Component {
         { displayName: "online sadqa", route: "donation" },
         { displayName: "saylani school", route: "education" },
       ],
-      searchItem: [],
+      searchItem: "",
       obj: {
         type: 'top'
       }
@@ -49,6 +49,7 @@ class WhatweDo extends React.Component {
   }
 
   render() {
+    console.log(this.state.searchItem);
     return (
       <div className="container-fluid" style={{ backgroundColor: "white" }}>
         <div className="container">
@@ -60,10 +61,11 @@ class WhatweDo extends React.Component {
           </p>
           <input
             className="search"
-            onChange={(e) => this.search(e)}
+            // onChange={(e) => this.search(e)}
+            onChange={(e) => this.setState({ searchItem: e.target.value })}
             placeholder="Search Services Here..."
           />
-          <ul className="list my-4">
+          {/* <ul className="list my-4">
             {this.state.searchItem ? (
               <div className="row">
                 {this.state.searchItem.map((item, i) => {
@@ -84,24 +86,45 @@ class WhatweDo extends React.Component {
                         </Link>
                       </Fade>
                     </div>
-                    // <li key={i}>
-                    //   <Link
-                    //     style={{ textTransform: "capitalize" }}
-                    //     to={item.route}
-                    //   >
-                    //     {item.displayName}
-                    //   </Link>
-                    // </li>
                   );
                 })}
               </div>
             ) : (
                 false
               )}
-          </ul>
+          </ul> */}
         </div>
-
         <div className="container">
+          <div className="row">
+            {this.props.projectCats.filter(name => { return name.proName.toLowerCase().indexOf(this.state.searchItem.toLowerCase()) >= 0 }).map(filteredName => {
+              return (
+                <div className="col-md-6 pt-3 pb-3 pl-3">
+                  <Fade top>
+                    <Link to={filteredName.proHrefVal}>
+                      <div className="row small">
+                        <div className="col-md-3 pt-5 pb-5 pl-3 pr-2 d-flex justify-content-center align-items-center">
+                          <p style={{ fontSize: "3.5em", marginTop: -5 }}>
+                            <i
+                              class={filteredName.proIcon}
+                              style={{ color: "#316DC3" }}
+                            ></i>
+                          </p>
+                        </div>
+                        <div className="col-md-9 pt-5 pb-3 pl-2 text-left">
+                          <h3 style={{ color: "#316DC3", fontWeight: "bolder" }}>
+                            {filteredName.proName}
+                          </h3>
+                          <p className="text-muted" style={{ marginTop: -5 }}>
+                            {filteredName.proDescrip}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </Fade>
+                </div>
+              )
+            })}
+            {/* <div className="container">
           <div className="row">
             {this.props.projectCats.map((each, index) => (
               <div className="col-md-6 pt-3 pb-3 pl-3">
@@ -128,7 +151,7 @@ class WhatweDo extends React.Component {
                   </Link>
                 </Fade>
               </div>
-            ))}
+            ))} */}
             {/* <div className="col-md-6 pt-3 pb-3 pl-3">
               <Fade top>
                 <Link to="/smit">
@@ -476,3 +499,14 @@ function mapDispatchToProp(dispatch) {
   };
 }
 export default connect(mapStateToProp, mapDispatchToProp)(WhatweDo);
+
+
+// var people = [{name:'books',cat:'books'},{name:'Register',cat:'Register'},{name:'Copies',cat:'Copies'}]
+// <div>
+//   {people.filter(person => 
+//     person.cat == 'book').map(filteredPerson => (
+//     <li>
+//       {filteredPerson.name}
+//     </li>
+//   ))}
+// </div>

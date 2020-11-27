@@ -2,7 +2,8 @@ import ActionTypes from "../constant/constant";
 const initial_state = {
   homeSlideImgs: [],
   homeIntro: [],
-  projectCat: []
+  projectCat: [],
+  bookAllCats: []
 };
 
 const reducer = (state = initial_state, action) => {
@@ -15,6 +16,9 @@ const reducer = (state = initial_state, action) => {
     }
     case ActionTypes.projectCat: {
       return { ...state, projectCat: action.payload.data }
+    }
+    case ActionTypes.bookAllCat: {
+      return { ...state, bookAllCats: action.payload.data }
     }
     default: {
       return state;

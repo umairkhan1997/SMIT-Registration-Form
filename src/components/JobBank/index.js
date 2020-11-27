@@ -218,7 +218,7 @@ export default class JobBank extends React.Component {
         </div>
 
         <JobContact />
-        {this.state.jobseekarForm ? (
+        {/* {this.state.jobseekarForm ? (
           <div className="displayFullForm">
             <div style={{ overflow: "scroll", height: "100%" }}>
               <div>
@@ -307,16 +307,16 @@ export default class JobBank extends React.Component {
                 <button type="button" class="donate" data-dismiss="modal">
                   Close
                 </button>
-                {/* <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-primary">
                   Previous
-                </button> */}
+                </button>
                 <button type="button" class="donate">
                   Next
                 </button>
               </div>
             </div>
           </div>
-        ) : null}
+        ) : null} */}
       </div>
     );
   }

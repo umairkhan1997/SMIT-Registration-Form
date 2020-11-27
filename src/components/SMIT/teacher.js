@@ -18,7 +18,7 @@ export default class SMITeacher extends React.Component {
     return (
       <div>
         <div className="container">
-          <h1 className="Heading">Our Qualified Teacher</h1>
+          <h1 className="pb-4 font-weight-bold" style={{ color: "#1371b8" }}>Our Qualified Teacher</h1>
           <div className="row">
             <div className="col-md-4 pt-3 pb-3">
               <div

@@ -15,18 +15,18 @@ export default class Faculty extends React.Component {
     return (
       <div>
         <div className="container">
-          <h2 className="Heading">Faculty</h2>
+          <h2 style={{ color: '#1371b8' }} className="mt-5 ml-4 font-weight-bold" >Faculty</h2>
         </div>
         <div className="container">
-          <div className="text-left pt-3 pb-3">
+          <div className="text-left pb-3">
             <div>
               <Fade left>
                 <img className="facultyImg " src={ziakhan} />
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2>Sir Zia Khan</h2>
-                  <p>(Faculty Head)</p>
+                  <h3 style={{ color: '#1371b8' }} className="font-weight-bold">Sir Zia Khan</h3>
+                  <p className="text-muted">(Faculty Head)</p>
                 </div>
               </Fade>
             </div>
@@ -76,19 +76,19 @@ export default class Faculty extends React.Component {
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2>Muhammad Ali Mughal</h2>
-                  <p>(Manager SMIT)</p>
+                  <h2 style={{ color: '#1371b8' }} className="font-weight-bold">Muhammad Ali Mughal</h2>
+                  <p className="text-muted">(Manager SMIT)</p>
                 </div>
               </Fade>
             </div>
             <div className="facultyContent  ml-5 pt-5 p-3 rounded shadow">
               <Fade right>
-              <p>
-                I initiated working when I was in 7th standard and never stop.
-                Today Alhamdullillah I am working as Lead and Manager and Admin
-                Lead in Saylani Mass IT Training and Saylani Incubation Center
-                along with Admin Lead of PIAIC along with Lecturer in Benazir
-                Bhutto Shaheed University.
+                <p>
+                  I initiated working when I was in 7th standard and never stop.
+                  Today Alhamdullillah I am working as Lead and Manager and Admin
+                  Lead in Saylani Mass IT Training and Saylani Incubation Center
+                  along with Admin Lead of PIAIC along with Lecturer in Benazir
+                  Bhutto Shaheed University.
               </p>
               </Fade>
             </div>

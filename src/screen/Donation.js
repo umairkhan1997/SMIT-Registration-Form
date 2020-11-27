@@ -10,54 +10,36 @@ export default class Donation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sadqa: true, aqiqa: false, otherDonation: false, coronaEffec: false, DonationForms: true, bgClrBtnOne: '#0069d9', bgClrBtnTwo: '#5a6268',
+      showScreen: true
 
-      // this.donationType = this.donationType.bind
-      donationForm: true,
-      bankDetails: false,
-      donationForm: false,
-      bankDetails: true,
-      
     };
   }
-
-
-
   DonationForm = () => {
     this.setState({
       DonationForms: true,
-      bgClrBtnOne: '#0069d9', bgClrBtnTwo: '#5a6268'
     })
   }
   BankDetail = () => {
     this.setState({
       DonationForms: false,
-      bgClrBtnOne: '#5a6268', bgClrBtnTwo: '#0069d9'
     })
   }
   render() {
     const {
-      aqiqaDropDown,
-      sadqaDropDown,
-      coronaDropDown,
-      otherDonationDropDown,
-      currentData,
+      showScreen
     } = this.state;
-    console.log(currentData);
     return (
       <div>
         <MainHeader />
         <div className="container">
           <div className="row">
-
-
-
             <div className="col-md-6 p-3 pt-5">
               <div
                 onClick={() =>
-                  this.setState({ donationForm: true, bankDetails: false })
+                  this.setState({ donationForm: true, bankDetails: false, showScreen: true })
                 }
                 className="selectBtn"
+                style={{ backgroundColor: showScreen ? "#0069d9" : 'white', color: showScreen ? "white" : '#0069d9', }}
               >
                 Donation Form
               </div>
@@ -65,19 +47,17 @@ export default class Donation extends React.Component {
             <div className="col-md-6 p-3 pt-5">
               <div
                 onClick={() =>
-                  this.setState({ donationForm: false, bankDetails: true })
+                  this.setState({ donationForm: false, bankDetails: true, showScreen: false })
                 }
                 className="selectBtn"
+                style={{ backgroundColor: !showScreen ? "#0069d9" : 'white', color: !showScreen ? "white" : '#0069d9', }}
               >
                 Bank Details
               </div>
             </div>
           </div>
         </div>
-        {this.state.donationForm ? (
-          <DonationForm data={this.state.currentData} />
-        ) : null}
-        {this.state.bankDetails ? <BankDetails /> : null}
+        {showScreen ? <DonationForm /> : <BankDetails />}
         <Footer />
       </div>
     )

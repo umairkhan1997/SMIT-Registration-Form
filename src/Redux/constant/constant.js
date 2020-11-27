@@ -1,7 +1,8 @@
 const ActionTypes = {
   homeSlideImg: "homeSlideImg",
   homeIntro: "homeIntro",
-  projectCat: "projectCat"
+  projectCat: "projectCat",
+  bookAllCat: "bookAllCat"
 };
 
 export default ActionTypes;

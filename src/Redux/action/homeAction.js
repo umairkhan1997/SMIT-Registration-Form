@@ -1,10 +1,13 @@
 import ActionTypes from "../constant/constant";
 
+const api = "http://localhost:3000/"
+
+
 function homeSlideImg() {
   var allData;
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
-    fetch("http://localhost:3000/home/homeSliderImgGet", { headers })
+    fetch(`${api}home/homeSliderImgGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
           console.log(response, "data");
@@ -21,7 +24,7 @@ function homeSlideImg() {
 function homeIntroGet() {
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
-    fetch("http://localhost:3000/home/homeIntroGet", { headers })
+    fetch(`${api}home/homeIntroGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
           console.log(response, "data");
@@ -38,7 +41,7 @@ function homeIntroGet() {
 function projectCat() {
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
-    fetch("http://localhost:3000/project/allProjectCategoryGet", { headers })
+    fetch(`${api}project/allProjectCategoryGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
           console.log(response, "data");
@@ -51,4 +54,21 @@ function projectCat() {
   };
 }
 
-export { homeSlideImg, homeIntroGet, projectCat };
+
+function bookAllCat() {
+  return (dispatch) => {
+    const headers = { "Content-Type": "application/json" };
+    fetch(`${api}Books/BooksAllGet`, { headers })
+      .then((res) =>
+        res.json().then(async (response) => {
+          console.log(response, "data");
+          dispatch({ type: ActionTypes.bookAllCat, payload: response });
+        })
+      )
+      .catch((err) => {
+        console.log(err, "err");
+      });
+  };
+}
+
+export { homeSlideImg, homeIntroGet, projectCat, bookAllCat };

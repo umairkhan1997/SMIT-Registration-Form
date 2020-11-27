@@ -16,26 +16,26 @@ export default class Welfare extends React.Component {
 
   render() {
     return (
-      <div>
+      <div >
         <MainHeader />
-      <div style={{backgroundImage:`url(${welfare})`}} className='back'>
-        <div style={{backgroundColor:'rgba(0,0,0,.5)'}} className='p-5'>
-          <h1 className='p-3 text-white'>Welfare</h1>
+        <div style={{ backgroundImage: `url(${welfare})` }} className='back'>
+          <div style={{ backgroundColor: 'rgba(0,0,0,.5)', padding: 80 }}>
+            <h1 className='p-3 text-white text-center'>Welfare</h1>
+          </div>
         </div>
-      </div>
-        <div className="container mt-6">
-          <div className="p-3">
-            <h1 className="Heading">Family Adoption</h1>
+        <div className="container " style={{ marginTop: 60, marginbottom: 60 }}>
+          <div className="pt-3 pb-3">
+            <h1 style={{ color: '#1371b8' }} className="font-weight-bold">Family Adoption</h1>
           </div>
 
           <div className="row">
             <div className="col-md-6">
-              <img width="100%" src={img6} />
+              <img width="100%" src={img6} height='320px' />
             </div>
             <div className="col-md-6  bg-white">
-              <h2 className="Heading text-capitalize text-left">
+              <h3 className="text-capitalize text-left font-weight-bold" style={{ marginTop: -5, color: "#1371b8" }}>
                 Saylani has Adopted More then 8500 Families
-              </h2>
+              </h3>
 
               <div className="text-left">
                 <p style={{ fontSize: 18 }}>
@@ -54,7 +54,36 @@ export default class Welfare extends React.Component {
           </div>
         </div>
 
-        <div className="container mt-6">
+        <div className="container " style={{ marginTop: 60, marginBottom: 60 }}>
+          <div className="pt-3 pb-3">
+            <h1 style={{ color: '#1371b8' }} className="font-weight-bold">Weddings Help</h1>
+          </div>
+
+          <div className="row">
+            <div className="col-md-6">
+              <img width="100%" src={wedding} height='320px' />
+            </div>
+            <div className="col-md-6  bg-white">
+              <h3 className="text-capitalize text-left font-weight-bold" style={{ marginTop: -5, color: "#1371b8" }}>
+                SaylSaylani has arranged more then 7200 marraiges
+              </h3>
+
+              <div className="text-left">
+                <p style={{ fontSize: 18 }}>
+                  Weddings are a happy occasion for families and financial
+                  burdens should not be a damper. Saylani helps needy families
+                  on this joyous occasion by providing financial assistance as
+                  well as giving them complete wedding packages including
+                  wedding arrangements, food, furniture and other household
+                  items. With more than 600 weddings financed every month, we
+                  continue to spread happiness during these precious moments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="container mt-6">
           <div className="p-3">
             <h1 className="Heading">Weddings Help</h1>
           </div>
@@ -81,7 +110,7 @@ export default class Welfare extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

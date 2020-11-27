@@ -22,10 +22,10 @@ export default class Collaboration extends React.Component {
       <div>
         <div className="container-fluid">
           <div className="container">
-            <div className="p-5">
-              <h2 className='Heading'>Collaboration and Partners</h2>
+            <div className="pt-5">
+              <h1 className="pb-4 font-weight-bold" style={{ color: "#1371b8" }}>Collaboration and Partners</h1>
             </div>
-            <div className="row">
+            <div className="row" >
               <div className="p-5 col-md-3 col-sm-6">
                 <Zoom>
                   <div className="collaborationPartner p-4">

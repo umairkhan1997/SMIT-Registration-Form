@@ -15,12 +15,12 @@ export default class SmitContact extends React.Component {
           lassName="container-fluid  ex justify-content-center "
           style={{ backgroundColor: "white", marginTop: 80 }}
         >
-          <div className="container d-flex justify-content-center">
-            <h1 className="Heading pt-3 text-center">Contact Us</h1>
+          <div className="container">
+            <h1 className="font-weight-bold" style={{ color: "#1371b8" }}>Contact Us</h1>
           </div>
         </div>
 
-        <div className="container" style={{ marginTop: 80, marginBottom: 80 }}>
+        <div className="container" style={{ marginTop: 40, marginBottom: 80 }}>
           <div className="row">
             <div className="col-md-6">
               <div className="row">
@@ -46,7 +46,7 @@ export default class SmitContact extends React.Component {
               </div>
             </div>
             <div className="col-md-6 ">
-              <div className="row p-5">
+              <div className="row pt-3 pb-5 pl-5 pr-5">
                 <div className="col-md-1 text-right">
                   <p>
                     <i class="fas fa-map-marker-alt"></i>
@@ -57,7 +57,6 @@ export default class SmitContact extends React.Component {
                     4th Floor , A-25, Bahadurabad Chowrangi Karachi, Pakistan
                   </h6>
                 </div>
-
                 <div className="col-md-1 text-right">
                   <p>
                     <i class="fas fa-phone-alt"></i>

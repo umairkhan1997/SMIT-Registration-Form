@@ -13,28 +13,28 @@ export default class MainCourses extends React.Component {
     return (
       <div>
         <div className="container pt-5 pb-5 ">
-          <h2 className="Heading p-3">
+          <h2 className="p-3 font-weight-bold" style={{ color: "#1371b8" }}>
             Discover Courses Developed by Saylani Mass IT
           </h2>
         </div>
         <div className="container pb-5 ">
           <div className="row">
-            <div className="col-md-8 p-4">
+            <div className="col-md-8 p-4" >
               <img className="courseimg" src={img5} width="100%" />
             </div>
-            <div className="col-md-4 p-4 text-left">
+            <div className="col-md-4 p-4 text-left" >
               <h3 className="text-primary">
                 Web And Mobile Application Development
               </h3>
               <ul className="p-3 text-muted">
-                <li>HTML 5</li>
-                <li>CSS3</li>
+                <li>HTML 5 & CSS3</li>
+                {/* <li>CSS3</li> */}
                 <li>JavaScript</li>
-                <li>React</li>
-                <li>React Native</li>
+                <li>React & React Native</li>
+                {/* <li></li> */}
+                <li>Node JS & Express JS</li>
                 <li>Mongo DB</li>
-                <li>Express JS</li>
-                <li>Node JS</li>
+                {/* <li></li> */}
               </ul>
               <h4 className='border-top border-primary py-3'>Duration: 1 Year</h4>
             </div>
@@ -46,7 +46,7 @@ export default class MainCourses extends React.Component {
             </div>
             <div className="col-md-4 p-4 text-left">
               <h3 className="text-primary">
-               CCA
+                CCA
               </h3>
               <ul className="p-3 text-muted">
                 <li>Quick Book</li>
@@ -63,7 +63,7 @@ export default class MainCourses extends React.Component {
             </div>
             <div className="col-md-4 p-4 text-left">
               <h3 className="text-primary">
-               CCO
+                CCO
               </h3>
               <ul className="p-3 text-muted">
                 <li>MS Word</li>
@@ -81,7 +81,7 @@ export default class MainCourses extends React.Component {
             </div>
             <div className="col-md-4 p-4 text-left">
               <h3 className="text-primary">
-               Graphic Designing
+                Graphic Designing
               </h3>
               <ul className="p-3 text-muted">
                 <li>Adobe illustrator</li>
