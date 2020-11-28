@@ -102,3 +102,11 @@
   border-radius: 10px;
   box-shadow: 0 10px 15px lightgrey;
 }
+.coverText{
+  border-radius: 8px;
+  /* border: 2px solid rgb(2, 103, 180); */
+  /* color: rgb(2, 103, 180); */
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, .5); */
+}

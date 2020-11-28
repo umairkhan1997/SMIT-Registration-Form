@@ -15,7 +15,9 @@ export default class Faculty extends React.Component {
     return (
       <div>
         <div className="container">
-          <h2 className="Heading">Faculty</h2>
+          <div className="displayheading">
+            <h2>Faculty</h2>
+          </div>
         </div>
         <div className="container">
           <div className="text-left pt-3 pb-3">
@@ -83,13 +85,13 @@ export default class Faculty extends React.Component {
             </div>
             <div className="facultyContent  ml-5 pt-5 p-3 rounded shadow">
               <Fade right>
-              <p>
-                I initiated working when I was in 7th standard and never stop.
-                Today Alhamdullillah I am working as Lead and Manager and Admin
-                Lead in Saylani Mass IT Training and Saylani Incubation Center
-                along with Admin Lead of PIAIC along with Lecturer in Benazir
-                Bhutto Shaheed University.
-              </p>
+                <p>
+                  I initiated working when I was in 7th standard and never stop.
+                  Today Alhamdullillah I am working as Lead and Manager and
+                  Admin Lead in Saylani Mass IT Training and Saylani Incubation
+                  Center along with Admin Lead of PIAIC along with Lecturer in
+                  Benazir Bhutto Shaheed University.
+                </p>
               </Fade>
             </div>
           </div>

@@ -1,10 +1,10 @@
-*{
-  font-family: 'Alata';
-  transition: .5s;
+* {
+  font-family: "Alata";
+  transition: 0.5s;
   scroll-behavior: smooth;
 }
 .App {
-  text-align: center!important;
+  text-align: center !important;
 }
 .nav-item {
   padding: 8px;
@@ -43,14 +43,11 @@
   background-color: #d43c18;
 }
 
-
-
 /* .coursesBlog {
   color: #d43c18;
   font-size: 1.5em;
   font-weight: bold;
 } */
-
 
 .date {
   width: 120px;
@@ -65,7 +62,6 @@
   background-color: dodgerblue;
   color: white;
 }
-
 
 .headingList {
   border: none !important;
@@ -103,7 +99,6 @@
   overflow: hidden;
 }
 
-
 .upCour {
   background-image: url("./images/upco.jpg");
   background-repeat: no-repeat;
@@ -113,9 +108,6 @@
   width: 80%;
   margin-left: 10%;
 }
-
-
-
 
 .messagebox {
   text-align: left;
@@ -149,9 +141,6 @@
   margin-top: 2px;
 }
 
-
-
-
 .li {
   border-bottom: 0.001em solid #c0c0c0;
   border-width: 1px;
@@ -160,17 +149,11 @@
   margin-bottom: 5px;
 }
 
-
-
-
-
-
 .selectionOne {
   background-image: url("./images/back.jpg") !important;
   background-repeat: no-repeat !important;
   /* Full height */
   height: 100%;
-
 
   /* Center and scale the image nicely */
   background-position: center !important;
@@ -181,14 +164,14 @@
 .childBox {
   flex: 1 1 25%;
 }
-.footerList{
+.footerList {
   list-style: none;
   padding: 5px;
 }
-.footerList a{
+.footerList a {
   color: white;
 }
-.footerList a:hover{
+.footerList a:hover {
   color: white;
 }
 /* width */
@@ -198,25 +181,37 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
-.displayheading{
+.displayheading {
   color: #1371b8;
   padding: 20px 0;
 }
-.dob{
+.dob {
   border: none;
   border-bottom: 2px solid #028de5;
   outline: none;
   margin: 3px;
+}
+.coursePopUp {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  background-color: rgba(0, 0, 0, .5);
+}
+@media only screen and (max-width: 600px) {
+  .coursePopUp {
+    width: 100%;
+  }
 }

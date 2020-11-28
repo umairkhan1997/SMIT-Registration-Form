@@ -3,6 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
 import Gallery from "react-grid-gallery";
+import image from '../../images/sirAli.jpg';
+import image2 from '../../images/event.png';
+import image3 from '../../images/event4.jpg';
 
 export default class SmitEvents extends React.Component {
     constructor(props) {
@@ -11,62 +14,237 @@ export default class SmitEvents extends React.Component {
     }
 
     render() {
-        const displayimages = [
-            {
-                src:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-1.jpg?alt=media&token=93d7ebcf-d564-438f-871e-1c4fb6b79702",
-                thumbnail:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-1.jpg?alt=media&token=93d7ebcf-d564-438f-871e-1c4fb6b79702",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
-                caption: "Basheer Farooqui Meet With GOVT Officer",
-            },
-            {
-                src:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-                thumbnail:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
-                caption: "Basheer Farooqui Meet With GOVT Officer",
-            },
-            {
-                src:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-2.jpg?alt=media&token=12315048-2790-4f85-831f-4721a04b6600",
-                thumbnail:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-2.jpg?alt=media&token=12315048-2790-4f85-831f-4721a04b6600",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
-                caption: "Basheer Farooqui Meet With GOVT Officer",
-            },
-            {
-                src:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-                thumbnail:
-                    "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
-                caption: "Basheer Farooqui Meet With GOVT Officer",
-            },
-        ];
         return (
             <div>
                 <div className='bg-light'>
                     <div className='container py-5'>
                         <div className='displayHeading'>
-                            <h1 style={{color:'#0569b4'}}>SMIT Events</ h1>
+                            <h1 style={{ color: '#0569b4' }}>SMIT Events</ h1>
                         </div>
-                        <div className='py-4'>
-                            <Gallery style={{ display: 'block' }} images={displayimages} />
-                            <h3 className='text-m uted'>CCNA Entry Test</h3>
-                        </div>
-                        <div className='py-4'>
-                            <Gallery style={{ display: 'block' }} images={displayimages} />
-                            <h3 className='text-m uted'>Hocky Ground Entry Test Web and Mobile</h3>
-                        </div>
-                        <div className='py-4'>
-                            <Gallery style={{ display: 'block' }} images={displayimages} />
-                            <h3 className='text-m uted'>Graphic Designing Entry Test</h3>
+                        <div className='row'>
+                            <div className='col-md-4 py-3'>
+                                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src={image} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Workshop</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image2} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>1000 of Students Appeared</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image3} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Freelancing Workshop</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='col-md-4 py-3'>
+                                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src={image} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Workshop</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image2} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>1000 of Students Appeared</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image3} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Freelancing Workshop</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='col-md-4 py-3'>
+                                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src={image} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Workshop</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image2} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>1000 of Students Appeared</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image3} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Freelancing Workshop</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='col-md-4 py-3'>
+                                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src={image} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Workshop </h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image2} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>1000 of Students Appeared</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image3} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Freelancing Workshop</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='col-md-4 py-3'>
+                                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src={image} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Workshop </h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image2} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>1000 of Students Appeared</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image3} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Freelancing Workshop</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='col-md-4 py-3'>
+                                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src={image} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Workshop </h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image2} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>1000 of Students Appeared</h4>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={image3} class="d-block w-100" alt="..." />
+                                            <div style={{ backgroundColor: 'rgba(0,0,0,.4)' }} class="carousel-caption rounded shadow d-none d-md-block">
+                                                <h4>Freelancing Workshop</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                         
                         </div>
                     </div>
                 </div>

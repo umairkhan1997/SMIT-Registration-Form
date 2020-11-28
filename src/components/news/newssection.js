@@ -15,50 +15,13 @@ export default class NewsSection extends React.Component {
     this.state = {};
   }
   render() {
-    const displayimages = [
-      {
-        src:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-1.jpg?alt=media&token=93d7ebcf-d564-438f-871e-1c4fb6b79702",
-        thumbnail:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-1.jpg?alt=media&token=93d7ebcf-d564-438f-871e-1c4fb6b79702",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "Basheer Farooqui Meet With GOVT Officer",
-      },
-      {
-        src:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-        thumbnail:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "Basheer Farooqui Meet With GOVT Officer",
-      },
-      {
-        src:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-2.jpg?alt=media&token=12315048-2790-4f85-831f-4721a04b6600",
-        thumbnail:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-2.jpg?alt=media&token=12315048-2790-4f85-831f-4721a04b6600",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "Basheer Farooqui Meet With GOVT Officer",
-      },
-      {
-        src:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-        thumbnail:
-          "https://firebasestorage.googleapis.com/v0/b/istikhara-a074b.appspot.com/o/saylaniWelfareImages%2Fimg-5.jpg?alt=media&token=24948ded-1752-4d7d-b14e-ae3e28e98e2d",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "Basheer Farooqui Meet With GOVT Officer",
-      },
-    ];
+
     return (
       <div>
         <div className='row'>
           <div style={{ backgroundColor: 'rgb(240, 240, 240)' }} className='col-md-3'>
-            <div className='mt-5'>
-
+            <div style={{ backgroundColor: '#0267b3',padding: '27px' }} className='mt-5'>
+              <h1 className='py-4 text-white'>Saylani NEWS</h1>
             </div>
             {/* <Calendar calendarType='ISO 8601' showNeighboringMonth={true} /> */}
           </div>
@@ -66,17 +29,25 @@ export default class NewsSection extends React.Component {
             <div style={{ backgroundColor: '#0267b3' }} className='mt-5'>
               <div className='text-right'>
                 <div className='shortCount'>
-                  Number Of Patients Treated
-                  786
-        </div>
+                  Number Of Patients Treated <br />
+                  <span className='large'>53749</span>
+                </div>
                 <div className='shortCount'>
-                  Number Of Patients Treated
-                  786
-        </div>
+                  Number Of Students Trained <br />
+                  <span className='large'>125000</span>
+                </div>
                 <div className='shortCount'>
-                  Number Of Patients Treated
-                  786
-        </div>
+                  Number Of Family Welfare <br />
+                  <span className='large'>8500</span> 
+                </div>
+                <div className='shortCount'>
+                  Number Of Students educate <br />
+                  <span className='large'>180000</span> 
+                </div>
+                <div className='shortCount'>
+                  Number Of Dasterkhwan opened<br />
+                  <span className='large'>180000</span> 
+                </div>
               </div>
             </div>
             <div className='container'>
