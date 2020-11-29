@@ -3,7 +3,9 @@ const initial_state = {
   homeSlideImgs: [],
   homeIntro: [],
   projectCat: [],
-  bookAllCats: []
+  bookAllCats: [],
+  onlineMasajidForms: false,
+  onlineQuranPakForms: false,
 };
 
 const reducer = (state = initial_state, action) => {
@@ -19,6 +21,12 @@ const reducer = (state = initial_state, action) => {
     }
     case ActionTypes.bookAllCat: {
       return { ...state, bookAllCats: action.payload.data }
+    }
+    case ActionTypes.onlineMasajidForms: {
+      return { ...state, onlineMasajidForms: action.payload }
+    }
+    case ActionTypes.onlineQuranPakForms: {
+      return { ...state, onlineQuranPakForms: action.payload }
     }
     default: {
       return state;

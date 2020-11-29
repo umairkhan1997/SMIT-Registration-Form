@@ -7,94 +7,212 @@ import istikhara from "../../images/istikhara.jpg";
 export default class IstikharaForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      istType: "",
+      maleName: "",
+      maleMotName: "",
+      thisfemName: "",
+      femMotName: "",
+      contact: "",
+      istDetail: "",
+      checkistType: false,
+      checkmaleName: false,
+      checkmaleMotName: false,
+      checkthisfemName: false,
+      checkfemMotName: false,
+      checkcontact: false,
+      checkistDetail: false
+    };
   }
+
+  checkField = (val) => {
+    if (!val) {
+      return true
+    }
+    return false
+  }
+
+  submitIst = () => {
+    const { istType, maleName, maleMotName,
+      thisfemName,
+      femMotName,
+      contact, istDetail } = this.state;
+    // if (this.checkField(istType)) {
+    this.setState({
+      checkistType: this.checkField(istType) ? true : false,
+      checkmaleName: this.checkField(maleName) ? true : false,
+      checkmaleMotName: this.checkField(maleMotName) ? true : false,
+      checkthisfemName: this.checkField(thisfemName) ? true : false,
+      checkfemMotName: this.checkField(femMotName) ? true : false,
+      checkcontact: this.checkField(contact) ? true : false,
+      checkistDetail: this.checkField(istDetail) ? true : false
+    })
+
+  }
+
   render() {
+    const {
+      istType,
+      maleName,
+      maleMotName,
+      thisfemName,
+      femMotName,
+      contact,
+      istDetail,
+      checkistType,
+      checkmaleName,
+      checkmaleMotName,
+      checkthisfemName,
+      checkfemMotName,
+      checkcontact,
+      checkistDetail
+    } = this.state;
     return (
       <div>
         <div className="back" style={{ backgroundImage: `url(${istikhara})` }}>
-          <div style={{ backgroundColor: "rgba(0,0,0,.5)" }} className="p-5">
-            <h1 className="text-white p-3">Online Istikhara</h1>
+          <div style={{ backgroundColor: "rgba(0,0,0,.5)", padding: 80 }}>
+            <h1 className="text-white p-3 text-center">Online Istikhara</h1>
           </div>
         </div>
         <div className="container">
-          <form>
-            <div className="row">
-              <div className="col-md-8">
-                <label className="inpLab font-weight-bold">Select Istikhara Type</label>
-                <select className="inp">
-                  <option>Select Istikhara Type</option>
-                  <option>Shadi</option>
-                  <option>Karobar</option>
-                  <option>Jadu</option>
-                  <option></option>
-                </select>
-              </div>
-              <div className="col-md-6 pt-3 pb-3">
-                <label for="maleName" className="inpLab font-weight-bold">
-                  Enter Male Name
-                </label>
-                <input
-                  id="maleName"
-                  className="inp"
-                  placeholder="Enter Male Name"
-                />
-              </div>
-              <div className="col-md-6 pt-3 pb-3">
-                <label for="maleMotherName" className="inpLab font-weight-bold">
-                  Enter Male Mother Name
-                </label>
-                <input
-                  id="maleMotherName"
-                  className="inp"
-                  placeholder="Enter Male Mother Name"
-                />
-              </div>
+
+          <div className="row">
+            <div className="col-md-8">
+              <label className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>Select Istikhara Type</label>
+              <select className="inp" onChange={e => this.setState({ istType: e.target.value })}>
+                <option selected>Select Istikhara Type</option>
+                <option value="Shadi">Shadi</option>
+                <option value="Karobar">Karobar</option>
+                <option value="Jadu">Jadu</option>
+              </select>
             </div>
-            <div className="row">
-              <div className="col-md-6 pt-3 pb-3">
-                <label for="femaleName" className="inpLab font-weight-bold">
-                  Enter Female Name
+            {
+              checkistType ?
+                <div class="col-md-8">
+                  <h6 style={{ color: 'red', fontweight: '500', fontSize: 14, marginTop: 2 }}>*Kindly select type of istikhara</h6>
+                </div>
+                : null
+            }
+            <div className="col-md-6 pt-3 pb-3">
+              <label for="maleName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+                Enter Male Name
                 </label>
-                <input
-                  id="femaleName"
-                  className="inp"
-                  placeholder="Enter Female Name"
-                />
-              </div>
-              <div className="col-md-6 pt-3 pb-3">
-                <label for="femaleMotherName" className="inpLab font-weight-bold">
-                  Enter Female Mother Name
-                </label>
-                <input
-                  id="femaleMotherName"
-                  className="inp"
-                  placeholder="Enter Female Mother Name"
-                />
-              </div>
+              <input
+                id="maleName"
+                className="inp"
+                placeholder="Enter Male Name"
+                value={maleName}
+                onChange={e => this.setState({ maleName: e.target.value })}
+              />
             </div>
-            <div className="row">
-              <div className="col-md-6 pt-3 pb-3">
-                <label for="contact" className="inpLab font-weight-bold">
-                  Contact
+            {
+              checkmaleName ?
+                <div class="col-md-8">
+                  <h6 style={{ color: 'red', fontweight: '500', fontSize: 14, marginTop: 2 }}>*Kindly enter male name</h6>
+                </div>
+                : null
+            }
+            <div className="col-md-6 pt-3 pb-3">
+              <label for="maleMotherName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+                Enter Male Mother Name
                 </label>
-                <input id="contact" className="inp" placeholder="Contact" />
-              </div>
-              <div className="col-md-6 pt-3 pb-3">
-                <label for="contact" className="inpLab font-weight-bold">
-                  Enter Istikhara Details
-                </label>
-                <textarea
-                  placeholder="Enter Istikhara Details"
-                  rows="8"
-                  className="inp"
-                ></textarea>
-              </div>
-              <div className="col-md-12 p-5">
-                <button className="btn btn-block btn-primary">Submit</button>
-              </div>
+              <input
+                id="maleMotherName"
+                className="inp"
+                placeholder="Enter Male Mother Name"
+                value={maleMotName}
+                onChange={e => this.setState({ maleMotName: e.target.value })}
+              />
             </div>
-          </form>
+          </div>
+          {
+            checkmaleMotName ?
+              <div class="col-md-8">
+                <h6 style={{ color: 'red', fontweight: '500', fontSize: 14, marginTop: 2 }}>*Kindly enter mother name of male</h6>
+              </div>
+              : null
+          }
+          <div className="row">
+            <div className="col-md-6 pt-3 pb-3">
+              <label for="femaleName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+                Enter Female Name
+                </label>
+              <input
+                id="femaleName"
+                className="inp"
+                placeholder="Enter Female Name"
+                value={thisfemName}
+                onChange={e => this.setState({ thisfemName: e.target.value })}
+              />
+            </div>
+            {
+              checkthisfemName ?
+                <div class="col-md-8">
+                  <h6 style={{ color: 'red', fontweight: '500', fontSize: 14, marginTop: 2 }}>*Kindly enter female name</h6>
+                </div>
+                : null
+            }
+            <div className="col-md-6 pt-3 pb-3">
+              <label for="femaleMotherName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+                Enter Female Mother Name
+                </label>
+              <input
+                id="femaleMotherName"
+                className="inp"
+                placeholder="Enter Female Mother Name"
+                value={femMotName}
+                onChange={e => this.setState({ femMotName: e.target.value })}
+              />
+            </div>
+          </div>
+          {
+            checkfemMotName ?
+              <div class="col-md-8">
+                <h6 style={{ color: 'red', fontweight: '500', fontSize: 14, marginTop: 2 }}>*Kindly enter mother name of female</h6>
+              </div>
+              : null
+          }
+          <div className="row">
+            <div className="col-md-6 pt-3 pb-3">
+              <label for="contact" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+                Contact
+                </label>
+              <input id="contact" className="inp" placeholder="Contact"
+                value={contact}
+                onChange={e => this.setState({ contact: e.target.value })}
+              />
+            </div>
+            {
+              checkcontact ?
+                <div class="col-md-8">
+                  <h6 style={{ color: 'red', fontweight: '500', fontSize: 14, marginTop: 2 }}>*Kindly enter contact number</h6>
+                </div>
+                : null
+            }
+            <div className="col-md-6 pt-3 pb-3">
+              <label for="contact" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+                Enter Istikhara Details
+                </label>
+              <textarea
+                placeholder="Enter Istikhara Details"
+                rows="8"
+                className="inp"
+                value={istDetail}
+                onChange={e => this.setState({ istDetail: e.target.value })}
+              ></textarea>
+            </div>
+            {
+              checkistDetail ?
+                <div class="col-md-8">
+                  <h6 style={{ color: 'red', fontweight: '500', fontSize: 14, marginTop: 2 }}>*Kindly enter contact number</h6>
+                </div>
+                : null
+            }
+            <div className="col-md-12 p-5">
+              <button className="btn btn-block btn-primary" onClick={this.submitIst}>Submit</button>
+            </div>
+          </div>
+
         </div>
       </div>
     );

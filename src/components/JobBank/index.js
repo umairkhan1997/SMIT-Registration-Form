@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import MainHeader from "../Home/MainHeader";
@@ -13,17 +13,18 @@ export default class JobBank extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      jobseekarForm: true,
+      jobseekarForm: false,
       jobrecruter: false,
     };
   }
 
   render() {
+   
     return (
-      <div className="">
+      <div className="text-center">
         {/* POPULAR JOBS START =============>>>>>>>>*/}
         <div>
-          <h3 className="my-4" style={{ color: "dodgerblue" }}>
+          <h3 className="my-4" style={{ color: "#0267b4" }}>
             Popular Categories
           </h3>
           <div className="container">
@@ -48,7 +49,6 @@ export default class JobBank extends React.Component {
                 style={{ backgroundColor: "#f5f6f7" }}
               >
                 <p style={{ fontSize: "3.5em" }}>
-                  {/* <i class="fas fa-laptop-code"></i>operator */}
                   <img
                     src={operator}
                     style={{ marginTop: 20 }}
@@ -116,6 +116,12 @@ export default class JobBank extends React.Component {
             </div>
           </div>
         </div>
+  
+        {this.state.jobseekarForm ? <div className='fullScreen'>
+          <div className='container p-5'>
+            <h1>Job Seekar</h1>
+          </div>
+        </div> : null}
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
         <div className="container my-5">
@@ -218,105 +224,7 @@ export default class JobBank extends React.Component {
         </div>
 
         <JobContact />
-        {/* {this.state.jobseekarForm ? (
-          <div className="displayFullForm">
-            <div style={{ overflow: "scroll", height: "100%" }}>
-              <div>
-                <h5>Job Seekar</h5>
-                <button>
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div>
-                <div className="container">
-                  <div className="p-3">
-                    <h2>Personal Details</h2>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Enter Name" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Enter Father Name" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <select className="inp">
-                        <option>Select Gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                      </select>
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input type="date" className="inp" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Place Of Birth" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Nationality" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Religion" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="CNIC Number" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Tell-Number" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Mobile Number" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Merital Status" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <select className="inp">
-                        <option>Select Resident Type</option>
-                        <option>Owner</option>
-                        <option>On Rent</option>
-                      </select>
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <input className="inp" placeholder="Monthly Rent" />
-                    </div>
-                    <div className="col-md-6 py-3">
-                      <select className="inp">
-                        <option>Disability</option>
-                        <option>Yes</option>
-                        <option>No</option>
-                      </select>
-                    </div>
-                    <div className="col-md-12 py-3">
-                      <input className="inp" placeholder="Address" />
-                    </div>
-                    <div className="col-md-12 py-3">
-                      <textarea
-                        className="inp"
-                        placeholder="Type Details"
-                        rows="7"
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                style={{ backgroundColor: "rgb(250,250,250)" }}
-                class="modal-footer d-flex justify-content-center"
-              >
-                <button type="button" class="donate" data-dismiss="modal">
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Previous
-                </button>
-                <button type="button" class="donate">
-                  Next
-                </button>
-              </div>
-            </div>
-          </div>
-        ) : null} */}
+       
       </div>
     );
   }

@@ -71,4 +71,77 @@ function bookAllCat() {
   };
 }
 
-export { homeSlideImg, homeIntroGet, projectCat, bookAllCat };
+
+const onlineMasajidForm = (obj) => {
+  return async function (dispatch) {
+    try {
+      await fetch("http://localhost:3000/OnlineMasjidReg/OnlineMasjidRegAdd", {
+        method: "POST",
+        body: JSON.stringify({
+          stdName: obj.stdName,
+          fthName: obj.fthName,
+          stnAge: obj.stnAge,
+          stnDob: obj.stnDob,
+          stnGen: obj.stnGen,
+          stnCour: obj.stnCour,
+          stnEmail: obj.stnEmail,
+          stnSkype: obj.stnSkype,
+          stnNumber: obj.stnNumber,
+          stnWtsApp: obj.stnWtsApp,
+          stnImgUrl: obj.stnImgUrl,
+        }),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) =>
+          res.json().then(async (response) => {
+            console.log(response, "data");
+            dispatch({ type: ActionTypes.onlineMasajidForms, payload: true });
+          })
+        )
+        .catch((err) => {
+          console.log(err, "err");
+        });
+
+    } catch (err) {
+      console.error(err);
+    }
+  }
+}
+
+const onlineQuranPakForm = (obj) => {
+  return async function (dispatch) {
+    try {
+      await fetch("http://localhost:3000/OnlineQuranReg/OnlineQuranRegAdd", {
+        method: "POST",
+        body: JSON.stringify({
+          stdName: obj.stdName,
+          fthName: obj.fthName,
+          stnAge: obj.stnAge,
+          stnDob: obj.stnDob,
+          stnGen: obj.stnGen,
+          stnCour: obj.stnCour,
+          stnEmail: obj.stnEmail,
+          stnSkype: obj.stnSkype,
+          stnNumber: obj.stnNumber,
+          stnWtsApp: obj.stnWtsApp,
+          stnImgUrl: obj.stnImgUrl,
+        }),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) =>
+          res.json().then(async (response) => {
+            console.log(response, "data");
+            dispatch({ type: ActionTypes.onlineQuranPakForms, payload: true });
+          })
+        )
+        .catch((err) => {
+          console.log(err, "err");
+        });
+
+    } catch (err) {
+      console.error(err);
+    }
+  }
+}
+
+export { homeSlideImg, homeIntroGet, projectCat, bookAllCat, onlineMasajidForm, onlineQuranPakForm };

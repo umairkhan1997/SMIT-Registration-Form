@@ -7,7 +7,14 @@ import image from "../../images/Dr.jpg";
 export default class MedicalAdmin extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      mainImage: true,
+      services: false,
+      consultantOPD: false,
+      clinic: false,
+      internship: false,
+      contactForm: false
+    };
   }
   render() {
     return (
@@ -17,13 +24,16 @@ export default class MedicalAdmin extends React.Component {
             <div className="p-4">
               <img src={logo} width="100%" />
             </div>
+            <div className='p-5'>
+              <h2>Medical</h2>
+            </div>
             <div className="p-4">
-              <ul>
-                <li>Main Image</li>
-                <li>services</li>
-                <li>Consultant OPD</li>
-                <li>Clinic image</li>
-                <li>Internship Form</li>
+              <ul className='list'>
+                <li onClick={()=>this.setState({ mainImage: true, services: false, consultantOPD: false,internship:false })}>Main Image</li>
+                <li onClick={()=>this.setState({ mainImage: false, services: true, consultantOPD: false,internship:false })}>services</li>
+                <li onClick={()=>this.setState({ mainImage: false, services: false, consultantOPD: true,internship:false })}>Consultant OPD</li>
+                <li >Clinic image</li>
+                <li onClick={()=>this.setState({ mainImage: false, services: false, consultantOPD: false,internship:true })}>Internship Form</li>
                 <li>Contact Form</li>
               </ul>
             </div>
@@ -34,7 +44,7 @@ export default class MedicalAdmin extends React.Component {
           >
             <div className="container">
               {/* Main Image */}
-              <div className="p-5 content">
+              {this.state.mainImage ? <div className="p-5 content">
                 <div className="delete">
                   <button>
                     <i class="fas fa-pen"></i>
@@ -42,10 +52,11 @@ export default class MedicalAdmin extends React.Component {
                 </div>
                 <h3>We Serve Humanity</h3>
                 <img width="100%" src={image} />
-              </div>
+              </div> : null}
+
 
               {/* Services */}
-              <div className="container pt-5 pb-5">
+              {this.state.services ? <div className="container pt-5 pb-5">
                 <div className="pt-5 pb-5">
                   <h1 className="medicalHeading">Over Medical Services</h1>
                 </div>
@@ -221,10 +232,10 @@ export default class MedicalAdmin extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> : null}
 
               {/* Consultant OPD */}
-              <div className="container py-5">
+              {this.state.consultantOPD ? <div className="container py-5">
                 <h1 className="medicalHeading">Consultant OPD</h1>
                 <div className="row pt-5 pb-5">
                   <div className="col-md-3 mt-3 mb-3">
@@ -370,7 +381,7 @@ export default class MedicalAdmin extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> : null}
 
               {/* Hijama, Homeo Clinic, Hikmat */}
               <div className='container py-'></div>

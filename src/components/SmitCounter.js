@@ -14,7 +14,7 @@ export default class ServiceCounter extends React.Component {
   render() {
     return (
       <div className="smitCounter mt-5 mb-5 bg-image">
-        <div 
+        <div
           className="pt-5 pb-5"
           style={{ backgroundColor: "rgba(0, 0, 0,.7)" }}
         >
@@ -23,7 +23,7 @@ export default class ServiceCounter extends React.Component {
               <div className="col-md-4 p-3">
                 <div className="achieve p-3">
                   <Zoom>
-                    <div className="p-3">
+                    <div className="p-3 text-center">
                       <p style={{ fontSize: "2em" }}>No Of Trained Students</p>
                       <CountUp
                         style={{ fontSize: "2.5em" }}
@@ -38,7 +38,7 @@ export default class ServiceCounter extends React.Component {
               <div className="col-md-4 p-3">
                 <div className="p-3 achieve">
                   <Zoom>
-                    <div className="p-3">
+                    <div className="p-3 text-center">
                       <p style={{ fontSize: "2em" }}>
                         Number Of Enrolled Students
                       </p>
@@ -55,7 +55,7 @@ export default class ServiceCounter extends React.Component {
               <div className="col-md-4 p-3">
                 <div className="p-3 achieve">
                   <Zoom>
-                    <div className="p-3">
+                    <div className="p-3 text-center">
                       <p style={{ fontSize: "2em" }}>Number Of Courses</p>
                       <CountUp
                         style={{ fontSize: "2.5em" }}

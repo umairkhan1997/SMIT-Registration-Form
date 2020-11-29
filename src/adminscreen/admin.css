@@ -5,6 +5,7 @@
   padding: 10px;
   border-bottom: 1.5px solid dodgerblue;
   text-align: left;
+  cursor: pointer;
 }
 .uploadImg {
   visibility: hidden;
