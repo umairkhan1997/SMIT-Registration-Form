@@ -8,6 +8,7 @@ import logo from "../images/logo.png";
 import BloodBankServices from '../components/bloodbank/bloodservices';
 import BloodBankAims from '../components/bloodbank/bloadbankaims'
 import Footer from '../components/Footer';
+import BloodBankEvent from '../components/bloodbank/event'
 export default class BloodBank extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,7 @@ export default class BloodBank extends React.Component {
       <div>
         <MainHeader />
         <BloodBankServices />
+        <BloodBankEvent />
         <BloodBankAims />
         <Footer />
       </div>

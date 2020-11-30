@@ -13,11 +13,29 @@ export default class LangarCounter extends React.Component {
   render() {
     return (
       <div>
-        <div className="bg-image pb-5">
+        <div className="bg-image">
           <div className="container">
+            <div className="dataTable">
+              <div className='p-3'><h2>Data Table</h2></div>
+              <table className="showTable" style={{ width: "100%" }}>
+                <tr>
+                  <td>No Of Employee</td>
+                  <td>3500</td>
+                </tr>
+                <tr>
+                  <td>Branches</td>
+                  <td>125</td>
+                </tr>
+                <tr>
+                  <td>Cities</td>
+                  <td>12</td>
+                </tr>
+              </table>
+            </div>
             <div className="row">
               <div className="col-md-4 pt-5 pb-5">
                 <div className="p-3">
+                  <p className="Name">Employee</p>
                   <Zoom>
                     <div className="round">
                       <CountUp
@@ -28,11 +46,11 @@ export default class LangarCounter extends React.Component {
                       />
                     </div>
                   </Zoom>
-                  <p className="Name">Employee</p>
                 </div>
               </div>
               <div className="col-md-4 pt-5 pb-5">
                 <div className="p-3">
+                  <p className="Name">Branches</p>
                   <Zoom>
                     <div className="round">
                       <CountUp
@@ -43,11 +61,11 @@ export default class LangarCounter extends React.Component {
                       />
                     </div>
                   </Zoom>
-                  <p className="Name">Branches</p>
                 </div>
               </div>
               <div className="col-md-4 pt-5 pb-5">
                 <div className="p-3">
+                  <p className="Name">Cities</p>
                   <Zoom>
                     <div className="round">
                       <CountUp
@@ -58,7 +76,6 @@ export default class LangarCounter extends React.Component {
                       />
                     </div>
                   </Zoom>
-                  <p className="Name">Cities</p>
                 </div>
               </div>
             </div>
