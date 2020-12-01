@@ -104,7 +104,9 @@ function OnlineM(props) {
     }
   }, [showAlt])
 
-
+  const styles = {
+    color: "#1371b8", fontSize: 18
+  }
   return (
     <div >
       <MainHeader />
@@ -118,7 +120,7 @@ function OnlineM(props) {
         <div className='flex-wrap d-flex justify-content-center'>
 
           <div className="col-md-5 pt-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               Student Name
                  </label>
             <input
@@ -130,7 +132,7 @@ function OnlineM(props) {
             />
           </div>
           <div className="col-md-5 pt-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               Father Name
                 </label>
             <input
@@ -142,7 +144,7 @@ function OnlineM(props) {
             />
           </div>
           <div className="col-md-5 pt-3 pb-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               Age
                 </label>
             <input
@@ -155,7 +157,7 @@ function OnlineM(props) {
             />
           </div>
           <div className="col-md-5 pt-3 pb-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               Date of Birth
                 </label>
             <input
@@ -169,21 +171,21 @@ function OnlineM(props) {
             />
           </div>
           <div className="col-md-5 ">
-            <label className="inpLab font-weight-bold">Gender</label>
+            <label className="inpLab font-weight-bold" style={styles} >Gender</label>
             <select className="inp" onChange={e => setstnGen(e.target.value)} >
               <option selected value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
           </div>
           <div className="col-md-5 ">
-            <label className="inpLab font-weight-bold">Select Course</label>
+            <label className="inpLab font-weight-bold" style={styles} >Select Course</label>
             <select className="inp" onChange={e => setstnCour(e.target.value)} >
               <option>Ilm-o-Fahm-e-Deen Course</option>
             </select>
           </div>
 
           <div className="col-md-5 pt-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               Email
                 </label>
             <input
@@ -196,7 +198,7 @@ function OnlineM(props) {
             />
           </div>
           <div className="col-md-5 pt-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               Skype ID
                 </label>
             <input
@@ -208,7 +210,7 @@ function OnlineM(props) {
             />
           </div>
           <div className="col-md-5 pt-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               Cell Number
                 </label>
             <input
@@ -221,7 +223,7 @@ function OnlineM(props) {
           </div>
 
           <div className="col-md-5 pt-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles} >
               WhatsApp Number
                 </label>
             <input
@@ -233,7 +235,7 @@ function OnlineM(props) {
             />
           </div>
           <div className="col-md-10 pt-3">
-            <label for="maleName" className="inpLab font-weight-bold">
+            <label for="maleName" className="inpLab font-weight-bold" style={styles}  >
               Upload your recent Image (face without glasses and with a single-colored background)
                 </label>
             <input type="file" className="inp" placeholder="image" onChange={handleFileInputChange} value={fileInputState} />

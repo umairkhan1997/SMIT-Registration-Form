@@ -16,7 +16,7 @@ export default class Cost extends React.Component {
       <div>
         <div className='container'>
           <div className="displayheading">
-            <h2>Donate In Langarkhana</h2>
+            <h2 className='font-weight-bold'>Donate In Langarkhana</h2>
           </div>
           <table className="text-left mt-5 mb-5 table-responsive-sm" width="100%">
             <thead className="tableHead">

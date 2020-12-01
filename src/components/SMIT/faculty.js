@@ -15,7 +15,9 @@ export default class Faculty extends React.Component {
     return (
       <div>
         <div className="container">
-          <h2 style={{ color: '#1371b8' }} className="mt-5 ml-4 font-weight-bold" >Faculty</h2>
+          <div className="displayheading">
+            <h2 style={{ color: '#1371b8' }} className="mt-5 ml-4 font-weight-bold">Faculty</h2>
+          </div>
         </div>
         <div className="container">
           <div className="text-left pb-3">
@@ -85,11 +87,11 @@ export default class Faculty extends React.Component {
               <Fade right>
                 <p>
                   I initiated working when I was in 7th standard and never stop.
-                  Today Alhamdullillah I am working as Lead and Manager and Admin
-                  Lead in Saylani Mass IT Training and Saylani Incubation Center
-                  along with Admin Lead of PIAIC along with Lecturer in Benazir
-                  Bhutto Shaheed University.
-              </p>
+                  Today Alhamdullillah I am working as Lead and Manager and
+                  Admin Lead in Saylani Mass IT Training and Saylani Incubation
+                  Center along with Admin Lead of PIAIC along with Lecturer in
+                  Benazir Bhutto Shaheed University.
+                </p>
               </Fade>
             </div>
           </div>

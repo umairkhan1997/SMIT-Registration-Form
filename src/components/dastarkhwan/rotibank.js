@@ -18,11 +18,11 @@ export default class RotiBank extends React.Component {
       <div>
         <div className="container pt-5 pb-5">
           <div className="row">
-            <div className="col-md-6 border-right border-primary p-5">
+            <div className="col-md-6 border-right border-primary pt-4 pb-5 pr-5 pl-5">
               <Fade right>
                 <div>
                   <div className='displayheading'>
-                    <h2>Saylani Roti Bank</h2>
+                    <h2 className='font-weight-bold' style={{ color: '#1371b8' }}>Saylani Roti Bank</h2>
                   </div>
                   <p className="text-left">
                     Saylani is providing pack food to deserving and hungry
@@ -55,11 +55,11 @@ export default class RotiBank extends React.Component {
                 </div>
               </Fade>
             </div>
-            <div className="col-md-6 p-5">
+            <div className="col-md-6 pt-4 pb-5 pr-5 pl-5">
               <Fade left>
                 <div>
                   <div className='displayheading'>
-                    <h2>Saylani Mobile Dastarkhwan</h2>
+                    <h2 className='font-weight-bold' style={{ color: '#1371b8' }}>Saylani Mobile Dastarkhwan</h2>
                   </div>
                   <p className="text-left">
                     In an effort to go the extra mile in the service of

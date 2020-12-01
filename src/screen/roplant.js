@@ -21,24 +21,25 @@ export default class ROplant extends React.Component {
       <div>
         <MainHeader />
         <div style={{ backgroundImage: `url(${water})` }} className="back">
-          <div style={{ backgroundColor: "rgba(0,0,0,.5)" }} className="p-5">
-            <h1 className="p-3 text-white">Ro Plant</h1>
+          <div style={{ backgroundColor: "rgba(0,0,0,.5)", padding: 80 }} >
+            <h1 className="p-3 text-white text-center">Ro Plant</h1>
           </div>
         </div>
         <div className="container">
           <div className="row">
+            <div className="col-md-6 pt-5 pb-5 pl-5 pr-3">
+              <img className="rounded shadow" src={roplant} width="100%" />
+            </div>
             <div className="col-md-6 p-5 text-left">
-              <h2>Saaf Pani</h2>
-              <p>
+              <h2 className="font-weight-bold" style={{ color: '#1371b8' }}>Saaf Pani</h2>
+              <p className="">
                 Saylani Welfare International Trust launched its ‘Saaf Pani
                 (Clean Water) Project’ in 2005 to ensure effective, sustainable,
                 and easily accessible supply of safe drinking water to the
                 marginalized communities.
               </p>
             </div>
-            <div className="col-md-6 p-5">
-              <img className="rounded shadow" src={roplant} width="100%" />
-            </div>
+
           </div>
         </div>
         <ROCounter />

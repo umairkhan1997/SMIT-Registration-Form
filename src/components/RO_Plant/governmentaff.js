@@ -21,8 +21,8 @@ export default class GovtAff extends React.Component {
       <div>
         <div className="container-fluid">
           <div className="container">
-            <div className="p-5">
-              <h2 className="Heading">Government Affiliations</h2>
+            <div className="pt-5 pl-5 pr-5 pb-2">
+              <h2 className="Heading font-weight-bold" >Government Affiliations</h2>
             </div>
             <div className="row">
               <div className="p-5 col-md-3 col-sm-6">

@@ -11,6 +11,8 @@
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "react": "^16.13.1",
+    "react-awesome-modal": "^2.0.5",
+    "react-calendar": "^3.2.1",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-fb-image-grid": "^0.1.5",

@@ -1,5 +1,6 @@
 
 .incuMainhead{
+    margin-top: -5px;
     text-align: left;
     color: dodgerblue;
 }
@@ -12,6 +13,7 @@
     /* margin-left: 10%; */
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
+  height: 400px;
   background-size: cover;
 }
 .iconHover{

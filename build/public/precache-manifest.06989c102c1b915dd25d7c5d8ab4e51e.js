@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5455fecd1edac7b9e585857e98300a3e",
+    "revision": "babd57052370085d7d85621f6d883b59",
     "url": "/index.html"
   },
   {
-    "revision": "a1dbbc18a7f8571ce1f7",
-    "url": "/static/css/2.9f7a4b3f.chunk.css"
+    "revision": "fa33720564edf61eeb90",
+    "url": "/static/css/2.cc3a8c3e.chunk.css"
   },
   {
-    "revision": "41951691346cb329cfc6",
-    "url": "/static/css/main.2dd0fff1.chunk.css"
+    "revision": "86c683cb7e9b3ab06876",
+    "url": "/static/css/main.a0f29445.chunk.css"
   },
   {
-    "revision": "a1dbbc18a7f8571ce1f7",
-    "url": "/static/js/2.fc464f3a.chunk.js"
+    "revision": "fa33720564edf61eeb90",
+    "url": "/static/js/2.afb7209d.chunk.js"
   },
   {
-    "revision": "d95b0d9da882d864713716dae7264812",
-    "url": "/static/js/2.fc464f3a.chunk.js.LICENSE.txt"
+    "revision": "2eddb67ef1bca39d1a1585286f55bb01",
+    "url": "/static/js/2.afb7209d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "41951691346cb329cfc6",
-    "url": "/static/js/main.a36a9b83.chunk.js"
+    "revision": "86c683cb7e9b3ab06876",
+    "url": "/static/js/main.ef0c2969.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -80,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/aliMughal.68ce7e63.png"
   },
   {
+    "revision": "99bf480d48673f03b2fe05eaa6a242e7",
+    "url": "/static/media/announcement.99bf480d.jpg"
+  },
+  {
     "revision": "863bf58175293bc23d91e173f1743948",
     "url": "/static/media/apptafseer.863bf581.jpeg"
   },
@@ -90,6 +94,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "06197608e8c94bea5ae744f0be086613",
     "url": "/static/media/bike.06197608.jpg"
+  },
+  {
+    "revision": "21d9def5cf75b4c8375a632fd55041f6",
+    "url": "/static/media/blood.21d9def5.jpeg"
+  },
+  {
+    "revision": "9ab5316d61db1b795c8fd60c3da25106",
+    "url": "/static/media/blood2.9ab5316d.jpeg"
+  },
+  {
+    "revision": "1f67b2c64ce7184b90724d9b2fb82f40",
+    "url": "/static/media/blood3.1f67b2c6.jpeg"
+  },
+  {
+    "revision": "87577ac1c2274c5620d5dc45b31139d4",
+    "url": "/static/media/blood4.87577ac1.jpeg"
+  },
+  {
+    "revision": "8d62458fc5314e2867eb16f5f69b4e50",
+    "url": "/static/media/blood5.8d62458f.jpeg"
+  },
+  {
+    "revision": "5daa4fba10b21f5f5d3502f3d571fb53",
+    "url": "/static/media/blood6.5daa4fba.jpeg"
   },
   {
     "revision": "08ebc3a798cbf1916aab8d4424569758",
@@ -118,6 +146,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f06fec917c877de700552988526dadd5",
     "url": "/static/media/ehkam.f06fec91.jpg"
+  },
+  {
+    "revision": "3e91de265a88c8ba198a7822138e7a6d",
+    "url": "/static/media/event.3e91de26.png"
+  },
+  {
+    "revision": "ea738ee674ef524bc18423fa79194838",
+    "url": "/static/media/event4.ea738ee6.jpg"
   },
   {
     "revision": "6643387f12667d1fe7189af9cb27255d",
@@ -166,6 +202,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5084e0f9a43c8138cc315d6bbc515ed6",
     "url": "/static/media/istikhara.5084e0f9.jpg"
+  },
+  {
+    "revision": "62990281cf6e10b3fa723b5ce0562433",
+    "url": "/static/media/itback.62990281.png"
   },
   {
     "revision": "895568cd3d2b232a7bf9bbdd2dc7c162",
@@ -248,6 +288,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/react.f3e068d0.jpg"
   },
   {
+    "revision": "adc8797f81040e0173b780e7aefd5307",
+    "url": "/static/media/roplants.adc8797f.jpg"
+  },
+  {
     "revision": "35ae5332c922fa11a92e65163d9d355c",
     "url": "/static/media/rotibank.35ae5332.jpg"
   },
@@ -260,12 +304,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/sdc.c6243113.png"
   },
   {
+    "revision": "b5bc60448863a265d76ae8e9cefef011",
+    "url": "/static/media/search.b5bc6044.png"
+  },
+  {
     "revision": "1d60d937c8e6b4bd9f15449adad26b65",
     "url": "/static/media/sindboard.1d60d937.png"
   },
   {
     "revision": "0ad335be93e4a93b6ccca9de8a0509df",
     "url": "/static/media/sindhpolice.0ad335be.png"
+  },
+  {
+    "revision": "0b2249545732d31001e60f364337e81d",
+    "url": "/static/media/sirAli.0b224954.jpg"
   },
   {
     "revision": "764acc9e321d35dcaa96a6bee60eba73",

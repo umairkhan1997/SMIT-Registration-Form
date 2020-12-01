@@ -16,9 +16,9 @@ export default class ROCounter extends React.Component {
         <div className="container pt-5 pb-5">
           <div className="row">
             <div className="col-md-3 col-sm-6 p-3">
-              <h4 className="counterHeading">Installed RO Plants</h4>
+              <h4 className="counterHeading text-center">Installed RO Plants</h4>
               <Fade down>
-                <div className="roCounter p-4">
+                <div className="roCounter p-4 text-center">
                   <CountUp
                     style={{ fontSize: "2.5em" }}
                     start={10}
@@ -29,9 +29,9 @@ export default class ROCounter extends React.Component {
               </Fade>
             </div>
             <div className="col-md-3 col-sm-6 p-3">
-              <h4 className="counterHeading">Under Construction</h4>
+              <h4 className="counterHeading text-center">Under Construction</h4>
               <Fade down>
-                <div className="roCounter p-4">
+                <div className="roCounter p-4  text-center">
                   <CountUp
                     style={{ fontSize: "2.5em" }}
                     start={0}
@@ -42,9 +42,9 @@ export default class ROCounter extends React.Component {
               </Fade>
             </div>
             <div className="col-md-3 col-sm-6 p-3">
-              <h4 className="counterHeading">Dug Water Well</h4>
+              <h4 className="counterHeading text-center">Dug Water Well</h4>
               <Fade down>
-                <div className="roCounter p-4">
+                <div className="roCounter p-4 text-center">
                   <CountUp
                     style={{ fontSize: "2.5em" }}
                     start={0}
@@ -55,9 +55,9 @@ export default class ROCounter extends React.Component {
               </Fade>
             </div>
             <div className="col-md-3 col-sm-6 p-3">
-              <h4 className="counterHeading">Water Chillers</h4>
+              <h4 className="counterHeading text-center">Water Chillers</h4>
               <Fade down>
-                <div className="roCounter p-4">
+                <div className="roCounter p-4 text-center">
                   <CountUp
                     style={{ fontSize: "2.5em" }}
                     start={100}

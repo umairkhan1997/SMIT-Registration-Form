@@ -19,20 +19,49 @@ export default class JobForm extends React.Component {
             step2show: false,
             step3show: false,
             nextbtn: true,
-            prevbtn: false
+            prevbtn: false, showScreen: true
         };
     }
 
     render() {
+        const {
+            showScreen
+        } = this.state;
         return (
             <div style={{ backgroundColor: '#dfeaff', height: '100%', minHeight: '100vh' }}>
                 <MainHeader />
-                <div>
+                {/* <div>
                     <button onClick={() => this.setState({ jobseekarForm: true, jobRequriter: false })}>register as a Job Employee</button>
                     <button onClick={() => this.setState({ jobseekarForm: false, jobRequriter: true })}>register as a Job Requriter</button>
+                </div> */}
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6 p-3 pt-5">
+                            <div
+                                onClick={() =>
+                                    this.setState({ donationForm: true, bankDetails: false, showScreen: true })
+                                }
+                                className="selectBtn"
+                                style={{ backgroundColor: showScreen ? "#0069d9" : 'white', color: showScreen ? "white" : '#0069d9', }}
+                            >
+                                Form of Job Seeker
+              </div>
+                        </div>
+                        <div className="col-md-6 p-3 pt-5">
+                            <div
+                                onClick={() =>
+                                    this.setState({ donationForm: false, bankDetails: true, showScreen: false })
+                                }
+                                className="selectBtn"
+                                style={{ backgroundColor: !showScreen ? "#0069d9" : 'white', color: !showScreen ? "white" : '#0069d9', }}
+                            >
+                                Form of Job Recruiter
+              </div>
+                        </div>
+                    </div>
                 </div>
                 <div className='container py-5'>
-                    {this.state.jobRequriter ? <div>
+                    {!showScreen ? <div>
                         <div className='row'>
                             <div className='col-md-4'>
                                 <div className='formTag'>
@@ -103,7 +132,7 @@ export default class JobForm extends React.Component {
                             </div>
                         </div>
                     </div> : null}
-                    {this.state.jobseekarForm ? (
+                    {showScreen ? (
                         <div>
                             <div>
                                 <div>

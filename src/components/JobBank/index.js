@@ -1,14 +1,12 @@
 import React, { useCallback } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import MainHeader from "../Home/MainHeader";
-import jobpic from "../../images/jobbank.jpg";
 import img1 from "../../images/engineer.png";
 import operator from "../../images/operator.png";
 import manager from "../../images/manager.png";
 import taxiDriver from "../../images/taxi-driver.png";
 import JobContact from "./JobContact";
-
+import { Link } from "react-router-dom";
 export default class JobBank extends React.Component {
   constructor(props) {
     super(props);
@@ -17,14 +15,16 @@ export default class JobBank extends React.Component {
       jobrecruter: false,
     };
   }
-
+  jobFormPg = () => {
+    this.props.history.push('/job')
+  }
   render() {
-   
+
     return (
       <div className="text-center">
         {/* POPULAR JOBS START =============>>>>>>>>*/}
         <div>
-          <h3 className="my-4" style={{ color: "#0267b4" }}>
+          <h3 className="my-4 font-weight-bold" style={{ color: "#0267b4" }}>
             Popular Categories
           </h3>
           <div className="container">
@@ -101,7 +101,9 @@ export default class JobBank extends React.Component {
                 <h6>
                   So we do have a suitable Job according to your requirment
                 </h6>
-                <button className="vieMor my-3">Apply for job</button>
+                <Link to='/job'>
+                  <button className="vieMor my-3" >Apply for job</button>
+                </Link >
               </div>
             </div>
             <div className="col-md-6 jobre shadow text-center">
@@ -116,7 +118,7 @@ export default class JobBank extends React.Component {
             </div>
           </div>
         </div>
-  
+
         {this.state.jobseekarForm ? <div className='fullScreen'>
           <div className='container p-5'>
             <h1>Job Seekar</h1>
@@ -125,7 +127,7 @@ export default class JobBank extends React.Component {
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
         <div className="container my-5">
-          <h3 style={{ color: "dodgerblue" }}>Featured Jobs</h3>
+          <h3 style={{ color: "#1371b8", textAlign: "center" }} className="font-weight-bold">Featured Jobs</h3>
         </div>
         <div className="container">
           <table
@@ -205,7 +207,7 @@ export default class JobBank extends React.Component {
         {/* COUNT OF JOBS================> */}
         <div className="countDiv">
           <div className="container">
-            <h2 className="py-5">JobHunt Site Stats</h2>
+            <h2 className="py-5 font-weight-bold" style={{ color: '#1371b8' }}>JobHunt Site Stats</h2>
             <div className="row">
               <div className="col-md-4 p-5">
                 <h2 style={{ color: "dodgerblue" }}>500</h2>
@@ -224,7 +226,7 @@ export default class JobBank extends React.Component {
         </div>
 
         <JobContact />
-       
+
       </div>
     );
   }

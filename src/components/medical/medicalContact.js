@@ -11,10 +11,10 @@ export default class MedicalContact extends React.Component {
   }
   render() {
     return (
-      <div> 
-        <div style={{backgroundImage:`url(${back})`}} className="medicalBack bg-image">
-          <div style={{backgroundColor:'rgba(12,56,100,.5)'}} className="pt-5 pb-5">
-            <h1 className="text-white p-5">Contact Us</h1>
+      <div>
+        <div style={{ backgroundImage: `url(${back})` }} className="medicalBack bg-image">
+          <div style={{ backgroundColor: 'rgba(12,56,100,.5)' }} className="pt-5 pb-5">
+            <h1 className="text-white p-5 ml-5">Contact Us</h1>
             <div className="container">
               <div className="row">
                 <div className="col-md-8">
@@ -43,9 +43,13 @@ export default class MedicalContact extends React.Component {
                     </div>
                   </form>
                 </div>
-                <div className="col-md-4 text-left text-white">
-                  <p>h skjd fskd fkdjs </p>
-                  <p>medical@saylaniwelfare.com</p>
+                <div className="col-md-8">
+                  <button style={{
+                    width: "100%", color: 'white', backgroundColor: "#1371b8", borderradius: 10,
+                    borderWidth: 0, height: 40, fontweight: "bold"
+                  }} >
+                    Submit
+                  </button>
                 </div>
               </div>
             </div>
