@@ -19,7 +19,10 @@ export default class SMITAdmin extends React.Component {
       // EDIT Control
       facultyImage: false,
       facultyText: false,
-      courseEdit: true,
+      courseEdit: false,
+      studentsEdit: false,
+      currentEdit: "",
+      teacherEdit:false
     };
   }
   render() {
@@ -112,7 +115,7 @@ export default class SMITAdmin extends React.Component {
                 {this.state.faculty ? (
                   <div>
                     {this.state.facultyImage ? (
-                      <div className="fixed-top bg-white">
+                      <div className="fixed-top full">
                         <div className="px-5">
                           <button
                             className="prevbtn"
@@ -130,7 +133,7 @@ export default class SMITAdmin extends React.Component {
                       </div>
                     ) : null}
                     {this.state.facultyText ? (
-                      <div className="fixed-top bg-white">
+                      <div className="fixed-top full">
                         <div className="px-5">
                           <button
                             className="prevbtn"
@@ -284,6 +287,30 @@ export default class SMITAdmin extends React.Component {
                 ) : null}
                 {this.state.numbeOfStudent ? (
                   <div>
+                    {this.state.studentsEdit ? (
+                      <div className="fixed-top full">
+                        <div className="px-5">
+                          <button
+                            className="prevbtn"
+                            onClick={() =>
+                              this.setState({ studentsEdit: false })
+                            }
+                          >
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                        <div className="p-3 m-3  rounded shadow ">
+                          <h3>Edit Statistics</h3>
+                          <div className="py-3">
+                            <h3>{this.state.currentEdit}</h3>
+                            <input
+                              className="inp"
+                              placeholder="Enter Course Name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
                     <div className="container px-5 py-3">
                       <h2 className="text-left">Counter</h2>
                     </div>
@@ -292,7 +319,14 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-4 py-3">
                           <div className="content border p-3 rounded border-primary">
                             <div className="delete">
-                              <button>
+                              <button
+                                onClick={() =>
+                                  this.setState({
+                                    studentsEdit: true,
+                                    currentEdit: "Number Of Trained",
+                                  })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -303,7 +337,14 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-4 py-3">
                           <div className="content border p-3 rounded border-primary">
                             <div className="delete">
-                              <button>
+                              <button
+                                onClick={() =>
+                                  this.setState({
+                                    studentsEdit: true,
+                                    currentEdit: "Number Of Inrolled",
+                                  })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -314,7 +355,14 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-4 py-3">
                           <div className="content border p-3 rounded border-primary">
                             <div className="delete">
-                              <button>
+                              <button
+                                onClick={() =>
+                                  this.setState({
+                                    studentsEdit: true,
+                                    currentEdit: "Number Of Courses",
+                                  })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -329,7 +377,7 @@ export default class SMITAdmin extends React.Component {
                 {this.state.courses ? (
                   <div>
                     {this.state.courseEdit ? (
-                      <div className="fixed-top bg-white">
+                      <div className="fixed-top full">
                         <div className="px-5">
                           <button
                             className="prevbtn"
@@ -341,13 +389,22 @@ export default class SMITAdmin extends React.Component {
                         <div className="p-3 m-3  rounded shadow ">
                           <h3>Edit Course</h3>
                           <div className="py-3">
-                            <input className="inp" placeholder='Enter Course Name' />
+                            <input
+                              className="inp"
+                              placeholder="Enter Course Name"
+                            />
                           </div>
                           <div className="py-3">
-                            <input className="inp" placeholder='Enter Course Duration' />
+                            <input
+                              className="inp"
+                              placeholder="Enter Course Duration"
+                            />
                           </div>
                           <div className="py-3">
-                            <input className="inp" placeholder='Enter Course Topics seperate by (,)' />
+                            <input
+                              className="inp"
+                              placeholder="Enter Course Topics seperate by (,)"
+                            />
                           </div>
                           <input className="" type="file" />
                         </div>
@@ -361,7 +418,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3 border py-3">
                           <div className="content">
                             <div className="delete">
-                              <button>
+                              <button
+                                onClick={() =>
+                                  this.setState({ courseEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -387,7 +448,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3 border py-3">
                           <div className="content">
                             <div className="delete">
-                              <button>
+                              <button
+                                onClick={() =>
+                                  this.setState({ courseEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -407,7 +472,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3 border py-3">
                           <div className="content">
                             <div className="delete">
-                              <button>
+                              <button
+                                onClick={() =>
+                                  this.setState({ courseEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -428,7 +497,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3 border py-3">
                           <div className="content">
                             <div className="delete">
-                              <button>
+                              <button
+                                onClick={() =>
+                                  this.setState({ courseEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -446,11 +519,64 @@ export default class SMITAdmin extends React.Component {
                           </div>
                         </div>
                       </div>
+                      <div className="row">
+                        <div className="col-md-12 border py-3">
+                          <div>
+                            <button
+                              onClick={() =>
+                                this.setState({ courseEdit: true })
+                              }
+                              className="btn-block prevbtn"
+                            >
+                              Add New Course
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ) : null}
                 {this.state.teachers ? (
                   <div>
+                    {this.state.teacherEdit ? (
+                      <div className="fixed-top full">
+                        <div className="px-5">
+                          <button
+                            className="prevbtn"
+                            onClick={() =>
+                              this.setState({ teacherEdit: false })
+                            }
+                          >
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                        <div className="p-3 m-3  rounded shadow ">
+                          <h3>Edit Teacher</h3>
+                          <div className="py-3">
+                            <input
+                              className="inp"
+                              placeholder="Enter Name"
+                            />
+                            </div>
+                            <div className="py-3">
+                            <input
+                              className="inp"
+                              placeholder="Enter Course"
+                            />
+                          </div>
+                            <div className="py-3">
+                            <input
+                            type='file'
+                              className="uploadCV"
+                              placeholder="Enter Course"
+                            />
+                          </div>
+                          <div className='py-3'>
+                            <button className='prevbtn'>Update</button>
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
                     <div className="container px-5 py-3">
                       <h2 className="text-left">Teachers</h2>
                     </div>
@@ -459,7 +585,7 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button>
+                              <button onClick={()=>this.setState({teacherEdit:true})}>
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -473,7 +599,7 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button>
+                              <button onClick={()=>this.setState({teacherEdit:true})}>
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -487,7 +613,7 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button>
+                              <button onClick={()=>this.setState({teacherEdit:true})}>
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -501,7 +627,7 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button>
+                              <button onClick={()=>this.setState({teacherEdit:true})}>
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
