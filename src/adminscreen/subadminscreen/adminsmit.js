@@ -115,7 +115,7 @@ export default class SMITAdmin extends React.Component {
                 {this.state.faculty ? (
                   <div>
                     {this.state.facultyImage ? (
-                      <div className="fixed-top full">
+                      <div className="fixed-top bg-white">
                         <div className="px-5">
                           <button
                             className="prevbtn"
@@ -133,7 +133,7 @@ export default class SMITAdmin extends React.Component {
                       </div>
                     ) : null}
                     {this.state.facultyText ? (
-                      <div className="fixed-top full">
+                      <div className="fixed-top bg-white">
                         <div className="px-5">
                           <button
                             className="prevbtn"
@@ -285,10 +285,13 @@ export default class SMITAdmin extends React.Component {
                     </div>
                   </div>
                 ) : null}
+                {this.state.events?<div>
+                  <h1>Events</h1>
+                </div>:null}
                 {this.state.numbeOfStudent ? (
                   <div>
                     {this.state.studentsEdit ? (
-                      <div className="fixed-top full">
+                      <div className="fixed-top bg-white">
                         <div className="px-5">
                           <button
                             className="prevbtn"
@@ -377,7 +380,7 @@ export default class SMITAdmin extends React.Component {
                 {this.state.courses ? (
                   <div>
                     {this.state.courseEdit ? (
-                      <div className="fixed-top full">
+                      <div className="fixed-top bg-white">
                         <div className="px-5">
                           <button
                             className="prevbtn"
@@ -539,7 +542,7 @@ export default class SMITAdmin extends React.Component {
                 {this.state.teachers ? (
                   <div>
                     {this.state.teacherEdit ? (
-                      <div className="fixed-top full">
+                      <div className="fixed-top bg-white">
                         <div className="px-5">
                           <button
                             className="prevbtn"
