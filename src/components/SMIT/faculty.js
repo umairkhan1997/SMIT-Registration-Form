@@ -27,7 +27,7 @@ export default class Faculty extends React.Component {
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h3 style={{ color: '#1371b8' }} className="font-weight-bold">Sir Zia Khan</h3>
+                  <h3 style={{ color: '#1371b8' }} >Sir Zia Khan</h3>
                   <p className="text-muted">(Faculty Head)</p>
                 </div>
               </Fade>
