@@ -7,7 +7,7 @@ export default class TableData extends React.Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container my-4">
         <div className="row">
           <div className="col-md-6">
             <table className="showtable">
@@ -35,7 +35,7 @@ export default class TableData extends React.Component {
           <div className="col-md-6">
             <iframe
               width="100%"
-              height="315"
+              height="350"
               src="https://www.youtube.com/embed/N4DIjxCGWVc"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
