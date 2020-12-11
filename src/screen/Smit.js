@@ -19,12 +19,19 @@ import Cover from "../components/SMIT/cover";
 import Announcement from "../images/announcement.jpg";
 import { Link } from "react-router-dom";
 import Modal from "react-awesome-modal";
+import "../App.css";
+import Karachi from "../images/karachi.jpg";
+import Islamabad from "../images/islamabad.jpg";
+import Faisalabad from "../images/faisalabad.jpg";
+import Hyderabad from "../images/hyderabad.jpg";
+import TableData from "../components/SMIT/table";
 
 export default class Smit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       visible: false,
+      city: "",
     };
   }
   componentDidMount() {
@@ -33,6 +40,7 @@ export default class Smit extends React.Component {
     });
   }
   render() {
+    console.log(this.state.city);
     return (
       <div>
         {/* <div className="coursePopUp p-5">
@@ -65,29 +73,72 @@ export default class Smit extends React.Component {
           onClickAway={() => this.setState({ visible: false })}
         >
           <div>
+            <h2 className="text-center p-3">Select your City</h2>
             <div className="row">
-              <div className="col-md-8">
-                <img
+              <div className="col-md-6">
+                <div
+                  style={{
+                    backgroundImage: `url(${Karachi})`,
+                  }}
+                  className="city text-white m-1"
+                  onClick={() =>
+                    this.setState({ city: "Karachi", visible: false })
+                  }
+                >
+                  <h2>Karachi</h2>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div
+                  style={{
+                    backgroundImage: `url(${Faisalabad})`,
+                  }}
+                  className="city text-white m-1"
+                  onClick={() =>
+                    this.setState({ city: "Faisalabad", visible: false })
+                  }
+                >
+                  <h2>Faisalabad</h2>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div
+                  style={{
+                    backgroundImage: `url(${Hyderabad})`,
+                  }}
+                  className="city text-white m-1"
+                  onClick={() =>
+                    this.setState({ city: "Hyderabad", visible: false })
+                  }
+                >
+                  <h2>Hyderabad</h2>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div
+                  style={{
+                    backgroundImage: `url(${Islamabad})`,
+                  }}
+                  className="city text-white m-1"
+                  onClick={() =>
+                    this.setState({ city: "Islamabad", visible: false })
+                  }
+                >
+                  <h2>Islamabad</h2>
+                </div>
+              </div>
+              {/* <img
                   style={{ width: "100%", margin: "auto" }}
 
                   src={Announcement}
-                />
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-                className="col-md-4 "
-              >
-                <div >
+                /> */}
+              {/* <div >
                   <h3 className="text-left font-weight-bold mt-4" style={{ color: "#1371b8" }}>Days & Timings</h3>
                   <p className="text-muted">Mon, Wed & Fri. ( 11am - 1pm )</p>
                   <p className="text-muted">Tues, Thurs & Sat. ( 6pm - 9pm )</p>
                   <p className="text-muted">Mon, Wed & Fri. (9pm to 11pm)</p>
-                </div>
-                <div>
+                </div> */}
+              {/* <div>
                   <p>
                     For More Details click{" "}
                     <a href="https://www.facebook.com/SaylaniMassTraining/photos/pb.489547941147223.-2207520000../3138203426281648/?type=3&theater">
@@ -102,8 +153,7 @@ export default class Smit extends React.Component {
                       </Link>
                     </button>
                   </p>
-                </div>
-              </div>
+                </div> */}
             </div>
             <button
               style={{ position: "absolute", top: "-50px", right: "0" }}
@@ -115,7 +165,8 @@ export default class Smit extends React.Component {
           </div>
         </Modal>
         <MainHeader />
-        <Cover />
+        <Cover city={this.state.city} />
+        <TableData />
         <Faculty />
         <SmitCounter />
         <SmitEvents />
