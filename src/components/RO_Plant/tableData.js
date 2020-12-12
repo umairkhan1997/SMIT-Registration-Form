@@ -32,10 +32,10 @@ export default class TableData extends React.Component {
               <Custombtn otherClass="btn-block" value="donate" />
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 p-2">
             <iframe
               width="100%"
-              height="350"
+              height="320"
               src="https://www.youtube.com/embed/N4DIjxCGWVc"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

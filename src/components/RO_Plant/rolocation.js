@@ -13,7 +13,7 @@ export default class ROLocation extends React.Component {
           name: "FIA",
           area: "Civic Center, Mountain View, CA 94041, United States",
           mapLocation:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.0010145974393!2d-122.08360258469334!3d37.389808279831406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDIzJzIzLjMiTiAxMjLCsDA0JzUzLjEiVw!5e0!3m2!1sen!2s!4v1607670019957!5m2!1sen!2s",
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.5555844638307!2d66.99485591500249!3d24.844867384061374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDUwJzQxLjUiTiA2NsKwNTknNDkuNCJF!5e0!3m2!1sen!2s!4v1607753226583!5m2!1sen!2s",
         },
         {
           name: "Pak Chowk",
@@ -94,6 +94,32 @@ export default class ROLocation extends React.Component {
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.274774601776!2d67.00441281500271!3d24.85446328405677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDUxJzE2LjEiTiA2N8KwMDAnMjMuOCJF!5e0!3m2!1sen!2s!4v1607671913089!5m2!1sen!2s",
         },
       ],
+      underConstructionPlants: [
+        {
+          area: "Korangi polytechnic",
+        },
+        {
+          area: "Landi #6 manshiyat hospital",
+        },
+        {
+          area: "Shah vilayat town orangi",
+        },
+        {
+          area: "Kherabad orangi",
+        },
+        {
+          area: "Sakhi Hassan",
+        },
+        {
+          area: "Cant station",
+        },
+      ],
+      currentLocation: {
+        name: "City court 2",
+        area: "Adhumal Oodharam Quarter, Karachi",
+        mapLocation:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.274774601776!2d67.00441281500271!3d24.85446328405677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDUxJzE2LjEiTiA2N8KwMDAnMjMuOCJF!5e0!3m2!1sen!2s!4v1607671913089!5m2!1sen!2s",
+      },
     };
   }
   render() {
@@ -110,9 +136,7 @@ export default class ROLocation extends React.Component {
             className="container-fluid"
           >
             <div className="container p-4">
-              <h2 className="Heading font-weight-bold">
-                Ro Plant Location In Pakistan
-              </h2>
+              <h2 className="Heading">Ro Plant Location In Pakistan</h2>
             </div>
           </div>
         </div>
@@ -126,17 +150,94 @@ export default class ROLocation extends React.Component {
             <div className="row">
               {this.state.locations.map((item, i) => {
                 return (
-                  <div className="col-md-3 p-3">
+                  <div className="col-md-3 p-3 RoCard">
                     <div
-                      style={{ height: "100%" }}
-                      className="p-3 bg-white shadow rounded"
+                      style={{ height: "200px" }}
+                      className="p-3 bg-white shadow rounded location"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      onClick={() => this.setState({ currentLocation: item })}
                     >
-                      <h3>{item.name}</h3>
-                      <p>{item.area}</p>
+                      <h4>{item.name}</h4>
+                      <p className="text-muted">{item.area}</p>
                     </div>
                   </div>
                 );
               })}
+              {this.state.underConstructionPlants.map((item, i) => {
+                return (
+                  <div className="col-md-3 p-3 RoCard">
+                    <div
+                      style={{
+                        height: "200px",
+                        backgroundColor: "rgb(230,230,230)",
+                      }}
+                      className="p-3 shadow rounded location"
+                    >
+                      <h4>{item.area}</h4>
+                      <p className="text-muted">Under Construction</p>
+                      <div
+                        style={{
+                          // color: "#0066b3",
+                          position: "absolute",
+                          top: 15,
+                          left: 20,
+                          color: "grey",
+                          fontSize: "1.5em",
+                        }}
+                      >
+                        <i class="fas fa-tools"></i>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="exampleModalCenter"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">
+                    {this.state.currentLocation.name}
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <iframe
+                    src={this.state.currentLocation.mapLocation}
+                    width="100%"
+                    height="450"
+                    frameborder="0"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0"
+                  ></iframe>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

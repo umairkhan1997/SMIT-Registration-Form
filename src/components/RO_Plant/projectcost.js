@@ -30,7 +30,7 @@ export default class ProjectCost extends React.Component {
                       <td>Description</td>
                       <td>Quantity</td>
                       <td>Total Amount(PKR) (As per TDS 7500)</td>
-                      <td>Total Amount(PKR) (As per TDS 7500)</td>
+                      <td>Total Amount(PKR) (As per TDS 40000)</td>
                     </tr>
                   </thead>
                   <tbody>
