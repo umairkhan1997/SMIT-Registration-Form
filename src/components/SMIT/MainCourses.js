@@ -186,6 +186,11 @@ export default class MainCourses extends React.Component {
           course: [],
         },
       },
+      currentCourse: {
+        name: "Certified Textile Training",
+        duration: "1 Year",
+        outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+      },
     };
   }
   render() {
@@ -203,7 +208,12 @@ export default class MainCourses extends React.Component {
             {cityDetails.karachi.course.map((e, i) => {
               return (
                 <div className="col-md-4 text-center p-4">
-                  <div className="courseimg p-5">
+                  <div
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                    className="courseimg p-5"
+                    onClick={() => this.setState({ currentCourse: e })}
+                  >
                     {/* <img src={img5} width="100%" /> */}
                     <img width="100px" src={e.ico} />
                     <h3>{e.name}</h3>
@@ -212,81 +222,59 @@ export default class MainCourses extends React.Component {
                 </div>
               );
             })}
-            <div className="col-md-8 p-4">
-              <img className="courseimg" src={img5} width="100%" />
-            </div>
-            <div className="col-md-4 p-4 text-left">
-              <h3 className="text-primary">
-                Web And Mobile Application Development
-              </h3>
-              <ul className="p-3 text-muted">
-                <li>HTML 5 & CSS3</li>
-                {/* <li>CSS3</li> */}
-                <li>JavaScript</li>
-                <li>React & React Native</li>
-                {/* <li></li> */}
-                <li>Node JS & Express JS</li>
-                <li>Mongo DB</li>
-                {/* <li></li> */}
-              </ul>
-              <h4 className="border-top border-primary py-3">
-                Duration: 1 Year
-              </h4>
-            </div>
           </div>
           <hr />
-          {/* <div className="row">
-            <div className="col-md-8 p-4">
-              <img className="courseimg" src={img5} width="100%" />
-            </div>
-            <div className="col-md-4 p-4 text-left">
-              <h3 className="text-primary">CCA</h3>
-              <ul className="p-3 text-muted">
-                <li>Quick Book</li>
-                <li>PeachTree</li>
-                <li>Excell</li>
-              </ul>
-              <h4 className="border-top border-primary py-3">
-                Duration: 3 Months
-              </h4>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div
+                style={{ backgroundColor: "#0267b4", color: "white" }}
+                class="modal-header"
+              >
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  {this.state.currentCourse.name}
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h4 style={{ color: "#0267b4" }}>Duration</h4>
+                <p className="text-muted">
+                  {this.state.currentCourse.duration}
+                </p>
+                <hr />
+                <h4 style={{ color: "#0267b4" }}>Course Outline</h4>
+                <ul>
+                  {this.state.currentCourse.outline.map((e, i) => {
+                    return (
+                      <li className="text-muted" key={i}>
+                        {e}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="prevbtn" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
             </div>
           </div>
-          <hr />
-          <div className="row">
-            <div className="col-md-8 p-4">
-              <img className="courseimg" src={img5} width="100%" />
-            </div>
-            <div className="col-md-4 p-4 text-left">
-              <h3 className="text-primary">CCO</h3>
-              <ul className="p-3 text-muted">
-                <li>MS Word</li>
-                <li>MS Excel</li>
-                <li>MS PowerPoint</li>
-                <li>MS Access</li>
-              </ul>
-              <h4 className="border-top border-primary py-3">
-                Duration: 3 Months
-              </h4>
-            </div>
-          </div>
-          <hr />
-          <div className="row">
-            <div className="col-md-8 p-4">
-              <img className="courseimg" src={img5} width="100%" />
-            </div>
-            <div className="col-md-4 p-4 text-left">
-              <h3 className="text-primary">Graphic Designing</h3>
-              <ul className="p-3 text-muted">
-                <li>Adobe illustrator</li>
-                <li>Adobe Photoshop</li>
-                <li>Urdu Inpage</li>
-              </ul>
-              <h4 className="border-top border-primary py-3">
-                Duration: 6 Months
-              </h4>
-            </div>
-          </div>
-          <hr /> */}
         </div>
       </div>
     );
