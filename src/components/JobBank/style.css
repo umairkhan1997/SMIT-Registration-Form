@@ -1,153 +1,139 @@
-d.jobre{
-    background-color: rgba(255,255,255,.8);
-    background-image:  url("../../images/jobrecru.jpg");
-    background-blend-mode: lighten;
-    height: 250px;
-    width: 100%;
+d.jobre {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url("../../images/jobrecru.jpg");
+  background-blend-mode: lighten;
+  height: 250px;
+  width: 100%;
 }
 
-.jobse{
-    background-color: rgba(255,255,255,.8);
-    background-image:  url("../../images/incu.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: lighten;
-    height: 250px;
-    width: 100%;
+.jobse {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url("../../images/incu.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  height: 250px;
+  width: 100%;
 }
 
-.featDiv{
-    background-color: rgb(244,245,250);   
+.featDiv {
+  background-color: rgb(244, 245, 250);
 }
-.viePro{
-    padding: 6px 20px;
-    border: none;
-    border-width: 0px;
-    background-color: #0267b4;
-    color: white;
-    border-radius: 25px;
-}
-
-.divStl{
-    box-shadow: 10px 10px 15px lightgrey;
+.viePro {
+  padding: 6px 20px;
+  border: none;
+  border-width: 0px;
+  background-color: #0267b4;
+  color: white;
+  border-radius: 25px;
 }
 
-.feaDiv{
-    background-color: rgb(244,245,250);   
-
-    box-shadow: 10px 10px 15px lightgrey;
-}
-.vieMor{
-    padding: 6px 60px;
-    border: 2px solid #0267b4;
-    background-color: transparent;
-    color: black;
-    border-radius: 25px;
-    margin: 10px 0;
-}
-.vieMor:hover{
-    padding: 6px 60px;
-    border: 2px solid white;
-    background-color: #0267b4;
-    color: white;
-    border-radius: 25px;
-}
-.countDiv{
-    background-color: rgb(244,245,250);
+.divStl {
+  box-shadow: 10px 10px 15px lightgrey;
 }
 
-.small{
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: .5s;
-    border: 2px solid #0267b4;
-    box-shadow: 0 10px 15px lightgrey;
+.feaDiv {
+  background-color: rgb(244, 245, 250);
+
+  box-shadow: 10px 10px 15px lightgrey;
 }
-.small:hover{
-    transform: scale(1.1,1.1);
-    background-color: white;
-    box-shadow: 0 13px 25px lightgrey;
-    border: 2px solid white;
+.vieMor {
+  padding: 6px 60px;
+  border: 2px solid #0267b4;
+  background-color: transparent;
+  color: black;
+  border-radius: 25px;
+  margin: 10px 0;
 }
-.jobTable{
-    width: 100%;
+.vieMor:hover {
+  padding: 6px 60px;
+  border: 2px solid white;
+  background-color: #0267b4;
+  color: white;
+  border-radius: 25px;
+}
+.countDiv {
+  background-color: rgb(244, 245, 250);
 }
 
-.roundadd{
-    padding: 10px;
-    border: none;
-    background-color: lightgrey;
-    color: #0267b4;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow:  0 0 10px rgba(0, 0, 0, .5);
+.jobTable {
+  width: 100%;
 }
-.jobInput{
-    padding: 10px;
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    border-bottom: 1px solid #0267b4;
-    outline: none;
-    color: #0267b4;
+
+.roundadd {
+  padding: 10px;
+  border: none;
+  background-color: lightgrey;
+  color: #0267b4;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.jobInputTextarea{
-    padding: 10px;
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    border: 1px solid #0267b4;
-    outline: none;
-    color: #0267b4;
+.jobInput {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #0267b4;
+  outline: none;
+  color: #0267b4;
 }
-.jobInputTextarea:focus{
-    border: 2px solid #0267b4;
+.jobInputTextarea {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #0267b4;
+  outline: none;
+  color: #0267b4;
 }
-.jobInput:focus{
-    border-bottom: 2px solid #0267b4;
+.jobInputTextarea:focus {
+  border: 2px solid #0267b4;
 }
-.jobInputTextarea::placeholder{
-    color: #0267b4;
+.jobInput:focus {
+  border-bottom: 2px solid #0267b4;
 }
-.jobInput::placeholder{
-    color: #0267b4;
+.jobInputTextarea::placeholder {
+  color: #0267b4;
 }
-.formClose{
-    border: 1.5px solid #0267b4;
-    border-radius: 0 0 12px 12px;
+.jobInput::placeholder {
+  color: #0267b4;
 }
-.formTag{
-    padding: 15px;
-    background-color: #0267b4;
-    color: white;
-    width: 100%;
-    border-radius: 12px 12px 0 0;
+.formClose {
+  border: 1.5px solid #0267b4;
+  border-radius: 0 0 12px 12px;
 }
-.formTagdisable{
-    padding: 15px;
-    background-color: rgba(255, 255, 255, .5);
-    color: transparent;
-    width: 100%;
-    border-radius: 12px 12px 0 0;
+.formTag {
+  padding: 15px;
+  background-color: #0267b4;
+  color: white;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
 }
-.prevbtn{
-    background-color: #0267b4;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
+.formTagdisable {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: transparent;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
 }
-.prevbtn:focus{
-    outline: none;
+.prevbtn {
+  background-color: #0267b4;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
-.prevbtn:hover{
-    background-color: #033861;
+.prevbtn:focus {
+  outline: none;
 }
-.uploadCV{
-    width: 100%;
-    border: 2px dashed #0267b4;
-    padding: 50px;
+.prevbtn:hover {
+  background-color: #033861;
+}
+.uploadCV {
+  width: 100%;
+  border: 2px dashed #0267b4;
+  padding: 50px;
 }

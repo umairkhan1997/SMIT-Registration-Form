@@ -1,4 +1,3 @@
-
 .coursesBlog {
   font-size: 1.5em;
   font-weight: bold;
@@ -33,14 +32,14 @@
   box-shadow: 3px 3px 20px lightgrey;
   margin-top: 10px;
   border-radius: 0 0 8px 8px;
-  background-color:#f5f8ff;
+  background-color: #f5f8ff;
 }
 .courseCard:hover img {
   transform: scale(1.1, 1.1);
   border-radius: 8px;
   box-shadow: 0 0 12px lightgrey;
 }
-.facultyImg{
+.facultyImg {
   width: 150px;
   border-radius: 5px;
   margin-bottom: -30px;
@@ -48,32 +47,32 @@
   display: inline-block;
   border: 8px outset lightgrey;
 }
-.facultyName{
+.facultyName {
   display: inline-block;
 }
-.facultyContent{
+.facultyContent {
   background-color: dodgerblue;
   color: white;
   text-align: justify;
 }
-.facultyContent p{
+.facultyContent p {
   font-size: 1.1em;
 }
-.smitCounter{
-  background-image: url('../../images/achieve.jpg');
+.smitCounter {
+  background-image: url("../../images/achieve.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.achieve{
+.achieve {
   border: 3px solid white;
   border-radius: 7px;
 }
-.achieve:hover{
+.achieve:hover {
   border: 3px solid dodgerblue;
 }
-.collaborationPartner{
+.collaborationPartner {
   height: 100%;
   display: flex;
   align-items: center;
@@ -81,32 +80,39 @@
   box-shadow: 0 0 15px lightgrey;
   background-color: rgb(250, 250, 250);
 }
-.teacher{
+.teacher {
   background-position: center;
   background-size: cover;
-  transition: .5s;
+  transition: 0.5s;
   border-radius: 8px;
   overflow: hidden;
 }
-.teacher div{
+.teacher div {
   color: transparent;
 }
-.teacher:hover{
+.teacher:hover {
   background-size: 120%;
 }
-.teacher:hover div{
-  background-color: rgba(30, 144, 255, .5);
+.teacher:hover div {
+  background-color: rgba(30, 144, 255, 0.5);
   color: white;
 }
-.courseimg{
+.courseimg {
   border-radius: 10px;
   box-shadow: 0 10px 15px lightgrey;
+  border: 1.5px solid lightgrey;
+  height: 100%;
+  cursor: pointer;
 }
-.coverText{
+.courseimg:hover {
+  background-color: rgb(250, 250, 250);
+  border: 1.5px solid #0066b3;
+}
+.coverText {
   border-radius: 8px;
   /* border: 2px solid rgb(2, 103, 180); */
   /* color: rgb(2, 103, 180); */
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   /* box-shadow: 0 0 15px rgba(0, 0, 0, .5); */
 }
