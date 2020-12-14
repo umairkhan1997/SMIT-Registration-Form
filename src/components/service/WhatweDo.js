@@ -500,10 +500,9 @@
 // }
 // export default connect(mapStateToProp, mapDispatchToProp)(WhatweDo);
 
-
 // // var people = [{name:'books',cat:'books'},{name:'Register',cat:'Register'},{name:'Copies',cat:'Copies'}]
 // // <div>
-// //   {people.filter(person => 
+// //   {people.filter(person =>
 // //     person.cat == 'book').map(filteredPerson => (
 // //     <li>
 // //       {filteredPerson.name}
@@ -511,12 +510,10 @@
 // //   ))}
 // // </div>
 
-
-
 import React from "react";
 import { createBrowserHistory } from "history";
 import { Link } from "react-router-dom";
-import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 import HajjPdf from "../HajjPdf/HAJJ.pdf";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./service.css";
@@ -559,9 +556,7 @@ export default class WhatweDo extends React.Component {
         <div className="container">
           <div className="row py-2">
             <div className="col-md-6">
-              <h2 className="text-center">
-                Saylani Welfare Services
-              </h2>
+              <h2 className="text-center">Saylani Welfare Services</h2>
             </div>
             <div className="col-md-6 text-right">
               <input
@@ -578,7 +573,7 @@ export default class WhatweDo extends React.Component {
                 {this.state.searchItem.map((item, i) => {
                   return (
                     <div className="col-md-6 p-3">
-                      <Fade top>
+                      <Zoom>
                         <Link to={item.route}>
                           <div className="row small">
                             <div className="col-md-9 p-5 text-left">
@@ -591,14 +586,14 @@ export default class WhatweDo extends React.Component {
                             </div>
                           </div>
                         </Link>
-                      </Fade>
+                      </Zoom>
                     </div>
                   );
                 })}
               </div>
             ) : (
-                false
-              )}
+              false
+            )}
           </ul>
         </div>
 
@@ -608,69 +603,79 @@ export default class WhatweDo extends React.Component {
           </div> */}
           <div className="row">
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade top>
+              <Zoom>
                 <Link to="/smit">
-                  <div className="small p-3 text-center">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-desktop"></i>
-                    </p>
-                    <h3 className="text-muted">IT Training</h3>
+                  <div className="small text-center">
+                    <div className="p-3">
+                      <p style={{ fontSize: "3.5em" }}>
+                        <i class="fas fa-desktop"></i>
+                      </p>
+                    </div>
+                    <p className="proName">IT Training</p>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade left>
+              <Zoom>
                 <Link to="/welfare">
-                  <div className="small p-3 text-center">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-people-arrows"></i>
-                    </p>
-                    <h3 className="text-muted">Welfare</h3>
+                  <div className="small text-center">
+                    <div className="p-3">
+                      <p style={{ fontSize: "3.5em" }}>
+                        <i class="fas fa-people-arrows"></i>
+                      </p>
+                    </div>
+                    <p className="proName">Welfare</p>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade right>
+              <Zoom>
                 <Link to="/news">
-                  <div className="small p-3 text-center">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="far fa-newspaper"></i>
-                    </p>
-                    <h3 className="text-muted">NEWS</h3>
+                  <div className="small text-center">
+                    <div className="p-3">
+                      <p style={{ fontSize: "3.5em" }}>
+                        <i class="far fa-newspaper"></i>
+                      </p>
+                    </div>
+                    <p className="proName">NEWS</p>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade bottom>
+              <Zoom>
                 <Link to="/education">
-                  <div className="small p-3 text-center">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-book-open"></i>
-                    </p>
-                    <h3 className="text-muted">Schools</h3>
+                  <div className="small text-center">
+                    <div className="p-3">
+                      <p style={{ fontSize: "3.5em" }}>
+                        <i class="fas fa-book-open"></i>
+                      </p>
+                    </div>
+                    <p className="proName">Green House Schools</p>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
 
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade top>
+              <Zoom>
                 <Link to="/incubation">
-                  <div className="small p-3 text-center">
-                    <p style={{ fontSize: "3.5em" }}>
-                      <i class="fas fa-school"></i>
-                    </p>
-                    <h3 className="text-muted">Incubation</h3>
+                  <div className="small text-center">
+                    <div className="p-3">
+                      <p style={{ fontSize: "3.5em" }}>
+                        <i class="fas fa-school"></i>
+                      </p>
+                    </div>
+                    <p className="proName">Incubation</p>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
 
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade right>
+              <Zoom>
                 <Link to="/donation">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -679,11 +684,11 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Online Sadqa</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
 
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade left>
+              <Zoom>
                 <Link to="/medical">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -692,10 +697,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Medical</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade bottom>
+              <Zoom>
                 <Link to="/bloodbank">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -704,10 +709,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Blood Bank</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade top>
+              <Zoom>
                 <Link to="/onlineM">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -716,11 +721,11 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Masajid Reg</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
 
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade left>
+              <Zoom>
                 <Link to="/dastarkhwan">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -729,10 +734,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Dastarkhwan</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade bottom>
+              <Zoom>
                 <Link to="/roplant">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -741,11 +746,11 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">RO Plant</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
 
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade top>
+              <Zoom>
                 <Link to="/jobBank">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -754,10 +759,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Job Bank</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade right>
+              <Zoom>
                 <Link to="/bookStore">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -766,10 +771,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Saylani Books</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade left>
+              <Zoom>
                 <Link to="/istikhara">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -778,10 +783,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Online Istikhara</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade bottom>
+              <Zoom>
                 <Link to={HajjPdf} download>
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -790,10 +795,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Hajj Application</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-              <Fade top>
+              <Zoom>
                 <Link to="/quranApp">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -802,10 +807,10 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Quran App (Taftessh)</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
             <div className="col-md-3 p-3">
-              <Fade right>
+              <Zoom>
                 <Link to="/onlineQ">
                   <div className="small p-3 text-center">
                     <p style={{ fontSize: "3.5em" }}>
@@ -814,7 +819,7 @@ export default class WhatweDo extends React.Component {
                     <h3 className="text-muted">Quran Pak Registeration</h3>
                   </div>
                 </Link>
-              </Fade>
+              </Zoom>
             </div>
           </div>
         </div>

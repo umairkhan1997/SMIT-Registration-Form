@@ -208,10 +208,44 @@
   position: fixed;
   z-index: 1;
   top: 10%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 600px) {
   .coursePopUp {
     width: 100%;
   }
+  .city {
+    padding: 25px 10px !important;
+  }
+}
+
+.city {
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+.city h2 {
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+}
+.city:hover h2 {
+  background-color: #1371b8;
+}
+.showtable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 0;
+}
+.showtable td {
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: #1371b8;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+  /* margin: 10px; */
 }
