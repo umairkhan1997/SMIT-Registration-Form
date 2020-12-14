@@ -70,6 +70,21 @@ function bookAllCat() {
       });
   };
 }
+function bookAllSpec() {
+  return (dispatch) => {
+    const headers = { "Content-Type": "application/json" };
+    fetch(`${api}Books/BookSpecialGet`, { headers })
+      .then((res) =>
+        res.json().then(async (response) => {
+          console.log(response, "data");
+          dispatch({ type: ActionTypes.bookAllSpe, payload: response });
+        })
+      )
+      .catch((err) => {
+        console.log(err, "err");
+      });
+  };
+}
 
 
 const onlineMasajidForm = (obj) => {
@@ -144,4 +159,4 @@ const onlineQuranPakForm = (obj) => {
   }
 }
 
-export { homeSlideImg, homeIntroGet, projectCat, bookAllCat, onlineMasajidForm, onlineQuranPakForm };
+export { homeSlideImg, homeIntroGet, projectCat, bookAllCat, onlineMasajidForm, onlineQuranPakForm, bookAllSpec };

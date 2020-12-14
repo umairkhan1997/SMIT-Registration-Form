@@ -106,7 +106,7 @@
 
 
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 export default class FilesUploadComponent extends Component {
 
@@ -114,29 +114,89 @@ export default class FilesUploadComponent extends Component {
         super(props);
 
         this.onFileChange = this.onFileChange.bind(this);
+        this.onPdfChange = this.onPdfChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            imgCollection: ''
+            imgCollection: '',
+            pdfCollection: '',
+            imgPdf: []
         }
     }
 
     onFileChange(e) {
+
         this.setState({ imgCollection: e.target.files })
     }
+    onPdfChange(e) {
+        this.setState({ pdfCollection: e.target.files })
+    }
+    ////SAYLANI EVENTS FUNCTION 
+    // onSubmit(e) {
+    //     e.preventDefault()
 
-    onSubmit(e) {
+    //     var formData = new FormData();
+    //     for (const key of Object.keys(this.state.imgCollection)) {
+    //         formData.append('imgCollection', this.state.imgCollection[key])
+    //     }
+    //     formData.append('eventName', 'event Awesome',)
+    //     formData.append('eventDet', 'event Awesome is awesome')
+    //     console.log(this.state.imgCollection)
+    //     axios.post("http://localhost:3000/smit/SmitEventadd", formData, {
+    //     }).then(res => {
+    //         console.log(res)
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     })
+    // }
+
+    //SAYLANI NEWS METHOD
+    // onSubmit(e) {
+    //     e.preventDefault()
+
+    //     var formData = new FormData();
+    //     for (const key of Object.keys(this.state.imgCollection)) {
+    //         formData.append('imgCollection', this.state.imgCollection[key])
+    //     }
+    //     formData.append('name', 'News One',)
+    //     formData.append('description', 'News One Description ')
+    //     formData.append('newsdate', '11-12-2020')
+    //     console.log(this.state.imgCollection)
+    //     axios.post("http://localhost:3000/news/SaylaniNewsAdd", formData, {
+    //     }).then(res => {
+    //         console.log(res)
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     })
+    // }
+
+    onSubmit = async (e) => {
         e.preventDefault()
-
+        let arr = [];
+        arr.push(this.state.imgCollection);
+        arr.push(this.state.pdfCollection);
         var formData = new FormData();
-        for (const key of Object.keys(this.state.imgCollection)) {
-            formData.append('imgCollection', this.state.imgCollection[key])
+        console.log(arr, 'arrr')
+        for (const key of Object.keys(arr)) {
+            console.log(arr[key][0])
+            formData.append('imgCollection', arr[key][0])
         }
-        console.log(this.state.imgCollection)
-        // axios.post("http://localhost:4000/api/upload-images", formData, {
-        // }).then(res => {
-        //     console.log(res.data)
-        // })
+        // for (const key of Object.keys(this.state.pdfCollection)) {
+        //     formData.append('bookDnldUrl', this.state.pdfCollection[key])
+        // }
+        console.log('arrr two')
+        formData.append('bookName', 'Adab-E-Maiyat')
+        formData.append('bookLang', 'Urdu')
+        formData.append('bookAuthor', 'Hazrat Basheer Farooqui')
+        formData.append('bookPublisher', 'Azad Publisher')
+        formData.append('bookDnldUrl', 'Azad Publisher')
+        // console.log(formData)
+        axios.post("http://localhost:3000/Books/BookSpecialAdd", formData, {
+        }).then(res => {
+            console.log(res)
+        }).catch((err) => {
+            console.log(err)
+        })
     }
 
     render() {
@@ -145,7 +205,12 @@ export default class FilesUploadComponent extends Component {
                 <div className="row">
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
-                            <input type="file" name="imgCollection" onChange={this.onFileChange} multiple />
+                            <input type="file"
+                                //  accept="image/*"
+                                name="imgCollection" onChange={this.onFileChange} multiple />
+                            <input type="file"
+                                accept="application/pdf"
+                                name="pdfCollection" onChange={this.onPdfChange} />
                         </div>
                         <div className="form-group">
                             <button className="btn btn-primary" type="submit">Upload</button>

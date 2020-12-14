@@ -6,6 +6,7 @@ const initial_state = {
   bookAllCats: [],
   onlineMasajidForms: false,
   onlineQuranPakForms: false,
+  bookAllSpe: []
 };
 
 const reducer = (state = initial_state, action) => {
@@ -21,6 +22,9 @@ const reducer = (state = initial_state, action) => {
     }
     case ActionTypes.bookAllCat: {
       return { ...state, bookAllCats: action.payload.data }
+    }
+    case ActionTypes.bookAllSpe: {
+      return { ...state, bookAllSpe: action.payload.data }
     }
     case ActionTypes.onlineMasajidForms: {
       return { ...state, onlineMasajidForms: action.payload }

@@ -114,7 +114,8 @@ import bookTwo from '../../images/adab-e-maiyat.jpg'
 import ehkam from '../../images/ehkam.jpg';
 import './BookStore.css'
 import { connect } from "react-redux";
-import { bookAllCat } from "../../Redux/action/homeAction";
+import { bookAllCat, bookAllSpec } from "../../Redux/action/homeAction";
+import { Link } from "react-router-dom";
 
 const names = [{ namess: 'umair', age: 23 }, { namess: 'ali', age: 23 }, { namess: 'basit', age: 23 },];
 class BookStore extends React.Component {
@@ -128,6 +129,7 @@ class BookStore extends React.Component {
 
     componentDidMount() {
         this.props.bookAllCat();
+        this.props.bookAllSpec();
     }
     render() {
         return (
@@ -144,23 +146,32 @@ class BookStore extends React.Component {
                                 <li className='text-muted bookCatPoint' onClick={() => this.setState({ catType: 'Rohani' })}>Rohani Wazaef</li>
                             </ul>
 
+
+
                             <div className='mt-5'>
                                 <h4 style={{ color: "#1371b8", }} className='font-weight-bold'>SPECIALS</h4>
-                                <div className='col-md-10 my-3'>
-
-                                    <div className='singleBook'>
-                                        <img src={bookOne} width='100%' />
-                                        <div className='p-3 bookDetails'>
-                                            <h4>Adab-E-Maiyat</h4>
-                                            <p>Language: <span>Urdu</span></p>
-                                            <p>Author: <span>Hazrat Basheer Farooqui</span></p>
-                                            <p>Publisher: <span>Azad Publisher</span></p>
+                                {this.props.bookAllSpe.map(filteredName => {
+                                    return (
+                                        <div className='col-md-10 my-3'>
+                                            <div className='singleBook'>
+                                                <img src={filteredName.imgCollection} width='100%' height='400px' />
+                                                <div className='p-3 bookDetails'>
+                                                    <h4>{filteredName.bookName}</h4>
+                                                    <p>Language: <span>{filteredName.bookLang}</span></p>
+                                                    <p>Author: <span>{filteredName.bookAuthor}</span></p>
+                                                    <p>Publisher: <span>{filteredName.bookPublisher}</span></p>
+                                                </div>
+                                                <a className="btn-block btn download" href={filteredName.bookDnldUrl} target="_blank" rel="noopener noreferrer" download>
+                                                    Download
+                                                    </a>
+                                            </div>
                                         </div>
-                                        <button type="button" className="btn-block btn download">Download</button>
-
-                                    </div>
-                                </div>
+                                    )
+                                })}
                             </div>
+
+
+
                         </div>
                         <div>
                         </div>
@@ -172,14 +183,19 @@ class BookStore extends React.Component {
                                             <div className='col-md-3 my-3'>
                                                 <div className='singleBook'>
 
-                                                    <img src={filteredName.bookImgUrl} width='100%' height='400px' />
+                                                    <img src={filteredName.imgCollection} width='100%' height='400px' />
                                                     <div className='p-3 bookDetails'>
                                                         <h4>{filteredName.bookName}</h4>
                                                         <p>Language: <span>{filteredName.bookLang}</span></p>
                                                         <p>Author: <span>{filteredName.bookAuthor}</span></p>
                                                         <p>Publisher: <span>{filteredName.bookPublisher}</span></p>
                                                     </div>
-                                                    <button type="button" className="btn-block btn download">Download</button>
+                                                    {/* <button type="button" className="btn-block btn download" ><Link to={filteredName.bookDnldUrl} target="_blank" download>Download</Link></button> */}
+                                                    <a className="btn-block btn download" href={filteredName.bookDnldUrl} target="_blank" rel="noopener noreferrer" download>
+                                                        {/* <button> */}
+                                                            Download
+   {/* </button> */}
+                                                    </a>
                                                 </div>
                                             </div>
                                         )
@@ -200,12 +216,16 @@ class BookStore extends React.Component {
 function mapStateToProp(state) {
     return {
         bookAllCats: state.root.bookAllCats,
+        bookAllSpe: state.root.bookAllSpe
     };
 }
 function mapDispatchToProp(dispatch) {
     return {
         bookAllCat: () => {
             dispatch(bookAllCat());
+        },
+        bookAllSpec: () => {
+            dispatch(bookAllSpec());
         },
     };
 }
