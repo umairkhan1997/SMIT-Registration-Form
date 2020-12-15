@@ -14,22 +14,29 @@ export default class MainCourses extends React.Component {
           course: [
             {
               name: "Web & Mobile App Development",
+              detailName: "Web & Mobile App Development",
               duration: "1 Year",
               outline: [
                 "HTML",
                 "CSS",
-                "Javascript",
+                "Bootstrap",
+                "Hosting",
+                "Github",
+                "JavaScript",
+                "firebase",
+                "ES6",
                 "React JS",
+                "Redux",
                 "React Native",
-                "Mongo DB",
-                "Node JS",
-                "Express JS",
+                "Express/Node JS",
+                "MongoDB",
               ],
               ico:
                 "https://d3q6qq2zt8nhwv.cloudfront.net/course/458a308d42a149df91271f6b647eb085.png",
             },
             {
               name: "Graphic Designing",
+              detailName: "Graphic Designing",
               duration: "6 Months",
               outline: ["Adobe Photoshop", "Adobe Illustrator", "Inpage"],
               ico:
@@ -37,6 +44,7 @@ export default class MainCourses extends React.Component {
             },
             {
               name: "Video Editing",
+              detailName: "Video Editing",
               duration: "6 Months",
               outline: [
                 "Adobe Premier",
@@ -48,6 +56,7 @@ export default class MainCourses extends React.Component {
             },
             {
               name: "CCNA (R&S)",
+              detailName: "Cisco Certified Network Associate",
               duration: "6 Months",
               outline: [
                 "Network fundamentals",
@@ -63,17 +72,27 @@ export default class MainCourses extends React.Component {
             },
             {
               name: "CCNA (Cyber Security)",
+              detailName: "Cisco Certified Network Associate (Cyber Security)",
               duration: "6 Months",
               outline: [
-                "Adobe Premier",
-                "Adobe After Effect",
-                "Adobe Audition",
+                "Network Concepts",
+                "Security Concepts",
+                "Cryptography",
+                "Host-Based Analysis",
+                "Security Monitoring",
+                "Attack Methods",
+                "Endpoint Threat Analysis and Computer Forensics",
+                "Network Intrusion Analysis",
+                "Incident Response",
+                "Data and Event Analysis",
+                "Incident Handling",
               ],
               ico:
                 "https://previews.123rf.com/images/stas11/stas111710/stas11171000033/88679415-cyber-security-icon-shield-with-lock-vector-illustration.jpg",
             },
             {
               name: "CCA",
+              detailName: "Certified Computer Accountancy",
               duration: "3 Months",
               outline: ["PeachTree", "Tally", "Quick Book"],
               ico:
@@ -81,6 +100,7 @@ export default class MainCourses extends React.Component {
             },
             {
               name: "CCO",
+              detailName: "Certified Computer Operaton",
               duration: "3 Months",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
               ico:
@@ -88,20 +108,69 @@ export default class MainCourses extends React.Component {
             },
             {
               name: "Cloud Native",
+              detailName: "Cloud Native",
               duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              outline: [
+                "Dockar",
+                "Qubernities",
+                "linux",
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Hosting",
+                "Github",
+                "JavaScript",
+                "firebase",
+                "ES6",
+                "React JS",
+                "Redux",
+                "React Native",
+                "Express/Node JS",
+                "MongoDB",
+              ],
               ico:
                 "https://www.paradymemanagement.com/wp-content/uploads/2020/02/icon06.png",
             },
             {
               name: "Internet of Things",
+              detailName: "Internet of Things",
               duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              outline: [],
+              moreOutline: {
+                name1: "Quarter 1",
+                name1Details: [
+                  "Introduction to Internet of Things and Embedded Systems Basic Rust Programming",
+                ],
+                name2: "Quarter 2",
+                name2Details: [
+                  "Advanced Rust programming",
+                  "Basic Embedded Rust programming",
+                  "Advanced Embedded Rust programming",
+                  "(We will learn how to write, build, flash and debug Embedded Rust on STM32F303)",
+                ],
+                name3: "Quarter 3",
+                name3Details: [
+                  "Rust Microservices",
+                  "We will learn how to write down servers in Rust",
+                  "Edge Computing",
+                  "Dockers",
+                  "Kubernetes",
+                ],
+                name4: "Quarter 4",
+                name4Details: [
+                  "Rust Microservices",
+                  "We will learn how to write down servers in Rust",
+                  "Edge Computing",
+                  "Dockers",
+                  "Kubernetes",
+                ],
+              },
               ico:
                 "https://i.pinimg.com/originals/40/56/53/405653d4ba94244a15afec19e38de7d6.png",
             },
             {
               name: "Blockchain Technology",
+              detailName: "Blockchain Technology",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
               ico:
@@ -109,70 +178,152 @@ export default class MainCourses extends React.Component {
             },
             {
               name: "Artificial Intelligence",
+              detailName: "Artificial Intelligence",
               duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              outline: [
+                "Object Oriented and Functional Programming using Python",
+                "Advanced Python Libraries (Numpy , Pandas & Flask) with Anaconda",
+                "Introduction to Linear Algebra and Statistics",
+                "Data Science Essentials",
+                "Nueral Networks",
+                "Deep Learning with Keras",
+                "Backend with TensorFlow",
+                "Machine Learning",
+              ],
               ico:
                 "https://cdn2.iconfinder.com/data/icons/knowledge/512/electronic_brain-512.png",
             },
             {
               name: "Network Essential",
+              detailName: "Network Essential",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
-            },
-            {
-              name: "Cisco Certified Network Associate",
-              duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico:
+                "https://cdn2.iconfinder.com/data/icons/smashicons-the-essentials-webby-vol-3/55/197_-_Network_interaction_communication_essential-512.png",
             },
             {
               name: "Project Management",
+              detailName: "Project Management",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico:
+                "https://icon-library.com/images/project-management-icon/project-management-icon-14.jpg",
             },
             {
               name: "Advance Dashboard Training",
+              detailName: "Advance Dashboard Training",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico:
+                "https://icon-library.com/images/charts_analytics_kpi_dashboard_report_bar_pie-512.png",
             },
             {
               name: "Digital Marketing",
+              detailName: "Digital Marketing",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico:
+                "https://nova.makerfaire.com/wp-content/uploads/sites/23/2016/06/services-icon-social-media-marketing.png",
             },
             {
               name: "Microsoft Office Specialist",
-              duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              detailName: "Microsoft Office Specialist",
+              duration: "3 Months",
+              outline: ["MS Word", "MS Excel", "MS PowerPoint", "MS Access"],
+              ico:
+                "https://office-365.co.uk/wp-content/uploads/2019/11/Office-365-logo-in-circle.png",
             },
             {
               name: "Robotics",
+              detailName: "Robotics",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico:
+                "https://icon-library.com/images/robot-icon-free/robot-icon-free-10.jpg",
             },
             {
               name: "Database Administrator",
+              detailName: "Database Administrator",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico: "https://www.revalsys.com/images/DB-Icon-1.jpg",
             },
             {
-              name: "Certified Motor Bike Reapairing Course",
+              name: "Bike Reapairing Course",
+              detailName: "Certified Motor Bike Reapairing Course",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico:
+                "https://cdn4.iconfinder.com/data/icons/motorcycle-5/48/garage-workshop-motorcyle-repair-fix-mechanic-bike-512.png",
             },
             {
-              name: "Certified Mobile Repairing Course",
-              duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              name: "Mobile Repairing Course",
+              detailName: "Certified Mobile Repairing Course",
+              duration: "4 Months",
+              outline: [
+                "shorting clear (Half and full)",
+                "LCD Replacement",
+                "Charging jack",
+                "Software Installation",
+              ],
+              ico:
+                "https://thumbs.dreamstime.com/b/phone-repair-logo-vector-smart-phone-device-repair-symbol-phone-repair-logo-vector-smart-phone-device-repair-symbol-144302316.jpg",
             },
             {
-              name: "Certified RO Plant Technician",
-              duration: "1 Year",
+              name: "RO Plant Technician",
+              detailName: "Certified RO Plant Technician",
+              duration: "3 Months",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              ico:
+                "https://previews.123rf.com/images/nachai/nachai1809/nachai180900836/109877362-water-treatment-and-water-filter-icon-48x48-pixel-perfect-and-editable-stroke-.jpg",
             },
             {
-              name: "Certified Textile Training",
-              duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              name: "Textile Training",
+              detailName: "Certified Textile Training",
+              duration: "40 Days",
+              outline: [],
+              moreOutline: {
+                name1:
+                  "Industrial Sewing Machine Operator - Duration one month",
+                name1Details: [
+                  "Overview of Garment and textile Industry",
+                  "Standard operating procedures",
+                  "Basic requirements of Quality",
+                  "Machine Learning",
+                  "Skill development and upgradation",
+                  "Hands on experience of multiple sewing machineries",
+                  "Stamina building",
+                  "Career Counselling",
+                ],
+                name2: "Quality Checker - Duration one month",
+                name2Details: [
+                  "Overview of Garment and textile Industry",
+                  "Standard operating procedures",
+                  "Quality Standards and its Requirements",
+                  "Clockwise Inspection Procedure",
+                  "Defect Identification and Analysis",
+                  "Defects Classification",
+                  "Stamina Building",
+                  "Career Counselling",
+                ],
+                name3: "Quality Auditor - Duration one month",
+                name3Details: [
+                  "Overview of Garment and textile Industry",
+                  "Standard operating procedures",
+                  "Quality Standards and its Requirements",
+                  "Clockwise Inspection Procedure",
+                  "Inspection Protocols",
+                  "Defect Identification and Analysis",
+                  "Defects Classification",
+                  "Acceptable Quality Level",
+                  "Defects Rate Analysis and Calculation",
+                  "How to Measures",
+                  "Stamina Building",
+                  "Career Counselling",
+                ],
+              },
+
+              ico: "https://ajsavjtextilehub.online/src/img/icon_flechten.png",
             },
           ],
         },
@@ -240,7 +391,7 @@ export default class MainCourses extends React.Component {
                 class="modal-header"
               >
                 <h5 class="modal-title" id="exampleModalLongTitle">
-                  {this.state.currentCourse.name}
+                  {this.state.currentCourse.detailName}
                 </h5>
                 <button
                   type="button"
@@ -266,6 +417,52 @@ export default class MainCourses extends React.Component {
                       </li>
                     );
                   })}
+                  <hr />
+                  {this.state.currentCourse.moreOutline ? (
+                    <h6>{this.state.currentCourse.moreOutline.name1}</h6>
+                  ) : null}
+                  {this.state.currentCourse.moreOutline
+                    ? this.state.currentCourse.moreOutline.name1Details.map(
+                        (e, i) => {
+                          return (
+                            <li className="text-muted" key={i}>
+                              {e}
+                            </li>
+                          );
+                        }
+                      )
+                    : null}
+                  <hr />
+                  {this.state.currentCourse.moreOutline ? (
+                    <h6>{this.state.currentCourse.moreOutline.name2}</h6>
+                  ) : null}
+                  {this.state.currentCourse.moreOutline
+                    ? this.state.currentCourse.moreOutline.name2Details.map(
+                        (e, i) => {
+                          return (
+                            <li className="text-muted" key={i}>
+                              {e}
+                            </li>
+                          );
+                        }
+                      )
+                    : null}
+                  <hr />
+                  {this.state.currentCourse.moreOutline ? (
+                    <h6>{this.state.currentCourse.moreOutline.name3}</h6>
+                  ) : null}
+                  {this.state.currentCourse.moreOutline
+                    ? this.state.currentCourse.moreOutline.name3Details.map(
+                        (e, i) => {
+                          return (
+                            <li className="text-muted" key={i}>
+                              {e}
+                            </li>
+                          );
+                        }
+                      )
+                    : null}
+                  <hr />
                 </ul>
               </div>
               <div class="modal-footer">
