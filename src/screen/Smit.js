@@ -116,7 +116,7 @@ export default class Smit extends React.Component {
         <Workshop />
         <SMITAwards />
         <Faculty />
-        <SmitEvents />
+        {/* <SmitEvents /> */}
         <MainCourses />
         <SMITeacher />
         <Collaboration />

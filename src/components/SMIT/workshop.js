@@ -1,4 +1,7 @@
 import React from "react";
+import img1 from "../../images/workshp/artificialintelligence.png";
+import img2 from "../../images/workshp/mastergraphics.png";
+import img3 from "../../images/workshp/datascience.png";
 
 export default class Workshop extends React.Component {
   constructor(props) {
@@ -12,20 +15,17 @@ export default class Workshop extends React.Component {
             "https://www.facebook.com/watch/live/?v=1035626470206650&ref=watch_permalink",
         },
         {
-          thuunbnail:
-            "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/80758658_2350011625100836_9098936225720434688_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_eui2=AeGnZ7626hzK4n-T5ctNQaQSFKxJHEkFR4kUrEkcSQVHiRSaI7nwWO3DuIVlkACGqpoaPx_FXjYX06oBm4u5f-k2&_nc_ohc=0WrBgCSGUD4AX9rgHwp&_nc_ht=scontent.fkhi1-1.fna&oh=4e42d9956378e39a986f7dae2ad62784&oe=5FFEA3AD",
+          thuunbnail: img1,
           videoLink:
             "https://www.facebook.com/watch/live/?v=1035626470206650&ref=watch_permalink",
         },
         {
-          thuunbnail:
-            "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/69245684_2102910333144301_4295567199852036096_n.png?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_eui2=AeHiJP2veDzMX9zO05SAEk1iH2PjVaf08yofY-NVp_TzKrK9Kc5llTGy1tQfBz4dPioCDQmnAw_K0RTyBn86d2wV&_nc_ohc=IFxIrzYuzpUAX_oJy9I&_nc_ht=scontent.fkhi1-1.fna&oh=cfba9b817b2b317f3af5397120ef9811&oe=6000E88B",
+          thuunbnail: img2,
           videoLink:
             "https://www.facebook.com/SaylaniMassTraining/videos/883258332054034/",
         },
         {
-          thuunbnail:
-            "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/86853652_2447657152002949_376050478691123200_o.jpg?_nc_cat=100&ccb=2&_nc_sid=730e14&_nc_eui2=AeH4fGOfyw0WXtBE6kSQb8Uufx2_P4mhtjZ_Hb8_iaG2NnxMo0nzHumLcOXZQiOeoESCsYzX9doYJJFVr3egeX3m&_nc_ohc=M2fibfZlWY4AX_QZFiv&_nc_ht=scontent.fkhi1-1.fna&oh=fdfdf55f079f0f48d377c1f4b60c3e1f&oe=5FFDDE67",
+          thuunbnail: img3,
           videoLink:
             "https://www.facebook.com/watch/live/?v=475227826691821&ref=watch_permalink",
         },
@@ -78,13 +78,13 @@ export default class Workshop extends React.Component {
     return (
       <div className="container my-5">
         <div className="Heading">
-          <h2>Some Of Over Workshop</h2>
+          <h2>Workshop</h2>
         </div>
         <div className="row">
           {this.state.workshops.map((e, i) => {
             return (
-              <div className="col-md-3 py-3">
-                <a href={e.videoLink}>
+              <div className="col-md-3">
+                <a target="_blank" href={e.videoLink}>
                   <img
                     style={{
                       borderRadius: "8px",
