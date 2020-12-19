@@ -17,6 +17,9 @@ import Islamabad from "../images/islamabad.jpg";
 import Faisalabad from "../images/faisalabad.jpg";
 import Hyderabad from "../images/hyderabad.jpg";
 import TableData from "../components/SMIT/table";
+import SuccessStories from "../components/SMIT/suuccesStories";
+import SMITAwards from "../components/SMIT/awards";
+import Workshop from "../components/SMIT/workshop";
 
 export default class Smit extends React.Component {
   constructor(props) {
@@ -35,29 +38,6 @@ export default class Smit extends React.Component {
     console.log(this.state.city);
     return (
       <div>
-        {/* <div className="coursePopUp p-5">
-          <div className="row">
-            <div className="col-md-8">
-              <img width="100%" src={Announcement} />
-            </div>
-            <div className="col-md-4">
-              <div className="rounded shadow bg-white px-5">
-                <h2 className="py-">AI & Data Science</h2>
-                <h4>Days & Timings</h4>
-                <p>Mon, Wed & Fri. ( 11am - 1pm )</p>
-                <p>Tues, Thurs & Sat. ( 6pm - 9pm )</p>
-                <p>Mon, Wed & Fri. (9pm to 11pm)</p>
-                <h4>Eligibility Criteria</h4>
-                <p>Minimum Graduation</p>
-                <button className="prevbtn">
-                  <Link className="text-white" to="/apply">
-                    Apply
-                  </Link>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <Modal
           visible={this.state.visible}
           width="90%"
@@ -119,33 +99,6 @@ export default class Smit extends React.Component {
                   <h2>Islamabad</h2>
                 </div>
               </div>
-              {/* <img
-                  style={{ width: "100%", margin: "auto" }}
-
-                  src={Announcement}
-                /> */}
-              {/* <div >
-                  <h3 className="text-left font-weight-bold mt-4" style={{ color: "#1371b8" }}>Days & Timings</h3>
-                  <p className="text-muted">Mon, Wed & Fri. ( 11am - 1pm )</p>
-                  <p className="text-muted">Tues, Thurs & Sat. ( 6pm - 9pm )</p>
-                  <p className="text-muted">Mon, Wed & Fri. (9pm to 11pm)</p>
-                </div> */}
-              {/* <div>
-                  <p>
-                    For More Details click{" "}
-                    <a href="https://www.facebook.com/SaylaniMassTraining/photos/pb.489547941147223.-2207520000../3138203426281648/?type=3&theater">
-                      Saylani Mass Training
-                    </a>
-                  </p>
-                  <p>
-                    For Registration
-                    <button className="prevbtn ml-3">
-                      <Link className="text-white" to="/apply">
-                        Apply
-                      </Link>
-                    </button>
-                  </p>
-                </div> */}
             </div>
             <button
               style={{ position: "absolute", top: "-50px", right: "0" }}
@@ -159,8 +112,11 @@ export default class Smit extends React.Component {
         <MainHeader />
         <Cover city={this.state.city} />
         <TableData />
+        <SuccessStories />
+        <Workshop />
+        <SMITAwards />
         <Faculty />
-        <SmitEvents />
+        {/* <SmitEvents /> */}
         <MainCourses />
         <SMITeacher />
         <Collaboration />

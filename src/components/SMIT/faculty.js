@@ -16,7 +16,12 @@ export default class Faculty extends React.Component {
       <div>
         <div className="container">
           <div className="displayheading">
-            <h2 style={{ color: '#1371b8' }} className="mt-5 ml-4 font-weight-bold">Faculty</h2>
+            <h2
+              style={{ color: "#1371b8" }}
+              className="mt-5 ml-4 font-weight-bold"
+            >
+              Faculty
+            </h2>
           </div>
         </div>
         <div className="container">
@@ -27,7 +32,7 @@ export default class Faculty extends React.Component {
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h3 style={{ color: '#1371b8' }} >Sir Zia Khan</h3>
+                  <h3 style={{ color: "#1371b8" }}>Sir Zia Khan</h3>
                   <p className="text-muted">(Faculty Head)</p>
                 </div>
               </Fade>
@@ -47,30 +52,7 @@ export default class Faculty extends React.Component {
               </Fade>
             </div>
           </div>
-          {/* <div className="text-right pt-3 pb-3">
-            <div>
-              <Fade left>
-                <div className="facultyName p-3 pt-5">
-                  <h2>Zeeshan Hanif</h2>
-                  <p>(COO Panacloud)</p>
-                </div>
-              </Fade>
-              <Fade right>
-                <img className="facultyImg " src={zeeshan} />
-              </Fade>
-            </div>
-            <div className="facultyContent mr-5 pt-5 p-3 rounded shadow">
-              <Fade left>
-                <p>
-                  I have a decade of experience in developing Web and Mobile
-                  apps. Extensive documented track record of building apps using
-                  the Java/J2EE platform, MEAN Stack, HTML5 Hybrid mobile apps
-                  and Android Native apps. I have over 10 years of experience in
-                  teaching software programming and Finance courses
-                </p>
-              </Fade>
-            </div>
-          </div> */}
+          
           <div className="text-left pt-3 pb-3">
             <div>
               <Fade left>
@@ -78,7 +60,9 @@ export default class Faculty extends React.Component {
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2 style={{ color: '#1371b8' }} className="font-weight-bold">Muhammad Ali Mughal</h2>
+                  <h2 style={{ color: "#1371b8" }} className="font-weight-bold">
+                    Muhammad Ali Mughal
+                  </h2>
                   <p className="text-muted">(Manager SMIT)</p>
                 </div>
               </Fade>

@@ -45,7 +45,8 @@
   margin-bottom: -30px;
   margin-left: 20px;
   display: inline-block;
-  border: 8px outset lightgrey;
+  border: 3px solid lightgrey;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 .facultyName {
   display: inline-block;
@@ -115,4 +116,35 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   /* box-shadow: 0 0 15px rgba(0, 0, 0, .5); */
+}
+.teacherDetails {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 85%;
+  padding: 30% 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  transition: 0.5s;
+  color: #033e6b;
+}
+@media only screen and (max-width: 600px) {
+  .allTeacher {
+    width: 50%;
+  }
+}
+.allTeacher:hover .teacherDetails {
+  display: block;
+  transition: 0.5s;
+}
+.successImg {
+  border-radius: 10px;
+  border: 3px solid white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+.succesCard {
+  border-top: 3px solid #6fda44;
+  /* border-radius: 5px; */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
