@@ -1,9 +1,17 @@
 import React from "react";
 import Custombtn from "../../smallcomponents/mybtn";
-export default class TableData extends React.Component {
+import { connect } from "react-redux";
+import { roPlantBranchGet } from "../../Redux/action/RoPlantAction";
+
+
+class TableData extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  componentDidMount() {
+    this.props.roPlantBranchGet();
   }
   render() {
     return (
@@ -11,25 +19,17 @@ export default class TableData extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <table className="showtable">
-              <tr>
-                <td>Vision</td>
-                <td>1200</td>
-              </tr>
-              <tr>
-                <td>Installed Ro Plants</td>
-                <td>60</td>
-              </tr>
-              <tr>
-                <td>Under construction</td>
-                <td>18</td>
-              </tr>
-              <tr>
-                <td>Rest</td>
-                <td>1122</td>
-              </tr>
+              {this.props.roPlantBranchGets && this.props.roPlantBranchGets.map((data) => {
+                return (
+                  <tr>
+                    <td>{data.typeName}</td>
+                    <td>{data.typeNumber}</td>
+                  </tr>
+                )
+              })}
             </table>
             <div className="p-2">
-              <Custombtn otherClass="btn-block" value="donate" />
+              <Custombtn otherClass="btn-block" value="Donate" />
             </div>
           </div>
           <div className="col-md-6 p-2">
@@ -47,3 +47,17 @@ export default class TableData extends React.Component {
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    roPlantBranchGets: state.reducerRoPlant.roPlantBranchGets
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    roPlantBranchGet: () => {
+      dispatch(roPlantBranchGet());
+    },
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(TableData);

@@ -3,8 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./ro.css";
 import Fade from "react-reveal";
+import { connect } from "react-redux";
+import { RoPlantLocationGet } from "../../Redux/action/RoPlantAction";
 
-export default class ROLocation extends React.Component {
+
+class ROLocation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -122,6 +125,10 @@ export default class ROLocation extends React.Component {
       },
     };
   }
+
+  componentDidMount() {
+    this.props.RoPlantLocationGet();
+  }
   render() {
     return (
       <div>
@@ -148,23 +155,37 @@ export default class ROLocation extends React.Component {
         >
           <div className="container">
             <div className="row">
-              {this.state.locations.map((item, i) => {
+              {this.props.RoPlantLocationGets && this.props.RoPlantLocationGets.map((item, i) => {
                 return (
                   <div className="col-md-3 p-3 RoCard">
                     <div
-                      style={{ height: "200px" }}
+                      style={{ height: "200px", backgroundColor: item.underConstruction ? "rgb(230,230,230)" : "white", }}
                       className="p-3 bg-white shadow rounded location"
-                      data-toggle="modal"
-                      data-target="#exampleModalCenter"
+                      data-toggle={item.underConstruction ? null : "modal"}
+                      data-target={item.underConstruction ? null : "#exampleModalCenter"}
                       onClick={() => this.setState({ currentLocation: item })}
                     >
                       <h4>{item.name}</h4>
                       <p className="text-muted">{item.area}</p>
+
+                      {item.underConstruction ? <div
+                        style={{
+                          // color: "#0066b3",
+                          position: "absolute",
+                          top: 15,
+                          left: 20,
+                          color: "grey",
+                          fontSize: "1.5em",
+                        }}
+                      >
+
+                        <i class="fas fa-tools"></i>
+                      </div> : null}
                     </div>
                   </div>
                 );
               })}
-              {this.state.underConstructionPlants.map((item, i) => {
+              {/* {this.state.underConstructionPlants.map((item, i) => {
                 return (
                   <div className="col-md-3 p-3 RoCard">
                     <div
@@ -191,7 +212,7 @@ export default class ROLocation extends React.Component {
                     </div>
                   </div>
                 );
-              })}
+              })} */}
             </div>
           </div>
           <div
@@ -245,3 +266,17 @@ export default class ROLocation extends React.Component {
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    RoPlantLocationGets: state.reducerRoPlant.RoPlantLocationGets
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    RoPlantLocationGet: () => {
+      dispatch(RoPlantLocationGet());
+    },
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(ROLocation);

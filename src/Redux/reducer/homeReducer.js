@@ -6,7 +6,9 @@ const initial_state = {
   bookAllCats: [],
   onlineMasajidForms: false,
   onlineQuranPakForms: false,
-  bookAllSpe: []
+  bookAllSpe: [],
+  SaylaniNewsGet: [],
+  SaylaniNewsNext: []
 };
 
 const reducer = (state = initial_state, action) => {
@@ -31,6 +33,14 @@ const reducer = (state = initial_state, action) => {
     }
     case ActionTypes.onlineQuranPakForms: {
       return { ...state, onlineQuranPakForms: action.payload }
+    }
+    case ActionTypes.SaylaniNewsGet: {
+      console.log(action.payload)
+      return { ...state, SaylaniNewsGet: state.SaylaniNewsGet.concat(action.payload.result), SaylaniNewsNext: action.payload.next }
+    }
+    case ActionTypes.fieldEmpty: {
+      console.log(action.payload)
+      return { ...state, SaylaniNewsGet: [] }
     }
     default: {
       return state;
