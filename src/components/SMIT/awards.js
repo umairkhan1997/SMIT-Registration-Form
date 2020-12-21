@@ -49,15 +49,13 @@ export default class SMITAwards extends React.Component {
                   return (
                     <div class="carousel-item text-center p-4">
                       <div className="awardImg">
-                        <img width="100%" src={e.image} />
+                        <img width="100%" src={e.image} height="400px" />
                         <h2>{e.title}</h2>
                       </div>
                     </div>
                   );
                 })}
-                <div class="carousel-item active text-center p-4">
-                  <p>lorem ipsum (imagine longer text)</p>
-                </div>
+
               </div>
               <a
                 class="carousel-control-prev"

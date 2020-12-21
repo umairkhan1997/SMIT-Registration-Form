@@ -8,7 +8,8 @@ const initial_state = {
   onlineQuranPakForms: false,
   bookAllSpe: [],
   SaylaniNewsGet: [],
-  SaylaniNewsNext: []
+  SaylaniNewsNext: [],
+  saylaniNewsAllData: []
 };
 
 const reducer = (state = initial_state, action) => {
@@ -36,7 +37,7 @@ const reducer = (state = initial_state, action) => {
     }
     case ActionTypes.SaylaniNewsGet: {
       console.log(action.payload)
-      return { ...state, SaylaniNewsGet: state.SaylaniNewsGet.concat(action.payload.result), SaylaniNewsNext: action.payload.next }
+      return { ...state, SaylaniNewsGet: state.SaylaniNewsGet.concat(action.payload.result), SaylaniNewsNext: action.payload.next, saylaniNewsAllData: action.payload }
     }
     case ActionTypes.fieldEmpty: {
       console.log(action.payload)

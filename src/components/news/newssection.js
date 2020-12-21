@@ -53,7 +53,9 @@ class NewsSection extends React.Component {
     document.addEventListener('scroll', this.handleScroll);
     //  return () => document.removeEventListener('scroll', this.handleScroll);
   }
-
+  componentWillUpdate() {
+    document.addEventListener('scroll', this.handleScroll);
+  }
 
   dateGet = (e) => {
     // console.log(e.value);
@@ -69,7 +71,7 @@ class NewsSection extends React.Component {
   }
 
   render() {
-    console.log(this.props.SaylaniNewsGet, 'SaylaniNewsGet', this.props.SaylaniNewsNext)
+    // console.log(this.props.SaylaniNewsGet, 'SaylaniNewsGet', this.props.SaylaniNewsNext)
     const { newDate, dateState } = this.state
     return (
       <div>
