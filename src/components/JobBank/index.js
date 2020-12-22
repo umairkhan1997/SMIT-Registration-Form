@@ -7,6 +7,8 @@ import manager from "../../images/manager.png";
 import taxiDriver from "../../images/taxi-driver.png";
 import JobContact from "./JobContact";
 import { Link } from "react-router-dom";
+import history from '../../history';
+
 export default class JobBank extends React.Component {
   constructor(props) {
     super(props);
@@ -92,7 +94,46 @@ export default class JobBank extends React.Component {
         </div>
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div className="container-fluid mt-5">
+        <div className="container mt-5 d-flex justify-content-center">
+
+          <div
+            className="col-md-6 shadow  small "
+            style={{ backgroundColor: "#f5f6f7", }}
+
+          >
+            <a href="/job" style={{ display: "flex" }}>
+              <img
+                src={img1}
+                className="imgOne"
+                style={{ marginTop: 20 }}
+                width="50px"
+                height="50px"
+              />
+
+              {/* <i class="fas fa-laptop-code"></i> */}
+              <p style={{ fontSize: "2em", marginTop: 25, marginLeft: 20, color: '#0267b4' }}>I am Job Seeker!</p>
+            </a>
+          </div>
+          <div
+            className="col-md-6 shadow  small "
+            style={{ backgroundColor: "#f5f6f7", }}
+
+          >
+            <a href="/job" style={{ display: "flex" }}>
+              <img
+                src={img1}
+                className="imgOne"
+                style={{ marginTop: 20 }}
+                width="50px"
+                height="50px"
+              />
+
+              {/* <i class="fas fa-laptop-code"></i> */}
+              <p style={{ fontSize: "2em", marginTop: 25, marginLeft: 20, color: '#0267b4' }}>I am Recruiter!</p>
+            </a>
+          </div>
+        </div>
+        {/* <div className="container-fluid mt-5">
           <div className="row">
             <div className="col-md-6 jobse shadow text-center">
               <div className="p-5">
@@ -117,7 +158,7 @@ export default class JobBank extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {this.state.jobseekarForm ? <div className='fullScreen'>
           <div className='container p-5'>

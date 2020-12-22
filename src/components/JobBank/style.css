@@ -137,3 +137,13 @@ d.jobre {
   border: 2px dashed #0267b4;
   padding: 50px;
 }
+
+hr.style1{
+  border: 1px solid #8c8b8b;
+  height: 50px;
+  width:1px;
+}
+.imgOne{
+  margin-right:5px;
+  border-right: 2px solid #bbb8b0 !important;
+}
