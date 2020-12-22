@@ -23,16 +23,60 @@ export default class JobBank extends React.Component {
   render() {
 
     return (
-      <div className="text-center">
+      <div className="">
         {/* POPULAR JOBS START =============>>>>>>>>*/}
+
+
+        <div className="container my-4">
+          <div className="row">
+            <div className="col-md-6">
+              <table className="showtable">
+                <tr>
+                  <td>JobHunt</td>
+                  <td>Stats</td>
+                </tr>
+                <tr>
+                  <td>Vision</td>
+                  <td>5000</td>
+                </tr>
+
+                <tr>
+                  <td>Jobs Placed</td>
+                  <td>500</td>
+                </tr>
+                <tr>
+                  <td>Hired Candidates</td>
+                  <td>400</td>
+                </tr>
+                <tr>
+                  <td>Companies</td>
+                  <td>200</td>
+                </tr>
+              </table>
+            </div>
+            <div className="col-md-6 p-2">
+              <iframe
+                width="100%"
+                height="320"
+                src="https://www.youtube.com/embed/N4DIjxCGWVc"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+
+
         <div>
-          <h3 className="my-4 font-weight-bold" style={{ color: "#0267b4" }}>
+          <h3 className="my-4 text-center mt-5" style={{ color: "#0267b4" }}>
             Popular Categories
           </h3>
           <div className="container">
             <div className="row mt-4 justify-content-center">
               <div
-                className="col-md-2 shadow divStl m-3 small"
+                className="col-md-2 shadow divStl m-3 small text-center"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
                 <p style={{ fontSize: "3.5em" }}>
@@ -47,7 +91,7 @@ export default class JobBank extends React.Component {
               </div>
 
               <div
-                className="col-md-2 shadow m-3 small"
+                className="col-md-2 shadow m-3 small text-center"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
                 <p style={{ fontSize: "3.5em" }}>
@@ -61,7 +105,7 @@ export default class JobBank extends React.Component {
                 <p style={{ fontSize: "1.5em" }}>Operator</p>
               </div>
               <div
-                className="col-md-2 shadow m-3 small"
+                className="col-md-2 shadow m-3 small text-center"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
                 <p style={{ fontSize: "3.5em" }}>
@@ -75,7 +119,7 @@ export default class JobBank extends React.Component {
                 <p style={{ fontSize: "1.5em" }}>Driver</p>
               </div>
               <div
-                className="col-md-2 shadow m-3 small"
+                className="col-md-2 shadow m-3 small text-center"
                 style={{ backgroundColor: "#f5f6f7" }}
               >
                 <p style={{ fontSize: "3.5em" }}>
@@ -98,177 +142,123 @@ export default class JobBank extends React.Component {
 
           <div
             className="col-md-6 shadow  small "
-            style={{ backgroundColor: "#f5f6f7", }}
+            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
 
           >
-            <a href="/job" style={{ display: "flex" }}>
-              <img
-                src={img1}
-                className="imgOne"
-                style={{ marginTop: 20 }}
-                width="50px"
-                height="50px"
-              />
-
-              {/* <i class="fas fa-laptop-code"></i> */}
-              <p style={{ fontSize: "2em", marginTop: 25, marginLeft: 20, color: '#0267b4' }}>I am Job Seeker!</p>
+            <a href="/job" style={{ display: 'flex', alignItems: 'center' }}>
+              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
+                <i class="fab fa-wpforms"></i>
+              </p>
+              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Job Seeker ?</p>
             </a>
           </div>
           <div
             className="col-md-6 shadow  small "
-            style={{ backgroundColor: "#f5f6f7", }}
+            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
 
           >
-            <a href="/job" style={{ display: "flex" }}>
-              <img
-                src={img1}
-                className="imgOne"
-                style={{ marginTop: 20 }}
-                width="50px"
-                height="50px"
-              />
-
-              {/* <i class="fas fa-laptop-code"></i> */}
-              <p style={{ fontSize: "2em", marginTop: 25, marginLeft: 20, color: '#0267b4' }}>I am Recruiter!</p>
+            <a href="/job" style={{ display: 'flex', alignItems: 'center' }}>
+              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
+                <i class="fab fa-wpforms"></i>
+              </p>
+              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Recruiter ?</p>
             </a>
           </div>
         </div>
-        {/* <div className="container-fluid mt-5">
-          <div className="row">
-            <div className="col-md-6 jobse shadow text-center">
-              <div className="p-5">
-                <h4 className="font-weight-bold">I AM JOBSEEKER!</h4>
-                <h6>Do you need a Job ?</h6>
-                <h6>
-                  So we do have a suitable Job according to your requirment
-                </h6>
-                <Link to='/job'>
-                  <button className="vieMor my-3" >Apply for job</button>
-                </Link >
-              </div>
-            </div>
-            <div className="col-md-6 jobre shadow text-center">
-              <div className="p-5">
-                <h4 className="font-weight-bold">I AM RECRUITER!</h4>
-                <h6>Do you have a Job ?</h6>
-                <h6>
-                  So we do have a suitable employee according to your requirment
-                </h6>
-                <button className="vieMor my-3">Register new job</button>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
-        {this.state.jobseekarForm ? <div className='fullScreen'>
-          <div className='container p-5'>
-            <h1>Job Seekar</h1>
-          </div>
-        </div> : null}
+
+        {
+          this.state.jobseekarForm ? <div className='fullScreen'>
+            <div className='container p-5'>
+              <h1>Job Seekar</h1>
+            </div>
+          </div> : null
+        }
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div className="container my-5">
-          <h3 style={{ color: "#1371b8", textAlign: "center" }} className="font-weight-bold">Featured Jobs</h3>
-        </div>
-        <div className="container">
-          <table
-            style={{ width: "100%" }}
-            className="jobTable table-responsive-sm"
-          >
-            <thead>
-              <tr>
-                <th>Full Name</th>
-                <th>Occupation</th>
-                <th>Age</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Kamran</td>
-                <td>Electrician</td>
-                <td>23</td>
-                <td>
-                  <button className="viePro">View Profile</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Kamran</td>
-                <td>Electrician</td>
-                <td>23</td>
-                <td>
-                  <button className="viePro">View Profile</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Kamran</td>
-                <td>Electrician</td>
-                <td>23</td>
-                <td>
-                  <button className="viePro">View Profile</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Kamran</td>
-                <td>Electrician</td>
-                <td>23</td>
-                <td>
-                  <button className="viePro">View Profile</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Kamran</td>
-                <td>Electrician</td>
-                <td>23</td>
-                <td>
-                  <button className="viePro">View Profile</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Kamran</td>
-                <td>Electrician</td>
-                <td>23</td>
-                <td>
-                  <button className="viePro">View Profile</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Kamran</td>
-                <td>Electrician</td>
-                <td>23</td>
-                <td>
-                  <button className="viePro">View Profile</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <button className="vieMor">View More</button>
-        </div>
+        <div className="container-fluid my-5 jobList">
+          <div className="container ">
+            <h3 style={{ color: "#1371b8", textAlign: "left" }} className="font-weight-bold  pt-5 pb-5">Featured Jobs</h3>
+          </div>
+          <div className="container ">
+            <table
+              style={{ width: "100%" }}
+              className="jobTable table-responsive-sm"
+            >
+              <thead className="TheadStyle">
+                <tr className="headName">
+                  <th >Full Name</th>
+                  <th>Occupation</th>
+                  <th>Age</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kamran</td>
+                  <td>Electrician</td>
+                  <td>23</td>
+                  <td>
+                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kamran</td>
+                  <td>Electrician</td>
+                  <td>23</td>
+                  <td>
+                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kamran</td>
+                  <td>Electrician</td>
+                  <td>23</td>
+                  <td>
+                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kamran</td>
+                  <td>Electrician</td>
+                  <td>23</td>
+                  <td>
+                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kamran</td>
+                  <td>Electrician</td>
+                  <td>23</td>
+                  <td>
+                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kamran</td>
+                  <td>Electrician</td>
+                  <td>23</td>
+                  <td>
+                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kamran</td>
+                  <td>Electrician</td>
+                  <td>23</td>
+                  <td>
+                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-        {/* COUNT OF JOBS================> */}
-        <div className="countDiv">
-          <div className="container">
-            <h2 className="py-5 font-weight-bold" style={{ color: '#1371b8' }}>JobHunt Site Stats</h2>
-            <div className="row">
-              <div className="col-md-4 p-5">
-                <h2 style={{ color: "dodgerblue" }}>500</h2>
-                <h3>Jobs Placed</h3>
-              </div>
-              <div className="col-md-4 p-5">
-                <h2 style={{ color: "dodgerblue" }}>400</h2>
-                <h3>Hired Candidates</h3>
-              </div>
-              <div className="col-md-4 p-5">
-                <h2 style={{ color: "dodgerblue" }}>200</h2>
-                <h3>Companies</h3>
-              </div>
-            </div>
           </div>
         </div>
 
         <JobContact />
 
-      </div>
+      </div >
     );
   }
 }

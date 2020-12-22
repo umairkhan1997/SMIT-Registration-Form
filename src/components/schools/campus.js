@@ -11,44 +11,40 @@ export default class Campus extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container mainDiv mt-5" >
         <h1>Campus</h1>
-        <div className="container">
+        <div className="container mt-5">
           <div className="row">
-            <div className="col-md-4 p-5">
+            <div className="col-md-6 p-2">
               <div data-toggle="modal" data-target="#schoolCampus1" className='locationCard'>
-                <p>
-                  <i class="fas fa-map-marker-alt"></i> Campus 1
-                </p>
-                <p>Address: abc Streat, Karachi, pakistan.</p>
-                <p>03072199560</p>
+                <h4>
+                  Green House Academy Baldia Campus
+                </h4>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Rasheedabad Saeedabad, Karachi, Karachi City, Sindh, Pakistan.</p>
               </div>
             </div>
-            <div className="col-md-4 p-5">
+            <div className="col-md-6 p-2">
               <div data-toggle="modal" data-target="#schoolCampus1" className='locationCard'>
-                <p>
-                  <i class="fas fa-map-marker-alt"></i> Campus 2
-                </p>
-                <p>Address: abc Streat, Karachi, pakistan.</p>
-                <p>03072199560</p>
+                <h4>
+                  Green House Academy Rehmania Campus
+                </h4>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Chanesar Goth Chanesar Halt, Karachi, Karachi City, Sindh, Pakistan.</p>
               </div>
             </div>
-            <div className="col-md-4 p-5">
+            <div className="col-md-6 p-2">
               <div data-toggle="modal" data-target="#schoolCampus1" className='locationCard'>
-                <p>
-                  <i class="fas fa-map-marker-alt"></i> Campus 3
-                </p>
-                <p>Address: abc Streat, Karachi, pakistan.</p>
-                <p>03072199560</p>
+                <h4>
+                  Green House Academy Gulzar e Hijri campus
+                </h4>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Sector 11 A Gulzar E Hijri Scheme 33, Karachi, Karachi City, Sindh, Pakistan.</p>
               </div>
             </div>
-            <div className="col-md-4 p-5">
+            <div className="col-md-6 p-2">
               <div data-toggle="modal" data-target="#schoolCampus1" className='locationCard'>
-                <p>
-                  <i class="fas fa-map-marker-alt"></i> Campus 4
-                </p>
-                <p>Address: abc Streat, Karachi, pakistan.</p>
-                <p>03072199560</p>
+                <h4>
+                  Green House Academy Kemari Campus
+                </h4>
+                <p><i class="fas fa-map-marker-alt"></i> Address: عثمان غنی روڈ، Goth Shaikhan Bhutta Village, Karachi, Karachi City, Sindh, Pakistan.</p>
               </div>
             </div>
           </div>
@@ -78,7 +74,7 @@ export default class Campus extends React.Component {
               </div>
               <div class="modal-body">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115750.06624050759!2d67.10231020106806!3d24.959664116251762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb34155d61278d5%3A0xca2ca18be3a9e8bc!2sSaylani%20Schooling%20System%20Campus%203!5e0!3m2!1sen!2s!4v1605612208548!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14474.646868652992!2d66.9680024!3d24.909518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x98728fc73e0ca82b!2sGreen%20House%20Academy%20Baldia%20campus!5e0!3m2!1sen!2s!4v1608624556123!5m2!1sen!2s"
                   width="100%"
                   height="400"
                   frameborder="0"
@@ -94,9 +90,6 @@ export default class Campus extends React.Component {
                   data-dismiss="modal"
                 >
                   Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
                 </button>
               </div>
             </div>

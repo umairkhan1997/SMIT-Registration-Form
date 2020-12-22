@@ -51,3 +51,7 @@
 .locationCard:hover{
   background-color: rgba(30, 144, 255, .8);
 }
+
+.mainDiv{
+  color: #0267b4
+}

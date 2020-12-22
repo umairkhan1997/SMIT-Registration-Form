@@ -23,9 +23,14 @@ d.jobre {
   padding: 6px 20px;
   border: none;
   border-width: 0px;
-  background-color: #0267b4;
-  color: white;
-  border-radius: 25px;
+  background-color: white;
+  color: #1371b8;
+  font-weight: bold;
+  border-radius: 10px;
+  
+}
+.viewProf{
+  color: #0267b4 !important;
 }
 
 .divStl {
@@ -146,4 +151,22 @@ hr.style1{
 .imgOne{
   margin-right:5px;
   border-right: 2px solid #bbb8b0 !important;
+}
+
+.jobList{
+  background-image: url("../../images/jobbank.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.TheadStyle{
+  background-color: white;
+}
+
+tr>th{
+  color:#1371b8;
+  font-size:18px
+}
+tr>td{
+  color:#1371b8;
+  font-weight:bold
 }

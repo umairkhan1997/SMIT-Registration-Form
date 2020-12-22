@@ -39,7 +39,7 @@ export default class JobForm extends React.Component {
                         <div className="col-md-6 p-3 pt-5">
                             <div
                                 onClick={() =>
-                                    this.setState({ donationForm: true, bankDetails: false, showScreen: true })
+                                    this.setState({ showScreen: true })
                                 }
                                 className="selectBtn"
                                 style={{ backgroundColor: showScreen ? "#0069d9" : 'white', color: showScreen ? "white" : '#0069d9', }}
@@ -50,7 +50,7 @@ export default class JobForm extends React.Component {
                         <div className="col-md-6 p-3 pt-5">
                             <div
                                 onClick={() =>
-                                    this.setState({ donationForm: false, bankDetails: true, showScreen: false })
+                                    this.setState({ showScreen: false })
                                 }
                                 className="selectBtn"
                                 style={{ backgroundColor: !showScreen ? "#0069d9" : 'white', color: !showScreen ? "white" : '#0069d9', }}
@@ -216,7 +216,7 @@ export default class JobForm extends React.Component {
                                             <div className="col-md-12 py-3">
                                                 <textarea
                                                     className="jobInputTextarea"
-                                                    placeholder="Type Details"
+                                                    placeholder="Mention your experience here "
                                                     rows="7"
                                                 ></textarea>
                                             </div>
@@ -238,7 +238,79 @@ export default class JobForm extends React.Component {
                                         </div>
                                     </div> : null}
                                     {this.state.step2show ? <div className='formClose p-5'>
-                                        <div className="row">
+                                        <div>
+                                            <p style={{ color: '#0267b4' }} className='font-weight-bold'>Primary School Detail</p>
+                                            <div className="row">
+                                                <div className="col-md-3 py-3">
+                                                    <input className='jobInput' placeholder="School Name" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Year of Completion" />
+                                                </div>
+
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Major Course" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Degree" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p style={{ color: '#0267b4' }} className='font-weight-bold mt-4'>Secondary High School</p>
+                                            <div className="row">
+                                                <div className="col-md-3 py-3">
+                                                    <input className='jobInput' placeholder="School Name" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Year of Completion" />
+                                                </div>
+
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Major Course" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Degree" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p style={{ color: '#0267b4' }} className='font-weight-bold mt-4'>College / University</p>
+                                            <div className="row">
+                                                <div className="col-md-3 py-3">
+                                                    <input className='jobInput' placeholder="College / University Name" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Year of Completion" />
+                                                </div>
+
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Major Course" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Degree" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p style={{ color: '#0267b4' }} className='font-weight-bold mt-4'>Business / Technical Institute</p>
+                                            <div className="row">
+                                                <div className="col-md-3 py-3">
+                                                    <input className='jobInput' placeholder="Institute Name" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Year of Completion" />
+                                                </div>
+
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Major Course" />
+                                                </div>
+                                                <div className="col-md-3 py-3">
+                                                    <input className="jobInput" placeholder="Degree" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* <div className="row">
                                             <div className="col-md-6 py-3">
                                                 <input className='jobInput' placeholder="Enter Qualification" />
                                             </div>
@@ -281,7 +353,8 @@ export default class JobForm extends React.Component {
                                             <div className="col-md-12 py-3">
                                                 <input className="jobInput" placeholder="Address" />
                                             </div>
-
+*/}
+                                        <div style={{ display: 'flex', }}>
                                             <div className="col-md-6 py-3">
                                                 {this.state.prevbtn ? <button onClick={() => this.setState({
                                                     step1: 'formTag',
@@ -307,7 +380,8 @@ export default class JobForm extends React.Component {
                                                 })} class="btn-block prevbtn">Next <i class="fas fa-arrow-right"></i></button> : null}
                                             </div>
                                         </div>
-                                    </div> : null}
+                                    </div>
+                                        : null}
                                     {this.state.step3show ? <div className='formClose p-5'>
                                         <div className="row">
                                             <div className="col-md-12 py-3">
