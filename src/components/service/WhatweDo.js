@@ -46,6 +46,8 @@ class WhatweDo extends React.Component {
     this.props.projectCat();
   }
 
+
+
   render() {
     return (
       <div className="container-fluid" style={{ backgroundColor: "white" }}>
