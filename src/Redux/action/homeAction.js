@@ -1,7 +1,6 @@
 import ActionTypes from "../constant/constant";
 
-const api = "http://localhost:3000/"
-
+const api = "https://swit-app.herokuapp.com/";
 
 function homeSlideImg() {
   var allData;
@@ -37,7 +36,6 @@ function homeIntroGet() {
   };
 }
 
-
 function projectCat() {
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
@@ -57,7 +55,7 @@ function projectCat() {
 function fieldEmpty() {
   return (dispatch) => {
     dispatch({ type: ActionTypes.fieldEmpty });
-  }
+  };
 }
 
 function getAllNews(a, b, e) {
@@ -65,7 +63,9 @@ function getAllNews(a, b, e) {
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
 
-    fetch(`${api}news/SaylaniNewsGet?page=${a}&&limit=${b}&&date=${e}`, { headers })
+    fetch(`${api}news/SaylaniNewsGet?page=${a}&&limit=${b}&&date=${e}`, {
+      headers,
+    })
       .then((res) =>
         res.json().then(async (response) => {
           console.log(response, "data");
@@ -78,7 +78,6 @@ function getAllNews(a, b, e) {
   };
 }
 
-
 function getAllNewsSorted(e) {
   // console.log(e, 'action ')
   return (dispatch) => {
@@ -87,11 +86,10 @@ function getAllNewsSorted(e) {
     fetch(`${api}news/SaylaniNewsGet?date=${e}`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, 'action undefined response')
+          console.log(response, "action undefined response");
           if (response.result.length === 0) {
-            console.log('action empty response')
-          }
-          else {
+            console.log("action empty response");
+          } else {
             console.log(response.result, "data");
             dispatch({ type: ActionTypes.SaylaniNewsGet, payload: response });
           }
@@ -102,7 +100,6 @@ function getAllNewsSorted(e) {
       });
   };
 }
-
 
 function bookAllCat() {
   return (dispatch) => {
@@ -135,7 +132,6 @@ function bookAllSpec() {
   };
 }
 
-
 const onlineMasajidForm = (obj) => {
   return async function (dispatch) {
     try {
@@ -165,12 +161,11 @@ const onlineMasajidForm = (obj) => {
         .catch((err) => {
           console.log(err, "err");
         });
-
     } catch (err) {
       console.error(err);
     }
-  }
-}
+  };
+};
 
 const onlineQuranPakForm = (obj) => {
   return async function (dispatch) {
@@ -201,11 +196,21 @@ const onlineQuranPakForm = (obj) => {
         .catch((err) => {
           console.log(err, "err");
         });
-
     } catch (err) {
       console.error(err);
     }
-  }
-}
+  };
+};
 
-export { homeSlideImg, homeIntroGet, projectCat, bookAllCat, onlineMasajidForm, onlineQuranPakForm, bookAllSpec, getAllNews, getAllNewsSorted, fieldEmpty };
+export {
+  homeSlideImg,
+  homeIntroGet,
+  projectCat,
+  bookAllCat,
+  onlineMasajidForm,
+  onlineQuranPakForm,
+  bookAllSpec,
+  getAllNews,
+  getAllNewsSorted,
+  fieldEmpty,
+};

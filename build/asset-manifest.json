@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.553acb53.chunk.css",
-    "main.js": "/static/js/main.d10e887e.chunk.js",
-    "main.js.map": "/static/js/main.d10e887e.chunk.js.map",
+    "main.css": "/static/css/main.2c6e7965.chunk.css",
+    "main.js": "/static/js/main.9472b067.chunk.js",
+    "main.js.map": "/static/js/main.9472b067.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a7aa9b7e.js",
     "runtime-main.js.map": "/static/js/runtime-main.a7aa9b7e.js.map",
     "static/css/2.cc3a8c3e.chunk.css": "/static/css/2.cc3a8c3e.chunk.css",
-    "static/js/2.56cfbd64.chunk.js": "/static/js/2.56cfbd64.chunk.js",
-    "static/js/2.56cfbd64.chunk.js.map": "/static/js/2.56cfbd64.chunk.js.map",
+    "static/js/2.31bd13bc.chunk.js": "/static/js/2.31bd13bc.chunk.js",
+    "static/js/2.31bd13bc.chunk.js.map": "/static/js/2.31bd13bc.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2bfb1f61fcdc44531b99a057d92c42bf.js": "/precache-manifest.2bfb1f61fcdc44531b99a057d92c42bf.js",
+    "precache-manifest.bc6ff168ec0185cd53dfd2c1d23cb53d.js": "/precache-manifest.bc6ff168ec0185cd53dfd2c1d23cb53d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.cc3a8c3e.chunk.css.map": "/static/css/2.cc3a8c3e.chunk.css.map",
-    "static/css/main.553acb53.chunk.css.map": "/static/css/main.553acb53.chunk.css.map",
-    "static/js/2.56cfbd64.chunk.js.LICENSE.txt": "/static/js/2.56cfbd64.chunk.js.LICENSE.txt",
+    "static/css/main.2c6e7965.chunk.css.map": "/static/css/main.2c6e7965.chunk.css.map",
+    "static/js/2.31bd13bc.chunk.js.LICENSE.txt": "/static/js/2.31bd13bc.chunk.js.LICENSE.txt",
     "static/media/BloodBankBack.jpg": "/static/media/BloodBankBack.363563f0.jpg",
     "static/media/Dastarkhwan.jpg": "/static/media/Dastarkhwan.1b4b5955.jpg",
     "static/media/Dr.jpg": "/static/media/Dr.9001dde4.jpg",
@@ -48,7 +48,6 @@
     "static/media/event.png": "/static/media/event.3e91de26.png",
     "static/media/event4.jpg": "/static/media/event4.ea738ee6.jpg",
     "static/media/faisalabad.jpg": "/static/media/faisalabad.51d5640e.jpg",
-    "static/media/familyadop.jpg": "/static/media/familyadop.6643387f.jpg",
     "static/media/govern.jpg": "/static/media/govern.35703379.jpg",
     "static/media/gray-background.jpg": "/static/media/gray-background.518e8651.jpg",
     "static/media/hazrat.jpg": "/static/media/hazrat.4a78913c.jpg",
@@ -61,7 +60,6 @@
     "static/media/islamabad.jpg": "/static/media/islamabad.88c3e860.jpg",
     "static/media/istikhara.jpg": "/static/media/istikhara.5084e0f9.jpg",
     "static/media/itback.png": "/static/media/itback.62990281.png",
-    "static/media/jobbank.jpg": "/static/media/jobbank.895568cd.jpg",
     "static/media/style.css": "/static/media/jobrecru.07d8e735.jpg",
     "static/media/kamiyabJawab.jpeg": "/static/media/kamiyabJawab.750fe1b5.jpeg",
     "static/media/karachi.jpg": "/static/media/karachi.29b2e1a0.jpg",
@@ -86,7 +84,6 @@
     "static/media/slider2.png": "/static/media/slider2.764acc9e.png",
     "static/media/uma.jpg": "/static/media/uma.6ef14c6c.jpg",
     "static/media/water.jpeg": "/static/media/water.ad1b7b1c.jpeg",
-    "static/media/wedding.jpg": "/static/media/wedding.99479a8a.jpg",
     "static/media/welfare.jpg": "/static/media/welfare.ea760c43.jpg",
     "static/media/zeeshan.png": "/static/media/zeeshan.662c4891.png",
     "static/media/ziaKhan.png": "/static/media/ziaKhan.6f58b863.png"
@@ -94,8 +91,8 @@
   "entrypoints": [
     "static/js/runtime-main.a7aa9b7e.js",
     "static/css/2.cc3a8c3e.chunk.css",
-    "static/js/2.56cfbd64.chunk.js",
-    "static/css/main.553acb53.chunk.css",
-    "static/js/main.d10e887e.chunk.js"
+    "static/js/2.31bd13bc.chunk.js",
+    "static/css/main.2c6e7965.chunk.css",
+    "static/js/main.9472b067.chunk.js"
   ]
 }

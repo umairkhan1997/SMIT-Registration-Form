@@ -5,6 +5,7 @@ import logo from "../../images/logo.png";
 // import "../App.css";
 import "./Home.css";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 export default class MainHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -18,9 +19,9 @@ export default class MainHeader extends React.Component {
           <div className="container">
             <nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light">
               <div>
-                <a class="navbar-brand" href="#">
+                <Link class="navbar-brand" to="/">
                   <img src={logo} width="180px" />
-                </a>
+                </Link>
               </div>
               <button
                 class="navbar-toggler"
@@ -40,41 +41,45 @@ export default class MainHeader extends React.Component {
                 >
                   <ul class="navbar-nav mr-auto">
                     <li className="nav-item">
-                      <a className="nav-link" href="/" style={{ fontSize: 14 }}>
+                      <Link className="nav-link" to="/">
                         HOME
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        href="projects"
-                        style={{ fontSize: 14 }}
-                      >
+                      <Link className="nav-link" to="/projects">
                         PROJECTS
-                      </a>
+                      </Link>
                     </li>
 
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link"
-                        href="/media"
+                        to="/media"
                         tabindex="-1"
                         aria-disabled="true"
-                        style={{ fontSize: 14 }}
                       >
                         MEDIA
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link"
-                        href="/contact"
+                        to="/contact"
                         tabindex="-1"
                         aria-disabled="true"
-                        style={{ fontSize: 14 }}
                       >
                         CONTACT
-                      </a>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link"
+                        to="/news"
+                        tabindex="-1"
+                        aria-disabled="true"
+                      >
+                        NEWS
+                      </Link>
                     </li>
 
                     <li className="nav-item">
@@ -92,12 +97,11 @@ export default class MainHeader extends React.Component {
                           backgroundColor: "#f8f9fa",
                           border: 0,
                           marginTop: 5,
-                          fontSize: 14,
                         }}
                       >
-                        <a href="Donation" className="donate">
+                        <Link to="Donation" className="donate">
                           DONATE
-                        </a>
+                        </Link>
                       </button>
                       {/* <button className='donate' >Donate</button> */}
                     </li>

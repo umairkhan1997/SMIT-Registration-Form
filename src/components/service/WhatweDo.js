@@ -6,8 +6,7 @@ import HajjPdf from "../HajjPdf/HAJJ.pdf";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./service.css";
 import { connect } from "react-redux";
-import { projectCat } from "../../Redux/action/homeAction"
-
+import { projectCat } from "../../Redux/action/homeAction";
 
 const history = createBrowserHistory();
 class WhatweDo extends React.Component {
@@ -47,14 +46,15 @@ class WhatweDo extends React.Component {
     this.props.projectCat();
   }
 
-
   render() {
     return (
       <div className="container-fluid" style={{ backgroundColor: "white" }}>
         <div className="container">
           <div className="row py-2">
-            <div className="col-md-6 " >
-              <h2 className="text-left">Saylani Welfare Projects</h2>
+            <div className="col-md-6 ">
+              <h2 className="text-left">
+                Current and Upcomming projects of Saylani
+              </h2>
             </div>
             <div className="col-md-6 text-right ">
               <input
@@ -100,24 +100,32 @@ class WhatweDo extends React.Component {
             <h1 className="Heading">What We Do</h1>
           </div> */}
           <div className="row">
-            {this.props.projectCats.filter(name => { return name.proName.toLowerCase().indexOf(this.state.searchItem.toLowerCase()) >= 0 }).map(filteredName => {
-              return filteredName.view ?
-                <div className="col-md-3 col-sm-6 col-sm-6 p-3">
-                  <Zoom>
-                    <Link to={filteredName.proHrefVal}>
-                      <div className="small text-center">
-                        <div className="p-3">
-                          <p style={{ fontSize: "3.5em" }}>
-                            <i class={filteredName.proIcon}></i>
-                          </p>
+            {this.props.projectCats
+              .filter((name) => {
+                return (
+                  name.proName
+                    .toLowerCase()
+                    .indexOf(this.state.searchItem.toLowerCase()) >= 0
+                );
+              })
+              .map((filteredName) => {
+                return filteredName.view ? (
+                  <div className="col-md-3 col-sm-6 col-sm-6 p-3">
+                    <Zoom>
+                      <Link to={filteredName.proHrefVal}>
+                        <div className="small text-center">
+                          <div className="p-3">
+                            <p style={{ fontSize: "3.5em" }}>
+                              <i class={filteredName.proIcon}></i>
+                            </p>
+                          </div>
+                          <p className="proName"> {filteredName.proName}</p>
                         </div>
-                        <p className="proName">  {filteredName.proName}</p>
-                      </div>
-                    </Link>
-                  </Zoom>
-                </div>
-                : null
-            })}
+                      </Link>
+                    </Zoom>
+                  </div>
+                ) : null;
+              })}
             {/* <div className="col-md-3 col-sm-6 col-sm-6 p-3">
               <Zoom>
                 <Link to="/welfare">

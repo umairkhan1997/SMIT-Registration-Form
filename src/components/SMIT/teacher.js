@@ -113,25 +113,19 @@ export default class SMITeacher extends React.Component {
               {
                 name: "Faizan",
                 image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
+                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/82205223_2607819862782931_5465057404091629568_o.jpg?_nc_cat=108&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeHbGNJhXqac2gh-9-q9uOFPyrJP-zjsxU7Ksk_7OOzFTorHZvNhGuob8yc_LCTRf5gQt00-HdC6qfPB3zxM5a4T&_nc_ohc=ywhkwgIzXiMAX-nszcd&_nc_oc=AQk-6Wa9faSa3NNOm17ghS9zY7JsB3MEU-QpvXvK2v8bicFpdzE06oD0x8UzeARbFPg&_nc_ht=scontent.fkhi1-1.fna&oh=162c27c542a6aa77e995c7b600574bd2&oe=60077156",
                 course: "Graphic Designing",
               },
               {
                 name: "Kamran Polani",
                 image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
+                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-1/p200x200/66209558_10157244437296411_1288543493639110656_n.jpg?_nc_cat=103&ccb=2&_nc_sid=7206a8&_nc_eui2=AeGcLVS0n0oOVKFb_9wdcRkWpMSR3u8f8LWkxJHe7x_wtWzePh547MrvqTzBNpSNXRrjArfiiQcFqj9CqFz9AYGv&_nc_ohc=dBXpPa1z0TMAX9pAFnj&_nc_ht=scontent.fkhi1-1.fna&tp=6&oh=6b4c33e24d13b2a69507a3414a58d968&oe=60078055",
                 course: "Graphic Designing",
               },
               {
                 name: "Shehroz",
                 image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
-                course: "Graphic Designing",
-              },
-              {
-                name: "Bilal Akbar",
-                image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
+                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/72711380_2470503836513423_7118485290380951552_o.jpg?_nc_cat=109&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeFuVQ_FHhr_t1Pku7bgWtaAkq_6Wx6p4MySr_pbHqngzFtCA0yFrWwXERSVKf_RZj_FhhYz5V2CN6z_2i0F2Xwe&_nc_ohc=qx8FMkc-JhkAX-U20P0&_nc_ht=scontent.fkhi1-1.fna&oh=2a4131c70b0dbe21f5e58864d2bb04e5&oe=60093C40",
                 course: "Graphic Designing",
               },
             ],
@@ -157,7 +151,7 @@ export default class SMITeacher extends React.Component {
               {
                 name: "Faheem",
                 image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
+                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17991378_1345745118853903_648977904176183725_o.jpg?_nc_cat=110&ccb=2&_nc_sid=174925&_nc_eui2=AeGXkPo6_p1XgxkjoHTNU3AA3zKkX0pWIqLfMqRfSlYiogb77ExqLE4k0WWWIGFxvyLopezDwTW5Y9MCnmQ4ggP4&_nc_ohc=RvKeJOGI-fQAX86vRCi&_nc_ht=scontent.fkhi1-1.fna&oh=1749d26e2ece8a6a326ea4a2d32962bb&oe=60079444",
                 course: "CCNA R&S",
               },
               {
@@ -175,7 +169,7 @@ export default class SMITeacher extends React.Component {
               {
                 name: "Mohsin Zubair",
                 image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
+                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/32561158_1809038489188418_4337523571430522880_n.jpg?_nc_cat=100&ccb=2&_nc_sid=174925&_nc_eui2=AeEU8Ntj2-xvA5OSlIaob7GtlT_3kZBoT0OVP_eRkGhPQx63TtVrxPfK1bc9ien8jWVwi9gPuxc4MVhbBpQKpNi8&_nc_ohc=_0joNOofvb0AX9XE2rq&_nc_ht=scontent.fkhi1-1.fna&oh=a941bc16837df097e613a5cb6ee514f5&oe=600756BD",
                 course: "CCNA R&S",
               },
             ],

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bba745540775d509fe1545691a35681",
+    "revision": "43b9ae7fffd53c88b93c4c35da320ce4",
     "url": "/index.html"
   },
   {
-    "revision": "e7e63617c65bf1fd5224",
+    "revision": "e3674b92836102ea6477",
     "url": "/static/css/2.cc3a8c3e.chunk.css"
   },
   {
-    "revision": "d5e73215be2b06f9b8b7",
-    "url": "/static/css/main.553acb53.chunk.css"
+    "revision": "e02f95cc53b65f616217",
+    "url": "/static/css/main.2c6e7965.chunk.css"
   },
   {
-    "revision": "e7e63617c65bf1fd5224",
-    "url": "/static/js/2.56cfbd64.chunk.js"
+    "revision": "e3674b92836102ea6477",
+    "url": "/static/js/2.31bd13bc.chunk.js"
   },
   {
     "revision": "2eddb67ef1bca39d1a1585286f55bb01",
-    "url": "/static/js/2.56cfbd64.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.31bd13bc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5e73215be2b06f9b8b7",
-    "url": "/static/js/main.d10e887e.chunk.js"
+    "revision": "e02f95cc53b65f616217",
+    "url": "/static/js/main.9472b067.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -162,10 +162,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "51d5640eb77d626e2eb20c62686c25a7",
     "url": "/static/media/faisalabad.51d5640e.jpg"
-  },
-  {
-    "revision": "6643387f12667d1fe7189af9cb27255d",
-    "url": "/static/media/familyadop.6643387f.jpg"
   },
   {
     "revision": "3570337975319aa087fe39904bbfc1a1",
@@ -318,10 +314,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ad1b7b1c00ac2a4a08a219d714e6fa56",
     "url": "/static/media/water.ad1b7b1c.jpeg"
-  },
-  {
-    "revision": "99479a8a7c55be06cf586e7bf011302c",
-    "url": "/static/media/wedding.99479a8a.jpg"
   },
   {
     "revision": "ea760c4307aeab89ec7d3a32530ef5d8",
