@@ -3,8 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./istikhara.css";
 import istikhara from "../../images/istikhara.jpg";
+import { connect } from "react-redux";
+import { istikharaAdd } from "../../Redux/action/Istikhara";
 
-export default class IstikharaForm extends React.Component {
+
+class IstikharaForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,16 +40,70 @@ export default class IstikharaForm extends React.Component {
       thisfemName,
       femMotName,
       contact, istDetail } = this.state;
-    // if (this.checkField(istType)) {
-    this.setState({
-      checkistType: this.checkField(istType) ? true : false,
-      checkmaleName: this.checkField(maleName) ? true : false,
-      checkmaleMotName: this.checkField(maleMotName) ? true : false,
-      checkthisfemName: this.checkField(thisfemName) ? true : false,
-      checkfemMotName: this.checkField(femMotName) ? true : false,
-      checkcontact: this.checkField(contact) ? true : false,
-      checkistDetail: this.checkField(istDetail) ? true : false
-    })
+    const obj = {
+      istType, maleName, maleMotName,
+      thisfemName,
+      femMotName,
+      contact, istDetail
+    };
+    if (this.checkField(istType)) {
+      this.setState({
+        checkistType: true
+      })
+    }
+    else if (this.checkField(maleName)) {
+      this.setState({
+        checkmaleName: true
+      })
+    }
+    else if (this.checkField(maleMotName)) {
+      this.setState({
+        checkmaleMotName: true
+      })
+    }
+    else if (this.checkField(thisfemName)) {
+      this.setState({
+        checkthisfemName: true
+      })
+    }
+    else if (this.checkField(femMotName)) {
+      this.setState({
+        checkfemMotName: true
+      })
+    }
+    else if (this.checkField(contact)) {
+      this.setState({
+        checkcontact: true
+      })
+    }
+    else if (this.checkField(istDetail)) {
+      this.setState({
+        checkistDetail: true
+      })
+    }
+    else {
+      alert('Submited')
+      this.props.istikharaAdd(obj);
+      this.setState({
+        istType: null, maleName: "", maleMotName: "",
+        thisfemName: "",
+        femMotName: "",
+        contact: "", istDetail: ""
+      })
+      console.log('done asdhaskj')
+    }
+
+    // this.setState({
+    //   checkistType: this.checkField(istType),
+    //   checkmaleName: this.checkField(maleName),
+    //   checkmaleMotName: this.checkField(maleMotName),
+    //   checkthisfemName: this.checkField(thisfemName),
+    //   checkfemMotName: this.checkField(femMotName),
+    //   checkcontact: this.checkField(contact),
+    //   checkistDetail: this.checkField(istDetail)
+    // })
+
+
 
   }
 
@@ -67,6 +124,7 @@ export default class IstikharaForm extends React.Component {
       checkcontact,
       checkistDetail
     } = this.state;
+    console.log(istType, 'istTypeistTypeistType')
     return (
       <div>
         <div className="back" style={{ backgroundImage: `url(${istikhara})` }}>
@@ -83,6 +141,8 @@ export default class IstikharaForm extends React.Component {
                 <option selected>Select Istikhara Type</option>
                 <option value="Shadi">Shadi</option>
                 <option value="Karobar">Karobar</option>
+                <option value="Jadu">Jadu</option>
+                <option value="Jadu">Safar</option>
                 <option value="Jadu">Jadu</option>
               </select>
             </div>
@@ -177,7 +237,7 @@ export default class IstikharaForm extends React.Component {
               <label for="contact" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
                 Contact
                 </label>
-              <input id="contact" className="inp" placeholder="Contact"
+              <input type="number" id="contact" className="inp inputNumber" placeholder="Contact"
                 value={contact}
                 onChange={e => this.setState({ contact: e.target.value })}
               />
@@ -218,3 +278,16 @@ export default class IstikharaForm extends React.Component {
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    istikharaAdd: (a) => {
+      dispatch(istikharaAdd(a));
+    }
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(IstikharaForm);

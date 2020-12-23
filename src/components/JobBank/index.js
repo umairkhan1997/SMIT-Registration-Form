@@ -18,10 +18,10 @@ export default class JobBank extends React.Component {
     };
   }
   jobFormPg = () => {
-    this.props.history.push('/job')
+    history.push('/job')
   }
   render() {
-
+    console.log(this.props)
     return (
       <div className="">
         {/* POPULAR JOBS START =============>>>>>>>>*/}
@@ -145,7 +145,7 @@ export default class JobBank extends React.Component {
             style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
 
           >
-            <a href="/job" style={{ display: 'flex', alignItems: 'center' }}>
+            <a onClick={this.jobFormPg} style={{ display: 'flex', alignItems: 'center' }}>
               <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
                 <i class="fab fa-wpforms"></i>
               </p>
