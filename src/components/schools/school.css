@@ -1,6 +1,6 @@
 .teacherCard:hover .teacherDetail {
   /* border: 1.2px solid dodgerblue; */
-  color: dodgerblue;
+  color: #0267b4;
 }
 .teacherCard {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -25,33 +25,47 @@
     #ffffff
   );
 }
-.facultyDetail{
-    /* background-color: dodgerblue; */
-    color: transparent;
-    overflow: hidden;
+.facultyDetail {
+  /* background-color: dodgerblue; */
+  color: transparent;
+  overflow: hidden;
 }
-.facultyCard{
-    background-size: cover;
-    border-radius: 8px;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, .5);
-}
-.facultyCard:hover .facultyDetail{
-    color: white;
-    background-color: rgba(0, 128, 255, 0.5);
-}
-.locationCard{
-  background-color: dodgerblue;
+.facultyCard {
+  background-size: cover;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+}
+.facultyCard:hover .facultyDetail {
+  color: white;
+  background-color: rgba(2, 103, 180, 0.5);
+}
+.locationCard {
+  background-color: #0267b4;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   padding: 25px;
   color: white;
   text-align: left;
   cursor: pointer;
 }
-.locationCard:hover{
-  background-color: rgba(30, 144, 255, .8);
+.locationCard:hover {
+  background-color: rgba(2, 103, 180, 0.8);
 }
 
-.mainDiv{
-  color: #0267b4
+.mainDiv {
+  color: #0267b4;
+}
+.qty {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: #0267b4;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 8px;
+  text-align: center;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }

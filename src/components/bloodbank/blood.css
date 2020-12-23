@@ -1,29 +1,40 @@
-.aims{
-    box-shadow: 0 10px 15px rgba(0, 0, 0, .6);
-    border: 2px solid dodgerblue;
-    color: dodgerblue;
-    font-size: 1.4em;
-    border-radius: 8px;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    align-items: center;
+.aims {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  border: 2px solid dodgerblue;
+  color: dodgerblue;
+  font-size: 1.4em;
+  border-radius: 8px;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.topRight{
-    border-radius: 20px 0 0 0;
+.topRight {
+  border-radius: 20px 0 0 0;
 }
-.topLeft{
-    border-radius: 0 20px 0 0;
+.topLeft {
+  border-radius: 0 20px 0 0;
 }
-.bottomRight{
-    border-radius: 0 0 0 20px;
+.bottomRight {
+  border-radius: 0 0 0 20px;
 }
-.bottomLeft{
-    border-radius: 0 0 20px 0;
+.bottomLeft {
+  border-radius: 0 0 20px 0;
 }
 
-.backImg{
-    background-image: '../../images/BloodBankBack.jpg';
-    background-repeat: no-repeat;
-    background-size: cover;
+.backImg {
+  background-image: "../../images/BloodBankBack.jpg";
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.donorbtn {
+  padding: 15px;
+  font-size: 1.5em;
+  margin: 10px 0;
+  border: none;
+  background-color: #8c1515;
+  color: white;
+}
+.donorbtn:focus {
+  outline: none;
 }
