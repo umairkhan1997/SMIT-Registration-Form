@@ -6,12 +6,14 @@ import logo from "../../images/logo.png";
 import "./Home.css";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
-export default class MainHeader extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+import { createBrowserHistory } from "history";
+const history = createBrowserHistory();
 
+export default class MainHeader extends React.Component {
+  donatepage = () => {
+    console.log("props", this.props.history);
+    history.push("/Donate");
+  };
   render() {
     return (
       <header className="bg-light border-bottom sticky-top">
@@ -92,16 +94,11 @@ export default class MainHeader extends React.Component {
                       >
                         Donate
                       </a> */}
-                      <button
-                        style={{
-                          backgroundColor: "#f8f9fa",
-                          border: 0,
-                          marginTop: 5,
-                        }}
-                      >
-                        <Link to="Donation" className="donate">
+                      <button className="donate" onClick={this.donatepage}>
+                        Donate
+                        {/* <Link to="Donation" className="donate">
                           DONATE
-                        </Link>
+                        </Link> */}
                       </button>
                       {/* <button className='donate' >Donate</button> */}
                     </li>

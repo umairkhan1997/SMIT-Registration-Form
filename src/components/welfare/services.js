@@ -1,4 +1,5 @@
 import React from "react";
+import "./welfare.css";
 
 export default class Services extends React.Component {
   constructor(props) {
@@ -79,20 +80,19 @@ export default class Services extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container py-5">
           <div className="Heading">
             <h2>Services</h2>
           </div>
           <div className="row">
             {this.state.srvices.map((e, i) => {
               return (
-                <div key={i} className="col-md-3">
+                <div key={i} className="col-md-3 serviceCardMain">
                   <div
                     style={{
-                      backgroundColor: "rgb(245 245 245)",
                       color: "#0066b3",
                     }}
-                    className="p-3 text-center shadow m-2 rounded"
+                    className="p-3 serviceCard text-center m-2"
                   >
                     <div>
                       <p style={{ fontSize: "2.5em" }}>

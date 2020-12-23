@@ -5,6 +5,8 @@ import MainHeader from "../components/Home/MainHeader";
 import welfare from "../images/welfare.jpg";
 import Services from "../components/welfare/services";
 import DataTable from "../components/welfare/data";
+import Steps from "../components/welfare/steps";
+import Footer from "../components/Footer";
 
 export default class Welfare extends React.Component {
   constructor(props) {
@@ -18,6 +20,8 @@ export default class Welfare extends React.Component {
         <MainHeader />
         <DataTable />
         <Services />
+        <Steps />
+        <Footer />
       </div>
     );
   }
