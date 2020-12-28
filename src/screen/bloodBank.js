@@ -10,6 +10,7 @@ import BloodBankAims from "../components/bloodbank/bloadbankaims";
 import Footer from "../components/Footer";
 import BloodBankEvent from "../components/bloodbank/event";
 import Cover from "../components/bloodbank/cover";
+import Instruction from "../components/bloodbank/instruction";
 export default class BloodBank extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ export default class BloodBank extends React.Component {
       <div>
         <MainHeader />
         <Cover />
+        <Instruction />
         <BloodBankServices />
         <BloodBankEvent />
         <BloodBankAims />

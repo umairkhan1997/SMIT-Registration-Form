@@ -9,7 +9,7 @@ export default class Cover extends React.Component {
           className="py-5 back"
           style={{
             backgroundImage:
-              'url("https://assets.lybrate.com/q_auto:eco,f_auto,w_450/eagle/uploads/2205d15fe15d38f26e2fd5a86aae7697/eac636.jpg")',
+              'url("https://www.choc.org/wp/wp-content/uploads/2014/09/blooddonorservices.png")',
           }}
         >
           <div className="container py-5">

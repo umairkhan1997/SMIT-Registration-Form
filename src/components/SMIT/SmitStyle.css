@@ -45,14 +45,14 @@
   margin-bottom: -30px;
   margin-left: 20px;
   display: inline-block;
-  border: 3px solid lightgrey;
+  /* border: 1px solid lightgrey; */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 .facultyName {
   display: inline-block;
 }
 .facultyContent {
-  background-color: dodgerblue;
+  background-color: #0066b3;
   color: white;
   text-align: justify;
 }
@@ -149,8 +149,15 @@
   padding: 10px;
 }
 .workshopCard {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
   padding: 10px;
   margin: 12px 0;
-  /* height: 100%; */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  border-radius: 8px;
+  vertical-align: middle;
+  border: 2.5px solid white;
+}
+.workshopCard:hover {
+  border: 2.5px solid #1371b8;
 }

@@ -16,6 +16,7 @@ export default class Cover extends React.Component {
       cityDetails: {
         karachi: {
           announcement: Announcement,
+          alt: "",
         },
         hyderabad: {
           announcement: hyd,
@@ -34,23 +35,27 @@ export default class Cover extends React.Component {
     const { cityDetails } = this.state;
     return (
       <div>
-        <div style={{ backgroundImage: `url(${cover})` }} className="back p-5">
-          <div className="container py-5">
-            <div className="coverText row">
-              <div className="col-md-6">
-                <img
-                  src={
-                    city == "Hyderabad"
-                      ? cityDetails.hyderabad.announcement
-                      : cityDetails.karachi.announcement
-                  }
-                  width="100%"
-                />
+        <div style={{ backgroundImage: `url(${cover})` }} className="back">
+          <div>
+            <div>
+              <div className="coverText row">
+                <div className="col-md-6">
+                  <img
+                    src={
+                      city == "Hyderabad"
+                        ? cityDetails.hyderabad.announcement
+                        : cityDetails.karachi.announcement
+                    }
+                    width="100%"
+                  />
+                </div>
+                <div className="col-md-6">
+                  <h1 style={{ fontSize: "3em" }}>{this.props.city}</h1>
+                  <Link className="text-white" to="/apply">
+                    <CustomBtn value="Apply" />
+                  </Link>
+                </div>
               </div>
-              <h1 style={{ fontSize: "3em" }}>{this.props.city}</h1>
-              <Link className="text-white" to="/apply">
-                <CustomBtn value="Apply" />
-              </Link>
             </div>
           </div>
         </div>

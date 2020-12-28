@@ -285,40 +285,26 @@ export default class Workshop extends React.Component {
   }
   render() {
     return (
-      <div className="container my-5">
-        <div className="Heading">
-          <h2>Workshop</h2>
-        </div>
-        <div className="row">
-          {/* {this.state.workshops.map((e, i) => {
-            return (
-              <div className="col-md-3">
-                <a target="_blank" href={e.videoLink}>
-                  <img
-                    style={{
-                      borderRadius: "8px",
-                      boxShadow: "0 10px 12px rgba(0,0,0,.2)",
-                    }}
-                    src={e.thuunbnail}
-                    width="100%"
-                  />
-                </a>
-              </div>
-            );
-          })} */}
-          {this.state.workshop.map((e, i) => {
-            return (
-              <div key={i} className="col-md-4">
-                <a href={e.Link} target="_blank">
-                  <div className="workshopCard">
-                    <h3>{e.Name}</h3>
-                    <p>by</p>
-                    <h5>{e.TeacherHostName}</h5>
-                  </div>
-                </a>
-              </div>
-            );
-          })}
+      <div className="py-5 my-5 bg-light">
+        <div className="container my-5">
+          <div className="Heading">
+            <h2>Workshop</h2>
+          </div>
+          <div className="row">
+            {this.state.workshop.map((e, i) => {
+              return (
+                <div key={i} className="col-md-4 py-3">
+                  <a className="workshopLink" href={e.Link} target="_blank">
+                    <div className="workshopCard my-2 text-center">
+                      <h4>{e.Name}</h4>
+                      <p>by</p>
+                      <p>{e.TeacherHostName}</p>
+                    </div>
+                  </a>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

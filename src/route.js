@@ -40,6 +40,7 @@ import Education from "./screen/education";
 import UploadImage from "./screen/UploadImage";
 import JobForm from "./screen/jobform";
 import CourseRegistration from "./screen/courseregistration";
+import OverView from "./screen/overview";
 
 export default function MyRoute() {
   return (
@@ -84,6 +85,7 @@ export default function MyRoute() {
       <Route path="/adminro" component={ROPlantAdmin} />
       <Route path="/adminwelfare" component={WelfareAdmin} />
       <Route path="/uploadImage" component={UploadImage} />
+      <Route path="/overview" component={OverView} />
     </Router>
   );
 }
