@@ -13,7 +13,7 @@ export default class Cover extends React.Component {
           }}
         >
           <div className="container py-5">
-            <h1 style={{ fontSize: "4em" }}>
+            <h1 className="custom-underline">
               Your Blood can bring smile in other person face
             </h1>
             <button className="donorbtn">Become a Donor</button>

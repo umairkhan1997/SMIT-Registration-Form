@@ -27,6 +27,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.custom-underline {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 3em;
+  border-bottom: 3px solid #8c1515;
+}
 .donorbtn {
   padding: 15px;
   font-size: 1.5em;
@@ -37,4 +43,12 @@
 }
 .donorbtn:focus {
   outline: none;
+}
+.bloodServiceCard {
+  /* color: #8c1515; */
+  font-size: 1.3em;
+  height: 100%;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
 }

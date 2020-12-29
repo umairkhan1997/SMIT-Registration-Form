@@ -4,8 +4,6 @@ import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
-import water from "../images/water.jpeg";
-import roplant from "../images/ROPLANT.jpg";
 import ROLocation from "../components/RO_Plant/rolocation";
 import ProjectCost from "../components/RO_Plant/projectcost";
 import TableData from "../components/RO_Plant/tableData";

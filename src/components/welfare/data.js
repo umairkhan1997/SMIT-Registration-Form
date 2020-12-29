@@ -8,10 +8,18 @@ export default class DataTable extends React.Component {
   render() {
     return (
       <div>
-        <div className="py-5 text-white" style={{ backgroundColor: "#0066b3" }}>
+        <div
+          className="py-5 text-white"
+          style={{
+            backgroundColor: "#0066b3",
+            height: "90vh",
+            overflow: "scroll",
+            overflowX: "hidden",
+          }}
+        >
           <div className="container">
             <div className="row">
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>Wedding Help</p>
                 </div>
@@ -19,10 +27,16 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  105,025,000
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  6971
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>Wedding Furniture</p>
                 </div>
@@ -30,10 +44,16 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  98,000,000
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  7140
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>Wedding Food</p>
                 </div>
@@ -41,10 +61,16 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  7,420,775
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  55458
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>Wedding Cash</p>
                 </div>
@@ -52,10 +78,16 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  21420850
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  2826
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>Rozgar</p>
                 </div>
@@ -63,10 +95,16 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  36915470
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  2603
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>Education</p>
                 </div>
@@ -74,10 +112,16 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  173224833
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  149978
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>Constructions</p>
                 </div>
@@ -85,21 +129,101 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  130931117
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  588
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
-                  <p style={{ fontSize: "1.2em" }}>House Rent</p>
+                  <p style={{ fontSize: "1.2em" }}>Qarze Hasana</p>
                 </div>
                 <h3
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  45087786
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  2448
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Utility Bills</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  12336387
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  815
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Rashan</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  22,030,400
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  62894
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Help</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  61,681,285
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  6866
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Help</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  4,555,200
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  322
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
                   <p style={{ fontSize: "1.2em" }}>House Advance</p>
                 </div>
@@ -107,23 +231,129 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  316,000
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  23
                 </h3>
               </div>
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
-                  <p style={{ fontSize: "1.2em" }}>Qarz Ki Adaigi</p>
+                  <p style={{ fontSize: "1.2em" }}>Loan Payment</p>
                 </div>
                 <h3
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  5190000
+                  191,080
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  9
                 </h3>
               </div>
-              <div className="col-md-6 py-3">
+              <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
-                  <p style={{ fontSize: "1.2em" }}>
+                  <p style={{ fontSize: "1.2em" }}>House Hold Expanses</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  13,920
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  1
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Tajheez-o-Tadfeen</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  20,500
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  3
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Travling Expance</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  43,600
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  3
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Medical</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  60,500
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  7
+                </h3>
+              </div>
+              <div className="col-md-3 py-3 py-5">
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "1.2em" }}>Special Rashan</p>
+                </div>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  17,500
+                </h3>
+                <h3
+                  className="p-3 shadow rounded text-center"
+                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+                >
+                  1339
+                </h3>
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "0",
+                  backgroundColor: "#0066b3",
+                  width: "100%",
+                }}
+                className="py-3 px-5 border-top border-white"
+              >
+                <div className="p-2 text-center">
+                  <p style={{ fontSize: "2em" }}>
                     Total Welfare Amount 2014 to 2020
                   </p>
                 </div>
@@ -131,7 +361,7 @@ export default class DataTable extends React.Component {
                   className="p-3 shadow rounded text-center"
                   style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                 >
-                  519000000000000
+                  719,101,123.00
                 </h3>
               </div>
             </div>

@@ -41,12 +41,14 @@ import UploadImage from "./screen/UploadImage";
 import JobForm from "./screen/jobform";
 import CourseRegistration from "./screen/courseregistration";
 import OverView from "./screen/overview";
+import SBIL from "./screen/sbil";
 
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
       <Route path="/news" component={News} />
+      <Route path="/sbil" component={SBIL} />
       <Route path="/apply" component={CourseRegistration} />
       <Route path="/job" component={JobForm} />
       <Route path="/bloodbank" component={BloodBank} />
@@ -56,7 +58,6 @@ export default function MyRoute() {
       <Route path="/media" component={Media} />
       <Route path="/contact" component={Contact} />
       <Route path="/bookStore" component={BookStoreScreen} />
-      <Route path="/chairmenmessage" component={ChairmenMessage} />
       <Route path="/smit" component={Smit} />
       <Route path="/welfare" component={Welfare} />
       <Route path="/medical" component={Medical} />
