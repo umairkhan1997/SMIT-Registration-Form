@@ -5,7 +5,7 @@ import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
 import HomeContact from "../components/Home/HomeContact";
 import ContactForm from "../components/contact/contactForm";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ export default class Contact extends React.Component {
         <MainHeader />
         <ContactForm />
         <div className=" pt-5 pb-5 bg-light">
-            <HomeContact />
+          <HomeContact />
         </div>
         <div className="bg-image">
           <iframe
@@ -31,7 +31,7 @@ export default class Contact extends React.Component {
             tabindex="0"
           ></iframe>
         </div>
-      <Footer />
+        <Footer />
       </div>
     );
   }

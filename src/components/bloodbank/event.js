@@ -24,7 +24,7 @@ export default class BloodBankEvent extends React.Component {
           <div className="row">
             <div className="col-md-6">
               <div className="displayheading">
-                <h2>Well Equiped Lab</h2>
+                <h2 className="dataHeading">Well Equiped Lab</h2>
               </div>
             </div>
             <div className="col-md-6">

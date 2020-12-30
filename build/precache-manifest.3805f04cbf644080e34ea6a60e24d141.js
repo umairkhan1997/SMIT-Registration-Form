@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f266180df2b77ac6f77db762d6633b8",
+    "revision": "c3a74772d9c93071f4c2c6768a8c3047",
     "url": "/index.html"
   },
   {
-    "revision": "eb2d63dc0576878b71cb",
+    "revision": "96e1a2429fba9dbd5f8d",
     "url": "/static/css/2.cc3a8c3e.chunk.css"
   },
   {
-    "revision": "5ad3b7d34a0c5a034043",
-    "url": "/static/css/main.0feb0a5a.chunk.css"
+    "revision": "31c58560db023d1913e6",
+    "url": "/static/css/main.7d7c926f.chunk.css"
   },
   {
-    "revision": "eb2d63dc0576878b71cb",
-    "url": "/static/js/2.9c29a80d.chunk.js"
+    "revision": "96e1a2429fba9dbd5f8d",
+    "url": "/static/js/2.68b0e0f6.chunk.js"
   },
   {
-    "revision": "382e664ec687f00cb423455a3dcd76d9",
-    "url": "/static/js/2.9c29a80d.chunk.js.LICENSE.txt"
+    "revision": "4865b66e7c0f7b46b6107944a9a448ba",
+    "url": "/static/js/2.68b0e0f6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5ad3b7d34a0c5a034043",
-    "url": "/static/js/main.372ded9e.chunk.js"
+    "revision": "31c58560db023d1913e6",
+    "url": "/static/js/main.b551c128.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -52,12 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/MAH-K-ORAD-O-WAZAIF.98c713eb.jpg"
   },
   {
-    "revision": "a2e38a567db1c21075ee3dc76f695d03",
-    "url": "/static/media/ROPLANT.a2e38a56.jpg"
-  },
-  {
     "revision": "adc8797f81040e0173b780e7aefd5307",
     "url": "/static/media/ROback.adc8797f.jpg"
+  },
+  {
+    "revision": "408b36ded89de3423313cb5e8146fd57",
+    "url": "/static/media/acca.408b36de.jpeg"
   },
   {
     "revision": "aa079bc9d4fa07b299a82060435509bb",
@@ -86,10 +86,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "863bf58175293bc23d91e173f1743948",
     "url": "/static/media/apptafseer.863bf581.jpeg"
-  },
-  {
-    "revision": "6fa3a5353b9954a5e25dbc931a103c45",
-    "url": "/static/media/artificialintelligence.6fa3a535.png"
   },
   {
     "revision": "a444cfb2948065acfea33832868639cf",
@@ -128,6 +124,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bookStore.08ebc3a7.jpg"
   },
   {
+    "revision": "078ea53dc37207cc30038808bd707afd",
+    "url": "/static/media/caicap.078ea53d.jpeg"
+  },
+  {
+    "revision": "d55abd37d171ea95a765f776f88d0955",
+    "url": "/static/media/cia.d55abd37.jpeg"
+  },
+  {
+    "revision": "2de0a961e053ed4c528119d2d300684e",
+    "url": "/static/media/cima.2de0a961.jpeg"
+  },
+  {
     "revision": "aa14c26dd236c1a7647954f3e41c7d4f",
     "url": "/static/media/ciscoLogo.aa14c26d.png"
   },
@@ -144,24 +152,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/course1.8a85d781.jpeg"
   },
   {
-    "revision": "86bf36ec709497b6399e1566025e564d",
-    "url": "/static/media/datascience.86bf36ec.png"
+    "revision": "36e2376c3258a1683be50ecf0e16fd45",
+    "url": "/static/media/cover2.36e2376c.jpeg"
   },
   {
     "revision": "f06fec917c877de700552988526dadd5",
     "url": "/static/media/ehkam.f06fec91.jpg"
   },
   {
-    "revision": "3e91de265a88c8ba198a7822138e7a6d",
-    "url": "/static/media/event.3e91de26.png"
-  },
-  {
-    "revision": "ea738ee674ef524bc18423fa79194838",
-    "url": "/static/media/event4.ea738ee6.jpg"
-  },
-  {
     "revision": "51d5640eb77d626e2eb20c62686c25a7",
     "url": "/static/media/faisalabad.51d5640e.jpg"
+  },
+  {
+    "revision": "5316f2d80ce1a00599a024c43e064ff8",
+    "url": "/static/media/fia.5316f2d8.jpeg"
   },
   {
     "revision": "3570337975319aa087fe39904bbfc1a1",
@@ -182,6 +186,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c3f18c11b703a379cd7f2096bf9e14fd",
     "url": "/static/media/hyderabadannouncment.c3f18c11.jpg"
+  },
+  {
+    "revision": "9e100233f307105fb24e0bcc6269fa58",
+    "url": "/static/media/icaew.9e100233.png"
+  },
+  {
+    "revision": "007d128f1b0b8fdf06b7e672be9421c3",
+    "url": "/static/media/icmap.007d128f.jpeg"
   },
   {
     "revision": "d301bea13c59277dd55b9c07ef56b2d7",
@@ -240,10 +252,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/masajid.71973c87.jpg"
   },
   {
-    "revision": "8d9f6d575736abe7cb88cc9b4c39930b",
-    "url": "/static/media/mastergraphics.8d9f6d57.png"
-  },
-  {
     "revision": "72d79c42ba096308ff9b89d62164a089",
     "url": "/static/media/media.72d79c42.jpg"
   },
@@ -296,12 +304,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/sindboard.1d60d937.png"
   },
   {
-    "revision": "0b2249545732d31001e60f364337e81d",
-    "url": "/static/media/sirAli.0b224954.jpg"
-  },
-  {
     "revision": "764acc9e321d35dcaa96a6bee60eba73",
     "url": "/static/media/slider2.764acc9e.png"
+  },
+  {
+    "revision": "838afe0dbb224eec4f4e8aa3b6ac5295",
+    "url": "/static/media/teacher1.838afe0d.png"
+  },
+  {
+    "revision": "5ba8df1b293eb0e24a034b854fc306c3",
+    "url": "/static/media/teacher2.5ba8df1b.png"
+  },
+  {
+    "revision": "f3cd1cdf40f83010f4837e28b1c39c3f",
+    "url": "/static/media/teacher3.f3cd1cdf.png"
+  },
+  {
+    "revision": "0de04b855ffe35a6844be0ce77476712",
+    "url": "/static/media/teacher4.0de04b85.png"
+  },
+  {
+    "revision": "33f523767f8aee3dc5e494500c8d2180",
+    "url": "/static/media/teacher5.33f52376.png"
+  },
+  {
+    "revision": "32cfa0f2f7bb9d78ad1cce9a30c2ffb1",
+    "url": "/static/media/teacher6.32cfa0f2.png"
   },
   {
     "revision": "6ef14c6c36d9b4e50a63a3d3a40b4e17",
@@ -310,10 +338,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7c95898db0f22bd2e6f2e7b463286ff9",
     "url": "/static/media/upco.7c95898d.jpg"
-  },
-  {
-    "revision": "ad1b7b1c00ac2a4a08a219d714e6fa56",
-    "url": "/static/media/water.ad1b7b1c.jpeg"
   },
   {
     "revision": "ea760c4307aeab89ec7d3a32530ef5d8",

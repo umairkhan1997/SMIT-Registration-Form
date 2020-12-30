@@ -15,11 +15,17 @@ export default class BloodBankServices extends React.Component {
     return (
       <div>
         <div className="backImg bg-image">
-          <div className='pt-5 pb-5' style={{ backgroundColor: "rgba(0,0,0,.5)" }}>
+          <div
+            className="pt-5 pb-5"
+            style={{ backgroundColor: "rgba(0,0,0,.5)" }}
+          >
             <div className="container pt-5 pb-5">
               <div className="row">
                 <div className="col-md-12 p-3">
-                  <div className="aims bg-primary text-white">
+                  <div
+                    style={{ backgroundColor: "maroon" }}
+                    className="aims text-white"
+                  >
                     <div className=" p-5">
                       <h3>
                         Aims and objectives of Saylani Blood Bank & Thalassemia

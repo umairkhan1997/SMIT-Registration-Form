@@ -352,16 +352,17 @@ export default class DataTable extends React.Component {
                 }}
                 className="py-3 px-5 border-top border-white"
               >
-                <div className="p-2 text-center">
-                  <p style={{ fontSize: "2em" }}>
-                    Total Welfare Amount 2014 to 2020
-                  </p>
-                </div>
-                <h3
-                  className="p-3 shadow rounded text-center"
-                  style={{ backgroundColor: "rgba(0,0,0,.5)" }}
-                >
-                  719,101,123.00
+                <h3 className="text-center">
+                  Total Welfare Amount 2014 to 2020 ={" "}
+                  <span
+                    className="p-3 px-5 shadow rounded text-center"
+                    style={{
+                      backgroundColor: "rgba(0,0,0,.5)",
+                      display: "inline-block",
+                    }}
+                  >
+                    719,101,123
+                  </span>
                 </h3>
               </div>
             </div>

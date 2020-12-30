@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./contact.css";
 import logo from "../../images/logo.png";
-import Fade from 'react-reveal'
+import Fade from "react-reveal";
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -14,8 +14,11 @@ export default class ContactForm extends React.Component {
     return (
       <div>
         <div className="bg-light pt-5 pb-5">
-          <div className="p-5 bg-primary text-white rounded">
-            <div className='container py-5'>
+          <div
+            style={{ backgroundColor: "#70a7d3" }}
+            className="p-5 text-white rounded"
+          >
+            <div className="container py-5">
               <h2>Get In Touch</h2>
             </div>
           </div>
@@ -58,13 +61,23 @@ export default class ContactForm extends React.Component {
                   </div>
                 </form>
               </div>
-              <div style={{ backgroundColor: "#103f6e" }} className="col-md-4">
+              <div
+                style={{
+                  backgroundImage:
+                    "url('https://www.dentonsgmbh.com/-/media/images/website/background-images/landing-pages/whats-different-about-dentons/contact-us/contact3.jpg')",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="col-md-4"
+              >
                 <div className="p-5">
                   <img src={logo} width="180px" />
                 </div>
                 <div className="p-5">
                   <div className="text-white text-left">
-                    <p style={{ fontSize: '1.2em' }}>Saylani Welfare Head Office</p>
+                    <p style={{ fontSize: "1.2em" }}>
+                      Saylani Welfare Head Office
+                    </p>
                     <p>
                       <i class="fas fa-map-marker-alt"></i> A-25, Bahadurabad
                       Chowrangi Karachi, Pakistan
@@ -72,13 +85,18 @@ export default class ContactForm extends React.Component {
                     <div className="pt-2 pb-2">
                       <p>
                         <i class="fas fa-phone-alt"></i>{" "}
-                        <a style={{ color: 'white' }} href="tel:111729526">UAN: 111-729-526</a>
+                        <a style={{ color: "white" }} href="tel:111729526">
+                          UAN: 111-729-526
+                        </a>
                       </p>
                     </div>
                     <div className="pt-2 pb-2">
                       <p>
                         <i class="fas fa-globe"></i>{" "}
-                        <a style={{ color: 'white' }} href="tel:+0092-2134130786-90">
+                        <a
+                          style={{ color: "white" }}
+                          href="tel:+0092-2134130786-90"
+                        >
                           (+0092-213) 4130786-90
                         </a>
                       </p>
@@ -86,7 +104,10 @@ export default class ContactForm extends React.Component {
                     <div className="pt-2 pb-2">
                       <p>
                         <i class="fas fa-envelope"></i>{" "}
-                        <a style={{ color: 'white' }} href="mailto:info@saylaniwelfare.com">
+                        <a
+                          style={{ color: "white" }}
+                          href="mailto:info@saylaniwelfare.com"
+                        >
                           info@saylaniwelfare.com
                         </a>
                       </p>

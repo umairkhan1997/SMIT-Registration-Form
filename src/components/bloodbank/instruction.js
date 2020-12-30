@@ -10,7 +10,9 @@ export default class Instruction extends React.Component {
           <div className="container py-5">
             <div className="row">
               <div className="col-md-6">
-                <h2>Requirements by blood donation type</h2>
+                <h2 className="dataHeading">
+                  Requirements by blood donation type
+                </h2>
                 <p>
                   These are some of the requirements donors must meet to be
                   eligible to donate blood based on their donation type.
