@@ -6,10 +6,13 @@ import operator from "../../images/operator.png";
 import manager from "../../images/manager.png";
 import taxiDriver from "../../images/taxi-driver.png";
 import JobContact from "./JobContact";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import history from '../../history';
+import { connect } from "react-redux";
+import { JobBankHuntGet, jobBankFormGet } from "../../Redux/action/JobBankAction";
 
-export default class JobBank extends React.Component {
+
+class JobBank extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +21,11 @@ export default class JobBank extends React.Component {
     };
   }
   jobFormPg = () => {
-    history.push('/job')
+    this.props.history.push('/job')
+  }
+  componentDidMount() {
+    this.props.JobBankHuntGet()
+    this.props.jobBankFormGet()
   }
   render() {
     console.log(this.props)
@@ -29,29 +36,17 @@ export default class JobBank extends React.Component {
 
         <div className="container my-4">
           <div className="row">
+
             <div className="col-md-6">
               <table className="showtable">
-                <tr>
-                  <td>JobHunt</td>
-                  <td>Stats</td>
-                </tr>
-                <tr>
-                  <td>Vision</td>
-                  <td>5000</td>
-                </tr>
-
-                <tr>
-                  <td>Jobs Placed</td>
-                  <td>500</td>
-                </tr>
-                <tr>
-                  <td>Hired Candidates</td>
-                  <td>400</td>
-                </tr>
-                <tr>
-                  <td>Companies</td>
-                  <td>200</td>
-                </tr>
+                {this.props.JobBankHuntGets && this.props.JobBankHuntGets.map((i) => {
+                  return (
+                    <tr>
+                      <td>{i.catName}</td>
+                      <td>{i.count}</td>
+                    </tr>
+                  )
+                })}
               </table>
             </div>
             <div className="col-md-6 p-2">
@@ -68,6 +63,34 @@ export default class JobBank extends React.Component {
         </div>
 
 
+        {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
+        <div className="container mt-5 d-flex justify-content-center">
+
+          <div
+            className="col-md-6 shadow  small "
+            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
+
+          >
+            <a onClick={this.jobFormPg} style={{ display: 'flex', alignItems: 'center' }}>
+              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
+                <i class="fab fa-wpforms"></i>
+              </p>
+              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Job Seeker ?</p>
+            </a>
+          </div>
+          <div
+            className="col-md-6 shadow  small "
+            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
+
+          >
+            <a href="/job" style={{ display: 'flex', alignItems: 'center' }}>
+              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
+                <i class="fab fa-wpforms"></i>
+              </p>
+              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Recruiter ?</p>
+            </a>
+          </div>
+        </div>
 
         <div>
           <h3 className="my-4 text-center mt-5" style={{ color: "#0267b4" }}>
@@ -137,34 +160,6 @@ export default class JobBank extends React.Component {
           </div>
         </div>
 
-        {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div className="container mt-5 d-flex justify-content-center">
-
-          <div
-            className="col-md-6 shadow  small "
-            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
-
-          >
-            <a onClick={this.jobFormPg} style={{ display: 'flex', alignItems: 'center' }}>
-              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
-                <i class="fab fa-wpforms"></i>
-              </p>
-              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Job Seeker ?</p>
-            </a>
-          </div>
-          <div
-            className="col-md-6 shadow  small "
-            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
-
-          >
-            <a href="/job" style={{ display: 'flex', alignItems: 'center' }}>
-              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
-                <i class="fab fa-wpforms"></i>
-              </p>
-              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Recruiter ?</p>
-            </a>
-          </div>
-        </div>
 
 
         {
@@ -190,66 +185,26 @@ export default class JobBank extends React.Component {
                   <th >Full Name</th>
                   <th>Occupation</th>
                   <th>Age</th>
-                  <th>Status</th>
+                  <th>Gender</th>
+                  <th>Residence</th>
+                  {/* <th>Status</th> */}
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Kamran</td>
-                  <td>Electrician</td>
-                  <td>23</td>
-                  <td>
+                {this.props.jobBankFormGets && this.props.jobBankFormGets.map((i) => {
+                  return (
+                    <tr>
+                      <td>{i.fullName}</td>
+                      <td>{i.occupation}</td>
+                      <td>{i.age}</td>
+                      <td>{i.gender}</td>
+                      <td>{i.placeOfBirth}</td>
+                      {/* <td>
                     <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Kamran</td>
-                  <td>Electrician</td>
-                  <td>23</td>
-                  <td>
-                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Kamran</td>
-                  <td>Electrician</td>
-                  <td>23</td>
-                  <td>
-                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Kamran</td>
-                  <td>Electrician</td>
-                  <td>23</td>
-                  <td>
-                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Kamran</td>
-                  <td>Electrician</td>
-                  <td>23</td>
-                  <td>
-                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Kamran</td>
-                  <td>Electrician</td>
-                  <td>23</td>
-                  <td>
-                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Kamran</td>
-                  <td>Electrician</td>
-                  <td>23</td>
-                  <td>
-                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td>
-                </tr>
+                  </td> */}
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
 
@@ -262,3 +217,21 @@ export default class JobBank extends React.Component {
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    JobBankHuntGets: state.reducerJobBank.JobBankHuntGets,
+    jobBankFormGets: state.reducerJobBank.jobBankFormGets
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    JobBankHuntGet: () => {
+      dispatch(JobBankHuntGet());
+    },
+    jobBankFormGet: () => {
+      dispatch(jobBankFormGet());
+    },
+  };
+}
+export default withRouter(connect(mapStateToProp, mapDispatchToProp)(JobBank)); 

@@ -185,34 +185,6 @@ class ROLocation extends React.Component {
                   </div>
                 );
               })}
-              {/* {this.state.underConstructionPlants.map((item, i) => {
-                return (
-                  <div className="col-md-3 p-3 RoCard">
-                    <div
-                      style={{
-                        height: "200px",
-                        backgroundColor: "rgb(230,230,230)",
-                      }}
-                      className="p-3 shadow rounded location"
-                    >
-                      <h4>{item.area}</h4>
-                      <p className="text-muted">Under Construction</p>
-                      <div
-                        style={{
-                          // color: "#0066b3",
-                          position: "absolute",
-                          top: 15,
-                          left: 20,
-                          color: "grey",
-                          fontSize: "1.5em",
-                        }}
-                      >
-                        <i class="fas fa-tools"></i>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })} */}
             </div>
           </div>
           <div

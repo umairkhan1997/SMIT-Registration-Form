@@ -92,19 +92,6 @@ class IstikharaForm extends React.Component {
       })
       console.log('done asdhaskj')
     }
-
-    // this.setState({
-    //   checkistType: this.checkField(istType),
-    //   checkmaleName: this.checkField(maleName),
-    //   checkmaleMotName: this.checkField(maleMotName),
-    //   checkthisfemName: this.checkField(thisfemName),
-    //   checkfemMotName: this.checkField(femMotName),
-    //   checkcontact: this.checkField(contact),
-    //   checkistDetail: this.checkField(istDetail)
-    // })
-
-
-
   }
 
   render() {
