@@ -4,6 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import "./contact.css";
 import logo from "../../images/logo.png";
 import Fade from "react-reveal";
+import Button from "../../smallcomponents/mybtn";
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class ContactForm extends React.Component {
       <div>
         <div className="bg-light pt-5 pb-5">
           <div
-            style={{ backgroundColor: "#70a7d3" }}
+            style={{ backgroundColor: "#0066b3" }}
             className="p-5 text-white rounded"
           >
             <div className="container py-5">
@@ -56,6 +57,9 @@ export default class ContactForm extends React.Component {
                           className="inp"
                           rows="8"
                         ></textarea>
+                      </div>
+                      <div className="col-md-12 pt-4">
+                        <Button value="Send" otherClass="btn-block" />
                       </div>
                     </div>
                   </div>

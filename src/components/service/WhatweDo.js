@@ -46,24 +46,26 @@ class WhatweDo extends React.Component {
     this.props.projectCat();
   }
 
-
-
   render() {
     return (
-      <div className="container-fluid" style={{ backgroundColor: "white" }}>
-        <div className="container">
-          <div className="row py-2">
-            <div className="col-md-6 ">
-              <h2 className="text-left">
-                Current and Upcomming projects of Saylani
-              </h2>
-            </div>
-            <div className="col-md-6 text-right ">
-              <input
-                className="search"
-                onChange={(e) => this.setState({ searchItem: e.target.value })}
-                placeholder="Search Services Here..."
-              />
+      <div style={{ backgroundColor: "white" }}>
+        <div style={{ backgroundColor: "#f5f8ff", color: "#0066b3" }}>
+          <div className="container py-5">
+            <div className="row py-2">
+              <div className="col-md-6 ">
+                <h2 className="text-left">
+                  Current and Upcomming projects of Saylani
+                </h2>
+              </div>
+              <div className="col-md-6 text-right ">
+                <input
+                  className="search"
+                  onChange={(e) =>
+                    this.setState({ searchItem: e.target.value })
+                  }
+                  placeholder="Search Services Here..."
+                />
+              </div>
             </div>
           </div>
 
@@ -97,7 +99,7 @@ class WhatweDo extends React.Component {
           </ul> */}
         </div>
 
-        <div className="container">
+        <div className="container py-5">
           {/* <div className="p-3">
             <h1 className="Heading">What We Do</h1>
           </div> */}

@@ -85,7 +85,7 @@
   color: black;
 }
 .back {
-  background-image: url("./images/back.jpg");
+  /* background-image: url("./images/back.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
