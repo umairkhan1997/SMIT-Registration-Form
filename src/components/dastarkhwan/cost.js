@@ -13,55 +13,73 @@ export default class Cost extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='container'>
-          <div className="displayheading">
-            <h2 className='font-weight-bold'>Donate In Langarkhana</h2>
+      <div
+        style={{
+          backgroundImage:
+            "url('https://www.saylaniwelfare.com/public_html/images/saylani/gallery/food.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div
+          style={{ backgroundColor: "rgba(255,255,255,.7)" }}
+          className="py-5"
+        >
+          <div className="container">
+            <div className="displayheading">
+              <h2 className="text-dark">Cost</h2>
+            </div>
+            <div className="bg-white rounded shadow p-3">
+              <table
+                className="text-left mt-5 mb-5 table table-hover table-responsive-sm"
+                width="100%"
+              >
+                <thead>
+                  <tr>
+                    <td>Description</td>
+                    <td>Per Day</td>
+                    <td>Per Month</td>
+                    <td>Per Year</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cost Per Person</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>No Of People</td>
+                    <td>1200</td>
+                    <td>36000</td>
+                    <td>438000</td>
+                  </tr>
+                  <tr>
+                    <td>Meal 1 for Lunch</td>
+                    <td>PKR 30000 (50x600)</td>
+                    <td>PKR 900000 (50x18000)</td>
+                    <td>PKR 10800000 (50x216000)</td>
+                  </tr>
+                  <tr>
+                    <td>Meal 2 for Dinner</td>
+                    <td>PKR 30000 (50x600)</td>
+                    <td>PKR 900000 (50x18000)</td>
+                    <td>PKR 10800000 (50x216000)</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Total</td>
+                    <td>PKR 60000</td>
+                    <td>PKR 1800000</td>
+                    <td>PKR 21600000</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
           </div>
-          <table className="text-left mt-5 mb-5 table-responsive-sm" width="100%">
-            <thead className="tableHead">
-              <tr>
-                <td>Description</td>
-                <td>Per Day</td>
-                <td>Per Month</td>
-                <td>Per Year</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="tableList">
-                <td>Cost Per Person</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-              </tr>
-              <tr className="tableList">
-                <td>No Of People</td>
-                <td>1200</td>
-                <td>36000</td>
-                <td>438000</td>
-              </tr>
-              <tr className="tableList">
-                <td>Meal 1 for Lunch</td>
-                <td>PKR 30000 (50x600)</td>
-                <td>PKR 900000 (50x18000)</td>
-                <td>PKR 10800000 (50x216000)</td>
-              </tr>
-              <tr className="tableList">
-                <td>Meal 2 for Dinner</td>
-                <td>PKR 30000 (50x600)</td>
-                <td>PKR 900000 (50x18000)</td>
-                <td>PKR 10800000 (50x216000)</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr className="tableList">
-                <td>Total</td>
-                <td>PKR 60000</td>
-                <td>PKR 1800000</td>
-                <td>PKR 21600000</td>
-              </tr>
-            </tfoot>
-          </table>
         </div>
       </div>
     );

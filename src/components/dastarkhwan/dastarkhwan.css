@@ -1,77 +1,63 @@
-.tableHead{
-    color: white;
-    background-color: #1371b8;
+.tableHead {
+  color: white;
+  background-color: #1371b8;
 }
-th{
-    padding: 7px;
+th {
+  padding: 7px;
 }
-td{
-    padding: 7px;
+td {
+  padding: 7px;
 }
-.tableList{
-    border-bottom: 1px solid lightgrey;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    cursor: pointer;
+.tableList {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  cursor: pointer;
 }
-.tableList:hover{
-    border-radius: 5px;
-    background-color: rgb(230, 230, 230);
+.tableList:hover {
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
 }
-tfoot{
-    font-weight: bold;
+tfoot {
+  font-weight: bold;
 }
-.round{
-    background-color: rgb(240, 240, 240);
-    color: #1371b8;
-    width: 200px;
-    height: 200px;
-    padding: 70px 0;
-    border-radius: 10px;
-    box-shadow: 0 10px 12px rgba(0,0,0,.2);
-    margin: auto;
-    text-align: center;
+
+.Name {
+  font-size: 2em;
+  color: #1371b8;
+  padding: 10px;
+  border: 2px solid #1371b8;
+  margin-top: 20px;
+  text-align: center;
 }
-.Name{
-    font-size: 2em;
-    color: #1371b8;
-    padding: 10px;
-    border: 2px solid #1371b8;
-    margin-top: 20px;
-    text-align: center;
+.full {
+  /* height: 100vh; */
+  background-color: #f5f8ff;
 }
-.full{
-    height: 100vh;
-    background-color: rgb(30, 30, 30);
+.largeHeading {
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  color: black;
 }
-.largeHeading{
-    padding: 20px;
-    font-size: 2em;
-    text-align: center;
+.largeCounter {
+  display: block;
+  font-size: 2em;
+  color: #0066b3;
 }
-.largeCounter{
-    display: block;
-    font-size: 2em;
-    color: dodgerblue;
+.roundImage {
+  border-radius: 10px;
+  box-shadow: -12px 12px 15px grey;
 }
-.roundImage{
-    border-radius: 10px;
-    box-shadow: -12px 12px 15px grey;
+.showTable {
+  border-spacing: 15px 15px;
+  border-collapse: separate;
 }
-.showTable{
-    border-spacing: 15px 15px;
-    border-collapse: separate;
-}
-.showTable td{
-    padding: 15px;
-    background-color: #096bb5;
-    color: white;
-    border-spacing:5px 10px;
-    box-shadow: 0 5px 8px rgba(0,0,0,.2);
-    border-radius: 5px;
-}
-.dataTable{
-    /* border: 1.5px solid #096bb5; */
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0,0,0,.2);
+.showTable td {
+  padding: 15px;
+  background-color: #096bb5;
+  color: white;
+  border-spacing: 5px 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
