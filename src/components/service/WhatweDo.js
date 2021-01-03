@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserHistory } from "history";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import Zoom from "react-reveal/Zoom";
 import HajjPdf from "../HajjPdf/HAJJ.pdf";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -45,7 +45,9 @@ class WhatweDo extends React.Component {
   componentDidMount() {
     this.props.projectCat();
   }
-
+  chView = (a) => {
+    this.props.history.push(a)
+  }
 
 
   render() {
@@ -114,7 +116,8 @@ class WhatweDo extends React.Component {
                 return filteredName.view ? (
                   <div className="col-md-3 col-sm-6 col-sm-6 p-3">
                     <Zoom>
-                      <Link to={filteredName.proHrefVal}>
+                      {/* <div onClick={() => { this.chView(`${filteredName.proHrefVal}`) }}> */}
+                      <div onClick={() => this.props.history.push(filteredName.proHrefVal)}>
                         <div className="small text-center">
                           <div className="p-3">
                             <p style={{ fontSize: "3.5em" }}>
@@ -123,7 +126,7 @@ class WhatweDo extends React.Component {
                           </div>
                           <p className="proName"> {filteredName.proName}</p>
                         </div>
-                      </Link>
+                      </div>
                     </Zoom>
                   </div>
                 ) : null;
@@ -352,4 +355,4 @@ function mapDispatchToProp(dispatch) {
     },
   };
 }
-export default connect(mapStateToProp, mapDispatchToProp)(WhatweDo);
+export default withRouter(connect(mapStateToProp, mapDispatchToProp)(WhatweDo));

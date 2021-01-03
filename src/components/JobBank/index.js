@@ -192,7 +192,7 @@ class JobBank extends React.Component {
               </thead>
               <tbody>
                 {this.props.jobBankFormGets && this.props.jobBankFormGets.map((i) => {
-                  return (
+                  return i.favourite ? (
                     <tr>
                       <td>{i.fullName}</td>
                       <td>{i.occupation}</td>
@@ -203,7 +203,7 @@ class JobBank extends React.Component {
                     <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
                   </td> */}
                     </tr>
-                  )
+                  ) : null
                 })}
               </tbody>
             </table>

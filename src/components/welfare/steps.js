@@ -17,21 +17,21 @@ export default class Steps extends React.Component {
               <div className="bg-white p-5">
                 <span className="qtyn">1</span>
                 <h3>Written Application</h3>
-                <p>Written Application is required</p>
+                <p>Complete written application with all objectives.</p>
               </div>
             </div>
             <div className="col-md-4 py-5">
               <div className="bg-white p-5">
                 <span className="qtyn">2</span>
                 <h3>Investigation</h3>
-                <p>Written Application is required</p>
+                <p>Investigation and inquiry is mandatory to verification.</p>
               </div>
             </div>
             <div className="col-md-4 py-5">
               <div className="bg-white p-5">
                 <span className="qtyn">3</span>
                 <h3>Welfare Help</h3>
-                <p>Written Application is required</p>
+                <p>Needy people will be helped after that process.</p>
               </div>
             </div>
           </div>

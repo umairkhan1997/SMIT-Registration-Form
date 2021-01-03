@@ -1,7 +1,7 @@
 .aims {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
-  border: 2px solid dodgerblue;
-  color: dodgerblue;
+  border: 2px solid maroon;
+  color: maroon;
   font-size: 1.4em;
   border-radius: 8px;
   background-color: white;
@@ -27,6 +27,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.custom-underline {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 3em;
+  border-bottom: 3px solid #8c1515;
+}
 .donorbtn {
   padding: 15px;
   font-size: 1.5em;
@@ -37,4 +43,35 @@
 }
 .donorbtn:focus {
   outline: none;
+}
+.bloodServiceCard {
+  color: #8c1515;
+  font-size: 1.5em;
+  height: 100%;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
+}
+.dataVal {
+  padding: 15px;
+  background-color: rgb(140, 21, 21);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+.dataHeading {
+  border-bottom: 2px solid #8c1515;
+  color: #8c1515;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.bloodVideo {
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.backImg {
+  background-image: url("https://1.bp.blogspot.com/-5P8eMdBmREQ/Uut1CCwM_II/AAAAAAAAJeI/zQLOQpmoe8w/s1600/goals-dart-bullseye.jpg");
+  background-position: center;
+  background-attachment: fixed;
 }

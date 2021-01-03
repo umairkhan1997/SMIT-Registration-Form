@@ -34,14 +34,14 @@ export default class TableData extends React.Component {
             <table className="showtable">
               <tr>
                 <td>Vision</td>
-                <td>1000000 Developers</td>
+                <td>.1 Million Developers</td>
               </tr>
               <tr>
                 <td>Number of trained Students</td>
                 <td>125000+</td>
               </tr>
               <tr>
-                <td>Number of Inrolled Students</td>
+                <td>Number of Enrolled Students</td>
                 <td>55000+</td>
               </tr>
               <tr>

@@ -8,7 +8,6 @@ import SmitContact from "../components/SMIT/SmitContact";
 import Faculty from "../components/SMIT/faculty";
 import Collaboration from "../components/SMIT/collaboration";
 import SMITeacher from "../components/SMIT/teacher";
-import SmitEvents from "../components/SMIT/smitevents";
 import Cover from "../components/SMIT/cover";
 import Modal from "react-awesome-modal";
 import "../App.css";
@@ -26,7 +25,7 @@ export default class Smit extends React.Component {
     super(props);
     this.state = {
       visible: false,
-      city: "",
+      city: "Karachi",
     };
   }
   componentDidMount() {
@@ -35,7 +34,7 @@ export default class Smit extends React.Component {
     });
   }
   render() {
-    console.log(this.state.city);
+
     return (
       <div>
         <Modal
@@ -120,7 +119,7 @@ export default class Smit extends React.Component {
         <MainCourses />
         <SMITeacher />
         <Collaboration />
-        <SmitContact />
+        {/* <SmitContact /> */}
         <Footer />
       </div>
     );

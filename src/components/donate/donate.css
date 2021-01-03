@@ -39,31 +39,8 @@
   width: 100%;
   text-align: left;
 }
-.bankDetails thead {
-  background-color: dodgerblue;
-  color: white;
-}
 
-@media only screen and (max-width: 600px) {
-  .bankDetails thead {
-    position: absolute;
-    left: 0;
-  }
-  .bankDetails tbody {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .bankDetails th,
-  .bankDetails td {
-    width: 100%;
-    display: block;
-  }
-  .bankDetails tr {
-    display: inline-block;
-  }
-}
-.selectBtn{
+.selectBtn {
   cursor: pointer;
   padding: 10px;
   border: 1.5px solid #1371b8;
@@ -72,11 +49,17 @@
   color: white;
   border-radius: 5px;
   text-align: center;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
-.selectBtn:hover{
+.selectBtn:hover {
   border: 1.5px solid #1371b8;
   box-shadow: 0 12px 15px lightgrey;
   background-color: rgb(250, 250, 250);
+  color: #1371b8;
+}
+.bankTable th {
+  color: black;
+}
+.bankTable td {
   color: #1371b8;
 }

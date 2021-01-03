@@ -25,9 +25,9 @@ export default class Medical extends React.Component {
         <Table />
         <MedicalServices />
         <MedicalOPD />
-        <MedicalClinics />
-        <Internship />
-        <MedicalContact />
+        {/* <MedicalClinics /> */}
+        {/* <Internship /> */}
+        {/* <MedicalContact /> */}
         <Footer />
       </div>
     );

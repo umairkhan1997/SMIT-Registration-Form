@@ -15,13 +15,8 @@ export default class Faculty extends React.Component {
     return (
       <div>
         <div className="container">
-          <div className="displayheading">
-            <h2
-              style={{ color: "#1371b8" }}
-              className="mt-5 ml-4 font-weight-bold"
-            >
-              Faculty
-            </h2>
+          <div className="Heading">
+            <h2>Faculty</h2>
           </div>
         </div>
         <div className="container">
@@ -32,7 +27,7 @@ export default class Faculty extends React.Component {
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h3 style={{ color: "#1371b8" }}>Sir Zia Khan</h3>
+                  <h3 style={{ color: "#0066b3" }}>Sir Zia Khan</h3>
                   <p className="text-muted">(Faculty Head)</p>
                 </div>
               </Fade>
@@ -52,17 +47,15 @@ export default class Faculty extends React.Component {
               </Fade>
             </div>
           </div>
-          
+
           <div className="text-left pt-3 pb-3">
             <div>
               <Fade left>
-                <img className="facultyImg " src={alimughal} />
+                <img className="facultyImg" src={alimughal} />
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2 style={{ color: "#1371b8" }} className="font-weight-bold">
-                    Muhammad Ali Mughal
-                  </h2>
+                  <h2 style={{ color: "#0066b3" }}>Muhammad Ali Mughal</h2>
                   <p className="text-muted">(Manager SMIT)</p>
                 </div>
               </Fade>

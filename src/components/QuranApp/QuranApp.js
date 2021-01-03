@@ -3,23 +3,31 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./QuranApp.css";
 import MainHeader from "../Home/MainHeader";
 import Footer from "../Footer";
-
+import { withRouter } from "react-router-dom";
 import imgOne from "../../images/apptafseer.jpeg";
 import imgTwo from "../../images/al_quran.png";
-export default class WhatweDo extends React.Component {
+import { QuranAppAndroidGet, QuranAppIosGet } from '../../Redux/action/QuranApp';
+import { connect } from "react-redux";
+class QuranApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
+  componentDidMount() {
+    this.props.QuranAppAndroidGet();
+    this.props.QuranAppIosGet()
+  }
+
   render() {
+    console.log(this.props, 'this.props')
     return (
       <div>
         <MainHeader />
         <div style={{ backgroundImage: `url(${imgOne})` }} className="back">
           <div style={{ backgroundColor: "rgba(0,0,0,.5)" }}>
             <div className="container py-5">
-              <h1 className="py-3 text-white">Online Quran Pak Tafteesh</h1>
+              <h1 className="py-3 text-white text-center">Online Quran Pak Tafteesh</h1>
             </div>
           </div>
         </div>
@@ -56,56 +64,30 @@ export default class WhatweDo extends React.Component {
             width="100%"
           >
             <thead className="tableHead">
-              <tr>
-                <th>Logo</th>
-                <th>App Name</th>
-                <th>Publisher</th>
-                <th>Current Version</th>
-                <th>Completed Date</th>
-                <th>Status</th>
+              <tr >
+                <th className="text-light">Logo</th>
+                <th className="text-light">App Name</th>
+                <th className="text-light">Publisher</th>
+                <th className="text-light">Current Version</th>
+                <th className="text-light">Completed Date</th>
+                <th className="text-light">Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
+              {this.props.QuranAppAndroidGets && this.props.QuranAppAndroidGets.map((item, i) => {
+                return (
+                  <tr className="tableList">
+                    <td>
+                      <img src={item.logo} width="30px" height="30px" />
+                    </td>
+                    <td>{item.appName}</td>
+                    <td>{item.publisher}</td>
+                    <td>{item.curVer}</td>
+                    <td>{item.compDate}</td>
+                    <td>{item.status}</td>
+                  </tr>
+                )
+              })}
             </tbody>
             <tfoot></tfoot>
           </table>
@@ -117,55 +99,29 @@ export default class WhatweDo extends React.Component {
           >
             <thead className="tableHead">
               <tr>
-                <th>Logo</th>
-                <th>App Name</th>
-                <th>Publisher</th>
-                <th>Current Version</th>
-                <th>Completed Date</th>
-                <th>Status</th>
+                <th className="text-light">Logo</th>
+                <th className="text-light">App Name</th>
+                <th className="text-light">Publisher</th>
+                <th className="text-light">Current Version</th>
+                <th className="text-light">Completed Date</th>
+                <th className="text-light">Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
-              <tr className="tableList">
-                <td>
-                  <img src={imgTwo} width="30px" height="30px" />
-                </td>
-                <td>Al Quran-ul-Kareem</td>
-                <td>Dawateislami</td>
-                <td>4.2</td>
-                <td>15/11/2018</td>
-                <td>No Mistake Found</td>
-              </tr>
+              {this.props.QuranAppIosGets && this.props.QuranAppIosGets.map((item, i) => {
+                return (
+                  <tr className="tableList">
+                    <td>
+                      <img src={item.logo} width="30px" height="30px" />
+                    </td>
+                    <td>{item.appName}</td>
+                    <td>{item.publisher}</td>
+                    <td>{item.curVer}</td>
+                    <td>{item.compDate}</td>
+                    <td>{item.status}</td>
+                  </tr>
+                )
+              })}
             </tbody>
             <tfoot></tfoot>
           </table>
@@ -175,3 +131,21 @@ export default class WhatweDo extends React.Component {
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    QuranAppAndroidGets: state.reducerQuranApp.QuranAppAndroidGets,
+    QuranAppIosGets: state.reducerQuranApp.QuranAppIosGets
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    QuranAppAndroidGet: () => {
+      dispatch(QuranAppAndroidGet());
+    },
+    QuranAppIosGet: () => {
+      dispatch(QuranAppIosGet());
+    },
+  };
+}
+export default withRouter(connect(mapStateToProp, mapDispatchToProp)(QuranApp));
