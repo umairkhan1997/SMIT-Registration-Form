@@ -42,12 +42,14 @@ import JobForm from "./screen/jobform";
 import CourseRegistration from "./screen/courseregistration";
 import OverView from "./screen/overview";
 import SBIL from "./screen/sbil";
+import EhsaasLangarKhana from "./screen/ehsaas";
 
 export default function MyRoute() {
   return (
     <Router>
       <Route exact path="/" component={Main} />
       <Route path="/news" component={News} />
+      <Route path="/langarkhana" component={EhsaasLangarKhana} />
       <Route path="/sbil" component={SBIL} />
       <Route path="/apply" component={CourseRegistration} />
       <Route path="/job" component={JobForm} />

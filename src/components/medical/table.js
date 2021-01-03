@@ -92,7 +92,7 @@ export default class Table extends React.Component {
               </div>
               <div className="col-md-6">
                 <iframe
-                  className="shadow rounded"
+                  className="video"
                   width="100%"
                   height="415"
                   src="https://www.youtube.com/embed/4iU5vCR-ygM"

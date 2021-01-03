@@ -48,7 +48,7 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>{" "}
-               Gulistan-e-Johar
+                Gulistan-e-Johar
               </div>
             </div>
             <div className="col-md-3">
@@ -57,7 +57,7 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>{" "}
-               North Karachi
+                North Karachi
               </div>
             </div>
             <div className="col-md-3">
@@ -66,7 +66,7 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>{" "}
-               Old Sabzi Mandi
+                Old Sabzi Mandi
               </div>
             </div>
             <div className="col-md-3">
@@ -75,7 +75,7 @@ export default class medicalClinics extends React.Component {
                   style={{ fontSize: "2em" }}
                   class="fas fa-map-marker-alt"
                 ></i>{" "}
-               Baldia Town
+                Baldia Town
               </div>
             </div>
           </div>

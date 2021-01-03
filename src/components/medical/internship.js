@@ -16,7 +16,11 @@ export default class Internship extends React.Component {
           <div className="container">
             <div className="row pt-5 pb-5">
               <div className="col-md-4">
-                <img style={{ boxShadow: '0 0 15px grey', borderRadius: '200px' }} src={intern} width="100%" />
+                <img
+                  style={{ boxShadow: "0 0 15px grey", borderRadius: "200px" }}
+                  src={intern}
+                  width="100%"
+                />
                 {/* <button>Apply for Internship</button>
                 <button>Apply for Camp</button> */}
               </div>
