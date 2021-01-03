@@ -4,7 +4,6 @@ import "react-slideshow-image/dist/styles.css";
 import "./blood.css";
 import logo from "../../images/logo.png";
 import Fade from "react-reveal";
-import back from "../../images/BloodBankBack.jpg";
 
 export default class BloodBankServices extends React.Component {
   constructor(props) {

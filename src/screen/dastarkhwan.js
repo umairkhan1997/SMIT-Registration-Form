@@ -3,15 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
-import Dast from '../components/Dastarkhwan/index'
-import HomeContact from "../components/Home/HomeContact";
 import Footer from "../components/Footer";
 import saylanidastarkhwan from "../images/saylaniDastarkhwan.jpg";
 import Cost from "../components/Dastarkhwan/cost";
 import LangarCounter from "../components/Dastarkhwan/counter";
 import Dailyserve from "../components/Dastarkhwan/dailylife";
-import PrimeMinister from "../components/Dastarkhwan/primeMinister";
-import RotiBank from '../components/Dastarkhwan/rotibank'
+import RotiBank from "../components/Dastarkhwan/rotibank";
 
 export default class Dasterkhwan extends React.Component {
   constructor(props) {
@@ -22,9 +19,8 @@ export default class Dasterkhwan extends React.Component {
     return (
       <div>
         <MainHeader />
-        <PrimeMinister />
-        <LangarCounter />
         <Dailyserve />
+        <LangarCounter />
         <RotiBank />
         <Cost />
         <Footer />

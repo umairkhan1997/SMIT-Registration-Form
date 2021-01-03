@@ -16,7 +16,7 @@ export default class AboutBloodBank extends React.Component {
             <div className="col-md-6">
               <div>
                 <iframe
-                  className="bloodVideo"
+                  className="video"
                   width="100%"
                   height="315"
                   src="https://www.youtube.com/embed/-WR3_zBAaXs"

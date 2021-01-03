@@ -21,16 +21,21 @@
   background-size: 50px;
   border-radius: 10px;
   background-repeat: no-repeat;
-  border-width: 10px;
   width: 40px;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 .search:focus {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-  border: 2px solid dodgerblue;
+  background-color: #0066b3;
+  color: white;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  /* border: 2px solid dodgerblue; */
   width: 100%;
   cursor: text;
+}
+.search::placeholder {
+  color: white;
 }
 .proName {
   padding: 6px;

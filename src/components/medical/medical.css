@@ -73,3 +73,7 @@
   /* font-weight: bold; */
   font-size: 1.1em;
 }
+.video {
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}

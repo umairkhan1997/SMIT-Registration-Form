@@ -34,7 +34,7 @@ export default class Footer extends React.Component {
                   <a href="/media">Media</a>
                 </li>
                 <li className="footerList">
-                  <a href="/services">Services</a>
+                  <a href="/projects">Projects</a>
                 </li>
                 <li className="footerList">
                   <a href="/welfare">Welfare</a>
@@ -55,7 +55,10 @@ export default class Footer extends React.Component {
             </div>
           </div>
         </div>
-        <div className="p-2 text-center" style={{ backgroundColor: "rgb(29 28 26)" }}>
+        <div
+          className="p-2 text-center"
+          style={{ backgroundColor: "rgb(29 28 26)" }}
+        >
           <p className="text-white">Copyright © 2020 Saylani Welfare</p>
         </div>
       </div>
