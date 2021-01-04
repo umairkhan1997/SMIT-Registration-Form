@@ -1,39 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c3a74772d9c93071f4c2c6768a8c3047",
+    "revision": "e260306e440181d6e609cd26949d4fc6",
     "url": "/index.html"
   },
   {
-    "revision": "96e1a2429fba9dbd5f8d",
+    "revision": "790097bdb05b5405c24f",
     "url": "/static/css/2.cc3a8c3e.chunk.css"
   },
   {
-    "revision": "31c58560db023d1913e6",
-    "url": "/static/css/main.7d7c926f.chunk.css"
+    "revision": "a03bec0e11aa92247bab",
+    "url": "/static/css/main.3e3753a7.chunk.css"
   },
   {
-    "revision": "96e1a2429fba9dbd5f8d",
-    "url": "/static/js/2.68b0e0f6.chunk.js"
+    "revision": "790097bdb05b5405c24f",
+    "url": "/static/js/2.d5e101f2.chunk.js"
   },
   {
     "revision": "4865b66e7c0f7b46b6107944a9a448ba",
-    "url": "/static/js/2.68b0e0f6.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.d5e101f2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "31c58560db023d1913e6",
-    "url": "/static/js/main.b551c128.chunk.js"
+    "revision": "a03bec0e11aa92247bab",
+    "url": "/static/js/main.89e50190.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
     "url": "/static/js/runtime-main.a7aa9b7e.js"
-  },
-  {
-    "revision": "363563f0c752fd8309800acd83320c56",
-    "url": "/static/media/BloodBankBack.363563f0.jpg"
-  },
-  {
-    "revision": "1b4b5955bbb3f91a6ec7b158c0883bf9",
-    "url": "/static/media/Dastarkhwan.1b4b5955.jpg"
   },
   {
     "revision": "9001dde4f9ea15049e9cef01575d6541",
@@ -92,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/award1.a444cfb2.jpg"
   },
   {
-    "revision": "670248e17a3904cedc14177d78bbfeb4",
-    "url": "/static/media/back.670248e1.jpg"
+    "revision": "1b810d41944a4ae6edffe6180f7a17a1",
+    "url": "/static/media/back.1b810d41.jpg"
   },
   {
     "revision": "21d9def5cf75b4c8375a632fd55041f6",
@@ -254,10 +246,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "72d79c42ba096308ff9b89d62164a089",
     "url": "/static/media/media.72d79c42.jpg"
-  },
-  {
-    "revision": "3b0b5e92f47fe898b94794c00217fe6b",
-    "url": "/static/media/medicalBack.3b0b5e92.jpg"
   },
   {
     "revision": "989fd0b43fd852bd2e6cbe0f76f48301",

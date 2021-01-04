@@ -61,7 +61,7 @@ class WhatweDo extends React.Component {
                   Current and Upcomming projects of Saylani
                 </h2>
               </div>
-              <div className="col-md-6 text-right ">
+              <div className="col-md-6 text-center">
                 <input
                   className="search"
                   onChange={(e) =>
