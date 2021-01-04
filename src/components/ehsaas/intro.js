@@ -10,10 +10,10 @@ export default class IntroLangarkhana extends React.Component {
 
   render() {
     return (
-      <div className="py-5 my-5" style={{ backgroundColor: "#0066b3" }}>
+      <div className="py-5" style={{ backgroundColor: "#0066b3" }}>
         <div className="container">
           <div className="row">
-            <div className="col-md-7 p-3 text-white">
+            <div className="col-md-12 p-3 text-white">
               <div>
                 <h3>Briefing Of Langarkhana</h3>
                 <ul>
@@ -62,17 +62,6 @@ export default class IntroLangarkhana extends React.Component {
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className="col-md-5 p-3">
-              <iframe
-                className="video"
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/8H4n9B4jAcE"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen="allowfullscreen"
-              ></iframe>
             </div>
           </div>
         </div>

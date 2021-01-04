@@ -44,7 +44,7 @@ export default class SuccessStories extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container py-5">
           <div className="Heading">
             <h2>Success Stories</h2>
           </div>

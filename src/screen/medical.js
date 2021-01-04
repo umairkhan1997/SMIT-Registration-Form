@@ -8,6 +8,7 @@ import MedicalOPD from "../components/medical/medicalOPD";
 import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
 import Table from "../components/medical/table";
+import Intro from "../components/medical/intro";
 
 export default class Medical extends React.Component {
   constructor(props) {

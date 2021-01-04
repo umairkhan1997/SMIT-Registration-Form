@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ehsaas.css";
 
-export default class DonateBtn extends React.Component {
+export default class Prime extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -11,14 +11,18 @@ export default class DonateBtn extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: "#f5f8ff" }}>
-        <div className="container">
+        <div className="container py-5">
           <div className="row">
             <div className="col-md-6 p-3">
-              <img
-                width="100%"
+              <iframe
                 className="video"
-                src="https://newsimage.radio.gov.pk/20191007/1570434031.jpeg"
-              />
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/8H4n9B4jAcE"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen="allowfullscreen"
+              ></iframe>
             </div>
             <div className="col-md-6 p-3">
               <h2>

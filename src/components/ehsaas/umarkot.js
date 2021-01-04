@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ehsaas.css";
 
-export default class Islamabad extends React.Component {
+export default class Umarkot extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -18,37 +18,37 @@ export default class Islamabad extends React.Component {
                 <div className="col-md-6">
                   <img
                     width="100%"
-                    src="https://www.pass.gov.pk/userfiles1/images/1_%20Langar.jpg"
+                    src="https://www.pass.gov.pk/userfiles1/images/18july2020_.jpg"
                   />
                 </div>
                 <div className="col-md-6">
                   <img
                     width="100%"
-                    src="https://www.pass.gov.pk/userfiles1/images/4_Langar(1).jpg"
+                    src="https://www.pass.gov.pk/userfiles1/images/28july2020_.jpg"
                   />
                 </div>
                 <div className="col-md-6">
                   <img
                     width="100%"
-                    src="https://www.pass.gov.pk/userfiles1/images/3_%20G9%20Langar_12142020.jpg"
+                    src="https://www.pass.gov.pk/userfiles1/images/38july2020_.jpg"
                   />
                 </div>
               </div>
             </div>
             <div className="col-md-6 py-3">
               <h2 style={{ color: "#0066b3" }}>
-                Launch of Ehsaas Saylani Langar
+                Governor Sindh opens Ehsaas Langar in Umerkot district of Sindh
               </h2>
               <hr />
               <h4>
-                Prime Minister Imran launched Ehsaas Saylani Langar on{" "}
+                Governor Sindh Imran Ismail opened Ehsaas Langar in Umerkot on .{" "}
                 <span
                   style={{ backgroundColor: "#0066b3" }}
                   class="badge text-white"
                 >
-                  October 7, 2019
+                  June 30, 2020
                 </span>{" "}
-                in Islamabad.
+                .
               </h4>
               <h2 className="py-5">
                 <a
