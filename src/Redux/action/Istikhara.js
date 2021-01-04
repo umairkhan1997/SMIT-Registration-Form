@@ -1,6 +1,6 @@
 import ActionTypes from "../constant/constant";
-
-const api = "http://localhost:3000/";
+const api = "https://swit-app.herokuapp.com/";
+// const api = "http://localhost:3000/";
 
 // function istikharaAdd() {
 //     return (dispatch) => {

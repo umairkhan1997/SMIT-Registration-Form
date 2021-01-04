@@ -138,17 +138,17 @@ class CourseRegistration extends React.Component {
         console.log(this.props, 'this.props')
         return (
             <>
+                <MainHeader />
+                <div style={{ backgroundColor: 'rgb(1 103 179)' }} className='py-5'>
+                    <div className='container py-3'>
+                        <h1 className='text-white'>Course Registration Form</h1>
+                    </div>
+                </div>
                 {this.props.location.state && this.props.location.state.filteredName.viewForm ?
                     <div>
-                        <MainHeader />
-                        <div style={{ backgroundColor: 'rgb(1 103 179)' }} className='py-5'>
-                            <div className='container py-3'>
-                                <h1 className='text-white'>Course Registration Form</h1>
-                            </div>
-                        </div>
 
 
-                        {this.state.formOpen ? <div className='container p-5'>
+                        <div className='container p-5'>
                             <p>
                                 <button className="prevbtn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Download Admit card</button>
                             </p>
@@ -294,22 +294,24 @@ class CourseRegistration extends React.Component {
                                     <button className='prevbtn btn-block' onClick={() => this.Submit()}>Submit</button>
                                 </div>
                             </div>
-                        </div> : <div className='container p-5'>
-                                <p className='text-muted' style={{ fontSize: '3em' }}>Registration has been closed</p>
-                                <p className='text-muted' style={{ fontSize: '2em' }}>For More Details Please Visit <a href='https://www.facebook.com/SaylaniMassTraining/'>Saylani Mass Training</a></p>
-                            </div>}
+                        </div>
                     </div>
                     :
-                    <div className="text-center">
-                        <img
-                            src={imgOne}
-                            width="50%"
-                        />
-                        <h2>Saylani Mass Training & Job Creation Program</h2>
-                        <h4>Registration / Entry Test Form</h4>
-                        <p className="text-danger">Registration has been closed</p>
-                        <p>Created by M Umair</p>
+                    <div className='container p-5'>
+                        <p className='text-muted' style={{ fontSize: '3em' }}>Registration has been closed</p>
+                        <p className='text-muted' style={{ fontSize: '2em' }}>For More Details Please Visit <a href='https://www.facebook.com/SaylaniMassTraining/'>Saylani Mass Training</a></p>
+                        <p className='text-muted'>Created by M Umair</p>
                     </div>
+                    // <div className="text-center">
+                    //     <img
+                    //         src={imgOne}
+                    //         width="50%"
+                    //     />
+                    //     <h2>Saylani Mass Training & Job Creation Program</h2>
+                    //     <h4>Registration / Entry Test Form</h4>
+                    //     <p className="text-danger">Registration has been closed</p>
+                    //     <p>Created by M Umair</p>
+                    // </div>
                 }
             </>
         )

@@ -57,8 +57,9 @@ export default class TableData extends React.Component {
                   ? cityDetails.hyderabad.video
                   : cityDetails.karachi.video
               }
+              style={{ marginTop: 10 }}
               width="100%"
-              height="425"
+              height="365"
               scrolling="no"
               frameborder="0"
               allowfullscreen="true"
