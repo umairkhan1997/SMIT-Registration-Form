@@ -25,7 +25,7 @@ export default class Smit extends React.Component {
     super(props);
     this.state = {
       visible: false,
-      city: "",
+      city: "Karachi",
     };
   }
   componentDidMount() {
@@ -34,7 +34,7 @@ export default class Smit extends React.Component {
     });
   }
   render() {
-    console.log(this.state.city);
+
     return (
       <div>
         <Modal

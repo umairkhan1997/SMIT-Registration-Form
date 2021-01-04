@@ -18,11 +18,11 @@ export default class Medical extends React.Component {
     return (
       <div>
         <MainHeader />
+        <Intro />
         <Table />
-        {/* <Intro /> */}
         <MedicalServices />
         <MedicalOPD />
-        <MedicalClinics />
+        {/* <MedicalClinics /> */}
         {/* <Internship /> */}
         {/* <MedicalContact /> */}
         <Footer />

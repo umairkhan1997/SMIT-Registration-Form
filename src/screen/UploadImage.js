@@ -170,28 +170,51 @@ export default class FilesUploadComponent extends Component {
     //     })
     // }
 
-    onSubmit = async (e) => {
+    // onSubmit = async (e) => {
+    //     e.preventDefault()
+    //     let arr = [];
+    //     arr.push(this.state.imgCollection);
+    //     arr.push(this.state.pdfCollection);
+    //     var formData = new FormData();
+    //     console.log(arr, 'arrr')
+    //     for (const key of Object.keys(arr)) {
+    //         console.log(arr[key][0])
+    //         formData.append('imgCollection', arr[key][0])
+    //     }
+    //     // for (const key of Object.keys(this.state.pdfCollection)) {
+    //     //     formData.append('bookDnldUrl', this.state.pdfCollection[key])
+    //     // }
+    //     console.log('arrr two')
+    //     formData.append('bookName', 'Adab-E-Maiyat')
+    //     formData.append('bookLang', 'Urdu')
+    //     formData.append('bookAuthor', 'Hazrat Basheer Farooqui')
+    //     formData.append('bookPublisher', 'Azad Publisher')
+    //     formData.append('bookDnldUrl', 'Azad Publisher')
+    //     // console.log(formData)
+    //     axios.post("http://localhost:3000/Books/BookSpecialAdd", formData, {
+    //     }).then(res => {
+    //         console.log(res)
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     })
+    // }
+
+
+
+    //SAYLANI NOTIFICATION METHOD
+    onSubmit(e) {
         e.preventDefault()
-        let arr = [];
-        arr.push(this.state.imgCollection);
-        arr.push(this.state.pdfCollection);
+
         var formData = new FormData();
-        console.log(arr, 'arrr')
-        for (const key of Object.keys(arr)) {
-            console.log(arr[key][0])
-            formData.append('imgCollection', arr[key][0])
+        for (const key of Object.keys(this.state.imgCollection)) {
+            formData.append('imgCollection', this.state.imgCollection[key])
         }
-        // for (const key of Object.keys(this.state.pdfCollection)) {
-        //     formData.append('bookDnldUrl', this.state.pdfCollection[key])
-        // }
-        console.log('arrr two')
-        formData.append('bookName', 'Adab-E-Maiyat')
-        formData.append('bookLang', 'Urdu')
-        formData.append('bookAuthor', 'Hazrat Basheer Farooqui')
-        formData.append('bookPublisher', 'Azad Publisher')
-        formData.append('bookDnldUrl', 'Azad Publisher')
-        // console.log(formData)
-        axios.post("http://localhost:3000/Books/BookSpecialAdd", formData, {
+        formData.append('cityName', 'Islamabad',)
+        formData.append('courseName', 'Web and Mobile ')
+        formData.append('batchName', 'Batch 7');
+        formData.append('viewForm', false);
+        console.log(this.state.imgCollection)
+        axios.post("http://localhost:3000/smit/SaylaniNotificationAdd", formData, {
         }).then(res => {
             console.log(res)
         }).catch((err) => {

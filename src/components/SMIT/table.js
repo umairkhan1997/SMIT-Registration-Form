@@ -28,6 +28,7 @@ export default class TableData extends React.Component {
     const { city } = this.props;
     const { cityDetails } = this.state;
     return (
+<<<<<<< HEAD
       <div style={{ backgroundColor: "#f5f8ff" }} className="py-5">
         <div className="container">
           <div className="row">
@@ -62,6 +63,45 @@ export default class TableData extends React.Component {
                 allowfullscreen="allowfullscreen"
               ></iframe>
             </div>
+=======
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <table className="showtable">
+              <tr>
+                <td>Vision</td>
+                <td>.1 Million Developers</td>
+              </tr>
+              <tr>
+                <td>Number of trained Students</td>
+                <td>125000+</td>
+              </tr>
+              <tr>
+                <td>Number of Enrolled Students</td>
+                <td>55000+</td>
+              </tr>
+              <tr>
+                <td>Number of Courses</td>
+                <td>20+</td>
+              </tr>
+            </table>
+          </div>
+          <div className="col-md-6">
+            <iframe
+              src={
+                city == "Hyderabad"
+                  ? cityDetails.hyderabad.video
+                  : cityDetails.karachi.video
+              }
+              style={{ marginTop: 10 }}
+              width="100%"
+              height="365"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+>>>>>>> c402319449371e969fbbd00f4d83f06b4263dd1a
           </div>
         </div>
       </div>

@@ -10,7 +10,13 @@ const ActionTypes = {
   fieldEmpty: "fieldEmpty",
   roPlantBranchGet: "roPlantBranchGet",
   RoPlantEstiCostGet: "RoPlantEstiCostGet",
-  RoPlantLocationGet: "RoPlantLocationGet"
+  RoPlantLocationGet: "RoPlantLocationGet",
+  JobBankHuntGet: "JobBankHuntGet",
+  jobBankFormGet: "jobBankFormGet",
+  DonaListGet: "DonaListGet",
+  QuranAppAndroidGet: "QuranAppAndroidGet",
+  QuranAppIosGet: "QuranAppIosGet",
+  smitNotificationGet: "smitNotificationGet"
 };
 
 export default ActionTypes;

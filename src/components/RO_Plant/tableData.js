@@ -19,6 +19,7 @@ class TableData extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <table className="showtable">
+              <td colspan="2">Saylani Saaf Sutra Pani</td>
               {this.props.roPlantBranchGets && this.props.roPlantBranchGets.map((data) => {
                 return (
                   <tr>
@@ -28,9 +29,9 @@ class TableData extends React.Component {
                 )
               })}
             </table>
-            <div className="p-2">
+            {/* <div className="p-2">
               <Custombtn otherClass="btn-block" value="Donate" />
-            </div>
+            </div> */}
           </div>
           <div className="col-md-6 p-2">
             <iframe
