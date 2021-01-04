@@ -5,6 +5,7 @@ import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
 import Prime from "../components/ehsaas/primeminister";
+import IntroLangarkhana from "../components/ehsaas/intro";
 
 export default class EhsaasLangarKhana extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class EhsaasLangarKhana extends React.Component {
       <div>
         <MainHeader />
         <Prime />
+        <IntroLangarkhana />
         <Footer />
       </div>
     );

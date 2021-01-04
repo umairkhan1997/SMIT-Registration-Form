@@ -14,16 +14,23 @@ export default class DonateBtn extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6 p-3">
-              <h1>
+              <img
+                width="100%"
+                className="video"
+                src="https://newsimage.radio.gov.pk/20191007/1570434031.jpeg"
+              />
+            </div>
+            <div className="col-md-6 p-3">
+              <h2>
                 Honorable Prime Minister Imran Khan, inaugurated the Islamabad
                 Langar Khana
-              </h1>
-              <hr className="my-3" />
+              </h2>
+              <hr className="my-5" />
               <h3 style={{ color: "#0066b3" }}>
-                TARGET FOR LANGAR KHANA 112 Langar Khana in{" "}
+                Target For Langar Khana 112 Langar Khana in{" "}
                 <span
                   style={{
-                    backgroundColor: "green",
+                    backgroundColor: "#0066b3",
                     padding: "10px",
                     display: "inline-block",
                     color: "white",
@@ -34,13 +41,6 @@ export default class DonateBtn extends React.Component {
                   Pakistan
                 </span>
               </h3>
-            </div>
-            <div className="col-md-6 p-3">
-              <img
-                width="100%"
-                className="video"
-                src="https://newsimage.radio.gov.pk/20191007/1570434031.jpeg"
-              />
             </div>
           </div>
         </div>
