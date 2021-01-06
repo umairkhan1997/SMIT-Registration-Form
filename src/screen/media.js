@@ -25,7 +25,7 @@ export default class Media extends React.Component {
                 placeholder="Search your Media ..."
                 className="mt-5 mb-5 searchMedia"
               /> */}
-              <div className="form-group" >
+              {/* <div className="form-group" >
 <p className="text-left " style={{fontSize:18,color:'white'}}>Search Your Playlist</p>
       <select className="form-control text-muted " id="exampleFormControlSelect1" style={{height:50,marginTop:-10,backgroundColor:'#e9ebec'}} >
       <option >NEKI KI BAAT ( ROZA 4)</option>
@@ -37,7 +37,7 @@ export default class Media extends React.Component {
       <option>Saylani Symposium 2019</option>
       <option>Ramzan-o-Eid Pakage</option>
     </select>
-    </div>
+    </div> */}
             </Fade>
           </div>
         </div>

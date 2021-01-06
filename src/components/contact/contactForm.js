@@ -14,7 +14,7 @@ export default class ContactForm extends React.Component {
   render() {
     return (
       <div>
-        <div className="bg-light pt-5 pb-5">
+        <div className="bg-light">
           <div
             style={{ backgroundColor: "#0066b3" }}
             className="p-5 text-white rounded"

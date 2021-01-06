@@ -518,6 +518,8 @@ export default class MedicalOPD extends React.Component {
                   <i class="fas fa-tint"></i>
                 </p>
                 <h4>Hijama</h4>
+                <h5>Mon To Sat</h5>
+                <p className="text-right">9:00 to 5:00</p>
               </div>
             </div>
             <div
@@ -532,7 +534,9 @@ export default class MedicalOPD extends React.Component {
                 <p style={{ fontSize: "2.5em" }}>
                   <i class="fas fa-mortar-pestle"></i>
                 </p>
-                <h4>Homeopathic</h4>
+                <h4>Homeaopathic</h4>
+                <h5>Mon To Sat</h5>
+                <p className="text-right">9:00 to 1:00</p>
               </div>
             </div>
             <div
@@ -548,6 +552,8 @@ export default class MedicalOPD extends React.Component {
                   <i class="fab fa-pagelines"></i>
                 </p>
                 <h4>Hikmat</h4>
+                <h5>Mon To Sat</h5>
+                <p className="text-right">9:00 to 1:00</p>
               </div>
             </div>
           </div>

@@ -217,10 +217,12 @@ export default class Workshop extends React.Component {
   }
   render() {
     return (
-      <div className="py-5 my-5 bg-light">
+      <div className="py-5 my-5 backgroundLight">
         <div className="container my-5">
           <div className="Heading">
-            <h2>Workshop</h2>
+            <h2>
+              Saylani Mass IT Training arranged workshops for youth empowerment
+            </h2>
           </div>
           <div className="row">
             {this.state.workshop.map((e, i) => {

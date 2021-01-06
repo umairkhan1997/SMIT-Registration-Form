@@ -17,7 +17,7 @@ export default class BankDetails extends React.Component {
         <div className="pt-3 pb-5 grad">
           <div className="container">
             <div className="row mt-5 mb-5">
-              <div className="col-md-4 p-4">
+              <div className="col-md-6 p-4">
                 <div className="bankDetailsCard text-left p-5">
                   <h3 className="pb-3 pt-3">Wester Union Details</h3>
                   <p>Please Donation in Favour of</p>
@@ -29,16 +29,18 @@ export default class BankDetails extends React.Component {
                   <p>Do Not Forget To Send Us It's (MTCN) No.</p>
                 </div>
               </div>
-              <div className="col-md-4 p-4">
+              <div className="col-md-6 p-4">
                 <div className="bankDetailsCard text-left p-5">
                   <h3 className="pb-3 pt-3">Money Gram Details</h3>
-                  <p>Details:</p>
-                </div>
-              </div>
-              <div className="col-md-4 p-4">
-                <div className="bankDetailsCard text-left p-5">
-                  <h3 className="pb-3 pt-3">Finance</h3>
-                  <p>Details:</p>
+                  <p>
+                    You can send donation by using secure website. Please send
+                    donation in favour of
+                  </p>
+                  <ol>
+                    <li>Yousuf Lakhani</li>
+                    <li>Arif Lakhani</li>
+                    <li>Bashir Ahmed Polani</li>
+                  </ol>
                 </div>
               </div>
             </div>

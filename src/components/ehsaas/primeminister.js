@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ehsaas.css";
 
-export default class DonateBtn extends React.Component {
+export default class Prime extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -11,36 +11,41 @@ export default class DonateBtn extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: "#f5f8ff" }}>
-        <div className="container">
+        <div className="container py-5">
           <div className="row">
             <div className="col-md-6 p-3">
-              <h1>
+              <iframe
+                className="video"
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/8H4n9B4jAcE"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen="allowfullscreen"
+              ></iframe>
+            </div>
+            <div className="col-md-6 p-3">
+              <h2>
                 Honorable Prime Minister Imran Khan, inaugurated the Islamabad
                 Langar Khana
-              </h1>
-              <hr className="my-3" />
+              </h2>
+              <hr className="my-5" />
               <h3 style={{ color: "#0066b3" }}>
-                TARGET FOR LANGAR KHANA 112 Langar Khana in{" "}
+                Target For Langar Khana 112 Langar Khana in{" "}
                 <span
                   style={{
-                    backgroundColor: "green",
-                    padding: "10px",
+                    backgroundColor: "white",
+                    padding: "7px",
+                    margin: "7px",
                     display: "inline-block",
-                    color: "white",
-                    borderRadius: "5px",
-                    boxShadow: "0 4px 10px rgba(0,0,0,.4)",
+                    color: "#016838",
+                    borderLeft: "5px solid #016838",
+                    boxShadow: "0 3px 5px rgba(0,0,0,.3)",
                   }}
                 >
                   Pakistan
                 </span>
               </h3>
-            </div>
-            <div className="col-md-6 p-3">
-              <img
-                width="100%"
-                className="video"
-                src="https://newsimage.radio.gov.pk/20191007/1570434031.jpeg"
-              />
             </div>
           </div>
         </div>

@@ -73,7 +73,8 @@ export default class SMITeacher extends React.Component {
               },
               {
                 name: "Aamir",
-                image: "",
+                image:
+                  "https://cdn.iconscout.com/icon/premium/png-512-thumb/profile-1506810-1278719.png",
                 course: "Web And Mobile",
               },
             ],
@@ -133,7 +134,7 @@ export default class SMITeacher extends React.Component {
               {
                 name: "Nausherwan Ali",
                 image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
+                  "https://cdn.iconscout.com/icon/premium/png-512-thumb/profile-1506810-1278719.png",
                 course: "CCNA R&S",
               },
               {
@@ -163,7 +164,7 @@ export default class SMITeacher extends React.Component {
               {
                 name: "Kashif Ahmed",
                 image:
-                  "https://scontent.fkhi1-1.fna.fbcdn.net/v/t31.0-8/17966584_819759251511375_5436974069163191641_o.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_eui2=AeGbUtM3AdHKraWLkkUHC9zHesLH38ooxMp6wsffyijEykEJ_avBI-ueRQsEoGSb_N_RNRCaxhI3-mICvorOebkB&_nc_ohc=KzchpATB57cAX_iEGuS&_nc_ht=scontent.fkhi1-1.fna&oh=60b1ae899f7ac7d15e28eea6bd7f2a8f&oe=5FFC4394",
+                  "https://cdn.iconscout.com/icon/premium/png-512-thumb/profile-1506810-1278719.png",
                 course: "CCNA R&S",
               },
               {
@@ -181,7 +182,7 @@ export default class SMITeacher extends React.Component {
   render() {
     const { cityDetails } = this.state;
     return (
-      <div>
+      <div className="py-5">
         <div className="container">
           <h1 className="pb-4" style={{ color: "#1371b8" }}>
             Our Qualified Teacher

@@ -158,3 +158,17 @@
 .workshopCard:hover {
   border: 2.5px solid #1371b8;
 }
+.icoPosition {
+  position: absolute;
+  top: 0;
+  left: 42%;
+  margin-top: -25px;
+}
+.vocationalIcon {
+  background-color: #f0f4ff;
+  color: #0066b3;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  width: 180px;
+  height: 180px;
+  text-align: center;
+}

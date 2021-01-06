@@ -3,7 +3,6 @@ import Custombtn from "../../smallcomponents/mybtn";
 import { connect } from "react-redux";
 import { roPlantBranchGet } from "../../Redux/action/RoPlantAction";
 
-
 class TableData extends React.Component {
   constructor(props) {
     super(props);
@@ -20,14 +19,15 @@ class TableData extends React.Component {
           <div className="col-md-6">
             <table className="showtable">
               <td colspan="2">Saylani Saaf Sutra Pani</td>
-              {this.props.roPlantBranchGets && this.props.roPlantBranchGets.map((data) => {
-                return (
-                  <tr>
-                    <td>{data.typeName}</td>
-                    <td>{data.typeNumber}</td>
-                  </tr>
-                )
-              })}
+              {this.props.roPlantBranchGets &&
+                this.props.roPlantBranchGets.map((data) => {
+                  return (
+                    <tr>
+                      <td>{data.typeName}</td>
+                      <td>{data.typeNumber}</td>
+                    </tr>
+                  );
+                })}
             </table>
             {/* <div className="p-2">
               <Custombtn otherClass="btn-block" value="Donate" />
@@ -35,6 +35,7 @@ class TableData extends React.Component {
           </div>
           <div className="col-md-6 p-2">
             <iframe
+              className="video"
               width="100%"
               height="320"
               src="https://www.youtube.com/embed/N4DIjxCGWVc"
@@ -51,7 +52,7 @@ class TableData extends React.Component {
 
 function mapStateToProp(state) {
   return {
-    roPlantBranchGets: state.reducerRoPlant.roPlantBranchGets
+    roPlantBranchGets: state.reducerRoPlant.roPlantBranchGets,
   };
 }
 function mapDispatchToProp(dispatch) {
