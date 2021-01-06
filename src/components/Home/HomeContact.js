@@ -385,34 +385,32 @@ export default class HomeContact extends React.Component {
       <div>
         <div className="container">
           <div className="displayheading">
-            <h1>Over Branches</h1>
+            <h1>Saylani Welfare Branches</h1>
           </div>
         </div>
-        <div
-          style={{
-            backgroundColor: "#d8dfe6",
-          }}
-        >
-          <div className="bg-white py-5 shadow">
+        <div className="backgroundLight">
+          <div className="py-5 shadow backgroundDark">
             <div className="container">
               <select
                 style={{
                   border: "none",
                   fontSize: "2em",
-                  borderBottom: "2px solid #0066b3",
+                  borderBottom: "2px solid white",
                   padding: "10px 15px",
                   outline: "none",
+                  color: "white",
+                  backgroundColor: "transparent",
                 }}
                 onChange={(e) => this.city(e)}
               >
-                <option>Karachi</option>
-                <option>Hyderabad</option>
-                <option>Punjab</option>
+                <option className="text-dark">Karachi</option>
+                <option className="text-dark">Hyderabad</option>
+                <option className="text-dark">Punjab</option>
               </select>
             </div>
           </div>
           <div
-            style={{ height: "100vh", overflow: "scroll", overflowX: "hidden" }}
+            style={{ height: "70vh", overflow: "scroll", overflowX: "hidden" }}
             className="container py-4"
           >
             <div className="row">

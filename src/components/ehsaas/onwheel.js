@@ -10,7 +10,7 @@ export default class MobleLangar extends React.Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: "#0066b3" }}>
+      <div className="py-5" style={{ backgroundColor: "#0066b3" }}>
         <div className="container py-4 text-white">
           <div className="row">
             <div className="col-md-6 py-3">

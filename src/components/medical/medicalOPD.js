@@ -2,11 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./medical.css";
+import Modal from "react-awesome-modal";
 
 export default class MedicalOPD extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      visible: false,
       consultantOPD: {
         generalOPD: [
           {
@@ -273,6 +275,9 @@ export default class MedicalOPD extends React.Component {
           doctor: "Dr Razia Ali",
         },
       ],
+      homeo: false,
+      hikmat: false,
+      hijama: false,
     };
   }
   render() {
@@ -509,55 +514,158 @@ export default class MedicalOPD extends React.Component {
               style={{ backgroundColor: "rgb(120 185 255)" }}
               className="col-md-4"
             >
-              <div
-                data-toggle="modal"
-                data-target="#staticBackdrop"
-                className="p-4"
-              >
+              <div className="p-4">
                 <p style={{ fontSize: "2.5em" }}>
                   <i class="fas fa-tint"></i>
                 </p>
                 <h4>Hijama</h4>
                 <h5>Mon To Sat</h5>
-                <p className="text-right">9:00 to 5:00</p>
+                <div className="py-3">
+                  <button
+                    onClick={() =>
+                      this.setState({ visible: true, hijama: true })
+                    }
+                    className="btn btn-outline-light rounded-pill px-4"
+                  >
+                    Read More
+                  </button>
+                </div>
               </div>
             </div>
             <div
               style={{ backgroundColor: "rgb(69 159 255)" }}
               className="col-md-4"
             >
-              <div
-                data-toggle="modal"
-                data-target="#staticBackdrop"
-                className="p-4"
-              >
+              <div className="p-4">
                 <p style={{ fontSize: "2.5em" }}>
                   <i class="fas fa-mortar-pestle"></i>
                 </p>
                 <h4>Homeaopathic</h4>
                 <h5>Mon To Sat</h5>
-                <p className="text-right">9:00 to 1:00</p>
+                <div className="py-3">
+                  <button
+                    onClick={() =>
+                      this.setState({ visible: true, homeo: true })
+                    }
+                    className="btn btn-outline-light rounded-pill px-4"
+                  >
+                    Read More
+                  </button>
+                </div>
               </div>
             </div>
             <div
               style={{ backgroundColor: "rgb(0 123 255)" }}
               className="col-md-4"
             >
-              <div
-                data-toggle="modal"
-                data-target="#staticBackdrop"
-                className="p-4"
-              >
+              <div className="p-4">
                 <p style={{ fontSize: "2.5em" }}>
                   <i class="fab fa-pagelines"></i>
                 </p>
                 <h4>Hikmat</h4>
                 <h5>Mon To Sat</h5>
-                <p className="text-right">9:00 to 1:00</p>
+                <div className="py-3">
+                  <button
+                    onClick={() =>
+                      this.setState({ visible: true, hikmat: true })
+                    }
+                    className="btn btn-outline-light rounded-pill px-4"
+                  >
+                    Read More
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <Modal
+          visible={this.state.visible}
+          width="90%"
+          effect="fadeInUp"
+          onClickAway={() =>
+            this.setState({
+              visible: false,
+              hikmat: false,
+              hijama: false,
+              homeo: false,
+            })
+          }
+        >
+          <button
+            style={{ position: "absolute", top: "-50px", right: "0" }}
+            className="prevbtn"
+            onClick={() =>
+              this.setState({
+                visible: false,
+                hikmat: false,
+                hijama: false,
+                homeo: false,
+              })
+            }
+          >
+            <i class="fas fa-times"></i>
+          </button>
+          <div className="rounded">
+            <div className="p-4 backgroundDark text-white">
+              {this.state.hijama ? (
+                <h3>Hijama Clinic</h3>
+              ) : this.state.hikmat ? (
+                <h3>Hikmat Clinic</h3>
+              ) : this.state.homeo ? (
+                <h3>Homeopathic Clinic</h3>
+              ) : (
+                false
+              )}
+            </div>
+            {this.state.hijama ? (
+              <div className="p-4">
+                <h4 className="color">Timing (For Gents)</h4>
+                <p>Mon, Tue, Thu, Sat</p>
+                <p>9:00am to 5:00pm</p>
+                <p>Wed, Fri</p>
+                <p>9:00am to 1:00pm</p>
+                <p style={{ fontStyle: "italic" }} className="color">
+                  Mansoor Turabi
+                </p>
+                <hr />
+                <h4 className="color">Timing (For Ladies)</h4>
+                <p>Mon to Sat</p>
+                <p>9:00am to 1:00pm</p>
+              </div>
+            ) : null}
+            {this.state.homeo ? (
+              <div className="p-4">
+                <h4 className="color">Timing</h4>
+                <p>Mon, Sat</p>
+                <p>9:30am to 12:30pm</p>
+                <hr />
+                <p style={{ fontStyle: "italic" }} className="color">
+                  Dr Sadiq
+                </p>
+              </div>
+            ) : null}
+            {this.state.hikmat ? (
+              <div className="p-4">
+                <h4 className="color">Timing</h4>
+                <p>Mon, Sat</p>
+                <p>9:30am to 12:30pm</p>
+                <hr />
+                <p style={{ fontStyle: "italic" }} className="color">
+                  Hakeem Noor Muhammad
+                </p>
+              </div>
+            ) : null}
+            <div className="backgroundLight p-3 text-center">
+              <a
+                target="_blank"
+                className="color bg-white p-2 shadow rounded-pill"
+                href="https://goo.gl/maps/SLok2JDKw3P2ciADA"
+              >
+                Click to see location <i class="fas fa-map-marker-alt"></i>
+              </a>
+            </div>
+          </div>
+        </Modal>
       </div>
     );
   }

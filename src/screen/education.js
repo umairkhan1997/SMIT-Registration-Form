@@ -18,42 +18,44 @@ export default class Education extends React.Component {
     return (
       <div>
         <MainHeader />
+        <div className="backgroundLight py-5">
+          <div className="container my-4">
+            <div className="row">
+              <div className="col-md-6">
+                <table className="showtable">
+                  <tr>
+                    <td colspan="2">Quality Education For All</td>
+                  </tr>
+                  <tr>
+                    <td>Total Students</td>
+                    <td>1200+</td>
+                  </tr>
 
-        <div className="container my-4">
-          <div className="row">
-            <div className="col-md-6">
-              <table className="showtable">
-                <tr>
-                  <td colspan="2">Quality Education For All</td>
-                </tr>
-                <tr>
-                  <td>Total Students</td>
-                  <td>1200+</td>
-                </tr>
-
-                <tr>
-                  <td>Total Campuses</td>
-                  <td>04 Campuses</td>
-                </tr>
-                <tr>
-                  <td>Total Faculty</td>
-                  <td>75+</td>
-                </tr>
-                <tr>
-                  <td>Total Pass Out</td>
-                  <td>2000+</td>
-                </tr>
-              </table>
-            </div>
-            <div className="col-md-6 p-2">
-              <iframe
-                width="100%"
-                height="320"
-                src="https://www.youtube.com/embed/N4DIjxCGWVc"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+                  <tr>
+                    <td>Total Campuses</td>
+                    <td>04 Campuses</td>
+                  </tr>
+                  <tr>
+                    <td>Total Faculty</td>
+                    <td>75+</td>
+                  </tr>
+                  <tr>
+                    <td>Total Pass Out</td>
+                    <td>2000+</td>
+                  </tr>
+                </table>
+              </div>
+              <div className="col-md-6 p-2">
+                <iframe
+                  className="video"
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/TCNg6QrHjPk"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="allowfullscreen"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>

@@ -229,7 +229,7 @@ export default class Workshop extends React.Component {
               return (
                 <div key={i} className="col-md-4 py-3">
                   <a className="workshopLink" href={e.Link} target="_blank">
-                    <div className="workshopCard my-2 text-center">
+                    <div className="workshopCard text-center">
                       <h4>{e.Name}</h4>
                       <p>by</p>
                       <p>{e.TeacherHostName}</p>

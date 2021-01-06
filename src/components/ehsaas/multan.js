@@ -10,7 +10,7 @@ export default class Multan extends React.Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: "#f5f8ff" }}>
+      <div className="py-5" style={{ backgroundColor: "#f5f8ff" }}>
         <div className="container py-4">
           <div className="row">
             <div className="col-md-6 py-3">
@@ -45,6 +45,7 @@ export default class Multan extends React.Component {
               <div className="row">
                 <div className="col-md-12">
                   <img
+                    className="rounded"
                     width="100%"
                     src="https://www.pass.gov.pk/userfiles1/images/2_%20PIMS.jpg"
                   />

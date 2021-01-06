@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import cover1 from "../../assets/img/cover1.jpeg";
-import cover2 from "../../assets/img/cover2.jpeg";
-import cover3 from "../../assets/img/cover3.jpeg";
+import cover1 from "../../images/cover1.png";
+import cover2 from "../../images/cover2.png";
+import cover3 from "../../images/cover3.png";
 
 export default class Slider extends Component {
   render() {

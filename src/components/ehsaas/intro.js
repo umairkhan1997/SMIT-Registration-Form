@@ -11,7 +11,7 @@ export default class IntroLangarkhana extends React.Component {
   render() {
     return (
       <div className="py-5" style={{ backgroundColor: "#0066b3" }}>
-        <div className="container">
+        <div className="container py-5">
           <div className="row">
             <div className="col-md-12 p-3 text-white">
               <div>

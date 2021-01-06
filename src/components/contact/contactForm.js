@@ -14,7 +14,7 @@ export default class ContactForm extends React.Component {
   render() {
     return (
       <div>
-        <div className="bg-light">
+        <div>
           <div
             style={{ backgroundColor: "#0066b3" }}
             className="p-5 text-white rounded"
@@ -28,31 +28,44 @@ export default class ContactForm extends React.Component {
               <div className="col-md-8 bg-white p-5">
                 <h2>Send us a message</h2>
                 <form>
-                  <div className="container">
+                  <div>
                     <div className="row">
                       <div className="col-md-6 pt-4">
                         <label for="name" className="labl">
                           Your Name (required)
                         </label>
-                        <input id="name" className="inp" />
+                        <input
+                          placeholder="Your Name"
+                          id="name"
+                          className="inp"
+                        />
                       </div>
                       <div className="col-md-6 pt-4">
                         <label for="Subject" className="labl">
                           Your Subject (required)
                         </label>
-                        <input id="Subject" className="inp" />
+                        <input
+                          placeholder="Your Subject"
+                          id="Subject"
+                          className="inp"
+                        />
                       </div>
                       <div className="col-md-12 pt-4">
                         <label for="email" className="labl">
                           Your Email (required)
                         </label>
-                        <input id="email" className="inp" />
+                        <input
+                          placeholder="Your Email"
+                          id="email"
+                          className="inp"
+                        />
                       </div>
                       <div className="col-md-12 pt-4">
                         <label for="message" className="labl">
                           Your Message
                         </label>
                         <textarea
+                          placeholder="Your Message"
                           id="message"
                           className="inp"
                           rows="8"
@@ -97,11 +110,24 @@ export default class ContactForm extends React.Component {
                     <div className="pt-2 pb-2">
                       <p>
                         <i class="fas fa-globe"></i>{" "}
-                        <a
-                          style={{ color: "white" }}
-                          href="tel:+0092-2134130786-90"
-                        >
+                        <a style={{ color: "white" }} href="tel:+0092413078690">
                           (+0092-213) 4130786-90
+                        </a>
+                      </p>
+                    </div>
+                    <div className="pt-2 pb-2">
+                      <p>
+                        <i class="fas fa-globe"></i>{" "}
+                        <a style={{ color: "white" }} href="tel:+17169417792">
+                          USA No: +1(716)941 7792
+                        </a>
+                      </p>
+                    </div>
+                    <div className="pt-2 pb-2">
+                      <p>
+                        <i class="fas fa-globe"></i>{" "}
+                        <a style={{ color: "white" }} href="tel: +441159706256">
+                          UK No: (+44)115 970 6256
                         </a>
                       </p>
                     </div>

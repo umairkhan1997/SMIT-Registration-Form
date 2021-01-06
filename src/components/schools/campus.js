@@ -44,7 +44,7 @@ export default class Campus extends React.Component {
   render() {
     return (
       <div className="container mainDiv mt-5">
-        <h1>Campus</h1>
+        <h2>Campus</h2>
         <div className="container mt-5">
           <div className="row">
             {this.state.campuses.map((e, i) => {

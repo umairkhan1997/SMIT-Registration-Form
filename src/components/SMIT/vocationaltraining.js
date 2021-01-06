@@ -9,9 +9,9 @@ export default class Vocational extends React.Component {
         <div className="py-5 my-5 backgroundDark">
           <div className="container">
             <div className="row p-5">
-              <div className="col-md-4 text-center py-3">
+              <div className="col-md-4 d-flex justify-content-center py-3">
                 <div className="rounded-pill p-5 vocationalIcon">
-                  <p style={{ fontSize: "3em" }}>
+                  <p style={{ fontSize: "3.5em" }}>
                     <i class="fas fa-cogs"></i>
                   </p>
                 </div>

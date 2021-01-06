@@ -3,7 +3,7 @@ import Teacher from "../components/sbil/teachers";
 import Courses from "../components/sbil/courses";
 import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
-import cover from "../images/cover2.jpeg";
+import cover from "../images/cover2.png";
 
 export default class SBIL extends React.Component {
   constructor(props) {

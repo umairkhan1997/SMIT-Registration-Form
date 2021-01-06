@@ -23,7 +23,7 @@ export default class Intro extends React.Component {
               <iframe
                 className="video"
                 width="100%"
-                height="415"
+                height="315"
                 src="https://www.youtube.com/embed/4iU5vCR-ygM"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
