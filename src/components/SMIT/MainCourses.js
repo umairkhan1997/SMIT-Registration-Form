@@ -268,8 +268,8 @@ export default class MainCourses extends React.Component {
               ico: "https://www.revalsys.com/images/DB-Icon-1.jpg",
             },
             {
-              name: "Bike Reapairing Course",
-              detailName: "Certified Motor Bike Reapairing Course",
+              name: "Bike Repairing Course",
+              detailName: "Certified Motor Bike Repairing Course",
               duration: "1 Year",
               outline: ["MS Word", "MS Excel", "MS PowerPoint"],
               ico:
@@ -442,14 +442,14 @@ export default class MainCourses extends React.Component {
                   ) : null}
                   {this.state.currentCourse.moreOutline
                     ? this.state.currentCourse.moreOutline.name1Details.map(
-                        (e, i) => {
-                          return (
-                            <li className="text-muted" key={i}>
-                              {e}
-                            </li>
-                          );
-                        }
-                      )
+                      (e, i) => {
+                        return (
+                          <li className="text-muted" key={i}>
+                            {e}
+                          </li>
+                        );
+                      }
+                    )
                     : null}
                   <hr />
                   {this.state.currentCourse.moreOutline ? (
@@ -457,14 +457,14 @@ export default class MainCourses extends React.Component {
                   ) : null}
                   {this.state.currentCourse.moreOutline
                     ? this.state.currentCourse.moreOutline.name2Details.map(
-                        (e, i) => {
-                          return (
-                            <li className="text-muted" key={i}>
-                              {e}
-                            </li>
-                          );
-                        }
-                      )
+                      (e, i) => {
+                        return (
+                          <li className="text-muted" key={i}>
+                            {e}
+                          </li>
+                        );
+                      }
+                    )
                     : null}
                   <hr />
                   {this.state.currentCourse.moreOutline ? (
@@ -472,14 +472,14 @@ export default class MainCourses extends React.Component {
                   ) : null}
                   {this.state.currentCourse.moreOutline
                     ? this.state.currentCourse.moreOutline.name3Details.map(
-                        (e, i) => {
-                          return (
-                            <li className="text-muted" key={i}>
-                              {e}
-                            </li>
-                          );
-                        }
-                      )
+                      (e, i) => {
+                        return (
+                          <li className="text-muted" key={i}>
+                            {e}
+                          </li>
+                        );
+                      }
+                    )
                     : null}
                   <hr />
                 </ul>

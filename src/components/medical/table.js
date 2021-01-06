@@ -16,7 +16,7 @@ export default class Table extends React.Component {
               <div className="col-md-8">
                 <div className="row">
                   <div className="col-md-4 my-5">
-                    <h4>Sindh Gove Hospital Malir Karachi</h4>
+                    <h4>Sindh Govt Hospital Malir Karachi</h4>
                     <hr />
                     <h2
                       style={{ backgroundColor: "rgba(0,0,0,.5)" }}
@@ -46,7 +46,7 @@ export default class Table extends React.Component {
                     </h2>
                   </div>
                   <div className="col-md-4 my-5">
-                    <h4>Alied Hospital Faisalabad</h4>
+                    <h4>Allied Hospital Faisalabad</h4>
                     <hr />
                     <h2
                       style={{ backgroundColor: "rgba(0,0,0,.5)" }}
@@ -92,7 +92,7 @@ export default class Table extends React.Component {
               <h4>Head Office</h4>
               <table className="medicalTable">
                 <tr>
-                  <td>Genral O.P.D</td>
+                  <td>General O.P.D</td>
                   <td>62383</td>
                 </tr>
                 <tr>
@@ -196,7 +196,7 @@ export default class Table extends React.Component {
                   <td>257</td>
                 </tr>
                 <tr>
-                  <td>Cant Station</td>
+                  <td>Cantt Station</td>
                   <td>3481</td>
                 </tr>
                 <tr>
@@ -209,11 +209,11 @@ export default class Table extends React.Component {
               <h4>Hepatitis & Eye Camp</h4>
               <table className="medicalTable">
                 <tr>
-                  <td>Hep B,C Test Camps</td>
+                  <td>Hepatitis B,C Test Camps</td>
                   <td>14850</td>
                 </tr>
                 <tr>
-                  <td>Hep B,C Vaccine Camps</td>
+                  <td>Hepatitis B,C Vaccine Camps</td>
                   <td>7185</td>
                 </tr>
                 <tr>

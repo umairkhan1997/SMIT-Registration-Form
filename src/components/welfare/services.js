@@ -59,7 +59,7 @@ export default class Services extends React.Component {
           ico: "fas fa-home",
         },
         {
-          name: "Traveling Exp",
+          name: "Traveling Expense",
           ico: "fas fa-shuttle-van",
         },
         {

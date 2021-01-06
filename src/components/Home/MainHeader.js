@@ -100,7 +100,7 @@ export default class MainHeader extends React.Component {
                         }}
                       >
                         <Link to="Donation" className="donate">
-                          DONATE
+                          DONATION
                         </Link>
                       </button>
                       {/* <button className='donate' >Donate</button> */}
