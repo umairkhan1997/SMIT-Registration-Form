@@ -138,14 +138,14 @@ class NewsSection extends React.Component {
 
                     <div className='col-md-6'>
                       <div className="date">
-                        <p style={{ fontSize: "2em" }}>{data.newsdate.slice(0, 2)}</p>
-                        <p>{data.newsdate.slice(3)}</p>
+                        <p style={{ fontSize: "2em" }}>{data.newsdate.slice(3, 5)}</p>
+                        <p>{data.newsdate.slice(0, 2)}{data.newsdate.slice(5)}</p>
                       </div>
 
                       <div className="slide-container">
                         <Zoom scale={0.4}>
                           {data.multiple_image.map((each, index) => (
-                            <img key={index} style={{ width: "100%" }} src={each} />
+                            <img key={index} style={{ width: "100%", height: '300px' }} src={each} />
                           ))}
                         </Zoom>
                       </div>
@@ -167,13 +167,13 @@ class NewsSection extends React.Component {
                   return (
                     <div className='col-md-6 pb-3'>
                       <div className="date">
-                        <p style={{ fontSize: "2em" }}>{data.newsdate.slice(0, 2)}</p>
-                        <p>{data.newsdate.slice(3)}</p>
+                        <p style={{ fontSize: "2em" }}>{data.newsdate.slice(3, 5)}</p>
+                        <p>{data.newsdate.slice(0, 2)}{data.newsdate.slice(5)}</p>
                       </div>
                       <div className="slide-container">
                         <Zoom scale={0.4}>
                           {data.multiple_image.map((each, index) => (
-                            <img key={index} style={{ width: "100%" }} src={each} />
+                            <img key={index} style={{ width: "100%", height: '300px' }} src={each} />
                           ))}
                         </Zoom>
                       </div>

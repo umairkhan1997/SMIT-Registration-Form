@@ -140,7 +140,7 @@ export default class DataTable extends React.Component {
               </div>
               <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
-                  <p style={{ fontSize: "1.2em" }}>Qarze Hasana</p>
+                  <p style={{ fontSize: "1.2em" }}>Qarz e Hasna</p>
                 </div>
                 <h3
                   className="p-3 shadow rounded text-center"
@@ -276,7 +276,7 @@ export default class DataTable extends React.Component {
               </div>
               <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
-                  <p style={{ fontSize: "1.2em" }}>Tajheez-o-Tadfeen</p>
+                  <p style={{ fontSize: "1.2em" }}>Tajheez-o-Takfeen</p>
                 </div>
                 <h3
                   className="p-3 shadow rounded text-center"
@@ -293,7 +293,7 @@ export default class DataTable extends React.Component {
               </div>
               <div className="col-md-3 py-3 py-5">
                 <div className="p-2 text-center">
-                  <p style={{ fontSize: "1.2em" }}>Travling Expance</p>
+                  <p style={{ fontSize: "1.2em" }}>Traveling Expense</p>
                 </div>
                 <h3
                   className="p-3 shadow rounded text-center"

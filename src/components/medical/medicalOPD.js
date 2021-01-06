@@ -205,7 +205,7 @@ export default class MedicalOPD extends React.Component {
         psychology: [
           {
             doctor: "Dr Ashfaq",
-            opd: "Phsycologist",
+            opd: "Psychologist",
             day: "Mon",
             time: "10:00am to 12:00pm",
           },
@@ -309,7 +309,7 @@ export default class MedicalOPD extends React.Component {
                 }
                 className="opdBtn"
               >
-                Gyanocology OPD
+                Gynecology OPD
               </button>
             </div>
             <div className="col-md-3">

@@ -7,6 +7,7 @@ import { Link, withRouter } from "react-router-dom";
 import CustomBtn from "../../smallcomponents/mybtn";
 import Announcement from "../../images/announcement.jpg";
 import hyd from "../../images/hyderabadannouncment.jpg";
+import smitbackcover from "../../images/smit-backcover.jpg";
 import { connect } from "react-redux";
 import { smitNotificationGet } from "../../Redux/action/smitAction";
 
@@ -55,7 +56,7 @@ class Cover extends React.Component {
                   );
                 })
                 .map((filteredName) => {
-                  return <div className="coverText row">
+                  return filteredName.viewForm ? (<div className="coverText row">
                     <div className="col-md-6">
                       <img
                         src={filteredName.multiple_image[0]}
@@ -69,7 +70,13 @@ class Cover extends React.Component {
                       </div>
                     </div>
                   </div>
+                  ) : <div className="coverText row " style={{
+                    backgroundImage:
+                      `url(${smitbackcover})`,
+                    backgroundSize: 'cover', height: '500px'
 
+                  }}>
+                    </div>;
                 })}
 
             </div>
