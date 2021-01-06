@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 
 export default class TableData extends React.Component {
   constructor(props) {
@@ -28,39 +29,118 @@ export default class TableData extends React.Component {
     const { city } = this.props;
     const { cityDetails } = this.state;
     return (
-      <div style={{ backgroundColor: "#f5f8ff" }} className="py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <table className="showtable">
-                <tr>
-                  <td>Vision</td>
-                  <td>.1 Million Developers</td>
-                </tr>
-                <tr>
-                  <td>Number of trained Students</td>
-                  <td>125000+</td>
-                </tr>
-                <tr>
-                  <td>Number of Enrolled Students</td>
-                  <td>55000+</td>
-                </tr>
-                <tr>
-                  <td>Number of Courses</td>
-                  <td>20+</td>
-                </tr>
-              </table>
+      <div>
+        <div style={{ backgroundColor: "#0267b4" }}>
+          <div className="container py-5">
+            <div className="row py-5 d-flex justify-content-center">
+              <div className="col-md-4 my-4">
+                <div
+                  style={{ height: "100%" }}
+                  className="bg-white shadow text-center p-5 rounded"
+                >
+                  <span
+                    style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
+                    className="qtyn icoPosition"
+                  >
+                    <i class="fas fa-bullseye"></i>
+                  </span>
+                  <h2>Vision</h2>
+                  <p style={{ fontSize: "2em", color: "#0267b4" }}>
+                    <CountUp start={1000} end={100000} duration={4} />+{" "}
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-4 my-4">
+                <div
+                  style={{ height: "100%" }}
+                  className="bg-white shadow text-center p-5 rounded"
+                >
+                  <span
+                    style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
+                    className="qtyn icoPosition"
+                  >
+                    <i class="fas fa-user-graduate"></i>
+                  </span>
+                  <h2>Trained Students</h2>
+                  <p style={{ fontSize: "2em", color: "#0267b4" }}>
+                    <CountUp start={1000} end={100000} duration={4} />+
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-4 my-4">
+                <div
+                  style={{ height: "100%" }}
+                  className="bg-white shadow text-center p-5 rounded"
+                >
+                  <span
+                    style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
+                    className="qtyn icoPosition"
+                  >
+                    <i class="fas fa-book-open"></i>
+                  </span>
+                  <h2>Enrolled Students</h2>
+                  <p style={{ fontSize: "2em", color: "#0267b4" }}>
+                    {" "}
+                    <CountUp start={10000} end={55000} duration={4} />+
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-4 my-4">
+                <div
+                  style={{ height: "100%" }}
+                  className="bg-white shadow text-center p-5 rounded"
+                >
+                  <span
+                    style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
+                    className="qtyn icoPosition"
+                  >
+                    <i class="fas fa-laptop"></i>
+                  </span>
+                  <h2>IT Courses</h2>
+                  <p style={{ fontSize: "2em", color: "#0267b4" }}>
+                    <CountUp start={1} end={15} duration={4} />+
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-4 my-4">
+                <div
+                  style={{ height: "100%" }}
+                  className="bg-white shadow text-center p-5 rounded"
+                >
+                  <span
+                    style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
+                    className="qtyn icoPosition"
+                  >
+                    <i class="fas fa-cogs"></i>
+                  </span>
+                  <h2>Vocational Training</h2>
+                  <p style={{ fontSize: "2em", color: "#0267b4" }}>
+                    <CountUp start={1} end={4} duration={4} />
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="col-md-6 p-2">
-              <iframe
-                className="video"
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/cH-VAV9ELto"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen="allowfullscreen"
-              ></iframe>
+          </div>
+        </div>
+        <div style={{ backgroundColor: "#f5f8ff" }} className="py-5">
+          <div className="container py-5">
+            <div className="row">
+              <div className="col-md-6">
+                <div className="p-5 bg-white shadow rounded">
+                  <h2>Introduction</h2>
+                </div>
+              </div>
+              <div className="col-md-6 p-2">
+                <iframe
+                  className="video"
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/cH-VAV9ELto"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="allowfullscreen"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>

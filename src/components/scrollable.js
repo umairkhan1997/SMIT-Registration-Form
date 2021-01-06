@@ -13,7 +13,7 @@ export default class Scrollable extends React.Component {
   }
   render() {
     return (
-      <div style={{width:'100vw'}}>
+      <div className="py-5 my-5">
         <Controller>
           <Scene triggerHook="onLeave" duration={1000} pin>
             {(progress) => (
@@ -43,7 +43,7 @@ export default class Scrollable extends React.Component {
                     }
                   >
                     <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} />
-                    <Tween from={{x:'0'}} to={{ x: "30%" }} />
+                    <Tween from={{ x: "0" }} to={{ x: "30%" }} />
                   </Timeline>
                 </Timeline>
               </div>

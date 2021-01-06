@@ -19,6 +19,7 @@ import TableData from "../components/SMIT/table";
 import SuccessStories from "../components/SMIT/suuccesStories";
 import SMITAwards from "../components/SMIT/awards";
 import Workshop from "../components/SMIT/workshop";
+import Vocational from "../components/SMIT/vocationaltraining";
 
 export default class Smit extends React.Component {
   constructor(props) {
@@ -34,7 +35,6 @@ export default class Smit extends React.Component {
     });
   }
   render() {
-
     return (
       <div>
         <Modal
@@ -116,7 +116,9 @@ export default class Smit extends React.Component {
         <SMITAwards />
         <Faculty />
         {/* <SmitEvents /> */}
+        <Vocational />
         <MainCourses />
+
         <SMITeacher />
         <Collaboration />
         {/* <SmitContact /> */}

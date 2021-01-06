@@ -13,7 +13,7 @@ export default class Faculty extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="my-5 py-5">
         <div className="container">
           <div className="Heading">
             <h2>Faculty</h2>
