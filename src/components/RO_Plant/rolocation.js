@@ -6,7 +6,6 @@ import Fade from "react-reveal";
 import { connect } from "react-redux";
 import { RoPlantLocationGet } from "../../Redux/action/RoPlantAction";
 
-
 class ROLocation extends React.Component {
   constructor(props) {
     super(props);
@@ -155,36 +154,45 @@ class ROLocation extends React.Component {
         >
           <div className="container">
             <div className="row">
-              {this.props.RoPlantLocationGets && this.props.RoPlantLocationGets.map((item, i) => {
-                return (
-                  <div className="col-md-3 p-3 RoCard">
-                    <div
-                      style={{ height: "200px", backgroundColor: item.underConstruction ? "rgb(230,230,230)" : "white", }}
-                      className="p-3 bg-white shadow rounded location"
-                      data-toggle={item.underConstruction ? null : "modal"}
-                      data-target={item.underConstruction ? null : "#exampleModalCenter"}
-                      onClick={() => this.setState({ currentLocation: item })}
-                    >
-                      <h4>{item.name}</h4>
-                      <p className="text-muted">{item.area}</p>
-
-                      {item.underConstruction ? <div
+              {this.props.RoPlantLocationGets &&
+                this.props.RoPlantLocationGets.map((item, i) => {
+                  return (
+                    <div className="col-md-3 p-3 RoCard">
+                      <div
                         style={{
-                          // color: "#0066b3",
-                          position: "absolute",
-                          top: 15,
-                          left: 20,
-                          color: "grey",
-                          fontSize: "1.5em",
+                          height: "200px",
+                          backgroundColor: item.underConstruction
+                            ? "rgb(230,230,230)"
+                            : "white",
                         }}
+                        className="p-3 bg-white shadow rounded location"
+                        data-toggle={item.underConstruction ? null : "modal"}
+                        data-target={
+                          item.underConstruction ? null : "#exampleModalCenter"
+                        }
+                        onClick={() => this.setState({ currentLocation: item })}
                       >
+                        <h4>{item.name}</h4>
+                        <p className="text-muted">{item.area}</p>
 
-                        <i class="fas fa-tools"></i>
-                      </div> : null}
+                        {item.underConstruction ? (
+                          <div
+                            style={{
+                              // color: "#0066b3",
+                              position: "absolute",
+                              top: 15,
+                              left: 20,
+                              color: "grey",
+                              fontSize: "1.5em",
+                            }}
+                          >
+                            <i class="fas fa-tools"></i>
+                          </div>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
             </div>
           </div>
           <div
@@ -241,7 +249,7 @@ class ROLocation extends React.Component {
 
 function mapStateToProp(state) {
   return {
-    RoPlantLocationGets: state.reducerRoPlant.RoPlantLocationGets
+    RoPlantLocationGets: state.reducerRoPlant.RoPlantLocationGets,
   };
 }
 function mapDispatchToProp(dispatch) {

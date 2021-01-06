@@ -14,11 +14,7 @@ class ImgSlider extends React.Component {
       <div className="slide-container">
         <Zoom scale={0.4}>
           {this.props.homeSlideImgs.map((each, index) => (
-            <img
-              key={index}
-              style={{ width: "100%", height: 600 }}
-              src={each.imgUrl}
-            />
+            <img key={index} style={{ width: "100%" }} src={each.imgUrl} />
           ))}
         </Zoom>
       </div>

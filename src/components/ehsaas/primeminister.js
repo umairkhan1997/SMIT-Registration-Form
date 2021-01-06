@@ -34,12 +34,13 @@ export default class Prime extends React.Component {
                 Target For Langar Khana 112 Langar Khana in{" "}
                 <span
                   style={{
-                    backgroundColor: "#0066b3",
-                    padding: "10px",
+                    backgroundColor: "white",
+                    padding: "7px",
+                    margin: "7px",
                     display: "inline-block",
-                    color: "white",
-                    borderRadius: "5px",
-                    boxShadow: "0 4px 10px rgba(0,0,0,.4)",
+                    color: "#016838",
+                    borderLeft: "5px solid #016838",
+                    boxShadow: "0 3px 5px rgba(0,0,0,.3)",
                   }}
                 >
                   Pakistan
