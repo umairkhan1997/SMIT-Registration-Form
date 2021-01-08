@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./medical.css";
 import Modal from "react-awesome-modal";
 
@@ -67,12 +65,6 @@ export default class MedicalOPD extends React.Component {
           },
         ],
         dental: [
-          {
-            doctor: "Dr Muhammad Sohail",
-            opd: "Dentist Specialist",
-            day: "Mon to Sat ",
-            time: "09:00am to 03:00pm",
-          },
           {
             doctor: "Dr Abdul Rahman",
             opd: "Dentist Specialist",
@@ -497,9 +489,12 @@ export default class MedicalOPD extends React.Component {
             {this.state.currentOPDDetails.map((e, i) => {
               return (
                 <div className="col-md-3" key={i}>
-                  <div className="clinicCard shadow p-4">
+                  <div
+                    style={{ height: "100%" }}
+                    className="clinicCard shadow p-4"
+                  >
                     <h4>{e.opd}</h4>
-                    <p className="DrName">{e.doctor}</p>
+                    <p className="color">{e.doctor}</p>
                     <p>{e.day}</p>
                     <p>{e.time}</p>
                   </div>

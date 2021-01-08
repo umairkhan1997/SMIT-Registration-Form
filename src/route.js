@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Smit from "./screen/Smit";
 import Welfare from "./screen/Welfare";
-import ChairmenMessage from "./screen/chairmenMessage";
 import Medical from "./screen/medical";
 import Main from "./screen/Main";
 import Services from "./screen/Services";

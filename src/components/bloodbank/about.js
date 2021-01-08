@@ -10,7 +10,16 @@ export default class AboutBloodBank extends React.Component {
             <div className="col-md-6">
               <div className="shadow p-5 bg-white rounded">
                 <h2 className="dataHeading">About Blood Bank</h2>
-                <p>Lorem </p>
+                <p>
+                  The recently established, state of the art Saylani Blood Bank
+                  and Thalassemia Centre is furnished with modern equipment,
+                  well trained technicians, leading Hematologists,
+                  Pediatricians, and General Physicians, and offers free of cost
+                  supply of blood and blood components to the poor and the
+                  needy. Free and effective screening, counseling and continuous
+                  medical care is provided to the deserving patients with
+                  Thalassemia and other haemoglobinopathies.
+                </p>
               </div>
             </div>
             <div className="col-md-6">
@@ -20,9 +29,9 @@ export default class AboutBloodBank extends React.Component {
                   width="100%"
                   height="315"
                   src="https://www.youtube.com/embed/-WR3_zBAaXs"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen="allowfullscreen"
+                  allowFullScreen="allowfullscreen"
                 ></iframe>
               </div>
             </div>

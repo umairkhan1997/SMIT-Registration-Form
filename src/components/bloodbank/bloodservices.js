@@ -1,15 +1,7 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./blood.css";
-import logo from "../../images/logo.png";
-import Fade from "react-reveal";
 
 export default class BloodBankAims extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
     return (
       <div>
@@ -42,7 +34,9 @@ export default class BloodBankAims extends React.Component {
               <div className="bloodServiceCard p-5">Medication</div>
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
-              <div className="bloodServiceCard p-5">Hepatitis B Vaccination</div>
+              <div className="bloodServiceCard p-5">
+                Hepatitis B Vaccination
+              </div>
             </div>
             <div className="col-md-3 p-3 mt-3 mb-3">
               <div className="bloodServiceCard p-5">

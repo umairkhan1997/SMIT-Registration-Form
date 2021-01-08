@@ -102,12 +102,7 @@ class Introduction extends React.Component {
           {/* {this.props.homeIntro.map((each, index) => ( */}
           <div className="row">
             <div className="col-md-4">
-              <img
-                src={hazrat}
-                width="100%"
-                height="250px"
-                style={{ marginTop: 5 }}
-              />
+              <img src={hazrat} width="100%" />
             </div>
             <div className="col-md-8">
               <Reveal effect="fadeInUp">

@@ -106,13 +106,12 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import bookStore from "../../images/bookStore.jpg";
-import bookOne from "../../images/MAH-K-ORAD-O-WAZAIF.jpg";
-import bookTwo from "../../images/adab-e-maiyat.jpg";
-import ehkam from "../../images/ehkam.jpg";
+// import bookOne from "../../images/MAH-K-ORAD-O-WAZAIF.jpg";
+// import bookTwo from "../../images/adab-e-maiyat.jpg";
+// import ehkam from "../../images/ehkam.jpg";
 import "./BookStore.css";
 import { connect } from "react-redux";
 import { bookAllCat, bookAllSpec } from "../../Redux/action/homeAction";
-import { Link } from "react-router-dom";
 
 const names = [
   { namess: "umair", age: 23 },
@@ -135,7 +134,7 @@ class BookStore extends React.Component {
   render() {
     return (
       <div>
-        <img src={bookStore} width="100%" />
+        <img src={bookStore} width="100%" alt="Bara Maah k Aurad-O-Wazaif" />
         <div className="container">
           <div className="row">
             <div className="col-md-3 mt-5">

@@ -1,9 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Fade from "react-reveal/Fade";
 import "./dastarkhwan.css";
-import CountUp from "react-countup";
-import primeMinister from "../../images/primeMinister.jpg";
 import roti from "../../images/rotibank.jpg";
 import mobiledastarkhwan from "../../images/mobileDastarkhwan.jpg";
 
@@ -21,8 +18,13 @@ export default class RotiBank extends React.Component {
             <div className="col-md-6 border-right border-primary pt-4 pb-5 pr-5 pl-5">
               <Fade right>
                 <div>
-                  <div className='displayheading'>
-                    <h2 className='font-weight-bold' style={{ color: '#1371b8' }}>Saylani Roti Bank</h2>
+                  <div className="displayheading">
+                    <h2
+                      className="font-weight-bold"
+                      style={{ color: "#1371b8" }}
+                    >
+                      Saylani Roti Bank
+                    </h2>
                   </div>
                   <p className="text-left">
                     Saylani is providing pack food to deserving and hungry
@@ -58,8 +60,13 @@ export default class RotiBank extends React.Component {
             <div className="col-md-6 pt-4 pb-5 pr-5 pl-5">
               <Fade left>
                 <div>
-                  <div className='displayheading'>
-                    <h2 className='font-weight-bold' style={{ color: '#1371b8' }}>Saylani Mobile Dastarkhwan</h2>
+                  <div className="displayheading">
+                    <h2
+                      className="font-weight-bold"
+                      style={{ color: "#1371b8" }}
+                    >
+                      Saylani Mobile Dastarkhwan
+                    </h2>
                   </div>
                   <p className="text-left">
                     In an effort to go the extra mile in the service of

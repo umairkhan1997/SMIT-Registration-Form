@@ -51,9 +51,9 @@ export default class Education extends React.Component {
                   width="100%"
                   height="315"
                   src="https://www.youtube.com/embed/TCNg6QrHjPk"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen="allowfullscreen"
+                  allowFullScreen="allowfullscreen"
                 ></iframe>
               </div>
             </div>

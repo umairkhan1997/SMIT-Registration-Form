@@ -1,16 +1,9 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
-import img1 from "../../images/gray-background.jpg";
 import img6 from "../../images/president.jpeg";
 import img2 from "../../images/govern.jpg";
 import { Link } from "react-router-dom";
 export default class HomeNews extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
     return (
       <div
@@ -66,9 +59,9 @@ export default class HomeNews extends React.Component {
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/Jkg1W4SdAO4"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen="allowfullscreen"
+                allowFullScreen="allowfullscreen"
               ></iframe>
             </div>
           </div>

@@ -11,12 +11,26 @@ export default class Intro extends React.Component {
   }
   render() {
     return (
-      <div style={{ backgroundColor: "#f5f8ff" }} className="py-5">
+      <div
+        style={{
+          backgroundColor: "#f5f8ff",
+        }}
+        className="mt-5 py-5"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div className="bg-white rounded shadow p-5">
                 <h2>Introduction</h2>
+                <p className="color">
+                  Bridging the needs of quality healthcare is a top priority for
+                  us. The goal of Saylani Health Care Services is to build a
+                  healthy society and outreach medically underserved and
+                  neglected communities not only through provision of high
+                  quality free of cost health services & supplies but also by
+                  acting as a bridge between marginalized deserving patients and
+                  health institutions.
+                </p>
               </div>
             </div>
             <div className="col-md-6">

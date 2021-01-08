@@ -17,14 +17,14 @@ export default class MainHeader extends React.Component {
       <header className="bg-light border-bottom sticky-top">
         <div className="container-fluid bg-light">
           <div className="container">
-            <nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light">
+            <nav className="navbar navbar-expand-lg d-flex justify-content-between navbar-light">
               <div>
-                <Link class="navbar-brand" to="/">
+                <Link className="navbar-brand" to="/">
                   <img src={logo} width="180px" />
                 </Link>
               </div>
               <button
-                class="navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -32,14 +32,14 @@ export default class MainHeader extends React.Component {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
               </button>
               <div>
                 <div
-                  class="collapse navbar-collapse"
+                  className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  <ul class="navbar-nav mr-auto">
+                  <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
                       <Link className="nav-link" to="/">
                         HOME
@@ -52,32 +52,17 @@ export default class MainHeader extends React.Component {
                     </li>
 
                     <li className="nav-item">
-                      <Link
-                        className="nav-link"
-                        to="/media"
-                        tabindex="-1"
-                        aria-disabled="true"
-                      >
+                      <Link className="nav-link" to="/media">
                         MEDIA
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link
-                        className="nav-link"
-                        to="/contact"
-                        tabindex="-1"
-                        aria-disabled="true"
-                      >
+                      <Link className="nav-link" to="/contact">
                         CONTACT
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link
-                        className="nav-link"
-                        to="/news"
-                        tabindex="-1"
-                        aria-disabled="true"
-                      >
+                      <Link className="nav-link" to="/news">
                         NEWS
                       </Link>
                     </li>
