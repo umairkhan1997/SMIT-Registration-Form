@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "088a05673486afc21d05ee75f29628b0",
+    "revision": "1542956c8c9a46b20b172fb7c8dde710",
     "url": "/index.html"
   },
   {
-    "revision": "f45fe4b4e537ef2e46c6",
+    "revision": "8c0107f06311580472b1",
     "url": "/static/css/2.cc3a8c3e.chunk.css"
   },
   {
-    "revision": "620754c62ac976dd4a85",
-    "url": "/static/css/main.b5283479.chunk.css"
+    "revision": "bce77eb12c5325a60de9",
+    "url": "/static/css/main.001bd3f1.chunk.css"
   },
   {
-    "revision": "f45fe4b4e537ef2e46c6",
-    "url": "/static/js/2.f34364b4.chunk.js"
+    "revision": "8c0107f06311580472b1",
+    "url": "/static/js/2.7250c3a9.chunk.js"
   },
   {
-    "revision": "4865b66e7c0f7b46b6107944a9a448ba",
-    "url": "/static/js/2.f34364b4.chunk.js.LICENSE.txt"
+    "revision": "48ed82411a183394571e9b7f06425897",
+    "url": "/static/js/2.7250c3a9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "620754c62ac976dd4a85",
-    "url": "/static/js/main.6469ca47.chunk.js"
+    "revision": "bce77eb12c5325a60de9",
+    "url": "/static/js/main.08b82644.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -40,10 +40,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/HAJJ.4398824b.pdf"
   },
   {
-    "revision": "98c713ebbdc973e5eb2952e38d76d078",
-    "url": "/static/media/MAH-K-ORAD-O-WAZAIF.98c713eb.jpg"
-  },
-  {
     "revision": "adc8797f81040e0173b780e7aefd5307",
     "url": "/static/media/ROback.adc8797f.jpg"
   },
@@ -54,10 +50,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "aa079bc9d4fa07b299a82060435509bb",
     "url": "/static/media/achieve.aa079bc9.jpg"
-  },
-  {
-    "revision": "646b51883b54ddc4c9ca31f2dc300a67",
-    "url": "/static/media/adab-e-maiyat.646b5188.jpg"
   },
   {
     "revision": "57b58aaab7377b9941d97530c859ebdf",
@@ -88,28 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/back.1b810d41.jpg"
   },
   {
-    "revision": "21d9def5cf75b4c8375a632fd55041f6",
-    "url": "/static/media/blood.21d9def5.jpeg"
-  },
-  {
-    "revision": "9ab5316d61db1b795c8fd60c3da25106",
-    "url": "/static/media/blood2.9ab5316d.jpeg"
-  },
-  {
     "revision": "1f67b2c64ce7184b90724d9b2fb82f40",
     "url": "/static/media/blood3.1f67b2c6.jpeg"
-  },
-  {
-    "revision": "87577ac1c2274c5620d5dc45b31139d4",
-    "url": "/static/media/blood4.87577ac1.jpeg"
-  },
-  {
-    "revision": "8d62458fc5314e2867eb16f5f69b4e50",
-    "url": "/static/media/blood5.8d62458f.jpeg"
-  },
-  {
-    "revision": "5daa4fba10b21f5f5d3502f3d571fb53",
-    "url": "/static/media/blood6.5daa4fba.jpeg"
   },
   {
     "revision": "08ebc3a798cbf1916aab8d4424569758",
@@ -148,10 +120,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cover2.a0990ec2.png"
   },
   {
-    "revision": "f06fec917c877de700552988526dadd5",
-    "url": "/static/media/ehkam.f06fec91.jpg"
-  },
-  {
     "revision": "51d5640eb77d626e2eb20c62686c25a7",
     "url": "/static/media/faisalabad.51d5640e.jpg"
   },
@@ -162,10 +130,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3570337975319aa087fe39904bbfc1a1",
     "url": "/static/media/govern.35703379.jpg"
-  },
-  {
-    "revision": "518e8651c3ec15d63cd5ea9ba044a1cf",
-    "url": "/static/media/gray-background.518e8651.jpg"
   },
   {
     "revision": "4a78913c70fae5d15e580c2a023522ac",
@@ -260,10 +224,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/president.91d702bf.jpeg"
   },
   {
-    "revision": "3bd6c48057019157b244c8282ebc349b",
-    "url": "/static/media/primeMinister.3bd6c480.jpg"
-  },
-  {
     "revision": "88ec84c1536c83d6df22c98a8c3f94eb",
     "url": "/static/media/raheel.88ec84c1.jpg"
   },
@@ -274,10 +234,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "35ae5332c922fa11a92e65163d9d355c",
     "url": "/static/media/rotibank.35ae5332.jpg"
-  },
-  {
-    "revision": "1b4b5955bbb3f91a6ec7b158c0883bf9",
-    "url": "/static/media/saylaniDastarkhwan.1b4b5955.jpg"
   },
   {
     "revision": "c624311372fa533a40d949123b711897",

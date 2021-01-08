@@ -16,9 +16,7 @@ export default class AboutBloodBank extends React.Component {
                   well trained technicians, leading Hematologists,
                   Pediatricians, and General Physicians, and offers free of cost
                   supply of blood and blood components to the poor and the
-                  needy. Free and effective screening, counseling and continuous
-                  medical care is provided to the deserving patients with
-                  Thalassemia and other haemoglobinopathies.
+                  needy.
                 </p>
               </div>
             </div>
