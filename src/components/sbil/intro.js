@@ -8,7 +8,7 @@ export default class Intro extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-6 p-3">
-                <div className="rounded bg-white shadow p-5">
+                <div className="py-5 px-4 bg-white shadow rounded introCard">
                   <h2>Introduction</h2>
                   <p className="color">
                     Our Vision : Saylani will make Pakistan, the international
@@ -25,7 +25,6 @@ export default class Intro extends React.Component {
                 <iframe
                   className="video"
                   width="100%"
-                  height="315"
                   src="https://www.youtube.com/embed/xQbzeGOiFuU"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

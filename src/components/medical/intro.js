@@ -19,8 +19,8 @@ export default class Intro extends React.Component {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
-              <div className="bg-white rounded shadow p-5">
+            <div className="col-md-6 p-2">
+              <div className="py-5 px-4 bg-white shadow rounded introCard">
                 <h2>Introduction</h2>
                 <p className="color">
                   Bridging the needs of quality healthcare is a top priority for
@@ -33,11 +33,10 @@ export default class Intro extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 p-2">
               <iframe
                 className="video"
                 width="100%"
-                height="315"
                 src="https://www.youtube.com/embed/4iU5vCR-ygM"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

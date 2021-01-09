@@ -5,12 +5,12 @@ import img1 from "../../images/engineer.png";
 import operator from "../../images/operator.png";
 import manager from "../../images/manager.png";
 import taxiDriver from "../../images/taxi-driver.png";
-import JobContact from "./JobContact";
-import { Link, withRouter } from "react-router-dom";
-import history from '../../history';
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { JobBankHuntGet, jobBankFormGet } from "../../Redux/action/JobBankAction";
-
+import {
+  JobBankHuntGet,
+  jobBankFormGet,
+} from "../../Redux/action/JobBankAction";
 
 class JobBank extends React.Component {
   constructor(props) {
@@ -21,74 +21,84 @@ class JobBank extends React.Component {
     };
   }
   jobFormPg = () => {
-    this.props.history.push('/job')
-  }
+    this.props.history.push("/job");
+  };
   componentDidMount() {
-    this.props.JobBankHuntGet()
-    this.props.jobBankFormGet()
+    this.props.JobBankHuntGet();
+    this.props.jobBankFormGet();
   }
   render() {
-    console.log(this.props)
+    console.log(this.props);
     return (
-      <div className="">
-        {/* POPULAR JOBS START =============>>>>>>>>*/}
+      <div>
+        {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
+        <div
+          style={{
+            backgroundImage:
+              "url('https://miro.medium.com/max/4356/1*nlQxJsWScn0G_mkK86vxXg.png')",
+            backgroundSize: "cover",
+          }}
+          className="py-5"
+        >
+          <div className="container my-5 py-5 d-flex justify-content-end">
+            <div className="mainCoverCard text-dark p-5">
+              <p style={{ fontSize: "3.5em" }}>
+                <i className="fab fa-wpforms"></i>
+              </p>
+              <p style={{ fontSize: "2em" }}>
+                Are you a Job Seeker? or Recruiter?
+              </p>
+              <button
+                className="btn btn-outline-dark rounded-pill px-5"
+                onClick={this.jobFormPg}
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
 
+        {/* Intro =============>>>>>>>>*/}
 
-        <div className="container my-4">
+        <div className="container py-5 my-5">
           <div className="row">
-
-            <div className="col-md-6">
-              <table className="showtable">
-                {this.props.JobBankHuntGets && this.props.JobBankHuntGets.map((i) => {
-                  return (
-                    <tr>
-                      <td>{i.catName}</td>
-                      <td>{i.count}</td>
-                    </tr>
-                  )
-                })}
-              </table>
+            <div className="col-md-6 p-2">
+              <div className="py-5 px-4 bg-white shadow rounded introCard">
+                <h2>Introduction</h2>
+              </div>
             </div>
             <div className="col-md-6 p-2">
               <iframe
+                className="video"
                 width="100%"
-                height="320"
-                src="https://www.youtube.com/embed/N4DIjxCGWVc"
-                frameborder="0"
+                src="https://www.youtube.com/embed/nlsxd4g0ASA"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen="allowfullscreen"
               ></iframe>
             </div>
           </div>
         </div>
 
-
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div className="container mt-5 d-flex justify-content-center">
-
-          <div
-            className="col-md-6 shadow  small "
-            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
-
-          >
-            <a onClick={this.jobFormPg} style={{ display: 'flex', alignItems: 'center' }}>
-              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
-                <i class="fab fa-wpforms"></i>
-              </p>
-              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Job Seeker ?</p>
-            </a>
-          </div>
-          <div
-            className="col-md-6 shadow  small "
-            style={{ backgroundColor: "#f5f6f7", height: 140, display: 'flex', alignItems: 'center' }}
-
-          >
-            <a href="/job" style={{ display: 'flex', alignItems: 'center' }}>
-              <p style={{ fontSize: "3.5em", marginTop: 15, color: '#0267b4' }}>
-                <i class="fab fa-wpforms"></i>
-              </p>
-              <p style={{ fontSize: "2em", marginTop: 15, marginLeft: 20, color: '#0267b4' }}>Are you a Recruiter ?</p>
-            </a>
+        <div style={{ backgroundColor: "#dce9f7" }} className="py-5 shadow">
+          <div className="container">
+            <div className="row">
+              {this.props.JobBankHuntGets &&
+                this.props.JobBankHuntGets.map((i, ind) => {
+                  return (
+                    <div key={ind} className="col-md-3 py-3">
+                      <p style={{ fontSize: "1.5em" }}>{i.catName}</p>
+                      <h3
+                        className="shadow p-3 rounded text-white"
+                        style={{ backgroundColor: "rgba(0,0,0,.4)" }}
+                      >
+                        {i.count}
+                      </h3>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         </div>
 
@@ -97,123 +107,79 @@ class JobBank extends React.Component {
             Popular Categories
           </h3>
           <div className="container">
-            <div className="row mt-4 justify-content-center">
-              <div
-                className="col-md-2 shadow divStl m-3 small text-center"
-                style={{ backgroundColor: "#f5f6f7" }}
-              >
-                <p style={{ fontSize: "3.5em" }}>
-                  <img
-                    src={manager}
-                    style={{ marginTop: 20 }}
-                    width="80px"
-                    height="80px"
-                  />
-                </p>
-                <p style={{ fontSize: "1.5em" }}>Supervisor</p>
+            <div className="row ">
+              <div className="col-md-3 p-4 categoryCard">
+                <div className="p-3 text-center backgroundLight rounded border">
+                  <img width="80%" src={manager} alt="Supervisor" />
+                  <p style={{ fontSize: "1.5em" }}>Supervisor</p>
+                </div>
               </div>
-
-              <div
-                className="col-md-2 shadow m-3 small text-center"
-                style={{ backgroundColor: "#f5f6f7" }}
-              >
-                <p style={{ fontSize: "3.5em" }}>
-                  <img
-                    src={operator}
-                    style={{ marginTop: 20 }}
-                    width="80px"
-                    height="80px"
-                  />
-                </p>
-                <p style={{ fontSize: "1.5em" }}>Operator</p>
+              <div className="col-md-3 p-4 categoryCard">
+                <div className="p-3 text-center backgroundLight rounded border">
+                  <img width="80%" src={operator} alt="Operator" />
+                  <p style={{ fontSize: "1.5em" }}>Operator</p>
+                </div>
               </div>
-              <div
-                className="col-md-2 shadow m-3 small text-center"
-                style={{ backgroundColor: "#f5f6f7" }}
-              >
-                <p style={{ fontSize: "3.5em" }}>
-                  <img
-                    src={taxiDriver}
-                    style={{ marginTop: 20 }}
-                    width="80px"
-                    height="80px"
-                  />
-                </p>
-                <p style={{ fontSize: "1.5em" }}>Driver</p>
+              <div className="col-md-3 p-4 categoryCard">
+                <div className="p-3 text-center backgroundLight rounded border">
+                  <img width="80%" src={taxiDriver} alt="driver" />
+                  <p style={{ fontSize: "1.5em" }}>Driver</p>
+                </div>
               </div>
-              <div
-                className="col-md-2 shadow m-3 small text-center"
-                style={{ backgroundColor: "#f5f6f7" }}
-              >
-                <p style={{ fontSize: "3.5em" }}>
-                  {/* <i class="fas fa-laptop-code"></i> */}
-                  <img
-                    src={img1}
-                    style={{ marginTop: 20 }}
-                    width="80px"
-                    height="80px"
-                  />
-                </p>
-                <p style={{ fontSize: "1.5em" }}>Labour</p>
+              <div className="col-md-3 p-4 categoryCard">
+                <div className="p-3 text-center backgroundLight rounded border">
+                  <img width="80%" src={img1} alt="Labour" />
+                  <p style={{ fontSize: "1.5em" }}>Labour</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-
-
-        {
-          this.state.jobseekarForm ? <div className='fullScreen'>
-            <div className='container p-5'>
+        {this.state.jobseekarForm ? (
+          <div className="fullScreen">
+            <div className="container p-5">
               <h1>Job Seekar</h1>
             </div>
-          </div> : null
-        }
+          </div>
+        ) : null}
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div className="container-fluid my-5 jobList">
-          <div className="container ">
-            <h3 style={{ color: "#1371b8", textAlign: "left" }} className="font-weight-bold  pt-5 pb-5">Featured Jobs</h3>
-          </div>
-          <div className="container ">
-            <table
-              style={{ width: "100%" }}
-              className="jobTable table-responsive-sm"
-            >
-              <thead className="TheadStyle">
-                <tr className="headName">
-                  <th >Full Name</th>
-                  <th>Occupation</th>
-                  <th>Age</th>
-                  <th>Gender</th>
-                  <th>Residence</th>
-                  {/* <th>Status</th> */}
-                </tr>
-              </thead>
-              <tbody>
-                {this.props.jobBankFormGets && this.props.jobBankFormGets.map((i) => {
-                  return i.favourite ? (
-                    <tr>
-                      <td>{i.fullName}</td>
-                      <td>{i.occupation}</td>
-                      <td>{i.age}</td>
-                      <td>{i.gender}</td>
-                      <td>{i.placeOfBirth}</td>
-                      {/* <td>
-                    <button className="viePro">   <i class="fas fa-id-card"></i> View</button>
-                  </td> */}
-                    </tr>
-                  ) : null
-                })}
-              </tbody>
-            </table>
-
+        <div className="jobList">
+          <div className="container my-5">
+            <div className="displayheading">
+              <h3>Featured Jobs</h3>
+            </div>
+            <div className="container">
+              <table className="jobTable table-responsive-sm">
+                <thead className="TheadStyle">
+                  <tr className="headName">
+                    <td>Full Name</td>
+                    <td>Occupation</td>
+                    <td>Age</td>
+                    <td>Gender</td>
+                    <td>Residence</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.props.jobBankFormGets &&
+                    this.props.jobBankFormGets.map((i, ind) => {
+                      return i.favourite ? (
+                        <tr key={ind}>
+                          <td>{i.fullName}</td>
+                          <td>{i.occupation}</td>
+                          <td>{i.age}</td>
+                          <td>{i.gender}</td>
+                          <td>{i.placeOfBirth}</td>
+                        </tr>
+                      ) : null;
+                    })}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-
-        <JobContact />
-
-      </div >
+      </div>
     );
   }
 }
@@ -221,7 +187,7 @@ class JobBank extends React.Component {
 function mapStateToProp(state) {
   return {
     JobBankHuntGets: state.reducerJobBank.JobBankHuntGets,
-    jobBankFormGets: state.reducerJobBank.jobBankFormGets
+    jobBankFormGets: state.reducerJobBank.jobBankFormGets,
   };
 }
 function mapDispatchToProp(dispatch) {
@@ -234,4 +200,4 @@ function mapDispatchToProp(dispatch) {
     },
   };
 }
-export default withRouter(connect(mapStateToProp, mapDispatchToProp)(JobBank)); 
+export default withRouter(connect(mapStateToProp, mapDispatchToProp)(JobBank));

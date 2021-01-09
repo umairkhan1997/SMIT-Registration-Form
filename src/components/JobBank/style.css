@@ -27,9 +27,8 @@ d.jobre {
   color: #1371b8;
   font-weight: bold;
   border-radius: 10px;
-  
 }
-.viewProf{
+.viewProf {
   color: #0267b4 !important;
 }
 
@@ -148,30 +147,41 @@ d.jobre {
   padding: 50px;
 }
 
-hr.style1{
+hr.style1 {
   border: 1px solid #8c8b8b;
   height: 50px;
-  width:1px;
+  width: 1px;
 }
-.imgOne{
-  margin-right:5px;
+.imgOne {
+  margin-right: 5px;
   border-right: 2px solid #bbb8b0 !important;
 }
 
-.jobList{
+.jobList {
   background-image: url("../../images/jobbank.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.TheadStyle{
+.TheadStyle {
   background-color: white;
 }
 
-tr>th{
-  color:#1371b8;
-  font-size:18px
+tr > th {
+  color: #1371b8;
+  font-size: 18px;
 }
-tr>td{
-  color:#1371b8;
-  font-weight:bold
+tr > td {
+  color: #1371b8;
+  font-weight: bold;
+}
+.mainCoverCard {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .categoryCard {
+    width: 50%;
+  }
 }

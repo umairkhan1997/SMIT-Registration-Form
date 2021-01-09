@@ -210,14 +210,6 @@
   top: 10%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-@media only screen and (max-width: 600px) {
-  .coursePopUp {
-    width: 100%;
-  }
-  .city {
-    padding: 25px 10px !important;
-  }
-}
 
 .city {
   cursor: pointer;
@@ -253,6 +245,7 @@
 .video {
   border-radius: 8px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  height: 310px;
 }
 .backgroundLight {
   background-color: #f5f8ff;
@@ -262,4 +255,22 @@
 }
 .color {
   color: #0066b3;
+}
+.introCard {
+  height: 310px;
+}
+
+@media only screen and (max-width: 600px) {
+  .coursePopUp {
+    width: 100%;
+  }
+  .city {
+    padding: 25px 10px !important;
+  }
+  .introCard {
+    height: 100%;
+  }
+  .video {
+    height: 200px;
+  }
 }
