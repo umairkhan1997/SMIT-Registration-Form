@@ -394,7 +394,8 @@ export default class MainCourses extends React.Component {
                 ],
               },
 
-              ico: "https://ajsavjtextilehub.online/src/img/icon_flechten.png",
+              ico:
+                "https://icon-library.com/images/textile-icon/textile-icon-2.jpg",
             },
           ],
         },

@@ -345,7 +345,7 @@ export default class DataTable extends React.Component {
               <div
                 style={{
                   position: "absolute",
-                  bottom: "0",
+                  bottom: "-10px",
                   left: "0",
                   backgroundColor: "#0066b3",
                   width: "100%",

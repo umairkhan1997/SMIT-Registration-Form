@@ -67,3 +67,36 @@
 .branchCard:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
+.slideBtn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  box-shadow: 0 10px 13px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 1.5em;
+  border: none;
+  text-align: center;
+  padding: 13px;
+}
+.slideBtn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.slideBtn:focus {
+  outline: none;
+}
+.prevSlide {
+  left: 10px;
+}
+.nxtSlide {
+  right: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .slideBtn {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    font-size: 1em;
+  }
+}

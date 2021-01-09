@@ -9,10 +9,24 @@ class ImgSlider extends React.Component {
   componentDidMount() {
     this.props.homeSlideImg();
   }
+
   render() {
     return (
       <div className="slide-container">
-        <Zoom scale={0.4}>
+        <Zoom
+          indicators
+          prevArrow={
+            <button className="slideBtn prevSlide">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+          }
+          nextArrow={
+            <button className="slideBtn nxtSlide">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          }
+          scale={0.4}
+        >
           {this.props.homeSlideImgs.map((each, index) => (
             <img key={index} style={{ width: "100%" }} src={each.imgUrl} />
           ))}

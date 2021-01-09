@@ -23,7 +23,12 @@ export default class Faculty extends React.Component {
           <div className="text-left pb-3">
             <div>
               <Fade left>
-                <img className="facultyImg " src={ziakhan} />
+                <img
+                  className="facultyImg "
+                  src={ziakhan}
+                  alt="Zia Khan"
+                  title="Zia Khan"
+                />
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
@@ -51,7 +56,12 @@ export default class Faculty extends React.Component {
           <div className="text-left pt-3 pb-3">
             <div>
               <Fade left>
-                <img className="facultyImg" src={alimughal} />
+                <img
+                  className="facultyImg"
+                  src={alimughal}
+                  alt="Muhammad Ali Mughal"
+                  title="Muhammad Ali Mughal"
+                />
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">

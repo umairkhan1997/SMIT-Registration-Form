@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
 import cover from "../../images/itback.png";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import CustomBtn from "../../smallcomponents/mybtn";
 import Announcement from "../../images/announcement.jpg";
 import hyd from "../../images/hyderabadannouncment.jpg";
@@ -30,6 +30,11 @@ class Cover extends React.Component {
         islamabad: {
           announcement: hyd,
         },
+      },
+      currentDetails: {
+        cityName: this.props.city,
+        duration: "",
+        timing: "",
       },
     };
   }
