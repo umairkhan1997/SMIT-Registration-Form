@@ -3,12 +3,13 @@ import "./Home.css";
 import img6 from "../../images/president.jpeg";
 import img2 from "../../images/govern.jpg";
 import { Link } from "react-router-dom";
+
 export default class HomeNews extends React.Component {
   render() {
     return (
       <div
         style={{ backgroundColor: "rgb(245, 248, 255)" }}
-        className="container-fluid pt-3 pb-3"
+        className="pt-3 pb-3"
       >
         <div className="container">
           <div className="displayheading">

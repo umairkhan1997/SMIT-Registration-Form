@@ -1,13 +1,9 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./news.css";
+import "react-slideshow-image/dist/styles.css";
+import { Link } from "react-router-dom";
 // import FbImageLibrary from "react-fb-image-grid";
-import Gallery from "react-grid-gallery";
-import Slide from "../../images/govern.jpg";
 import Footer from "../Footer";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
 import { connect } from "react-redux";
 import {
   getAllNews,
@@ -95,54 +91,120 @@ class NewsSection extends React.Component {
       <div>
         <div className="row">
           <div
-            style={{ backgroundColor: "rgb(240, 240, 240)" }}
-            className="col-md-3"
+            // style={{ backgroundColor: "rgb(240, 240, 240)" }}
+            className="col-md-3 shadow backgroundLight"
           >
             <div
               style={{ backgroundColor: "#0267b3", padding: "27px" }}
-              className="mt-5"
+              className="mt-4"
             >
               <h1 className="py-4 text-white">Saylani NEWS</h1>
             </div>
-            <h3 className="text-center mt-4">
-              Select date for specific day news of Saylani
-            </h3>
-            <input
-              type="date"
-              data-date-inline-picker="true"
-              value={newDate}
-              onChange={(e) => this.dateGet(e.target)}
-              className="ml-5 mt-3"
-            />
-            <div className="m-4">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onClick={this.resetDate}
-              >
+            <div className="py-4 px-3">
+              <h3 className="text-center mt-4">
+                Select date for specific day news of Saylani
+              </h3>
+              <input
+                type="date"
+                data-date-inline-picker="true"
+                value={newDate}
+                onChange={(e) => this.dateGet(e.target)}
+                className="dateInp"
+              />
+              <button class=" btn-block prevbtn" onClick={this.resetDate}>
                 Reset date
               </button>
             </div>
-            {/* <div >
-              <DatePicker
-                onChange={(e) => this.dateGet(e)}
-                value={newDate}
-                isOpen={dateState}
-
-              />
-            </div> */}
+            <div className="p-3 text-justify">
+              <p
+                className="NewsList"
+                data-toggle="collapse"
+                data-target="#Intro"
+                aria-expanded="false"
+                aria-controls="Intro"
+              >
+                Introduction <i class="fas fa-sort-down"></i>
+              </p>
+              <div class="collapse" id="Intro">
+                <div class="card card-body">
+                  <p className="color">
+                    Established in May 1999 by famous spiritual and religious
+                    scholar Maulana Bashir Ahmed Farooqui, Saylani Welfare
+                    International Trust was built on the fundamentals of
+                    breaking the cycle of poverty, alleviating the financial
+                    troubles of the poor, giving people a chance to live a
+                    dignified life and spreading happiness.
+                  </p>
+                  <p className="color">
+                    We are an organization that believes in lighting up the
+                    lives of underprivileged people across the world. We
+                    endeavor to provide the best quality services in areas
+                    including food, education, medical and social welfare free
+                    of cost to people living in the dark. With over 60 different
+                    sectors, we feed thousands of hungry people each day,
+                    hundreds more are given the hope of life through medical
+                    health care, many are educated to become leaders of tomorrow
+                    and several are given the opportunity to stand on their feet
+                    financially.
+                  </p>
+                  <p className="color">
+                    Today, we are proud to say that our physical presence
+                    extends throughout Pakistan with a vast network of 125
+                    branches operating in major cities including Karachi,
+                    Lahore, Islamabad, Rawalpindi, Hyderabad and Faisalabad.
+                    Apart from Pakistan, we have overseas offices in the UK, USA
+                    and UAE as well. Our worldwide branches are operating under
+                    the guidance of a team of over 3,500 working professionals
+                    who help almost 150,000 people on a daily basis.
+                  </p>
+                  <p className="color">
+                    We strongly believe that a little help goes a long way and
+                    our work would not be possible without the generous support
+                    of our valuable donors. Our local and international donors
+                    have graciously lent us a hand by supporting our causes and
+                    enabling us to serve the needs of people in need.
+                  </p>
+                </div>
+              </div>
+              <p
+                className="NewsList"
+                data-toggle="collapse"
+                data-target="#services"
+                aria-expanded="false"
+                aria-controls="services"
+              >
+                Services <i class="fas fa-sort-down"></i>
+              </p>
+              <div class="collapse" id="services">
+                <div class="card card-body">
+                  <Link to="/welfare">Welfare</Link>
+                  <Link to="/smit">IT Training</Link>
+                  <Link to="/education">Schools</Link>
+                  <Link to="/medical">Medical</Link>
+                  <Link to="/bloodbank">Blood Bank</Link>
+                  <Link to="/dastarkhwan">Food</Link>
+                  <Link to="/roplant">RO Water Plant</Link>
+                  <Link to="/jobBank">Jobs</Link>
+                  <Link to="/sbil">Business Education</Link>
+                  <Link to="/bookStore">Islamic Books</Link>
+                  <Link to="/langarkhana">Langar Khana</Link>
+                  <Link to="/istikhara">Rohani Ilaj, Istikhara</Link>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="col-md-9">
-            <div style={{ backgroundColor: "#0267b3" }} className="mt-5">
-              <div className="text-right row">
-                <div className="shortCount">
-                  <h5 style={{ color: "white" }}>Saylani Welfare Nov 2020</h5>
-                  <span className="large">Report</span>
+            <div style={{ backgroundColor: "#0267b3" }} className="mt-4">
+              <div className="text-center">
+                <div className="shortCountHead backgroundLight color">
+                  <h3>
+                    Saylani Welfare
+                    <span className="bg-white d-block shadow p-1">
+                      Nov 2020
+                    </span>
+                  </h3>
                 </div>
-                {/*   <div className='shortCount'>
-                  Saylani Welfare November 2020 <br />
-                  <span className='large'>Report</span>
-                </div> */}
+
                 <div className="shortCount">
                   Number Of Patients Treated <br />
                   <span className="large">53749</span>
@@ -166,14 +228,14 @@ class NewsSection extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="container">
+            <div className="container py-3">
               {this.props.SaylaniNewsGet &&
                 this.props.SaylaniNewsGet.length > 0 &&
                 this.props.SaylaniNewsGet.slice(0, 1).map((data) => {
                   //  console.log(data, 'first ')
                   return (
-                    <div className="row p-5">
-                      <div className="col-md-6">
+                    <div className="row py-3 border-top border-bottom my-3">
+                      <div className="col-md-8">
                         <div className="date">
                           <p style={{ fontSize: "2em" }}>
                             {data.newsdate.slice(3, 5)}
@@ -185,11 +247,23 @@ class NewsSection extends React.Component {
                         </div>
 
                         <div className="slide-container">
-                          <Zoom scale={0.4}>
+                          <Zoom
+                            prevArrow={
+                              <button className="slideBtn prevSlide">
+                                <i class="fas fa-arrow-left"></i>
+                              </button>
+                            }
+                            nextArrow={
+                              <button className="slideBtn nxtSlide">
+                                <i class="fas fa-arrow-right"></i>
+                              </button>
+                            }
+                            scale={0.4}
+                          >
                             {data.multiple_image.map((each, index) => (
                               <img
                                 key={index}
-                                style={{ width: "100%", height: "300px" }}
+                                style={{ width: "100%" }}
                                 src={each}
                               />
                             ))}
@@ -197,8 +271,8 @@ class NewsSection extends React.Component {
                         </div>
                       </div>
 
-                      <div className="col-md-6">
-                        <h2>{data.name}</h2>
+                      <div className="col-md-4">
+                        <h3>{data.name}</h3>
                         <p>{data.description}</p>
                       </div>
                     </div>
@@ -222,11 +296,23 @@ class NewsSection extends React.Component {
                           </p>
                         </div>
                         <div className="slide-container">
-                          <Zoom scale={0.4}>
+                          <Zoom
+                            prevArrow={
+                              <button className="slideBtn prevSlide">
+                                <i class="fas fa-arrow-left"></i>
+                              </button>
+                            }
+                            nextArrow={
+                              <button className="slideBtn nxtSlide">
+                                <i class="fas fa-arrow-right"></i>
+                              </button>
+                            }
+                            scale={0.4}
+                          >
                             {data.multiple_image.map((each, index) => (
                               <img
                                 key={index}
-                                style={{ width: "100%", height: "300px" }}
+                                style={{ width: "100%" }}
                                 src={each}
                               />
                             ))}

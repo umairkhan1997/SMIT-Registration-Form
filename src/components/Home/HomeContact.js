@@ -1,8 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
-import Fade from "react-reveal";
 
 export default class HomeContact extends React.Component {
   constructor(props) {

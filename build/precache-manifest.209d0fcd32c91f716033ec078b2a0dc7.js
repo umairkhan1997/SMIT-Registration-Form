@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "33dbc1f4ac80ec0f4c9bd4a0f549a505",
+    "revision": "db71297fe587e266a6d2df826eec846e",
     "url": "/index.html"
   },
   {
-    "revision": "1a504d89945229bdb7a6",
-    "url": "/static/css/2.cc3a8c3e.chunk.css"
+    "revision": "5650baf25861d055a9de",
+    "url": "/static/css/2.14e6b765.chunk.css"
   },
   {
-    "revision": "9f63ff2dcdbf942997e7",
-    "url": "/static/css/main.083568d9.chunk.css"
+    "revision": "893b4c6272ffe3e9a7de",
+    "url": "/static/css/main.3e68b3c7.chunk.css"
   },
   {
-    "revision": "1a504d89945229bdb7a6",
-    "url": "/static/js/2.b99b6710.chunk.js"
+    "revision": "5650baf25861d055a9de",
+    "url": "/static/js/2.b1b3ed62.chunk.js"
   },
   {
-    "revision": "48ed82411a183394571e9b7f06425897",
-    "url": "/static/js/2.b99b6710.chunk.js.LICENSE.txt"
+    "revision": "03b80fa8fe4a53d7fcc3e612b3bdb43b",
+    "url": "/static/js/2.b1b3ed62.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9f63ff2dcdbf942997e7",
-    "url": "/static/js/main.e1cab67a.chunk.js"
+    "revision": "893b4c6272ffe3e9a7de",
+    "url": "/static/js/main.3f8df251.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -56,10 +56,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ai.57b58aaa.png"
   },
   {
-    "revision": "480db8ff67bc0937111a624689f84fd8",
-    "url": "/static/media/al_quran.480db8ff.png"
-  },
-  {
     "revision": "68ce7e63f467d8f1be59194ff9762433",
     "url": "/static/media/aliMughal.68ce7e63.png"
   },
@@ -70,10 +66,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "863bf58175293bc23d91e173f1743948",
     "url": "/static/media/apptafseer.863bf581.jpeg"
-  },
-  {
-    "revision": "a444cfb2948065acfea33832868639cf",
-    "url": "/static/media/award1.a444cfb2.jpg"
   },
   {
     "revision": "1b810d41944a4ae6edffe6180f7a17a1",
@@ -108,12 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cityandguild.cbeb6945.png"
   },
   {
-    "revision": "bafa0c6f6592771d392112002e92bfa1",
-    "url": "/static/media/course.bafa0c6f.jpg"
-  },
-  {
-    "revision": "8a85d781a1d1a3f614b4cb04b944ca48",
-    "url": "/static/media/course1.8a85d781.jpeg"
+    "revision": "1e269cf74e2ae0a39e81add5a785f68d",
+    "url": "/static/media/course1.1e269cf7.jpg"
   },
   {
     "revision": "a0990ec299ba6311b09d16487071dd92",
@@ -164,10 +152,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/intel.ea58db45.png"
   },
   {
-    "revision": "f29fbcf243b1741171aa43bd235b56cf",
-    "url": "/static/media/intern.f29fbcf2.png"
-  },
-  {
     "revision": "88c3e8604c926077788e4ff548be95fe",
     "url": "/static/media/islamabad.88c3e860.jpg"
   },
@@ -200,16 +184,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo.c2a52d0a.png"
   },
   {
-    "revision": "ee7cd8ed2dcec943251eb2763684fc6f",
-    "url": "/static/media/logo.ee7cd8ed.svg"
-  },
-  {
     "revision": "71973c87517b9ed6f6f570b4ae3a04c4",
     "url": "/static/media/masajid.71973c87.jpg"
-  },
-  {
-    "revision": "72d79c42ba096308ff9b89d62164a089",
-    "url": "/static/media/media.72d79c42.jpg"
   },
   {
     "revision": "989fd0b43fd852bd2e6cbe0f76f48301",
@@ -222,14 +198,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "91d702bf490a036c708cf7ef87fd5290",
     "url": "/static/media/president.91d702bf.jpeg"
-  },
-  {
-    "revision": "88ec84c1536c83d6df22c98a8c3f94eb",
-    "url": "/static/media/raheel.88ec84c1.jpg"
-  },
-  {
-    "revision": "adc8797f81040e0173b780e7aefd5307",
-    "url": "/static/media/roplants.adc8797f.jpg"
   },
   {
     "revision": "35ae5332c922fa11a92e65163d9d355c",

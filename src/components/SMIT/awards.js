@@ -1,7 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./SmitStyle.css";
-import award from "../../images/award1.jpg";
 
 export default class SMITAwards extends React.Component {
   constructor(props) {
@@ -55,7 +53,6 @@ export default class SMITAwards extends React.Component {
                     </div>
                   );
                 })}
-
               </div>
               <a
                 class="carousel-control-prev"

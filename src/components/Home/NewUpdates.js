@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 
 export default class NewUpdates extends React.Component {
@@ -10,7 +8,7 @@ export default class NewUpdates extends React.Component {
   }
   render() {
     return (
-      <div className='container-fluid pt-5 pb-5 bg-light'>
+      <div className="pt-5 pb-5 bg-light">
         <div class="container pt-5 pb-5">
           <div className="p-3">
             <h1 className="Heading">News</h1>

@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./medical.css";
 
 export default class Table extends React.Component {

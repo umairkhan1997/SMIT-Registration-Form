@@ -1,9 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
-import img4 from "../../images/course.jpg";
-import img5 from "../../images/course1.jpeg";
 export default class MainCourses extends React.Component {
   constructor(props) {
     super(props);

@@ -4,7 +4,6 @@ import "react-slideshow-image/dist/styles.css";
 import logo from "../../images/logo.png";
 // import "../App.css";
 import "./Home.css";
-import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 export default class MainHeader extends React.Component {
   constructor(props) {

@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
 import cover from "../../images/itback.png";
 import { withRouter } from "react-router-dom";

@@ -4,7 +4,6 @@ import "react-slideshow-image/dist/styles.css";
 import MainHeader from "../components/Home/MainHeader";
 import MainCourses from "../components/SMIT/MainCourses";
 import Footer from "../components/Footer";
-import SmitContact from "../components/SMIT/SmitContact";
 import Faculty from "../components/SMIT/faculty";
 import Collaboration from "../components/SMIT/collaboration";
 import SMITeacher from "../components/SMIT/teacher";

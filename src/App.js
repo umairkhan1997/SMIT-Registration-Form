@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-slideshow-image/dist/styles.css";
 import "./App.css";
 import MyRoute from "./route";
 import { Provider } from "react-redux";

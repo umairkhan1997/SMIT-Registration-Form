@@ -1,8 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
-import zeeshan from "../../images/zeeshan.png";
+// import zeeshan from "../../images/zeeshan.png";
 import ziakhan from "../../images/ziaKhan.png";
 import alimughal from "../../images/aliMughal.png";
 import Fade from "react-reveal/Fade";

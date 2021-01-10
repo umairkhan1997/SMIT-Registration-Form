@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.css";
-import firebase from "firebase";
 
 export default class Contact extends React.Component {
   constructor(props) {

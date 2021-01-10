@@ -155,9 +155,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import masajid from "../../images/masajid.jpg";
-import MainHeader from '../../components/Home/MainHeader';
-import Footer from '../../components/Footer'
+// import masajid from "../../images/masajid.jpg";
+// import MainHeader from '../../components/Home/MainHeader';
+// import Footer from '../../components/Footer'
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { onlineQuranPakForm } from "../../Redux/action/homeAction";
 import "./OnlineQ.css";

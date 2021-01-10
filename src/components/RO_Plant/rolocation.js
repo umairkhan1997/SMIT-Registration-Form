@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./ro.css";
-import Fade from "react-reveal";
 import { connect } from "react-redux";
 import { RoPlantLocationGet } from "../../Redux/action/RoPlantAction";
 

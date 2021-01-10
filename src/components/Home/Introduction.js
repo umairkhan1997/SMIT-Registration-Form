@@ -70,8 +70,6 @@
 // export default connect(mapStateToProp, mapDispatchToProp)(Introduction);
 
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
 import Reveal from "react-reveal/Reveal";
 import hazrat from "../../images/hazrat.jpg";

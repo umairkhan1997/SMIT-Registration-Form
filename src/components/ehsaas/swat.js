@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./ehsaas.css";
 
 export default class SWAT extends React.Component {

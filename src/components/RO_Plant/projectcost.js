@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import CountUp from "react-countup";
 import "./ro.css";
 import Zoom from "react-reveal/Zoom";
 import ROback from "../../images/ROback.jpg";
