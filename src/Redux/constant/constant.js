@@ -16,7 +16,8 @@ const ActionTypes = {
   DonaListGet: "DonaListGet",
   QuranAppAndroidGet: "QuranAppAndroidGet",
   QuranAppIosGet: "QuranAppIosGet",
-  smitNotificationGet: "smitNotificationGet"
+  smitNotificationGet: "smitNotificationGet",
+  mediaGet: "mediaGet"
 };
 
 export default ActionTypes;

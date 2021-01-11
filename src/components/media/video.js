@@ -1,16 +1,45 @@
 import React from "react";
 import Zoom from "react-reveal/Zoom";
 import "./media.css";
+import Fade from "react-reveal/Fade";
+import { connect } from "react-redux";
+import { mediaGet } from "../../Redux/action/mediaAction";
+import { withRouter } from "react-router-dom";
 
-export default class Video extends React.Component {
+class Video extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-  }
+    this.state = {
 
+      category: ""
+    };
+  }
+  componentDidMount() {
+    this.props.mediaGet();
+  }
   render() {
+    console.log(this.props.mediaGets)
     return (
       <div className="container-fluid">
+        <div style={{ backgroundColor: "purple" }} className="bg-image">
+          <div className="container p-5">
+            <Fade down>
+              <div className="form-group" >
+                <p className="text-left " style={{ fontSize: 18, color: 'white' }}>Search Your Playlist</p>
+                <select className="form-control text-muted " id="exampleFormControlSelect1" style={{ height: 50, marginTop: -10, backgroundColor: '#e9ebec' }} >
+                  <option >NEKI KI BAAT ( ROZA 4)</option>
+                  <option >NEKI KI BAAT ( ROZA 2)</option>
+                  <option >Saylani Kifalat</option>
+                  <option >Saylani Medical</option>
+                  <option >Saylani Medical</option>
+                  <option>Saylani Documentary 2019</option>
+                  <option>Saylani Symposium 2019</option>
+                  <option>Ramzan-o-Eid Pakage</option>
+                </select>
+              </div>
+            </Fade>
+          </div>
+        </div>
         <div className="bg-image mt-5 ">
           {/* <div id="ytplayer"></div> */}
           <div className="row d-flex justify-content-left">
@@ -176,3 +205,18 @@ export default class Video extends React.Component {
     );
   }
 }
+
+
+function mapStateToProp(state) {
+  return {
+    mediaGets: state.reducerMedia.mediaGets,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    mediaGet: () => {
+      dispatch(mediaGet());
+    },
+  };
+}
+export default withRouter(connect(mapStateToProp, mapDispatchToProp)(Video));

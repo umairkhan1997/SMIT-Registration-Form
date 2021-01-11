@@ -5,13 +5,15 @@ import reducerJobBank from './reducer/jobBankReducer';
 import reducerDonation from './reducer/donationReducer';
 import reducerQuranApp from './reducer/QuranAppReducer';
 import reducerSmit from './reducer/smitReducer'
+import reducerMedia from './reducer/mediaReducer'
 export default combineReducers({
   root: homeReducer,
   reducerRoPlant,
   reducerJobBank,
   reducerDonation,
   reducerQuranApp,
-  reducerSmit
+  reducerSmit,
+  reducerMedia
 });
 
 // import {combineReducers} from 'redux';
