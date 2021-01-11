@@ -4,6 +4,7 @@ import Courses from "../components/sbil/courses";
 import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
 import cover from "../images/cover2.png";
+import Intro from "../components/sbil/intro";
 
 export default class SBIL extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export default class SBIL extends React.Component {
         <div>
           <img src={cover} width="100%" />
         </div>
+        <Intro />
         <Teacher />
         <Courses />
         <Footer />

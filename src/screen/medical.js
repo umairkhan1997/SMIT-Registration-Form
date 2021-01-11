@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import MedicalServices from "../components/medical/medicalServices";
-import MedicalClinics from "../components/medical/medicalClinics";
 import MedicalOPD from "../components/medical/medicalOPD";
 import Intro from "../components/medical/intro";
 import MainHeader from "../components/Home/MainHeader";

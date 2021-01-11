@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 // import "./SmitStyle.css";
 
 export default class SmitContact extends React.Component {
@@ -16,7 +14,9 @@ export default class SmitContact extends React.Component {
           style={{ backgroundColor: "white", marginTop: 80 }}
         >
           <div className="container ">
-            <h1 className="Heading pt-3 text-left font-weight-bold">Contact Us</h1>
+            <h1 className="Heading pt-3 text-left font-weight-bold">
+              Contact Us
+            </h1>
           </div>
         </div>
 
@@ -39,10 +39,17 @@ export default class SmitContact extends React.Component {
                   />
                 </div>
                 <div className="col-md-12">
-                  <button style={{
-                    width: "100%", color: 'white', backgroundColor: "#1371b8", borderradius: 10,
-                    borderWidth: 0, height: 40, fontweight: "bold"
-                  }}>
+                  <button
+                    style={{
+                      width: "100%",
+                      color: "white",
+                      backgroundColor: "#1371b8",
+                      borderradius: 10,
+                      borderWidth: 0,
+                      height: 40,
+                      fontweight: "bold",
+                    }}
+                  >
                     Submit
                   </button>
                 </div>

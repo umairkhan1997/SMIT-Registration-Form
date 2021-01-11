@@ -1,15 +1,8 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Zoom from "react-reveal/Zoom";
 import "./dastarkhwan.css";
 import CountUp from "react-countup";
 
 export default class LangarCounter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

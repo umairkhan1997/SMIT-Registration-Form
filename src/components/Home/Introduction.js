@@ -70,8 +70,6 @@
 // export default connect(mapStateToProp, mapDispatchToProp)(Introduction);
 
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
 import Reveal from "react-reveal/Reveal";
 import hazrat from "../../images/hazrat.jpg";
@@ -102,12 +100,7 @@ class Introduction extends React.Component {
           {/* {this.props.homeIntro.map((each, index) => ( */}
           <div className="row">
             <div className="col-md-4">
-              <img
-                src={hazrat}
-                width="100%"
-                height="250px"
-                style={{ marginTop: 5 }}
-              />
+              <img src={hazrat} width="100%" />
             </div>
             <div className="col-md-8">
               <Reveal effect="fadeInUp">

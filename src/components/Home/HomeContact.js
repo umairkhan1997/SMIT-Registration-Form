@@ -1,8 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./Home.css";
-import Fade from "react-reveal";
 
 export default class HomeContact extends React.Component {
   constructor(props) {
@@ -383,12 +380,12 @@ export default class HomeContact extends React.Component {
     const { currentCity } = this.state;
     return (
       <div>
-        <div className="container">
+        <div className="container ">
           <div className="displayheading">
-            <h1>Saylani Welfare Branches</h1>
+            <h2>Saylani Welfare Branches</h2>
           </div>
         </div>
-        <div className="backgroundLight">
+        <div className="backgroundLight border-bottom">
           <div className="py-5 shadow backgroundDark">
             <div className="container">
               <select

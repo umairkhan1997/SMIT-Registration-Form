@@ -1,7 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
-import logo from "../../images/logo.png";
 import Zoom from "react-reveal/Zoom";
 import "./media.css";
 
@@ -40,7 +37,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/njCSKTPMXyg?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -54,7 +50,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/jEch46lxwV4?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -68,7 +63,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/_uB0gT9NwRo?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -82,7 +76,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/VPd0OhmWN6w?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -96,7 +89,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/IIsHZFT9osQ?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -110,7 +102,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/pAs9JprZc_U?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -124,7 +115,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/ZmCxi3JZHOk?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -138,7 +128,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/yBndclFuoBw?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -152,7 +141,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/bJSqJvz5qoU?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -166,7 +154,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/zkj0ilYxRik"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>
@@ -180,7 +167,6 @@ export default class Video extends React.Component {
                   src="https://www.youtube.com/embed/qPUTEhCkdd4?rel=0&enablejsapi=1"
                   // frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
                 ></iframe>
               </Zoom>
             </div>

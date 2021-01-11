@@ -5,7 +5,6 @@ import MainHeader from "../components/Home/MainHeader";
 import MainCourses from "../components/SMIT/MainCourses";
 import MainCoursess from '../components/SMIT/MainCoursess';
 import Footer from "../components/Footer";
-import SmitContact from "../components/SMIT/SmitContact";
 import Faculty from "../components/SMIT/faculty";
 import Collaboration from "../components/SMIT/collaboration";
 import SMITeacher from "../components/SMIT/teacher";

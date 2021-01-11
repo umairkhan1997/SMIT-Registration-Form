@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import slide from "../images/hazrat.jpg";
 import { Controller, Scene } from "react-scrollmagic";

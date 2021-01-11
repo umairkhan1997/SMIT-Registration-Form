@@ -1,9 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./contact.css";
 import logo from "../../images/logo.png";
-import Fade from "react-reveal";
 import Button from "../../smallcomponents/mybtn";
 
 export default class ContactForm extends React.Component {

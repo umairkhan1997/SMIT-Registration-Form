@@ -1,20 +1,27 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
-import logo from "../../images/logo.png";
-import Zoom from "react-reveal/Zoom";
 import "./donate.css";
 import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class DonationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: this.props.data,
-      name: "", email: "", amount: "", amountPayable: 0, donationMethod: "Credit Card", donationType: "Sadqa", donationCategory: "", donationValue: 0, quan: "", amount: "", contNumber: "", remarks: "",
+      name: "",
+      email: "",
+      amount: "",
+      amountPayable: 0,
+      donationMethod: "Credit Card",
+      donationType: "Sadqa",
+      donationCategory: "",
+      donationValue: 0,
+      quan: "",
+      amount: "",
+      contNumber: "",
+      remarks: "",
       title: "",
       chkamount: false,
       aqiqaDropDown: [
@@ -88,7 +95,7 @@ class DonationForm extends React.Component {
             { value: "60000", donationCate: "Sadqa Camel (60000)" },
             { value: "65000", donationCate: "Sadqa Camel (65000)" },
             { value: "400", donationCate: "Sadqa Hen (400)" },
-          ]
+          ],
         },
         {
           donationType: "Aqiqa",
@@ -104,12 +111,16 @@ class DonationForm extends React.Component {
             { value: "55000", donationCate: "Aqiqa Camel (55000)" },
             { value: "60000", donationCate: "Aqiqa Camel (60000)" },
             { value: "65000", donationCate: "Aqiqa Camel (65000)" },
-          ]
-        }, {
+          ],
+        },
+        {
           donationType: "Corona Effecties",
           values: [
-            { value: "1500", donationCate: "Corona Effecties Rashan Bag Rs.(1500)" },
-          ]
+            {
+              value: "1500",
+              donationCate: "Corona Effecties Rashan Bag Rs.(1500)",
+            },
+          ],
         },
         {
           donationType: "Other Donation",
@@ -129,9 +140,9 @@ class DonationForm extends React.Component {
             { value: "0", donationCate: "Syrian Crisis" },
             { value: "0", donationCate: "Masjid Construction" },
             { value: "0", donationCate: "Medical Projects" },
-          ]
+          ],
         },
-      ]
+      ],
     };
   }
 
@@ -150,8 +161,8 @@ class DonationForm extends React.Component {
       let arr = sadqaDropDown;
       this.setState({
         currentData: arr,
-        donationType: e.target.value
-      })
+        donationType: e.target.value,
+      });
     }
     if (e.target.value === "Aqiqa") {
       let arr = aqiqaDropDown;
@@ -171,62 +182,90 @@ class DonationForm extends React.Component {
         currentData: arr,
       });
     }
-  }
+  };
 
   componentDidMount() {
-    this.props.DonaListGet()
-
+    this.props.DonaListGet();
   }
 
   setFieldVal = (a, b) => {
-    this.setState({ [b]: a })
-  }
+    this.setState({ [b]: a });
+  };
 
   checkField = (a) => {
-    if (a != "") { return false }
+    if (a != "") {
+      return false;
+    }
     return true;
-
-  }
+  };
 
   Submit = () => {
-    let { name, email, donationMethod, donationType, amountPayable, donationCategory, amount, donationValue, quan, contNumber, remarks } = this.state
+    let {
+      name,
+      email,
+      donationMethod,
+      donationType,
+      amountPayable,
+      donationCategory,
+      amount,
+      donationValue,
+      quan,
+      contNumber,
+      remarks,
+    } = this.state;
     if (this.checkField(name)) {
-      this.setState({ chkname: true })
+      this.setState({ chkname: true });
       window.scrollTo(0, 100);
-    }
-    else if (this.checkField(email)) {
-      this.setState({ chkemail: true })
+    } else if (this.checkField(email)) {
+      this.setState({ chkemail: true });
       window.scrollTo(0, 100);
-    }
-    else if (this.checkField(donationCategory) || donationCategory == "Select Donation Category") {
-      this.setState({ chkdonationCategory: true })
+    } else if (
+      this.checkField(donationCategory) ||
+      donationCategory == "Select Donation Category"
+    ) {
+      this.setState({ chkdonationCategory: true });
       window.scrollTo(0, 300);
-    }
-    else if (this.checkField(donationType == "Other Donation" ? amount : quan)) {
-      this.setState({ chkamount: true })
+    } else if (
+      this.checkField(donationType == "Other Donation" ? amount : quan)
+    ) {
+      this.setState({ chkamount: true });
       window.scrollTo(0, 700);
-    }
-    else if (this.checkField(contNumber)) {
-      this.setState({ chkcontNumber: true })
+    } else if (this.checkField(contNumber)) {
+      this.setState({ chkcontNumber: true });
       window.scrollTo(0, 800);
-    }
-    else if (this.checkField(remarks)) {
-      this.setState({ chkremarks: true })
+    } else if (this.checkField(remarks)) {
+      this.setState({ chkremarks: true });
       window.scrollTo(0, 900);
+    } else {
+      console.log("hello world");
     }
-    else {
-      console.log('hello world')
-    }
-  }
-
+  };
 
   render() {
-    let { name, email, donationMethod, donationType, amountPayable, donationCategory, amount, donationValue, quan, contNumber, remarks } = this.state
-    let quanVal = (parseInt(quan) * parseInt(donationValue));
-    let perc = donationType == "Other Donation" ? (parseInt(amount) / 100) * 3 : (parseInt(quanVal) / 100) * 3
+    let {
+      name,
+      email,
+      donationMethod,
+      donationType,
+      amountPayable,
+      donationCategory,
+      amount,
+      donationValue,
+      quan,
+      contNumber,
+      remarks,
+    } = this.state;
+    let quanVal = parseInt(quan) * parseInt(donationValue);
+    let perc =
+      donationType == "Other Donation"
+        ? (parseInt(amount) / 100) * 3
+        : (parseInt(quanVal) / 100) * 3;
     // console.log(quanVal, 'quanVal')
-    amountPayable = donationType == "Other Donation" ? parseInt(amount) + (parseInt(amount) / 100) * 3 : quanVal + (parseInt(quanVal) / 100) * 3
-    console.log(this.props, 'this.props')
+    amountPayable =
+      donationType == "Other Donation"
+        ? parseInt(amount) + (parseInt(amount) / 100) * 3
+        : quanVal + (parseInt(quanVal) / 100) * 3;
+    console.log(this.props, "this.props");
     return (
       <div>
         <div className="container">
@@ -243,19 +282,48 @@ class DonationForm extends React.Component {
                 <div className="row">
                   <div className="col-md-12 mt-3 mb-3">
                     <label className="lab text-dark">Name</label>
-                    <input type="text" class="inp" placeholder="Name" value={name} onChange={(e) => { this.setFieldVal(e.target.value, 'name'); this.setState({ chkname: false }) }} />
-                    {this.state.chkname ? <p className="text-danger">Field is Emply</p> : null}
+                    <input
+                      type="text"
+                      class="inp"
+                      placeholder="Name"
+                      value={name}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "name");
+                        this.setState({ chkname: false });
+                      }}
+                    />
+                    {this.state.chkname ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
                   </div>
                   <div className="col-md-12 mt-3 mb-3">
                     <label className="lab text-dark">Email</label>
-                    <input type="text" class="inp" placeholder="Email" value={email} onChange={(e) => { this.setFieldVal(e.target.value, 'email'); this.setState({ chkemail: false }) }} />
-                    {this.state.chkemail ? <p className="text-danger">Field is Emply</p> : null}
+                    <input
+                      type="text"
+                      class="inp"
+                      placeholder="Email"
+                      value={email}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "email");
+                        this.setState({ chkemail: false });
+                      }}
+                    />
+                    {this.state.chkemail ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
                   </div>
                   <div className="col-md-12 mt-3 mb-3">
                     <label className="lab text-dark">
                       Select Donation Method
                     </label>
-                    <select className="inp" value={donationMethod} onChange={(e) => { this.setFieldVal(e.target.value, 'donationMethod'); this.setState({ chkdonationMethod: false }) }}>
+                    <select
+                      className="inp"
+                      value={donationMethod}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "donationMethod");
+                        this.setState({ chkdonationMethod: false });
+                      }}
+                    >
                       <option>Credit Card</option>
                     </select>
                   </div>
@@ -265,17 +333,24 @@ class DonationForm extends React.Component {
                     </label>
                     <select
                       // onChange={(e) => this.donationType(e)}
-                      className="inp" value={donationType}
+                      className="inp"
+                      value={donationType}
                       onChange={(e) => {
-                        this.setFieldVal(e.target.value, 'donationType');
-                        this.setFieldVal("", 'donationValue');
-                        this.setFieldVal("", 'donationCategory');
-                        this.setState({ chkdonationType: false })
+                        this.setFieldVal(e.target.value, "donationType");
+                        this.setFieldVal("", "donationValue");
+                        this.setFieldVal("", "donationCategory");
+                        this.setState({ chkdonationType: false });
                       }}
                     >
-                      <option value="Select Donation Type">Select Donation Type</option>
+                      <option value="Select Donation Type">
+                        Select Donation Type
+                      </option>
                       {this.props.DonaListGets.map((i, index) => {
-                        return <option key={index} value={i.donationType}>{i.donationType}</option>;
+                        return (
+                          <option key={index} value={i.donationType}>
+                            {i.donationType}
+                          </option>
+                        );
                       })}
                     </select>
                   </div>
@@ -283,26 +358,41 @@ class DonationForm extends React.Component {
                     <label className="lab text-dark">
                       Select Donation category
                     </label>
-                    <select className="inp" onChange={(e) => {
-                      let index = e.nativeEvent.target.selectedIndex;
-                      let label = e.nativeEvent.target[index].text;
-                      this.setFieldVal(e.target.value, 'donationValue');
-                      this.setFieldVal(label, 'donationCategory');
-                      this.setState({ chkdonationCategory: false })
-                    }}>
+                    <select
+                      className="inp"
+                      onChange={(e) => {
+                        let index = e.nativeEvent.target.selectedIndex;
+                        let label = e.nativeEvent.target[index].text;
+                        this.setFieldVal(e.target.value, "donationValue");
+                        this.setFieldVal(label, "donationCategory");
+                        this.setState({ chkdonationCategory: false });
+                      }}
+                    >
                       <option value="">Select Donation Category</option>
                       {this.props.DonaListGets.filter((name) => {
-                        return (name.donationType.toLocaleLowerCase().indexOf(this.state.donationType.toLocaleLowerCase()) >= 0)
+                        return (
+                          name.donationType
+                            .toLocaleLowerCase()
+                            .indexOf(
+                              this.state.donationType.toLocaleLowerCase()
+                            ) >= 0
+                        );
                       }).map((filterData) => {
                         return filterData.values.map((filter) => {
-                          return <option value={filter.value} >{filter.donationCate}</option>
-                        })
+                          return (
+                            <option value={filter.value}>
+                              {filter.donationCate}
+                            </option>
+                          );
+                        });
                       })}
                     </select>
-                    {this.state.chkdonationCategory ? <p className="text-danger">Field is Emply</p> : null}
+                    {this.state.chkdonationCategory ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
                   </div>
 
-                  {this.state.donationType == "Other Donation" ?
+                  {this.state.donationType == "Other Donation" ? (
                     <div className="col-md-12 mt-3 mb-3">
                       <label className="lab text-dark">Amount</label>
                       <input
@@ -310,10 +400,14 @@ class DonationForm extends React.Component {
                         className="inp"
                         placeholder="Amount"
                         min="1"
-                        value={amount} onChange={(e) => { this.setFieldVal(e.target.value, 'amount'); this.setState({ chkamount: false }) }}
+                        value={amount}
+                        onChange={(e) => {
+                          this.setFieldVal(e.target.value, "amount");
+                          this.setState({ chkamount: false });
+                        }}
                       />
-                    </div> :
-
+                    </div>
+                  ) : (
                     <div className="col-md-12 mt-3 mb-3">
                       <label className="lab text-dark">Quantity</label>
                       <input
@@ -321,10 +415,17 @@ class DonationForm extends React.Component {
                         className="inp"
                         placeholder="Number"
                         min="1"
-                        value={quan} onChange={(e) => { this.setFieldVal(e.target.value, 'quan'); this.setState({ chkamount: false }) }}
+                        value={quan}
+                        onChange={(e) => {
+                          this.setFieldVal(e.target.value, "quan");
+                          this.setState({ chkamount: false });
+                        }}
                       />
-                    </div>}
-                  {this.state.chkamount ? <p className="text-danger">Field is Emply</p> : null}
+                    </div>
+                  )}
+                  {this.state.chkamount ? (
+                    <p className="text-danger">Field is Emply</p>
+                  ) : null}
                   <br />
                   <p>Bank Charges is : {perc === "NaN" ? 0 : perc}</p>
 
@@ -339,13 +440,21 @@ class DonationForm extends React.Component {
                     />
                   </div>
 
-
                   <div className="col-md-12 mt-3 mb-3">
                     <label className="lab text-dark">Contact Number</label>
-                    <input type="text" class="inp" placeholder="Number"
-                      value={contNumber} onChange={(e) => { this.setFieldVal(e.target.value, 'contNumber'); this.setState({ chkcontNumber: false }) }}
+                    <input
+                      type="text"
+                      class="inp"
+                      placeholder="Number"
+                      value={contNumber}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "contNumber");
+                        this.setState({ chkcontNumber: false });
+                      }}
                     />
-                    {this.state.chkcontNumber ? <p className="text-danger">Field is Emply</p> : null}
+                    {this.state.chkcontNumber ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
                   </div>
                   <div className="col-md-12 mt-3 mb-3">
                     <label className="lab text-dark">Remarks</label>
@@ -353,12 +462,23 @@ class DonationForm extends React.Component {
                       placeholder="Enter Your Remarks"
                       className="inp"
                       rows="8"
-                      value={remarks} onChange={(e) => { this.setFieldVal(e.target.value, 'remarks'); this.setState({ chkremarks: false }) }}
+                      value={remarks}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "remarks");
+                        this.setState({ chkremarks: false });
+                      }}
                     ></textarea>
-                    {this.state.chkremarks ? <p className="text-danger">Field is Emply</p> : null}
+                    {this.state.chkremarks ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
                   </div>
                   <div className="col-md-12 mt-3 mb-3">
-                    <button className="btn-block donate" onClick={() => this.Submit()}>Send</button>
+                    <button
+                      className="btn-block donate"
+                      onClick={() => this.Submit()}
+                    >
+                      Send
+                    </button>
                   </div>
                 </div>
               </div>
@@ -379,15 +499,15 @@ class DonationForm extends React.Component {
 function mapStateToProp(state) {
   return {
     DonaListGets: state.reducerDonation.DonaListGets,
-
   };
 }
 function mapDispatchToProp(dispatch) {
   return {
     DonaListGet: () => {
       dispatch(DonaListGet());
-    }
+    },
   };
 }
-export default withRouter(connect(mapStateToProp, mapDispatchToProp)(DonationForm));
-
+export default withRouter(
+  connect(mapStateToProp, mapDispatchToProp)(DonationForm)
+);

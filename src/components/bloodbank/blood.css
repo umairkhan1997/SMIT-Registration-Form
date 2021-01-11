@@ -51,6 +51,7 @@
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   text-align: center;
+  background-color: #f7edee;
 }
 .dataVal {
   padding: 15px;

@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
 
 export default class SuccessStories extends React.Component {
@@ -51,7 +49,7 @@ export default class SuccessStories extends React.Component {
           <div className="row">
             {this.state.successStories.map((e, i) => {
               return (
-                <div className="col-md-3">
+                <div className="col-md-3 py-3">
                   <div className="succesCard text-center">
                     <img className="successImg" src={e.image} width="200px" />
                     <div className="p-5">

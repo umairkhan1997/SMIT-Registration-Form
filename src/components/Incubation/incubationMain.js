@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./incubation.css";
 import MainHeader from "../Home/MainHeader";
 import { Link } from "react-router-dom";
@@ -31,7 +29,9 @@ export default class incubationMain extends React.Component {
               <img src={img1} width="100%" className="img1" />
             </div>
             <div className="col-md-6">
-              <h1 className="incuMainhead font-weight-bold">Saylani Incubation Center</h1>
+              <h1 className="incuMainhead font-weight-bold">
+                Saylani Incubation Center
+              </h1>
               <p className="text-muted text-left">
                 In collaboration with SMIT, the Saylani Incubators Program is
                 designed to inculcate in students an advanced level of
@@ -155,7 +155,9 @@ export default class incubationMain extends React.Component {
 
         {/* MENTORS  */}
         <div className="container my-5 py-5">
-          <h2 className="ml-4 font-weight-bold" style={{ color: "#1371b8" }}>Our Mentors</h2>
+          <h2 className="ml-4 font-weight-bold" style={{ color: "#1371b8" }}>
+            Our Mentors
+          </h2>
           <div className="row">
             <div className="col-md-4 p-5">
               <div className="mentorCard">
@@ -212,11 +214,15 @@ export default class incubationMain extends React.Component {
                   <p>9 am - 6:00 pm</p>
                 </div>
               </div>
-
             </div>
 
             <div className="col-md-4  px-4">
-              <h1 className="text-left py-3 font-weight-bold" style={{ color: "#1371b8" }}>News</h1>
+              <h1
+                className="text-left py-3 font-weight-bold"
+                style={{ color: "#1371b8" }}
+              >
+                News
+              </h1>
               <div className="border">
                 <div className="p-1">
                   <h5 className="font-weight-bold">Web & Mobile Hackthon</h5>

@@ -17,7 +17,7 @@ export default class Contact extends React.Component {
       <div>
         <MainHeader />
         <ContactForm />
-        <div className=" pt-5 pb-5">
+        <div className=" py-5">
           <HomeContact />
         </div>
         <div className="bg-image">

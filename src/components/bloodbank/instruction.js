@@ -25,7 +25,11 @@ export default class Instruction extends React.Component {
                 </ul>
               </div>
               <div className="col-md-6">
-                <img src={event3} width="100%" />
+                <img
+                  className="rounded shadow"
+                  src="https://www.bdd.co.in/images/compatibityChart.jpg"
+                  width="100%"
+                />
               </div>
             </div>
           </div>

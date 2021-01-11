@@ -1,9 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
-import img4 from "../../images/course.jpg";
-import img5 from "../../images/course1.jpeg";
 export default class MainCourses extends React.Component {
   constructor(props) {
     super(props);
@@ -294,7 +290,29 @@ export default class MainCourses extends React.Component {
               name: "Database Administrator",
               detailName: "Database Administrator",
               duration: "1 Year",
-              outline: ["MS Word", "MS Excel", "MS PowerPoint"],
+              outline: [
+                "Using Structured Query Language (SQL)",
+                "Using Data Manipulation Language (DML) and Transaction Control Language (TCL) ",
+                "Using Basic SELECT statements ",
+                "Defining Table Joins",
+                "Using Conversion Functions and Conditional Expressions",
+                "Displaying Data from Multiple Tables",
+                "Using the Set Operators",
+                "Using DDL Statements to Create and Manage Tables",
+                "Managing Objects with Data Dictionary Views",
+                "Managing Schema Objects",
+                "Using Data Definition Language (DDL)",
+                "Using Data Definition Language (DDL)",
+                "Defining SELECT Statements",
+                "Restricting and Sorting Data",
+                "Using Single-Row Functions to Customize Output ",
+                "Reporting Aggregated Data Using the Group Functions",
+                "Using Subqueries to Solve Queries",
+                "Manipulating Data",
+                "Creating Other Schema Objects",
+                "Controlling User Access",
+                "Manipulating Large Data Sets",
+              ],
               ico: "https://www.revalsys.com/images/DB-Icon-1.jpg",
             },
             {
@@ -372,7 +390,8 @@ export default class MainCourses extends React.Component {
                 ],
               },
 
-              ico: "https://ajsavjtextilehub.online/src/img/icon_flechten.png",
+              ico:
+                "https://icon-library.com/images/textile-icon/textile-icon-2.jpg",
             },
           ],
         },
@@ -472,14 +491,14 @@ export default class MainCourses extends React.Component {
                   ) : null}
                   {this.state.currentCourse.moreOutline
                     ? this.state.currentCourse.moreOutline.name1Details.map(
-                      (e, i) => {
-                        return (
-                          <li className="text-muted" key={i}>
-                            {e}
-                          </li>
-                        );
-                      }
-                    )
+                        (e, i) => {
+                          return (
+                            <li className="text-muted" key={i}>
+                              {e}
+                            </li>
+                          );
+                        }
+                      )
                     : null}
                   <hr />
                   {this.state.currentCourse.moreOutline ? (
@@ -487,14 +506,14 @@ export default class MainCourses extends React.Component {
                   ) : null}
                   {this.state.currentCourse.moreOutline
                     ? this.state.currentCourse.moreOutline.name2Details.map(
-                      (e, i) => {
-                        return (
-                          <li className="text-muted" key={i}>
-                            {e}
-                          </li>
-                        );
-                      }
-                    )
+                        (e, i) => {
+                          return (
+                            <li className="text-muted" key={i}>
+                              {e}
+                            </li>
+                          );
+                        }
+                      )
                     : null}
                   <hr />
                   {this.state.currentCourse.moreOutline ? (
@@ -502,14 +521,14 @@ export default class MainCourses extends React.Component {
                   ) : null}
                   {this.state.currentCourse.moreOutline
                     ? this.state.currentCourse.moreOutline.name3Details.map(
-                      (e, i) => {
-                        return (
-                          <li className="text-muted" key={i}>
-                            {e}
-                          </li>
-                        );
-                      }
-                    )
+                        (e, i) => {
+                          return (
+                            <li className="text-muted" key={i}>
+                              {e}
+                            </li>
+                          );
+                        }
+                      )
                     : null}
                   <hr />
                 </ul>

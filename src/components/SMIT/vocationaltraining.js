@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./SmitStyle.css";
 
 export default class Vocational extends React.Component {

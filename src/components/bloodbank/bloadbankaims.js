@@ -1,15 +1,7 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "./blood.css";
-import logo from "../../images/logo.png";
-import Fade from "react-reveal";
 
 export default class BloodBankServices extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
     return (
       <div>

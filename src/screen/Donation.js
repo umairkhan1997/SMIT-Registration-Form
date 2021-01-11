@@ -4,30 +4,26 @@ import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
 import DonationForm from "../components/donate/donationForm";
 import BankDetails from "../components/donate/bankdetails";
-import DonateBtn from "../components/donatebtn/donateBtn";
 
 export default class Donation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showScreen: true
-
+      showScreen: true,
     };
   }
   DonationForm = () => {
     this.setState({
       DonationForms: true,
-    })
-  }
+    });
+  };
   BankDetail = () => {
     this.setState({
       DonationForms: false,
-    })
-  }
+    });
+  };
   render() {
-    const {
-      showScreen
-    } = this.state;
+    const { showScreen } = this.state;
     return (
       <div>
         <MainHeader />
@@ -36,10 +32,17 @@ export default class Donation extends React.Component {
             <div className="col-md-6 p-3 pt-5">
               <div
                 onClick={() =>
-                  this.setState({ donationForm: true, bankDetails: false, showScreen: true })
+                  this.setState({
+                    donationForm: true,
+                    bankDetails: false,
+                    showScreen: true,
+                  })
                 }
                 className="selectBtn"
-                style={{ backgroundColor: showScreen ? "#0069d9" : 'white', color: showScreen ? "white" : '#0069d9', }}
+                style={{
+                  backgroundColor: showScreen ? "#0069d9" : "white",
+                  color: showScreen ? "white" : "#0069d9",
+                }}
               >
                 Donation Form
               </div>
@@ -47,10 +50,17 @@ export default class Donation extends React.Component {
             <div className="col-md-6 p-3 pt-5">
               <div
                 onClick={() =>
-                  this.setState({ donationForm: false, bankDetails: true, showScreen: false })
+                  this.setState({
+                    donationForm: false,
+                    bankDetails: true,
+                    showScreen: false,
+                  })
                 }
                 className="selectBtn"
-                style={{ backgroundColor: !showScreen ? "#0069d9" : 'white', color: !showScreen ? "white" : '#0069d9', }}
+                style={{
+                  backgroundColor: !showScreen ? "#0069d9" : "white",
+                  color: !showScreen ? "white" : "#0069d9",
+                }}
               >
                 Bank Details
               </div>
@@ -60,6 +70,6 @@ export default class Donation extends React.Component {
         {showScreen ? <DonationForm /> : <BankDetails />}
         <Footer />
       </div>
-    )
+    );
   }
 }

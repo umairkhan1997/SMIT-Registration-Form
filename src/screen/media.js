@@ -1,9 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import MainHeader from "../components/Home/MainHeader";
-import cover from "../images/media.jpg";
 import "../components/media/media.css";
 import Fade from "react-reveal/Fade";
 import Video from "../components/media/video";

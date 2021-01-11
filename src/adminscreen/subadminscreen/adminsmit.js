@@ -6,7 +6,7 @@ import logo from "../../images/logo.png";
 import image from "../../images/Dr.jpg";
 import aliMughal from "../../images/aliMughal.png";
 import ziakhan from "../../images/ziaKhan.png";
-import course from "../../images/course1.jpeg";
+import course from "../../images/course1.jpg";
 export default class SMITAdmin extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +22,7 @@ export default class SMITAdmin extends React.Component {
       courseEdit: false,
       studentsEdit: false,
       currentEdit: "",
-      teacherEdit:false
+      teacherEdit: false,
     };
   }
   render() {
@@ -285,9 +285,11 @@ export default class SMITAdmin extends React.Component {
                     </div>
                   </div>
                 ) : null}
-                {this.state.events?<div>
-                  <h1>Events</h1>
-                </div>:null}
+                {this.state.events ? (
+                  <div>
+                    <h1>Events</h1>
+                  </div>
+                ) : null}
                 {this.state.numbeOfStudent ? (
                   <div>
                     {this.state.studentsEdit ? (
@@ -556,26 +558,20 @@ export default class SMITAdmin extends React.Component {
                         <div className="p-3 m-3  rounded shadow ">
                           <h3>Edit Teacher</h3>
                           <div className="py-3">
-                            <input
-                              className="inp"
-                              placeholder="Enter Name"
-                            />
-                            </div>
-                            <div className="py-3">
-                            <input
-                              className="inp"
-                              placeholder="Enter Course"
-                            />
+                            <input className="inp" placeholder="Enter Name" />
                           </div>
-                            <div className="py-3">
+                          <div className="py-3">
+                            <input className="inp" placeholder="Enter Course" />
+                          </div>
+                          <div className="py-3">
                             <input
-                            type='file'
+                              type="file"
                               className="uploadCV"
                               placeholder="Enter Course"
                             />
                           </div>
-                          <div className='py-3'>
-                            <button className='prevbtn'>Update</button>
+                          <div className="py-3">
+                            <button className="prevbtn">Update</button>
                           </div>
                         </div>
                       </div>
@@ -588,7 +584,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button onClick={()=>this.setState({teacherEdit:true})}>
+                              <button
+                                onClick={() =>
+                                  this.setState({ teacherEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -602,7 +602,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button onClick={()=>this.setState({teacherEdit:true})}>
+                              <button
+                                onClick={() =>
+                                  this.setState({ teacherEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -616,7 +620,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button onClick={()=>this.setState({teacherEdit:true})}>
+                              <button
+                                onClick={() =>
+                                  this.setState({ teacherEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>
@@ -630,7 +638,11 @@ export default class SMITAdmin extends React.Component {
                         <div className="col-md-3">
                           <div className="content p-3">
                             <div className="delete">
-                              <button onClick={()=>this.setState({teacherEdit:true})}>
+                              <button
+                                onClick={() =>
+                                  this.setState({ teacherEdit: true })
+                                }
+                              >
                                 <i class="fas fa-pen"></i>
                               </button>
                             </div>

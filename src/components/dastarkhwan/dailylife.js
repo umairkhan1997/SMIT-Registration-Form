@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Zoom from "react-reveal/Zoom";
 import "./dastarkhwan.css";
 import CountUp from "react-countup";

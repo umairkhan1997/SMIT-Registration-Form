@@ -1,10 +1,7 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-slideshow-image/dist/styles.css";
 import CountUp from "react-countup";
 import "../App.css";
 import Zoom from "react-reveal/Zoom";
-import lab from "../images/lab.jpg";
 
 export default class ServiceCounter extends React.Component {
   constructor(props) {
