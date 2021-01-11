@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import MainHeader from "../components/Home/MainHeader";
 import MainCourses from "../components/SMIT/MainCourses";
-import MainCoursess from '../components/SMIT/MainCoursess';
 import Footer from "../components/Footer";
 import Faculty from "../components/SMIT/faculty";
 import Collaboration from "../components/SMIT/collaboration";
@@ -117,7 +116,6 @@ export default class Smit extends React.Component {
         <Faculty />
         {/* <SmitEvents /> */}
         <Vocational />
-        <MainCoursess />
         <MainCourses />
 
         <SMITeacher />
