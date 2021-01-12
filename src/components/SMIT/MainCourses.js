@@ -12,7 +12,6 @@ export default class MainCourses extends React.Component {
       cityDetails: {
         karachi: {
           course: [
-
             //course one
             {
               name: "Web & Mobile App Development",
@@ -21,56 +20,56 @@ export default class MainCourses extends React.Component {
               outline: [
                 {
                   name: "HTML",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "CSS",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "Bootstrap",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "Hosting",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "Github",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "JavaScript",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "firebase",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "ES6",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "React JS",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "Redux",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "React Native",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "Express/Node JS",
-                  nameDetails: []
+                  nameDetails: [],
                 },
                 {
                   name: "MongoDB",
-                  nameDetails: []
-                }
+                  nameDetails: [],
+                },
               ],
               ico:
                 "https://d3q6qq2zt8nhwv.cloudfront.net/course/458a308d42a149df91271f6b647eb085.png",
@@ -79,7 +78,11 @@ export default class MainCourses extends React.Component {
               name: "Graphic Designing",
               detailName: "Graphic Designing",
               duration: "6 Months",
-              outline: [{ name: "Adobe Photoshop", nameDetails: [] }, { name: "Adobe Illustrator", nameDetails: [] }, { name: "Inpage", nameDetails: [] }],
+              outline: [
+                { name: "Adobe Photoshop", nameDetails: [] },
+                { name: "Adobe Illustrator", nameDetails: [] },
+                { name: "Inpage", nameDetails: [] },
+              ],
               ico:
                 "https://www.walyou.com/wp-content/uploads/2009/10/3-d-rubiks-cube-is-a-combination-of-computer-applications1.jpg",
             },
@@ -90,7 +93,7 @@ export default class MainCourses extends React.Component {
               outline: [
                 { name: "Adobe Premier", nameDetails: [] },
                 { name: "Adobe After Effect", nameDetails: [] },
-                { name: "Adobe Audition", nameDetails: [] }
+                { name: "Adobe Audition", nameDetails: [] },
               ],
               ico:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrKM5b7dfBqAQ1yRviEKSJ_DaTWVMFu9HrMw&usqp=CAU",
@@ -122,7 +125,10 @@ export default class MainCourses extends React.Component {
                 { name: "Host-Based Analysis", nameDetails: [] },
                 { name: "Security Monitoring", nameDetails: [] },
                 { name: "Attack Methods", nameDetails: [] },
-                { name: "Endpoint Threat Analysis and Computer Forensics", nameDetails: [] },
+                {
+                  name: "Endpoint Threat Analysis and Computer Forensics",
+                  nameDetails: [],
+                },
                 { name: "Network Intrusion Analysis", nameDetails: [] },
                 { name: "Incident Response", nameDetails: [] },
                 { name: "Data and Event Analysis", nameDetails: [] },
@@ -135,7 +141,10 @@ export default class MainCourses extends React.Component {
               name: "CCA",
               detailName: "Certified Computer Accountancy",
               duration: "3 Months",
-              outline: [{ name: "PeachTree", nameDetails: [] }, { name: "Tally", nameDetails: [] }, { name: "Quick Book", nameDetails: [] }
+              outline: [
+                { name: "PeachTree", nameDetails: [] },
+                { name: "Tally", nameDetails: [] },
+                { name: "Quick Book", nameDetails: [] },
               ],
               ico:
                 "https://cdn2.iconfinder.com/data/icons/seo-web-optimization-ultimate-part1/512/graphics-512.png",
@@ -144,7 +153,11 @@ export default class MainCourses extends React.Component {
               name: "CCO",
               detailName: "Certified Computer Operaton",
               duration: "3 Months",
-              outline: [{ name: "MS Word", nameDetails: [] }, { name: "MS Excel", nameDetails: [] }, { name: "MS PowerPoint", nameDetails: [] }],
+              outline: [
+                { name: "MS Word", nameDetails: [] },
+                { name: "MS Excel", nameDetails: [] },
+                { name: "MS PowerPoint", nameDetails: [] },
+              ],
               ico:
                 "https://seeklogo.com/images/M/microsoft-project-logo-537F40B82B-seeklogo.com.png",
             },
@@ -178,41 +191,42 @@ export default class MainCourses extends React.Component {
               name: "Internet of Things",
               detailName: "Internet of Things",
               duration: "1 Year",
-              outline: [{
-                name: "Quarter 1",
-                nameDetails: [
-                  "Introduction to Internet of Things and Embedded Systems Basic Rust Programming",
-                ]
-              },
-              {
-                name: "Quarter 2",
-                nameDetails: [
-                  "Advanced Rust programming",
-                  "Basic Embedded Rust programming",
-                  "Advanced Embedded Rust programming",
-                  "(We will learn how to write, build, flash and debug Embedded Rust on STM32F303)",
-                ]
-              },
-              {
-                name: "Quarter 3",
-                nameDetails: [
-                  "Rust Microservices",
-                  "We will learn how to write down servers in Rust",
-                  "Edge Computing",
-                  "Dockers",
-                  "Kubernetes",
-                ]
-              },
-              {
-                name: "Quarter 4",
-                nameDetails: [
-                  "Rust Microservices",
-                  "We will learn how to write down servers in Rust",
-                  "Edge Computing",
-                  "Dockers",
-                  "Kubernetes",
-                ]
-              },
+              outline: [
+                {
+                  name: "Quarter 1",
+                  nameDetails: [
+                    "Introduction to Internet of Things and Embedded Systems Basic Rust Programming",
+                  ],
+                },
+                {
+                  name: "Quarter 2",
+                  nameDetails: [
+                    "Advanced Rust programming",
+                    "Basic Embedded Rust programming",
+                    "Advanced Embedded Rust programming",
+                    "(We will learn how to write, build, flash and debug Embedded Rust on STM32F303)",
+                  ],
+                },
+                {
+                  name: "Quarter 3",
+                  nameDetails: [
+                    "Rust Microservices",
+                    "We will learn how to write down servers in Rust",
+                    "Edge Computing",
+                    "Dockers",
+                    "Kubernetes",
+                  ],
+                },
+                {
+                  name: "Quarter 4",
+                  nameDetails: [
+                    "Rust Microservices",
+                    "We will learn how to write down servers in Rust",
+                    "Edge Computing",
+                    "Dockers",
+                    "Kubernetes",
+                  ],
+                },
               ],
               ico:
                 "https://i.pinimg.com/originals/40/56/53/405653d4ba94244a15afec19e38de7d6.png",
@@ -222,20 +236,36 @@ export default class MainCourses extends React.Component {
               detailName: "Blockchain Technology",
               duration: "1 Year",
               outline: [
-                { name: "Digital Money, Bitcoin and Blockchain", nameDetails: [] },
+                {
+                  name: "Digital Money, Bitcoin and Blockchain",
+                  nameDetails: [],
+                },
                 { name: "Crypto Tokens", nameDetails: [] },
                 { name: "Blockchain Revolution", nameDetails: [] },
                 { name: "Introduction to Decentralized Apps", nameDetails: [] },
-                { name: "Ethereum and Hyperledger Fabric Basics", nameDetails: [] },
+                {
+                  name: "Ethereum and Hyperledger Fabric Basics",
+                  nameDetails: [],
+                },
                 { name: "Crypto Mining and Operations", nameDetails: [] },
                 { name: "Introduction to Smart Contracts", nameDetails: [] },
                 { name: "Solidity in Depth", nameDetails: [] },
-                { name: "HTML, CSS, and JavaScriptCrash Course", nameDetails: [] },
+                {
+                  name: "HTML, CSS, and JavaScriptCrash Course",
+                  nameDetails: [],
+                },
                 { name: "Blockchain WebApplications", nameDetails: [] },
                 { name: "Web3 & Truffle", nameDetails: [] },
                 { name: "BaaS (Blockchain-as-a-Service)", nameDetails: [] },
-                { name: "The Art of Initial Coin Offering (ICO)", nameDetails: [] },
-                { name: "Blockchain Projects for Islamic Finance -A Match Made in Heaven", nameDetails: [] },
+                {
+                  name: "The Art of Initial Coin Offering (ICO)",
+                  nameDetails: [],
+                },
+                {
+                  name:
+                    "Blockchain Projects for Islamic Finance -A Match Made in Heaven",
+                  nameDetails: [],
+                },
               ],
               ico:
                 "https://cdn4.iconfinder.com/data/icons/blockchain-13/64/Blockchain-512.png",
@@ -245,9 +275,20 @@ export default class MainCourses extends React.Component {
               detailName: "Artificial Intelligence",
               duration: "1 Year",
               outline: [
-                { name: "Object Oriented and Functional Programming using Python", nameDetails: [] },
-                { name: "Advanced Python Libraries (Numpy , Pandas & Flask) with Anaconda", nameDetails: [] },
-                { name: "Introduction to Linear Algebra and Statistics", nameDetails: [] },
+                {
+                  name:
+                    "Object Oriented and Functional Programming using Python",
+                  nameDetails: [],
+                },
+                {
+                  name:
+                    "Advanced Python Libraries (Numpy , Pandas & Flask) with Anaconda",
+                  nameDetails: [],
+                },
+                {
+                  name: "Introduction to Linear Algebra and Statistics",
+                  nameDetails: [],
+                },
                 { name: "Data Science Essentials", nameDetails: [] },
                 { name: "Nueral Networks", nameDetails: [] },
                 { name: "Deep Learning with Keras", nameDetails: [] },
@@ -262,10 +303,16 @@ export default class MainCourses extends React.Component {
               detailName: "Network Essential",
               duration: "1 Year",
               outline: [
-                { name: "Introduction to Personal Computer Hardware", nameDetails: [] },
+                {
+                  name: "Introduction to Personal Computer Hardware",
+                  nameDetails: [],
+                },
                 { name: "PC Assembly", nameDetails: [] },
                 { name: "Advance Computer Hardware", nameDetails: [] },
-                { name: "Preventive Maintainance and Troubleshooting", nameDetails: [] },
+                {
+                  name: "Preventive Maintainance and Troubleshooting",
+                  nameDetails: [],
+                },
                 { name: "Networking Concepts", nameDetails: [] },
                 { name: "Applied Networking", nameDetails: [] },
                 { name: "Laptops and other Mobile Devices", nameDetails: [] },
@@ -273,7 +320,10 @@ export default class MainCourses extends React.Component {
                 { name: "Virtualization and Cloud Computing", nameDetails: [] },
                 { name: "windows Installation", nameDetails: [] },
                 { name: "windows Configuration", nameDetails: [] },
-                { name: "Mobile, Linux, & OS X operating system", nameDetails: [] },
+                {
+                  name: "Mobile, Linux, & OS X operating system",
+                  nameDetails: [],
+                },
                 { name: "Security", nameDetails: [] },
                 { name: "The IT Professional", nameDetails: [] },
               ],
@@ -284,7 +334,11 @@ export default class MainCourses extends React.Component {
               name: "Project Management",
               detailName: "Project Management",
               duration: "1 Year",
-              outline: [{ name: "MS Word", nameDetails: [] }, { name: "MS Excel", nameDetails: [] }, { name: "MS PowerPoint", nameDetails: [] }],
+              outline: [
+                { name: "MS Word", nameDetails: [] },
+                { name: "MS Excel", nameDetails: [] },
+                { name: "MS PowerPoint", nameDetails: [] },
+              ],
               ico:
                 "https://icon-library.com/images/project-management-icon/project-management-icon-14.jpg",
             },
@@ -292,7 +346,11 @@ export default class MainCourses extends React.Component {
               name: "Advance Dashboard Training",
               detailName: "Advance Dashboard Training",
               duration: "1 Year",
-              outline: [{ name: "MS Word", nameDetails: [] }, { name: "MS Excel", nameDetails: [] }, { name: "MS PowerPoint", nameDetails: [] }],
+              outline: [
+                { name: "MS Word", nameDetails: [] },
+                { name: "MS Excel", nameDetails: [] },
+                { name: "MS PowerPoint", nameDetails: [] },
+              ],
               ico:
                 "https://icon-library.com/images/charts_analytics_kpi_dashboard_report_bar_pie-512.png",
             },
@@ -327,7 +385,11 @@ export default class MainCourses extends React.Component {
               name: "Microsoft Office Specialist",
               detailName: "Microsoft Office Specialist",
               duration: "3 Months",
-              outline: [{ name: "MS Word", nameDetails: [] }, { name: "MS Excel", nameDetails: [] }, { name: "MS PowerPoint", nameDetails: [] }],
+              outline: [
+                { name: "MS Word", nameDetails: [] },
+                { name: "MS Excel", nameDetails: [] },
+                { name: "MS PowerPoint", nameDetails: [] },
+              ],
               ico:
                 "https://office-365.co.uk/wp-content/uploads/2019/11/Office-365-logo-in-circle.png",
             },
@@ -335,7 +397,11 @@ export default class MainCourses extends React.Component {
               name: "Robotics",
               detailName: "Robotics",
               duration: "1 Year",
-              outline: [{ name: "MS Word", nameDetails: [] }, { name: "MS Excel", nameDetails: [] }, { name: "MS PowerPoint", nameDetails: [] }],
+              outline: [
+                { name: "MS Word", nameDetails: [] },
+                { name: "MS Excel", nameDetails: [] },
+                { name: "MS PowerPoint", nameDetails: [] },
+              ],
               ico:
                 "https://icon-library.com/images/robot-icon-free/robot-icon-free-10.jpg",
             },
@@ -344,21 +410,50 @@ export default class MainCourses extends React.Component {
               detailName: "Database Administrator",
               duration: "1 Year",
               outline: [
-                { name: "Using Structured Query Language (SQL)", nameDetails: [] },
-                { name: "Using Data Manipulation Language (DML) and Transaction Control Language (TCL)", nameDetails: [] },
+                {
+                  name: "Using Structured Query Language (SQL)",
+                  nameDetails: [],
+                },
+                {
+                  name:
+                    "Using Data Manipulation Language (DML) and Transaction Control Language (TCL)",
+                  nameDetails: [],
+                },
                 { name: "Using Basic SELECT statements", nameDetails: [] },
                 { name: "Defining Table Joins", nameDetails: [] },
-                { name: "Using Conversion Functions and Conditional Expressions", nameDetails: [] },
-                { name: "Displaying Data from Multiple Tables", nameDetails: [] },
+                {
+                  name:
+                    "Using Conversion Functions and Conditional Expressions",
+                  nameDetails: [],
+                },
+                {
+                  name: "Displaying Data from Multiple Tables",
+                  nameDetails: [],
+                },
                 { name: "Using the Set Operators", nameDetails: [] },
-                { name: "Using DDL Statements to Create and Manage Tables", nameDetails: [] },
-                { name: "Managing Objects with Data Dictionary Views", nameDetails: [] },
+                {
+                  name: "Using DDL Statements to Create and Manage Tables",
+                  nameDetails: [],
+                },
+                {
+                  name: "Managing Objects with Data Dictionary Views",
+                  nameDetails: [],
+                },
                 { name: "Managing Schema Objects", nameDetails: [] },
-                { name: "Using Data Definition Language (DDL)", nameDetails: [] },
+                {
+                  name: "Using Data Definition Language (DDL)",
+                  nameDetails: [],
+                },
                 { name: "Defining SELECT Statements", nameDetails: [] },
                 { name: "Restricting and Sorting Data", nameDetails: [] },
-                { name: "Using Single-Row Functions to Customize Output", nameDetails: [] },
-                { name: "Reporting Aggregated Data Using the Group Functions", nameDetails: [] },
+                {
+                  name: "Using Single-Row Functions to Customize Output",
+                  nameDetails: [],
+                },
+                {
+                  name: "Reporting Aggregated Data Using the Group Functions",
+                  nameDetails: [],
+                },
                 { name: "Using Subqueries to Solve Queries", nameDetails: [] },
                 { name: "Manipulating Data", nameDetails: [] },
                 { name: "Creating Other Schema Objects", nameDetails: [] },
@@ -371,7 +466,11 @@ export default class MainCourses extends React.Component {
               name: "Bike Repairing Course",
               detailName: "Certified Motor Bike Repairing Course",
               duration: "1 Year",
-              outline: [{ name: "MS Word", nameDetails: [] }, { name: "MS Excel", nameDetails: [] }, { name: "MS PowerPoint", nameDetails: [] }],
+              outline: [
+                { name: "MS Word", nameDetails: [] },
+                { name: "MS Excel", nameDetails: [] },
+                { name: "MS PowerPoint", nameDetails: [] },
+              ],
               ico:
                 "https://cdn4.iconfinder.com/data/icons/motorcycle-5/48/garage-workshop-motorcyle-repair-fix-mechanic-bike-512.png",
             },
@@ -386,13 +485,17 @@ export default class MainCourses extends React.Component {
                 { name: "Software Installation", nameDetails: [] },
               ],
               ico:
-                "https://thumbs.dreamstime.com/b/phone-repair-logo-vector-smart-phone-device-repair-symbol-phone-repair-logo-vector-smart-phone-device-repair-symbol-144302316.jpg",
+                "https://t4.ftcdn.net/jpg/02/28/26/89/360_F_228268980_ktfvRemGcvc2rxK6ykd0MxuspeGR2fvc.jpg",
             },
             {
               name: "RO Plant Technician",
               detailName: "Certified RO Plant Technician",
               duration: "3 Months",
-              outline: [{ name: "MS Word", nameDetails: [] }, { name: "MS Excel", nameDetails: [] }, { name: "MS PowerPoint", nameDetails: [] }],
+              outline: [
+                { name: "MS Word", nameDetails: [] },
+                { name: "MS Excel", nameDetails: [] },
+                { name: "MS PowerPoint", nameDetails: [] },
+              ],
               ico:
                 "https://previews.123rf.com/images/nachai/nachai1809/nachai180900836/109877362-water-treatment-and-water-filter-icon-48x48-pixel-perfect-and-editable-stroke-.jpg",
             },
@@ -414,7 +517,7 @@ export default class MainCourses extends React.Component {
                     "Hands on experience of multiple sewing machineries",
                     "Stamina building",
                     "Career Counselling",
-                  ]
+                  ],
                 },
                 {
                   name: "Quality Checker - Duration one month",
@@ -427,7 +530,7 @@ export default class MainCourses extends React.Component {
                     "Defects Classification",
                     "Stamina Building",
                     "Career Counselling",
-                  ]
+                  ],
                 },
                 {
                   name: "Quality Auditor - Duration one month",
@@ -444,12 +547,12 @@ export default class MainCourses extends React.Component {
                     "How to Measures",
                     "Stamina Building",
                     "Career Counselling",
-                  ]
+                  ],
                 },
               ],
-              ico: "https://ajsavjtextilehub.online/src/img/icon_flechten.png",
-            }
-
+              ico:
+                "https://icon-library.com/images/textile-icon/textile-icon-2.jpg",
+            },
           ],
         },
         hyderabad: {
@@ -539,8 +642,8 @@ export default class MainCourses extends React.Component {
                     return (
                       <li className="text-muted" key={i}>
                         {e.name}
-                        {e.nameDetails && e.nameDetails.map(
-                          (e, i) => {
+                        {e.nameDetails &&
+                          e.nameDetails.map((e, i) => {
                             return (
                               <ul>
                                 <li className="text-muted" key={i}>
@@ -548,9 +651,7 @@ export default class MainCourses extends React.Component {
                                 </li>
                               </ul>
                             );
-                          }
-                        )
-                        }
+                          })}
                       </li>
                     );
                   })}

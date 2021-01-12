@@ -5,19 +5,72 @@ import "./media.css";
 export default class Video extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      videos: [],
+    };
   }
-
+  componentDidMount() {
+    let channelID = "UCXgGY0wkgOzynnHvSEVmE3A";
+    let result = 50;
+    let channelKey = "AIzaSyAOYGAi4mZy6L-ifZgQ8bzS87vA6v3Jda";
+    let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`;
+    console.log(finalURl);
+    fetch(finalURl)
+      .then((response) => response.json())
+      .then((videos) => {
+        console.log(videos);
+      })
+      .catch((error) => console.log(error));
+  }
   render() {
     return (
-      <div className="container-fluid">
-        <div className="bg-image mt-5 ">
-          {/* <div id="ytplayer"></div> */}
-          <div className="row d-flex justify-content-left">
-            <div className="col-md-3">
+      <div>
+        <div className="p-5">
+          <div className="row">
+            <div className="col-md-8 py-3"></div>
+            <div className="col-md-4 py-3">
+              <select className="inp">
+                <option>dkjfhkjsd </option>
+                <option>dkjfhkjsd </option>
+                <option>dkjfhkjsd </option>
+                <option>dkjfhkjsd </option>
+                <option>dkjfhkjsd </option>
+              </select>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-8">
+              <div>
+                <iframe
+                  width="100%"
+                  className="newsMainScreen"
+                  allowFullScreen="allowfullscreen"
+                  sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
+                  src="https://www.youtube.com/embed/L1BmJyE4Os0?rel=0&enablejsapi=1"
+                  // frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+                <div className="row py-3">
+                  <div className="col-md-4 py-3">
+                    <button className="btn-block prevbtn">
+                      <i class="fab fa-whatsapp"></i> Share
+                    </button>
+                  </div>
+                  <div className="col-md-4 py-3">
+                    <a
+                      className="btn-block prevbtn"
+                      href="https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/watch?v=_uB0gT9NwRo&list=PL47LaC9-GaXV7D1RhnSNuiEWQemCYD4SC"
+                    >
+                      <i class="fab fa-facebook-f"></i> Share
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
               <Zoom>
                 <iframe
-                  allowfullscreen="allowfullscreen"
+                  allowFullScreen="allowfullscreen"
                   sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
                   width="100%"
                   height="200px"
@@ -26,8 +79,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; encrypted-media; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -39,8 +90,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -52,8 +101,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -65,8 +112,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -78,8 +123,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -91,8 +134,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -104,8 +145,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -117,8 +156,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -130,8 +167,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -143,8 +178,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
@@ -156,8 +189,6 @@ export default class Video extends React.Component {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
               </Zoom>
-            </div>
-            <div className="col-md-3 ">
               <Zoom>
                 <iframe
                   allowfullscreen="allowfullscreen"
