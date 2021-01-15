@@ -63,17 +63,50 @@ class Cover extends React.Component {
                           width="100%"
                         />
                       </div>
-                      <div className="col-md-6">
-                        <h1 style={{ fontSize: "3em" }}>
-                          {filteredName.cityName}
-                        </h1>
+                      <div className="col-md-6 p-5">
                         <div
-                          className="text-white"
-                          onClick={() => {
-                            this.props.history.push("/apply", { filteredName });
+                          style={{
+                            backgroundColor: "rgba(0,0,0,.5)",
+                            height: "100%",
+                            boxShadow: "0 8px 12px rgba(0,0,0,.3)",
+                            borderRadius: "8px",
                           }}
+                          className="p-5 d-flex justify-content-center flex-column"
                         >
-                          <CustomBtn value="Apply" />
+                          <h1 className="my-5 border-bottom">
+                            {filteredName.cityName}
+                          </h1>
+                          <h3 className="my-3">Course: Web & Mobile</h3>
+                          <h3 className="my-3">Duration: 6 Months</h3>
+                          <h2 className="my-3">Deadline: 30 Feb 2023</h2>
+                          <div className="row">
+                            <div className="col-md-6">
+                              <div>
+                                <button
+                                  onClick={() => {
+                                    this.props.history.push("/apply", {
+                                      filteredName,
+                                    });
+                                  }}
+                                  className="btn btn-outline-light rounded-pill px-5 my-3 btn-block"
+                                >
+                                  Apply
+                                </button>
+                              </div>
+                            </div>
+                            <div className="col-md-6">
+                              <p className="my-3">
+                                <a
+                                  className="btn btn-outline-light rounded-pill px-5 btn-block"
+                                  target="_blank"
+                                  href="https://www.facebook.com/SaylaniWelfareInternationalTrust/videos/368957824405514"
+                                >
+                                  View Details{" "}
+                                  <i class="fas fa-arrow-right"></i>
+                                </a>
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
