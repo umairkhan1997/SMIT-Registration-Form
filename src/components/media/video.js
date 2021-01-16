@@ -1,7 +1,5 @@
 import React from "react";
-import Zoom from "react-reveal/Zoom";
 import "./media.css";
-import Fade from "react-reveal/Fade";
 import { connect } from "react-redux";
 import { mediaGet } from "../../Redux/action/mediaAction";
 import { withRouter } from "react-router-dom";
@@ -48,24 +46,32 @@ class Video extends React.Component {
   async componentDidMount() {
     let channelID = "UCaF6uj00Wj8_slSdn4aE0sQ";
     let result = 50;
-    let channelKey = "AIzaSyCCo9C_ZYlYhavDmVSdFQxUq6Z8IhfAeRQ";
+    let channelKey = "AIzaSyC6kV16wGcyghUOOR2Dh9loFFNRzs2VEbo";
     let channelKey2 = "AIzaSyBfTF9Dbx9TpgQs0CweYpUayTOanudaGoI";
     let channelKey3 = "AIzaSyCCo9C_ZYlYhavDmVSdFQxUq6Z8IhfAeRQ";
-    let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey2}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`;
+    let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`;
     console.log(finalURl);
     await fetch(finalURl)
       .then((response) => response.json())
       .then((videos) => {
-        this.setState({ allvideos: videos.items });
+        this.setState({
+          allvideos: videos.items,
+          currentVideo: videos.items[0],
+        });
         console.log(this.state.allvideos);
       })
       .catch((error) => alert(error));
   }
+  playvideo(e) {
+    this.setState({ currentVideo: e });
+    window.scroll(window.scrollTo(0, 500));
+  }
   render() {
     // console.log(this.props.mediaGets);
+
     return (
       <div>
-        <div className="p-5">
+        <div className="container">
           <div className="row">
             <div className="col-md-8 py-3"></div>
             <div className="col-md-4 py-3">
@@ -78,7 +84,7 @@ class Video extends React.Component {
               </select>
             </div>
           </div>
-          <div className="row">
+          <div className="row py-5">
             <div className="col-md-8">
               <div>
                 <iframe
@@ -90,42 +96,58 @@ class Video extends React.Component {
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
-                <div className="row py-3">
-                  <div className="col-md-4 py-3">
-                    <a
-                      className="btn-block prevbtn"
-                      target="_blank"
-                      href={`https://api.whatsapp.com/send?phone=+923072199560&text=*${this.state.currentVideo.snippet.description}*%20Video%20Link:%20*https://youtu.be/${this.state.currentVideo.id.videoId}* `}
-                    >
-                      <i class="fab fa-whatsapp"></i> Share
-                    </a>
-                  </div>
-                  <div className="col-md-4 py-3">
-                    <a
-                      className="btn-block prevbtn"
-                      href="https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/watch?v=_uB0gT9NwRo&list=PL47LaC9-GaXV7D1RhnSNuiEWQemCYD4SC"
-                    >
-                      <i class="fab fa-facebook-f"></i> Share
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="col-md-4">
+              <div
+                style={{ height: "100%" }}
+                className="backgroundLight border p-3 rounded color text-center d-flex align-item-space-between flex-column"
+              >
+                <h2>{this.state.currentVideo.snippet.title}</h2>
+                <p>{this.state.currentVideo.snippet.description}</p>
+                <hr />
+                <div className="py-3">
+                  <a
+                    style={{ fontSize: "1.2em" }}
+                    className="btn btn-block btn-outline-success"
+                    target="_blank"
+                    href={`https://api.whatsapp.com/send?text=*https://youtu.be/${this.state.currentVideo.id.videoId}*%20 `}
+                  >
+                    <i class="fab fa-whatsapp"></i> Share
+                  </a>
+                </div>
+                <div className="py-3">
+                  <a
+                    style={{ fontSize: "1.2em" }}
+                    className="btn btn-block btn-outline-primary"
+                    target="_blank"
+                    href={`https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/watch?v=${this.state.currentVideo.id.videoId}`}
+                  >
+                    <i class="fab fa-facebook-f"></i> Share
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* ================All Video================  */}
+          <div>
+            <div className="row">
               {this.state.allvideos.map((e, i) => {
                 // console.log(e.snippet.title);
                 return (
-                  <div
-                    onClick={() => this.setState({ currentVideo: e })}
-                    className="pb-3 rounded youtubeVideo"
-                  >
-                    <img
-                      width="100%"
-                      className="thumbnails"
-                      src={e.snippet.thumbnails.high.url}
-                    />
-                    <div className="youtubeVideoDetails">
-                      <p style={{ fontSize: "2em" }}>{e.snippet.title}</p>
+                  <div key={i} className="col-md-4">
+                    <div
+                      onClick={() => this.setState({ currentVideo: e })}
+                      className="pb-3 rounded youtubeVideo"
+                    >
+                      <img
+                        width="100%"
+                        className="thumbnails"
+                        src={e.snippet.thumbnails.high.url}
+                      />
+                      <div className="youtubeVideoDetails">
+                        <p style={{ fontSize: "2em" }}>{e.snippet.title}</p>
+                      </div>
                     </div>
                   </div>
                 );
