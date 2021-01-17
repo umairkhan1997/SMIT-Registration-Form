@@ -12,25 +12,25 @@ export default class Teacher extends React.Component {
           name: "Sabiha Kiran ",
           image:
             "https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png",
-          course: "Principle Rehmania",
+          desig: "Principle Rehmania",
         },
         {
           name: "Miss Naseem",
           image:
             "https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png",
-          course: "Principle Kemari",
+          desig: "Principle Kemari",
         },
         {
           name: "Sir Syed Rameez",
           image:
             "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png",
-          course: "Principle Gulzar e Hijri",
+          desig: "Principle Gulzar e Hijri",
         },
         {
           name: "Miss Ambreen",
           image:
             "https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png",
-          course: "Principle Baldia",
+          desig: "Principle Baldia",
         },
       ],
     };
@@ -65,7 +65,7 @@ export default class Teacher extends React.Component {
                       >
                         {e.name}
                       </h4>
-                      <p>{e.course}</p>
+                      <p>{e.desig}</p>
                     </div>
                   </div>
                 </div>

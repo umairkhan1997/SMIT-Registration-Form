@@ -1,10 +1,17 @@
 import React from "react";
 import "./SmitStyle.css";
+import { connect } from "react-redux";
+import {
+  smitFacultyGet, smitFacultyCourseGet
 
-export default class SMITeacher extends React.Component {
+} from "../../Redux/action/smitAction";
+
+
+class SMITeacher extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectCourse: "Web and Mobile",
       cityDetails: {
         karachi: {
           courseTeachers: {
@@ -177,8 +184,18 @@ export default class SMITeacher extends React.Component {
       },
     };
   }
+
+  componentDidMount() {
+    this.props.smitFacultyGet();
+    this.props.smitFacultyCourseGet();
+  }
+  distinct = (v, i, s) => {
+    return s.indexOf(v) === i;
+  }
   render() {
-    const { cityDetails } = this.state;
+    const { cityDetails, selectCourse } = this.state;
+    // console.log(this.props.smitFacultyGets, selectCourse, this.props.smitFacultyCourseGets)
+    // const data = this.props.smitFacultyGets ? this.props.smitFacultyGets.course.filter(this.distinct()) : "Web and Mobile"
     return (
       <div className="py-5">
         <div className="container">
@@ -186,105 +203,43 @@ export default class SMITeacher extends React.Component {
             Our Qualified Teacher
           </h1>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                id="home-tab"
-                data-toggle="tab"
-                href="#home"
-                role="tab"
-                aria-controls="home"
-                aria-selected="true"
-              >
-                Web And Mobile
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                id="profile-tab"
-                data-toggle="tab"
-                href="#profile"
-                role="tab"
-                aria-controls="profile"
-                aria-selected="false"
-              >
-                Artificial Intelligence
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                id="contact-tab"
-                data-toggle="tab"
-                href="#contact"
-                role="tab"
-                aria-controls="contact"
-                aria-selected="false"
-              >
-                Graphic Designing & Video Editing
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                id="cisco-tab"
-                data-toggle="tab"
-                href="#cisco"
-                role="tab"
-                aria-controls="contact"
-                aria-selected="false"
-              >
-                Cisco Trainers
-              </a>
-            </li>
+            {this.props.smitFacultyCourseGets && this.props.smitFacultyCourseGets.map((e) => {
+              return (
+                <li class="nav-item" onClick={() => this.setState({ selectCourse: e.courVal })}>
+                  <a
+                    class="nav-link active"
+                    id={e.courName}
+                    data-toggle="tab"
+                    href={"#" + e.courName}
+                    role="tab"
+                    aria-controls={e.courName}
+                    aria-selected="true"
+                  >
+                    {e.courName}
+                  </a>
+                </li>
+              )
+            })}
+
           </ul>
           <div class="tab-content" id="myTabContent">
             <div
               class="tab-pane fade show active"
-              id="home"
+              id={selectCourse}
               role="tabpanel"
-              aria-labelledby="home-tab"
+              aria-labelledby={selectCourse}
             >
               <div className="row">
-                {cityDetails.karachi.courseTeachers.webandmobile.map((e, i) => {
-                  return (
-                    <div className="col-md-2 allTeacher text-center">
-                      <div className="my-3">
-                        <img
-                          style={{
-                            borderRadius: "50%",
-                            boxShadow: "0 10px 15px rgba(0,0,0,.2)",
-                            border: "1.5px solid white",
-                          }}
-                          width="100%"
-                          src={e.image}
-                        />
-                        <div className="teacherDetails">
-                          <h4
-                            style={{
-                              borderBottom: "1px solid #0267b4",
-                            }}
-                          >
-                            {e.name}
-                          </h4>
-                          <p>{e.course}</p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            <div
-              class="tab-pane fade"
-              id="profile"
-              role="tabpanel"
-              aria-labelledby="profile-tab"
-            >
-              <div className="row">
-                {cityDetails.karachi.courseTeachers.artificialIntelligence.map(
-                  (e, i) => {
+                {this.props.smitFacultyGets && this.props.smitFacultyGets
+                  .filter((name) => {
+                    return (
+                      name.facDesig
+                        .toLowerCase()
+                        .indexOf(selectCourse.toLowerCase()) >= 0
+                    );
+                  })
+                  .map((filteredName) => {
+
                     return (
                       <div className="col-md-2 allTeacher text-center">
                         <div className="my-3">
@@ -295,7 +250,7 @@ export default class SMITeacher extends React.Component {
                               border: "1.5px solid white",
                             }}
                             width="100%"
-                            src={e.image}
+                            src={filteredName.facImgUrl}
                           />
                           <div className="teacherDetails">
                             <h4
@@ -303,94 +258,41 @@ export default class SMITeacher extends React.Component {
                                 borderBottom: "1px solid #0267b4",
                               }}
                             >
-                              {e.name}
+                              {filteredName.facName}
                             </h4>
-                            <p>{e.course}</p>
+                            <p>{filteredName.facDesig}</p>
                           </div>
                         </div>
                       </div>
-                    );
-                  }
-                )}
+                    )
+                  })}
+                {/* );
+                })} */}
               </div>
             </div>
-            <div
-              class="tab-pane fade"
-              id="contact"
-              role="tabpanel"
-              aria-labelledby="contact-tab"
-            >
-              <div className="row">
-                {cityDetails.karachi.courseTeachers.graphicDesigning.map(
-                  (e, i) => {
-                    return (
-                      <div className="col-md-2 allTeacher text-center">
-                        <div className="my-3">
-                          <img
-                            style={{
-                              borderRadius: "50%",
-                              boxShadow: "0 10px 15px rgba(0,0,0,.2)",
-                              border: "1.5px solid white",
-                            }}
-                            width="100%"
-                            src={e.image}
-                          />
-                          <div className="teacherDetails">
-                            <h4
-                              style={{
-                                borderBottom: "1px solid #0267b4",
-                              }}
-                            >
-                              {e.name}
-                            </h4>
-                            <p>{e.course}</p>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  }
-                )}
-              </div>
-            </div>
-            <div
-              class="tab-pane fade"
-              id="cisco"
-              role="tabpanel"
-              aria-labelledby="cisco-tab"
-            >
-              <div className="row">
-                {cityDetails.karachi.courseTeachers.cisco.map((e, i) => {
-                  return (
-                    <div className="col-md-2 allTeacher text-center">
-                      <div className="my-3">
-                        <img
-                          style={{
-                            borderRadius: "50%",
-                            boxShadow: "0 10px 15px rgba(0,0,0,.2)",
-                            border: "1.5px solid white",
-                          }}
-                          width="100%"
-                          src={e.image}
-                        />
-                        <div className="teacherDetails">
-                          <h4
-                            style={{
-                              borderBottom: "1px solid #0267b4",
-                            }}
-                          >
-                            {e.name}
-                          </h4>
-                          <p>{e.course}</p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    smitFacultyGets: state.reducerSmit.smitFacultyGets,
+    smitFacultyCourseGets: state.reducerSmit.smitFacultyCourseGets,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    smitFacultyGet: (a) => {
+      dispatch(smitFacultyGet(a));
+    },
+    smitFacultyCourseGet: (a) => {
+      dispatch(smitFacultyCourseGet(a));
+    },
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(SMITeacher);
+

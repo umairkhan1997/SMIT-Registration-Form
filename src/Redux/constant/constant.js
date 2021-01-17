@@ -17,7 +17,12 @@ const ActionTypes = {
   QuranAppAndroidGet: "QuranAppAndroidGet",
   QuranAppIosGet: "QuranAppIosGet",
   smitNotificationGet: "smitNotificationGet",
-  mediaGet: "mediaGet"
+  mediaGet: "mediaGet",
+  smitFacultyGet: "smitFacultyGet",
+  smitFacultyCourseGet: 'smitFacultyCourseGet',
+  SmitCollaborationGet: "SmitCollaborationGet",
+  smitWorkshopGet: "smitWorkshopGet",
+  SmitCounGet: "SmitCounGet"
 };
 
 export default ActionTypes;

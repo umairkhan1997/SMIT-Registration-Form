@@ -1,6 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import {
+  smitWorkshopGet
 
-export default class Workshop extends React.Component {
+} from "../../Redux/action/smitAction";
+class Workshop extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -215,7 +219,11 @@ export default class Workshop extends React.Component {
       ],
     };
   }
+  componentDidMount() {
+    this.props.smitWorkshopGet();
+  }
   render() {
+    console.log(this.props.smitWorkshopGets)
     return (
       <div className="py-5 my-5 backgroundLight">
         <div className="container my-5">
@@ -225,7 +233,7 @@ export default class Workshop extends React.Component {
             </h2>
           </div>
           <div className="row">
-            {this.state.workshop.map((e, i) => {
+            {this.props.smitWorkshopGets && this.props.smitWorkshopGets.map((e, i) => {
               return (
                 <div key={i} className="col-md-4 py-3">
                   <a className="workshopLink" href={e.Link} target="_blank">
@@ -244,3 +252,19 @@ export default class Workshop extends React.Component {
     );
   }
 }
+
+
+function mapStateToProp(state) {
+  return {
+    smitWorkshopGets: state.reducerSmit.smitWorkshopGets,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    smitWorkshopGet: () => {
+      dispatch(smitWorkshopGet());
+    },
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(Workshop);
+
