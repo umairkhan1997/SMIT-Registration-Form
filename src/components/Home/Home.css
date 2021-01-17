@@ -38,9 +38,9 @@
   cursor: pointer;
 }
 .donate {
-  padding: 6px 20px;
+  padding: 10px 20px;
   border: none;
-  background-color: dodgerblue;
+  background-color: #0066b3;
   color: white;
   border-radius: 25px;
 }

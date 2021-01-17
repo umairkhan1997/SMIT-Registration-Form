@@ -14,6 +14,13 @@ export default class Media extends React.Component {
     return (
       <div>
         <MainHeader />
+        <div style={{ backgroundColor: "#0066b3" }} className="bg-image">
+          <div className="container p-5 text-white">
+            <h2>
+              <i class="fas fa-play-circle"></i> Saylani Media
+            </h2>
+          </div>
+        </div>
         <Video />
       </div>
     );
