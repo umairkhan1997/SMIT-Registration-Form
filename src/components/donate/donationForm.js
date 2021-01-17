@@ -268,17 +268,14 @@ class DonationForm extends React.Component {
     console.log(this.props, "this.props");
     return (
       <div>
-        <div className="container">
-          <div className="text-left">
+        <div className="container my-5 py-5">
+          <div className="displayheading">
             <h1>Donation Form</h1>
           </div>
-          {/* <p className="text-muted">
-            For Sadqa, Aqiqa, Corona Effecties or other Donation select Donation
-            Form and for Bank Details select Bank Details option.
-          </p> */}
+
           <div className="container mt-5">
             <div className="row">
-              <div className="col-md-7 bg-light p-5">
+              <div className="col-md-7 backgroundLight p-5">
                 <div className="row">
                   <div className="col-md-12 mt-3 mb-3">
                     <label className="lab text-dark">Name</label>
@@ -486,7 +483,33 @@ class DonationForm extends React.Component {
                 style={{ backgroundColor: "#0066b3" }}
                 className="col-md-5 p-5"
               >
-                <img src={paypal} width="100%" />
+                <div className="py-3">
+                  <a
+                    target="_blank"
+                    className="donorLink"
+                    href="https://www.paypal.com/donate?token=RO8vMGfMxvHVAca65ngnyG-dyU8MS3ZCzdNx1FNge6C5Oq_gF2DCDN1-ADXnzw5aMhp2kThlxQgMOa4b"
+                  >
+                    <i class="fab fa-paypal"></i> <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                  </a>
+                </div>
+                <div className="py-3">
+                  <h3 className="text-white">
+                    Donate to us through Virgin Money Giving
+                  </h3>
+                  <p className="text-white">For UK Donors</p>
+                  <a
+                    target="_blank"
+                    className="donorLink"
+                    href="https://uk.virginmoneygiving.com/donation-web/charity?charityId=1015417&campaignId=8552&utm_source=extbtn&utm_campaign=donatebtn"
+                  >
+                    <img
+                      src="https://www.saylaniwelfareuk.com/wp-content/uploads/2019/05/DONATE_RED_BUTTON@1x.png"
+                      width="100%"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

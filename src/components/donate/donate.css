@@ -63,3 +63,21 @@
 .bankTable td {
   color: #1371b8;
 }
+.donorLink {
+  font-size: 3em;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  text-align: center;
+}
+.donorLink:hover {
+  background-color: white;
+  color: #1371b8;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.donorLink i {
+  margin: 10px;
+}

@@ -18,8 +18,11 @@ export default class BankDetails extends React.Component {
           <div className="container">
             <div className="row mt-5 mb-5">
               <div className="col-md-6 p-4">
-                <div className="bankDetailsCard text-left p-5">
-                  <h3 className="pb-3 pt-3">Wester Union Details</h3>
+                <div className="bankDetailsCard text-left bg-dark text-white p-5">
+                  <img
+                    width="230px"
+                    src="https://www.westernunion.com/content/dam/wu/logo/logo.wu.big.svg"
+                  />
                   <p>Please Donation in Favour of</p>
                   <ol>
                     <li>Yousuf Lakhani</li>
@@ -31,7 +34,10 @@ export default class BankDetails extends React.Component {
               </div>
               <div className="col-md-6 p-4">
                 <div className="bankDetailsCard text-left p-5">
-                  <h3 className="pb-3 pt-3">Money Gram Details</h3>
+                  <img
+                    width="230px"
+                    src="http://global.moneygram.com/images/logo.png"
+                  />
                   <p>
                     You can send donation by using secure website. Please send
                     donation in favour of
@@ -50,12 +56,14 @@ export default class BankDetails extends React.Component {
         <div
           style={{
             backgroundImage:
-              "url('https://pbs.twimg.com/media/DMq0qLDX4AEIkDA.jpg:large')",
+              "url('https://www.techbams.com/wp-content/uploads/2018/07/uu.jpg')",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
           }}
         >
           <div
             className="py-5"
-            style={{ backgroundColor: "rgba(255,255,255,.5)" }}
+            style={{ backgroundColor: "rgba(255,255,255,.3)" }}
           >
             <div className="container">
               <table className="bankTable bg-white table-white shadow rounded table-responsive-sm table-hover table table-responsive">

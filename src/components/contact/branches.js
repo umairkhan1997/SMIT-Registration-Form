@@ -1,7 +1,6 @@
 import React from "react";
-import "./Home.css";
 
-export default class HomeContact extends React.Component {
+export default class Branches extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -379,31 +378,36 @@ export default class HomeContact extends React.Component {
   render() {
     const { currentCity } = this.state;
     return (
-      <div>
-        <div className="container ">
-          <div className="displayheading">
-            <h2>Saylani Welfare Branches</h2>
-          </div>
-        </div>
+      <div className="my-5 py-5">
         <div className="backgroundLight border-bottom">
           <div className="py-5 shadow backgroundDark">
             <div className="container">
-              <select
-                style={{
-                  border: "none",
-                  fontSize: "2em",
-                  borderBottom: "2px solid white",
-                  padding: "10px 15px",
-                  outline: "none",
-                  color: "white",
-                  backgroundColor: "transparent",
-                }}
-                onChange={(e) => this.city(e)}
-              >
-                <option className="text-dark">Karachi</option>
-                <option className="text-dark">Hyderabad</option>
-                <option className="text-dark">Punjab</option>
-              </select>
+              <div className="row">
+                <div className="col-md-6 text-white">
+                  <div className="py-3">
+                    <h2>Saylani Welfare Branches</h2>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <select
+                    style={{
+                      border: "none",
+                      fontSize: "2em",
+                      borderBottom: "2px solid white",
+                      padding: "10px 15px",
+                      outline: "none",
+                      color: "white",
+                      backgroundColor: "transparent",
+                      width: "100%",
+                    }}
+                    onChange={(e) => this.city(e)}
+                  >
+                    <option className="text-dark">Karachi</option>
+                    <option className="text-dark">Hyderabad</option>
+                    <option className="text-dark">Punjab</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           <div
@@ -435,7 +439,6 @@ export default class HomeContact extends React.Component {
               })}
             </div>
           </div>
-          <div></div>
 
           <div
             class="modal fade"

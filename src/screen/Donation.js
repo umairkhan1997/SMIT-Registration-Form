@@ -40,8 +40,8 @@ export default class Donation extends React.Component {
                 }
                 className="selectBtn"
                 style={{
-                  backgroundColor: showScreen ? "#0069d9" : "white",
-                  color: showScreen ? "white" : "#0069d9",
+                  backgroundColor: showScreen ? "#0066b3" : "white",
+                  color: showScreen ? "white" : "#0066b3",
                 }}
               >
                 Donation Form
@@ -58,8 +58,8 @@ export default class Donation extends React.Component {
                 }
                 className="selectBtn"
                 style={{
-                  backgroundColor: !showScreen ? "#0069d9" : "white",
-                  color: !showScreen ? "white" : "#0069d9",
+                  backgroundColor: !showScreen ? "#0066b3" : "white",
+                  color: !showScreen ? "white" : "#0066b3",
                 }}
               >
                 Bank Details
