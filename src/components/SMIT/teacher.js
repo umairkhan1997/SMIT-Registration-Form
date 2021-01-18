@@ -249,7 +249,7 @@ export default class SMITeacher extends React.Component {
               <div className="row">
                 {cityDetails.karachi.courseTeachers.webandmobile.map((e, i) => {
                   return (
-                    <div className="col-md-2 allTeacher text-center">
+                    <div key={i} className="col-md-2 allTeacher text-center">
                       <div className="my-3">
                         <img
                           style={{
@@ -286,7 +286,7 @@ export default class SMITeacher extends React.Component {
                 {cityDetails.karachi.courseTeachers.artificialIntelligence.map(
                   (e, i) => {
                     return (
-                      <div className="col-md-2 allTeacher text-center">
+                      <div key={i} className="col-md-2 allTeacher text-center">
                         <div className="my-3">
                           <img
                             style={{
@@ -324,7 +324,7 @@ export default class SMITeacher extends React.Component {
                 {cityDetails.karachi.courseTeachers.graphicDesigning.map(
                   (e, i) => {
                     return (
-                      <div className="col-md-2 allTeacher text-center">
+                      <div key={i} className="col-md-2 allTeacher text-center">
                         <div className="my-3">
                           <img
                             style={{
@@ -361,7 +361,7 @@ export default class SMITeacher extends React.Component {
               <div className="row">
                 {cityDetails.karachi.courseTeachers.cisco.map((e, i) => {
                   return (
-                    <div className="col-md-2 allTeacher text-center">
+                    <div key={i} className="col-md-2 allTeacher text-center">
                       <div className="my-3">
                         <img
                           style={{

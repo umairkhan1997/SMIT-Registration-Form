@@ -42,7 +42,7 @@ export default class TableData extends React.Component {
                     style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
                     className="qtyn icoPosition"
                   >
-                    <i class="fas fa-bullseye"></i>
+                    <i className="fas fa-bullseye"></i>
                   </span>
                   <h2>Vision</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
@@ -59,7 +59,7 @@ export default class TableData extends React.Component {
                     style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
                     className="qtyn icoPosition"
                   >
-                    <i class="fas fa-user-graduate"></i>
+                    <i className="fas fa-user-graduate"></i>
                   </span>
                   <h2>Trained Students</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
@@ -76,7 +76,7 @@ export default class TableData extends React.Component {
                     style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
                     className="qtyn icoPosition"
                   >
-                    <i class="fas fa-book-open"></i>
+                    <i className="fas fa-book-open"></i>
                   </span>
                   <h2>Enrolled Students</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
@@ -94,7 +94,7 @@ export default class TableData extends React.Component {
                     style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
                     className="qtyn icoPosition"
                   >
-                    <i class="fas fa-laptop"></i>
+                    <i className="fas fa-laptop"></i>
                   </span>
                   <h2>IT Courses</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
@@ -111,7 +111,7 @@ export default class TableData extends React.Component {
                     style={{ backgroundColor: "#f0f4ff", color: "#0267b4" }}
                     className="qtyn icoPosition"
                   >
-                    <i class="fas fa-cogs"></i>
+                    <i className="fas fa-cogs"></i>
                   </span>
                   <h2>Vocational Training</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
@@ -144,9 +144,9 @@ export default class TableData extends React.Component {
                   className="video"
                   width="100%"
                   src="https://www.youtube.com/embed/El6Ed7l-WeQ"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen="allowfullscreen"
+                  allowFullScreen="allowfullscreen"
                 ></iframe>
               </div>
             </div>

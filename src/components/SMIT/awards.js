@@ -36,16 +36,16 @@ export default class SMITAwards extends React.Component {
         <div className="container">
           <div className="Heading"></div>
 
-          <div class="container">
+          <div className="container">
             <div
               id="carouselContent"
-              class="carousel slide"
+              className="carousel slide"
               data-ride="carousel"
             >
-              <div class="carousel-inner" role="listbox">
+              <div className="carousel-inner" role="listbox">
                 {this.state.awards.map((e, i) => {
                   return (
-                    <div class="carousel-item text-center p-4">
+                    <div key={i} className="carousel-item text-center p-4">
                       <div className="awardImg">
                         <img width="100%" src={e.image} height="400px" />
                         <h2>{e.title}</h2>
@@ -55,28 +55,28 @@ export default class SMITAwards extends React.Component {
                 })}
               </div>
               <a
-                class="carousel-control-prev"
+                className="carousel-control-prev"
                 href="#carouselContent"
                 role="button"
                 data-slide="prev"
               >
                 <span
-                  class="carousel-control-prev-icon"
+                  className="carousel-control-prev-icon"
                   aria-hidden="true"
                 ></span>
                 <span class="sr-only">Previous</span>
               </a>
               <a
-                class="carousel-control-next"
+                className="carousel-control-next"
                 href="#carouselContent"
                 role="button"
                 data-slide="next"
               >
                 <span
-                  class="carousel-control-next-icon"
+                  className="carousel-control-next-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="sr-only">Next</span>
+                <span className="sr-only">Next</span>
               </a>
             </div>
           </div>
