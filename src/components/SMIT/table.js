@@ -46,7 +46,13 @@ export default class TableData extends React.Component {
                   </span>
                   <h2>Vision</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
-                    <CountUp start={1000} end={100000} duration={4} />+{" "}
+                    <CountUp
+                      separator=","
+                      start={1000}
+                      end={100000}
+                      duration={4}
+                    />
+                    +{" "}
                   </p>
                 </div>
               </div>
@@ -63,7 +69,13 @@ export default class TableData extends React.Component {
                   </span>
                   <h2>Trained Students</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
-                    <CountUp start={1000} end={100000} duration={4} />+
+                    <CountUp
+                      separator=","
+                      start={1000}
+                      end={100000}
+                      duration={4}
+                    />
+                    +
                   </p>
                 </div>
               </div>
@@ -81,7 +93,13 @@ export default class TableData extends React.Component {
                   <h2>Enrolled Students</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
                     {" "}
-                    <CountUp start={10000} end={55000} duration={4} />+
+                    <CountUp
+                      separator=","
+                      start={10000}
+                      end={55000}
+                      duration={4}
+                    />
+                    +
                   </p>
                 </div>
               </div>
@@ -98,7 +116,7 @@ export default class TableData extends React.Component {
                   </span>
                   <h2>IT Courses</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
-                    <CountUp start={1} end={15} duration={4} />+
+                    <CountUp separator="," start={1} end={15} duration={4} />+
                   </p>
                 </div>
               </div>
@@ -115,7 +133,7 @@ export default class TableData extends React.Component {
                   </span>
                   <h2>Vocational Training</h2>
                   <p style={{ fontSize: "2em", color: "#0267b4" }}>
-                    <CountUp start={1} end={4} duration={4} />
+                    <CountUp separator="," start={1} end={4} duration={4} />
                   </p>
                 </div>
               </div>

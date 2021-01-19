@@ -90,10 +90,10 @@ export default class Campus extends React.Component {
                   src={this.state.currentMap.geoLocation}
                   width="100%"
                   height="400"
-                  frameborder="0"
-                  allowfullscreen=""
+                  frameBorder="0"
+                  allowFullScreen=""
                   aria-hidden="false"
-                  tabindex="0"
+                  tabIndex="0"
                 ></iframe>
               </div>
               <div class="modal-footer">

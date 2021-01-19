@@ -8,6 +8,9 @@ class Video extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      youtubeChannelAPI: "",
+      nextToken: "",
+      previousToken: "",
       allvideos: [],
       currentVideo: {
         etag: "A5bkSoxm-unTaaJOTRYjtmO9CwI",
@@ -45,15 +48,36 @@ class Video extends React.Component {
   }
   async componentDidMount() {
     let channelID = "UCaF6uj00Wj8_slSdn4aE0sQ";
-    let result = 50;
+    let result = 30;
     let channelKey = "AIzaSyC6kV16wGcyghUOOR2Dh9loFFNRzs2VEbo";
     let channelKey2 = "AIzaSyBfTF9Dbx9TpgQs0CweYpUayTOanudaGoI";
     let channelKey3 = "AIzaSyCCo9C_ZYlYhavDmVSdFQxUq6Z8IhfAeRQ";
+
     let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`;
     console.log(finalURl);
     await fetch(finalURl)
       .then((response) => response.json())
       .then((videos) => {
+        console.log(videos.nextPageToken, "==================Core Data");
+        this.setState({
+          nextToken: videos.nextPageToken,
+          allvideos: videos.items,
+          currentVideo: videos.items[0],
+        });
+        console.log(this.state.allvideos);
+      })
+      .catch((error) => alert(error));
+  }
+  async next() {
+    let channelID = "UCaF6uj00Wj8_slSdn4aE0sQ";
+    let result = 30;
+    let channelKey = "AIzaSyC6kV16wGcyghUOOR2Dh9loFFNRzs2VEbo";
+
+    let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}&pageToken=${this.state.nextToken}`;
+    await fetch(finalURl)
+      .then((response) => response.json())
+      .then((videos) => {
+        console.log(videos.nextPageToken, "==================Core Data");
         this.setState({
           allvideos: videos.items,
           currentVideo: videos.items[0],
@@ -135,10 +159,10 @@ class Video extends React.Component {
               {this.state.allvideos.map((e, i) => {
                 // console.log(e.snippet.title);
                 return (
-                  <div key={i} className="col-md-4">
+                  <div key={i} className="col-md-4 py-2">
                     <div
                       onClick={() => this.setState({ currentVideo: e })}
-                      className="pb-3 rounded youtubeVideo"
+                      className="pb-3 youtubeVideo"
                     >
                       <img
                         width="100%"

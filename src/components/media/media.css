@@ -33,11 +33,15 @@
   transition: 0.5s;
   border-radius: 8px;
   height: 96%;
+  width: 100%;
 }
 
 .youtubeVideo {
   position: relative;
   cursor: pointer;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  padding: 0px;
 }
 .youtubeVideo:hover .youtubeVideoDetails {
   display: block;
