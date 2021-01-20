@@ -46,3 +46,24 @@
 .youtubeVideo:hover .youtubeVideoDetails {
   display: block;
 }
+.searchYoutubeVideo {
+  padding: 10px;
+  font-size: 1.2em;
+  border: 2px solid lightgrey;
+  /* border-radius: 8px; */
+  /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); */
+  width: 100%;
+  max-width: 600px;
+  outline: none;
+}
+.searchYoutubeVideo:focus {
+  border: 2px solid #0066b3;
+}
+.searchVideobtn {
+  border: 2px solid #0066b3;
+  /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); */
+  padding: 10px 25px;
+  font-size: 1.2em;
+  background-color: #0066b3;
+  color: white;
+}
