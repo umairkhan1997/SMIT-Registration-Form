@@ -1,6 +1,6 @@
 import React from "react";
 import "./SmitStyle.css";
-// import zeeshan from "../../images/zeeshan.png";
+import zeeshan from "../../images/zeeshan.png";
 import ziakhan from "../../images/ziaKhan.png";
 import alimughal from "../../images/aliMughal.png";
 import Fade from "react-reveal/Fade";
@@ -56,26 +56,28 @@ export default class Faculty extends React.Component {
               <Fade left>
                 <img
                   className="facultyImg"
-                  src={alimughal}
-                  alt="Muhammad Ali Mughal"
-                  title="Muhammad Ali Mughal"
+                  src={zeeshan}
+                  alt="Zeeshan hanif"
+                  title="Zeeshan hanif"
                 />
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2 style={{ color: "#0066b3" }}>Muhammad Ali Mughal</h2>
-                  <p className="text-muted">(Manager SMIT)</p>
+                  <h2 style={{ color: "#0066b3" }}>Zeeshan Hanif</h2>
+                  <p className="text-muted">
+                    (Head of Software Development at Panacloud Pvt Ltd)
+                  </p>
                 </div>
               </Fade>
             </div>
             <div className="facultyContent  ml-5 pt-5 p-3 rounded shadow">
               <Fade right>
                 <p>
-                  I initiated working when I was in 7th standard and never stop.
-                  Today Alhamdullillah I am working as Lead and Manager and
-                  Admin Lead in Saylani Mass IT Training and Saylani Incubation
-                  Center along with Admin Lead of PIAIC along with Lecturer in
-                  Benazir Bhutto Shaheed University.
+                  I have a decade of experience in developing Web and Mobile
+                  apps. Extensive documented track record of building apps using
+                  the Java/J2EE platform, MEAN Stack, HTML5 Hybrid mobile apps
+                  and Android Native apps. I have over 10 years of experience in
+                  teaching software programming and Finance courses
                 </p>
               </Fade>
             </div>

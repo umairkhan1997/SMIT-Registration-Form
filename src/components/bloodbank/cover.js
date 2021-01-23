@@ -9,20 +9,24 @@ export default class Cover extends React.Component {
       contact: "",
       address: "",
       lastDonation: "",
-      dob: "",
+      bdate: "",
+      bmonth: "",
+      byear: "",
       age: "",
       weight: "",
       desease: "",
     };
   }
   calculateAge() {
-    const { dob } = this.state;
+    const { bdate, bmonth, byear } = this.state;
     let a = new Date();
-    let b = new Date(dob);
+    let b = new Date(`${bmonth} ${bdate},${byear}`);
     let full = a.getTime();
+    console.log(full);
     let actual = b.getTime();
-    let final = full - actual / (1000 * 60 * 60 * 24 * 365);
-    console.log(final);
+    console.log(actual);
+    let final = (full - actual) / (1000 * 60 * 60 * 24 * 365);
+    this.setState({ age: Math.ceil(final) });
   }
   render() {
     return (
@@ -108,21 +112,51 @@ export default class Cover extends React.Component {
                 </div>
                 <hr />
                 <div className="row p-3">
-                  <div className="col-md-6">
+                  <div className="col-md-12 p-3">
                     <label style={{ color: "black" }} className="lab">
                       Date of Birth
                     </label>
                     <input
-                      onBlur={() => this.calculateAge()}
-                      type="date"
-                      className="inp"
-                      placeholder=""
+                      onChange={(e) => this.setState({ bdate: e.target.value })}
+                      type="number"
+                      className="inpInline"
+                      placeholder="date"
                     />
-                    <p>
-                      Your age is <span>55</span>
-                    </p>
+                    <select
+                      onChange={(e) =>
+                        this.setState({ bmonth: e.target.value })
+                      }
+                      className="inpInline"
+                    >
+                      <option>Month</option>
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
+                    <input
+                      onChange={(e) => this.setState({ byear: e.target.value })}
+                      type="number"
+                      className="inpInline"
+                      placeholder="year"
+                      onBlur={() => this.calculateAge()}
+                    />
+                    <input
+                      type="text"
+                      disabled
+                      className="inpInline"
+                      value={`${this.state.age}yrs`}
+                    />
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-12">
                     <label style={{ color: "black" }} className="lab">
                       weight
                     </label>

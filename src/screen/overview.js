@@ -17,7 +17,7 @@ export default class OverView extends React.Component {
       <div>
         <Modal
           visible={this.state.visible}
-          width="90%"
+          width="50%"
           effect="fadeInUp"
           onClickAway={() => this.setState({ visible: false })}
         >
@@ -88,7 +88,45 @@ export default class OverView extends React.Component {
         </button>
         <MainHeader />
         <div></div>
+
         <div style={{ backgroundColor: "#cfc7c5" }}>
+          <div
+            style={{
+              backgroundImage:
+                'url("https://www.saylaniwelfare.com/public_html/images/saylani/gallery/hazrat2.jpg")',
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed",
+            }}
+          >
+            <div className="container py-5">
+              <div className="row">
+                <div className="col-md-4 bg-white shadow">
+                  <div className="p-3">
+                    <h2 className="color">Support Saylani Work</h2>
+                  </div>
+                  <div className="p-3">
+                    <label style={{ color: "#0066b3" }} className="lab">
+                      First Name
+                    </label>
+                    <input className="inp" placeholder="First Name" />
+                  </div>
+                  <div className="p-3">
+                    <label style={{ color: "#0066b3" }} className="lab">
+                      Last Name
+                    </label>
+                    <input className="inp" placeholder="Last Name" />
+                  </div>
+                  <div className="p-3">
+                    <label style={{ color: "#0066b3" }} className="lab">
+                      Email
+                    </label>
+                    <input className="inp" placeholder="Email" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="container">
             <div className="row">
               <div className="col-md-6 p-3">
