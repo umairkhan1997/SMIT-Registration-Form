@@ -238,10 +238,9 @@ class SMITeacher extends React.Component {
                         .indexOf(selectCourse.toLowerCase()) >= 0
                     );
                   })
-                  .map((filteredName) => {
-
+                  .map((filteredName, i) => {
                     return (
-                      <div className="col-md-2 allTeacher text-center">
+                      <div key={i} className="col-md-2 allTeacher text-center">
                         <div className="my-3">
                           <img
                             style={{

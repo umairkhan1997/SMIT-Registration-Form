@@ -8,6 +8,12 @@ class Video extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      saylaniChannelID: "UCaF6uj00Wj8_slSdn4aE0sQ",
+      saylaniChannelKey: "AIzaSyB6jWhfeCv-DaMW6KxdxM43-1Gb7D4cJMY",
+      youtubeChannelAPI: "",
+      nextToken: "",
+      previousToken: "",
+      searchVideoText: "",
       allvideos: [],
       currentVideo: {
         etag: "A5bkSoxm-unTaaJOTRYjtmO9CwI",
@@ -45,16 +51,17 @@ class Video extends React.Component {
   }
   async componentDidMount() {
     let channelID = "UCaF6uj00Wj8_slSdn4aE0sQ";
-    let result = 50;
-    let channelKey = "AIzaSyC6kV16wGcyghUOOR2Dh9loFFNRzs2VEbo";
-    let channelKey2 = "AIzaSyBfTF9Dbx9TpgQs0CweYpUayTOanudaGoI";
-    let channelKey3 = "AIzaSyCCo9C_ZYlYhavDmVSdFQxUq6Z8IhfAeRQ";
+    let result = 30;
+    // let channelKey = "AIzaSyC6kV16wGcyghUOOR2Dh9loFFNRzs2VEbo";
+    let channelKey = "AIzaSyB6jWhfeCv-DaMW6KxdxM43-1Gb7D4cJMY";
     let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`;
     console.log(finalURl);
     await fetch(finalURl)
       .then((response) => response.json())
       .then((videos) => {
+        console.log(videos.nextPageToken, "==================Core Data");
         this.setState({
+          nextToken: videos.nextPageToken,
           allvideos: videos.items,
           currentVideo: videos.items[0],
         });
@@ -62,28 +69,102 @@ class Video extends React.Component {
       })
       .catch((error) => alert(error));
   }
+
+  // =======================Videos Next Option============================
+
+  async next() {
+    const { saylaniChannelID, saylaniChannelKey } = this.state;
+    let result = 30;
+    let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${saylaniChannelKey}&channelId=${saylaniChannelID}&part=snippet,id&order=date&maxResults=${result}&pageToken=${this.state.nextToken}`;
+    await fetch(finalURl)
+      .then((response) => response.json())
+      .then((videos) => {
+        this.setState({
+          allvideos: videos.items,
+          currentVideo: videos.items[0],
+          nextToken: videos.nextPageToken,
+          previousToken: videos.prevPageToken,
+        });
+        console.log(this.state.allvideos);
+      })
+      .catch((error) => alert(error));
+  }
+
+  // =======================Videos Back Option============================
+
+  async back() {
+    let channelID = "UCaF6uj00Wj8_slSdn4aE0sQ";
+    let result = 30;
+    // let channelKey = "AIzaSyC6kV16wGcyghUOOR2Dh9loFFNRzs2VEbo";
+    let channelKey = "AIzaSyB6jWhfeCv-DaMW6KxdxM43-1Gb7D4cJMY";
+
+    let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}&pageToken=${this.state.previousToken}`;
+    await fetch(finalURl)
+      .then((response) => response.json())
+      .then((videos) => {
+        console.log(
+          videos.prevPageToken,
+          "<======back token",
+          videos.nextPageToken,
+          "<=========previous token"
+        );
+        this.setState({
+          allvideos: videos.items,
+          currentVideo: videos.items[0],
+          nextToken: videos.nextPageToken,
+          previousToken: videos.prevPageToken,
+        });
+        console.log(this.state.allvideos);
+      })
+      .catch((error) => alert(error));
+  }
   playvideo(e) {
     this.setState({ currentVideo: e });
-    window.scroll(window.scrollTo(0, 500));
+    window.scroll(window.scrollTo(0, 250));
+  }
+  async searchVideo(e) {
+    e.preventDefault();
+    const { searchVideoText } = this.state;
+    console.log(searchVideoText);
+    const { saylaniChannelID, saylaniChannelKey } = this.state;
+    let result = 50;
+    let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${saylaniChannelKey}&channelId=${saylaniChannelID}&part=snippet,id&order=date&maxResults=${result}&q=${searchVideoText}`;
+    await fetch(finalURl)
+      .then((response) => response.json())
+      .then((videos) => {
+        this.setState({
+          allvideos: videos.items,
+          currentVideo: videos.items[0],
+          nextToken: videos.nextPageToken,
+          previousToken: videos.prevPageToken,
+        });
+        console.log(this.state.allvideos);
+      })
+      .catch((error) => alert(error));
   }
   render() {
     // console.log(this.props.mediaGets);
 
     return (
       <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 py-3"></div>
-            <div className="col-md-4 py-3">
-              <select className="inp">
-                <option>SMIT </option>
-                <option>Welfare</option>
-                <option>Medical </option>
-                <option>Blood Bank</option>
-                <option>dkjfhkjsd </option>
-              </select>
-            </div>
+        <div className="py-3 backgroundLight">
+          <div className="container p-3 text-center">
+            <form onSubmit={(e) => this.searchVideo(e)}>
+              <input
+                className="searchYoutubeVideo"
+                placeholder="Search Services Here..."
+                value={this.state.searchVideoText}
+                onChange={(e) =>
+                  this.setState({ searchVideoText: e.target.value })
+                }
+              />
+              <button className="searchVideobtn">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
           </div>
+        </div>
+        <div className="container">
           <div className="row py-5">
             <div className="col-md-8">
               <div>
@@ -135,10 +216,10 @@ class Video extends React.Component {
               {this.state.allvideos.map((e, i) => {
                 // console.log(e.snippet.title);
                 return (
-                  <div key={i} className="col-md-4">
+                  <div key={i} className="col-md-4 py-2">
                     <div
-                      onClick={() => this.setState({ currentVideo: e })}
-                      className="pb-3 rounded youtubeVideo"
+                      onClick={() => this.playvideo(e)}
+                      className="pb-3 youtubeVideo"
                     >
                       <img
                         width="100%"
@@ -152,6 +233,18 @@ class Video extends React.Component {
                   </div>
                 );
               })}
+            </div>
+            <div className="container text-center">
+              {this.state.previousToken ? (
+                <button className="prevbtn m-2" onClick={() => this.back()}>
+                  <i class="fas fa-chevron-left"></i> Back
+                </button>
+              ) : null}
+              {this.state.nextToken ? (
+                <button className="prevbtn m-2" onClick={() => this.next()}>
+                  Next <i class="fas fa-chevron-right"></i>
+                </button>
+              ) : null}
             </div>
           </div>
         </div>

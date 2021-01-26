@@ -593,7 +593,7 @@ class MainCourses extends React.Component {
           <div className="row">
             {this.props.smitCoursesGets && this.props.smitCoursesGets.map((e, i) => {
               return (
-                <div className="col-md-4 text-center p-4">
+                <div key={i} className="col-md-4 text-center p-4">
                   <div
                     data-toggle="modal"
                     data-target="#exampleModalCenter"
@@ -614,7 +614,7 @@ class MainCourses extends React.Component {
         <div
           class="modal fade"
           id="exampleModalCenter"
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="exampleModalCenterTitle"
           aria-hidden="true"

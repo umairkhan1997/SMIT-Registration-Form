@@ -68,11 +68,11 @@ export default class Faculty extends React.Component {
             <div className="facultyContent  ml-5 pt-5 p-3 rounded shadow">
               <Fade right>
                 <p>
-                  I initiated working when I was in 7th standard and never stop.
-                  Today Alhamdullillah I am working as Lead and Manager and
-                  Admin Lead in Saylani Mass IT Training and Saylani Incubation
-                  Center along with Admin Lead of PIAIC along with Lecturer in
-                  Benazir Bhutto Shaheed University.
+                  I have a decade of experience in developing Web and Mobile
+                  apps. Extensive documented track record of building apps using
+                  the Java/J2EE platform, MEAN Stack, HTML5 Hybrid mobile apps
+                  and Android Native apps. I have over 10 years of experience in
+                  teaching software programming and Finance courses
                 </p>
               </Fade>
             </div>

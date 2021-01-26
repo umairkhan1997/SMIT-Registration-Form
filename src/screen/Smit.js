@@ -16,7 +16,7 @@ import Faisalabad from "../images/faisalabad.jpg";
 import Hyderabad from "../images/hyderabad.jpg";
 import TableData from "../components/SMIT/table";
 import SuccessStories from "../components/SMIT/suuccesStories";
-import SMITAwards from "../components/SMIT/awards";
+// import SMITAwards from "../components/SMIT/awards";
 import Workshop from "../components/SMIT/workshop";
 import Vocational from "../components/SMIT/vocationaltraining";
 import Intro from '../components/SMIT/intro'
@@ -103,7 +103,7 @@ export default class Smit extends React.Component {
               className="prevbtn"
               onClick={() => this.setState({ visible: false })}
             >
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
             </button>
           </div>
         </Modal>
@@ -113,15 +113,11 @@ export default class Smit extends React.Component {
         <Intro />
         <SuccessStories />
         <Workshop />
-        <SMITAwards />
         <Faculty />
-        {/* <SmitEvents /> */}
         <Vocational />
         <MainCourses />
-
         <SMITeacher />
         <Collaboration />
-        {/* <SmitContact /> */}
         <Footer />
       </div>
     );

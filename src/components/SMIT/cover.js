@@ -54,9 +54,9 @@ class Cover extends React.Component {
                     name.cityName.toLowerCase().indexOf(city.toLowerCase()) >= 0
                   );
                 })
-                .map((filteredName) => {
+                .map((filteredName, i) => {
                   return filteredName.viewForm ? (
-                    <div className="coverText row">
+                    <div key={i} className="coverText row">
                       <div className="col-md-6">
                         <img
                           src={filteredName.multiple_image[0]}
