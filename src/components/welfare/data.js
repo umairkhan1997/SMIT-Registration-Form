@@ -10,20 +10,28 @@ export default class DataTable extends React.Component {
   render() {
     return (
       <div>
-        <div className="row backgroundLight">
-          <div className="col-md-6 p-5">
-            <div className="py-5 px-4 bg-white shadow rounded my-5">
+        <div className="row">
+          <div
+            style={{
+              backgroundImage:
+                'url("https://samircharitabletrust.org/wp-content/uploads/2014/02/ab.jpg")',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            className="col-md-6 p-5"
+          >
+            {/* <div className="py-5 px-4 bg-white shadow rounded my-5">
               <h2>Introduction</h2>
               <p className="color">Introduction</p>
-            </div>
-            <iframe
+            </div> */}
+            {/* <iframe
               className="video"
               width="100%"
               src="https://www.youtube.com/embed/CDGOjlFXzOo"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-            ></iframe>
+            ></iframe> */}
           </div>
           <div
             style={{ boxShadow: "-10px 0 15px rgba(0,0,0,.3)" }}

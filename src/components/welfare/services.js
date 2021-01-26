@@ -88,12 +88,7 @@ export default class Services extends React.Component {
             {this.state.srvices.map((e, i) => {
               return (
                 <div key={i} className="col-md-3 serviceCardMain">
-                  <div
-                    style={{
-                      color: "#0066b3",
-                    }}
-                    className="p-3 serviceCard text-center m-2"
-                  >
+                  <div className="p-3 serviceCard backgroundLight text-center m-2 color">
                     <div>
                       <p style={{ fontSize: "2.5em" }}>
                         <i class={e.ico}></i>
@@ -101,7 +96,6 @@ export default class Services extends React.Component {
                     </div>
                     <p
                       style={{ fontSize: "1.2em", textTransform: "capitalize" }}
-                      className="fs-1"
                     >
                       {e.name}
                     </p>
