@@ -10,8 +10,8 @@ export default class News extends React.Component {
   }
   render() {
     return <div>
-        <MainHeader />
-        <NewsSection />
+      <MainHeader />
+      <NewsSection />
     </div>;
   }
 }

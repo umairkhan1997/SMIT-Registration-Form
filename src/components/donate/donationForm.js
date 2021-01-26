@@ -4,6 +4,7 @@ import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
 import { withRouter } from "react-router-dom";
+import axios from 'axios';
 
 class DonationForm extends React.Component {
   constructor(props) {
@@ -199,7 +200,7 @@ class DonationForm extends React.Component {
     return true;
   };
 
-  Submit = () => {
+  Submit = async () => {
     let {
       name,
       email,
@@ -237,6 +238,42 @@ class DonationForm extends React.Component {
       this.setState({ chkremarks: true });
       window.scrollTo(0, 900);
     } else {
+
+      const obj = {
+        "Registration":
+        {
+          "Currency": "AED",
+          "ReturnPath": "http://www.saylaniwelfare.com/Saylani/Finalization.php",
+          "TransactionHint": "CPT:Y;VCC:Y;",
+          "OrderlD": "7210055701315195",
+          "Store": "0000",
+          "Terminal": "0000",
+          "Channel": "Web",
+          "Amount": "2.00",
+          "Customer": "Demo Merchant",
+          "OrderName": "Paybill",
+          "UserName": "Demo_fY9c",
+          "Password": "Comtrust@20182018"
+        }
+      }
+      //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
+      let config = {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          // 'Access-Control-Allow-Origin': '*',
+          // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          // 'Access-Control-Allow-Credentials': 'true',
+          // 'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept'
+        }
+      }
+
+      fetch("https://demo-ipg.ctdev.comtrust.ae:2443", { method: "POST", body: obj, config })
+        .then(res => {
+          console.log(res)
+        }).catch((err) => {
+          console.log("err", err)
+        })
       console.log("hello world");
     }
   };
@@ -405,21 +442,21 @@ class DonationForm extends React.Component {
                       />
                     </div>
                   ) : (
-                    <div className="col-md-12 mt-3 mb-3">
-                      <label className="lab text-dark">Quantity</label>
-                      <input
-                        type="number"
-                        className="inp"
-                        placeholder="Number"
-                        min="1"
-                        value={quan}
-                        onChange={(e) => {
-                          this.setFieldVal(e.target.value, "quan");
-                          this.setState({ chkamount: false });
-                        }}
-                      />
-                    </div>
-                  )}
+                      <div className="col-md-12 mt-3 mb-3">
+                        <label className="lab text-dark">Quantity</label>
+                        <input
+                          type="number"
+                          className="inp"
+                          placeholder="Number"
+                          min="1"
+                          value={quan}
+                          onChange={(e) => {
+                            this.setFieldVal(e.target.value, "quan");
+                            this.setState({ chkamount: false });
+                          }}
+                        />
+                      </div>
+                    )}
                   {this.state.chkamount ? (
                     <p className="text-danger">Field is Emply</p>
                   ) : null}

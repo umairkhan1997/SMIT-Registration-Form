@@ -1,11 +1,16 @@
 import React from "react";
 import "./medical.css";
 import Modal from "react-awesome-modal";
+import { connect } from "react-redux";
+import {
+  opdNameGet, opdListGet
 
-export default class MedicalOPD extends React.Component {
+} from "../../Redux/action/medicalAction";
+class MedicalOPD extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      opdName: "General OPD",
       visible: false,
       consultantOPD: {
         generalOPD: [
@@ -272,7 +277,12 @@ export default class MedicalOPD extends React.Component {
       hijama: false,
     };
   }
+  componentDidMount() {
+    this.props.opdNameGet();
+    this.props.opdListGet();
+  }
   render() {
+    console.log(this.state.opdName, 'opdNameGets')
     return (
       <div>
         <div className="container pt-5 pb-5">
@@ -280,229 +290,61 @@ export default class MedicalOPD extends React.Component {
             <h1>Consultant OPD</h1>
           </div>
           <div className="row">
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.generalOPD,
-                  })
-                }
-                className="opdBtn"
-              >
-                General OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.gyanocology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Gynecology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.childSpecialist,
-                  })
-                }
-                className="opdBtn"
-              >
-                Child Specialist OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.eyeCareClinic,
-                  })
-                }
-                className="opdBtn"
-              >
-                Eye Care OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.dental,
-                  })
-                }
-                className="opdBtn"
-              >
-                Dental OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.orthopedic,
-                  })
-                }
-                className="opdBtn"
-              >
-                Orthopedic OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.cancer,
-                  })
-                }
-                className="opdBtn"
-              >
-                Cancer OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.urology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Urology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.diabetic,
-                  })
-                }
-                className="opdBtn"
-              >
-                Diabetic OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.cardiology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Cardiology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.neurology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Neurology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.sonology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Sonology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.psychology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Psychology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.nephrology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Nephrology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.dermatology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Dermatology OPD
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.physiotherapy,
-                  })
-                }
-                className="opdBtn"
-              >
-                Physiotherapy
-              </button>
-            </div>
-            <div className="col-md-3">
-              <button
-                onClick={() =>
-                  this.setState({
-                    currentOPDDetails: this.state.consultantOPD.audiology,
-                  })
-                }
-                className="opdBtn"
-              >
-                Audiology
-              </button>
-            </div>
-          </div>
-          <div className="row border-top my-5 py-4">
-            {this.state.currentOPDDetails.map((e, i) => {
+            {this.props.opdNameGets && this.props.opdNameGets.map((e) => {
               return (
-                <div className="col-md-3" key={i}>
-                  <div
-                    style={{ height: "100%" }}
-                    className="clinicCard shadow p-4"
+                <div className="col-md-3">
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        opdName: e.opdName,
+                      })
+                    }
+                    className="opdBtn"
                   >
-                    <h4>{e.opd}</h4>
-                    <p className="color">{e.doctor}</p>
-                    <p>{e.day}</p>
-                    <p>{e.time}</p>
-                  </div>
+                    {e.opdName}
+                  </button>
                 </div>
-              );
-            })}
+              )
+            })
+            }
           </div>
+
+
+
+          <div className="row border-top my-5 py-4">
+
+            {this.props.opdListGets
+              .filter((name) => {
+                console.log(name, 'nasdhaskdh')
+                return (
+                  name.opdName
+                    .toLowerCase()
+                    .indexOf(this.state.opdName.toLowerCase()) >= 0
+                );
+              }).map((e, i) => {
+                return (
+                  <div className="col-md-3" key={i}>
+                    <div
+                      style={{ height: "100%" }}
+                      className="clinicCard shadow p-4"
+                    >
+                      <h4>{e.desig}</h4>
+                      <p className="color">{e.name}</p>
+                      <p>{e.day}</p>
+                      <p>{e.time}</p>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+
         </div>
+
+
+
+
+
+
         <div className="container text-white pt-5 pb-5">
           <div className="row text-white pt-5 pb-5">
             <div
@@ -609,8 +451,8 @@ export default class MedicalOPD extends React.Component {
               ) : this.state.homeo ? (
                 <h3>Homeopathic Clinic</h3>
               ) : (
-                false
-              )}
+                      false
+                    )}
             </div>
             {this.state.hijama ? (
               <div className="p-4">
@@ -665,3 +507,21 @@ export default class MedicalOPD extends React.Component {
     );
   }
 }
+function mapStateToProp(state) {
+  return {
+    opdNameGets: state.reducerMedical.opdNameGets,
+    opdListGets: state.reducerMedical.opdListGets,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    opdNameGet: () => {
+      dispatch(opdNameGet());
+    },
+    opdListGet: () => {
+      dispatch(opdListGet());
+    }
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(MedicalOPD);
+

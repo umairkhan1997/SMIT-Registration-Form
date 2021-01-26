@@ -42,7 +42,7 @@ class Cover extends React.Component {
   render() {
     const { city, smitNotificationGets } = this.props;
     const { cityDetails } = this.state;
-    console.log(smitNotificationGets, "smitNotificationGets");
+    // console.log(smitNotificationGets, "smitNotificationGets");
     return (
       <div>
         <div style={{ backgroundImage: `url(${cover})` }} className="back">
@@ -78,7 +78,7 @@ class Cover extends React.Component {
                           </h1>
                           <h3 className="my-3">Course: Web & Mobile</h3>
                           <h3 className="my-3">Duration: 6 Months</h3>
-                          <h2 className="my-3">Deadline: 30 Feb 2023</h2>
+                          <h2 className="my-3">Deadline: 16 Dec 2020</h2>
                           <div className="row">
                             <div className="col-md-6">
                               <div>
@@ -111,14 +111,14 @@ class Cover extends React.Component {
                       </div>
                     </div>
                   ) : (
-                    <div className="coverText row ">
-                      <img
-                        width="100%"
-                        alt="Saylani welfare Mass IT Training and Job Creation Programms"
-                        src={smitbackcover}
-                      />
-                    </div>
-                  );
+                      <div className="coverText row ">
+                        <img
+                          width="100%"
+                          alt="Saylani welfare Mass IT Training and Job Creation Programms"
+                          src={smitbackcover}
+                        />
+                      </div>
+                    );
                 })}
             </div>
           </div>

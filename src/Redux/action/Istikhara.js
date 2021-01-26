@@ -1,24 +1,5 @@
 import ActionTypes from "../constant/constant";
 const api = "https://swit-app.herokuapp.com/";
-// const api = "http://localhost:3000/";
-
-// function istikharaAdd() {
-//     return (dispatch) => {
-//         const headers = { "Content-Type": "application/json" };
-//         fetch(`${api}OnlineIsthikhara/OnlineIsthikharaAdd`, { headers })
-//             .then((res) =>
-//                 res.json().then(async (response) => {
-//                     console.log(response, "data");
-//                     // allData=response
-//                     //dispatch({ type: ActionTypes.roPlantBranchGet, payload: response });
-//                 })
-//             )
-//             .catch((err) => {
-//                 console.log(err, "err");
-//             });
-//     };
-// }
-
 const istikharaAdd = (obj) => {
     return async function (dispatch) {
         try {

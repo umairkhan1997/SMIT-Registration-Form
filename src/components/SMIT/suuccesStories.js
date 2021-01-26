@@ -1,7 +1,12 @@
 import React from "react";
 import "./SmitStyle.css";
+import { connect } from "react-redux";
+import {
+  smitSuccessStoriesGet
+} from "../../Redux/action/smitAction";
 
-export default class SuccessStories extends React.Component {
+
+class SuccessStories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,12 +44,13 @@ export default class SuccessStories extends React.Component {
       successStoriesfromData: [],
     };
   }
-  async componentDidMount() {
-    await fetch("https://swit-app.herokuapp.com/smit/smitSuccessStoriesGet")
-      .then((response) => response.json())
-      .then((json) => this.setState({ successStoriesfromData: json.data }));
+
+  componentDidMount() {
+    this.props.smitSuccessStoriesGet();
   }
+
   render() {
+    // console.log(this.props.SmitsucessGets, 'SmitsucessGets')
     return (
       <div>
         <div className="container py-5">
@@ -52,7 +58,7 @@ export default class SuccessStories extends React.Component {
             <h2>Success Stories</h2>
           </div>
           <div className="row">
-            {this.state.successStoriesfromData.map((e, i) => {
+            {this.props.SmitsucessGets && this.props.SmitsucessGets.map((e, i) => {
               return (
                 <div className="col-md-3 py-3">
                   <div className="succesCard text-center">
@@ -80,3 +86,18 @@ export default class SuccessStories extends React.Component {
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    SmitsucessGets: state.reducerSmit.SmitsucessGets,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+
+    smitSuccessStoriesGet: () => {
+      dispatch(smitSuccessStoriesGet());
+    },
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(SuccessStories);

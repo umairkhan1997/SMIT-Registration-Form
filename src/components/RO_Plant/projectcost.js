@@ -51,57 +51,6 @@ class ProjectCost extends React.Component {
                         </tr>
                       )
                     })}
-                    {/* <tr>
-                      <td>Boring</td>
-                      <td>1</td>
-                      <td>150000</td>
-                      <td>2000000</td>
-                    </tr>
-                    <tr>
-                      <td>RO Plant</td>
-                      <td>1</td>
-                      <td>650000</td>
-                      <td>12000000</td>
-                    </tr>
-                    <tr>
-                      <td>Plant Room Construction</td>
-                      <td>1</td>
-                      <td>400000</td>
-                      <td>400000</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Electric + Severage + Grill Work + Water Storage Tank +
-                        Other
-                      </td>
-                      <td>1</td>
-                      <td>200000</td>
-                      <td>200000</td>
-                    </tr>
-                    <tr>
-                      <td>Salary (One Operator Per Month Rs 20000/-)</td>
-                      <td>1</td>
-                      <td>240000 (per Anum)</td>
-                      <td>240000 (per Anum)</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Chemical and Other maintainance costs (Per Month - Rs
-                        18000/-)
-                      </td>
-                      <td>1</td>
-                      <td>180000 (per Anum)</td>
-                      <td>180000 (per Anum)</td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">Total Amount (PKR)</td>
-                      <td style={{ backgroundColor: "rgb(3, 104, 180)" }}>
-                        Rs. 1820000
-                      </td>
-                      <td style={{ backgroundColor: "rgb(3, 104, 180)" }}>
-                        RS. 2420000
-                      </td>
-                    </tr> */}
                   </tbody>{" "}
                 </table>
               </Zoom>

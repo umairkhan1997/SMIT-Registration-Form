@@ -310,11 +310,14 @@ class NewsSection extends React.Component {
                             scale={0.4}
                           >
                             {data.multiple_image.map((each, index) => (
-                              <img
-                                key={index}
-                                style={{ width: "100%" }}
-                                src={each}
-                              />
+                              <>
+                                <img
+                                  key={index}
+                                  style={{ width: "100%" }}
+                                  src={each}
+                                />
+                                <h3 style={{ position: "absolute", width: '100%', bottom: 10, fontWeight: "bold", color: 'white', textAlign: "center" }} >{data.name}</h3>
+                              </>
                             ))}
                           </Zoom>
                         </div>

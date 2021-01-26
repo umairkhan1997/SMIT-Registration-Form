@@ -43,29 +43,29 @@ export default class Cost extends React.Component {
                   </tr>
                   <tr>
                     <td>No Of People</td>
-                    <td>1200</td>
-                    <td>36000</td>
-                    <td>438000</td>
+                    <td>1,200</td>
+                    <td>36,000</td>
+                    <td>438,000</td>
                   </tr>
                   <tr>
                     <td>Meal 1 for Lunch</td>
-                    <td>PKR 30000 (50x600)</td>
-                    <td>PKR 900000 (50x18000)</td>
-                    <td>PKR 10800000 (50x216000)</td>
+                    <td>PKR 30, solemnly000 (50x600)</td>
+                    <td>PKR 900,000 (50x18000)</td>
+                    <td>PKR 10,800,000 (50x216000)</td>
                   </tr>
                   <tr>
                     <td>Meal 2 for Dinner</td>
-                    <td>PKR 30000 (50x600)</td>
-                    <td>PKR 900000 (50x18000)</td>
-                    <td>PKR 10800000 (50x216000)</td>
+                    <td>PKR 30,000 (50x600)</td>
+                    <td>PKR 900,000 (50x18000)</td>
+                    <td>PKR 10,800,000 (50x216000)</td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr>
                     <td>Total</td>
-                    <td>PKR 60000</td>
-                    <td>PKR 1800000</td>
-                    <td>PKR 21600000</td>
+                    <td>PKR 60,000</td>
+                    <td>PKR 1,800,000</td>
+                    <td>PKR 21,600,000</td>
                   </tr>
                 </tfoot>
               </table>
