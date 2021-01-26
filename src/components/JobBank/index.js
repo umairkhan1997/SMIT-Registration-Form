@@ -31,33 +31,6 @@ class JobBank extends React.Component {
     console.log(this.props);
     return (
       <div>
-        {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div
-          style={{
-            backgroundImage:
-              "url('https://miro.medium.com/max/4356/1*nlQxJsWScn0G_mkK86vxXg.png')",
-            backgroundSize: "cover",
-          }}
-          className="py-5"
-        >
-          <div className="container my-5 py-5 d-flex justify-content-end">
-            <div className="mainCoverCard text-dark p-5">
-              <p style={{ fontSize: "3.5em" }}>
-                <i className="fab fa-wpforms"></i>
-              </p>
-              <p style={{ fontSize: "2em" }}>
-                Are you a Job Seeker? or Recruiter?
-              </p>
-              <button
-                className="btn btn-outline-dark rounded-pill px-5"
-                onClick={this.jobFormPg}
-              >
-                Apply
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Intro =============>>>>>>>>*/}
 
         <div className="container py-5 my-5">
@@ -81,7 +54,10 @@ class JobBank extends React.Component {
         </div>
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div style={{ backgroundColor: "#dce9f7" }} className="py-5 shadow">
+        <div
+          style={{ backgroundColor: "#dce9f7" }}
+          className="py-5 shadow my-5"
+        >
           <div className="container">
             <div className="row">
               {this.props.JobBankHuntGets &&
@@ -98,6 +74,32 @@ class JobBank extends React.Component {
                     </div>
                   );
                 })}
+            </div>
+          </div>
+        </div>
+        {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
+        <div
+          style={{
+            backgroundImage:
+              "url('https://miro.medium.com/max/4356/1*nlQxJsWScn0G_mkK86vxXg.png')",
+            backgroundSize: "cover",
+          }}
+          className="py-5 my-5"
+        >
+          <div className="container my-5 py-5 d-flex justify-content-end">
+            <div className="mainCoverCard text-dark p-5">
+              <p style={{ fontSize: "3.5em" }}>
+                <i className="fab fa-wpforms"></i>
+              </p>
+              <p style={{ fontSize: "2em" }}>
+                Are you a Job Seeker? or Recruiter?
+              </p>
+              <button
+                className="btn btn-outline-dark rounded-pill px-5"
+                onClick={this.jobFormPg}
+              >
+                Apply
+              </button>
             </div>
           </div>
         </div>

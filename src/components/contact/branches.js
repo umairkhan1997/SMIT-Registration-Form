@@ -426,7 +426,7 @@ export default class Branches extends React.Component {
                     >
                       <p className="location">{e.branchName}</p>
                       <p className="text-muted">
-                        <i class="fas fa-map-marker-alt"></i> A-25,
+                        <i class="fas fa-map-marker-alt"></i>
                         {e.address}
                       </p>
                       <p>
