@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "675e4f0b76b08f568f5bd2fda77d1864",
+    "revision": "690345c02528b47648a1c678386c1c77",
     "url": "/index.html"
   },
   {
-    "revision": "f412706f6723d4a89416",
+    "revision": "a501034d12ee04d79d13",
     "url": "/static/css/2.14e6b765.chunk.css"
   },
   {
-    "revision": "c2734d4fe41b396340f3",
-    "url": "/static/css/main.72afcaf8.chunk.css"
+    "revision": "25b1d4bad0aeaf995d34",
+    "url": "/static/css/main.f5e49b7c.chunk.css"
   },
   {
-    "revision": "f412706f6723d4a89416",
-    "url": "/static/js/2.5305875e.chunk.js"
+    "revision": "a501034d12ee04d79d13",
+    "url": "/static/js/2.7f2c621f.chunk.js"
   },
   {
     "revision": "03b80fa8fe4a53d7fcc3e612b3bdb43b",
-    "url": "/static/js/2.5305875e.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7f2c621f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c2734d4fe41b396340f3",
-    "url": "/static/js/main.ef24fa89.chunk.js"
+    "revision": "25b1d4bad0aeaf995d34",
+    "url": "/static/js/main.8bdc8dbf.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -92,14 +92,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cima.2de0a961.jpeg"
   },
   {
-    "revision": "aa14c26dd236c1a7647954f3e41c7d4f",
-    "url": "/static/media/ciscoLogo.aa14c26d.png"
-  },
-  {
-    "revision": "cbeb694585f0f11e21bd13ef8fe46fcd",
-    "url": "/static/media/cityandguild.cbeb6945.png"
-  },
-  {
     "revision": "1e269cf74e2ae0a39e81add5a785f68d",
     "url": "/static/media/course1.1e269cf7.jpg"
   },
@@ -148,10 +140,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/incu2.749fac44.jpg"
   },
   {
-    "revision": "ea58db454811201dd05aab6a0f13397e",
-    "url": "/static/media/intel.ea58db45.png"
-  },
-  {
     "revision": "88c3e8604c926077788e4ff548be95fe",
     "url": "/static/media/islamabad.88c3e860.jpg"
   },
@@ -172,10 +160,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/jobrecru.07d8e735.jpg"
   },
   {
-    "revision": "750fe1b59f008c2e543a98e9737d5c7f",
-    "url": "/static/media/kamiyabJawab.750fe1b5.jpeg"
-  },
-  {
     "revision": "29b2e1a0c60e8c377acd9f932413b37d",
     "url": "/static/media/karachi.29b2e1a0.jpg"
   },
@@ -192,10 +176,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/mobileDastarkhwan.989fd0b4.jpg"
   },
   {
-    "revision": "660d769b0e65bee19712c415b17f0cf7",
-    "url": "/static/media/piaic.660d769b.png"
-  },
-  {
     "revision": "91d702bf490a036c708cf7ef87fd5290",
     "url": "/static/media/president.91d702bf.jpeg"
   },
@@ -204,16 +184,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/rotibank.35ae5332.jpg"
   },
   {
-    "revision": "c624311372fa533a40d949123b711897",
-    "url": "/static/media/sdc.c6243113.png"
-  },
-  {
     "revision": "c9b35c6704657532ffc02fc9b60a3f2b",
     "url": "/static/media/search.c9b35c67.png"
-  },
-  {
-    "revision": "1d60d937c8e6b4bd9f15449adad26b65",
-    "url": "/static/media/sindboard.1d60d937.png"
   },
   {
     "revision": "764acc9e321d35dcaa96a6bee60eba73",

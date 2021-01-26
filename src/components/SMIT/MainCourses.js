@@ -3,9 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
 import { connect } from "react-redux";
-import {
-  smitCoursesGet
-} from "../../Redux/action/smitAction";
+import { smitCoursesGet } from "../../Redux/action/smitAction";
 class MainCourses extends React.Component {
   constructor(props) {
     super(props);
@@ -580,34 +578,38 @@ class MainCourses extends React.Component {
 
   render() {
     const { cityDetails } = this.state;
-    console.log(this.props.smitCoursesGets, 'smitCoursesGets');
-    console.log(this.state.currentCourse, 'this.state.currentCourse')
+    console.log(this.props.smitCoursesGets, "smitCoursesGets");
+    console.log(this.state.currentCourse, "this.state.currentCourse");
     return (
       <div>
         <div className="container pt-5 pb-5 ">
-          <h2 className="p-3" style={{ color: "#1371b8" }}>
+          <h1 className="py-3 color">
             Discover Courses Developed by Saylani Mass IT
-          </h2>
+          </h1>
         </div>
         <div className="container pb-5 ">
           <div className="row">
-            {this.props.smitCoursesGets && this.props.smitCoursesGets.map((e, i) => {
-              return (
-                <div key={i} className="col-md-4 text-center p-4">
-                  <div
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
-                    className="courseimg p-5"
-                    onClick={() => { this.setState({ currentCourse: e }); console.log(e) }}
-                  >
-                    {/* <img src={img5} width="100%" /> */}
-                    <img width="100px" src={e.courImgUrl} />
-                    <h3>{e.courName}</h3>
-                    <p className="text-muted">{e.courDuration}</p>
+            {this.props.smitCoursesGets &&
+              this.props.smitCoursesGets.map((e, i) => {
+                return (
+                  <div key={i} className="col-md-4 text-center p-4">
+                    <div
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      className="courseimg p-5"
+                      onClick={() => {
+                        this.setState({ currentCourse: e });
+                        console.log(e);
+                      }}
+                    >
+                      {/* <img src={img5} width="100%" /> */}
+                      <img width="100px" src={e.courImgUrl} />
+                      <h3>{e.courName}</h3>
+                      <p className="text-muted">{e.courDuration}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
           <hr />
         </div>
@@ -640,28 +642,30 @@ class MainCourses extends React.Component {
               <div class="modal-body">
                 <h4 style={{ color: "#0267b4" }}>Duration</h4>
                 <p className="text-muted">
-                  {this.state.currentCourse.courDuration && this.state.currentCourse.courDuration}
+                  {this.state.currentCourse.courDuration &&
+                    this.state.currentCourse.courDuration}
                 </p>
                 <hr />
                 <h4 style={{ color: "#0267b4" }}>Course Outline</h4>
                 <ul>
-                  {this.state.currentCourse.courTopic && this.state.currentCourse.courTopic.map((e, i) => {
-                    return (
-                      <li className="text-muted" key={i}>
-                        {e.name}
-                        {e.nameDetails &&
-                          e.nameDetails.map((e, i) => {
-                            return (
-                              <ul>
-                                <li className="text-muted" key={i}>
-                                  {e}
-                                </li>
-                              </ul>
-                            );
-                          })}
-                      </li>
-                    );
-                  })}
+                  {this.state.currentCourse.courTopic &&
+                    this.state.currentCourse.courTopic.map((e, i) => {
+                      return (
+                        <li className="text-muted" key={i}>
+                          {e.name}
+                          {e.nameDetails &&
+                            e.nameDetails.map((e, i) => {
+                              return (
+                                <ul>
+                                  <li className="text-muted" key={i}>
+                                    {e}
+                                  </li>
+                                </ul>
+                              );
+                            })}
+                        </li>
+                      );
+                    })}
                   <hr />
                   {/* {this.state.currentCourse.moreOutline ? (
                                         <h6>{this.state.currentCourse.moreOutline.name1}</h6>
@@ -723,7 +727,6 @@ class MainCourses extends React.Component {
   }
 }
 
-
 function mapStateToProp(state) {
   return {
     smitCoursesGets: state.reducerSmit.smitCoursesGets,
@@ -737,4 +740,3 @@ function mapDispatchToProp(dispatch) {
   };
 }
 export default connect(mapStateToProp, mapDispatchToProp)(MainCourses);
-
