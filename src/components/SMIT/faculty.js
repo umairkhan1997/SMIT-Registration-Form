@@ -1,8 +1,5 @@
 import React from "react";
 import "./SmitStyle.css";
-// import zeeshan from "../../images/zeeshan.png";
-import ziakhan from "../../images/ziaKhan.png";
-import alimughal from "../../images/aliMughal.png";
 import Fade from "react-reveal/Fade";
 export default class Faculty extends React.Component {
   constructor(props) {
@@ -23,7 +20,7 @@ export default class Faculty extends React.Component {
               <Fade left>
                 <img
                   className="facultyImg "
-                  src={ziakhan}
+                  src='https://res.cloudinary.com/di3ippvmb/image/upload/v1611386416/ziaKhan_wd3thj.png'
                   alt="Zia Khan"
                   title="Zia Khan"
                 />
@@ -56,14 +53,14 @@ export default class Faculty extends React.Component {
               <Fade left>
                 <img
                   className="facultyImg"
-                  src={alimughal}
-                  alt="Muhammad Ali Mughal"
-                  title="Muhammad Ali Mughal"
+                  src='https://res.cloudinary.com/di3ippvmb/image/upload/v1611386394/67443203_2383834045036882_4906259752037646336_n_mdrerp.jpg'
+                  alt="Muhammad Zunaib Afzal"
+                  title="Muhammad Zunaib Afzal"
                 />
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2 style={{ color: "#0066b3" }}>Muhammad Ali Mughal</h2>
+                  <h2 style={{ color: "#0066b3" }}>Muhammad Zunaib Afzal</h2>
                   <p className="text-muted">(Manager SMIT)</p>
                 </div>
               </Fade>

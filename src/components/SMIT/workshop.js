@@ -223,7 +223,7 @@ class Workshop extends React.Component {
     this.props.smitWorkshopGet();
   }
   render() {
-    console.log(this.props.smitWorkshopGets)
+    // console.log(this.props.smitWorkshopGets)
     return (
       <div className="py-5 my-5 backgroundLight">
         <div className="container my-5">

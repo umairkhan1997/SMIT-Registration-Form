@@ -6,12 +6,21 @@ import Campus from "../components/schools/campus";
 import Footer from "../components/Footer";
 import Feature from "../components/schools/feature";
 import Curriculum from "../components/schools/curriculum";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { schoolCountGet } from "../Redux/action/schoolGreen";
 
-export default class Education extends React.Component {
+class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
+  componentDidMount() {
+    this.props.schoolCountGet();
+  }
+
+
+
   render() {
     return (
       <div>
@@ -24,23 +33,14 @@ export default class Education extends React.Component {
                   <tr>
                     <td colspan="2">Quality Education For All</td>
                   </tr>
-                  <tr>
-                    <td>Total Students</td>
-                    <td>1200+</td>
-                  </tr>
-
-                  <tr>
-                    <td>Total Campuses</td>
-                    <td>04 Campuses</td>
-                  </tr>
-                  <tr>
-                    <td>Total Faculty</td>
-                    <td>75+</td>
-                  </tr>
-                  <tr>
-                    <td>Total Pass Out</td>
-                    <td>2000+</td>
-                  </tr>
+                  {this.props.schoolCountGets && this.props.schoolCountGets.map((e, i) => {
+                    return (
+                      <tr>
+                        <td>{e.typeName}</td>
+                        <td>{e.typeNumber}</td>
+                      </tr>
+                    );
+                  })}
                 </table>
               </div>
               <div className="col-md-6 p-2">
@@ -67,3 +67,17 @@ export default class Education extends React.Component {
     );
   }
 }
+
+function mapStateToProp(state) {
+  return {
+    schoolCountGets: state.reducerSchoolGreen.schoolCountGets,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    schoolCountGet: () => {
+      dispatch(schoolCountGet());
+    },
+  };
+}
+export default withRouter(connect(mapStateToProp, mapDispatchToProp)(Education));

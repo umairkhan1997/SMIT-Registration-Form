@@ -42,7 +42,7 @@ class Cover extends React.Component {
   render() {
     const { city, smitNotificationGets } = this.props;
     const { cityDetails } = this.state;
-    console.log(smitNotificationGets, "smitNotificationGets");
+    // console.log(smitNotificationGets, "smitNotificationGets");
     return (
       <div>
         <div style={{ backgroundImage: `url(${cover})` }} className="back">
@@ -111,14 +111,14 @@ class Cover extends React.Component {
                       </div>
                     </div>
                   ) : (
-                    <div className="coverText row ">
-                      <img
-                        width="100%"
-                        alt="Saylani welfare Mass IT Training and Job Creation Programms"
-                        src={smitbackcover}
-                      />
-                    </div>
-                  );
+                      <div className="coverText row ">
+                        <img
+                          width="100%"
+                          alt="Saylani welfare Mass IT Training and Job Creation Programms"
+                          src={smitbackcover}
+                        />
+                      </div>
+                    );
                 })}
             </div>
           </div>

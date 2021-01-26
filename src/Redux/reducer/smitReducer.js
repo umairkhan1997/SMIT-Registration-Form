@@ -5,7 +5,9 @@ const initial_state = {
     smitFacultyCourseGets: [],
     SmitCollaborationGets: [],
     smitWorkshopGet: [],
-    SmitCounGets: []
+    SmitCounGets: [],
+    SmitsucessGets: [],
+    smitCoursesGets: []
 
 };
 
@@ -29,6 +31,14 @@ const reducerSmit = (state = initial_state, action) => {
         case ActionTypes.SmitCounGet: {
             return { ...state, SmitCounGets: action.payload.data };
         }
+
+        case ActionTypes.SmitsucessGet: {
+            return { ...state, SmitsucessGets: action.payload.data };
+        }
+        case ActionTypes.smitCoursesGet: {
+            return { ...state, smitCoursesGets: action.payload.data };
+        }
+
         default: {
             return state;
         }

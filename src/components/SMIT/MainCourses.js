@@ -2,9 +2,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "./SmitStyle.css";
-// import img4 from "../../images/course.jpg";
-// import img5 from "../../images/course1.jpeg";
-export default class MainCourses extends React.Component {
+import { connect } from "react-redux";
+import {
+  smitCoursesGet
+} from "../../Redux/action/smitAction";
+class MainCourses extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -572,9 +574,14 @@ export default class MainCourses extends React.Component {
       },
     };
   }
+  componentDidMount() {
+    this.props.smitCoursesGet();
+  }
+
   render() {
     const { cityDetails } = this.state;
-    // console.log(cityDetails.karachi.course.length);
+    console.log(this.props.smitCoursesGets, 'smitCoursesGets');
+    console.log(this.state.currentCourse, 'this.state.currentCourse')
     return (
       <div>
         <div className="container pt-5 pb-5 ">
@@ -584,19 +591,19 @@ export default class MainCourses extends React.Component {
         </div>
         <div className="container pb-5 ">
           <div className="row">
-            {cityDetails.karachi.course.map((e, i) => {
+            {this.props.smitCoursesGets && this.props.smitCoursesGets.map((e, i) => {
               return (
                 <div className="col-md-4 text-center p-4">
                   <div
                     data-toggle="modal"
                     data-target="#exampleModalCenter"
                     className="courseimg p-5"
-                    onClick={() => this.setState({ currentCourse: e })}
+                    onClick={() => { this.setState({ currentCourse: e }); console.log(e) }}
                   >
                     {/* <img src={img5} width="100%" /> */}
-                    <img width="100px" src={e.ico} />
-                    <h3>{e.name}</h3>
-                    <p className="text-muted">{e.duration}</p>
+                    <img width="100px" src={e.courImgUrl} />
+                    <h3>{e.courName}</h3>
+                    <p className="text-muted">{e.courDuration}</p>
                   </div>
                 </div>
               );
@@ -619,7 +626,7 @@ export default class MainCourses extends React.Component {
                 class="modal-header"
               >
                 <h5 class="modal-title" id="exampleModalLongTitle">
-                  {this.state.currentCourse.detailName}
+                  {this.state.currentCourse.courName}
                 </h5>
                 <button
                   type="button"
@@ -633,12 +640,12 @@ export default class MainCourses extends React.Component {
               <div class="modal-body">
                 <h4 style={{ color: "#0267b4" }}>Duration</h4>
                 <p className="text-muted">
-                  {this.state.currentCourse.duration}
+                  {this.state.currentCourse.courDuration && this.state.currentCourse.courDuration}
                 </p>
                 <hr />
                 <h4 style={{ color: "#0267b4" }}>Course Outline</h4>
                 <ul>
-                  {this.state.currentCourse.outline.map((e, i) => {
+                  {this.state.currentCourse.courTopic && this.state.currentCourse.courTopic.map((e, i) => {
                     return (
                       <li className="text-muted" key={i}>
                         {e.name}
@@ -715,3 +722,19 @@ export default class MainCourses extends React.Component {
     );
   }
 }
+
+
+function mapStateToProp(state) {
+  return {
+    smitCoursesGets: state.reducerSmit.smitCoursesGets,
+  };
+}
+function mapDispatchToProp(dispatch) {
+  return {
+    smitCoursesGet: () => {
+      dispatch(smitCoursesGet());
+    },
+  };
+}
+export default connect(mapStateToProp, mapDispatchToProp)(MainCourses);
+

@@ -22,7 +22,18 @@ const ActionTypes = {
   smitFacultyCourseGet: 'smitFacultyCourseGet',
   SmitCollaborationGet: "SmitCollaborationGet",
   smitWorkshopGet: "smitWorkshopGet",
-  SmitCounGet: "SmitCounGet"
+  SmitCounGet: "SmitCounGet",
+  patientTreatedGet: "patientTreatedGet",
+  SmitsucessGet: "SmitsucessGet",
+  smitCoursesGet: 'smitCoursesGet',
+  schoolCampusGet: 'schoolCampusGet',
+  schoolCountGet: 'schoolCountGet',
+  schoolTeacherGet: 'schoolTeacherGet',
+  schoolFeatureGet: 'schoolFeatureGet',
+  medicalServiceAdd: 'medicalServiceAdd',
+  benificiariesCountGet: 'benificiariesCountGet',
+  opdNameGet: "opdNameGet",
+  opdListGet: "opdListGet"
 };
 
 export default ActionTypes;
