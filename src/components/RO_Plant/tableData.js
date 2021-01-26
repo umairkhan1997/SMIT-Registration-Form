@@ -17,7 +17,7 @@ class TableData extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <table className="showtable">
-              <td colspan="2">Saylani Saaf Sutra Pani</td>
+              <td colspan="2">Saylani Saaf Pani</td>
               {this.props.roPlantBranchGets &&
                 this.props.roPlantBranchGets.map((data) => {
                   return (
