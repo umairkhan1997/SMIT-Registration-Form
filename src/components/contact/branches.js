@@ -411,7 +411,7 @@ export default class Branches extends React.Component {
             </div>
           </div>
           <div
-            style={{ height: "70vh", overflow: "scroll", overflowX: "hidden" }}
+            style={{ height: "63vh", overflow: "scroll", overflowX: "hidden" }}
             className="container py-4"
           >
             <div className="row">

@@ -81,3 +81,28 @@
 .donorLink i {
   margin: 10px;
 }
+
+.categorybtn {
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.categorybtn:hover {
+  background-color: white;
+  color: #0066b3;
+  box-shadow: 0 0 10px rgba(0, 102, 179, 0.5);
+}
+.donationCategory {
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  margin: 5px 0;
+}
+.donationCategory:hover .categorybtn {
+  color: white;
+  background-color: #0066b3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

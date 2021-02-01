@@ -13,8 +13,23 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.nav-item:hover a {
-  color: #028de5 !important;
+.nav-item .nav-link {
+  border: 2px solid transparent;
+}
+.nav-item .nav-link {
+  border-radius: 5px;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+.nav-item:hover .nav-link {
+  /* background-color: ; */
+  /* border: 2px solid #0066b3; */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+.activeLink {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  color: #0066b3 !important;
+  background-color: rgba(2, 103, 179, 0.1);
 }
 .social a {
   text-decoration: none;
@@ -22,16 +37,7 @@
   font-size: 1.2em;
   padding: 5px;
 }
-.round-icon {
-  width: 50px;
-  height: 50px;
-  background-color: #d43c18;
-  color: white;
-  font-size: 1.5em;
-  padding: 8px;
-  border-radius: 25px;
-  margin: auto;
-}
+
 .read {
   border: none;
   background-color: lightgrey;
@@ -276,4 +282,105 @@
 }
 .numberHeading {
   font-family: "Bebas Neue";
+}
+.admitCardPaper {
+  width: 810px;
+  height: 727px;
+  background-color: white;
+  margin: 10px auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#divIdToPrint {
+  width: 810px;
+  background-color: white;
+  margin: 10px auto;
+  text-align: center;
+  position: relative;
+}
+.inrollmentCard {
+  background-color: white;
+  text-align: center;
+  position: relative;
+}
+.admit {
+  border: 1px solid #1371b8;
+  padding: 10px;
+  margin: 20px;
+  width: 220px;
+  height: 312px;
+  vertical-align: top;
+  position: relative;
+}
+.cardHeader {
+  position: relative;
+}
+.seperate {
+  padding: 2px;
+  background-color: #1371b8;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 10px 0;
+  position: relative;
+}
+.profileImg {
+  padding: 10px 0;
+  position: relative;
+}
+.profileImage {
+  border-radius: 10px;
+  /* border: 2px solid #1371b8; */
+  /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4); */
+  position: relative;
+}
+.name {
+  font-size: 1.4em;
+  position: relative;
+  padding: 6px 0;
+  margin: 0;
+}
+.course {
+  background-color: #1371b8;
+  color: white;
+  padding: 6px;
+  margin: 0;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  font-size: 0.9em;
+}
+.rollNumber {
+  margin: 0 auto -4px auto;
+  background-color: #fff;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 8px 8px 0 0;
+  color: #1371b8;
+  /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); */
+  font-weight: bold;
+  font-size: 0.9em;
+  position: relative;
+  border: 2px solid #1371b8;
+}
+.cardTable {
+  font-size: 0.8em;
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  border-collapse: collapse;
+  position: relative;
+}
+.cardTable td {
+  padding: 3px 5px;
+}
+.cardTable tr {
+  /* border-bottom: 1px solid lightgrey; */
+}
+.authorSign {
+  width: 200px;
+}
+.authorSign p {
+  border-top: 2px solid black;
+  margin-top: 100px;
 }

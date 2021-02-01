@@ -13,6 +13,7 @@ class ImgSlider extends React.Component {
     return (
       <div className="slide-container">
         <Zoom
+          duration={2000}
           indicators
           prevArrow={
             <button className="slideBtn prevSlide">

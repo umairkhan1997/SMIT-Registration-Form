@@ -1,11 +1,4 @@
-.nav-item {
-  font-weight: bold;
-  border-bottom: 2px solid white;
-}
-.nav-item:hover {
-  /* background-color: ; */
-  border-bottom: 2px solid #0c4c9d;
-}
+
 .formInp {
   padding: 10px;
   margin: 10px 0;
