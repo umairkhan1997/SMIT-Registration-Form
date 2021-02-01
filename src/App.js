@@ -4,6 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import "./App.css";
 import MyRoute from "./route";
 import { Provider } from "react-redux";
+import 'semantic-ui-css/semantic.min.css'
 // import { PersistGate } from "redux-persist/lib/integration/react";
 import store from "./Redux/store";
 

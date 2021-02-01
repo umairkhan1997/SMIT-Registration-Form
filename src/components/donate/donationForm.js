@@ -3,9 +3,8 @@ import "./donate.css";
 import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import axios from 'axios';
-
 class DonationForm extends React.Component {
   constructor(props) {
     super(props);
@@ -256,24 +255,72 @@ class DonationForm extends React.Component {
           "Password": "Comtrust@20182018"
         }
       }
-      //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
-      let config = {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          // 'Access-Control-Allow-Origin': '*',
-          // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-          // 'Access-Control-Allow-Credentials': 'true',
-          // 'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept'
-        }
-      }
+      // //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
+      // let config = {
+      //   headers: {
+      //     'Accept': 'application/json',
+      //     'Content-Type': 'application/json',
+      //     'Access-Control-Allow-Origin': '*',
+      //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      //     'Access-Control-Allow-Credentials': 'true',
+      //     'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept'
+      //   }
+      // }
 
-      fetch("https://demo-ipg.ctdev.comtrust.ae:2443", { method: "POST", body: obj, config })
-        .then(res => {
-          console.log(res)
-        }).catch((err) => {
-          console.log("err", err)
-        })
+      // fetch("https://demo-ipg.ctdev.comtrust.ae:2443", { method: "POST", body: obj, config:config.headers })
+      // // .then(response => response.json())
+      //   .then(res => {
+      //     console.log(res)
+      //   }).catch((err) => {
+      //     console.log("err", err)
+      //   })
+      const options = {
+        method: 'POST',
+        headers: { 'Accept': 'application/json',
+            'Content-Type': 'application/json', },
+        data: obj,
+        url:'https://demo-ipg.ctdev.comtrust.ae:2443',
+      };
+      axios(options)
+      .then((res)=>{
+
+      console.log(res.data.Transaction.TransactionID)
+      console.log(res.data.Transaction.UniqueID)
+      console.log(res.data.Transaction.PaymentPage)
+      if(res.data.Transaction.PaymentPage)
+      {
+        // res.redirect(res.data.Transaction.PaymentPage);
+        axios.Redirect(res.data.Transaction.PaymentPage)
+
+      }
+  //     const objs = {
+  //       "Finalization": {
+  //       "TransactionID": res.data.Transaction.TransactionID,
+  //       "Customer": "Demo Merchant",
+  //       "UserName":"Demo_fY9c",
+  //       "Password":"Comtrust@20182018"
+  //       }
+  //       }
+  //     const optionss = {
+  //       method: 'POST',
+  //       headers: { 'Accept': 'application/json',
+  //           'Content-Type': 'application/json', },
+  //       data: objs,
+  //       url:res.data.Transaction.PaymentPage,
+  //     };
+  //  axios(optionss)
+  //  .then(res=>{
+  //   console.log(res,'res')
+  //  })
+  //  .catch(err=>{
+  //   console.log(err,'2')
+  //  })
+      
+      })
+      .catch(err=>{
+        console.log(err)
+      })
+
       console.log("hello world");
     }
   };

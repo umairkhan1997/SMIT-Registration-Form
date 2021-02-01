@@ -48,44 +48,56 @@ class Cover extends React.Component {
         <div style={{ backgroundImage: `url(${cover})` }} className="back">
           <div>
             <div>
-              {smitNotificationGets
-                .filter((name) => {
-                  return (
-                    name.cityName.toLowerCase().indexOf(city.toLowerCase()) >= 0
-                  );
-                })
-                .map((filteredName, i) => {
-                  return filteredName.viewForm ? (
-                    <div key={i} className="coverText row">
+              <div className="coverText row">
+                {smitNotificationGets
+                  .filter((name) => {
+                    return (
+                      name.cityName.toLowerCase().indexOf(city.toLowerCase()) >= 0
+                    );
+                  })
+                  .slice(0, 1).map((filteredName, i) => {
+                    return filteredName.viewForm ? (
                       <div className="col-md-6">
                         <img
                           src={filteredName.multiple_image[0]}
                           width="100%"
                         />
                       </div>
-                      <div className="col-md-6 p-5">
+                    ) : (
+                        null
+                      )
+                  })}
+                <div className="col-md-6 my-2">
+                  {smitNotificationGets
+                    .filter((name) => {
+                      return (
+                        name.cityName.toLowerCase().indexOf(city.toLowerCase()) >= 0
+                      );
+                    })
+                    .map((filteredName, i) => {
+                      return filteredName.viewForm ? (
+
                         <div
                           style={{
                             backgroundColor: "rgba(0,0,0,.5)",
-                            height: "100%",
                             boxShadow: "0 8px 12px rgba(0,0,0,.3)",
                             borderRadius: "8px",
                           }}
-                          className="p-5 d-flex justify-content-center flex-column"
+                          className="py-4 my-3"
                         >
-                          <h1 className="my-5 border-bottom">
+                          <h2 className=" border-bottom px-4">
                             {filteredName.cityName}
-                          </h1>
-                          <h3 className="my-3">Course: Web & Mobile</h3>
-                          <h3 className="my-3">Duration: 6 Months</h3>
-                          <h2 className="my-3">Deadline: 16 Dec 2020</h2>
+                          </h2>
+                          <h5 className="my-3 px-4">Course : {filteredName.courseName + " " + filteredName.batchName}</h5>
+                          <h5 className="my-3 px-4">Duration: 6 Months</h5>
+                          <h5 className="my-3 px-4">Admission last date : 16 Dec 2020</h5>
                           <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-md-6 mx-auto">
                               <div>
                                 <button
                                   onClick={() => {
                                     this.props.history.push("/apply", {
-                                      filteredName,
+                                      filteredName
                                     });
                                   }}
                                   className="btn btn-outline-light rounded-pill px-5 my-3 btn-block"
@@ -94,7 +106,7 @@ class Cover extends React.Component {
                                 </button>
                               </div>
                             </div>
-                            <div className="col-md-6">
+                            {/* <div className="col-md-6">
                               <p className="my-3">
                                 <a
                                   className="btn btn-outline-light rounded-pill px-5 btn-block"
@@ -105,21 +117,23 @@ class Cover extends React.Component {
                                   <i class="fas fa-arrow-right"></i>
                                 </a>
                               </p>
-                            </div>
+                            </div> */}
                           </div>
+
                         </div>
-                      </div>
-                    </div>
-                  ) : (
-                      <div className="coverText row ">
-                        <img
-                          width="100%"
-                          alt="Saylani welfare Mass IT Training and Job Creation Programms"
-                          src={smitbackcover}
-                        />
-                      </div>
-                    );
-                })}
+                      ) : (
+                          <div className="coverText ">
+                            <img
+                              width="205%"
+                              alt="Saylani welfare Mass IT Training and Job Creation Programms"
+                              className="coverImage"
+                              src={smitbackcover}
+                            />
+                          </div>
+                        );
+                    })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
