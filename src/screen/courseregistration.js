@@ -373,16 +373,19 @@
 // }
 // export default withRouter(connect(mapStateToProp, mapDispatchToProp)(CourseRegistration));
 
-import React from "react";
+import React, { useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import "./course.css";
 import MainHeader from "../components/Home/MainHeader";
+import Footer from "../components/Footer";
 import axios from "axios";
 import { connect } from "react-redux";
 import { stdData } from "../Redux/action/smitAction";
 import { withRouter } from "react-router-dom";
+import AdmitCard from "./admitCard";
+let imgOne = "https://dmhqppb4umb6.cloudfront.net/saylani-logo.png";
 
 class CourseRegistration extends React.Component {
   constructor(props) {
@@ -411,6 +414,9 @@ class CourseRegistration extends React.Component {
       profileImg: "",
       chkprofileImg: false,
       chklastQualification: false,
+      cond: false,
+      stdData: "",
+      loading: false,
     };
   }
 
@@ -437,6 +443,22 @@ class CourseRegistration extends React.Component {
     return true;
   };
 
+  toAdminCard = (e, a, b, c) => {
+    console.log(a, "aaaaaaaaaaaa");
+    this.props.stdData(e, a, b, c);
+    this.props.history.push("/admitcard");
+  };
+
+  checkNumber = (e, reference) => {
+    let b = e.target.value;
+    let phoneno = /^[0-9-+]+$/;
+    if (b.match(phoneno)) {
+      return true;
+    } else {
+      alert("Please Enter Number Not Characer or any of these(. @ , - _)");
+      return false;
+    }
+  };
   onFileChange(e) {
     console.log(e.target.file);
     this.setState({ profileImg: e.target.files });
@@ -444,6 +466,7 @@ class CourseRegistration extends React.Component {
 
   Submit = () => {
     const { filteredName } = this.props.location.state;
+    console.log(filteredName, "filteredName");
     let {
       fullName,
       gender,
@@ -491,7 +514,7 @@ class CourseRegistration extends React.Component {
       this.setState({ chkprofileImg: true });
       window.scrollTo(0, 700);
     } else {
-      console.log("hello world");
+      console.log("hello world", filteredName);
       var formData = new FormData();
       for (const key of Object.keys(this.state.profileImg)) {
         formData.append("imgCollection", this.state.profileImg[key]);
@@ -516,6 +539,7 @@ class CourseRegistration extends React.Component {
           {}
         )
         .then((res) => {
+          window.scrollTo(0, 100);
           this.setState({
             fullName: "",
             gender: "",
@@ -527,16 +551,24 @@ class CourseRegistration extends React.Component {
             dob: "",
             address: "",
             lastQualification: "",
-            profileImg: "",
           });
+          this.toAdminCard(
+            res,
+            URL.createObjectURL(this.state.profileImg[0]),
+            filteredName.courseId,
+            filteredName.year
+          );
           alert("Form Submitted");
+          // this.setState({cond:true,stdData:res})
           console.log(res);
         })
         .catch((err) => {
           alert("Form not Submitted");
+          this.setState({ loading: false });
           console.log(err);
         });
     }
+    this.setState({ loading: false });
   };
   render() {
     const {
@@ -560,10 +592,25 @@ class CourseRegistration extends React.Component {
             <h1 className="text-white">Course Registration Form</h1>
           </div>
         </div>
-        {
-          this.props.location.state &&
-          this.props.location.state.filteredName.viewForm ? (
-            <div>
+        {this.props.location.state &&
+        this.props.location.state.filteredName.viewForm ? (
+          <div>
+            {this.state.loading ? (
+              <div
+                class="spinner-border text-primary"
+                style="width: 3rem; height: 3rem;"
+                role="status"
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  top: "50%",
+                  width: "50px",
+                  height: "50px",
+                }}
+              >
+                <span class="sr-only">Loading...</span>
+              </div>
+            ) : (
               <div className="container p-5">
                 <p>
                   <button
@@ -581,13 +628,15 @@ class CourseRegistration extends React.Component {
                   <div className="card card-body">
                     <form>
                       <input
+                        size="13"
                         className="jobInput"
-                        placeholder="Enter Roll Number"
+                        type="text"
+                        onChange={(e) => this.checkNumber(e)}
+                        placeholder="Enter CNIC"
                       />
-                      <p className="text-danger">
-                        This Roll Number doesn't exist
-                      </p>
-                      <button className="prevbtn my-3 btn-block">Search</button>
+                      <button className="prevbtn my-3 btn-block ">
+                        <i class="fas fa-search"></i> Search
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -597,6 +646,7 @@ class CourseRegistration extends React.Component {
                     <input
                       className="jobInput"
                       placeholder="Enter Full Name"
+                      type="text"
                       value={fullName}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "fullName");
@@ -630,6 +680,7 @@ class CourseRegistration extends React.Component {
                     <input
                       className="jobInput"
                       placeholder="Father Name"
+                      type="text"
                       value={fatherName}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "fatherName");
@@ -645,10 +696,13 @@ class CourseRegistration extends React.Component {
                     <input
                       className="jobInput"
                       placeholder="03xx-xxxxxxx"
+                      type="text"
+                      maxLength="11"
                       value={ContactNumber}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "ContactNumber");
                         this.setState({ chkContactNumber: false });
+                        this.checkNumber(e);
                       }}
                     />
                     {this.state.chkContactNumber ? (
@@ -660,10 +714,13 @@ class CourseRegistration extends React.Component {
                     <input
                       className="jobInput"
                       placeholder="e.g 42101-1111111-1"
+                      type="text"
                       value={cnic}
+                      maxLength="13"
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "cnic");
                         this.setState({ chkcnic: false });
+                        this.checkNumber(e, 13);
                       }}
                     />
                     {this.state.chkcnic ? (
@@ -675,10 +732,13 @@ class CourseRegistration extends React.Component {
                     <input
                       className="jobInput"
                       placeholder="e.g 42101-1111111-1"
+                      type="text"
+                      maxLength="13"
                       value={fatherCnic}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "fatherCnic");
                         this.setState({ chkfatherCnic: false });
+                        this.checkNumber(e, 13);
                       }}
                     />
                     {this.state.chkfatherCnic ? (
@@ -690,7 +750,9 @@ class CourseRegistration extends React.Component {
 
                     <input
                       className="jobInput"
-                      placeholder="xxx@gmail.com"
+                      placeholder="example@gmail.com"
+                      tyoe="email"
+                      style={{ marginTop: 10 }}
                       value={email}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "email");
@@ -702,12 +764,13 @@ class CourseRegistration extends React.Component {
                     ) : null}
                   </div>
                   <div className="col-md-6 py-4">
-                    <label>DOB</label>
+                    <label>DOB ( Date of Birth )</label>
                     <br />
                     <br />
                     <input
                       type="date"
                       className="dob"
+                      style={{ width: "100%" }}
                       value={dob}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "dob");
@@ -723,6 +786,7 @@ class CourseRegistration extends React.Component {
                     <input
                       className="jobInput"
                       placeholder=""
+                      type="text"
                       value={address}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "address");
@@ -880,32 +944,23 @@ class CourseRegistration extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            <div className="container p-5">
-              <p className="text-muted" style={{ fontSize: "3em" }}>
-                Registration has been closed
-              </p>
-              <p className="text-muted" style={{ fontSize: "2em" }}>
-                For More Details Please Visit{" "}
-                <a href="https://www.facebook.com/SaylaniMassTraining/">
-                  Saylani Mass Training
-                </a>
-              </p>
-              <p className="text-muted">Created by M Umair</p>
-            </div>
-          )
-          // <div className="text-center">
-          //     <img
-          //         src={imgOne}
-          //         width="50%"
-          //     />
-          //     <h2>Saylani Mass Training & Job Creation Program</h2>
-          //     <h4>Registration / Entry Test Form</h4>
-          //     <p className="text-danger">Registration has been closed</p>
-          //     <p>Created by M Umair</p>
-          // </div>
-        }
+            )}
+          </div>
+        ) : (
+          <div className="container p-5">
+            <p className="text-muted" style={{ fontSize: "3em" }}>
+              Registration has been closed
+            </p>
+            <p className="text-muted" style={{ fontSize: "2em" }}>
+              For More Details Please Visit{" "}
+              <a href="https://www.facebook.com/SaylaniMassTraining/">
+                Saylani Mass Training
+              </a>
+            </p>
+            <p className="text-muted">Created by M Umair</p>
+          </div>
+        )}
+        {this.state.cond ? <AdmitCard data={this.state.stdData} /> : null}
       </>
     );
   }
@@ -919,9 +974,9 @@ function mapStateToProp(state) {
 }
 function mapDispatchToProp(dispatch) {
   return {
-    // bookAllCat: () => {
-    //   dispatch(bookAllCat());
-    // },
+    stdData: (e, a, b, c) => {
+      dispatch(stdData(e, a, b, c));
+    },
   };
 }
 export default withRouter(
