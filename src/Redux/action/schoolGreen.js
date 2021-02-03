@@ -1,7 +1,9 @@
 import ActionTypes from "../constant/constant";
 
+
 const api = "https://swit-app.herokuapp.com/";
 // const api = "http://localhost:3000/"
+
 
 function schoolCampusGet() {
   return (dispatch) => {

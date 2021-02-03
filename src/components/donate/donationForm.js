@@ -3,9 +3,8 @@ import "./donate.css";
 import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
-import { withRouter } from "react-router-dom";
-import axios from "axios";
-
+import { withRouter, Redirect } from "react-router-dom";
+import axios from 'axios';
 class DonationForm extends React.Component {
   constructor(props) {
     super(props);
@@ -238,45 +237,90 @@ class DonationForm extends React.Component {
       this.setState({ chkremarks: true });
       window.scrollTo(0, 900);
     } else {
-      const obj = {
-        Registration: {
-          Currency: "AED",
-          ReturnPath: "http://www.saylaniwelfare.com/Saylani/Finalization.php",
-          TransactionHint: "CPT:Y;VCC:Y;",
-          OrderlD: "7210055701315195",
-          Store: "0000",
-          Terminal: "0000",
-          Channel: "Web",
-          Amount: "2.00",
-          Customer: "Demo Merchant",
-          OrderName: "Paybill",
-          UserName: "Demo_fY9c",
-          Password: "Comtrust@20182018",
-        },
-      };
-      //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
-      let config = {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          // 'Access-Control-Allow-Origin': '*',
-          // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-          // 'Access-Control-Allow-Credentials': 'true',
-          // 'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept'
-        },
-      };
 
-      fetch("https://demo-ipg.ctdev.comtrust.ae:2443", {
-        method: "POST",
-        body: obj,
-        config,
+      const obj = {
+        "Registration":
+        {
+          "Currency": "AED",
+          "ReturnPath": "http://www.saylaniwelfare.com/Saylani/Finalization.php",
+          "TransactionHint": "CPT:Y;VCC:Y;",
+          "OrderlD": "7210055701315195",
+          "Store": "0000",
+          "Terminal": "0000",
+          "Channel": "Web",
+          "Amount": "2.00",
+          "Customer": "Demo Merchant",
+          "OrderName": "Paybill",
+          "UserName": "Demo_fY9c",
+          "Password": "Comtrust@20182018"
+        }
+      }
+      // //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
+      // let config = {
+      //   headers: {
+      //     'Accept': 'application/json',
+      //     'Content-Type': 'application/json',
+      //     'Access-Control-Allow-Origin': '*',
+      //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      //     'Access-Control-Allow-Credentials': 'true',
+      //     'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept'
+      //   }
+      // }
+
+      // fetch("https://demo-ipg.ctdev.comtrust.ae:2443", { method: "POST", body: obj, config:config.headers })
+      // // .then(response => response.json())
+      //   .then(res => {
+      //     console.log(res)
+      //   }).catch((err) => {
+      //     console.log("err", err)
+      //   })
+      const options = {
+        method: 'POST',
+        headers: { 'Accept': 'application/json',
+            'Content-Type': 'application/json', },
+        data: obj,
+        url:'https://demo-ipg.ctdev.comtrust.ae:2443',
+      };
+      axios(options)
+      .then((res)=>{
+console.log(res,'response')
+      // console.log(res.data.Transaction.TransactionID)
+      // console.log(res.data.Transaction.UniqueID)
+      // console.log(res.data.Transaction.PaymentPage)
+      // if(res.data.Transaction.PaymentPage)
+      // {
+      // //  return  <Redirect to={res.data.Transaction.PaymentPortal} />
+      //    // res.redirect(res.data.Transaction.PaymentPage);
+      //    axios.Redirect(res.data.Transaction.PaymentPage)
+      // }
+  //     const objs = {
+  //       "Finalization": {
+  //       "TransactionID": res.data.Transaction.TransactionID,
+  //       "Customer": "Demo Merchant",
+  //       "UserName":"Demo_fY9c",
+  //       "Password":"Comtrust@20182018"
+  //       }
+  //       }
+  //     const optionss = {
+  //       method: 'POST',
+  //       headers: { 'Accept': 'application/json',
+  //           'Content-Type': 'application/json', },
+  //       data: objs,
+  //       url:res.data.Transaction.PaymentPage,
+  //     };
+  //  axios(optionss)
+  //  .then(res=>{
+  //   console.log(res,'res')
+  //  })
+  //  .catch(err=>{
+  //   console.log(err,'2')
+  //  })
+      
       })
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((err) => {
-          console.log("err", err);
-        });
+      .catch(err=>{
+        console.log(err)
+      })
+
       console.log("hello world");
     }
   };
@@ -309,70 +353,6 @@ class DonationForm extends React.Component {
     return (
       <div>
         <div className="container my-5 py-5">
-          <div className="py-5">
-            <h2>Select Donation Category</h2>
-            <div className="row d-flex justify-content-center">
-              <div className="col-md-3">
-                <div
-                  className="p-5 donationCategory"
-                  style={{
-                    backgroundImage:
-                      "url('https://thumbs.dreamstime.com/b/hand-giving-coin-22505358.jpg')",
-                  }}
-                >
-                  <button className="categorybtn btn-block">Sadqa</button>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div
-                  className="p-5 donationCategory"
-                  style={{
-                    backgroundImage:
-                      "url('https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-asia.com/headlines/markets/getting-the-goat-australia-struggling-to-meet-soaring-demand-for-goat-meat/9022285-1-eng-GB/Getting-the-goat-Australia-struggling-to-meet-soaring-demand-for-goat-meat.jpg')",
-                  }}
-                >
-                  <button className="categorybtn btn-block">Aqiqa</button>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div
-                  className="p-5 donationCategory"
-                  style={{
-                    backgroundImage:
-                      "url('https://www.crisisaid.org.uk/wp-content/uploads/2020/03/Zakat-2020.jpg')",
-                  }}
-                >
-                  <button className="categorybtn btn-block">Zakat</button>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div
-                  className="p-5 donationCategory"
-                  style={{
-                    backgroundImage:
-                      "url('https://blogs.biomedcentral.com/on-health/wp-content/uploads/sites/8/2020/06/corona-5174671_1920.jpg')",
-                  }}
-                >
-                  <button className="categorybtn btn-block">
-                    Corona Effect
-                  </button>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div
-                  className="p-5 donationCategory"
-                  style={{
-                    backgroundImage:
-                      "url('https://muslimchildrenfoundation.org.uk/wp-content/uploads/2018/10/donation.jpg')",
-                  }}
-                >
-                  <button className="categorybtn btn-block">
-                    Other Donation
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="displayheading">
             <h1>Donation Form</h1>
           </div>
@@ -509,21 +489,21 @@ class DonationForm extends React.Component {
                       />
                     </div>
                   ) : (
-                    <div className="col-md-12 mt-3 mb-3">
-                      <label className="lab text-dark">Quantity</label>
-                      <input
-                        type="number"
-                        className="inp"
-                        placeholder="Number"
-                        min="1"
-                        value={quan}
-                        onChange={(e) => {
-                          this.setFieldVal(e.target.value, "quan");
-                          this.setState({ chkamount: false });
-                        }}
-                      />
-                    </div>
-                  )}
+                      <div className="col-md-12 mt-3 mb-3">
+                        <label className="lab text-dark">Quantity</label>
+                        <input
+                          type="number"
+                          className="inp"
+                          placeholder="Number"
+                          min="1"
+                          value={quan}
+                          onChange={(e) => {
+                            this.setFieldVal(e.target.value, "quan");
+                            this.setState({ chkamount: false });
+                          }}
+                        />
+                      </div>
+                    )}
                   {this.state.chkamount ? (
                     <p className="text-danger">Field is Emply</p>
                   ) : null}

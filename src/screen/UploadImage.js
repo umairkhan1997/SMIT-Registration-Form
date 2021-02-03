@@ -209,10 +209,14 @@ export default class FilesUploadComponent extends Component {
         for (const key of Object.keys(this.state.imgCollection)) {
             formData.append('imgCollection', this.state.imgCollection[key])
         }
-        formData.append('cityName', 'Islamabad',)
+        formData.append('cityName', 'Karachi',)
         formData.append('courseName', 'Web and Mobile ')
-        formData.append('batchName', 'Batch 7');
-        formData.append('viewForm', false);
+        formData.append('batchName', '07');
+        formData.append('viewForm', true);
+        formData.append('courseId', '01');
+        formData.append('year', '21');
+        formData.append('duration', '6 Months');
+        formData.append('admissionLastDate', '12 Feb 2021');
         console.log(this.state.imgCollection)
         axios.post("http://localhost:3000/smit/SaylaniNotificationAdd", formData, {
         }).then(res => {

@@ -33,7 +33,8 @@ const ActionTypes = {
   medicalServiceAdd: 'medicalServiceAdd',
   benificiariesCountGet: 'benificiariesCountGet',
   opdNameGet: "opdNameGet",
-  opdListGet: "opdListGet"
+  opdListGet: "opdListGet",
+  stdData:'stdData'
 };
 
 export default ActionTypes;
