@@ -1,9 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
-import image from "../../images/Dr.jpg";
 import aliMughal from "../../images/aliMughal.png";
 import ziakhan from "../../images/ziaKhan.png";
 import course from "../../images/course1.jpg";

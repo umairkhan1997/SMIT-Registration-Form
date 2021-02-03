@@ -46,7 +46,10 @@ class AdmitCard extends React.Component {
                 </div>
                 <div className=" d-flex justify-content-between">
                   <div>
-                    <img src={Zia} width="100px" />
+                    <img
+                      src="http://res.cloudinary.com/di3ippvmb/image/upload/v1612245855/cvvklygjlpgdy57fopja.png"
+                      width="100px"
+                    />
                   </div>
                   <div>
                     <QRCode
@@ -124,7 +127,7 @@ class AdmitCard extends React.Component {
                       className="profileImage"
                       width="110px"
                       height="110px"
-                      src={Zia}
+                      src="http://res.cloudinary.com/di3ippvmb/image/upload/v1612245855/cvvklygjlpgdy57fopja.png"
                     />
                   </div>
                   <div className="shortDetail">
