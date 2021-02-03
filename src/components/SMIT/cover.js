@@ -88,9 +88,10 @@ class Cover extends React.Component {
                           <h2 className=" border-bottom px-4">
                             {filteredName.cityName}
                           </h2>
-                          <h5 className="my-3 px-4">Course : {filteredName.courseName + " " + filteredName.batchName}</h5>
-                          <h5 className="my-3 px-4">Duration: 6 Months</h5>
-                          <h5 className="my-3 px-4">Admission last date : 16 Dec 2020</h5>
+                          <h5 className="my-3 px-4">Course : {filteredName.courseName }</h5>
+                          <h5 className="my-3 px-4">Batch : {filteredName.batchName}</h5>
+                          <h5 className="my-3 px-4">Duration: {filteredName.duration}</h5>
+                          <h5 className="my-3 px-4">Admission last date : {filteredName.admissionLastDate}</h5>
                           <div className="row">
                             <div className="col-md-6 mx-auto">
                               <div>
@@ -106,7 +107,7 @@ class Cover extends React.Component {
                                 </button>
                               </div>
                             </div>
-                            {/* <div className="col-md-6">
+                            <div className="col-md-6">
                               <p className="my-3">
                                 <a
                                   className="btn btn-outline-light rounded-pill px-5 btn-block"
@@ -117,7 +118,7 @@ class Cover extends React.Component {
                                   <i class="fas fa-arrow-right"></i>
                                 </a>
                               </p>
-                            </div> */}
+                            </div>
                           </div>
 
                         </div>

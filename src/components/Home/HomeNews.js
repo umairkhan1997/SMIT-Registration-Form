@@ -13,7 +13,7 @@ export default class HomeNews extends React.Component {
       >
         <div className="container">
           <div className="displayheading">
-            <h1>News</h1>
+            <h1>Latest News</h1>
           </div>
           <div className="row">
             <div className="col-md-6 px-4">

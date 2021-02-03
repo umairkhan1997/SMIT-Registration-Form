@@ -7,7 +7,11 @@ const initial_state = {
     smitWorkshopGet: [],
     SmitCounGets: [],
     SmitsucessGets: [],
-    smitCoursesGets: []
+    smitCoursesGets: [],
+    stdDatas:[],
+    stdDatasImg:[],
+    courseId:'',
+    year:''
 
 };
 
@@ -37,6 +41,10 @@ const reducerSmit = (state = initial_state, action) => {
         }
         case ActionTypes.smitCoursesGet: {
             return { ...state, smitCoursesGets: action.payload.data };
+        }
+        case ActionTypes.stdData: {
+            console.log(action,"action in reducer")
+            return { ...state, stdDatas: action.payload,stdDatasImg:action.data,courseId:action.b,year:action.c };
         }
 
         default: {

@@ -4,7 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import logo from "../../images/logo.png";
 // import "../App.css";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default class MainHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -14,13 +14,13 @@ export default class MainHeader extends React.Component {
   render() {
     return (
       <header className="bg-light border-bottom sticky-top">
-        <div className="container-fluid bg-light">
+        <div className="backgroundLight shadow">
           <div className="container">
             <nav className="navbar navbar-expand-lg d-flex justify-content-between navbar-light">
               <div>
-                <Link className="navbar-brand" to="/">
+                <NavLink className="navbar-brand" to="/">
                   <img src={logo} width="180px" />
-                </Link>
+                </NavLink>
               </div>
               <button
                 className="navbar-toggler"
@@ -40,30 +40,46 @@ export default class MainHeader extends React.Component {
                 >
                   <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                      <Link className="nav-link" to="/">
-                        HOME
-                      </Link>
+                      <NavLink className="nav-link" to="/">
+                        Home
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/projects">
+                      <NavLink
+                        activeClassName="activeLink"
+                        className="nav-link"
+                        to="/projects"
+                      >
                         PROJECTS
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <Link className="nav-link" to="/media">
+                      <NavLink
+                        activeClassName="activeLink"
+                        className="nav-link"
+                        to="/media"
+                      >
                         MEDIA
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/contact">
+                      <NavLink
+                        activeClassName="activeLink"
+                        className="nav-link"
+                        to="/contact"
+                      >
                         CONTACT
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/news">
+                      <NavLink
+                        activeClassName="activeLink"
+                        className="nav-link"
+                        to="/news"
+                      >
                         NEWS
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
@@ -83,9 +99,13 @@ export default class MainHeader extends React.Component {
                           marginTop: 5,
                         }}
                       >
-                        <Link to="Donation" className="donate">
+                        <NavLink
+                          activeClassName="activeLink"
+                          to="Donation"
+                          className="donate"
+                        >
                           DONATION
-                        </Link>
+                        </NavLink>
                       </button>
                       {/* <button className='donate' >Donate</button> */}
                     </li>

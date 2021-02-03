@@ -283,16 +283,16 @@ class DonationForm extends React.Component {
       };
       axios(options)
       .then((res)=>{
-
-      console.log(res.data.Transaction.TransactionID)
-      console.log(res.data.Transaction.UniqueID)
-      console.log(res.data.Transaction.PaymentPage)
-      if(res.data.Transaction.PaymentPage)
-      {
-        // res.redirect(res.data.Transaction.PaymentPage);
-        axios.Redirect(res.data.Transaction.PaymentPage)
-
-      }
+console.log(res,'response')
+      // console.log(res.data.Transaction.TransactionID)
+      // console.log(res.data.Transaction.UniqueID)
+      // console.log(res.data.Transaction.PaymentPage)
+      // if(res.data.Transaction.PaymentPage)
+      // {
+      // //  return  <Redirect to={res.data.Transaction.PaymentPortal} />
+      //    // res.redirect(res.data.Transaction.PaymentPage);
+      //    axios.Redirect(res.data.Transaction.PaymentPage)
+      // }
   //     const objs = {
   //       "Finalization": {
   //       "TransactionID": res.data.Transaction.TransactionID,
