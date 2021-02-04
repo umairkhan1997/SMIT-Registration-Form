@@ -6,7 +6,6 @@ class Campus extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
       currentMap: {},
     };
   }
@@ -17,26 +16,27 @@ class Campus extends React.Component {
 
   render() {
     return (
-      <div className="container mainDiv mt-5">
+      <div id="saylaniSchoolCampus" className="container mainDiv mt-5">
         <h2>Campus</h2>
         <div className="container mt-5">
           <div className="row">
-            {this.props.schoolCampusGets && this.props.schoolCampusGets.map((e, i) => {
-              return (
-                <div key={i} className="col-md-3 p-2">
-                  <div
-                    data-toggle="modal"
-                    data-target="#schoolCampus1"
-                    className="locationCard"
-                    onClick={() => this.setState({ currentMap: e })}
-                  >
-                    <h4>{e.name}</h4>
-                    <br />
-                    <p>{e.address}</p>
+            {this.props.schoolCampusGets &&
+              this.props.schoolCampusGets.map((e, i) => {
+                return (
+                  <div key={i} className="col-md-3 p-2">
+                    <div
+                      data-toggle="modal"
+                      data-target="#schoolCampus1"
+                      className="locationCard"
+                      onClick={() => this.setState({ currentMap: e })}
+                    >
+                      <h4>{e.name}</h4>
+                      <br />
+                      <p>{e.address}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         </div>
         <div

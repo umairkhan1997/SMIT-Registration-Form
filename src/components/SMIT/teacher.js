@@ -2,10 +2,9 @@ import React from "react";
 import "./SmitStyle.css";
 import { connect } from "react-redux";
 import {
-  smitFacultyGet, smitFacultyCourseGet
-
+  smitFacultyGet,
+  smitFacultyCourseGet,
 } from "../../Redux/action/smitAction";
-
 
 class SMITeacher extends React.Component {
   constructor(props) {
@@ -191,36 +190,39 @@ class SMITeacher extends React.Component {
   }
   distinct = (v, i, s) => {
     return s.indexOf(v) === i;
-  }
+  };
   render() {
     const { cityDetails, selectCourse } = this.state;
     // console.log(this.props.smitFacultyGets, selectCourse, this.props.smitFacultyCourseGets)
     // const data = this.props.smitFacultyGets ? this.props.smitFacultyGets.course.filter(this.distinct()) : "Web and Mobile"
     return (
-      <div className="py-5">
+      <div id="smitTeachers" className="py-5">
         <div className="container">
           <h1 className="pb-4" style={{ color: "#1371b8" }}>
             Our Qualified Teacher
           </h1>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
-            {this.props.smitFacultyCourseGets && this.props.smitFacultyCourseGets.map((e) => {
-              return (
-                <li class="nav-item" onClick={() => this.setState({ selectCourse: e.courVal })}>
-                  <a
-                    class="nav-link active"
-                    id={e.courName}
-                    data-toggle="tab"
-                    href={"#" + e.courName}
-                    role="tab"
-                    aria-controls={e.courName}
-                    aria-selected="true"
+            {this.props.smitFacultyCourseGets &&
+              this.props.smitFacultyCourseGets.map((e) => {
+                return (
+                  <li
+                    class="nav-item"
+                    onClick={() => this.setState({ selectCourse: e.courVal })}
                   >
-                    {e.courName}
-                  </a>
-                </li>
-              )
-            })}
-
+                    <a
+                      class="nav-link active"
+                      id={e.courName}
+                      data-toggle="tab"
+                      href={"#" + e.courName}
+                      role="tab"
+                      aria-controls={e.courName}
+                      aria-selected="true"
+                    >
+                      {e.courName}
+                    </a>
+                  </li>
+                );
+              })}
           </ul>
           <div class="tab-content" id="myTabContent">
             <div
@@ -230,46 +232,49 @@ class SMITeacher extends React.Component {
               aria-labelledby={selectCourse}
             >
               <div className="row">
-                {this.props.smitFacultyGets && this.props.smitFacultyGets
-                  .filter((name) => {
-                    return (
-                      name.facDesig
-                        .toLowerCase()
-                        .indexOf(selectCourse.toLowerCase()) >= 0
-                    );
-                  })
-                  .map((filteredName, i) => {
-                    return (
-                      <div key={i} className="col-md-2 allTeacher text-center">
-                        <div className="my-3">
-                          <img
-                            style={{
-                              borderRadius: "50%",
-                              boxShadow: "0 10px 15px rgba(0,0,0,.2)",
-                              border: "1.5px solid white",
-                            }}
-                            width="100%"
-                            src={filteredName.facImgUrl}
-                          />
-                          <div className="teacherDetails">
-                            <h4
+                {this.props.smitFacultyGets &&
+                  this.props.smitFacultyGets
+                    .filter((name) => {
+                      return (
+                        name.facDesig
+                          .toLowerCase()
+                          .indexOf(selectCourse.toLowerCase()) >= 0
+                      );
+                    })
+                    .map((filteredName, i) => {
+                      return (
+                        <div
+                          key={i}
+                          className="col-md-2 allTeacher text-center"
+                        >
+                          <div className="my-3">
+                            <img
                               style={{
-                                borderBottom: "1px solid #0267b4",
+                                borderRadius: "50%",
+                                boxShadow: "0 10px 15px rgba(0,0,0,.2)",
+                                border: "1.5px solid white",
                               }}
-                            >
-                              {filteredName.facName}
-                            </h4>
-                            <p>{filteredName.facDesig}</p>
+                              width="100%"
+                              src={filteredName.facImgUrl}
+                            />
+                            <div className="teacherDetails">
+                              <h4
+                                style={{
+                                  borderBottom: "1px solid #0267b4",
+                                }}
+                              >
+                                {filteredName.facName}
+                              </h4>
+                              <p>{filteredName.facDesig}</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    )
-                  })}
+                      );
+                    })}
                 {/* );
                 })} */}
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -294,4 +299,3 @@ function mapDispatchToProp(dispatch) {
   };
 }
 export default connect(mapStateToProp, mapDispatchToProp)(SMITeacher);
-

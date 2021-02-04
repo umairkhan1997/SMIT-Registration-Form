@@ -14,7 +14,7 @@ class MedicalServices extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="medicalServices">
         <div
           style={{ backgroundColor: "#f5f8ff" }}
           className="container-fluid pt-5 pb-5"

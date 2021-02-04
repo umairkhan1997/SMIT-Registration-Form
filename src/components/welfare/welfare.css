@@ -21,10 +21,18 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .dataHeadingDark {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 10px 15px;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: white !important;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .dataHeadingDark {
+    font-size: 1em;
+    padding: 5px;
+  }
 }

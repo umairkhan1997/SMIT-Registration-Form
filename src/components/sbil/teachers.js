@@ -10,7 +10,7 @@ import teacher6 from "../../images/teachers/teacher6.png";
 export default class Teacher extends React.Component {
   render() {
     return (
-      <div id="teachers">
+      <div id="sbilTeacher">
         <div className="py-5 bg-light">
           <div className="container py-5">
             <div>

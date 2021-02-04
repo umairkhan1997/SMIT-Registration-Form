@@ -11,7 +11,7 @@ import icaew from "../../images/icaew.png";
 export default class Courses extends React.Component {
   render() {
     return (
-      <div id="course">
+      <div id="sbilCourses">
         <div className="py-5">
           <div className="container">
             <div>

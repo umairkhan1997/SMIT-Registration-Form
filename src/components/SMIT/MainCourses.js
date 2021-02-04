@@ -581,7 +581,7 @@ class MainCourses extends React.Component {
     console.log(this.props.smitCoursesGets, "smitCoursesGets");
     console.log(this.state.currentCourse, "this.state.currentCourse");
     return (
-      <div>
+      <div id="smitCourses">
         <div className="container pt-5 pb-5 ">
           <h1 className="py-3 color">
             Discover Courses Developed by Saylani Mass IT

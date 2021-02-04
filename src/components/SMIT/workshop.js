@@ -1,9 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import {
-  smitWorkshopGet
-
-} from "../../Redux/action/smitAction";
+import { smitWorkshopGet } from "../../Redux/action/smitAction";
 class Workshop extends React.Component {
   constructor(props) {
     super(props);
@@ -225,7 +222,7 @@ class Workshop extends React.Component {
   render() {
     // console.log(this.props.smitWorkshopGets)
     return (
-      <div className="py-5 my-5 backgroundLight">
+      <div id="smitWorkshop" className="py-5 my-5 backgroundLight">
         <div className="container my-5">
           <div className="Heading">
             <h2>
@@ -233,26 +230,26 @@ class Workshop extends React.Component {
             </h2>
           </div>
           <div className="row">
-            {this.props.smitWorkshopGets && this.props.smitWorkshopGets.map((e, i) => {
-              return (
-                <div key={i} className="col-md-4 py-3">
-                  <a className="workshopLink" href={e.Link} target="_blank">
-                    <div className="workshopCard text-center">
-                      <h4>{e.Name}</h4>
-                      <p>by</p>
-                      <p>{e.TeacherHostName}</p>
-                    </div>
-                  </a>
-                </div>
-              );
-            })}
+            {this.props.smitWorkshopGets &&
+              this.props.smitWorkshopGets.map((e, i) => {
+                return (
+                  <div key={i} className="col-md-4 py-3">
+                    <a className="workshopLink" href={e.Link} target="_blank">
+                      <div className="workshopCard text-center">
+                        <h4>{e.Name}</h4>
+                        <p>by</p>
+                        <p>{e.TeacherHostName}</p>
+                      </div>
+                    </a>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>
     );
   }
 }
-
 
 function mapStateToProp(state) {
   return {
@@ -267,4 +264,3 @@ function mapDispatchToProp(dispatch) {
   };
 }
 export default connect(mapStateToProp, mapDispatchToProp)(Workshop);
-

@@ -8,7 +8,7 @@ export default class Faculty extends React.Component {
   }
   render() {
     return (
-      <div className="my-5 py-5">
+      <div id="smitFaculty" className="my-5 py-5">
         <div className="container">
           <div className="Heading">
             <h2>Faculty</h2>
@@ -20,7 +20,7 @@ export default class Faculty extends React.Component {
               <Fade left>
                 <img
                   className="facultyImg "
-                  src='https://res.cloudinary.com/di3ippvmb/image/upload/v1611386416/ziaKhan_wd3thj.png'
+                  src="https://res.cloudinary.com/di3ippvmb/image/upload/v1611386416/ziaKhan_wd3thj.png"
                   alt="Zia Khan"
                   title="Zia Khan"
                 />
@@ -53,7 +53,7 @@ export default class Faculty extends React.Component {
               <Fade left>
                 <img
                   className="facultyImg"
-                  src='https://res.cloudinary.com/di3ippvmb/image/upload/v1611386394/67443203_2383834045036882_4906259752037646336_n_mdrerp.jpg'
+                  src="https://res.cloudinary.com/di3ippvmb/image/upload/v1611386394/67443203_2383834045036882_4906259752037646336_n_mdrerp.jpg"
                   alt="Muhammad Zunaib Afzal"
                   title="Muhammad Zunaib Afzal"
                 />

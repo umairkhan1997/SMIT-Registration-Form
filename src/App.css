@@ -384,3 +384,67 @@
   border-top: 2px solid black;
   margin-top: 100px;
 }
+.linkLeft {
+  position: fixed;
+  left: 0;
+  z-index: 9;
+  list-style: none;
+  padding: 10px 10px 10px 0;
+  border-radius: 0 20px 20px 0;
+  margin-left: -210px;
+  margin-top: 10%;
+  box-shadow: 5px 0 8px rgba(0, 0, 0, 0.2);
+  height: auto;
+  max-height: 75%;
+  white-space: nowrap;
+  overflow: auto;
+}
+.leftList {
+  padding: 15px 25px;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+  box-shadow: -5px 0 8px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  text-align: right;
+  font-size: 1.5em;
+  width: 270px;
+}
+.linkLeft:hover {
+  margin-left: 0;
+}
+.linkIcon {
+  padding-left: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .linkLeft {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 25px 25px 0 0;
+    width: 100vw;
+    text-align: center;
+    box-shadow: 5px -5px 8px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 0;
+  }
+  .linkLeft li {
+    display: inline-block;
+    border-radius: 35px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+  }
+  .linkLeft li .linkText {
+    display: none;
+    margin: 0;
+  }
+  .linkLeft li .linkIcon {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+}

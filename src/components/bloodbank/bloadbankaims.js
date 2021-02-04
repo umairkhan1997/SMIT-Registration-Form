@@ -4,7 +4,7 @@ import "./blood.css";
 export default class BloodBankServices extends React.Component {
   render() {
     return (
-      <div>
+      <div id="bloodBankAims">
         <div className="backImg bg-image">
           <div
             className="pt-5 pb-5"
