@@ -9,23 +9,46 @@ import Curriculum from "../components/schools/curriculum";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { schoolCountGet } from "../Redux/action/schoolGreen";
+import SideList from "../smallcomponents/sidelist";
 
 class Education extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      listItem: [
+        {
+          listText: "Introduction",
+          listIcon: "fas fa-door-open",
+          id: "saylaniSchoolIntro",
+        },
+        {
+          listText: "Campus",
+          listIcon: "fas fa-school",
+          id: "saylaniSchoolCampus",
+        },
+        {
+          listText: "School Services",
+          listIcon: "fas fa-shapes",
+          id: "saylaiSchoolServices",
+        },
+        {
+          listText: "books Outline",
+          listIcon: "fas fa-handshake",
+          id: "saylaniSchoolPartner",
+        },
+      ],
+    };
   }
   componentDidMount() {
     this.props.schoolCountGet();
   }
 
-
-
   render() {
     return (
       <div>
+        <SideList item={this.state.listItem} />
         <MainHeader />
-        <div className="backgroundLight py-5">
+        <div id="saylaniSchoolIntro" className="backgroundLight py-5">
           <div className="container my-4">
             <div className="row">
               <div className="col-md-6">
@@ -33,14 +56,15 @@ class Education extends React.Component {
                   <tr>
                     <td colspan="2">Quality Education For All</td>
                   </tr>
-                  {this.props.schoolCountGets && this.props.schoolCountGets.map((e, i) => {
-                    return (
-                      <tr>
-                        <td>{e.typeName}</td>
-                        <td>{e.typeNumber}</td>
-                      </tr>
-                    );
-                  })}
+                  {this.props.schoolCountGets &&
+                    this.props.schoolCountGets.map((e, i) => {
+                      return (
+                        <tr>
+                          <td>{e.typeName}</td>
+                          <td>{e.typeNumber}</td>
+                        </tr>
+                      );
+                    })}
                 </table>
               </div>
               <div className="col-md-6 p-2">
@@ -80,4 +104,6 @@ function mapDispatchToProp(dispatch) {
     },
   };
 }
-export default withRouter(connect(mapStateToProp, mapDispatchToProp)(Education));
+export default withRouter(
+  connect(mapStateToProp, mapDispatchToProp)(Education)
+);

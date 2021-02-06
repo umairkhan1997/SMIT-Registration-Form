@@ -60,10 +60,10 @@ class NewsSection extends React.Component {
     }
   };
 
-  componentDidMount() {
+  componentWillMount() {
     console.log("componentDidMount");
     const { page, limit } = this.state;
-    if(this.props.SaylaniNewsGet.length <1){
+    if (this.props.SaylaniNewsGet.length < 1) {
       this.props.getAllNews(page, limit, "undefined");
     }
     document.addEventListener("scroll", this.handleScroll);
@@ -233,7 +233,7 @@ class NewsSection extends React.Component {
             <div className="container py-3">
               {this.props.SaylaniNewsGet &&
                 this.props.SaylaniNewsGet.length > 0 &&
-                this.props.SaylaniNewsGet.slice(0, 1).map((data,i) => {
+                this.props.SaylaniNewsGet.slice(0, 1).map((data, i) => {
                   //  console.log(data, 'first ')
                   return (
                     <div className="row py-3 border-top border-bottom my-3" key={i}>
@@ -284,7 +284,7 @@ class NewsSection extends React.Component {
               <div className="row my-4">
                 {this.props.SaylaniNewsGet &&
                   this.props.SaylaniNewsGet.length > 0 &&
-                  this.props.SaylaniNewsGet.slice(1).map((data,i) => {
+                  this.props.SaylaniNewsGet.slice(1).map((data, i) => {
                     // console.log(data, 'adsad')
                     return (
                       <div className="col-md-6 pb-3" key={i}>

@@ -1,9 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
-import image from "../../images/Dr.jpg";
 import aliMughal from "../../images/aliMughal.png";
 import ziakhan from "../../images/ziaKhan.png";
 import course from "../../images/course1.jpg";
@@ -16,6 +14,7 @@ export default class SMITAdmin extends React.Component {
       numbeOfStudent: false,
       events: false,
       teachers: false,
+      courseOpen: true,
       // EDIT Control
       facultyImage: false,
       facultyText: false,
@@ -29,7 +28,7 @@ export default class SMITAdmin extends React.Component {
     return (
       <div>
         <div className="row">
-          <div className="col-md-3 bg-light text-primary shadow p-5">
+          <div className="col-md-3 backgroundLight text-primary shadow p-5">
             <div className="p-4">
               <img src={logo} width="100%" />
             </div>
@@ -107,7 +106,7 @@ export default class SMITAdmin extends React.Component {
             </div>
           </div>
           <div
-            style={{ height: "100vh", overflow: "scroll" }}
+            style={{ height: "100vh", overflow: "scroll", overflowY: "hidden" }}
             className="col-md-9"
           >
             <div style={{ overflowX: "hidden" }} className="container">
@@ -659,6 +658,26 @@ export default class SMITAdmin extends React.Component {
                 ) : null}
               </div>
             </div>
+            {this.state.courseOpen ? (
+              <div className="container p-4">
+                <div className="backgroundLight rounded shadow p-5">
+                  <div className="row">
+                    <div className="col-md-4">
+                      <select>
+                        <option>Web And Mobile</option>
+                        <option>Graphic Designing</option>
+                        <option>Video Editing</option>
+                        <option>CCNA R&S</option>
+                        <option>CCNA Cyber Security</option>
+                        <option>CCO</option>
+                        <option>CCA</option>
+                        <option>MOS</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

@@ -7,8 +7,6 @@ import ROback from "../../images/ROback.jpg";
 import { connect } from "react-redux";
 import { RoPlantEstiCostGet } from "../../Redux/action/RoPlantAction";
 
-
-
 class ProjectCost extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +18,7 @@ class ProjectCost extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div id="roPlantProjectCost">
         <div
           style={{ backgroundImage: `url(${ROback})` }}
           className="back bg-image"
@@ -41,16 +39,17 @@ class ProjectCost extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {this.props.RoPlantEstiCostGets && this.props.RoPlantEstiCostGets.map((data) => {
-                      return (
-                        <tr>
-                          <td>{data.actDes}</td>
-                          <td>{data.qnt}</td>
-                          <td>{data.amount7500}</td>
-                          <td>{data.amount40000}</td>
-                        </tr>
-                      )
-                    })}
+                    {this.props.RoPlantEstiCostGets &&
+                      this.props.RoPlantEstiCostGets.map((data) => {
+                        return (
+                          <tr>
+                            <td>{data.actDes}</td>
+                            <td>{data.qnt}</td>
+                            <td>{data.amount7500}</td>
+                            <td>{data.amount40000}</td>
+                          </tr>
+                        );
+                      })}
                   </tbody>{" "}
                 </table>
               </Zoom>
@@ -64,7 +63,7 @@ class ProjectCost extends React.Component {
 
 function mapStateToProp(state) {
   return {
-    RoPlantEstiCostGets: state.reducerRoPlant.RoPlantEstiCostGets
+    RoPlantEstiCostGets: state.reducerRoPlant.RoPlantEstiCostGets,
   };
 }
 function mapDispatchToProp(dispatch) {

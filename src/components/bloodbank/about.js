@@ -4,7 +4,11 @@ import "./blood.css";
 export default class AboutBloodBank extends React.Component {
   render() {
     return (
-      <div style={{ backgroundColor: "#f7edee" }} className="py-5">
+      <div
+        id="bloodBankIntro"
+        style={{ backgroundColor: "#f7edee" }}
+        className="py-5"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6 p-2">

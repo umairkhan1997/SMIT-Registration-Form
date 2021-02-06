@@ -1,7 +1,5 @@
 import React from "react";
 import "./Home.css";
-import img6 from "../../images/president.jpeg";
-import img2 from "../../images/govern.jpg";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import {
@@ -21,7 +19,7 @@ class HomeNews extends React.Component {
   }
 
   render() {
-    console.log(this.props.SaylaniHomeNewsGets,'SaylaniHomeNewsGets')
+    console.log(this.props.SaylaniHomeNewsGets, 'SaylaniHomeNewsGets')
     return (
       <div
         style={{ backgroundColor: "rgb(245, 248, 255)" }}
@@ -42,15 +40,12 @@ class HomeNews extends React.Component {
                     <div className="news row mt-2 mb-2 bg-white">
                       <div className="col-md-5 col-sm-3 py-3">
                         {data.multiple_image.slice(0, 1).map((each, index) => (
-
-                          <img key={index} src={each} width="100%" />
+                          <img key={index} alt="" src={each} width="100%" />
                         ))}
                       </div>
                       <div className="col-md-7 col-sm-3 text-left">
                         <p>{data.name}</p>
-                        <p className="text-muted">
-                          {data.description}
-                        </p>
+                        <p className="text-muted">{data.description}</p>
                         <Link to="/news">Read More</Link>
                       </div>
                     </div>
@@ -112,7 +107,7 @@ function mapDispatchToProp(dispatch) {
       console.log("dispatch is calling");
       dispatch(getAllHomeNews(a, b, e));
     },
-    
+
   };
 }
 export default connect(mapStateToProp, mapDispatchToProp)(HomeNews);

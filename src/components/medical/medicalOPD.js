@@ -2,10 +2,7 @@ import React from "react";
 import "./medical.css";
 import Modal from "react-awesome-modal";
 import { connect } from "react-redux";
-import {
-  opdNameGet, opdListGet
-
-} from "../../Redux/action/medicalAction";
+import { opdNameGet, opdListGet } from "../../Redux/action/medicalAction";
 class MedicalOPD extends React.Component {
   constructor(props) {
     super(props);
@@ -282,46 +279,44 @@ class MedicalOPD extends React.Component {
     this.props.opdListGet();
   }
   render() {
-    console.log(this.state.opdName, 'opdNameGets')
+    console.log(this.state.opdName, "opdNameGets");
     return (
-      <div>
+      <div id="MedicalOPD">
         <div className="container pt-5 pb-5">
           <div className="Heading">
             <h1>Consultant OPD</h1>
           </div>
           <div className="row">
-            {this.props.opdNameGets && this.props.opdNameGets.map((e) => {
-              return (
-                <div className="col-md-3">
-                  <button
-                    onClick={() =>
-                      this.setState({
-                        opdName: e.opdName,
-                      })
-                    }
-                    className="opdBtn"
-                  >
-                    {e.opdName}
-                  </button>
-                </div>
-              )
-            })
-            }
+            {this.props.opdNameGets &&
+              this.props.opdNameGets.map((e) => {
+                return (
+                  <div className="col-md-3">
+                    <button
+                      onClick={() =>
+                        this.setState({
+                          opdName: e.opdName,
+                        })
+                      }
+                      className="opdBtn"
+                    >
+                      {e.opdName}
+                    </button>
+                  </div>
+                );
+              })}
           </div>
 
-
-
           <div className="row border-top my-5 py-4">
-
             {this.props.opdListGets
               .filter((name) => {
-                console.log(name, 'nasdhaskdh')
+                console.log(name, "nasdhaskdh");
                 return (
                   name.opdName
                     .toLowerCase()
                     .indexOf(this.state.opdName.toLowerCase()) >= 0
                 );
-              }).map((e, i) => {
+              })
+              .map((e, i) => {
                 return (
                   <div className="col-md-3" key={i}>
                     <div
@@ -337,15 +332,9 @@ class MedicalOPD extends React.Component {
                 );
               })}
           </div>
-
         </div>
 
-
-
-
-
-
-        <div className="container text-white pt-5 pb-5">
+        <div id="medicalHijama" className="container text-white pt-5 pb-5">
           <div className="row text-white pt-5 pb-5">
             <div
               style={{ backgroundColor: "rgb(120 185 255)" }}
@@ -451,8 +440,8 @@ class MedicalOPD extends React.Component {
               ) : this.state.homeo ? (
                 <h3>Homeopathic Clinic</h3>
               ) : (
-                      false
-                    )}
+                false
+              )}
             </div>
             {this.state.hijama ? (
               <div className="p-4">
@@ -520,8 +509,7 @@ function mapDispatchToProp(dispatch) {
     },
     opdListGet: () => {
       dispatch(opdListGet());
-    }
+    },
   };
 }
 export default connect(mapStateToProp, mapDispatchToProp)(MedicalOPD);
-

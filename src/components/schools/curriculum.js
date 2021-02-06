@@ -3,7 +3,7 @@ import React from "react";
 export default class Curriculum extends React.Component {
   render() {
     return (
-      <div>
+      <div id="saylaniSchoolPartner">
         <div className="container my-5 py-5">
           <div className="Heading">
             <h2>Books Curriculum</h2>

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "690345c02528b47648a1c678386c1c77",
+    "revision": "0ecf85118ae80927977a55545c50fdec",
     "url": "/index.html"
   },
   {
-    "revision": "a501034d12ee04d79d13",
+    "revision": "605bd809babac96c1286",
     "url": "/static/css/2.14e6b765.chunk.css"
   },
   {
-    "revision": "25b1d4bad0aeaf995d34",
-    "url": "/static/css/main.f5e49b7c.chunk.css"
+    "revision": "a2318c70ff2fd0c05ae0",
+    "url": "/static/css/main.e166d327.chunk.css"
   },
   {
-    "revision": "a501034d12ee04d79d13",
-    "url": "/static/js/2.7f2c621f.chunk.js"
+    "revision": "605bd809babac96c1286",
+    "url": "/static/js/2.a211b3b4.chunk.js"
   },
   {
-    "revision": "03b80fa8fe4a53d7fcc3e612b3bdb43b",
-    "url": "/static/js/2.7f2c621f.chunk.js.LICENSE.txt"
+    "revision": "6e7a615ff981e276b16fa08d92b0044a",
+    "url": "/static/js/2.a211b3b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "25b1d4bad0aeaf995d34",
-    "url": "/static/js/main.8bdc8dbf.chunk.js"
+    "revision": "a2318c70ff2fd0c05ae0",
+    "url": "/static/js/main.28b86b49.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -108,10 +108,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fia.5316f2d8.jpeg"
   },
   {
-    "revision": "3570337975319aa087fe39904bbfc1a1",
-    "url": "/static/media/govern.35703379.jpg"
-  },
-  {
     "revision": "4a78913c70fae5d15e580c2a023522ac",
     "url": "/static/media/hazrat.4a78913c.jpg"
   },
@@ -176,10 +172,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/mobileDastarkhwan.989fd0b4.jpg"
   },
   {
-    "revision": "91d702bf490a036c708cf7ef87fd5290",
-    "url": "/static/media/president.91d702bf.jpeg"
-  },
-  {
     "revision": "35ae5332c922fa11a92e65163d9d355c",
     "url": "/static/media/rotibank.35ae5332.jpg"
   },
@@ -194,6 +186,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "60f220f7fa989f07fd5f025b86061d60",
     "url": "/static/media/smit-backcover.60f220f7.jpg"
+  },
+  {
+    "revision": "69867f11d246044063a92c695b41f831",
+    "url": "/static/media/smitlogo.69867f11.png"
   },
   {
     "revision": "838afe0dbb224eec4f4e8aa3b6ac5295",
@@ -226,10 +222,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7c95898db0f22bd2e6f2e7b463286ff9",
     "url": "/static/media/upco.7c95898d.jpg"
-  },
-  {
-    "revision": "ea760c4307aeab89ec7d3a32530ef5d8",
-    "url": "/static/media/welfare.ea760c43.jpg"
   },
   {
     "revision": "662c489194c361d274ba4880f94690d8",

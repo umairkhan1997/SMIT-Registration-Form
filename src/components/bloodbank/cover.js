@@ -30,7 +30,7 @@ export default class Cover extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div id="bloodBankDonor">
         <div
           className="py-5 back"
           style={{
@@ -40,7 +40,7 @@ export default class Cover extends React.Component {
         >
           <div className="container my-5 py-5">
             <h1 className="custom-underline">
-              Your Blood can bring smile in other person face
+              Your Blood can bring a smile to another person's face
             </h1>
             <button
               data-toggle="modal"

@@ -3,7 +3,7 @@ import React from "react";
 export default class Intro extends React.Component {
   render() {
     return (
-      <div>
+      <div id="sbilIntroTable">
         <div className="backgroundLight py-5">
           <div className="container">
             <div className="row">

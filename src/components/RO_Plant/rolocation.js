@@ -129,7 +129,7 @@ class ROLocation extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div id="roPlantLocation">
         <div
           style={{
             backgroundColor: "#d8dfe6",

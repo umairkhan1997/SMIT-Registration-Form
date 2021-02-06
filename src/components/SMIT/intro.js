@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default class Intro extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +7,11 @@ export default class Intro extends React.Component {
   }
   render() {
     return (
-      <div style={{ backgroundColor: "#f5f8ff" }} className="py-5">
+      <div
+        id="smitIntro"
+        style={{ backgroundColor: "#f5f8ff" }}
+        className="py-5"
+      >
         <div className="container py-5">
           <div className="row">
             <div className="col-md-6 p-2">
@@ -20,9 +23,9 @@ export default class Intro extends React.Component {
                   necessary. Our vision is to make Pakistan a Global Software
                   Development Hub with the brightest IT minds. We want to
                   empower our youth to think, create and change the software
-                  world. To achieve this goal, Saylani launched its Saylani
-                  Mass I.T (SMIT) Program.
-                  </p>
+                  world. To achieve this goal, Saylani launched its Saylani Mass
+                  I.T (SMIT) Program.
+                </p>
               </div>
             </div>
             <div className="col-md-6 p-2">

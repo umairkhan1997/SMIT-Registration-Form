@@ -5,7 +5,7 @@ import event3 from "../../images/blood3.jpeg";
 export default class Instruction extends React.Component {
   render() {
     return (
-      <div>
+      <div id="bloodBankRequirement">
         <div className="bg-light py-5">
           <div className="container py-5">
             <div className="row">

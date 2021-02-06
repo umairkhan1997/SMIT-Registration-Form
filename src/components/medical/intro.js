@@ -9,6 +9,7 @@ export default class Intro extends React.Component {
   render() {
     return (
       <div
+        id="medicalIntro"
         style={{
           backgroundColor: "#f5f8ff",
         }}
