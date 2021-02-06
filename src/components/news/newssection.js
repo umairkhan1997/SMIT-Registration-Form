@@ -63,7 +63,9 @@ class NewsSection extends React.Component {
   componentDidMount() {
     console.log("componentDidMount");
     const { page, limit } = this.state;
-    this.props.getAllNews(page, limit, "undefined");
+    if(this.props.SaylaniNewsGet.length <1){
+      this.props.getAllNews(page, limit, "undefined");
+    }
     document.addEventListener("scroll", this.handleScroll);
     //  return () => document.removeEventListener('scroll', this.handleScroll);
   }
@@ -231,10 +233,10 @@ class NewsSection extends React.Component {
             <div className="container py-3">
               {this.props.SaylaniNewsGet &&
                 this.props.SaylaniNewsGet.length > 0 &&
-                this.props.SaylaniNewsGet.slice(0, 1).map((data) => {
+                this.props.SaylaniNewsGet.slice(0, 1).map((data,i) => {
                   //  console.log(data, 'first ')
                   return (
-                    <div className="row py-3 border-top border-bottom my-3">
+                    <div className="row py-3 border-top border-bottom my-3" key={i}>
                       <div className="col-md-8">
                         <div className="date">
                           <p style={{ fontSize: "2em" }}>
@@ -282,10 +284,10 @@ class NewsSection extends React.Component {
               <div className="row my-4">
                 {this.props.SaylaniNewsGet &&
                   this.props.SaylaniNewsGet.length > 0 &&
-                  this.props.SaylaniNewsGet.slice(1).map((data) => {
+                  this.props.SaylaniNewsGet.slice(1).map((data,i) => {
                     // console.log(data, 'adsad')
                     return (
-                      <div className="col-md-6 pb-3">
+                      <div className="col-md-6 pb-3" key={i}>
                         <div className="date">
                           <p style={{ fontSize: "2em" }}>
                             {data.newsdate.slice(3, 5)}

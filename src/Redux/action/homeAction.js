@@ -170,6 +170,25 @@ function getAllNews(a, b, e) {
       });
   };
 }
+function getAllHomeNews(a, b, e) {
+  // console.log(e, 'action ')
+  return (dispatch) => {
+    const headers = { "Content-Type": "application/json" };
+
+    fetch(`${api}news/SaylaniNewsGet?page=${a}&&limit=${b}&&date=${e}`, {
+      headers,
+    })
+      .then((res) =>
+        res.json().then(async (response) => {
+          console.log(response, "data");
+          dispatch({ type: ActionTypes.SaylaniHomeNewsGet, payload: response });
+        })
+      )
+      .catch((err) => {
+        console.log(err, "err");
+      });
+  };
+}
 
 function getAllNewsSorted(e) {
   // console.log(e, 'action ')
@@ -307,5 +326,6 @@ export {
   getAllNewsSorted,
   fieldEmpty,
   jobFormSubmit,
-  jobOffFormSubmit
+  jobOffFormSubmit,
+  getAllHomeNews
 };
