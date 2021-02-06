@@ -28,11 +28,11 @@ class MedicalServices extends React.Component {
                 this.props.medicalServiceAdds.map((e) => {
                   return (
                     <div className="col-md-2 col-sm-4 mt-5 mb-5">
-                      <div className="shadow">
-                        <div className="bg-white p-4 text-primary">
+                      <div className="shadow roounded">
+                        <div className="bg-white p-4 color">
                           <i style={{ fontSize: "2.5em" }} class={e.icon}></i>
                         </div>
-                        <div className="text-white bg-primary p-2">
+                        <div className="text-white backgroundDark p-2">
                           {e.head}
                         </div>
                       </div>

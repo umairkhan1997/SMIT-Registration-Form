@@ -15,7 +15,7 @@ export default class MainHeader extends React.Component {
     return (
       <header className="bg-light border-bottom sticky-top">
         <div className="backgroundLight shadow">
-          <div className="container">
+          <div className="">
             <nav className="navbar navbar-expand-lg d-flex justify-content-between navbar-light">
               <div>
                 <NavLink className="navbar-brand" to="/">

@@ -410,14 +410,11 @@ export default class Branches extends React.Component {
               </div>
             </div>
           </div>
-          <div
-            style={{ height: "63vh", overflow: "scroll", overflowX: "hidden" }}
-            className="container py-4"
-          >
+          <div className="p-5">
             <div className="row">
               {this.state.currentArr.map((e, i) => {
                 return (
-                  <div className="col-md-4 py-3">
+                  <div key={i} className="col-md-3 py-3">
                     <div
                       onClick={() => this.setState({ currentLocation: e })}
                       data-toggle="modal"

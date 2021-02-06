@@ -337,7 +337,7 @@ class MedicalOPD extends React.Component {
         <div id="medicalHijama" className="container text-white pt-5 pb-5">
           <div className="row text-white pt-5 pb-5">
             <div
-              style={{ backgroundColor: "rgb(120 185 255)" }}
+              style={{ backgroundColor: "rgba(0, 102, 179,.5)" }}
               className="col-md-4"
             >
               <div className="p-4">
@@ -359,7 +359,7 @@ class MedicalOPD extends React.Component {
               </div>
             </div>
             <div
-              style={{ backgroundColor: "rgb(69 159 255)" }}
+              style={{ backgroundColor: "rgba(0, 102, 179,.7)" }}
               className="col-md-4"
             >
               <div className="p-4">
@@ -381,7 +381,7 @@ class MedicalOPD extends React.Component {
               </div>
             </div>
             <div
-              style={{ backgroundColor: "rgb(0 123 255)" }}
+              style={{ backgroundColor: "rgba(0, 102, 179,1)" }}
               className="col-md-4"
             >
               <div className="p-4">

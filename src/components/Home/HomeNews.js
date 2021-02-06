@@ -27,62 +27,55 @@ class HomeNews extends React.Component {
             <h1>Latest News</h1>
           </div>
           <div className="row">
-            <div className="col-md-6 px-4">
+            <div className="col-md-6 px-4 d-flex align-items-stretch flex-column">
               {this.props.SaylaniNewsGet &&
                 this.props.SaylaniNewsGet.length > 0 &&
-                this.props.SaylaniNewsGet.slice(0, 3).map((data) => {
+                this.props.SaylaniNewsGet.slice(1, 4).map((data) => {
                   //  console.log(data, 'first ')
                   return (
                     <div className="news row mt-2 mb-2 bg-white">
-                      <div className="col-md-5 col-sm-3 py-3">
+                      <div className="col-md-5 col-sm-3">
                         {data.multiple_image.slice(0, 1).map((each, index) => (
                           <img key={index} alt="" src={each} width="100%" />
                         ))}
                       </div>
                       <div className="col-md-7 col-sm-3 text-left">
                         <p>{data.name}</p>
-                        <p className="text-muted">{data.description}</p>
+                        <p className="text-muted homeNewsDetail">
+                          {data.description.slice(0, 50)}...
+                        </p>
                         <Link to="/news">Read More</Link>
                       </div>
                     </div>
                   );
                 })}
-
-              {/* <div className="news row mt-2 mb-2 bg-white">
-                <div className="col-md-5 col-sm-3 pt-3 pb-3">
-                  <img src={img6} width="100%" />
-                </div>
-                <div className="col-md-7 col-sm-3 text-left">
-                  <p> Dr. Arif Alvi (President of Pakistan)</p>
-                  <p className="text-muted">
-                    On 23 Feb,2020 Dr. Arif Alvi (President of Pakistan) Visit
-                    ...
-                  </p>
-                  <Link to="/news">Read More</Link>
-                </div>
-              </div>
-              <div className="news row mt-2 mb-2 bg-white">
-                <div className="col-md-5 col-sm-3 pt-3 pb-3">
-                  <img src={img2} width="100%" />
-                </div>
-                <div className="col-md-7 col-sm-3 text-left">
-                  <p> Mr. Mohammad Sarwar Governer of Punjab</p>
-                  <p className="text-muted">
-                    On 21 Sep,2020 Hazrat Moulana Bashir Sahab Visit Punjab ...
-                  </p>
-                  <Link to="/news">Read More</Link>
-                </div>
-              </div> */}
             </div>
-            <div className="col-md-6 p-2">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/Jkg1W4SdAO4"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen="allowfullscreen"
-              ></iframe>
+            <div className="col-md-6 px-4">
+              {this.props.SaylaniNewsGet &&
+                this.props.SaylaniNewsGet.length > 0 &&
+                this.props.SaylaniNewsGet.slice(0, 1).map((data) => {
+                  //  console.log(data, 'first ')
+                  return (
+                    <div
+                      style={{ height: "97%" }}
+                      className="row mt-2 mb-2 bg-white mainCoverNews"
+                    >
+                      {data.multiple_image.slice(0, 1).map((each, index) => (
+                        <img
+                          key={index}
+                          alt=""
+                          src={each}
+                          height="auto"
+                          width="100%"
+                        />
+                      ))}
+                      <div className="col-md-7 col-sm-3 text-left">
+                        <p>{data.name}</p>
+                        <Link to="/news">Read More</Link>
+                      </div>
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>

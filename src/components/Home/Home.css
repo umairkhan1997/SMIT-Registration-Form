@@ -6,6 +6,16 @@
 }
 .news {
   border-left: 3px solid #1371b8;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.mainCoverNews {
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.homeNewsDetail {
+  height: 40px;
+  font-size: 0.9em;
 }
 .news Link {
   color: #1371b8;
@@ -18,7 +28,7 @@
   outline: none;
 }
 .inp:focus {
-  border: 2px solid dodgerblue;
+  border: 2px solid #0066b3;
 }
 .labl {
   display: block;
@@ -29,7 +39,7 @@
   font-weight: bold;
 }
 .location:hover {
-  color: dodgerblue;
+  color: #0066b3;
   cursor: pointer;
 }
 .donate {
@@ -41,7 +51,7 @@
 }
 .donate:hover {
   background-color: rgb(240, 240, 240);
-  color: dodgerblue;
+  color: #0066b3;
   box-shadow: 0 8px 10px lightgray;
   text-decoration: none;
 }
@@ -95,4 +105,3 @@
     font-size: 1em;
   }
 }
-
