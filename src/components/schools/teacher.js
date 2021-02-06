@@ -10,32 +10,6 @@ class Teacher extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      webandmobile: [
-        {
-          name: "Sabiha Kiran ",
-          image:
-            "https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png",
-          desig: "Principle Rehmania",
-        },
-        {
-          name: "Miss Naseem",
-          image:
-            "https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png",
-          desig: "Principle Kemari",
-        },
-        {
-          name: "Sir Syed Rameez",
-          image:
-            "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png",
-          desig: "Principle Gulzar e Hijri",
-        },
-        {
-          name: "Miss Ambreen",
-          image:
-            "https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png",
-          desig: "Principle Baldia",
-        },
-      ],
     };
   }
   componentDidMount() {

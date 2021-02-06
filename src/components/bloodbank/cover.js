@@ -1,4 +1,3 @@
-import { extend } from "jquery";
 import React from "react";
 
 export default class Cover extends React.Component {
@@ -22,9 +21,7 @@ export default class Cover extends React.Component {
     let a = new Date();
     let b = new Date(`${bmonth} ${bdate},${byear}`);
     let full = a.getTime();
-    console.log(full);
     let actual = b.getTime();
-    console.log(actual);
     let final = (full - actual) / (1000 * 60 * 60 * 24 * 365);
     this.setState({ age: Math.ceil(final) });
   }

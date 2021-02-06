@@ -19,7 +19,6 @@ class HomeNews extends React.Component {
   }
 
   render() {
-    console.log(this.props.SaylaniHomeNewsGets, 'SaylaniHomeNewsGets')
     return (
       <div
         style={{ backgroundColor: "rgb(245, 248, 255)" }}
@@ -35,7 +34,6 @@ class HomeNews extends React.Component {
               {this.props.SaylaniHomeNewsGets &&
                 this.props.SaylaniHomeNewsGets.length > 0 &&
                 this.props.SaylaniHomeNewsGets.slice(0, 3).map((data) => {
-                  //  console.log(data, 'first ')
                   return (
                     <div className="news row mt-2 mb-2 bg-white">
                       <div className="col-md-5 col-sm-3 py-3">
@@ -52,31 +50,6 @@ class HomeNews extends React.Component {
                   );
                 })}
 
-              {/* <div className="news row mt-2 mb-2 bg-white">
-                <div className="col-md-5 col-sm-3 pt-3 pb-3">
-                  <img src={img6} width="100%" />
-                </div>
-                <div className="col-md-7 col-sm-3 text-left">
-                  <p> Dr. Arif Alvi (President of Pakistan)</p>
-                  <p className="text-muted">
-                    On 23 Feb,2020 Dr. Arif Alvi (President of Pakistan) Visit
-                    ...
-                  </p>
-                  <Link to="/news">Read More</Link>
-                </div>
-              </div>
-              <div className="news row mt-2 mb-2 bg-white">
-                <div className="col-md-5 col-sm-3 pt-3 pb-3">
-                  <img src={img2} width="100%" />
-                </div>
-                <div className="col-md-7 col-sm-3 text-left">
-                  <p> Mr. Mohammad Sarwar Governer of Punjab</p>
-                  <p className="text-muted">
-                    On 21 Sep,2020 Hazrat Moulana Bashir Sahab Visit Punjab ...
-                  </p>
-                  <Link to="/news">Read More</Link>
-                </div>
-              </div> */}
             </div>
             <div className="col-md-6 p-2">
               <iframe
@@ -104,7 +77,6 @@ function mapStateToProp(state) {
 function mapDispatchToProp(dispatch) {
   return {
     getAllHomeNews: (a, b, e) => {
-      console.log("dispatch is calling");
       dispatch(getAllHomeNews(a, b, e));
     },
 

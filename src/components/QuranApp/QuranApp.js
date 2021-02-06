@@ -5,7 +5,6 @@ import MainHeader from "../Home/MainHeader";
 import Footer from "../Footer";
 import { withRouter } from "react-router-dom";
 import imgOne from "../../images/apptafseer.jpeg";
-// import imgTwo from "../../images/al_quran.png";
 import { QuranAppAndroidGet, QuranAppIosGet } from '../../Redux/action/QuranApp';
 import { connect } from "react-redux";
 class QuranApp extends React.Component {
@@ -20,7 +19,6 @@ class QuranApp extends React.Component {
   }
 
   render() {
-    console.log(this.props, 'this.props')
     return (
       <div>
         <MainHeader />

@@ -9,13 +9,11 @@ function roPlantBranchGet() {
     fetch(`${api}roPlant/RoPlantBranchGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           // allData=response
           dispatch({ type: ActionTypes.roPlantBranchGet, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -26,13 +24,11 @@ function RoPlantEstiCostGet() {
     fetch(`${api}roPlant/RoPlantEstiCostGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           // allData=response
           dispatch({ type: ActionTypes.RoPlantEstiCostGet, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -43,13 +39,11 @@ function RoPlantLocationGet() {
     fetch(`${api}roPlant/RoPlantLocationGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           // allData=response
           dispatch({ type: ActionTypes.RoPlantLocationGet, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }

@@ -28,7 +28,6 @@ class JobBank extends React.Component {
     this.props.jobBankFormGet();
   }
   render() {
-    console.log(this.props);
     return (
       <div>
         {/* Intro =============>>>>>>>>*/}

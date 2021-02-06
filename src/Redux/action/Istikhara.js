@@ -19,15 +19,12 @@ const istikharaAdd = (obj) => {
             })
                 .then((res) =>
                     res.json().then(async (response) => {
-                        console.log(response, "data");
                         //   dispatch({ type: ActionTypes.onlineMasajidForms, payload: true });
                     })
                 )
                 .catch((err) => {
-                    console.log(err, "err");
                 });
         } catch (err) {
-            console.error(err);
         }
     };
 };

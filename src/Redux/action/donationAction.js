@@ -11,12 +11,12 @@ function DonaListGet() {
         fetch(`${api}donation/DonaListGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
+
                     dispatch({ type: ActionTypes.DonaListGet, payload: response.data });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
+
             });
     };
 }

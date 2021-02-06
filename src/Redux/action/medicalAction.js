@@ -15,7 +15,6 @@ function patientTreatedGet() {
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }
@@ -26,12 +25,10 @@ function medicalServiceAdd() {
         fetch(`${api}medical/medicalServiceGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
                     dispatch({ type: ActionTypes.medicalServiceAdd, payload: response });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }
@@ -41,12 +38,10 @@ function benificiariesCountGet() {
         fetch(`${api}medical/benificiariesCountGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
                     dispatch({ type: ActionTypes.benificiariesCountGet, payload: response });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }
@@ -57,12 +52,10 @@ function opdNameGet() {
         fetch(`${api}medical/opdNameGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
                     dispatch({ type: ActionTypes.opdNameGet, payload: response });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }
@@ -73,12 +66,10 @@ function opdListGet() {
         fetch(`${api}medical/opdListGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
                     dispatch({ type: ActionTypes.opdListGet, payload: response });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }

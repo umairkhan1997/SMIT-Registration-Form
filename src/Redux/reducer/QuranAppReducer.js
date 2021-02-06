@@ -7,11 +7,9 @@ const initial_state = {
 const reducerQuranApp = (state = initial_state, action) => {
     switch (action.type) {
         case ActionTypes.QuranAppAndroidGet: {
-            console.log(action.payload, 'action.payload')
             return { ...state, QuranAppAndroidGets: action.payload };
         }
         case ActionTypes.QuranAppIosGet: {
-            console.log(action.payload, 'action.payload')
             return { ...state, QuranAppIosGets: action.payload };
         }
         default: {

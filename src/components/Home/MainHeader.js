@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import logo from "../../images/logo.png";
-// import "../App.css";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
 export default class MainHeader extends React.Component {
@@ -83,15 +82,6 @@ export default class MainHeader extends React.Component {
                     </li>
 
                     <li className="nav-item">
-                      {/* <a
-                        className="nav-link"
-                        href="Donation"
-                        tabindex="-1"
-                        aria-disabled="true"
-                        style={{ color: "white" }}
-                      >
-                        Donate
-                      </a> */}
                       <button
                         style={{
                           backgroundColor: "#f8f9fa",
@@ -107,7 +97,6 @@ export default class MainHeader extends React.Component {
                           DONATION
                         </NavLink>
                       </button>
-                      {/* <button className='donate' >Donate</button> */}
                     </li>
                   </ul>
                 </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./ehsaas.css";
 
 export default class Lodhran extends React.Component {
   constructor(props) {

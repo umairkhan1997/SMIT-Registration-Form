@@ -2,7 +2,6 @@ import React from "react";
 import "./news.css";
 import "react-slideshow-image/dist/styles.css";
 import { Link } from "react-router-dom";
-// import FbImageLibrary from "react-fb-image-grid";
 import Footer from "../Footer";
 import { connect } from "react-redux";
 import {
@@ -10,14 +9,12 @@ import {
   getAllNewsSorted,
   fieldEmpty,
 } from "../../Redux/action/homeAction";
-//import DatePicker from 'react-date-picker';
 import { Zoom } from "react-slideshow-image";
 
 class NewsSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //  SaylaniNewsGet: this.props.SaylaniNewsGet.length === 0 ? [] : this.props.SaylaniNewsGet
       newDate: new Date(),
       firstNews: [],
       dateState: true,
@@ -27,7 +24,7 @@ class NewsSection extends React.Component {
   }
 
   handleScroll = () => {
-    // const { page, limit } = this.state
+
     const windowHeight =
       "innerHeight" in window
         ? window.innerHeight
@@ -42,39 +39,33 @@ class NewsSection extends React.Component {
       html.offsetHeight
     );
     const windowBottom = windowHeight + window.pageYOffset;
-    // console.log('hello news', windowBottom, docHeight)
 
     if (
       Math.ceil(windowBottom) >= docHeight &&
       this.props.SaylaniNewsNext != undefined &&
       this.props.SaylaniNewsNext.page
     ) {
-      console.log(this.props.SaylaniNewsGet, "asdsads", this.state.page);
       this.props.getAllNews(
         this.props.SaylaniNewsNext.page,
         this.state.limit,
         "undefined"
       );
       document.removeEventListener("scroll", this.handleScroll);
-      // this.setState({ page: this.state.page + 1 })
     }
   };
 
   componentWillMount() {
-    console.log("componentDidMount");
     const { page, limit } = this.state;
     if (this.props.SaylaniNewsGet.length < 1) {
       this.props.getAllNews(page, limit, "undefined");
     }
     document.addEventListener("scroll", this.handleScroll);
-    //  return () => document.removeEventListener('scroll', this.handleScroll);
   }
   componentWillUpdate() {
     document.addEventListener("scroll", this.handleScroll);
   }
 
   dateGet = (e) => {
-    // console.log(e.value);
     let dateSet = e.value.slice(5) + "-" + e.value.slice(0, 4);
     this.setState({ newDate: e.value, dateState: true });
     this.props.fieldEmpty();
@@ -87,13 +78,11 @@ class NewsSection extends React.Component {
   };
 
   render() {
-    // console.log(this.props.SaylaniNewsGet, 'SaylaniNewsGet', this.props.SaylaniNewsNext)
     const { newDate, dateState } = this.state;
     return (
       <div>
         <div className="row">
           <div
-            // style={{ backgroundColor: "rgb(240, 240, 240)" }}
             className="col-md-3 shadow backgroundLight"
           >
             <div
@@ -234,7 +223,6 @@ class NewsSection extends React.Component {
               {this.props.SaylaniNewsGet &&
                 this.props.SaylaniNewsGet.length > 0 &&
                 this.props.SaylaniNewsGet.slice(0, 1).map((data, i) => {
-                  //  console.log(data, 'first ')
                   return (
                     <div className="row py-3 border-top border-bottom my-3" key={i}>
                       <div className="col-md-8">
@@ -285,7 +273,6 @@ class NewsSection extends React.Component {
                 {this.props.SaylaniNewsGet &&
                   this.props.SaylaniNewsGet.length > 0 &&
                   this.props.SaylaniNewsGet.slice(1).map((data, i) => {
-                    // console.log(data, 'adsad')
                     return (
                       <div className="col-md-6 pb-3" key={i}>
                         <div className="date">
@@ -345,7 +332,6 @@ function mapStateToProp(state) {
 function mapDispatchToProp(dispatch) {
   return {
     getAllNews: (a, b, e) => {
-      console.log("dispatch is calling");
       dispatch(getAllNews(a, b, e));
     },
     getAllNewsSorted: (e) => {

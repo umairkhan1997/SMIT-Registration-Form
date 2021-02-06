@@ -9,13 +9,12 @@ function mediaGet() {
         fetch(`${api}media/mediaAllVideoGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
+
                     // allData=response
                     dispatch({ type: ActionTypes.mediaGet, payload: response });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }

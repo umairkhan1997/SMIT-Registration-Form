@@ -37,15 +37,12 @@ const reducer = (state = initial_state, action) => {
       return { ...state, onlineQuranPakForms: action.payload }
     }
     case ActionTypes.SaylaniNewsGet: {
-      console.log(action.payload)
       return { ...state, SaylaniNewsGet: state.SaylaniNewsGet.concat(action.payload.result), SaylaniNewsNext: action.payload.next, saylaniNewsAllData: action.payload }
     }
     case ActionTypes.SaylaniHomeNewsGet: {
-      console.log(action.payload)
       return { ...state, SaylaniHomeNewsGets: state.SaylaniHomeNewsGets.concat(action.payload.result) }
     }
     case ActionTypes.fieldEmpty: {
-      console.log(action.payload)
       return { ...state, SaylaniNewsGet: [] }
     }
     default: {

@@ -2,7 +2,6 @@ import React from "react";
 import "./SmitStyle.css";
 import cover from "../../images/itback.png";
 import { withRouter } from "react-router-dom";
-import CustomBtn from "../../smallcomponents/mybtn";
 import Announcement from "../../images/announcement.jpg";
 import hyd from "../../images/hyderabadannouncment.jpg";
 import smitbackcover from "../../images/smit-backcover.jpg";
@@ -42,7 +41,6 @@ class Cover extends React.Component {
   render() {
     const { city, smitNotificationGets } = this.props;
     const { cityDetails } = this.state;
-    // console.log(smitNotificationGets, "smitNotificationGets");
     return (
       <div>
         <div style={{ backgroundImage: `url(${cover})` }} className="back">

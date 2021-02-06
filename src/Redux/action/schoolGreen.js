@@ -18,7 +18,7 @@ function schoolCampusGet() {
         })
       )
       .catch((err) => {
-        console.log(err, "err");
+
       });
   };
 }
@@ -36,7 +36,7 @@ function schoolCountGet() {
         })
       )
       .catch((err) => {
-        console.log(err, "err");
+
       });
   };
 }
@@ -54,7 +54,7 @@ function schoolTeacherGet() {
         })
       )
       .catch((err) => {
-        console.log(err, "err");
+
       });
   };
 }
@@ -72,7 +72,6 @@ function schoolFeatureGet() {
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }

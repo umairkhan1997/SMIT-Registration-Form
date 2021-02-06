@@ -49,9 +49,9 @@ function jobFormSubmit(e) {
     formData.append('instDegree', e.instDegree)
     axios.post("http://localhost:3000/JobBank/jobBankFormAdd", formData, {
     }).then(res => {
-      console.log(res)
+
     }).catch((err) => {
-      console.log(err)
+
     })
   }
 }
@@ -79,15 +79,13 @@ const jobOffFormSubmit = (obj) => {
       })
         .then((res) =>
           res.json().then(async (response) => {
-            console.log(response, "data");
             //   dispatch({ type: ActionTypes.onlineMasajidForms, payload: true });
           })
         )
         .catch((err) => {
-          console.log(err, "err");
+
         });
     } catch (err) {
-      console.error(err);
     }
   };
 };
@@ -102,13 +100,11 @@ function homeSlideImg() {
     fetch(`${api}home/homeSliderImgGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           // allData=response
           dispatch({ type: ActionTypes.homeSlideImg, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -119,12 +115,10 @@ function homeIntroGet() {
     fetch(`${api}home/homeIntroGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           dispatch({ type: ActionTypes.homeIntro, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -135,12 +129,10 @@ function projectCat() {
     fetch(`${api}project/allProjectCategoryGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           dispatch({ type: ActionTypes.projectCat, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -152,7 +144,6 @@ function fieldEmpty() {
 }
 
 function getAllNews(a, b, e) {
-  // console.log(e, 'action ')
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
 
@@ -161,17 +152,14 @@ function getAllNews(a, b, e) {
     })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           dispatch({ type: ActionTypes.SaylaniNewsGet, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
 function getAllHomeNews(a, b, e) {
-  // console.log(e, 'action ')
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
 
@@ -180,35 +168,28 @@ function getAllHomeNews(a, b, e) {
     })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           dispatch({ type: ActionTypes.SaylaniHomeNewsGet, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
 
 function getAllNewsSorted(e) {
-  // console.log(e, 'action ')
   return (dispatch) => {
     const headers = { "Content-Type": "application/json" };
 
     fetch(`${api}news/SaylaniNewsGet?date=${e}`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "action undefined response");
           if (response.result.length === 0) {
-            console.log("action empty response");
           } else {
-            console.log(response.result, "data");
             dispatch({ type: ActionTypes.SaylaniNewsGet, payload: response });
           }
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -219,12 +200,10 @@ function bookAllCat() {
     fetch(`${api}Books/BooksAllGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           dispatch({ type: ActionTypes.bookAllCat, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -234,12 +213,10 @@ function bookAllSpec() {
     fetch(`${api}Books/BookSpecialGet`, { headers })
       .then((res) =>
         res.json().then(async (response) => {
-          console.log(response, "data");
           dispatch({ type: ActionTypes.bookAllSpe, payload: response });
         })
       )
       .catch((err) => {
-        console.log(err, "err");
       });
   };
 }
@@ -266,15 +243,12 @@ const onlineMasajidForm = (obj) => {
       })
         .then((res) =>
           res.json().then(async (response) => {
-            console.log(response, "data");
             dispatch({ type: ActionTypes.onlineMasajidForms, payload: true });
           })
         )
         .catch((err) => {
-          console.log(err, "err");
         });
     } catch (err) {
-      console.error(err);
     }
   };
 };
@@ -301,15 +275,12 @@ const onlineQuranPakForm = (obj) => {
       })
         .then((res) =>
           res.json().then(async (response) => {
-            console.log(response, "data");
             dispatch({ type: ActionTypes.onlineQuranPakForms, payload: true });
           })
         )
         .catch((err) => {
-          console.log(err, "err");
         });
     } catch (err) {
-      console.error(err);
     }
   };
 };

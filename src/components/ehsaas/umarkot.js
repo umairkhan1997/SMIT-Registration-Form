@@ -1,6 +1,4 @@
 import React from "react";
-import "./ehsaas.css";
-
 export default class Umarkot extends React.Component {
   constructor(props) {
     super(props);

@@ -28,9 +28,6 @@ class TableData extends React.Component {
                   );
                 })}
             </table>
-            {/* <div className="p-2">
-              <Custombtn otherClass="btn-block" value="Donate" />
-            </div> */}
           </div>
           <div className="col-md-6 p-2">
             <iframe

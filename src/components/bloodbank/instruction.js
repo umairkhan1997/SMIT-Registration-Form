@@ -1,6 +1,4 @@
-import { event, extend } from "jquery";
 import React from "react";
-import event3 from "../../images/blood3.jpeg";
 
 export default class Instruction extends React.Component {
   render() {
