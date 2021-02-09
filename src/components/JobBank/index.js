@@ -63,10 +63,10 @@ class JobBank extends React.Component {
                 this.props.JobBankHuntGets.map((i, ind) => {
                   return (
                     <div key={ind} className="col-md-3 py-3">
-                      <p style={{ fontSize: "1.5em" }}>{i.catName}</p>
+                      <p style={{ fontSize: "1.2em" }}>{i.catName}</p>
                       <h3
                         className="shadow p-3 rounded text-white"
-                        style={{ backgroundColor: "rgba(0,0,0,.4)" }}
+                        style={{ backgroundColor: "rgba(0,0,0,.4)", fontSize: "1.2em" }}
                       >
                         {i.count}
                       </h3>

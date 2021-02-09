@@ -3,7 +3,7 @@ import "./donate.css";
 import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter, Redirect,Link,Route } from "react-router-dom";
 import axios from 'axios';
 class DonationForm extends React.Component {
   constructor(props) {
@@ -24,6 +24,7 @@ class DonationForm extends React.Component {
       remarks: "",
       title: "",
       chkamount: false,
+      toForm:false,
       aqiqaDropDown: [
         "Aqiqa Goat (8000)",
         "Aqiqa Goat (9000)",
@@ -186,6 +187,9 @@ class DonationForm extends React.Component {
 
   componentDidMount() {
     this.props.DonaListGet();
+    this.setState({
+      toForm:true
+    })
   }
 
   setFieldVal = (a, b) => {
@@ -598,6 +602,18 @@ console.log(res,'response')
             </div>
           </div>
         </div>
+        {
+          this.state.toForm?
+          <Route path='https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI/:TransactionID="252234271765"' component={() => { 
+            window.location.href = 'https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI'; 
+            return null;
+       }}/>
+          // window.location="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI"
+          // <Link to="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI" TransactionID="252234271765"  />
+   
+          :
+          null
+        }
       </div>
     );
   }
