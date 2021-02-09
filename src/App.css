@@ -1,5 +1,5 @@
 * {
-  font-family: "Alata";
+  font-family: "Roboto";
   transition: 0.5s;
   scroll-behavior: smooth;
 }
@@ -28,8 +28,8 @@
 }
 .activeLink {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  color: #0066b3 !important;
-  background-color: rgba(2, 103, 179, 0.1);
+  color: white !important;
+  background-color: rgb(2, 103, 179);
 }
 .social a {
   text-decoration: none;
@@ -281,7 +281,7 @@
   }
 }
 .numberHeading {
-  font-family: "Bebas Neue";
+  /* font-family: "Bebas Neue"; */
 }
 .admitCardPaper {
   width: 810px;
@@ -387,7 +387,7 @@
 .linkLeft {
   position: fixed;
   left: 0;
-  z-index: 9;
+  z-index: 10;
   list-style: none;
   padding: 10px 10px 10px 0;
   border-radius: 0 20px 20px 0;

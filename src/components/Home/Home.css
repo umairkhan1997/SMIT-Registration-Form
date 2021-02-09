@@ -105,3 +105,83 @@
     font-size: 1em;
   }
 }
+.b2 {
+  position: relative;
+  padding: 35px;
+  width: 310px;
+  height: 310px;
+  border-radius: 150px;
+  background-color: #0066b3;
+  display: inline-block;
+  z-index: 9;
+  box-shadow: 12px 0 12px rgba(0, 0, 0, 0.3);
+}
+.dataRound {
+  padding: 30px;
+  width: 240px;
+  height: 240px;
+  border-radius: 150px;
+  border: 4px solid white;
+  background: rgb(108, 138, 161);
+  background: linear-gradient(
+    138deg,
+    rgb(153, 165, 175) 0%,
+    rgba(244, 248, 252, 1) 100%
+  );
+  /* background: linear-gradient(#c4e6ff, #f4f8fc); */
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+}
+.homeTabList {
+  list-style: none;
+  padding: 0;
+}
+.homeTabList li {
+  padding: 10px;
+  background: rgb(108, 138, 161);
+  background: linear-gradient(
+    138deg,
+    rgb(153, 165, 175) 0%,
+    rgba(244, 248, 252, 1) 100%
+  );
+  margin: 10px 0;
+  font-size: 1.3em;
+  border-radius: 50px;
+  text-align: center;
+  border: 2px solid white;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.5);
+}
+.dataRoundImage {
+  /* padding: 20px; */
+  width: 175px;
+  height: 175px;
+  border-radius: 150px;
+  background-image: url("https://friarworks.org/wp-content/uploads/2017/08/boy-60710_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.dataRoundImage i {
+  padding: 10px;
+  border-radius: 150px;
+  font-size: 11em;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.homeDataListLeft {
+  vertical-align: top;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  display: inline-block;
+  margin-left: -100px;
+  z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  .homeDataListLeft {
+    margin-left: 0;
+    width: 100%;
+  }
+  .homeDataListLeft li {
+    border-radius: 0 150px 150px 0;
+  }
+}

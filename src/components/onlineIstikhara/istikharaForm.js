@@ -90,7 +90,6 @@ class IstikharaForm extends React.Component {
         femMotName: "",
         contact: "", istDetail: ""
       })
-      console.log('done asdhaskj')
     }
   }
 
@@ -111,7 +110,6 @@ class IstikharaForm extends React.Component {
       checkcontact,
       checkistDetail
     } = this.state;
-    console.log(istType, 'istTypeistTypeistType')
     return (
       <div>
         <div className="back" style={{ backgroundImage: `url(${istikhara})` }}>

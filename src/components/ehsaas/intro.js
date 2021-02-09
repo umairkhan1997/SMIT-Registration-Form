@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./ehsaas.css";
 
 export default class IntroLangarkhana extends React.Component {
   constructor(props) {

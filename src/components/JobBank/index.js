@@ -28,7 +28,6 @@ class JobBank extends React.Component {
     this.props.jobBankFormGet();
   }
   render() {
-    console.log(this.props);
     return (
       <div>
         {/* Intro =============>>>>>>>>*/}
@@ -147,7 +146,7 @@ class JobBank extends React.Component {
         ) : null}
 
         {/* JOB SEEKER AND RECRUITER START =============>>>>>>>>*/}
-        <div className="jobList">
+        {/* <div className="jobList">
           <div className="container my-5">
             <div className="displayheading">
               <h3>Featured Jobs</h3>
@@ -180,7 +179,7 @@ class JobBank extends React.Component {
               </table>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

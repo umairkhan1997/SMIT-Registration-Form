@@ -290,7 +290,7 @@ class JobForm extends React.Component {
       occupation,
       age,
     };
-    console.log(obj, "objectsss");
+
     if (this.checkField(this.state.imgCollection)) {
       this.setState({ chkimgCollection: true });
     } else {
@@ -417,7 +417,6 @@ class JobForm extends React.Component {
   };
 
   render() {
-    // console.log(this.state, 'asdsads')
     const {
       showScreen,
       fullName,
@@ -475,10 +474,7 @@ class JobForm extends React.Component {
         }}
       >
         <MainHeader />
-        {/* <div>
-                    <button onClick={() => this.setState({ jobseekarForm: true, jobRequriter: false })}>register as a Job Employee</button>
-                    <button onClick={() => this.setState({ jobseekarForm: false, jobRequriter: true })}>register as a Job Requriter</button>
-                </div> */}
+
         <div className="container">
           <div className="row">
             <div className="col-md-6 p-3 pt-5">

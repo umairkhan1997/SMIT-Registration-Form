@@ -9,13 +9,12 @@ function QuranAppAndroidGet() {
         fetch(`${api}QuranAppTaf/QuranAppAndroidGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
+
                     // allData=response
                     dispatch({ type: ActionTypes.QuranAppAndroidGet, payload: response.data });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }
@@ -26,13 +25,11 @@ function QuranAppIosGet() {
         fetch(`${api}QuranAppTaf/QuranAppIosGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
                     // allData=response
                     dispatch({ type: ActionTypes.QuranAppIosGet, payload: response.data });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }

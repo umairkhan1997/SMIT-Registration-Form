@@ -1,5 +1,6 @@
 import React from "react";
 import "./welfare.css";
+import { Link } from "react-router-dom";
 
 export default class Services extends React.Component {
   constructor(props) {
@@ -88,17 +89,33 @@ export default class Services extends React.Component {
             {this.state.srvices.map((e, i) => {
               return (
                 <div key={i} className="col-md-3 serviceCardMain">
-                  <div className="p-3 serviceCard backgroundLight text-center m-2 color">
-                    <div>
+                  <div className="serviceCard welfareServiceCard backgroundLight text-center m-2 color">
+                    <div className="innerServices1">
                       <p style={{ fontSize: "2.5em" }}>
                         <i class={e.ico}></i>
                       </p>
+                      <Link to="/Donation">
+                        <p className="text bg-light shadow color py-2">
+                          Donate
+                          <span>
+                            <i class="fas fa-donate"></i>
+                          </span>
+                        </p>
+                      </Link>
                     </div>
-                    <p
-                      style={{ fontSize: "1.2em", textTransform: "capitalize" }}
-                    >
-                      {e.name}
-                    </p>
+                    <div className="innerServices2">
+                      <p style={{ fontSize: "2.5em" }}>
+                        <i class={e.ico}></i>
+                      </p>
+                      <p
+                        style={{
+                          fontSize: "1.2em",
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {e.name}
+                      </p>
+                    </div>
                   </div>
                 </div>
               );

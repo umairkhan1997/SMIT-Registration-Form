@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import logo from "../../images/logo.png";
-// import "../App.css";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
 export default class MainHeader extends React.Component {
@@ -16,7 +15,7 @@ export default class MainHeader extends React.Component {
       <header className="bg-light border-bottom sticky-top">
         <div className="backgroundLight shadow">
           <div className="">
-            <nav className="navbar navbar-expand-lg d-flex justify-content-between navbar-light">
+            <nav className="navbar navbar-expand-lg d-flex py-0 px-5 justify-content-between navbar-light">
               <div>
                 <NavLink className="navbar-brand" to="/">
                   <img src={logo} width="180px" />
@@ -40,7 +39,12 @@ export default class MainHeader extends React.Component {
                 >
                   <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/">
+                      <NavLink
+                        activeClassName="activeLink"
+                        className="nav-link"
+                        exact
+                        to="/"
+                      >
                         Home
                       </NavLink>
                     </li>
@@ -82,32 +86,14 @@ export default class MainHeader extends React.Component {
                       </NavLink>
                     </li>
 
-                    <li className="nav-item">
-                      {/* <a
-                        className="nav-link"
-                        href="Donation"
-                        tabindex="-1"
-                        aria-disabled="true"
-                        style={{ color: "white" }}
+                    <li className="nav-item backgroundDark">
+                      <NavLink
+                        className="nav-link text-white"
+                        activeClassName="activeLink"
+                        to="Donation"
                       >
-                        Donate
-                      </a> */}
-                      <button
-                        style={{
-                          backgroundColor: "#f8f9fa",
-                          border: 0,
-                          marginTop: 5,
-                        }}
-                      >
-                        <NavLink
-                          activeClassName="activeLink"
-                          to="Donation"
-                          className="donate"
-                        >
-                          DONATION
-                        </NavLink>
-                      </button>
-                      {/* <button className='donate' >Donate</button> */}
+                        DONATION
+                      </NavLink>
                     </li>
                   </ul>
                 </div>

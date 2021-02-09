@@ -43,7 +43,6 @@ const reducerSmit = (state = initial_state, action) => {
             return { ...state, smitCoursesGets: action.payload.data };
         }
         case ActionTypes.stdData: {
-            console.log(action,"action in reducer")
             return { ...state, stdDatas: action.payload,stdDatasImg:action.data,courseId:action.b,year:action.c };
         }
 

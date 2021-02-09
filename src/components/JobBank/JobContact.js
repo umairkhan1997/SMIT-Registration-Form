@@ -1,5 +1,4 @@
 import React from "react";
-// import "./SmitStyle.css";
 
 export default class SmitContact extends React.Component {
   constructor(props) {

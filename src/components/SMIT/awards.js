@@ -6,11 +6,6 @@ export default class SMITAwards extends React.Component {
     super(props);
     this.state = {
       awards: [
-        // {
-        //   image: { award },
-        //   title:
-        //     "Saylani Cisco Academy to be Fastest Growing IT Institute in 2018",
-        // },
         {
           image:
             "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/74940239_2203702339731766_7052904111888400384_n.jpg?_nc_cat=102&ccb=2&_nc_sid=8bfeb9&_nc_eui2=AeFj1qoWZia3U1pueoKMy5fJmCcwbn_xzbWYJzBuf_HNtWCAFG5207pFGg9GAFWH9-JevEO_qWx2hl3V9gWiWgVC&_nc_ohc=nLJgDCXhZfQAX_fYZ3K&_nc_ht=scontent.fkhi1-1.fna&oh=9f3c9e8768fe0be3d8d824a933161b9a&oe=5FFFA099",

@@ -12,15 +12,12 @@ const reducerSchoolGreen = (state = initial_state, action) => {
             return { ...state, schoolCampusGets: action.payload };
         }
         case ActionTypes.schoolCountGet: {
-            console.log(action.payload, 'action.payload.data')
             return { ...state, schoolCountGets: action.payload };
         }
         case ActionTypes.schoolTeacherGet: {
-            console.log(action.payload, 'action.payload.data')
             return { ...state, schoolTeacherGets: action.payload };
         }
         case ActionTypes.schoolFeatureGet: {
-            console.log(action.payload, 'action.payload.data')
             return { ...state, schoolFeatureGets: action.payload };
         }
         default: {

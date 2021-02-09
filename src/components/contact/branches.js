@@ -378,7 +378,7 @@ export default class Branches extends React.Component {
   render() {
     const { currentCity } = this.state;
     return (
-      <div className="my-5 py-5">
+      <div id="contactBranches" className="my-5 py-5">
         <div className="backgroundLight border-bottom">
           <div className="py-5 shadow backgroundDark">
             <div className="container">

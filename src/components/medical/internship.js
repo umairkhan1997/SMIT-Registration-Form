@@ -19,8 +19,6 @@ export default class Internship extends React.Component {
                   src={intern}
                   width="100%"
                 />
-                {/* <button>Apply for Internship</button>
-                <button>Apply for Camp</button> */}
               </div>
               <div className="col-md-8">
                 <div className="intenForm">

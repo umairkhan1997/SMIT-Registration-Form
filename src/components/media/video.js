@@ -55,17 +55,15 @@ class Video extends React.Component {
     // let channelKey = "AIzaSyC6kV16wGcyghUOOR2Dh9loFFNRzs2VEbo";
     let channelKey = "AIzaSyB6jWhfeCv-DaMW6KxdxM43-1Gb7D4cJMY";
     let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${channelKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`;
-    console.log(finalURl);
+
     await fetch(finalURl)
       .then((response) => response.json())
       .then((videos) => {
-        console.log(videos.nextPageToken, "==================Core Data");
         this.setState({
           nextToken: videos.nextPageToken,
           allvideos: videos.items,
           currentVideo: videos.items[0],
         });
-        console.log(this.state.allvideos);
       })
       .catch((error) => alert(error));
   }
@@ -85,7 +83,6 @@ class Video extends React.Component {
           nextToken: videos.nextPageToken,
           previousToken: videos.prevPageToken,
         });
-        console.log(this.state.allvideos);
       })
       .catch((error) => alert(error));
   }
@@ -102,19 +99,12 @@ class Video extends React.Component {
     await fetch(finalURl)
       .then((response) => response.json())
       .then((videos) => {
-        console.log(
-          videos.prevPageToken,
-          "<======back token",
-          videos.nextPageToken,
-          "<=========previous token"
-        );
         this.setState({
           allvideos: videos.items,
           currentVideo: videos.items[0],
           nextToken: videos.nextPageToken,
           previousToken: videos.prevPageToken,
         });
-        console.log(this.state.allvideos);
       })
       .catch((error) => alert(error));
   }
@@ -125,7 +115,6 @@ class Video extends React.Component {
   async searchVideo(e) {
     e.preventDefault();
     const { searchVideoText } = this.state;
-    console.log(searchVideoText);
     const { saylaniChannelID, saylaniChannelKey } = this.state;
     let result = 50;
     let finalURl = `https://www.googleapis.com/youtube/v3/search?key=${saylaniChannelKey}&channelId=${saylaniChannelID}&part=snippet,id&order=date&maxResults=${result}&q=${searchVideoText}`;
@@ -138,12 +127,11 @@ class Video extends React.Component {
           nextToken: videos.nextPageToken,
           previousToken: videos.prevPageToken,
         });
-        console.log(this.state.allvideos);
+
       })
       .catch((error) => alert(error));
   }
   render() {
-    // console.log(this.props.mediaGets);
 
     return (
       <div>
@@ -214,7 +202,6 @@ class Video extends React.Component {
           <div>
             <div className="row">
               {this.state.allvideos.map((e, i) => {
-                // console.log(e.snippet.title);
                 return (
                   <div key={i} className="col-md-4 py-2">
                     <div

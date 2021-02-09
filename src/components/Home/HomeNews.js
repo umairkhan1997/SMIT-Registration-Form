@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getAllNews } from "../../Redux/action/homeAction";
+import { getAllHomeNews } from "../../Redux/action/homeAction";
 class HomeNews extends React.Component {
   constructor(props) {
     super(props);
@@ -13,12 +13,13 @@ class HomeNews extends React.Component {
   }
   componentDidMount() {
     const { page, limit } = this.state;
-    this.props.getAllNews(page, limit, "undefined");
+    this.props.getAllHomeNews(page, limit, "undefined");
   }
 
   render() {
     return (
       <div
+        id="homeNews"
         style={{ backgroundColor: "rgb(245, 248, 255)" }}
         className="pt-3 pb-3"
       >
@@ -27,11 +28,10 @@ class HomeNews extends React.Component {
             <h1>Latest News</h1>
           </div>
           <div className="row">
-            <div className="col-md-6 px-4 d-flex align-items-stretch flex-column">
-              {this.props.SaylaniNewsGet &&
-                this.props.SaylaniNewsGet.length > 0 &&
-                this.props.SaylaniNewsGet.slice(1, 4).map((data) => {
-                  //  console.log(data, 'first ')
+            <div className="col-md-6 px-4">
+              {this.props.SaylaniHomeNewsGets &&
+                this.props.SaylaniHomeNewsGets.length > 0 &&
+                this.props.SaylaniHomeNewsGets.slice(1, 4).map((data) => {
                   return (
                     <div className="news row mt-2 mb-2 bg-white">
                       <div className="col-md-5 col-sm-3">
@@ -51,10 +51,9 @@ class HomeNews extends React.Component {
                 })}
             </div>
             <div className="col-md-6 px-4">
-              {this.props.SaylaniNewsGet &&
-                this.props.SaylaniNewsGet.length > 0 &&
-                this.props.SaylaniNewsGet.slice(0, 1).map((data) => {
-                  //  console.log(data, 'first ')
+              {this.props.SaylaniHomeNewsGets &&
+                this.props.SaylaniHomeNewsGets.length > 0 &&
+                this.props.SaylaniHomeNewsGets.slice(0, 1).map((data) => {
                   return (
                     <div
                       style={{ height: "97%" }}
@@ -86,15 +85,14 @@ class HomeNews extends React.Component {
 
 function mapStateToProp(state) {
   return {
-    SaylaniNewsGet: state.root.SaylaniNewsGet,
+    SaylaniHomeNewsGets: state.root.SaylaniHomeNewsGets,
     SaylaniNewsNext: state.root.SaylaniNewsNext,
   };
 }
 function mapDispatchToProp(dispatch) {
   return {
-    getAllNews: (a, b, e) => {
-      console.log("dispatch is calling");
-      dispatch(getAllNews(a, b, e));
+    getAllHomeNews: (a, b, e) => {
+      dispatch(getAllHomeNews(a, b, e));
     },
   };
 }

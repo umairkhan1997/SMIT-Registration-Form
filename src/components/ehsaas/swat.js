@@ -1,5 +1,4 @@
 import React from "react";
-import "./ehsaas.css";
 
 export default class SWAT extends React.Component {
   constructor(props) {

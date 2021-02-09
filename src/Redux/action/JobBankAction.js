@@ -9,13 +9,11 @@ function JobBankHuntGet() {
         fetch(`${api}JobBank/JobBankJobHuntGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
                     // allData=response
                     dispatch({ type: ActionTypes.JobBankHuntGet, payload: response });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }
@@ -27,12 +25,10 @@ function jobBankFormGet() {
         fetch(`${api}JobBank/jobBankFormGet`, { headers })
             .then((res) =>
                 res.json().then(async (response) => {
-                    console.log(response, "data");
                     dispatch({ type: ActionTypes.jobBankFormGet, payload: response });
                 })
             )
             .catch((err) => {
-                console.log(err, "err");
             });
     };
 }

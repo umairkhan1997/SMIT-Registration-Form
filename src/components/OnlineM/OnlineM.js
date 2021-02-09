@@ -29,7 +29,6 @@ function OnlineM(props) {
   };
 
   const handleFileInputChange = (e) => {
-    console.log("sadsdsd one", e.target.files[0]);
     const file = e.target.files[0];
     previewFile(file);
     setSelectedFile(file);
@@ -38,7 +37,6 @@ function OnlineM(props) {
   };
 
   const previewFile = (file) => {
-    console.log("sadsdsd two", file);
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = () => {
@@ -47,7 +45,6 @@ function OnlineM(props) {
   };
 
   const handleSubmitFile = (e) => {
-    console.log("sadsdsd three", selectedFile);
     e.preventDefault();
     if (!selectedFile) return;
     const reader = new FileReader();
@@ -56,14 +53,12 @@ function OnlineM(props) {
       uploadImage(reader.result);
     };
     reader.onerror = () => {
-      console.error("AHHHHHHHH!!");
       setErrMsg("something went wrong!");
     };
   };
   const timerToClearSomewhere = useRef(null);
 
   const uploadImage = async (base64EncodedImage) => {
-    console.log("sadsdsd", base64EncodedImage);
     const obj = {
       stdName,
       fthName,

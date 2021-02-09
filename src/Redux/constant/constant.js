@@ -34,7 +34,8 @@ const ActionTypes = {
   benificiariesCountGet: 'benificiariesCountGet',
   opdNameGet: "opdNameGet",
   opdListGet: "opdListGet",
-  stdData:'stdData'
+  stdData:'stdData',
+  SaylaniHomeNewsGet:'SaylaniHomeNewsGet'
 };
 
 export default ActionTypes;

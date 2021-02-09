@@ -26,7 +26,6 @@ const reducerMedical = (state = initial_state, action) => {
         }
 
         case ActionTypes.opdListGet: {
-            console.log(action.payload.data)
             return { ...state, opdListGets: action.payload.data };
         }
         default: {
