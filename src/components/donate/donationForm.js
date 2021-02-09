@@ -3,7 +3,7 @@ import "./donate.css";
 import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
-import { withRouter, Redirect,Link,Route } from "react-router-dom";
+import { withRouter, Redirect, Link, Route } from "react-router-dom";
 import axios from 'axios';
 class DonationForm extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class DonationForm extends React.Component {
       remarks: "",
       title: "",
       chkamount: false,
-      toForm:false,
+      toForm: false,
       aqiqaDropDown: [
         "Aqiqa Goat (8000)",
         "Aqiqa Goat (9000)",
@@ -188,7 +188,7 @@ class DonationForm extends React.Component {
   componentDidMount() {
     this.props.DonaListGet();
     this.setState({
-      toForm:true
+      toForm: true
     })
   }
 
@@ -241,24 +241,22 @@ class DonationForm extends React.Component {
       this.setState({ chkremarks: true });
       window.scrollTo(0, 900);
     } else {
-
       const obj = {
-        "Registration":
-        {
-          "Currency": "AED",
-          "ReturnPath": "http://www.saylaniwelfare.com/Saylani/Finalization.php",
-          "TransactionHint": "CPT:Y;VCC:Y;",
-          "OrderlD": "7210055701315195",
-          "Store": "0000",
-          "Terminal": "0000",
-          "Channel": "Web",
-          "Amount": "2.00",
-          "Customer": "Demo Merchant",
-          "OrderName": "Paybill",
-          "UserName": "Demo_fY9c",
-          "Password": "Comtrust@20182018"
-        }
-      }
+        Registration: {
+          Currency: "AED",
+          ReturnPath: "http://www.saylaniwelfare.com/Saylani/Finalization.php",
+          TransactionHint: "CPT:Y;VCC:Y;",
+          OrderlD: "7210055701315195",
+          Store: "0000",
+          Terminal: "0000",
+          Channel: "Web",
+          Amount: "2.00",
+          Customer: "Demo Merchant",
+          OrderName: "Paybill",
+          UserName: "Demo_fY9c",
+          Password: "Comtrust@20182018",
+        },
+      };
       // //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
       // let config = {
       //   headers: {
@@ -279,51 +277,52 @@ class DonationForm extends React.Component {
       //     console.log("err", err)
       //   })
       const options = {
-        method: 'POST',
-        headers: { 'Accept': 'application/json',
-            'Content-Type': 'application/json', },
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
         data: obj,
-        url:'https://demo-ipg.ctdev.comtrust.ae:2443',
+        url: "https://demo-ipg.ctdev.comtrust.ae:2443",
       };
       axios(options)
-      .then((res)=>{
-console.log(res,'response')
-      // console.log(res.data.Transaction.TransactionID)
-      // console.log(res.data.Transaction.UniqueID)
-      // console.log(res.data.Transaction.PaymentPage)
-      // if(res.data.Transaction.PaymentPage)
-      // {
-      // //  return  <Redirect to={res.data.Transaction.PaymentPortal} />
-      //    // res.redirect(res.data.Transaction.PaymentPage);
-      //    axios.Redirect(res.data.Transaction.PaymentPage)
-      // }
-  //     const objs = {
-  //       "Finalization": {
-  //       "TransactionID": res.data.Transaction.TransactionID,
-  //       "Customer": "Demo Merchant",
-  //       "UserName":"Demo_fY9c",
-  //       "Password":"Comtrust@20182018"
-  //       }
-  //       }
-  //     const optionss = {
-  //       method: 'POST',
-  //       headers: { 'Accept': 'application/json',
-  //           'Content-Type': 'application/json', },
-  //       data: objs,
-  //       url:res.data.Transaction.PaymentPage,
-  //     };
-  //  axios(optionss)
-  //  .then(res=>{
-  //   console.log(res,'res')
-  //  })
-  //  .catch(err=>{
-  //   console.log(err,'2')
-  //  })
-      
-      })
-      .catch(err=>{
-        console.log(err)
-      })
+        .then((res) => {
+          console.log(res, "response");
+          // console.log(res.data.Transaction.TransactionID)
+          // console.log(res.data.Transaction.UniqueID)
+          // console.log(res.data.Transaction.PaymentPage)
+          // if(res.data.Transaction.PaymentPage)
+          // {
+          // //  return  <Redirect to={res.data.Transaction.PaymentPortal} />
+          //    // res.redirect(res.data.Transaction.PaymentPage);
+          //    axios.Redirect(res.data.Transaction.PaymentPage)
+          // }
+          //     const objs = {
+          //       "Finalization": {
+          //       "TransactionID": res.data.Transaction.TransactionID,
+          //       "Customer": "Demo Merchant",
+          //       "UserName":"Demo_fY9c",
+          //       "Password":"Comtrust@20182018"
+          //       }
+          //       }
+          //     const optionss = {
+          //       method: 'POST',
+          //       headers: { 'Accept': 'application/json',
+          //           'Content-Type': 'application/json', },
+          //       data: objs,
+          //       url:res.data.Transaction.PaymentPage,
+          //     };
+          //  axios(optionss)
+          //  .then(res=>{
+          //   console.log(res,'res')
+          //  })
+          //  .catch(err=>{
+          //   console.log(err,'2')
+          //  })
+        })
+        .catch((err) => {
+          console.log(err);
+        });
 
       console.log("hello world");
     }
@@ -363,9 +362,51 @@ console.log(res,'response')
 
           <div className="container mt-5">
             <div className="row">
-              <div className="col-md-7 backgroundLight p-5">
+              <div
+                style={{
+                  backgroundImage:
+                    'url("https://www.islamic-banking.com/sites/default/files/styles/banner/public/field/banner/iibi_banner_london_a_01.jpg?itok=lDAby0JQ")',
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+                className="col-md-12 p-5 backgroundDark"
+              >
+                <div className="">
+                  <h3 className="text-white">
+                    Donate to us through Virgin Money Giving
+                  </h3>
+                  <p className="text-white">For UK Donors</p>
+                </div>
                 <div className="row">
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-4">
+                    <a
+                      target="_blank"
+                      className="donorLink"
+                      href="https://www.paypal.com/donate?token=RO8vMGfMxvHVAca65ngnyG-dyU8MS3ZCzdNx1FNge6C5Oq_gF2DCDN1-ADXnzw5aMhp2kThlxQgMOa4b"
+                    >
+                      <i class="fab fa-paypal"></i>{" "}
+                      <i class="fab fa-cc-visa"></i>
+                      <i class="fab fa-cc-mastercard"></i>
+                      <i class="fab fa-cc-amex"></i>
+                    </a>
+                  </div>
+                  <div className="col-md-4">
+                    <a
+                      target="_blank"
+                      className="donorLink"
+                      href="https://uk.virginmoneygiving.com/donation-web/charity?charityId=1015417&campaignId=8552&utm_source=extbtn&utm_campaign=donatebtn"
+                    >
+                      <img
+                        src="https://www.saylaniwelfareuk.com/wp-content/uploads/2019/05/DONATE_RED_BUTTON@1x.png"
+                        width="200px"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-12 backgroundLight p-5">
+                <div className="row">
+                  <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">Name</label>
                     <input
                       type="text"
@@ -381,7 +422,7 @@ console.log(res,'response')
                       <p className="text-danger">Field is Emply</p>
                     ) : null}
                   </div>
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">Email</label>
                     <input
                       type="text"
@@ -397,7 +438,7 @@ console.log(res,'response')
                       <p className="text-danger">Field is Emply</p>
                     ) : null}
                   </div>
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">
                       Select Donation Method
                     </label>
@@ -412,7 +453,7 @@ console.log(res,'response')
                       <option>Credit Card</option>
                     </select>
                   </div>
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">
                       Select Donation Type
                     </label>
@@ -439,7 +480,7 @@ console.log(res,'response')
                       })}
                     </select>
                   </div>
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">
                       Select Donation category
                     </label>
@@ -478,7 +519,7 @@ console.log(res,'response')
                   </div>
 
                   {this.state.donationType == "Other Donation" ? (
-                    <div className="col-md-12 mt-3 mb-3">
+                    <div className="col-md-6 mt-3 mb-3">
                       <label className="lab text-dark">Amount</label>
                       <input
                         type="text"
@@ -493,7 +534,7 @@ console.log(res,'response')
                       />
                     </div>
                   ) : (
-                      <div className="col-md-12 mt-3 mb-3">
+                      <div className="col-md-6 mt-3 mb-3">
                         <label className="lab text-dark">Quantity</label>
                         <input
                           type="number"
@@ -512,9 +553,8 @@ console.log(res,'response')
                     <p className="text-danger">Field is Emply</p>
                   ) : null}
                   <br />
-                  <p>Bank Charges is : {perc === "NaN" ? 0 : perc}</p>
 
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">Amount Payable</label>
                     <input
                       type="number"
@@ -523,9 +563,10 @@ console.log(res,'response')
                       disabled={true}
                       value={amountPayable}
                     />
+                    <p>Bank Charges is : {perc === "NaN" ? 0 : perc}</p>
                   </div>
 
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">Contact Number</label>
                     <input
                       type="text"
@@ -541,7 +582,7 @@ console.log(res,'response')
                       <p className="text-danger">Field is Emply</p>
                     ) : null}
                   </div>
-                  <div className="col-md-12 mt-3 mb-3">
+                  <div className="col-md-8 mt-3 mb-3">
                     <label className="lab text-dark">Remarks</label>
                     <textarea
                       placeholder="Enter Your Remarks"
@@ -567,52 +608,21 @@ console.log(res,'response')
                   </div>
                 </div>
               </div>
-              <div
-                style={{ backgroundColor: "#0066b3" }}
-                className="col-md-5 p-5"
-              >
-                <div className="py-3">
-                  <a
-                    target="_blank"
-                    className="donorLink"
-                    href="https://www.paypal.com/donate?token=RO8vMGfMxvHVAca65ngnyG-dyU8MS3ZCzdNx1FNge6C5Oq_gF2DCDN1-ADXnzw5aMhp2kThlxQgMOa4b"
-                  >
-                    <i class="fab fa-paypal"></i> <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                  </a>
-                </div>
-                <div className="py-3">
-                  <h3 className="text-white">
-                    Donate to us through Virgin Money Giving
-                  </h3>
-                  <p className="text-white">For UK Donors</p>
-                  <a
-                    target="_blank"
-                    className="donorLink"
-                    href="https://uk.virginmoneygiving.com/donation-web/charity?charityId=1015417&campaignId=8552&utm_source=extbtn&utm_campaign=donatebtn"
-                  >
-                    <img
-                      src="https://www.saylaniwelfareuk.com/wp-content/uploads/2019/05/DONATE_RED_BUTTON@1x.png"
-                      width="100%"
-                    />
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
         {
-          this.state.toForm?
-          <Route path='https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI/:TransactionID="252234271765"' component={() => { 
-            window.location.href = 'https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI'; 
-            return null;
-       }}/>
-          // window.location="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI"
-          // <Link to="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI" TransactionID="252234271765"  />
-   
-          :
-          null
+          this.state.toForm ?
+            <Route path='https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI/:TransactionID="252234271765"' component={() => {
+              window.location.href = 'https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI';
+              return null;
+            }}
+            />
+            // window.location="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI"
+            // <Link to="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI" TransactionID="252234271765"  />
+
+            :
+            null
         }
       </div>
     );

@@ -4,6 +4,7 @@ import MainHeader from "../components/Home/MainHeader";
 import "../components/media/media.css";
 import Fade from "react-reveal/Fade";
 import Video from "../components/media/video";
+import FacebookPost from "../components/media/facebookpost";
 
 export default class Media extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ export default class Media extends React.Component {
             </h2>
           </div>
         </div>
+        <FacebookPost />
         <Video />
       </div>
     );

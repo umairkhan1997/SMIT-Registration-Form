@@ -1,5 +1,6 @@
 import React from "react";
 import "./welfare.css";
+import pdf from "../../file/welfareform.pdf";
 
 export default class Steps extends React.Component {
   render() {
@@ -15,9 +16,9 @@ export default class Steps extends React.Component {
                 <span className="qtyn">1</span>
                 <h3>Written Application</h3>
                 <p>Complete written application with all objectives.</p>
-                <button className="btn-block prevbtn">
+                <a href={pdf} className="btn-block prevbtn" download>
                   Download Application
-                </button>
+                </a>
               </div>
             </div>
             <div className="col-md-4 py-5">

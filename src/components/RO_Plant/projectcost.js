@@ -44,9 +44,9 @@ class ProjectCost extends React.Component {
                         return (
                           <tr>
                             <td>{data.actDes}</td>
-                            <td>{data.qnt}</td>
-                            <td>{data.amount7500}</td>
-                            <td>{data.amount40000}</td>
+                            <td className="text-center">{data.qnt}</td>
+                            <td className="text-right">{data.amount7500}</td>
+                            <td className="text-right">{data.amount40000}</td>
                           </tr>
                         );
                       })}

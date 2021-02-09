@@ -6,9 +6,7 @@ import { SmitCounGet } from "../../Redux/action/smitAction";
 class TableData extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    this.state = {};
   }
   componentDidMount() {
     this.props.SmitCounGet();
@@ -45,8 +43,7 @@ class TableData extends React.Component {
                             separator=","
                             end={e.counEndNum}
                             duration={4}
-                          />
-                          +{" "}
+                          />{" "}
                         </p>
                       </div>
                     </div>

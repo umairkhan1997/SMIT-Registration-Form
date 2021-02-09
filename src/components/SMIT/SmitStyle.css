@@ -131,9 +131,9 @@
   }
 }
 
-@media only screen and (min-width:300px){
-  .coverImage{
-    width:'100%'
+@media only screen and (min-width: 300px) {
+  .coverImage {
+    width: "100%";
   }
 }
 .allTeacher:hover .teacherDetails {
@@ -190,4 +190,7 @@
   .workshopCard p {
     display: none;
   }
+}
+.em1-5 {
+  font-size: 1.5em;
 }

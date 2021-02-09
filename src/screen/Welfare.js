@@ -23,13 +23,13 @@ export default class Welfare extends React.Component {
           id: "welfareServices",
         },
         {
-          listText: "Steps",
+          listText: "Welfare Help",
           listIcon: "fas fa-walking",
           id: "welfareSteps",
         },
       ],
     };
-  }
+  } 
 
   render() {
     return (

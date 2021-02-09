@@ -49,7 +49,9 @@ export default class Cost extends React.Component {
                   </tr>
                   <tr>
                     <td>Meal 1 for Lunch</td>
-                    <td>PKR 30, solemnly000 (50x600)</td>
+                    <td>
+                      PKR <span></span> 30, solemnly000 (50x600)
+                    </td>
                     <td>PKR 900,000 (50x18000)</td>
                     <td>PKR 10,800,000 (50x216000)</td>
                   </tr>

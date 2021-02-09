@@ -10,7 +10,7 @@ export default class ContactForm extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div id="contactForm">
         <div>
           <div
             style={{ backgroundColor: "#0066b3" }}

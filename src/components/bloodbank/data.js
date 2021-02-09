@@ -15,7 +15,7 @@ export default class DataBloodBank extends React.Component {
             </div>
           </div>
           <div className="container text-center py-5">
-            <div className='col-md-12 row py-5'>
+            <div className="col-md-12 row py-5">
               <div className="col-md-8 row">
                 <div className="col-md-12">
                   <h3 className="dataHeading">Total Blood Transfusion</h3>
@@ -51,7 +51,6 @@ export default class DataBloodBank extends React.Component {
             </div>
 
             <div className="col-md-12 row">
-
               <div className="col-md-8 row">
                 <div className="col-md-12">
                   <h3 className="dataHeading">OPD Patient Of Thalassemia</h3>
@@ -152,7 +151,6 @@ export default class DataBloodBank extends React.Component {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

@@ -50,10 +50,12 @@ class Cover extends React.Component {
                 {smitNotificationGets
                   .filter((name) => {
                     return (
-                      name.cityName.toLowerCase().indexOf(city.toLowerCase()) >= 0
+                      name.cityName.toLowerCase().indexOf(city.toLowerCase()) >=
+                      0
                     );
                   })
-                  .slice(0, 1).map((filteredName, i) => {
+                  .slice(0, 1)
+                  .map((filteredName, i) => {
                     return filteredName.viewForm ? (
                       <div className="col-md-6">
                         <img
@@ -61,54 +63,62 @@ class Cover extends React.Component {
                           width="100%"
                         />
                       </div>
-                    ) : (
-                        null
-                      )
+                    ) : null;
                   })}
-                <div className="col-md-6 my-2">
+                <div className="col-md-6 my-2 p-5">
                   {smitNotificationGets
                     .filter((name) => {
                       return (
-                        name.cityName.toLowerCase().indexOf(city.toLowerCase()) >= 0
+                        name.cityName
+                          .toLowerCase()
+                          .indexOf(city.toLowerCase()) >= 0
                       );
                     })
                     .map((filteredName, i) => {
                       return filteredName.viewForm ? (
-
                         <div
                           style={{
-                            backgroundColor: "rgba(0,0,0,.5)",
+                            backgroundColor: "#0267b4",
                             boxShadow: "0 8px 12px rgba(0,0,0,.3)",
-                            borderRadius: "8px",
+                            borderRadius: "10px",
                           }}
-                          className="py-4 my-3"
+                          className="p-4 my-3"
                         >
-                          <h2 className=" border-bottom px-4">
+                          <h2 className=" border-bottom p-4">
                             {filteredName.cityName}
                           </h2>
-                          <h5 className="my-3 px-4">Course : {filteredName.courseName }</h5>
-                          <h5 className="my-3 px-4">Batch : {filteredName.batchName}</h5>
-                          <h5 className="my-3 px-4">Duration: {filteredName.duration}</h5>
-                          <h5 className="my-3 px-4">Admission last date : {filteredName.admissionLastDate}</h5>
+                          <h5 className="my-3 p-2 em1-5">
+                            Course : {filteredName.courseName}
+                          </h5>
+                          <h5 className="my-3 p-2 em1-5">
+                            Batch : {filteredName.batchName}
+                          </h5>
+                          <h5 className="my-3 p-2 em1-5">
+                            Duration: {filteredName.duration}
+                          </h5>
+                          <h5 className="my-3 p-2 em1-5">
+                            Admission last date :{" "}
+                            {filteredName.admissionLastDate}
+                          </h5>
                           <div className="row">
-                            <div className="col-md-6 mx-auto">
+                            <div className="col-md-6 py-3">
                               <div>
                                 <button
                                   onClick={() => {
                                     this.props.history.push("/apply", {
-                                      filteredName
+                                      filteredName,
                                     });
                                   }}
-                                  className="btn btn-outline-light rounded-pill px-5 my-3 btn-block"
+                                  className="btn btn-outline-light rounded-pill btn-block em1-5"
                                 >
                                   Apply
                                 </button>
                               </div>
                             </div>
-                            <div className="col-md-6">
-                              <p className="my-3">
+                            <div className="col-md-6 py-3">
+                              <p className="">
                                 <a
-                                  className="btn btn-outline-light rounded-pill px-5 btn-block"
+                                  className="btn btn-outline-light rounded-pill btn-block em1-5"
                                   target="_blank"
                                   href="https://www.facebook.com/SaylaniWelfareInternationalTrust/videos/368957824405514"
                                 >
@@ -118,18 +128,17 @@ class Cover extends React.Component {
                               </p>
                             </div>
                           </div>
-
                         </div>
                       ) : (
-                          <div className="coverText ">
-                            <img
-                              width="205%"
-                              alt="Saylani welfare Mass IT Training and Job Creation Programms"
-                              className="coverImage"
-                              src={smitbackcover}
-                            />
-                          </div>
-                        );
+                        <div className="coverText ">
+                          <img
+                            width="205%"
+                            alt="Saylani welfare Mass IT Training and Job Creation Programms"
+                            className="coverImage"
+                            src={smitbackcover}
+                          />
+                        </div>
+                      );
                     })}
                 </div>
               </div>

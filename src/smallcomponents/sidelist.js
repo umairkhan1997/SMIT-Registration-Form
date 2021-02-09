@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 export default class SideList extends React.Component {
   constructor(props) {
@@ -23,6 +24,14 @@ export default class SideList extends React.Component {
             </li>
           );
         })}
+        <li className="leftList">
+          <Link to="/Donation">
+            <span className="linkText"> Donate</span>
+            <span className="linkIcon">
+              <i className="fas fa-donate"></i>
+            </span>
+          </Link>
+        </li>
       </ul>
     );
   }

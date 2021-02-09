@@ -30,7 +30,7 @@ class BookStore extends React.Component {
     return (
       <div>
         <img src={bookStore} width="100%" alt="Bara Maah k Aurad-O-Wazaif" />
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-md-3 mt-5">
               <div className="Heading">

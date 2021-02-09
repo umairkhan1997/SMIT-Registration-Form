@@ -198,24 +198,24 @@ class NewsSection extends React.Component {
 
                 <div className="shortCount">
                   Number Of Patients Treated <br />
-                  <span className="large">53749</span>
+                  <span className="large">53,749</span>
                 </div>
                 <div className="shortCount">
                   Number Of Students Trained <br />
-                  <span className="large">125000</span>
+                  <span className="large">1,25,000</span>
                 </div>
                 <div className="shortCount">
                   Number Of Family Welfare <br />
-                  <span className="large">8500</span>
+                  <span className="large">8,500</span>
                 </div>
                 <div className="shortCount">
                   Number Of Students educate <br />
-                  <span className="large">180000</span>
+                  <span className="large">1,80,000</span>
                 </div>
                 <div className="shortCount">
                   Number Of Dasterkhwan opened
                   <br />
-                  <span className="large">180000</span>
+                  <span className="large">1,80,000</span>
                 </div>
               </div>
             </div>
