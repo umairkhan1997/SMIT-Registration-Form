@@ -12,13 +12,13 @@ export default class MainHeader extends React.Component {
 
   render() {
     return (
-      <header className="bg-light border-bottom sticky-top">
-        <div className="backgroundLight shadow">
-          <div className="">
+      <header className="bg-white border-bottom sticky-top">
+        <div className="shadow">
+          <div className="p-2">
             <nav className="navbar navbar-expand-lg d-flex py-0 px-5 justify-content-between navbar-light">
               <div>
                 <NavLink className="navbar-brand" to="/">
-                  <img src={logo} width="180px" />
+                  <img src={logo} width="200px" />
                 </NavLink>
               </div>
               <button

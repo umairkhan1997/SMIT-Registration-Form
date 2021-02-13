@@ -22,7 +22,7 @@ export default class Media extends React.Component {
             </h2>
           </div>
         </div>
-        <FacebookPost />
+        {/* <FacebookPost /> */}
         <Video />
       </div>
     );

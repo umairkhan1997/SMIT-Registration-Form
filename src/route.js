@@ -43,6 +43,7 @@ import OverView from "./screen/overview";
 import SBIL from "./screen/sbil";
 import EhsaasLangarKhana from "./screen/ehsaas";
 import AdmitCard from "./screen/admitCard";
+import Login from "./screen/adminlogin";
 
 export default function MyRoute() {
   return (
@@ -90,6 +91,7 @@ export default function MyRoute() {
       <Route path="/uploadImage" component={UploadImage} />
       <Route path="/overview" component={OverView} />
       <Route path="/admitcard" component={AdmitCard} />
+      <Route path="/login" component={Login} />
     </Router>
   );
 }

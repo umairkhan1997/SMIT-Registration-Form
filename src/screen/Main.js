@@ -6,6 +6,8 @@ import ImgSlider from "../components/Home/ImgSlider";
 import Introduction from "../components/Home/Introduction";
 import HomeData from "../components/Home/homedata";
 import SideList from "../smallcomponents/sidelist";
+import HomeCover from "../components/Home/homecover";
+import PartnerScreen from "../components/Home/partnerlogo";
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -37,8 +39,10 @@ export default class Main extends React.Component {
         <MainHeader />
         <ImgSlider />
         <Introduction />
+        <HomeCover />
         <HomeData />
         <HomeNews />
+        <PartnerScreen />
         <Footer />
       </div>
     );

@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.a25d8c9b.chunk.css",
-    "main.js": "/static/js/main.4be133ea.chunk.js",
-    "main.js.map": "/static/js/main.4be133ea.chunk.js.map",
+    "main.css": "/static/css/main.fcdf4e84.chunk.css",
+    "main.js": "/static/js/main.e67167e0.chunk.js",
+    "main.js.map": "/static/js/main.e67167e0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a7aa9b7e.js",
     "runtime-main.js.map": "/static/js/runtime-main.a7aa9b7e.js.map",
     "static/css/2.14e6b765.chunk.css": "/static/css/2.14e6b765.chunk.css",
-    "static/js/2.a211b3b4.chunk.js": "/static/js/2.a211b3b4.chunk.js",
-    "static/js/2.a211b3b4.chunk.js.map": "/static/js/2.a211b3b4.chunk.js.map",
+    "static/js/2.dbae19c4.chunk.js": "/static/js/2.dbae19c4.chunk.js",
+    "static/js/2.dbae19c4.chunk.js.map": "/static/js/2.dbae19c4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.09de4dd39e8005c62e09bccaf512e8c5.js": "/precache-manifest.09de4dd39e8005c62e09bccaf512e8c5.js",
+    "precache-manifest.b62be2e3e76e23c2b03aab3e0585fe17.js": "/precache-manifest.b62be2e3e76e23c2b03aab3e0585fe17.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.14e6b765.chunk.css.map": "/static/css/2.14e6b765.chunk.css.map",
-    "static/css/main.a25d8c9b.chunk.css.map": "/static/css/main.a25d8c9b.chunk.css.map",
-    "static/js/2.a211b3b4.chunk.js.LICENSE.txt": "/static/js/2.a211b3b4.chunk.js.LICENSE.txt",
+    "static/css/main.fcdf4e84.chunk.css.map": "/static/css/main.fcdf4e84.chunk.css.map",
+    "static/js/2.dbae19c4.chunk.js.LICENSE.txt": "/static/js/2.dbae19c4.chunk.js.LICENSE.txt",
     "static/media/Dr.jpg": "/static/media/Dr.9001dde4.jpg",
     "static/media/EhsaanSaylani.jpeg": "/static/media/EhsaanSaylani.d5e87f22.jpeg",
-    "static/media/HAJJ.pdf": "/static/media/HAJJ.4398824b.pdf",
     "static/media/ROback.jpg": "/static/media/ROback.adc8797f.jpg",
     "static/media/acca.jpeg": "/static/media/acca.408b36de.jpeg",
     "static/media/SmitStyle.css": "/static/media/achieve.aa079bc9.jpg",
@@ -25,7 +24,6 @@
     "static/media/announcement.jpg": "/static/media/announcement.f98c6394.jpg",
     "static/media/QuranApp.css": "/static/media/apptafseer.863bf581.jpeg",
     "static/media/App.css": "/static/media/upco.7c95898d.jpg",
-    "static/media/blood3.jpeg": "/static/media/blood3.1f67b2c6.jpeg",
     "static/media/bookStore.jpg": "/static/media/bookStore.08ebc3a7.jpg",
     "static/media/caicap.jpeg": "/static/media/caicap.078ea53d.jpeg",
     "static/media/cia.jpeg": "/static/media/cia.d55abd37.jpeg",
@@ -61,14 +59,15 @@
     "static/media/teacher5.png": "/static/media/teacher5.33f52376.png",
     "static/media/teacher6.png": "/static/media/teacher6.32cfa0f2.png",
     "static/media/uma.jpg": "/static/media/uma.6ef14c6c.jpg",
+    "static/media/welfareform.pdf": "/static/media/welfareform.e10a1bc6.pdf",
     "static/media/zeeshan.png": "/static/media/zeeshan.662c4891.png",
     "static/media/ziaKhan.png": "/static/media/ziaKhan.6f58b863.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a7aa9b7e.js",
     "static/css/2.14e6b765.chunk.css",
-    "static/js/2.a211b3b4.chunk.js",
-    "static/css/main.a25d8c9b.chunk.css",
-    "static/js/main.4be133ea.chunk.js"
+    "static/js/2.dbae19c4.chunk.js",
+    "static/css/main.fcdf4e84.chunk.css",
+    "static/js/main.e67167e0.chunk.js"
   ]
 }

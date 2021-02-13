@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ee536cd3749d01bc23e918990191d0b",
+    "revision": "4a4cce6eea426afa4cbab1dd5cda83f2",
     "url": "/index.html"
   },
   {
-    "revision": "605bd809babac96c1286",
+    "revision": "8b0a0d9710c94f1a2a90",
     "url": "/static/css/2.14e6b765.chunk.css"
   },
   {
-    "revision": "0b917a898d5bb10eef22",
-    "url": "/static/css/main.a25d8c9b.chunk.css"
+    "revision": "e383044567753e51f4de",
+    "url": "/static/css/main.fcdf4e84.chunk.css"
   },
   {
-    "revision": "605bd809babac96c1286",
-    "url": "/static/js/2.a211b3b4.chunk.js"
+    "revision": "8b0a0d9710c94f1a2a90",
+    "url": "/static/js/2.dbae19c4.chunk.js"
   },
   {
     "revision": "6e7a615ff981e276b16fa08d92b0044a",
-    "url": "/static/js/2.a211b3b4.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.dbae19c4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0b917a898d5bb10eef22",
-    "url": "/static/js/main.4be133ea.chunk.js"
+    "revision": "e383044567753e51f4de",
+    "url": "/static/js/main.e67167e0.chunk.js"
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -34,10 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d5e87f2200b5e2a331891389ca249fb0",
     "url": "/static/media/EhsaanSaylani.d5e87f22.jpeg"
-  },
-  {
-    "revision": "4398824ba833bf84056d73b8768b41ed",
-    "url": "/static/media/HAJJ.4398824b.pdf"
   },
   {
     "revision": "adc8797f81040e0173b780e7aefd5307",
@@ -70,10 +66,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1b810d41944a4ae6edffe6180f7a17a1",
     "url": "/static/media/back.1b810d41.jpg"
-  },
-  {
-    "revision": "1f67b2c64ce7184b90724d9b2fb82f40",
-    "url": "/static/media/blood3.1f67b2c6.jpeg"
   },
   {
     "revision": "08ebc3a798cbf1916aab8d4424569758",
@@ -222,6 +214,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7c95898db0f22bd2e6f2e7b463286ff9",
     "url": "/static/media/upco.7c95898d.jpg"
+  },
+  {
+    "revision": "e10a1bc623c0c00a2807ac01937bce5c",
+    "url": "/static/media/welfareform.e10a1bc6.pdf"
   },
   {
     "revision": "662c489194c361d274ba4880f94690d8",

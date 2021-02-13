@@ -105,7 +105,7 @@ export default class DataTable extends React.Component {
                       <td className="dataHeadingDark"> 60,500</td>
                     </tr>
                     <tr>
-                      <td className="dataHeadingDark"> Amount</td>
+                      <td className="dataHeadingDark"> Qty</td>
                       <td className="dataHeadingDark"> 7,140</td>
                       <td className="dataHeadingDark"> 55,458</td>
                       <td className="dataHeadingDark"> 2,826</td>
