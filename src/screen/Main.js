@@ -37,11 +37,12 @@ export default class Main extends React.Component {
       <div>
         <SideList item={this.state.listItem} />
         <MainHeader />
-        <ImgSlider />
+        {/* <ImgSlider /> */}
         <Introduction />
         <HomeCover />
-        <HomeData />
+        {/* <HomeData /> */}
         <HomeNews />
+        <p className="partnerHeading">CORPORATE EMBASSADOR PROGRAM</p>
         <PartnerScreen />
         <Footer />
       </div>
