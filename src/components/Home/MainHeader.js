@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import logo from "../../images/logo.png";
 import "./Home.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 export default class MainHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +37,10 @@ export default class MainHeader extends React.Component {
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  <ul className="navbar-nav mr-auto">
+                  <ul
+                    style={{ backgroundColor: "white" }}
+                    className="navbar-nav mr-auto"
+                  >
                     <li className="nav-item">
                       <NavLink
                         activeClassName="activeLink"
@@ -48,13 +51,79 @@ export default class MainHeader extends React.Component {
                         Home
                       </NavLink>
                     </li>
+                    <li class="nav-item dropdown">
+                      <NavLink
+                        class="nav-link dropdown-toggle"
+                        to="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        activeClassName="activeLink"
+                      >
+                        About Us
+                      </NavLink>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <li>
+                          <Link class="dropdown-item" href="#">
+                            Founder Message
+                          </Link>
+                        </li>
+                        <li>
+                          <Link class="dropdown-item" href="#">
+                            Vision & Mission
+                          </Link>
+                        </li>
+                        <li>
+                          <Link class="dropdown-item" href="#">
+                            Contact
+                          </Link>
+                        </li>
+                        <li>
+                          <Link class="dropdown-item" href="#">
+                            Audit Report
+                          </Link>
+                        </li>
+                        <li>
+                          <Link class="dropdown-item" href="#">
+                            NTN Certificate
+                          </Link>
+                        </li>
+                        <li>
+                          <Link class="dropdown-item" href="#">
+                            Locations
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
                     <li className="nav-item">
                       <NavLink
                         activeClassName="activeLink"
                         className="nav-link"
                         to="/projects"
                       >
-                        PROJECTS
+                        What We Do
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink
+                        activeClassName="activeLink"
+                        className="nav-link"
+                        to="/projects"
+                      >
+                        Where We Work
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink
+                        activeClassName="activeLink"
+                        className="nav-link"
+                        to="/projects"
+                      >
+                        Our Champions
                       </NavLink>
                     </li>
 
@@ -64,10 +133,10 @@ export default class MainHeader extends React.Component {
                         className="nav-link"
                         to="/media"
                       >
-                        MEDIA
+                        Media
                       </NavLink>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <NavLink
                         activeClassName="activeLink"
                         className="nav-link"
@@ -75,8 +144,8 @@ export default class MainHeader extends React.Component {
                       >
                         CONTACT
                       </NavLink>
-                    </li>
-                    <li className="nav-item">
+                    </li> */}
+                    {/* <li className="nav-item">
                       <NavLink
                         activeClassName="activeLink"
                         className="nav-link"
@@ -84,7 +153,7 @@ export default class MainHeader extends React.Component {
                       >
                         NEWS
                       </NavLink>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item backgroundDark">
                       <NavLink

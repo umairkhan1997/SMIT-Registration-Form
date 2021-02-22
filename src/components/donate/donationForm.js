@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
 import { withRouter, Redirect } from "react-router-dom";
 import axios from "axios";
+import cover from "../../images/campaignimages/cover.png";
 class DonationForm extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,8 @@ class DonationForm extends React.Component {
       remarks: "",
       title: "",
       chkamount: false,
+      donationDetailForm: false,
+      donationForm: true,
       aqiqaDropDown: [
         "Aqiqa Goat (8000)",
         "Aqiqa Goat (9000)",
@@ -351,6 +354,212 @@ class DonationForm extends React.Component {
     console.log(this.props, "this.props");
     return (
       <div>
+        {/* Campaign Cover */}
+        <div
+          style={{
+            backgroundImage:
+              "url('https://img.freepik.com/free-photo/christmas-background-with-falling-snow-snowflake-holiday-winter-merry-christmas-happy-new-year_52701-32.jpg?size=626&ext=jpg')",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
+          }}
+        >
+          <div className="container p-5">
+            <div className="row">
+              <div className="col-md-5">
+                <img src={cover} width="100%" />
+              </div>
+              <div className="col-md-7">
+                <h1 className="p-2">
+                  Over Donation reached <span>500000</span>
+                </h1>
+                <div
+                  style={{ backgroundColor: "rgba(0,0,0,.1)" }}
+                  className="shadow p-3 rounded"
+                >
+                  <h2>One Blanket Cost is Rs 1200/-</h2>
+                </div>
+
+                <div className="row">
+                  <div className="col-md-6 p-3 text-center">
+                    <div className="bg-light shadow rounded p-3">
+                      <h3>2 Blankets</h3>
+                      <button className="prevbtn">Donate</button>
+                    </div>
+                  </div>
+                  <div className="col-md-6 p-3 text-center">
+                    <div className="bg-light shadow rounded p-3">
+                      <h3>5 Blankets</h3>
+                      <button className="prevbtn">Donate</button>
+                    </div>
+                  </div>
+                  <div className="col-md-6 p-3 text-center">
+                    <div className="bg-light shadow rounded p-3">
+                      <h3>12 Blankets</h3>
+                      <button className="prevbtn">Donate</button>
+                    </div>
+                  </div>
+                  <div className="col-md-6 p-3 text-center">
+                    <div className="bg-light shadow rounded p-3">
+                      <h3>Other Amount</h3>
+                      <button className="prevbtn">Donate</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Donation Form */}
+        {this.state.donationForm ? (
+          <div className="p-5">
+            <div className="row">
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Zakat</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Sadqa</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Aqeeqa</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Education</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Marriage</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Food</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Monthly Rashan</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Saaf Pani</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Medical</p>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-4 donationCard">
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationDetailForm: true,
+                      donationForm: false,
+                    })
+                  }
+                >
+                  <p className="donationCardText">Other Donation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          false
+        )}
+        {/* Donatin Detail Form */}
+
+        {this.state.donationDetailForm ? (
+          <div className="backgroundLight p-5">
+            <div className="container rounded shadow bg-white p-5">
+              <h3>Select Type</h3>
+              <div className="row subCategoryList">
+                {this.state.sadqaDropDown.map((e, i) => {
+                  return (
+                    <div key={i} className="col-md-3 p-2">
+                      <div>{e}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div></div>
+          </div>
+        ) : null}
+
         <div className="container my-5 py-5">
           <div className="displayheading">
             <h1>Donation Form</h1>

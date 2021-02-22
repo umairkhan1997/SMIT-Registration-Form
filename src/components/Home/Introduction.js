@@ -10,6 +10,7 @@ import book from "../../images/homeimages/book.png";
 import medical from "../../images/homeimages/medical.png";
 import family from "../../images/homeimages/family.png";
 import house2 from "../../images/homeimages/house2.png";
+import introtextImage from "../../images/homeimages/introtextImage.png";
 import student from "../../images/homeimages/student.png";
 import flat from "../../images/homeimages/flat.png";
 import roplant from "../../images/homeimages/roplant.png";
@@ -36,9 +37,9 @@ class Introduction extends React.Component {
         id="homeIntro"
       >
         <div style={{ height: "90vh" }}></div>
-        <div className="p-5">
-          <div className="row">
-            <div className="col-md-6">
+        <div className="pt-5 px-5">
+          <div className="row pt-5 px-5">
+            <div className="col-md-5">
               <Reveal effect="fadeInUp">
                 <div className="homeIntro border bg-white p-4">
                   <h3 className="color introMainText">About Us</h3>
@@ -46,7 +47,10 @@ class Introduction extends React.Component {
                     Since 1999, saylani welfare working as a bridge between
                     needy & affluent
                   </p>
-                  <p className="text-justify introText">
+                  <p
+                    style={{ fontSize: "1.1em" }}
+                    className="text-justify introText"
+                  >
                     Established in May 1999 by famous spiritual and religious
                     scholar Maulana Bashir Ahmed Farooqui, Saylani Welfare
                     International Trust was built on the fundamentals of
@@ -54,7 +58,10 @@ class Introduction extends React.Component {
                     troubles of the poor, giving people a chance to live a
                     dignified life and spreading happiness.
                   </p>
-                  <p className="text-justify introText">
+                  <p
+                    style={{ fontSize: "1.1em" }}
+                    className="text-justify introText"
+                  >
                     We are an organization that believes in lighting up the
                     lives of underprivileged people across the world. We
                     endeavor to provide the best quality services in areas
@@ -78,8 +85,8 @@ class Introduction extends React.Component {
                 </div>
               </Reveal>
             </div>
-            <div className="col-md-6 pt-5">
-              <div className="row mt-5">
+            <div className="col-md-7 pt-5">
+              <div className="row mt-3">
                 <div
                   style={{ backgroundColor: "#62ba46" }}
                   className="col-md-4"
@@ -118,7 +125,7 @@ class Introduction extends React.Component {
                     countStart={1000}
                     countEnd={10000}
                   >
-                    patients treated annually.
+                    familied helped by Saylani Welfare International Trust
                   </HomeService>
                   <HomeService
                     imageSrc={house2}
@@ -135,9 +142,9 @@ class Introduction extends React.Component {
                   <HomeService
                     imageSrc={student}
                     countStart={10000}
-                    countEnd={50000}
+                    countEnd={75000}
                   >
-                    Students enrolled.
+                    IT Students enrolled.
                   </HomeService>
                   <HomeService imageSrc={flat} countStart={100} countEnd={500}>
                     Houses & flat are provided on 12-14 years easy installment.
@@ -154,7 +161,6 @@ class Introduction extends React.Component {
               </div>
             </div>
           </div>
-          {/* ))} */}
         </div>
       </div>
     );

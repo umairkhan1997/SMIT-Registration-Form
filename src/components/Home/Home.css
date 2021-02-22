@@ -14,7 +14,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .homeNewsDetail {
-  height: 40px;
+  /* height: 40px; */
   font-size: 0.9em;
 }
 .news Link {
@@ -227,7 +227,7 @@
   box-shadow: 0 8px 15px rgba(2, 2, 2, 0.2);
 }
 .introMainText {
-  font-size: 37px;
+  font-size: 27px;
   font-weight: bold;
 }
 .introText {
@@ -239,7 +239,7 @@
   color: white;
 }
 .coverHeading {
-  font-size: 3.2em;
+  font-size: 2.9em;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -252,7 +252,7 @@
 }
 .coverCardHeadingSmall {
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #034f9c;
   margin: 0;
   padding: 0;
@@ -273,4 +273,13 @@
   border: none;
   height: 40px;
   margin: 5px;
+}
+.logoDiv {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
 }

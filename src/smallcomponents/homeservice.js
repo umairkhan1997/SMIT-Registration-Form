@@ -7,7 +7,7 @@ export default class HomeService extends React.Component {
     return (
       <div className="my-5">
         <div className="p-3">
-          <img src={imageSrc} width="50%" alt="Housing Scheme of Saylani" />
+          <img src={imageSrc} width="40%" alt="Housing Scheme of Saylani" />
         </div>
         <div className="text-white">
           <h2 className="schemeTextHeading">

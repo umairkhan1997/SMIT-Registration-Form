@@ -8,6 +8,12 @@ import HomeData from "../components/Home/homedata";
 import SideList from "../smallcomponents/sidelist";
 import HomeCover from "../components/Home/homecover";
 import PartnerScreen from "../components/Home/partnerlogo";
+import {
+  FaDoorOpen,
+  FaNewspaper,
+  FaHandshake,
+  FaCodeBranch,
+} from "react-icons/fa";
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -16,18 +22,23 @@ export default class Main extends React.Component {
       listItem: [
         {
           listText: "Introduction",
-          listIcon: "fas fa-door-open",
+          listIcon: [<FaDoorOpen />],
           id: "homeIntro",
         },
         {
-          listText: "Highlights",
-          listIcon: "fas fa-highlighter",
-          id: "highlights",
+          listText: "Latest",
+          listIcon: [<FaNewspaper />],
+          id: "homeNews",
         },
         {
-          listText: "Latest",
-          listIcon: "fas fa-newspaper",
-          id: "homeNews",
+          listText: "Partners",
+          listIcon: [<FaHandshake />],
+          id: "saylaniPartners",
+        },
+        {
+          listText: "Saylani Dept",
+          listIcon: [<FaCodeBranch />],
+          id: "saylanidepart",
         },
       ],
     };

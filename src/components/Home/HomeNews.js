@@ -22,7 +22,7 @@ class HomeNews extends React.Component {
       <div id="homeNews" className="pt-3 pb-3">
         <div className="container">
           <div className="displayheading">
-            <h1>Latest Events</h1>
+            <h2>Latest Events</h2>
           </div>
           <div className="row">
             {this.props.SaylaniHomeNewsGets &&

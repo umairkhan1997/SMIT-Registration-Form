@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import logo from "../images/logo.png";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -18,6 +19,14 @@ export default class Footer extends React.Component {
                 <p>A-25, Bahadurabad Chowrangi Karachi, Pakistan</p>
                 <p>UAN: 111-729-526</p>
               </div>
+              {/* <div>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/SaylaniWelfareInternationalTrust/"
+                >
+                  <FaFacebookSquare />
+                </a>
+              </div> */}
             </div>
 
             <div className="col-md-4 text-left p-5">

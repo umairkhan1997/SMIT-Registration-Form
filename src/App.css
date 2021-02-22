@@ -25,12 +25,10 @@
 .nav-item:hover .nav-link {
   /* background-color: ; */
   /* border: 2px solid #0066b3; */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  color: #034f9c !important;
 }
 .activeLink {
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  color: white !important;
-  background-color: rgb(2, 103, 179);
+  color: #034f9c !important;
 }
 .social a {
   text-decoration: none;
@@ -78,7 +76,10 @@
 .dropdown:hover .dropdown-menu {
   display: block;
   border: 1px solid grey;
-  background-color: lightgrey;
+  background-color: white;
+  color: #0066b3 !important;
+  font-weight: bold;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .pText {
@@ -201,8 +202,10 @@
   background: #555;
 }
 .displayheading {
-  color: #0066b3;
+  text-align: center;
+  color: black;
   padding: 20px 0;
+  text-decoration: underline;
 }
 .dob {
   border: none;

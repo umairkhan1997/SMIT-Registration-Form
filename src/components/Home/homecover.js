@@ -4,6 +4,7 @@ import medicalcover from "../../images/homeimages/medicalcover.png";
 import welfarecover from "../../images/homeimages/welfarecover.png";
 import bloodbankcover from "../../images/homeimages/bloodbankcover.png";
 import roplantcover from "../../images/homeimages/roplantcover.png";
+import CountUp from "react-countup";
 
 class HomeCover extends React.Component {
   constructor(props) {
@@ -13,8 +14,8 @@ class HomeCover extends React.Component {
   render() {
     const { coverHeading } = this.props;
     return (
-      <div className="m-5 py-5">
-        <div className="my-5">
+      <div id="saylanidepart" className="m-5 p-5">
+        <div>
           <div className="row text-right">
             <div className="col-md-4"></div>
             <div className="col-md-8">
@@ -33,8 +34,17 @@ class HomeCover extends React.Component {
             </div>
             <div style={{ width: "1000px" }} className="text-left">
               <div className="donateCard text-center p-5">
-                <h3 className="coverCardHeadingLarge">SMIT</h3>
-                <h3 className="coverCardHeadingSmall">PROGRAM</h3>
+                <h3 className="coverCardHeadingLarge">
+                  {" "}
+                  <CountUp
+                    start={10000}
+                    end={75000}
+                    separator=","
+                    duration={6}
+                  />
+                  +
+                </h3>
+                <h3 className="coverCardHeadingSmall">Students Enrolled</h3>
                 <p
                   style={{ fontSize: "1.2em" }}
                   className="font-weight-bold py-4"
@@ -70,8 +80,17 @@ class HomeCover extends React.Component {
             </div>
             <div className="text-right d-flex justify-content-end">
               <div className="donateCard text-center p-5">
-                <h3 className="coverCardHeadingLarge">MEDICAL</h3>
-                <h3 className="coverCardHeadingSmall">& Diagnostic Center</h3>
+                <h3 className="coverCardHeadingLarge">
+                  {" "}
+                  <CountUp
+                    start={100000}
+                    end={950000}
+                    separator=","
+                    duration={6}
+                  />
+                  +
+                </h3>
+                <h3 className="coverCardHeadingSmall">Patient Treated</h3>
                 <p
                   style={{ fontSize: "1.2em" }}
                   className="font-weight-bold py-4"
@@ -107,8 +126,19 @@ class HomeCover extends React.Component {
             </div>
             <div className="text-left">
               <div className="donateCard text-center p-5">
-                <h3 className="coverCardHeadingLarge">SOCIAL</h3>
-                <h3 className="coverCardHeadingSmall">WELFARE</h3>
+                <h3 className="coverCardHeadingLarge">
+                  {" "}
+                  <CountUp
+                    start={1000}
+                    end={10000}
+                    separator=","
+                    duration={6}
+                  />
+                  +
+                </h3>
+                <h3 className="coverCardHeadingSmall">
+                  Distressed Families Adobted
+                </h3>
                 <p
                   style={{ fontSize: "1.2em" }}
                   className="font-weight-bold py-4"
@@ -144,8 +174,14 @@ class HomeCover extends React.Component {
             </div>
             <div className="text-right d-flex justify-content-end">
               <div className="donateCard text-center p-5">
-                <h3 className="coverCardHeadingLarge">BLOOD BANK</h3>
-                <h3 className="coverCardHeadingSmall">& THALASSEMIA CENTER</h3>
+                <h3 className="coverCardHeadingLarge">
+                  {" "}
+                  <CountUp start={1000} end={5000} separator="," duration={6} />
+                  +
+                </h3>
+                <h3 className="coverCardHeadingSmall">
+                  Treated Thalassemia Patients
+                </h3>
                 <p
                   style={{ fontSize: "1.2em" }}
                   className="font-weight-bold py-4"
@@ -182,8 +218,11 @@ class HomeCover extends React.Component {
             </div>
             <div className="text-left">
               <div className="donateCard text-center p-5">
-                <h3 className="coverCardHeadingLarge">CLEAN</h3>
-                <h3 className="coverCardHeadingSmall">DRINKING WATER</h3>
+                <h3 className="coverCardHeadingLarge">
+                  {" "}
+                  <CountUp start={50} end={150} separator="," duration={6} />+
+                </h3>
+                <h3 className="coverCardHeadingSmall">RO Plants planted</h3>
                 <p
                   style={{ fontSize: "1.2em" }}
                   className="font-weight-bold py-4"

@@ -1,6 +1,7 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import { FaDonate } from "react-icons/fa";
 
 export default class SideList extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class SideList extends React.Component {
               <HashLink to={`#${e.id}`}>
                 <span className="linkText"> {e.listText}</span>
                 <span className="linkIcon">
+                  {e.listIcon}
                   <i class={e.listIcon}></i>
                 </span>
               </HashLink>
@@ -28,7 +30,7 @@ export default class SideList extends React.Component {
           <Link to="/Donation">
             <span className="linkText"> Donate</span>
             <span className="linkIcon">
-              <i className="fas fa-donate"></i>
+              <FaDonate />
             </span>
           </Link>
         </li>

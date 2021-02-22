@@ -106,3 +106,40 @@
   background-color: #0066b3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+.donationCard {
+  text-align: center;
+  padding: 0;
+}
+.donationCard div {
+  padding: 35px;
+  margin: 5px;
+  background-color: #0066b3;
+  font-size: 1.5em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.donationCard div:hover {
+  background-color: #013761;
+}
+
+.subCategoryList div div {
+  padding: 10px;
+  /* margin: 5px; */
+  background-color: #1371b8;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.subCategoryList div:hover div {
+  background-color: #0c436d;
+}
+@media screen and (max-width: 600px) {
+  .donationCard {
+    width: 50%;
+  }
+}
