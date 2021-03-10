@@ -4,6 +4,7 @@ import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
 import { withRouter, Redirect, Link, Route } from "react-router-dom";
+import $ from 'jquery';
 import axios from 'axios';
 class DonationForm extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class DonationForm extends React.Component {
       amount: "",
       amountPayable: 0,
       donationMethod: "Credit Card",
+      portalView: "<h1>hello world</h1>",
       donationType: "Sadqa",
       donationCategory: "",
       donationValue: 0,
@@ -203,6 +205,41 @@ class DonationForm extends React.Component {
     return true;
   };
 
+
+  postForm = (path, params, id) => {
+    var method = 'post';
+
+    var form = document.createElement('form');
+    form.setAttribute('method', method);
+    form.setAttribute('action', path);
+
+    var hiddenField = document.createElement('input');
+    hiddenField.setAttribute('type', 'hidden');
+    hiddenField.setAttribute('name', 'TransactionID');
+    hiddenField.setAttribute('value', id);
+    // var btnField = document.createElement('input');
+    // btnField.setAttribute('type', 'submit');
+    // btnField.setAttribute('name', 'Submit');
+    // btnField.setAttribute('value', 'Submit');
+
+    // for (var key in params) {
+    //   console.log(params[key], params)
+    //   if (params.hasOwnProperty(key)) {
+    //     var hiddenField = document.createElement('input');
+    //     hiddenField.setAttribute('type', 'hidden');
+    //     hiddenField.setAttribute('name', key);
+    //     hiddenField.setAttribute('value', params[key]);
+
+    //     form.appendChild(hiddenField);
+    //   }
+    // }
+    form.appendChild(hiddenField);
+    // form.appendChild(btnField);
+    document.body.appendChild(form);
+    form.submit();
+  }
+
+
   Submit = async () => {
     let {
       name,
@@ -243,10 +280,10 @@ class DonationForm extends React.Component {
     } else {
       const obj = {
         Registration: {
-          Currency: "AED",
-          ReturnPath: "http://www.saylaniwelfare.com/Saylani/Finalization.php",
+          Currency: "PKR",
+          ReturnPath: "http://localhost:3000/contact",
           TransactionHint: "CPT:Y;VCC:Y;",
-          OrderlD: "7210055701315195",
+          OrderlD: "7210055701315196",
           Store: "0000",
           Terminal: "0000",
           Channel: "Web",
@@ -257,25 +294,7 @@ class DonationForm extends React.Component {
           Password: "Comtrust@20182018",
         },
       };
-      // //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
-      // let config = {
-      //   headers: {
-      //     'Accept': 'application/json',
-      //     'Content-Type': 'application/json',
-      //     'Access-Control-Allow-Origin': '*',
-      //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-      //     'Access-Control-Allow-Credentials': 'true',
-      //     'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept'
-      //   }
-      // }
-
-      // fetch("https://demo-ipg.ctdev.comtrust.ae:2443", { method: "POST", body: obj, config:config.headers })
-      // // .then(response => response.json())
-      //   .then(res => {
-      //     console.log(res)
-      //   }).catch((err) => {
-      //     console.log("err", err)
-      //   })
+      const params = new URLSearchParams()
       const options = {
         method: "POST",
         headers: {
@@ -285,46 +304,46 @@ class DonationForm extends React.Component {
         data: obj,
         url: "https://demo-ipg.ctdev.comtrust.ae:2443",
       };
+
+
       axios(options)
         .then((res) => {
-          console.log(res, "response");
-          // console.log(res.data.Transaction.TransactionID)
-          // console.log(res.data.Transaction.UniqueID)
-          // console.log(res.data.Transaction.PaymentPage)
-          // if(res.data.Transaction.PaymentPage)
-          // {
-          // //  return  <Redirect to={res.data.Transaction.PaymentPortal} />
-          //    // res.redirect(res.data.Transaction.PaymentPage);
-          //    axios.Redirect(res.data.Transaction.PaymentPage)
+          console.log(res.data.Transaction, "response");
+          // window.location = 'https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI'
+
+          params.append('TransactionID', res.data.Transaction.TransactionID)
+          const objs = {
+            "Finalization": {
+              "TransactionID": res.data.Transaction.TransactionID,
+              "Customer": "Demo Merchant",
+              "UserName": "Demo_fY9c",
+              "Password": "Comtrust@20182018"
+            }
+          }
+
+          this.postForm('https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI', { TransactionID: res.data.Transaction.TransactionID, arg2: 'Submit' }, res.data.Transaction.TransactionID);
+          ///SECOND API CALL START
+          // const config = {
+          //   headers: {
+          //     'Content-Type': 'application/x-www-form-urlencoded'
+          //   }
           // }
-          //     const objs = {
-          //       "Finalization": {
-          //       "TransactionID": res.data.Transaction.TransactionID,
-          //       "Customer": "Demo Merchant",
-          //       "UserName":"Demo_fY9c",
-          //       "Password":"Comtrust@20182018"
-          //       }
-          //       }
-          //     const optionss = {
-          //       method: 'POST',
-          //       headers: { 'Accept': 'application/json',
-          //           'Content-Type': 'application/json', },
-          //       data: objs,
-          //       url:res.data.Transaction.PaymentPage,
-          //     };
-          //  axios(optionss)
-          //  .then(res=>{
-          //   console.log(res,'res')
-          //  })
-          //  .catch(err=>{
-          //   console.log(err,'2')
-          //  })
+          // axios.post(res.data.Transaction.PaymentPage, params, config)
+          //   .then(res => {
+          //     // console.log(res.data, 'res')
+          //     this.setState({ portalView: res.data })
+          //   })
+          //   .catch(err => {
+          //     console.log(err, '2')
+          //   })
+
+          ///SECOND API CALL END
         })
         .catch((err) => {
           console.log(err);
         });
 
-      console.log("hello world");
+      // console.log("hello world");
     }
   };
 
@@ -352,7 +371,7 @@ class DonationForm extends React.Component {
       donationType == "Other Donation"
         ? parseInt(amount) + (parseInt(amount) / 100) * 3
         : quanVal + (parseInt(quanVal) / 100) * 3;
-    console.log(this.props, "this.props");
+    // console.log(this.props, "this.props");
     return (
       <div>
         <div className="container my-5 py-5">
@@ -600,6 +619,7 @@ class DonationForm extends React.Component {
                   </div>
                   <div className="col-md-12 mt-3 mb-3">
                     <button
+                      id="btn_id"
                       className="btn-block donate"
                       onClick={() => this.Submit()}
                     >
@@ -611,7 +631,15 @@ class DonationForm extends React.Component {
             </div>
           </div>
         </div>
-        {
+        {/* <div dangerouslySetInnerHTML={{ __html: this.state.portalView }} /> */}
+        <form action="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI" method="POST" id="MerchantRequest">
+          <input type="hidden" id="TransactionID" name="TransactionID" value="215760716170" />
+          <input type="submit" id="submit" name="submit" value="Submit" />
+        </form>
+        {/* <div>
+          {this.state.portalView}
+        </div> */}
+        {/* {
           this.state.toForm ?
             <Route path='https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI/:TransactionID="252234271765"' component={() => {
               window.location.href = 'https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI';
@@ -623,7 +651,7 @@ class DonationForm extends React.Component {
 
             :
             null
-        }
+        } */}
       </div>
     );
   }

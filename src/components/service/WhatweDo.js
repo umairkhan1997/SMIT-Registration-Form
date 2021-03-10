@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserHistory } from "history";
-import {  withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import Zoom from "react-reveal/Zoom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./service.css";
@@ -36,7 +36,7 @@ class WhatweDo extends React.Component {
     let result = this.state.dept.filter((word) =>
       word.displayName.includes(e.target.value)
     );
-   
+
     this.setState({ searchItem: result });
   }
 
@@ -70,7 +70,6 @@ class WhatweDo extends React.Component {
               </div>
             </div>
           </div>
-
         </div>
 
         <div className="container py-5">
