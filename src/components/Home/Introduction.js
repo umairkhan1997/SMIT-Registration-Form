@@ -230,57 +230,6 @@ class Introduction extends React.Component {
                         and towns are living below the poverty line and even
                         deprived of the basic necessities of life.
                       </p>
-                      <p>
-                        Now let us take a look at the life of the people living
-                        in cities, where unfortunately living conditions are not
-                        much different. If we examine their family size, we find
-                        a very painful situation, where in a small rented house
-                        the husband and the wife with their four children
-                        survive with a very low earning.
-                      </p>
-                      <p className="text-justify introText">
-                        In today’s world where inflation is at its peak, it is
-                        impossible for them to pay for their electricity,
-                        children’s education and any medical treatment of any
-                        family member.
-                      </p>
-                      <p className="text-justify introText">
-                        How will the head of the family be able to provide for
-                        the needs of his children?? The result: he takes loans.
-                        He is not to be blamed because he is responsible to
-                        provide three meals a day for his family and he is
-                        forced to use the wrong means to fulfill his family’s
-                        needs.
-                      </p>
-                      <p className="text-justify introText">
-                        Undoubtedly, the poor and the needy are helpless. Our
-                        organization spends time with them and is fully aware of
-                        their problems and weaknesses. Therefore we want to help
-                        them in such a way that all financial aid is free from
-                        interest. In view of all the difficulties faced by the
-                        poor, Saylani Welfare International Trust has organized
-                        31 different sectors to sort out the problems of the
-                        ones who are in need. These departments are efficiently
-                        working for the cause of the society.
-                      </p>
-                      <p className="text-justify introText">
-                        By the Grace of the Almighty Allah, it can be proudly
-                        said that this organization has become a back-bone of
-                        the poor society and provides help after a complete
-                        inquiry survey. This organization receives aid from
-                        different parts of the world. Each and every penny is
-                        spent after a strict inquiry and a utilization report is
-                        delivered to those who send this aid to us. In this
-                        report, addresses of the people to whom these donations
-                        have been given, is mentioned with details. This shows
-                        that your money has been given to the right people. You
-                        can also contact these people with the help of their
-                        addresses and get a confirmation whether the
-                        organization has provided them with the aid and if they
-                        are really the ones who deserve. In a way, your sadaqa
-                        or zakaat is being spent with your own hands. Our aim is
-                        to inquire and survey to find the ones who need us.
-                      </p>
                       <iframe
                         className="video"
                         width="100%"

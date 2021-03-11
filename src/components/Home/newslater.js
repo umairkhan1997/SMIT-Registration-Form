@@ -24,6 +24,14 @@ export default class NewsLater extends React.Component {
             </label>
             <input className="inp" />
           </div>
+          <div className="col-md-4">
+            <button
+              style={{ backgroundColor: "#084E97", margin: "10px 0" }}
+              className="btntop"
+            >
+              Send
+            </button>
+          </div>
         </div>
       </div>
     );

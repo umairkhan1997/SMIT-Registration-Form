@@ -248,13 +248,13 @@
   list-style: none;
 }
 .donationWaysList li {
-  padding: 15px;
+  padding: 25px 15px;
   padding-left: 60px;
   margin: 25px 8px;
   background-color: #084e97;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 8px 8px 8px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  border-left: 3px solid #0066b3;
+  border: 2px solid #0066b3;
   font-size: 1em;
   cursor: pointer;
   color: #fff;
@@ -262,7 +262,8 @@
   position: relative;
 }
 .donationWaysList li:hover {
-  background-color: #b3daf8;
+  background-color: #fff;
+  color: #0066b3;
 }
 .coverCardHeadingSmall {
   font-weight: bolder;

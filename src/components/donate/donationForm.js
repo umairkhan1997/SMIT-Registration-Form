@@ -3,11 +3,9 @@ import "./donate.css";
 import paypal from "../../images/paypal.png";
 import { connect } from "react-redux";
 import { DonaListGet } from "../../Redux/action/donationAction";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter, Redirect, Link, Route } from "react-router-dom";
+import $ from "jquery";
 import axios from "axios";
-import cover from "../../images/campaignimages/cover.png";
-import BankDetail from "../../components/donate/bankdetails";
-
 class DonationForm extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +16,7 @@ class DonationForm extends React.Component {
       amount: "",
       amountPayable: 0,
       donationMethod: "Credit Card",
+      portalView: "<h1>hello world</h1>",
       donationType: "Sadqa",
       donationCategory: "",
       donationValue: 0,
@@ -27,6 +26,7 @@ class DonationForm extends React.Component {
       remarks: "",
       title: "",
       chkamount: false,
+      toForm: false,
       donationDetailForm: false,
       donationForm: true,
       amountBox: false,
@@ -208,6 +208,9 @@ class DonationForm extends React.Component {
   }
   componentDidMount() {
     this.props.DonaListGet();
+    this.setState({
+      toForm: true,
+    });
   }
 
   setFieldVal = (a, b) => {
@@ -219,6 +222,39 @@ class DonationForm extends React.Component {
       return false;
     }
     return true;
+  };
+
+  postForm = (path, params, id) => {
+    var method = "post";
+
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "TransactionID");
+    hiddenField.setAttribute("value", id);
+    // var btnField = document.createElement('input');
+    // btnField.setAttribute('type', 'submit');
+    // btnField.setAttribute('name', 'Submit');
+    // btnField.setAttribute('value', 'Submit');
+
+    // for (var key in params) {
+    //   console.log(params[key], params)
+    //   if (params.hasOwnProperty(key)) {
+    //     var hiddenField = document.createElement('input');
+    //     hiddenField.setAttribute('type', 'hidden');
+    //     hiddenField.setAttribute('name', key);
+    //     hiddenField.setAttribute('value', params[key]);
+
+    //     form.appendChild(hiddenField);
+    //   }
+    // }
+    form.appendChild(hiddenField);
+    // form.appendChild(btnField);
+    document.body.appendChild(form);
+    form.submit();
   };
 
   Submit = async () => {
@@ -261,10 +297,10 @@ class DonationForm extends React.Component {
     } else {
       const obj = {
         Registration: {
-          Currency: "AED",
-          ReturnPath: "http://www.saylaniwelfare.com/Saylani/Finalization.php",
+          Currency: "PKR",
+          ReturnPath: "http://localhost:3000/contact",
           TransactionHint: "CPT:Y;VCC:Y;",
-          OrderlD: "7210055701315195",
+          OrderlD: "7210055701315196",
           Store: "0000",
           Terminal: "0000",
           Channel: "Web",
@@ -275,25 +311,7 @@ class DonationForm extends React.Component {
           Password: "Comtrust@20182018",
         },
       };
-      // //  const result = await fetch(`https://demo-ipg.ctdev.comtrust.ae:2443`)
-      // let config = {
-      //   headers: {
-      //     'Accept': 'application/json',
-      //     'Content-Type': 'application/json',
-      //     'Access-Control-Allow-Origin': '*',
-      //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-      //     'Access-Control-Allow-Credentials': 'true',
-      //     'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept'
-      //   }
-      // }
-
-      // fetch("https://demo-ipg.ctdev.comtrust.ae:2443", { method: "POST", body: obj, config:config.headers })
-      // // .then(response => response.json())
-      //   .then(res => {
-      //     console.log(res)
-      //   }).catch((err) => {
-      //     console.log("err", err)
-      //   })
+      const params = new URLSearchParams();
       const options = {
         method: "POST",
         headers: {
@@ -303,46 +321,52 @@ class DonationForm extends React.Component {
         data: obj,
         url: "https://demo-ipg.ctdev.comtrust.ae:2443",
       };
+
       axios(options)
         .then((res) => {
-          console.log(res, "response");
-          // console.log(res.data.Transaction.TransactionID)
-          // console.log(res.data.Transaction.UniqueID)
-          // console.log(res.data.Transaction.PaymentPage)
-          // if(res.data.Transaction.PaymentPage)
-          // {
-          // //  return  <Redirect to={res.data.Transaction.PaymentPortal} />
-          //    // res.redirect(res.data.Transaction.PaymentPage);
-          //    axios.Redirect(res.data.Transaction.PaymentPage)
+          console.log(res.data.Transaction, "response");
+          // window.location = 'https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI'
+
+          params.append("TransactionID", res.data.Transaction.TransactionID);
+          const objs = {
+            Finalization: {
+              TransactionID: res.data.Transaction.TransactionID,
+              Customer: "Demo Merchant",
+              UserName: "Demo_fY9c",
+              Password: "Comtrust@20182018",
+            },
+          };
+
+          this.postForm(
+            "https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI",
+            {
+              TransactionID: res.data.Transaction.TransactionID,
+              arg2: "Submit",
+            },
+            res.data.Transaction.TransactionID
+          );
+          ///SECOND API CALL START
+          // const config = {
+          //   headers: {
+          //     'Content-Type': 'application/x-www-form-urlencoded'
+          //   }
           // }
-          //     const objs = {
-          //       "Finalization": {
-          //       "TransactionID": res.data.Transaction.TransactionID,
-          //       "Customer": "Demo Merchant",
-          //       "UserName":"Demo_fY9c",
-          //       "Password":"Comtrust@20182018"
-          //       }
-          //       }
-          //     const optionss = {
-          //       method: 'POST',
-          //       headers: { 'Accept': 'application/json',
-          //           'Content-Type': 'application/json', },
-          //       data: objs,
-          //       url:res.data.Transaction.PaymentPage,
-          //     };
-          //  axios(optionss)
-          //  .then(res=>{
-          //   console.log(res,'res')
-          //  })
-          //  .catch(err=>{
-          //   console.log(err,'2')
-          //  })
+          // axios.post(res.data.Transaction.PaymentPage, params, config)
+          //   .then(res => {
+          //     // console.log(res.data, 'res')
+          //     this.setState({ portalView: res.data })
+          //   })
+          //   .catch(err => {
+          //     console.log(err, '2')
+          //   })
+
+          ///SECOND API CALL END
         })
         .catch((err) => {
           console.log(err);
         });
 
-      console.log("hello world");
+      // console.log("hello world");
     }
   };
 
@@ -370,7 +394,7 @@ class DonationForm extends React.Component {
       donationType == "Other Donation"
         ? parseInt(amount) + (parseInt(amount) / 100) * 3
         : quanVal + (parseInt(quanVal) / 100) * 3;
-    console.log(this.props, "this.props");
+    // console.log(this.props, "this.props");
     return (
       <div>
         {/* Campaign Cover */}
@@ -386,7 +410,7 @@ class DonationForm extends React.Component {
           <div className="container p-5">
             <div className="row">
               <div className="col-md-5">
-                <img src={cover} width="100%" />
+                {/* <img src={cover} width="100%" /> */}
               </div>
               <div className="col-md-7">
                 <h1 className="p-2">
@@ -740,9 +764,7 @@ class DonationForm extends React.Component {
                     backgroundPosition: "center",
                   }}
                   className="col-md-8 py-2"
-                >
-                  
-                </div>
+                ></div>
                 <div className="col-md-4 shadow">
                   <div className="p-3">
                     <h3>Personal Details</h3>
@@ -851,9 +873,7 @@ class DonationForm extends React.Component {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
-                <BankDetail />
-              </div>
+              <div class="modal-body">{/* <BankDetail /> */}</div>
               <div class="modal-footer">
                 <button
                   type="button"
@@ -1013,21 +1033,21 @@ class DonationForm extends React.Component {
                       />
                     </div>
                   ) : (
-                    <div className="col-md-6 mt-3 mb-3">
-                      <label className="lab text-dark">Quantity</label>
-                      <input
-                        type="number"
-                        className="inp"
-                        placeholder="Number"
-                        min="1"
-                        value={quan}
-                        onChange={(e) => {
-                          this.setFieldVal(e.target.value, "quan");
-                          this.setState({ chkamount: false });
-                        }}
-                      />
-                    </div>
-                  )}
+                      <div className="col-md-6 mt-3 mb-3">
+                        <label className="lab text-dark">Quantity</label>
+                        <input
+                          type="number"
+                          className="inp"
+                          placeholder="Number"
+                          min="1"
+                          value={quan}
+                          onChange={(e) => {
+                            this.setFieldVal(e.target.value, "quan");
+                            this.setState({ chkamount: false });
+                          }}
+                        />
+                      </div>
+                    )}
                   {this.state.chkamount ? (
                     <p className="text-danger">Field is Emply</p>
                   ) : null}
@@ -1044,11 +1064,83 @@ class DonationForm extends React.Component {
                     />
                     <p>Bank Charges is : {perc === "NaN" ? 0 : perc}</p>
                   </div>
+
+                  <div className="col-md-6 mt-3 mb-3">
+                    <label className="lab text-dark">Contact Number</label>
+                    <input
+                      type="text"
+                      class="inp"
+                      placeholder="Number"
+                      value={contNumber}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "contNumber");
+                        this.setState({ chkcontNumber: false });
+                      }}
+                    />
+                    {this.state.chkcontNumber ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-8 mt-3 mb-3">
+                    <label className="lab text-dark">Remarks</label>
+                    <textarea
+                      placeholder="Enter Your Remarks"
+                      className="inp"
+                      rows="8"
+                      value={remarks}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "remarks");
+                        this.setState({ chkremarks: false });
+                      }}
+                    ></textarea>
+                    {this.state.chkremarks ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-12 mt-3 mb-3">
+                    <button
+                      id="btn_id"
+                      className="btn-block donate"
+                      onClick={() => this.Submit()}
+                    >
+                      Send
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        {/* <div dangerouslySetInnerHTML={{ __html: this.state.portalView }} /> */}
+        <form
+          action="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI"
+          method="POST"
+          id="MerchantRequest"
+        >
+          <input
+            type="hidden"
+            id="TransactionID"
+            name="TransactionID"
+            value="215760716170"
+          />
+          <input type="submit" id="submit" name="submit" value="Submit" />
+        </form>
+        {/* <div>
+          {this.state.portalView}
         </div> */}
+        {/* {
+          this.state.toForm ?
+            <Route path='https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI/:TransactionID="252234271765"' component={() => {
+              window.location.href = 'https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI';
+              return null;
+            }}
+            />
+            // window.location="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI"
+            // <Link to="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI" TransactionID="252234271765"  />
+
+            :
+            null
+        } */}
       </div>
     );
   }

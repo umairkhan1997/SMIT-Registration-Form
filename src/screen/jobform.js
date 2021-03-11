@@ -561,7 +561,7 @@ class JobForm extends React.Component {
                   <div className="col-md-6 py-3">
                     <input
                       className="jobInput"
-                      placeholder="Approx Sallary"
+                      placeholder="Approx Salary"
                       value={approxSalary}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "approxSalary");
@@ -643,7 +643,7 @@ class JobForm extends React.Component {
                         this.setState({ chkexpReq: false });
                       }}
                     >
-                      <option>Experiance Required</option>
+                      <option>Experience Required</option>
                       <option value="fresh">Fresh</option>
                       <option value="1 year">More then 1 year</option>
                       <option value="2 year">More then 2 year</option>
@@ -862,7 +862,7 @@ class JobForm extends React.Component {
                           <input
                             className="jobInput"
                             type="number"
-                            placeholder="Tell-Number"
+                            placeholder="Tel-Number"
                             value={telNumber}
                             onChange={(e) => {
                               this.setFieldVal(e.target.value, "telNumber");

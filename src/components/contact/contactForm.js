@@ -2,12 +2,59 @@ import React from "react";
 import "./contact.css";
 import logo from "../../images/logo.png";
 import Button from "../../smallcomponents/mybtn";
-
+import axios from 'axios';
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
+
+  componentDidMount() {
+    // fetch(`https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/GetPreAuthData`)
+    // .then()
+    // const params = new URLSearchParams()
+    // params.append('TransactionID', 282785750315)
+    // const objs = {
+    //   "Finalization": {
+    //     "TransactionID": 282785750315,
+    //     "Customer": "Demo Merchant",
+    //     "UserName": "Demo_fY9c",
+    //     "Password": "Comtrust@20182018"
+    //   }
+    // }
+    // const config = {
+    //   headers: {
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    //   }
+    // }
+    const obj = {
+      "Finalization": {
+        "TransactionID": 282785750330,
+        "Customer": "Demo Merchant",
+        "UserName": "Demo_fY9c",
+        "Password": "Comtrust@20182018"
+      }
+    }
+    const options = {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      data: obj,
+      url: "https://demo-ipg.ctdev.comtrust.ae:2443",
+    };
+    axios(options)
+      .then(res => {
+        console.log(res.data.Transaction, 'res')
+        //  this.setState({ portalView: res.data })
+      })
+      .catch(err => {
+        console.log(err, '2')
+      })
+  }
+
+
   render() {
     return (
       <div id="contactForm">

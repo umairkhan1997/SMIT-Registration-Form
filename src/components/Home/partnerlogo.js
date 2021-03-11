@@ -59,7 +59,7 @@ export default class PartnerScreen extends React.Component {
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active text-center p-4">
                   <div className="row">
-                    <div className="col-md-2 p-2">
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
                       <div className="logoDiv">
                         <img
                           width="100%"

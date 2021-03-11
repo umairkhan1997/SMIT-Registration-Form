@@ -21,7 +21,7 @@ export default class Dailyserve extends React.Component {
                     Saylani Welfare Trust is serving
                     <span className="largeCounter">
                       <Zoom left>
-                        <CountUp start={1000} end={150000} duration={4} />
+                        <CountUp start={1000} end={150000} duration={4} separator="," />
                       </Zoom>
                     </span>
                     people on daily basis.

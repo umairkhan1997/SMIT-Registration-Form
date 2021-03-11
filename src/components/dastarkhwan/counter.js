@@ -18,7 +18,7 @@ export default class LangarCounter extends React.Component {
                       style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                       className="shadow text-center p-5 rounded"
                     >
-                      <CountUp start={30} end={3500} duration={4} />
+                      <CountUp start={30} end={3500} duration={4} separator="," />
                     </h2>
                   </div>
                 </div>
@@ -30,7 +30,7 @@ export default class LangarCounter extends React.Component {
                       style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                       className="shadow text-center p-5 rounded"
                     >
-                      <CountUp start={0} end={197} duration={4} />
+                      <CountUp start={0} end={197} duration={4} separator="," />
                     </h2>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ export default class LangarCounter extends React.Component {
                       style={{ backgroundColor: "rgba(0,0,0,.5)" }}
                       className="shadow text-center p-5 rounded"
                     >
-                      <CountUp start={0} end={12} duration={4} />
+                      <CountUp start={0} end={12} duration={4} separator="," />
                     </h2>
                   </div>
                 </div>
