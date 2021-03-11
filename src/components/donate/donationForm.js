@@ -6,6 +6,8 @@ import { DonaListGet } from "../../Redux/action/donationAction";
 import { withRouter, Redirect } from "react-router-dom";
 import axios from "axios";
 import cover from "../../images/campaignimages/cover.png";
+import BankDetail from "../../components/donate/bankdetails";
+
 class DonationForm extends React.Component {
   constructor(props) {
     super(props);
@@ -27,18 +29,35 @@ class DonationForm extends React.Component {
       chkamount: false,
       donationDetailForm: false,
       donationForm: true,
+      amountBox: false,
+      donationFormDetail: false,
+      dntionTypeControl: true,
+      dntionCategoryControl: false,
+      dntionQuantityControl: false,
+      dntionDetailControl: false,
+      // donation new state start
+      currentDropDownValue: "",
+      categoryAmount: 0,
+      donationQuantity: 1,
+      donationSubCategory: "",
+      // donation new state end
+      campaignDetails: [
+        { campaignTitle: "Blankets", qty: 2, amount: 1200 },
+        { campaignTitle: "Blankets", qty: 5, amount: 1200 },
+        { campaignTitle: "Blankets", qty: 12, amount: 1200 },
+      ],
       aqiqaDropDown: [
-        "Aqiqa Goat (8000)",
-        "Aqiqa Goat (9000)",
-        "Aqiqa Goat (10000)",
-        "Aqiqa Goat (12000)",
-        "Aqiqa Goat (15000)",
-        "Aqiqa Cow (40000)",
-        "Aqiqa Cow (45000)",
-        "Aqiqa Cow (50000)",
-        "Aqiqa Camel (55000)",
-        "Aqiqa Camel (60000)",
-        "Aqiqa Camel (65000)",
+        "Aqiqa Goat (8,000)",
+        "Aqiqa Goat (9,000)",
+        "Aqiqa Goat (10,000)",
+        "Aqiqa Goat (12,000)",
+        "Aqiqa Goat (15,000)",
+        "Aqiqa Cow (40,000)",
+        "Aqiqa Cow (45,000)",
+        "Aqiqa Cow (50,000)",
+        "Aqiqa Camel (55,000)",
+        "Aqiqa Camel (60,000)",
+        "Aqiqa Camel (65,000)",
       ],
       sadqaDropDown: [
         "Sadqa Goat (5500)",
@@ -81,112 +100,112 @@ class DonationForm extends React.Component {
         {
           donationType: "Sadqa",
           values: [
-            { value: "5500", donationCate: "Sadqa Goat (5500)" },
-            { value: "6000", donationCate: "Sadqa Goat (6000)" },
-            { value: "7000", donationCate: "Sadqa Goat (7000)" },
-            { value: "8000", donationCate: "Sadqa Goat (8000)" },
-            { value: "9000", donationCate: "Sadqa Goat (9000)" },
-            { value: "10000", donationCate: "Sadqa Goat (10000)" },
-            { value: "12000", donationCate: "Sadqa Goat (12000)" },
-            { value: "15000", donationCate: "Sadqa Goat (15000)" },
-            { value: "30000", donationCate: "Sadqa Cow (30000)" },
-            { value: "35000", donationCate: "Sadqa Cow (35000)" },
-            { value: "40000", donationCate: "Sadqa Cow (40000)" },
-            { value: "45000", donationCate: "Sadqa Cow (45000)" },
-            { value: "50000", donationCate: "Sadqa Cow (50000)" },
-            { value: "55000", donationCate: "Sadqa Camel (55000)" },
-            { value: "60000", donationCate: "Sadqa Camel (60000)" },
-            { value: "65000", donationCate: "Sadqa Camel (65000)" },
-            { value: "400", donationCate: "Sadqa Hen (400)" },
+            { value: 5500, donationCate: "Sadqa Goat (5500)" },
+            { value: 6000, donationCate: "Sadqa Goat (6000)" },
+            { value: 7000, donationCate: "Sadqa Goat (7000)" },
+            { value: 8000, donationCate: "Sadqa Goat (8000)" },
+            { value: 9000, donationCate: "Sadqa Goat (9000)" },
+            { value: 10000, donationCate: "Sadqa Goat (10000)" },
+            { value: 12000, donationCate: "Sadqa Goat (12000)" },
+            { value: 15000, donationCate: "Sadqa Goat (15000)" },
+            { value: 30000, donationCate: "Sadqa Cow (30000)" },
+            { value: 35000, donationCate: "Sadqa Cow (35000)" },
+            { value: 40000, donationCate: "Sadqa Cow (40000)" },
+            { value: 45000, donationCate: "Sadqa Cow (45000)" },
+            { value: 50000, donationCate: "Sadqa Cow (50000)" },
+            { value: 55000, donationCate: "Sadqa Camel (55000)" },
+            { value: 60000, donationCate: "Sadqa Camel (60000)" },
+            { value: 65000, donationCate: "Sadqa Camel (65000)" },
+            { value: 400, donationCate: "Sadqa Hen (400)" },
           ],
         },
         {
           donationType: "Aqiqa",
           values: [
-            { value: "8000", donationCate: "Aqiqa Goat (8000)" },
-            { value: "9000", donationCate: "Aqiqa Goat (9000)" },
-            { value: "10000", donationCate: "Aqiqa Goat (10000)" },
-            { value: "12000", donationCate: "Aqiqa Goat (12000)" },
-            { value: "15000", donationCate: "Aqiqa Goat (15000)" },
-            { value: "40000", donationCate: "Aqiqa Cow (40000)" },
-            { value: "45000", donationCate: "Aqiqa Cow (45000)" },
-            { value: "50000", donationCate: "Aqiqa Cow (50000)" },
-            { value: "55000", donationCate: "Aqiqa Camel (55000)" },
-            { value: "60000", donationCate: "Aqiqa Camel (60000)" },
-            { value: "65000", donationCate: "Aqiqa Camel (65000)" },
+            { value: 8000, donationCate: "Aqiqa Goat (8000)" },
+            { value: 9000, donationCate: "Aqiqa Goat (9000)" },
+            { value: 10000, donationCate: "Aqiqa Goat (10000)" },
+            { value: 12000, donationCate: "Aqiqa Goat (12000)" },
+            { value: 15000, donationCate: "Aqiqa Goat (15000)" },
+            { value: 40000, donationCate: "Aqiqa Cow (40000)" },
+            { value: 45000, donationCate: "Aqiqa Cow (45000)" },
+            { value: 50000, donationCate: "Aqiqa Cow (50000)" },
+            { value: 55000, donationCate: "Aqiqa Camel (55000)" },
+            { value: 60000, donationCate: "Aqiqa Camel (60000)" },
+            { value: 65000, donationCate: "Aqiqa Camel (65000)" },
           ],
         },
         {
-          donationType: "Corona Effecties",
+          donationType: "Campaign",
           values: [
             {
-              value: "1500",
-              donationCate: "Corona Effecties Rashan Bag Rs.(1500)",
+              value: 1200,
+              donationCate: "Blanket",
             },
           ],
         },
         {
           donationType: "Other Donation",
           values: [
-            { value: "0", donationCate: "Donation" },
-            { value: "0", donationCate: "Marriage" },
-            { value: "0", donationCate: "Zakat" },
-            { value: "0", donationCate: "Food" },
-            { value: "0", donationCate: "Education" },
-            { value: "0", donationCate: "Water Well" },
-            { value: "0", donationCate: "Monthly Rashan" },
-            { value: "0", donationCate: "Thar Fund" },
-            { value: "0", donationCate: "Flood Victim" },
-            { value: "0", donationCate: "Fitra (Overseas)" },
-            { value: "0", donationCate: "Saaf Pani" },
-            { value: "0", donationCate: "Heat Stroke" },
-            { value: "0", donationCate: "Syrian Crisis" },
-            { value: "0", donationCate: "Masjid Construction" },
-            { value: "0", donationCate: "Medical Projects" },
+            { value: 0, donationCate: "Donation" },
+            { value: 0, donationCate: "Marriage" },
+            { value: 0, donationCate: "Zakat" },
+            { value: 0, donationCate: "Food" },
+            { value: 0, donationCate: "Education" },
+            { value: 0, donationCate: "Water Well" },
+            { value: 0, donationCate: "Monthly Rashan" },
+            { value: 0, donationCate: "Thar Fund" },
+            { value: 0, donationCate: "Flood Victim" },
+            { value: 0, donationCate: "Fitra (Overseas)" },
+            { value: 0, donationCate: "Saaf Pani" },
+            { value: 0, donationCate: "Heat Stroke" },
+            { value: 0, donationCate: "Syrian Crisis" },
+            { value: 0, donationCate: "Masjid Construction" },
+            { value: 0, donationCate: "Medical Projects" },
           ],
         },
       ],
     };
   }
-
-  donationType = (e) => {
-    const {
-      sadqaDropDown,
-      aqiqaDropDown,
-      coronaDropDown,
-      otherDonationDropDown,
-    } = this.state;
-    // console.log(e.target.value,'asdsa')
-    // const { sadqaDropDown, aqiqaDropDown,
-    //   otherDonation,
-    //   coronaDropDown } = this.state
-    if (e.target.value === "Sadqa") {
-      let arr = sadqaDropDown;
-      this.setState({
-        currentData: arr,
-        donationType: e.target.value,
-      });
-    }
-    if (e.target.value === "Aqiqa") {
-      let arr = aqiqaDropDown;
-      this.setState({
-        currentData: arr,
-      });
-    }
-    if (e.target.value === "Other Donation") {
-      let arr = otherDonationDropDown;
-      this.setState({
-        currentData: arr,
-      });
-    }
-    if (e.target.value === "Corona Effecties") {
-      let arr = coronaDropDown;
-      this.setState({
-        currentData: arr,
-      });
-    }
+  donationType = (a) => {
+    console.log(a);
+    const { donationList } = this.state;
+    this.setState({
+      currentDropDownValue: a,
+      donationDetailForm: true,
+      donationForm: false,
+      dntionCategoryControl: true,
+    });
+    let arr = [];
+    donationList.map((e) => {
+      if (e.donationType === a) {
+        arr = e.values;
+        this.setState({ currentData: arr });
+      }
+    });
   };
-
+  selectCategory(a, b) {
+    console.log(a);
+    this.setState({
+      categoryAmount: a,
+      amountBox: true,
+      donationDetailForm: false,
+      dntionQuantityControl: true,
+      donationSubCategory: b,
+    });
+    console.log(this.state.categoryAmount);
+  }
+  campaignDonation(campaignName, campaignQty, campaignAmount) {
+    this.setState({
+      currentDropDownValue: "Campaign",
+      donationQuantity: campaignQty,
+      dntionTypeControl: true,
+      donationForm: false,
+      dntionCategoryControl: true,
+      dntionQuantityControl: true,
+    });
+    this.selectCategory(campaignAmount * campaignQty, campaignName);
+  }
   componentDidMount() {
     this.props.DonaListGet();
   }
@@ -371,7 +390,7 @@ class DonationForm extends React.Component {
               </div>
               <div className="col-md-7">
                 <h1 className="p-2">
-                  Over Donation reached <span>500000</span>
+                  Our Donation reached <span>500000</span>
                 </h1>
                 <div
                   style={{ backgroundColor: "rgba(0,0,0,.1)" }}
@@ -381,28 +400,39 @@ class DonationForm extends React.Component {
                 </div>
 
                 <div className="row">
-                  <div className="col-md-6 p-3 text-center">
-                    <div className="bg-light shadow rounded p-3">
-                      <h3>2 Blankets</h3>
-                      <button className="prevbtn">Donate</button>
-                    </div>
-                  </div>
-                  <div className="col-md-6 p-3 text-center">
-                    <div className="bg-light shadow rounded p-3">
-                      <h3>5 Blankets</h3>
-                      <button className="prevbtn">Donate</button>
-                    </div>
-                  </div>
-                  <div className="col-md-6 p-3 text-center">
-                    <div className="bg-light shadow rounded p-3">
-                      <h3>12 Blankets</h3>
-                      <button className="prevbtn">Donate</button>
-                    </div>
-                  </div>
+                  {this.state.campaignDetails.map((e, i) => {
+                    return (
+                      <div className="col-md-6 p-3 text-center">
+                        <div className="bg-light shadow rounded p-3">
+                          <h3>
+                            {e.qty} {e.campaignTitle}
+                          </h3>
+                          <button
+                            onClick={() =>
+                              this.campaignDonation(
+                                e.campaignTitle,
+                                e.qty,
+                                e.amount
+                              )
+                            }
+                            className="prevbtn"
+                          >
+                            Donate
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+
                   <div className="col-md-6 p-3 text-center">
                     <div className="bg-light shadow rounded p-3">
                       <h3>Other Amount</h3>
-                      <button className="prevbtn">Donate</button>
+                      <button
+                        onClick={() => this.campaignDonation()}
+                        className="prevbtn"
+                      >
+                        Donate
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -410,129 +440,147 @@ class DonationForm extends React.Component {
             </div>
           </div>
         </div>
-
+        {/* Steps of Donation Form */}
+        <div className="container pt-5">
+          <div className="row">
+            <div className="col-md-3">
+              {this.state.dntionTypeControl ? (
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationForm: true,
+                      donationDetailForm: false,
+                      amountBox: false,
+                      donationFormDetail: false,
+                    })
+                  }
+                  className="donationStep"
+                >
+                  <p>
+                    <span
+                      style={{ fontSize: "1.3em", margin: 0 }}
+                      className="qtyn"
+                    >
+                      1
+                    </span>{" "}
+                    <span>Donation Type</span>
+                  </p>
+                </div>
+              ) : (
+                false
+              )}
+            </div>
+            <div className="col-md-3">
+              {this.state.dntionCategoryControl ? (
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationForm: false,
+                      donationDetailForm: true,
+                      amountBox: false,
+                      donationFormDetail: false,
+                    })
+                  }
+                  className="donationStep"
+                >
+                  <p>
+                    <span
+                      style={{ fontSize: "1.3em", margin: 0 }}
+                      className="qtyn"
+                    >
+                      2
+                    </span>{" "}
+                    Donation Category
+                  </p>
+                </div>
+              ) : (
+                false
+              )}
+            </div>
+            <div className="col-md-3">
+              {this.state.dntionQuantityControl ? (
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationForm: false,
+                      donationDetailForm: false,
+                      amountBox: true,
+                      donationFormDetail: false,
+                    })
+                  }
+                  className="donationStep"
+                >
+                  <p>
+                    <span
+                      style={{ fontSize: "1.3em", margin: 0 }}
+                      className="qtyn"
+                    >
+                      3
+                    </span>{" "}
+                    Donation Quantity
+                  </p>
+                </div>
+              ) : (
+                false
+              )}
+            </div>
+            <div className="col-md-3">
+              {this.state.dntionDetailControl ? (
+                <div
+                  onClick={() =>
+                    this.setState({
+                      donationForm: false,
+                      donationDetailForm: false,
+                      amountBox: false,
+                      donationFormDetail: true,
+                    })
+                  }
+                  className="donationStep"
+                >
+                  <p>
+                    <span
+                      style={{ fontSize: "1.3em", margin: 0 }}
+                      className="qtyn"
+                    >
+                      4
+                    </span>{" "}
+                    Personal Details
+                  </p>
+                </div>
+              ) : (
+                false
+              )}
+            </div>
+          </div>
+        </div>
         {/* Donation Form */}
         {this.state.donationForm ? (
-          <div className="p-5">
-            <div className="row">
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Zakat</p>
+          <div className="p-5 backgroundLight">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-3 col-sm-4 text-center donationCard">
+                  <div onClick={() => this.donationType("Sadqa")}>
+                    <p className="donationCardText">Sadqa</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Sadqa</p>
+                <div className="col-md-3 col-sm-4 text-center donationCard">
+                  <div onClick={() => this.donationType("Aqiqa")}>
+                    <p className="donationCardText">Aqeeqa</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Aqeeqa</p>
+                <div className="col-md-3 col-sm-4 text-center donationCard">
+                  <div onClick={() => this.donationType("Other Donation")}>
+                    <p className="donationCardText">Other Donation</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Education</p>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Marriage</p>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Food</p>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Monthly Rashan</p>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Saaf Pani</p>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Medical</p>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-4 donationCard">
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationDetailForm: true,
-                      donationForm: false,
-                    })
-                  }
-                >
-                  <p className="donationCardText">Other Donation</p>
+                <div className="col-md-3 col-sm-4 text-center donationCard">
+                  <div
+                    onClick={() => {
+                      this.donationType("Campaign");
+                    }}
+                  >
+                    <p className="donationCardText">Campaign</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -541,26 +589,284 @@ class DonationForm extends React.Component {
           false
         )}
         {/* Donatin Detail Form */}
-
         {this.state.donationDetailForm ? (
           <div className="backgroundLight p-5">
             <div className="container rounded shadow bg-white p-5">
               <h3>Select Type</h3>
-              <div className="row subCategoryList">
-                {this.state.sadqaDropDown.map((e, i) => {
+              <div className="subCategoryList row">
+                {this.state.currentData.map((e, i) => {
                   return (
-                    <div key={i} className="col-md-3 p-2">
-                      <div>{e}</div>
+                    <div
+                      onClick={() =>
+                        this.selectCategory(e.value, e.donationCate)
+                      }
+                      className="col-md-3"
+                      key={i}
+                    >
+                      <div className="categoryList">{e.donationCate}</div>
                     </div>
                   );
                 })}
               </div>
             </div>
-            <div></div>
           </div>
         ) : null}
+        {/* Amount and Quantity Box */}
+        {this.state.amountBox ? (
+          <div className="backgroundLight">
+            <div className="container py-3">
+              <div className="row">
+                <div className="col-md-12 py-3">
+                  <div className="row amountCard">
+                    <div className="col-md-6 px-5 py-2 text-center">
+                      {this.state.currentDropDownValue === "Other Donation" ||
+                      this.state.currentDropDownValue === "Campaign" ? (
+                        <p
+                          style={{
+                            fontSize: "2em",
+                            padding: "10px",
+                            height: "100%",
+                            borderRadius: "8px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            color: "rgb(0, 102, 179)",
+                            border: "2px solid rgb(0, 102, 179)",
+                          }}
+                        >
+                          {this.state.donationSubCategory}
+                        </p>
+                      ) : (
+                        <div className="amountDes py-5">
+                          {this.state.donationQuantity > 0 ? (
+                            <button
+                              onClick={() =>
+                                this.setState({
+                                  donationQuantity:
+                                    this.state.donationQuantity - 1,
+                                })
+                              }
+                            >
+                              -
+                            </button>
+                          ) : null}
+                          <span>
+                            {this.state.donationQuantity}{" "}
+                            {this.state.currentDropDownValue}
+                          </span>
+                          <button
+                            onClick={() =>
+                              this.setState({
+                                donationQuantity:
+                                  this.state.donationQuantity + 1,
+                              })
+                            }
+                          >
+                            +
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                    <div className="col-md-6 px-5 py-2 text-center ">
+                      <div className="amount">
+                        <p>
+                          Rs <br />
+                          {this.state.currentDropDownValue ===
+                            "Other Donation" ||
+                          this.state.currentDropDownValue === "Campaign" ? (
+                            <input
+                              onChange={(e) =>
+                                this.setState({
+                                  categoryAmount: e.target.value,
+                                })
+                              }
+                              value={this.state.categoryAmount}
+                              type="number"
+                              className="amountInp"
+                              placeholder="Amount"
+                            />
+                          ) : (
+                            <>
+                              {" "}
+                              <p
+                                style={{
+                                  fontSize: "1.5em",
+                                  fontWeight: "bold",
+                                }}
+                              >
+                                {(
+                                  this.state.categoryAmount *
+                                  this.state.donationQuantity
+                                ).toLocaleString()}
+                              </p>
+                            </>
+                          )}
+                          /-
+                        </p>
+                      </div>
+                    </div>
 
-        <div className="container my-5 py-5">
+                    <div className="col-md-12 px-5 py-2 text-center">
+                      <div style={{ height: "100%" }}>
+                        <button
+                          onClick={() =>
+                            this.setState({
+                              amountBox: false,
+                              donationFormDetail: true,
+                              dntionDetailControl: true,
+                            })
+                          }
+                          className="prevbtn btn-block"
+                        >
+                          Proceed to Amount
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        {this.state.donationFormDetail ? (
+          <div className="p-4 py-5 backgroundLight">
+            <div className="container">
+              <div className="row bg-white rounded shadow">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url('https://samircharitabletrust.org/wp-content/uploads/2014/02/ab.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="col-md-8 py-2"
+                >
+                  
+                </div>
+                <div className="col-md-4 shadow">
+                  <div className="p-3">
+                    <h3>Personal Details</h3>
+                    <div className="row">
+                      <div className="col-md-12 mt-3 mb-3">
+                        <div className="pb-2">
+                          <input
+                            type="text"
+                            class="inp"
+                            placeholder="Enter Name"
+                            value={name}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "name");
+                              this.setState({ chkname: false });
+                            }}
+                          />
+                          {this.state.chkname ? (
+                            <p className="text-danger">Field is Emply</p>
+                          ) : null}
+                        </div>
+                        <div className="py-2">
+                          <input
+                            type="text"
+                            class="inp"
+                            placeholder="Contact No (for whatsApp Video)"
+                            value={contNumber}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "contNumber");
+                              this.setState({ chkcontNumber: false });
+                            }}
+                          />
+                          {this.state.chkcontNumber ? (
+                            <p className="text-danger">Field is Emply</p>
+                          ) : null}
+                        </div>
+                        <div className="py-2">
+                          <input
+                            type="text"
+                            class="inp"
+                            placeholder="Enter Email"
+                            value={email}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "email");
+                              this.setState({ chkemail: false });
+                            }}
+                          />
+                        </div>
+                        <div className="pt-2">
+                          {this.state.chkemail ? (
+                            <p className="text-danger">Field is Emply</p>
+                          ) : null}
+                          <textarea
+                            placeholder="Enter Special Request"
+                            className="inp"
+                            rows="6"
+                            value={remarks}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "remarks");
+                              this.setState({ chkremarks: false });
+                            }}
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div className="col-md-7">
+                        {this.state.chkremarks ? (
+                          <p className="text-danger">Field is Emply</p>
+                        ) : null}
+                      </div>
+                      <div className="col-md-12 text-right ">
+                        <button
+                          className="prevbtn px-5"
+                          onClick={() => this.Submit()}
+                        >
+                          Send
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          false
+        )}
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Bank Detail List
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <BankDetail />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="container my-5 py-5">
           <div className="displayheading">
             <h1>Donation Form</h1>
           </div>
@@ -576,7 +882,7 @@ class DonationForm extends React.Component {
                 }}
                 className="col-md-12 p-5 backgroundDark"
               >
-                <div className="">
+                <div>
                   <h3 className="text-white">
                     Donate to us through Virgin Money Giving
                   </h3>
@@ -611,38 +917,6 @@ class DonationForm extends React.Component {
               </div>
               <div className="col-md-12 backgroundLight p-5">
                 <div className="row">
-                  <div className="col-md-6 mt-3 mb-3">
-                    <label className="lab text-dark">Name</label>
-                    <input
-                      type="text"
-                      class="inp"
-                      placeholder="Name"
-                      value={name}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "name");
-                        this.setState({ chkname: false });
-                      }}
-                    />
-                    {this.state.chkname ? (
-                      <p className="text-danger">Field is Emply</p>
-                    ) : null}
-                  </div>
-                  <div className="col-md-6 mt-3 mb-3">
-                    <label className="lab text-dark">Email</label>
-                    <input
-                      type="text"
-                      class="inp"
-                      placeholder="Email"
-                      value={email}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "email");
-                        this.setState({ chkemail: false });
-                      }}
-                    />
-                    {this.state.chkemail ? (
-                      <p className="text-danger">Field is Emply</p>
-                    ) : null}
-                  </div>
                   <div className="col-md-6 mt-3 mb-3">
                     <label className="lab text-dark">
                       Select Donation Method
@@ -770,52 +1044,11 @@ class DonationForm extends React.Component {
                     />
                     <p>Bank Charges is : {perc === "NaN" ? 0 : perc}</p>
                   </div>
-
-                  <div className="col-md-6 mt-3 mb-3">
-                    <label className="lab text-dark">Contact Number</label>
-                    <input
-                      type="text"
-                      class="inp"
-                      placeholder="Number"
-                      value={contNumber}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "contNumber");
-                        this.setState({ chkcontNumber: false });
-                      }}
-                    />
-                    {this.state.chkcontNumber ? (
-                      <p className="text-danger">Field is Emply</p>
-                    ) : null}
-                  </div>
-                  <div className="col-md-8 mt-3 mb-3">
-                    <label className="lab text-dark">Remarks</label>
-                    <textarea
-                      placeholder="Enter Your Remarks"
-                      className="inp"
-                      rows="8"
-                      value={remarks}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "remarks");
-                        this.setState({ chkremarks: false });
-                      }}
-                    ></textarea>
-                    {this.state.chkremarks ? (
-                      <p className="text-danger">Field is Emply</p>
-                    ) : null}
-                  </div>
-                  <div className="col-md-12 mt-3 mb-3">
-                    <button
-                      className="btn-block donate"
-                      onClick={() => this.Submit()}
-                    >
-                      Send
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

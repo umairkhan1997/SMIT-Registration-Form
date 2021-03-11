@@ -27,7 +27,7 @@ export default class Donation extends React.Component {
     return (
       <div>
         <MainHeader />
-        <div className="container">
+        {/* <div className="container">
           <div className="row">
             <div className="col-md-6 p-3 pt-5">
               <div
@@ -66,7 +66,7 @@ export default class Donation extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {showScreen ? <DonationForm /> : <BankDetails />}
         <Footer />
       </div>

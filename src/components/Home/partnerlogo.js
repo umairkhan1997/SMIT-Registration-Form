@@ -26,7 +26,148 @@ export default class PartnerScreen extends React.Component {
   render() {
     return (
       <div id="saylaniPartners">
-        <div className="py-5">
+        <div className="py-5 partnersWebView">
+          <div class="container">
+            <div
+              id="carouselContentWeb"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <button
+                href="#carouselContentWeb"
+                role="button"
+                data-slide="prev"
+                className="partnerBtn rounded-pill"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                className="partnerBtn rounded-pill"
+                href="#carouselContentWeb"
+                role="button"
+                data-slide="next"
+              >
+                {" "}
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active text-center p-4">
+                  <div className="row">
+                    <div className="col-md-2 p-2">
+                      <div className="logoDiv">
+                        <img
+                          width="100%"
+                          src="https://iconape.com/wp-content/png_logo_vector/sindh-police-pakistan-logo.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo1} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo2} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo3} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo4} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo5} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo6} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo7} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo8} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo9} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo10} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo11} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo12} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo13} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo14} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo15} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo16} alt="" />
+                      </div>
+                    </div>
+                    <div className="col-md-2 col-sm-4 col-xs-6 p-2">
+                      <div className="logoDiv">
+                        <img width="100%" src={logo17} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="py-5 partnersMobileView">
           <div class="container">
             <div
               id="carouselContent"
@@ -59,7 +200,7 @@ export default class PartnerScreen extends React.Component {
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active text-center p-4">
                   <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img
                           width="100%"
@@ -68,27 +209,47 @@ export default class PartnerScreen extends React.Component {
                         />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo1} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo2} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo3} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo4} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo5} alt="" />
                       </div>
@@ -97,32 +258,52 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo6} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo7} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo8} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo9} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo10} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo11} alt="" />
                       </div>
@@ -131,32 +312,52 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo12} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo13} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo14} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo15} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo16} alt="" />
                       </div>
                     </div>
-                    <div className="col-md-2">
+                  </div>
+                </div>
+                <div class="carousel-item text-center p-4">
+                  <div className="row">
+                    <div className="col-md-6 p-2">
                       <div className="logoDiv">
                         <img width="100%" src={logo17} alt="" />
                       </div>

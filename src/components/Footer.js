@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import logo from "../images/logo.png";
 import { FaFacebookSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -32,19 +33,18 @@ export default class Footer extends React.Component {
             <div className="col-md-4 text-left p-5">
               <ul>
                 <li className="footerList">
-                  <a href="/">Home</a>
+                  <Link to="/Donation">Donate Online</Link>
                 </li>
                 <li className="footerList">
-                  <a href="/contact">Contact</a>
+                  <a href="tel:032111729526">Doorstep Collection</a>
                 </li>
                 <li className="footerList">
-                  <a href="/media">Media</a>
+                  <Link>Donate In-Person at our</Link>
                 </li>
                 <li className="footerList">
-                  <a href="/projects">Projects</a>
-                </li>
-                <li className="footerList">
-                  <a href="/welfare">Welfare</a>
+                  <a href="mailto:info@gmail.com">
+                    Write to us at info@saylaniwelfare.com
+                  </a>
                 </li>
               </ul>
             </div>

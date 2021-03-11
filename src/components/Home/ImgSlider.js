@@ -1,5 +1,5 @@
 import React from "react";
-import { Zoom } from "react-slideshow-image";
+import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { connect } from "react-redux";
 import { homeSlideImg } from "../../Redux/action/homeAction";
@@ -12,9 +12,8 @@ class ImgSlider extends React.Component {
   render() {
     return (
       <div className="slide-container">
-        <Zoom
+        <Slide
           duration={2000}
-          indicators
           prevArrow={
             <button className="slideBtn prevSlide">
               <i class="fas fa-arrow-left"></i>
@@ -30,7 +29,7 @@ class ImgSlider extends React.Component {
           {this.props.homeSlideImgs.map((each, index) => (
             <img key={index} style={{ width: "100%" }} src={each.imgUrl} />
           ))}
-        </Zoom>
+        </Slide>
       </div>
     );
   }
@@ -49,4 +48,3 @@ function mapDispatchToProp(dispatch) {
   };
 }
 export default connect(mapStateToProp, mapDispatchToProp)(ImgSlider);
-

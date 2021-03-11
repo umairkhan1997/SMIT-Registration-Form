@@ -8,6 +8,11 @@ import HomeData from "../components/Home/homedata";
 import SideList from "../smallcomponents/sidelist";
 import HomeCover from "../components/Home/homecover";
 import PartnerScreen from "../components/Home/partnerlogo";
+import SaylaniChampions from "../components/Home/saylaniChampions";
+import Events from "../components/Home/event";
+import Navbar from "../smallcomponents/navbar";
+import NewsLater from "../components/Home/newslater";
+
 import {
   FaDoorOpen,
   FaNewspaper,
@@ -46,14 +51,30 @@ export default class Main extends React.Component {
   render() {
     return (
       <div>
-        <SideList item={this.state.listItem} />
+        {/* <SideList item={this.state.listItem} /> */}
         <MainHeader />
-        {/* <ImgSlider /> */}
+        <div className="bg-white shadow sticky-top">
+          <Navbar />
+        </div>
+        <ImgSlider />
         <Introduction />
-        <HomeCover />
+        {/* <HomeCover /> */}
         {/* <HomeData /> */}
-        <HomeNews />
-        <p className="partnerHeading">CORPORATE EMBASSADOR PROGRAM</p>
+        <div className="row m-0 p-3">
+          <div className="col-md-6">
+            <HomeNews />
+          </div>
+          <div className="col-md-6">
+            <SaylaniChampions />
+          </div>
+          <div className="col-md-6">
+            <Events />
+          </div>
+          <div className="col-md-6">
+            <NewsLater />
+          </div>
+        </div>
+        <p className="partnerHeading">CORPORATE EMBESSADOR PROGRAM</p>
         <PartnerScreen />
         <Footer />
       </div>

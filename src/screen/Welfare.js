@@ -29,12 +29,12 @@ export default class Welfare extends React.Component {
         },
       ],
     };
-  } 
+  }
 
   render() {
     return (
       <div>
-        <SideList item={this.state.listItem} />
+        {/* <SideList item={this.state.listItem} /> */}
         <MainHeader />
         <DataTable />
         <Services />

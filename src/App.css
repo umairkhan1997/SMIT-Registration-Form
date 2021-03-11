@@ -1,5 +1,5 @@
 * {
-  font-family: "Exo 2";
+  font-family: "Montserrat";
   transition: 0.5s;
   scroll-behavior: smooth;
 }
@@ -419,39 +419,7 @@
 .linkIcon {
   padding-left: 20px;
 }
-@media only screen and (max-width: 600px) {
-  .linkLeft {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin-left: 0;
-    padding: 10px;
-    border-radius: 25px 25px 0 0;
-    width: 100vw;
-    text-align: center;
-    box-shadow: 5px -5px 8px rgba(0, 0, 0, 0.2);
-    overflow-x: auto;
-    overflow-y: hidden;
-    margin-bottom: 0;
-  }
-  .linkLeft li {
-    display: inline-block;
-    border-radius: 35px;
-    text-align: center;
-    width: 60px;
-    height: 60px;
-    padding: 12px;
-  }
-  .linkLeft li .linkText {
-    display: none;
-    margin: 0;
-  }
-  .linkLeft li .linkIcon {
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-  }
-}
+
 .donateButton {
   padding: 12px;
   margin: 5px;
@@ -468,6 +436,7 @@
   background-color: transparent;
   color: #62ba46;
 }
+
 /* ===============Login Screen CSS============== */
 .loginScreen {
   height: 100%;
@@ -505,4 +474,48 @@
 }
 .em1-4 {
   font-size: 1.4em;
+}
+.modal-dialog {
+  max-width: 1200px !important;
+}
+.btntop {
+  padding: 8px 12px;
+  margin: 5px 10px;
+  font-size: 1em;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .linkLeft {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 25px 25px 0 0;
+    width: 100vw;
+    text-align: center;
+    box-shadow: 5px -5px 8px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 0;
+  }
+  .linkLeft li {
+    display: inline-block;
+    border-radius: 35px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+  }
+  .linkLeft li .linkText {
+    display: none;
+    margin: 0;
+  }
+  .linkLeft li .linkIcon {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
 }

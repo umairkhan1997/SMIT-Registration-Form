@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba666226.chunk.css",
-    "main.js": "/static/js/main.b5f8c718.chunk.js",
-    "main.js.map": "/static/js/main.b5f8c718.chunk.js.map",
+    "main.css": "/static/css/main.f8bde7a8.chunk.css",
+    "main.js": "/static/js/main.93c3528e.chunk.js",
+    "main.js.map": "/static/js/main.93c3528e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a7aa9b7e.js",
     "runtime-main.js.map": "/static/js/runtime-main.a7aa9b7e.js.map",
     "static/css/2.14e6b765.chunk.css": "/static/css/2.14e6b765.chunk.css",
-    "static/js/2.d4929436.chunk.js": "/static/js/2.d4929436.chunk.js",
-    "static/js/2.d4929436.chunk.js.map": "/static/js/2.d4929436.chunk.js.map",
+    "static/js/2.db315117.chunk.js": "/static/js/2.db315117.chunk.js",
+    "static/js/2.db315117.chunk.js.map": "/static/js/2.db315117.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.41e27b9aa96e4465f8b685b401e3e67a.js": "/precache-manifest.41e27b9aa96e4465f8b685b401e3e67a.js",
+    "precache-manifest.3fa17b467807d0ae6570dfb290bbf797.js": "/precache-manifest.3fa17b467807d0ae6570dfb290bbf797.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.14e6b765.chunk.css.map": "/static/css/2.14e6b765.chunk.css.map",
-    "static/css/main.ba666226.chunk.css.map": "/static/css/main.ba666226.chunk.css.map",
-    "static/js/2.d4929436.chunk.js.LICENSE.txt": "/static/js/2.d4929436.chunk.js.LICENSE.txt",
+    "static/css/main.f8bde7a8.chunk.css.map": "/static/css/main.f8bde7a8.chunk.css.map",
+    "static/js/2.db315117.chunk.js.LICENSE.txt": "/static/js/2.db315117.chunk.js.LICENSE.txt",
     "static/media/Dr.jpg": "/static/media/Dr.9001dde4.jpg",
     "static/media/EhsaanSaylani.jpeg": "/static/media/EhsaanSaylani.d5e87f22.jpeg",
     "static/media/ROback.jpg": "/static/media/ROback.adc8797f.jpg",
@@ -34,6 +34,7 @@
     "static/media/cia.jpeg": "/static/media/cia.d55abd37.jpeg",
     "static/media/cima.jpeg": "/static/media/cima.2de0a961.jpeg",
     "static/media/course1.jpg": "/static/media/course1.1e269cf7.jpg",
+    "static/media/cover.png": "/static/media/cover.dbe5edb5.png",
     "static/media/cover2.png": "/static/media/cover2.a0990ec2.png",
     "static/media/daraz.png": "/static/media/daraz.c2ec27f0.png",
     "static/media/faisalabad.jpg": "/static/media/faisalabad.51d5640e.jpg",
@@ -90,8 +91,8 @@
   "entrypoints": [
     "static/js/runtime-main.a7aa9b7e.js",
     "static/css/2.14e6b765.chunk.css",
-    "static/js/2.d4929436.chunk.js",
-    "static/css/main.ba666226.chunk.css",
-    "static/js/main.b5f8c718.chunk.js"
+    "static/js/2.db315117.chunk.js",
+    "static/css/main.f8bde7a8.chunk.css",
+    "static/js/main.93c3528e.chunk.js"
   ]
 }

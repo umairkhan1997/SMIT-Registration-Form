@@ -195,15 +195,7 @@
   padding: 8px;
   font-size: 1em;
 }
-@media screen and (max-width: 600px) {
-  .homeDataListRight {
-    margin-left: 0;
-    width: 100%;
-  }
-  .homeDataListRight li {
-    border-radius: 0 150px 150px 0;
-  }
-}
+
 .donateImage {
   padding: 10px;
   position: relative;
@@ -233,11 +225,7 @@
 .introText {
   font-size: 20px;
 }
-.schemeTextHeading {
-  font-weight: bolder;
-  font-size: 43px;
-  color: white;
-}
+
 .coverHeading {
   font-size: 2.9em;
   font-weight: bold;
@@ -246,20 +234,46 @@
 .coverCardHeadingLarge {
   font-weight: bold;
   font-size: 3em;
-  color: #034f9c;
+  color: #fff;
   margin: 0;
   padding: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+.donationWaysList {
+  padding: 0;
+  list-style: none;
+}
+.donationWaysList li {
+  padding: 15px;
+  padding-left: 60px;
+  margin: 25px 8px;
+  background-color: #084e97;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  border-left: 3px solid #0066b3;
+  font-size: 1em;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+.donationWaysList li:hover {
+  background-color: #b3daf8;
 }
 .coverCardHeadingSmall {
   font-weight: bolder;
   font-size: 1.5em;
-  color: #034f9c;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
 .partnerHeading {
   padding: 10px;
-  background-color: #7bc563;
+  background-color: #084e97;
   color: white;
   text-align: center;
   font-size: 1.2em;
@@ -282,4 +296,68 @@
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 5px;
+}
+.slideCardHeading {
+  font-size: 2em;
+  padding: 15px 5px;
+}
+.slideCardText {
+  font-size: 1.3em;
+  padding: 15px 5px;
+}
+.donateListIcon {
+  background-color: #e5e5e4;
+  display: inline-block;
+  padding: 8px 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.homeIntro p {
+  font-size: 0.9em;
+}
+.champLogo {
+  width: 80%;
+}
+.partnersMobileView {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .homeDataListRight {
+    margin-left: 0;
+    width: 100%;
+  }
+  .homeDataListRight li {
+    border-radius: 0 150px 150px 0;
+  }
+  .slideCardHeading {
+    font-size: 1.5em;
+    padding: 8px;
+  }
+  .coverCardHeadingLarge {
+    font-size: 2.2em;
+  }
+  .coverCardHeadingSmall {
+    font-size: 1.1em;
+  }
+  .slideCardText {
+    font-size: 1em;
+    padding: 10px 5px;
+  }
+  .champGrid {
+    width: 50%;
+  }
+  .champLogo {
+    width: 100%;
+  }
+  .partnersMobileView {
+    display: block;
+  }
+  .partnersWebView {
+    display: none;
+  }
 }

@@ -8,7 +8,10 @@ import "./donate.css";
 export default class BankDetails extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      BankDetails: false,
+      collectionPoints: false,
+    };
   }
 
   render() {
@@ -17,10 +20,10 @@ export default class BankDetails extends React.Component {
         <div className="pt-3 pb-5 grad">
           <div className="container">
             <div className="row mt-5 mb-5">
-              <div className="col-md-6 p-4">
-                <div className="bankDetailsCard text-left bg-dark text-white p-5">
+              <div className="col-md-6 p-1">
+                <div className="bankDetailsCard text-left bg-dark text-white p-3">
                   <img
-                    width="230px"
+                    width="100%"
                     src="https://www.westernunion.com/content/dam/wu/logo/logo.wu.big.svg"
                   />
                   <p>Please Donation in Favour of</p>
@@ -32,10 +35,10 @@ export default class BankDetails extends React.Component {
                   <p>Do Not Forget To Send Us It's (MTCN) No.</p>
                 </div>
               </div>
-              <div className="col-md-6 p-4">
-                <div className="bankDetailsCard text-left p-5">
+              <div className="col-md-6 p-1">
+                <div className="bankDetailsCard text-left p-3">
                   <img
-                    width="230px"
+                    width="100%"
                     src="http://global.moneygram.com/images/logo.png"
                   />
                   <p>
@@ -52,21 +55,16 @@ export default class BankDetails extends React.Component {
             </div>
           </div>
         </div>
-
-        <div
-          style={{
-            backgroundImage:
-              "url('https://www.techbams.com/wp-content/uploads/2018/07/uu.jpg')",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
+        <div>
           <div
-            className="py-5"
+            className="py-3"
             style={{ backgroundColor: "rgba(255,255,255,.3)" }}
           >
-            <div className="container">
-              <table className="bankTable bg-white table-white shadow rounded table-responsive-sm table-hover table table-responsive">
+            <div>
+              <table
+                style={{ height: "100vh" }}
+                className="bankTable bg-white table-white shadow rounded table-responsive-sm table-hover table table-responsive"
+              >
                 <thead>
                   <tr>
                     <th>#</th>
