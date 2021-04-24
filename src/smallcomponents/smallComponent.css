@@ -7,10 +7,11 @@
   color: black;
   font-weight: bolder;
 }
+.dropdown-item:hover {
+  color: #034f9c;
+}
 @media only screen and (max-width: 600px) {
   .homeIntroCardDetails {
     text-align: center;
   }
-}
-@media only screen and (max-width: 800px) {
 }

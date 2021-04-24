@@ -16,33 +16,40 @@ export default class MainHeader extends React.Component {
         <div className="shadow">
           <div>
             <div className="container">
-              <div className="row">
-                <div className="col-md-6 py-3">
+              <div className="d-flex justify-content-between">
+                <div>
                   <div>
                     <NavLink className="navbar-brand" to="/">
                       <img src={logo} width="200px" />
                     </NavLink>
                   </div>
                 </div>
-                <div className="col-md-6 py-3 text-center">
+                <div className="py-2 donatePanel text-center">
                   <button
                     style={{ backgroundColor: "#62BA47" }}
                     className="btntop"
                   >
-                    SWIT UK
+                    <a href="https://www.saylaniwelfareuk.com/" target="_blank">
+                      SWIT UK
+                    </a>
                   </button>
                   <button
                     style={{ backgroundColor: "#62BA47" }}
                     className="btntop"
                   >
-                    SWIT USA
+                    <a
+                      href="https://saylaniwelfare.com/USA-Ramzan"
+                      target="_blank"
+                    >
+                      SWIT USA
+                    </a>
                   </button>
                   <button
                     style={{ backgroundColor: "#084E97" }}
                     className="btntop"
                   >
                     <NavLink className="text-white" to="Donation">
-                      DONATE US
+                      Donate Now
                     </NavLink>
                   </button>
                 </div>

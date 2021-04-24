@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default class Navbar extends React.Component {
   render() {
     return (
-      <div className="sticky-top">
-        <nav className="navbar navbar-expand-lg d-flex py-0 justify-content-center flex-row sticky-top navbar-light">
+      <div className="sticky-top bg-white shadow">
+        <nav className="navbar navbar-expand-lg d-flex py-0 justify-content-center flex-row navbar-light">
           <div></div>
           <button
             className="navbar-toggler border-0"
@@ -51,34 +52,44 @@ export default class Navbar extends React.Component {
                   </NavLink>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <Link class="dropdown-item" href="#">
-                        Founder Message
-                      </Link>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/aboutus#ourMission"
+                      >
+                        Over Mission
+                      </HashLink>
                     </li>
                     <li>
-                      <Link class="dropdown-item" href="#">
-                        Vision & Mission
-                      </Link>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/aboutus#ourVision"
+                      >
+                        Over Vision
+                      </HashLink>
                     </li>
                     <li>
-                      <Link class="dropdown-item" href="#">
-                        Contact
-                      </Link>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/aboutus#chairmanMessage"
+                      >
+                        Chairman Message
+                      </HashLink>
                     </li>
                     <li>
-                      <Link class="dropdown-item" href="#">
-                        Audit Report
-                      </Link>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/aboutus#ourHistory"
+                      >
+                        Our History
+                      </HashLink>
                     </li>
                     <li>
-                      <Link class="dropdown-item" href="#">
-                        NTN Certificate
-                      </Link>
-                    </li>
-                    <li>
-                      <Link class="dropdown-item" href="#">
-                        Locations
-                      </Link>
+                      <HashLink
+                        className="dropdown-item"
+                        to="/aboutus#thematicArea"
+                      >
+                        Thematic Area
+                      </HashLink>
                     </li>
                   </ul>
                 </li>
@@ -95,7 +106,7 @@ export default class Navbar extends React.Component {
                   <NavLink
                     activeClassName="activeLink"
                     className="nav-link"
-                    to="/projects"
+                    to="/location"
                   >
                     Where We Work
                   </NavLink>
@@ -104,7 +115,7 @@ export default class Navbar extends React.Component {
                   <NavLink
                     activeClassName="activeLink"
                     className="nav-link"
-                    to="/projects"
+                    to="/champion"
                   >
                     Our Champions
                   </NavLink>

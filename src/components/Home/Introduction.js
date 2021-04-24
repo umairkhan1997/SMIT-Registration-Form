@@ -145,7 +145,7 @@ class Introduction extends React.Component {
               </div>
             </div>
 
-            <div className="container">
+            <div className="p-5 my-5">
               <div className="row">
                 <div className="col-md-5">
                   <div className="displayheading">

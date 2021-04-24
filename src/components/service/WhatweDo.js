@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserHistory } from "history";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import Zoom from "react-reveal/Zoom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./service.css";
@@ -44,22 +44,25 @@ class WhatweDo extends React.Component {
     this.props.projectCat();
   }
   chView = (a) => {
-    this.props.history.push(a)
-  }
-
+    this.props.history.push(a);
+  };
 
   render() {
     return (
       <div style={{ backgroundColor: "white" }}>
-        <div style={{ backgroundColor: "#f5f8ff", color: "#0066b3" }}>
+        <div>
           <div className="container py-5">
-            <div className="row py-2">
-              <div className="col-md-6 ">
-                <h2 className="text-left">
-                  Current and Upcomming projects of Saylani
-                </h2>
+            <div className="row py-5">
+              <div className="col-md-12 ">
+                <h2 className="text-center">WHAT WE DO</h2>
+                <p className="text-center">
+                  We are working as a bridge between Needy and Affluent.
+                </p>
+                <p className="text-center">
+                  <Link>Read More...</Link>
+                </p>
               </div>
-              <div className="col-md-6 text-center">
+              <div className="col-md-12 text-center">
                 <input
                   className="search"
                   onChange={(e) =>
@@ -84,16 +87,27 @@ class WhatweDo extends React.Component {
               })
               .map((filteredName) => {
                 return filteredName.view ? (
-                  <div className="col-md-3 col-sm-6 col-sm-6 p-3">
+                  <div className="col-md-6 col-sm-6 col-sm-6 p-3">
                     <Zoom>
-                      <div onClick={() => this.props.history.push(filteredName.proHrefVal)}>
-                        <div className="small text-center">
+                      <div
+                        onClick={() =>
+                          this.props.history.push(filteredName.proHrefVal)
+                        }
+                      >
+                        <div className="small">
                           <div className="p-3">
-                            <p style={{ fontSize: "3.5em" }}>
-                              <i class={filteredName.proIcon}></i>
+                            <p className="color" style={{ fontSize: "2.5em" }}>
+                              <span style={{ fontSize: "1.2em" }}>
+                                <i class={filteredName.proIcon}></i>
+                              </span>{" "}
+                              {filteredName.proName}
+                            </p>
+                            <p style={{ fontSize: "1.2em" }}>
+                              We are working as a bridge between Needy and
+                              Affluent.
                             </p>
                           </div>
-                          <p className="proName"> {filteredName.proName}</p>
+                          <p className="proName"> Read More</p>
                         </div>
                       </div>
                     </Zoom>

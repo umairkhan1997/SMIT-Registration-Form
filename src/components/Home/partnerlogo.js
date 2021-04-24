@@ -200,7 +200,7 @@ export default class PartnerScreen extends React.Component {
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img
                           width="100%"
@@ -213,7 +213,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo1} alt="" />
                       </div>
@@ -222,7 +222,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo2} alt="" />
                       </div>
@@ -231,7 +231,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo3} alt="" />
                       </div>
@@ -240,7 +240,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo4} alt="" />
                       </div>
@@ -249,7 +249,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo5} alt="" />
                       </div>
@@ -258,7 +258,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo6} alt="" />
                       </div>
@@ -267,7 +267,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo7} alt="" />
                       </div>
@@ -276,7 +276,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo8} alt="" />
                       </div>
@@ -285,7 +285,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo9} alt="" />
                       </div>
@@ -294,7 +294,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo10} alt="" />
                       </div>
@@ -303,7 +303,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo11} alt="" />
                       </div>
@@ -312,7 +312,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo12} alt="" />
                       </div>
@@ -321,7 +321,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo13} alt="" />
                       </div>
@@ -330,7 +330,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo14} alt="" />
                       </div>
@@ -339,7 +339,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo15} alt="" />
                       </div>
@@ -348,7 +348,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo16} alt="" />
                       </div>
@@ -357,7 +357,7 @@ export default class PartnerScreen extends React.Component {
                 </div>
                 <div class="carousel-item text-center p-4">
                   <div className="row">
-                    <div className="col-md-6 p-2">
+                    <div className="col-md-6 p-5">
                       <div className="logoDiv">
                         <img width="100%" src={logo17} alt="" />
                       </div>

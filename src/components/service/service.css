@@ -1,19 +1,21 @@
 .small {
   margin: 5px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   cursor: pointer;
   transition: 0.5s;
-  color: #0066b3;
+  /* color: #0066b3; */
   border: 1.5px solid lightgrey;
-  box-shadow: 0 10px 15px lightgrey;
+  /* box-shadow: 0 10px 15px lightgrey; */
   overflow: hidden;
+  background-color: #e5e5e5;
+  text-align: left;
 }
-.small:hover {
+/* .small:hover {
   transform: scale(1.1, 1.1);
   background-color: white;
   box-shadow: 0 13px 25px lightgrey;
   border: 2px solid white;
-}
+} */
 .search {
   padding: 13px 13px 13px 55px;
   outline: none;
@@ -39,10 +41,11 @@
 }
 .proName {
   padding: 6px;
-  background-color: #0066b3;
-  color: white;
-  font-size: 1.6em;
+  color: #0066b3;
+  /* color: white; */
+  /* font-size: 1.6em; */
   margin: 0;
+  text-align: right;
 }
 .proName:hover {
   text-decoration: none;

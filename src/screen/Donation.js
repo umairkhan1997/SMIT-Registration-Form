@@ -4,12 +4,16 @@ import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
 import DonationForm from "../components/donate/donationForm";
 import BankDetails from "../components/donate/bankdetails";
+import Navbar from "../smallcomponents/navbar";
+import DonationDashboard from "../components/donate/dontaionDashboard";
+import MainDonationForm from "../components/donate/mainDonationForm";
 
 export default class Donation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showScreen: true,
+      mainDonationForm: false,
     };
   }
   DonationForm = () => {
@@ -27,6 +31,8 @@ export default class Donation extends React.Component {
     return (
       <div>
         <MainHeader />
+        <Navbar />
+        <DonationDashboard />
         {/* <div className="container">
           <div className="row">
             <div className="col-md-6 p-3 pt-5">

@@ -44,6 +44,10 @@ import SBIL from "./screen/sbil";
 import EhsaasLangarKhana from "./screen/ehsaas";
 import AdmitCard from "./screen/admitCard";
 import Login from "./screen/adminlogin";
+import Bank from "./screen/bankdetails";
+import About from "./screen/about";
+import Location from "./screen/location";
+import Champion from "./screen/champions";
 
 export default function MyRoute() {
   return (
@@ -92,6 +96,10 @@ export default function MyRoute() {
       <Route path="/overview" component={OverView} />
       <Route path="/admitcard" component={AdmitCard} />
       <Route path="/login" component={Login} />
+      <Route path="/bankdetails" component={Bank} />
+      <Route path="/aboutus" component={About} />
+      <Route path="/location" component={Location} />
+      <Route path="/champion" component={Champion} />
     </Router>
   );
 }

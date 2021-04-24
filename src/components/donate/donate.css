@@ -252,6 +252,68 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin: 0 5px;
 }
+.donatewaysicon {
+  /* margin-top: -70px; */
+  width: 70px;
+}
+.donationCardColor {
+  background-color: transparent;
+  border-radius: 15px;
+}
+.heavyRadius {
+  border-radius: 15px;
+}
+.donationCardColor:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.donationCegoryCard {
+  height: 100%;
+}
+.mainDonationForm {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1001;
+}
+.drawerCard {
+  background-color: white;
+  cursor: pointer;
+}
+.drawerCard:hover {
+  background-color: #dbecfe;
+}
+.donationCardHeading {
+  /* display: flex; */
+  text-align: left;
+  padding: 10px;
+}
+.bankCard div {
+  background-color: rgb(212, 234, 252);
+  text-align: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.bankCardDetails {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(212, 234, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 600px) {
   .donationCard {
     width: 50%;
@@ -260,5 +322,8 @@
     width: 120px;
     height: 120px;
     font-size: 1.2em;
+  }
+  .bankCard {
+    width: 50%;
   }
 }
