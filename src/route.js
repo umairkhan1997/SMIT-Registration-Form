@@ -48,6 +48,8 @@ import Bank from "./screen/bankdetails";
 import About from "./screen/about";
 import Location from "./screen/location";
 import Champion from "./screen/champions";
+import Food from "./screen/food";
+import Health from "./screen/health";
 
 export default function MyRoute() {
   return (
@@ -100,6 +102,8 @@ export default function MyRoute() {
       <Route path="/aboutus" component={About} />
       <Route path="/location" component={Location} />
       <Route path="/champion" component={Champion} />
+      <Route path="/food" component={Food} />
+      <Route path="/health" component={Health} />
     </Router>
   );
 }

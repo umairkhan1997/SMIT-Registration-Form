@@ -45,7 +45,7 @@ class Introduction extends React.Component {
             <div className="border-top border-bottom border-dark py-4 px-3 bg-light">
               <div className="row">
                 <div className="col-md-2 text-center">
-                  <div className="displayheading">
+                  <div className="">
                     <h2>Our Impact</h2>
                   </div>
                 </div>
