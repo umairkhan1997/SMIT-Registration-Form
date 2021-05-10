@@ -4,40 +4,69 @@ import collectioncenter from "../../images/homeimages/collectioncenter.png";
 import banktransfer from "../../images/homeimages/banktransfer.png";
 import MainDonationForm from "./mainDonationForm";
 import { FaDonate } from "react-icons/fa";
+import Modal from "react-awesome-modal";
 
 export default class DonationDashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       formStatus: this.props.status,
+      visible: false,
     };
+  }
+  openModal() {
+    this.setState({
+      visible: true,
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      visible: false,
+    });
   }
   render() {
     return (
       <div>
         {this.state.formStatus ? <MainDonationForm /> : null}
-        <div>
-          <img
-            width="100%"
-            alt=""
-            src="http://flood-rescue.com/img/essay-help-needy-people-35.jpg"
-          />
-        </div>
+
         {/* Campaign Start */}
-        <div className="container py-5">
-          <div className="row">
+        <div className="p-3">
+          <div className="row p-0 m-0">
             <div className="col-md-6">
               <div className="shadow">
-                <img
-                  src="https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.6435-9/175643705_6210855475607010_7003115694732489995_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeEXPa_WmBo4esy801Tyg3Uq0WxXfb1HF2fRbFd9vUcXZ47Ojp9YrdQ27CddBBZtRA0R1xvLI9yWQUPpbnCyJ_bs&_nc_ohc=Ss30iYpKBqoAX9S7-ap&_nc_ht=scontent.fkhi1-1.fna&oh=4b270d709466ea0f56f6bac75a3d6283&oe=60AB7AA4"
-                  alt=""
-                  width="100%"
-                />
-                <div className="p-5">
-                  <p>
-                    Let's Make someone's Warm in the Winter Everyone Feels
-                    Cold...
-                  </p>
+                <div className="py-2">
+                  <ul className="donationHead">
+                    <li onClick={() => this.openModal()}>
+                      Sadqa and Aqeeqa Animals
+                    </li>
+                    <li onClick={() => this.openModal()}>kifalat Program</li>
+                    <li onClick={() => this.openModal()}>
+                      Ramzan Rashan Package
+                    </li>
+                    <li onClick={() => this.openModal()}>
+                      Sehri & Aftari Support
+                    </li>
+                    <li onClick={() => this.openModal()}>
+                      Education Support Programm
+                    </li>
+                    <li onClick={() => this.openModal()}>SMIT Program</li>
+                    <li onClick={() => this.openModal()}>
+                      Wedding Support Program
+                    </li>
+                    <li onClick={() => this.openModal()}>
+                      Vocational Training
+                    </li>
+                    <li onClick={() => this.openModal()}>
+                      Saylani Dastarkhwan
+                    </li>
+                    <li onClick={() => this.openModal()}>
+                      Monthly Rashan Support Program
+                    </li>
+                    <li onClick={() => this.openModal()}>
+                      Support Hepaptitis Patients
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1067,11 +1096,23 @@ export default class DonationDashboard extends React.Component {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div id="accordion"></div>
-          </div>
         </div>
 
+        <Modal
+          visible={this.state.visible}
+          width="400"
+          height="300"
+          effect="fadeInUp"
+          onClickAway={() => this.closeModal()}
+        >
+          <div>
+            <h1>Title</h1>
+            <p>Some Contents</p>
+            <a href="javascript:void(0);" onClick={() => this.closeModal()}>
+              Close
+            </a>
+          </div>
+        </Modal>
         {/* Donate Cards End */}
       </div>
     );

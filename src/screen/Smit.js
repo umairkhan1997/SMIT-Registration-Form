@@ -19,7 +19,6 @@ import SuccessStories from "../components/SMIT/suuccesStories";
 import Workshop from "../components/SMIT/workshop";
 import Vocational from "../components/SMIT/vocationaltraining";
 import Intro from "../components/SMIT/intro";
-import SideList from "../smallcomponents/sidelist";
 
 export default class Smit extends React.Component {
   constructor(props) {

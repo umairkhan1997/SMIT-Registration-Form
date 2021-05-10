@@ -13,35 +13,11 @@ import SideList from "../smallcomponents/sidelist";
 export default class Medical extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      listItem: [
-        {
-          listText: "Introduction",
-          listIcon: "fas fa-door-open",
-          id: "medicalIntro",
-        },
-        {
-          listText: "Services",
-          listIcon: "fas fa-briefcase-medical",
-          id: "medicalServices",
-        },
-        {
-          listText: "Consultant OPD",
-          listIcon: "fas fa-user-md",
-          id: "MedicalOPD",
-        },
-        {
-          listText: "Hijama",
-          listIcon: "fas fa-tint",
-          id: "medicalHijama",
-        },
-      ],
-    };
+    this.state = {};
   }
   render() {
     return (
       <div>
-        <SideList item={this.state.listItem} />
         <MainHeader />
         <Table />
         <Intro />

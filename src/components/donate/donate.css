@@ -314,6 +314,28 @@
   justify-content: center;
   align-items: center;
 }
+.donationHead {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.donationHead li {
+  padding: 15px;
+  margin: 5px;
+  background-color: #0267b4;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  cursor: pointer;
+}
+.donationHead li:hover {
+  background-color: #032e50;
+}
 @media screen and (max-width: 600px) {
   .donationCard {
     width: 50%;
