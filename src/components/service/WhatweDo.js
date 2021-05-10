@@ -51,18 +51,16 @@ class WhatweDo extends React.Component {
     return (
       <div style={{ backgroundColor: "white" }}>
         <div>
-          <div className="container py-5">
+          <div className="container ">
             <div className="row py-5">
               <div className="col-md-12 ">
-                <h2 className="text-center">WHAT WE DO</h2>
-                <p className="text-center">
-                  We are working as a bridge between Needy and Affluent.
-                </p>
-                <p className="text-center">
-                  <Link>Read More...</Link>
+                {/* <h2 className="text-center"><u>WHAT WE DO</u></h2> */}
+                <h3 className="color"><b><u>WHAT WE DO</u></b></h3>
+                <p className="text-muted text-bold">
+                  <b>We are working as a bridge between Needy and Affluent</b>
                 </p>
               </div>
-              <div className="col-md-12 text-center">
+              <div className="col-md-12 ">
                 <input
                   className="search"
                   onChange={(e) =>
@@ -75,7 +73,7 @@ class WhatweDo extends React.Component {
           </div>
         </div>
 
-        <div className="container py-5">
+        <div className="container ">
           <div className="row">
             {this.props.projectCats
               .filter((name) => {
@@ -93,21 +91,25 @@ class WhatweDo extends React.Component {
                         onClick={() =>
                           this.props.history.push(filteredName.proHrefVal)
                         }
+
                       >
                         <div className="small">
-                          <div className="p-3">
-                            <p className="color" style={{ fontSize: "2.5em" }}>
-                              <span style={{ fontSize: "1.2em" }}>
+                          <div className="p-3" style={{ height: 150 }}>
+                            <div className="color" style={{ flexDirection: 'row' }}>
+                              <span style={{ fontSize: 32 }}>
                                 <i class={filteredName.proIcon}></i>
                               </span>{" "}
-                              {filteredName.proName}
-                            </p>
+
+                              <span style={{ marginTop: -10, fontSize: 34 }}>
+                                {filteredName.proName}
+                              </span>
+                            </div>
                             <p style={{ fontSize: "1.2em" }}>
                               We are working as a bridge between Needy and
                               Affluent.
                             </p>
                           </div>
-                          <p className="proName"> Read More</p>
+                          {/* <p className="proName"> Read More</p> */}
                         </div>
                       </div>
                     </Zoom>
@@ -116,7 +118,7 @@ class WhatweDo extends React.Component {
               })}
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }

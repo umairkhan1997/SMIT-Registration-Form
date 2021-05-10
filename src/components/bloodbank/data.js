@@ -11,14 +11,14 @@ export default class DataBloodBank extends React.Component {
             style={{ backgroundColor: "#8c1515", color: "white" }}
           >
             <div className="container">
-              <h1>Services Offerd by Saylani Blood Bank 2017 to 2020</h1>
+              <h1>Services Offered by Saylani Blood Bank 2017 to 2020</h1>
             </div>
           </div>
           <div className="container text-center py-5">
             <div className="col-md-12 row py-5">
               <div className="col-md-8 row">
                 <div className="col-md-12">
-                  <h3 className="dataHeading">Total Blood Transfusion</h3>
+                  <h3 className="dataHeading mt-4 mb-4"><b>Total Blood Transfusion</b></h3>
                 </div>
                 <div className="col-md-3 py-3">
                   <h3>2017</h3>
@@ -40,7 +40,7 @@ export default class DataBloodBank extends React.Component {
               <div className="col-md-4">
                 <div className="row ">
                   <div className="col-md-12">
-                    <h3 className="dataHeading">Total Blood Transfusion</h3>
+                    <h3 className="dataHeading mt-4 mb-4"><b>Total Blood Transfusion</b></h3>
                   </div>
                   <div className="col-md-12 py-3">
                     <h3>2017 to 2020</h3>
@@ -53,7 +53,7 @@ export default class DataBloodBank extends React.Component {
             <div className="col-md-12 row">
               <div className="col-md-8 row">
                 <div className="col-md-12">
-                  <h3 className="dataHeading">OPD Patient Of Thalassemia</h3>
+                  <h3 className="dataHeading mt-4 mb-4"><b>OPD Patient Of Thalassemia</b></h3>
                 </div>
                 <div className="col-md-3 py-3">
                   <h3>2017</h3>
@@ -75,7 +75,7 @@ export default class DataBloodBank extends React.Component {
               <div className="col-md-4">
                 <div className="row ">
                   <div className="col-md-12">
-                    <h3 className="dataHeading">OPD Patient</h3>
+                    <h3 className="dataHeading mt-4 mb-4"><b>OPD Patient</b></h3>
                   </div>
                   <div className="col-md-12 py-3">
                     <h3>2017 to 2020</h3>
@@ -87,7 +87,7 @@ export default class DataBloodBank extends React.Component {
             <div className="col-md-12 row py-5">
               <div className="col-md-8 row">
                 <div className="col-md-12">
-                  <h3 className="dataHeading">Haematologist</h3>
+                  <h3 className="dataHeading mt-4 mb-4"><b>Haematologist</b></h3>
                 </div>
                 <div className="col-md-3 py-3">
                   <h3>2017</h3>
@@ -109,7 +109,7 @@ export default class DataBloodBank extends React.Component {
               <div className="col-md-4">
                 <div className="row ">
                   <div className="col-md-12">
-                    <h3 className="dataHeading">Haematologist</h3>
+                    <h3 className="dataHeading mt-4 mb-4"><b>Haematologist</b></h3>
                   </div>
                   <div className="col-md-12 py-3">
                     <h3>2017 to 2020</h3>
@@ -121,7 +121,7 @@ export default class DataBloodBank extends React.Component {
             <div className="col-md-12 row ">
               <div className="col-md-8 row">
                 <div className="col-md-12">
-                  <h3 className="dataHeading">Ultrasound</h3>
+                  <h3 className="dataHeading mt-4 mb-4"><b>Ultrasound</b></h3>
                 </div>
                 <div className="col-md-3 py-3">
                   <h3>2017</h3>
@@ -143,7 +143,7 @@ export default class DataBloodBank extends React.Component {
               <div className="col-md-4">
                 <div className="row ">
                   <div className="col-md-12">
-                    <h3 className="dataHeading">Ultrasound</h3>
+                    <h3 className="dataHeading mt-4 mb-4"><b>Ultrasound</b></h3>
                   </div>
                   <div className="col-md-12 py-3">
                     <h3>2017 to 2020</h3>

@@ -19,62 +19,24 @@ import SuccessStories from "../components/SMIT/suuccesStories";
 import Workshop from "../components/SMIT/workshop";
 import Vocational from "../components/SMIT/vocationaltraining";
 import Intro from "../components/SMIT/intro";
-import SideList from "../smallcomponents/sidelist";
-
+import Navbar from "../smallcomponents/navbar";
 export default class Smit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       visible: false,
       city: "Karachi",
-      listItem: [
-        {
-          listText: "Introduction",
-          listIcon: "fas fa-door-open",
-          id: "smitIntro",
-        },
-        {
-          listText: "Succes Stories",
-          listIcon: "fas fa-star",
-          id: "smitSuccessStories",
-        },
-        {
-          listText: "Workshop",
-          listIcon: "fas fa-desktop",
-          id: "smitWorkshop",
-        },
-        {
-          listText: "SMIT Faculty",
-          listIcon: "fas fa-user-tie",
-          id: "smitFaculty",
-        },
-        {
-          listText: "IT Course",
-          listIcon: "fas fa-laptop",
-          id: "smitCourses",
-        },
-        {
-          listText: "Teacher",
-          listIcon: "fas fa-chalkboard-teacher",
-          id: "smitTeachers",
-        },
-        {
-          listText: "Collaborator",
-          listIcon: "fas fa-handshake",
-          id: "smitCollaborator",
-        },
-      ],
     };
   }
   componentDidMount() {
     this.setState({
-      visible: true,
+      visible: false,
     });
   }
   render() {
     return (
       <div>
-        <SideList item={this.state.listItem} />
+
         <Modal
           visible={this.state.visible}
           width="90%"
@@ -147,15 +109,16 @@ export default class Smit extends React.Component {
           </div>
         </Modal>
         <MainHeader />
-        <Cover city={this.state.city} />
-        <TableData />
+        <Navbar />
+        {/* <Cover city={this.state.city} /> */}
         <Intro />
+        <TableData />
         <SuccessStories />
-        <Workshop />
         <Faculty />
         <Vocational />
         <MainCourses />
         <SMITeacher />
+        <Workshop />
         <Collaboration />
         <Footer />
       </div>

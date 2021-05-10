@@ -114,15 +114,18 @@
   align-items: center;
 }
 .donationCard div {
-  padding: 35px;
+  padding-top: 10px;
   margin: 5px;
   background-color: #0066b3;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  font-size: 1.5em;
+  width: 160px;
+  height: 80px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  font-family: 'Franklin Gothic Medium';
   color: white;
   display: flex;
+  font-weight: bold;
+  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
   cursor: pointer;

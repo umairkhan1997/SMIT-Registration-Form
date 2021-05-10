@@ -195,14 +195,15 @@ export default class Location extends React.Component {
               src="https://i.pinimg.com/originals/40/12/17/4012171c8959c261bc4be14a2605007d.jpg"
               alt=""
             />
-            <h3 className="color">PAKISTAN OFFICES</h3>
+            {/* <h3 className="color">PAKISTAN OFFICES</h3> */}
+            <h3 className=" color"><b><u>PAKISTAN OFFICES</u></b></h3>
           </div>
           <div>
             <div>
               <div className="row p-0 m-0">
                 <div className="col-md-3 border-right border-primary">
                   <div className="d-flex justify-content-center align-items-center">
-                    <h2 className="color">Karachi</h2>
+                    <h3 className=" color"><b><u>KARACHI</u></b></h3>
                   </div>
                 </div>
                 <div className="col-md-9">
@@ -210,10 +211,10 @@ export default class Location extends React.Component {
                     {locations.map((e, i) => {
                       return (
                         <div className="col-md-3">
-                          <div className="py-3">
-                            <h4 className="color">{e.locationName}</h4>
-                            <p>{e.area}</p>
-                            <p>{e.number}</p>
+                          <div className="mb-5">
+                            <h4 className="color"><b>{e.locationName}</b></h4>
+                            <span className="text-muted " >{e.area}</span><br />
+                            <span className="text-muted">{e.number}</span>
                           </div>
                         </div>
                       );
@@ -226,17 +227,19 @@ export default class Location extends React.Component {
         </div>
         <div className="container py-5">
           <div className="text-center p-5">
-            <h2>INTERNATIONAL OFFICES</h2>
+            {/* <h2>INTERNATIONAL OFFICES</h2> */}
+            <h2 className=" color"><b><u>INTERNATIONAL OFFICES</u></b></h2>
           </div>
           <div className="row">
             <div className="col-md-4">
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png"
                 alt=""
+                height="200px"
                 width="100%"
               />
               <div className="internationalOffice">
-                <h3 className="color">NOTTINGHAM (U.K)</h3>
+                <h3 className="color"><b>NOTTINGHAM (U.K)</b></h3>
                 <p>United Kingdom 203</p>
                 <p>Radford Road Nottingham</p>
                 <p>NG75GT</p>
@@ -255,10 +258,11 @@ export default class Location extends React.Component {
               <img
                 src="https://quantlabs.net/blog/wp-content/uploads/2020/10/usa-flag-400.png"
                 alt=""
+                height="200px"
                 width="100%"
               />
               <div className="internationalOffice">
-                <h3 className="color">USA (CHICAGO)</h3>
+                <h3 className="color"><b>USA (CHICAGO)</b></h3>
                 <p>Saylani Welfare U.S.A</p>
                 <p>2830.S, 18th Avenue, Broadview, Illinious</p>
                 <p>60155-4753</p>
@@ -277,10 +281,11 @@ export default class Location extends React.Component {
               <img
                 src="https://ak.picdn.net/shutterstock/videos/23281432/thumb/8.jpg"
                 alt=""
+                height="200px"
                 width="100%"
               />
               <div className="internationalOffice">
-                <h3 className="color">TURKEY (ONCUPINAR)</h3>
+                <h3 className="color"><b>TURKEY (ONCUPINAR)</b></h3>
                 <p>Turkey deyanet vakfi,</p>
                 <p>Turkeyi Saylani vakfi,</p>
                 <p>lojistik merkezi Oncupinar,</p>

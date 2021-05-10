@@ -18,15 +18,15 @@ class ProjectCost extends React.Component {
   }
   render() {
     return (
-      <div id="roPlantProjectCost">
+      <div >
         <div
           style={{ backgroundImage: `url(${ROback})` }}
           className="back bg-image"
         >
           <div style={{ backgroundColor: "rgba(0,0,0,.7)" }}>
             <div className="container p-5">
-              <div className="text-white pt-5 pb-5">
-                <h2>Estimated Costs of the Proposed Project</h2>
+              <div className="text-white  pb-5">
+                <h3>ESTIMATED COSTS OF THE PROPOSED PROJECT</h3>
               </div>
               <Zoom>
                 <table className="costTable table-responsive-sm">

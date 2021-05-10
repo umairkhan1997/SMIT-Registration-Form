@@ -5,7 +5,8 @@ export default class NewsLater extends React.Component {
     return (
       <div className="">
         <div className="displayheading">
-          <h3>Subscribe to our Newslater</h3>
+          <h3 className=" color"><b><u>SUBSCRIBE TO OUR NEWSLETTER</u></b></h3>
+
         </div>
 
         <div className="row">
@@ -29,10 +30,10 @@ export default class NewsLater extends React.Component {
           </div>
           <div className="col-md-4">
             <button
-              style={{ backgroundColor: "#084E97", margin: "10px 0" }}
-              className="btntop"
+              style={{ backgroundColor: "#084E97", margin: "10px 0", width: 180 }}
+              class="btn btn-primary"
             >
-              Send
+              SEND
             </button>
           </div>
         </div>

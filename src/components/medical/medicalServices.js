@@ -19,9 +19,9 @@ class MedicalServices extends React.Component {
           style={{ backgroundColor: "#f5f8ff" }}
           className="container-fluid pt-5 pb-5"
         >
-          <div className="container pt-5 pb-5">
-            <div className="pt-5 pb-5">
-              <h1 className="medicalHeading">Our Medical Services</h1>
+          <div className="container pt-2 pb-5">
+            <div className="pt-2 pb-2">
+              <h3 className="color"><b><u>OUR MEDICAL SERVICES</u></b></h3>
             </div>
             <div className="row">
               {this.props.medicalServiceAdds &&

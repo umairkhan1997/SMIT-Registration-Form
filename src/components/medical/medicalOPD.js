@@ -32,6 +32,7 @@ class MedicalOPD extends React.Component {
       homeo: false,
       hikmat: false,
       hijama: false,
+      indOpd: 0
     };
   }
   componentDidMount() {
@@ -39,22 +40,25 @@ class MedicalOPD extends React.Component {
     this.props.opdListGet();
   }
   render() {
-    console.log(this.state.opdName, "opdNameGets");
+    console.log(this.state.indOpd, "opdNameGets");
+    const { indOpd } = this.state;
     return (
       <div id="MedicalOPD">
         <div className="container pt-5 pb-5">
           <div className="Heading">
-            <h1>Consultant OPD</h1>
+            <h3 className="color"><b><u>CONSULTANT OPD</u></b></h3>
           </div>
           <div className="row">
             {this.props.opdNameGets &&
-              this.props.opdNameGets.map((e) => {
+              this.props.opdNameGets.map((e, i) => {
                 return (
                   <div className="col-md-3">
                     <button
+                      style={{ backgroundColor: i == indOpd ? '#034f9c' : 'white', color: i == indOpd ? 'white' : '#034f9c' }}
                       onClick={() =>
                         this.setState({
                           opdName: e.opdName,
+                          indOpd: i
                         })
                       }
                       className="opdBtn"
@@ -94,7 +98,7 @@ class MedicalOPD extends React.Component {
           </div>
         </div>
 
-        <div id="medicalHijama" className="container text-white pt-5 pb-5">
+        <div id="medicalHijama" className="container text-white pt-2 pb-2">
           <div className="row text-white pt-5 pb-5">
             <div
               style={{ backgroundColor: "rgba(0, 102, 179,.5)" }}
@@ -200,8 +204,8 @@ class MedicalOPD extends React.Component {
               ) : this.state.homeo ? (
                 <h3>Homeopathic Clinic</h3>
               ) : (
-                false
-              )}
+                      false
+                    )}
             </div>
             {this.state.hijama ? (
               <div className="p-4">

@@ -10,7 +10,7 @@ class MainCourses extends React.Component {
     this.state = {
       city: "Karachi",
       cityDetails: {
-     
+
       },
       currentCourse: {
         name: "Certified Textile Training",
@@ -28,9 +28,11 @@ class MainCourses extends React.Component {
     return (
       <div id="smitCourses">
         <div className="container pt-5 pb-5 ">
-          <h1 className="py-3 color">
-            Discover Courses Developed by Saylani Mass IT
-          </h1>
+          <h3 className="py-3 color">
+            <b><u>
+              DISCOVER COURSES DEVELOPED BY SAYLANI MASS IT
+              </u></b>
+          </h3>
         </div>
         <div className="container pb-5 ">
           <div className="row">

@@ -36,8 +36,8 @@ class TableData extends React.Component {
                         >
                           <i class={e.icon}></i>
                         </span>
-                        <h2>{e.counName}</h2>
-                        <p style={{ fontSize: "2em", color: "#0267b4" }}>
+                        <h2 style={{ height: 50 }}>{e.counName}</h2>
+                        <p style={{ fontSize: "2em", color: "#0267b4", marginTop: 30 }}>
                           <CountUp
                             start={e.counStrNum}
                             separator=","

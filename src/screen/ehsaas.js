@@ -11,12 +11,13 @@ import MobleLangar from "../components/ehsaas/onwheel";
 import SWAT from "../components/ehsaas/swat";
 import Peshawar from "../components/ehsaas/peshawara";
 import Umarkot from "../components/ehsaas/umarkot";
-
+import Navbar from "../smallcomponents/navbar";
 export default class EhsaasLangarKhana extends React.Component {
   render() {
     return (
       <div>
         <MainHeader />
+        <Navbar />
         <Prime />
         <IntroLangarkhana />
         <Islamabad />

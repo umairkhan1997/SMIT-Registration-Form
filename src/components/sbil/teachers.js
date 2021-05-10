@@ -14,8 +14,8 @@ export default class Teacher extends React.Component {
         <div className="py-5 bg-light">
           <div className="container py-5">
             <div>
-              <h3 className="font-weight-bold">Teachers</h3>
-              <p>Meet Professional Trainers</p>
+              <h3 className="font-weight-bold color">Teachers</h3>
+              <p className="font-weight-bold text-muted">Meet Professional Trainers</p>
             </div>
             <div className="row">
               <div className="col-md-3 my-3">

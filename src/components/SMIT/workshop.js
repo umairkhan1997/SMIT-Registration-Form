@@ -16,9 +16,11 @@ class Workshop extends React.Component {
       <div id="smitWorkshop" className="py-5 my-5 backgroundLight">
         <div className="container my-5">
           <div className="Heading">
-            <h2>
-              Saylani Mass IT Training arranged workshops for youth empowerment
-            </h2>
+            <h3 className="color">
+              <b><u>
+                SAYLANI MASS IT TRAINING ARRANGED WORKSHOPS FOR YOUTH EMPOWERMENT
+                </u></b>
+            </h3>
           </div>
           <div className="row">
             {this.props.smitWorkshopGets &&
@@ -27,9 +29,9 @@ class Workshop extends React.Component {
                   <div key={i} className="col-md-4 py-3">
                     <a className="workshopLink" href={e.Link} target="_blank">
                       <div className="workshopCard text-center">
-                        <h4>{e.Name}</h4>
+                        <h4 style={{ marginTop: 40, height: 50 }}><b>{e.Name}</b></h4>
                         <p>by</p>
-                        <p>{e.TeacherHostName}</p>
+                        <p style={{ color: 'black' }}><u>{e.TeacherHostName}</u></p>
                       </div>
                     </a>
                   </div>

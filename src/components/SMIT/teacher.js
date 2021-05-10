@@ -26,9 +26,11 @@ class SMITeacher extends React.Component {
     return (
       <div id="smitTeachers" className="py-5">
         <div className="container">
-          <h1 className="pb-4" style={{ color: "#1371b8" }}>
-            Our Qualified Teacher
-          </h1>
+          <h3 className="pb-4 color" >
+            <b><u>
+              OUR QUALIFIED TEACHERS
+           </u></b>
+          </h3>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             {this.props.smitFacultyCourseGets &&
               this.props.smitFacultyCourseGets.map((e) => {

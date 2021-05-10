@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../App.css";
 export default class Prime extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +28,7 @@ export default class Prime extends React.Component {
                 Langar Khana
               </h2>
               <hr className="my-5" />
-              <h3 style={{ color: "#0066b3" }}>
+              <h3 className="color font-weight-bold">
                 Target For Langar Khana 112 Langar Khana in{" "}
                 <span
                   style={{

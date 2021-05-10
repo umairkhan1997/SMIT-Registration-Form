@@ -30,11 +30,11 @@ export default class SWAT extends React.Component {
               </div>
             </div>
             <div className="col-md-6 py-3">
-              <h2 style={{ color: "#0066b3" }}>
+              <h3 className="color font-weight-bold">
                 Ehsaas Saylani Langar opens in Swat amidst COVID-19 pandemic
-              </h2>
+              </h3>
               <hr />
-              <h4>
+              <h6 className="font-weight-bold text-muted">
                 Ehsaas Saylani Langar opened on{" "}
                 <span
                   style={{ backgroundColor: "#0066b3" }}
@@ -44,8 +44,8 @@ export default class SWAT extends React.Component {
                 </span>{" "}
                 in Swat district of KP amidst COVID-19 emergency. in Lodhran,
                 South Punjab.
-              </h4>
-              <h2 className="py-5">
+              </h6>
+              <h4 className="font-weight-bold">
                 <a
                   style={{ color: "#0066b3" }}
                   target="_blank"
@@ -53,7 +53,7 @@ export default class SWAT extends React.Component {
                 >
                   <i class="fas fa-map-marked-alt"></i> Location
                 </a>
-              </h2>
+              </h4>
             </div>
           </div>
         </div>

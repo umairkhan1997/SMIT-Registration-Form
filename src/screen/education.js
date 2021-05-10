@@ -9,34 +9,12 @@ import Curriculum from "../components/schools/curriculum";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { schoolCountGet } from "../Redux/action/schoolGreen";
-import SideList from "../smallcomponents/sidelist";
-
+import Navbar from "../smallcomponents/navbar";
 class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      listItem: [
-        {
-          listText: "Introduction",
-          listIcon: "fas fa-door-open",
-          id: "saylaniSchoolIntro",
-        },
-        {
-          listText: "Campus",
-          listIcon: "fas fa-school",
-          id: "saylaniSchoolCampus",
-        },
-        {
-          listText: "School Services",
-          listIcon: "fas fa-shapes",
-          id: "saylaiSchoolServices",
-        },
-        {
-          listText: "books Outline",
-          listIcon: "fas fa-handshake",
-          id: "saylaniSchoolPartner",
-        },
-      ],
+
     };
   }
   componentDidMount() {
@@ -46,8 +24,9 @@ class Education extends React.Component {
   render() {
     return (
       <div>
-        <SideList item={this.state.listItem} />
+
         <MainHeader />
+        <Navbar />
         <div id="saylaniSchoolIntro" className="backgroundLight py-5">
           <div className="container my-4">
             <div className="row">

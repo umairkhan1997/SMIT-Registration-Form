@@ -4,7 +4,7 @@ import collectioncenter from "../../images/homeimages/collectioncenter.png";
 import banktransfer from "../../images/homeimages/banktransfer.png";
 import MainDonationForm from "./mainDonationForm";
 import { FaDonate } from "react-icons/fa";
-
+import winterblacnket from '../../images/winter-blanket.png'
 export default class DonationDashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -14,47 +14,51 @@ export default class DonationDashboard extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div >
         {this.state.formStatus ? <MainDonationForm /> : null}
         <div>
           <img
             width="100%"
+            height="600"
             alt=""
             src="http://flood-rescue.com/img/essay-help-needy-people-35.jpg"
           />
         </div>
         {/* Campaign Start */}
         <div className="container py-5">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="shadow">
+          <h3 className="color"><b><u>DONATION DRIVE OF RAMAZAN</u></b></h3>
+          <div className="row" >
+            <div className="col-md-6" >
+              <div className="">
                 <img
-                  src="https://scontent.fkhi17-1.fna.fbcdn.net/v/t1.0-0/p526x296/126045265_5506936405998924_6495316849508071320_o.jpg?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHpAwI9Kxw3d5bDV3ejyKRcOXoCz7l4sHc5egLPuXiwd-MX4s7t5I4nBPnicl3zHt9uTqAOoHLjWEycPj7jbPo-&_nc_ohc=v8kI-vMoQuUAX_-8Sw4&_nc_ht=scontent.fkhi17-1.fna&tp=6&oh=831c9733f0447afb2d72266d2cb6134c&oe=6073A995"
+                  src={winterblacnket}
                   alt=""
                   width="100%"
+                  height="200"
                 />
-                <div className="p-5">
-                  <p>
+                <div className="p-5" style={{ backgroundColor: '#e2e2e2', height: 288 }}>
+                  <p className="font-weight-bold">
                     Let's Make someone's Warm in the Winter Everyone Feels
                     Cold...
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="shadow heavyRadius backgroundLight mb-3 p-3">
+            <div className="col-md-6" >
+              <div className=" backgroundLight mb-3 p-3" style={{ backgroundColor: '#e2e2e2' }}>
                 <div>
-                  <label>
+                  <label className="font-weight-bold">
                     <input
                       type="radio"
                       value="General Support Donation"
                       name="DonationType"
+
                     />{" "}
                     General Support Donation
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label className="font-weight-bold">
                     <input
                       type="radio"
                       value="Donate a Blanket"
@@ -64,7 +68,7 @@ export default class DonationDashboard extends React.Component {
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label className="font-weight-bold">
                     <input
                       type="radio"
                       value="Donate Two Blanket"
@@ -74,41 +78,43 @@ export default class DonationDashboard extends React.Component {
                   </label>
                 </div>
               </div>
-              <div className="shadow heavyRadius backgroundLight mb-3 p-3">
-                <h3>I Want to Donate</h3>
+              <div className="  backgroundLight mb-3 p-3 font-weight-bold" style={{ backgroundColor: '#e2e2e2' }}>
+                <h5 className="font-weight-bold">I Want to Donate</h5>
                 <input maxLength="5" min="0" size="2" type="number" /> Blanket
               </div>
-              <div className="shadow heavyRadius backgroundLight mb-3 p-3">
+              <div className="  backgroundLight mb-3 p-3" style={{ backgroundColor: '#e2e2e2' }}>
                 <div>
-                  <button className="btn-fluid">Give Once</button>
-                  <button className="btn-fluid">Monthly</button>
+                  <button className="btn-fluid" style={{ backgroundColor: '#0863ce', color: 'white', border: 'none' }}>Give Once</button>
+                  <button className="btn-fluid" style={{ backgroundColor: 'white', color: '#0863ce', border: 'none' }}>Monthly</button>
                 </div>
                 <div className="py-4">
-                  <h4>
-                    Bank tax <span className="text-primary text-bold">PKR</span>
-                  </h4>
-                  <h4>
-                    My donation amount is <br />{" "}
-                    <span className="text-primary text-bold">PKR</span>
-                  </h4>
+                  <h5>
+                    <b>Bank tax <span className="text-primary text-bold">PKR</span></b>
+                  </h5>
+                  <h5>
+                    <b>My donation amount is   </b><br />{" "}
+                    <span className="text-primary text-bold"><b>PKR</b></span>
+                  </h5>
                 </div>
-                <div className="py-3">
+                <div className="py-1">
                   <label>
                     <input
                       type="radio"
                       value="Treat this as Zakat"
                       name="DonationCategory"
                     />{" "}
-                    Treat this as Zakat
+                    <b>Treat this as Zakat  </b>
                   </label>
                 </div>
               </div>
-              <div className="text-right">
-                <button className="prevbtn px-5">Next</button>
-              </div>
-              <div className="mb-3 p-3">
-                <div className="py-3 text-center">
-                  <p>Ways to Donate This is a secure SSL encrypted payment.</p>
+              <div className="row">
+                <div className="col-md-6" >
+                  <div className="text-center text-muted">
+                    <p><b>Ways to Donate This is a secure SSL encrypted payment.</b></p>
+                  </div>
+                </div>
+                <div className="text-right col-md-6">
+                  <button className="prevbtn px-5">Next</button>
                 </div>
               </div>
             </div>
@@ -116,9 +122,9 @@ export default class DonationDashboard extends React.Component {
         </div>
         {/* Campaign End */}
         {/* Ways to Donate Start */}
-        <div className="container py-5">
-          <div className="displayheading">
-            <h2 className="text-center">Ways To donate</h2>
+        <div className="container-fluid py-5" style={{ backgroundColor: "#e2e2e2" }}>
+          <div className="">
+            <h2 className="text-center color" ><b>WAYS TO DONATE</b></h2>
           </div>
           <div className="row py-5">
             <div className="col-md-4 mb-5">
@@ -129,13 +135,15 @@ export default class DonationDashboard extends React.Component {
                 <div>
                   <img className="donatewaysicon" src={doorstep} />
                 </div>
-                <h4>Cheque or Cash Pickup</h4>
+                <h4><b>Cheque or Cash Pickup</b></h4>
                 <p>
-                  To have your donation in the form of a cheque or cash picked
-                  from your doorstep, call our toll-free helpline at
+                  <b>
+                    To have your donation in the form of a cheque or cash picked
+                    from your doorstep, call our toll-free helpline at
                   <a style={{ fontSize: "1.3em" }} href="tel:+92311729526">
-                    03-111-729-526
+                      &nbsp; 03-111-729-526
                   </a>
+                  </b>
                 </p>
               </div>
             </div>
@@ -147,12 +155,13 @@ export default class DonationDashboard extends React.Component {
                 <div>
                   <img className="donatewaysicon" src={collectioncenter} />
                 </div>
-                <h4>Collection Center</h4>
+                <h4><b>Collection Center</b></h4>
                 <p>
-                  Visit our collection centers in all over Pakistan.
+                  <b> Visit our collection centers in all over Pakistan.
                   <a style={{ fontSize: "1.3em" }} href="tel:+92311729526">
-                    Find your nearest center now!
+                      &nbsp; Find your nearest center now!
                   </a>
+                  </b>
                 </p>
               </div>
             </div>
@@ -164,14 +173,15 @@ export default class DonationDashboard extends React.Component {
                 <div>
                   <img className="donatewaysicon" src={banktransfer} />
                 </div>
-                <h4>Direct Bank Deposits or Transfer</h4>
+                <h4><b>Direct Bank Deposits or Transfer</b></h4>
 
                 <p>
-                  Transfer your Zakat or donations in favour of The Citizens
+                  <b> Transfer your Zakat or donations in favour of The Citizens
                   Foundation in our
                   <a style={{ fontSize: "1.3em" }} href="#">
-                    selected banks
+                      &nbsp; selected banks
                   </a>
+                  </b>
                 </p>
               </div>
             </div>
@@ -185,7 +195,7 @@ export default class DonationDashboard extends React.Component {
         {/* =========================Drawer================================ */}
         {/* =============================================================== */}
         {/* =============================================================== */}
-        <div className="row p-0 py-5 bg-light m-0">
+        {/* <div className="row p-0 py-5 bg-light m-0">
           <div className="col-md-4">
             <div id="accordion">
               <div class="card drawerCard border-0 mb-2 shadow">
@@ -1070,10 +1080,10 @@ export default class DonationDashboard extends React.Component {
           <div className="col-md-4">
             <div id="accordion"></div>
           </div>
-        </div>
+        </div> */}
 
         {/* Donate Cards End */}
-      </div>
+      </div >
     );
   }
 }

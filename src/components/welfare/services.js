@@ -7,12 +7,12 @@ export default class Services extends React.Component {
     super(props);
     this.state = {
       srvices: [
-        {
-          name: "Wedding Jahaiz",
-          ico: "fas fa-couch",
-          cash: "1231123",
-          unit: "12*",
-        },
+        // {
+        //   name: "Wedding Jahaiz",
+        //   ico: "fas fa-couch",
+        //   cash: "1231123",
+        //   unit: "12*",
+        // },
         {
           name: "Wedding Furniture",
           ico: "fas fa-couch",
@@ -52,8 +52,8 @@ export default class Services extends React.Component {
         {
           name: "House Rent",
           ico: "fas fa-money-bill-wave",
-          cash: "1231231",
-          unit: "123*",
+          cash: "1,476,000",
+          unit: "123",
         },
         {
           name: "House Advance",
@@ -117,7 +117,7 @@ export default class Services extends React.Component {
       <div id="welfareServices">
         <div className="container py-5">
           <div className="Heading">
-            <h2>Services</h2>
+            <h3><u><b>SERVICES</b></u></h3>
           </div>
           <div className="row">
             {this.state.srvices.map((e, i) => {

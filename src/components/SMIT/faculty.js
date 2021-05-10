@@ -11,7 +11,7 @@ export default class Faculty extends React.Component {
       <div id="smitFaculty" className="my-5 py-5">
         <div className="container">
           <div className="Heading">
-            <h2>Faculty</h2>
+            <h3 className="color"><b><u>FACULTY</u></b></h3>
           </div>
         </div>
         <div className="container">
@@ -27,7 +27,7 @@ export default class Faculty extends React.Component {
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h3 style={{ color: "#0066b3" }}>Sir Zia Khan</h3>
+                  <h3 className="color"><b><u>Sir Zia Khan</u></b></h3>
                   <p className="text-muted">(Faculty Head)</p>
                 </div>
               </Fade>
@@ -60,7 +60,7 @@ export default class Faculty extends React.Component {
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2 style={{ color: "#0066b3" }}>Muhammad Zunaib Afzal</h2>
+                  <h2 className="color"><b><u>Muhammad Zunaib Afzal</u></b></h2>
                   <p className="text-muted">(Manager SMIT)</p>
                 </div>
               </Fade>

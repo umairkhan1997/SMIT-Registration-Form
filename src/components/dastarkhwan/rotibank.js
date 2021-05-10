@@ -18,15 +18,14 @@ export default class RotiBank extends React.Component {
             <div className="col-md-6 border-right border-primary pt-4 pb-5 pr-5 pl-5">
               <Fade right>
                 <div>
-                  <div className="displayheading">
-                    <h2
-                      className="font-weight-bold"
-                      style={{ color: "#1371b8" }}
+                  <div className="">
+                    <h3
+                      className="color font-weight-bold mt-4"
                     >
                       Saylani Roti Bank
-                    </h2>
+                    </h3>
                   </div>
-                  <p className="text-left">
+                  <p className="text-left text-muted font-weight-bold">
                     Saylani is providing pack food to deserving and hungry
                     peoples for the first time in Pakistan through “SAYLANI ROTI
                     BANK” where anyone can get the food for their families from
@@ -60,15 +59,15 @@ export default class RotiBank extends React.Component {
             <div className="col-md-6 pt-4 pb-5 pr-5 pl-5">
               <Fade left>
                 <div>
-                  <div className="displayheading">
-                    <h2
-                      className="font-weight-bold"
-                      style={{ color: "#1371b8" }}
+                  <div>
+                    <h3
+                      className="color font-weight-bold mt-4"
+                    // style={{ color: "#1371b8" }}
                     >
                       Saylani Mobile Dastarkhwan
-                    </h2>
+                    </h3>
                   </div>
-                  <p className="text-left">
+                  <p className="text-left text-muted font-weight-bold">
                     In an effort to go the extra mile in the service of
                     humanity, we don’t wait for the hungry to come to us, but
                     Saylani Welfare International Trust outreaches the hungry

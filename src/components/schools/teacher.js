@@ -20,9 +20,11 @@ class Teacher extends React.Component {
     return (
       <div>
         <div className="container py-5 my-5">
-          <h2 className="pb-4" style={{ color: "#1371b8" }}>
-            Our Qualified Principles
-          </h2>
+          <h3 className="pb-4 color" >
+            <b><u>
+              OUR QUALIFIED PRINCIPLES
+              </u></b>
+          </h3>
           <div className="row d-flex justify-content-center">
             {this.props.schoolTeacherGets && this.props.schoolTeacherGets.map((e, i) => {
               return (
@@ -43,9 +45,11 @@ class Teacher extends React.Component {
                           borderBottom: "1px solid #0267b4",
                         }}
                       >
-                        {e.name}
+                        <b>
+                          {e.name}
+                        </b>
                       </h4>
-                      <p>{e.desig}</p>
+                      <p>  <b>{e.desig}</b></p>
                     </div>
                   </div>
                 </div>

@@ -9,7 +9,7 @@ export default class SaylaniChampions extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="mt-1">
         {/* <div>
           <div className="displayheading">
             <h3>Saylani Champions</h3>
@@ -37,7 +37,7 @@ export default class SaylaniChampions extends React.Component {
               Connect with our Corporate Relations Officer for more information
               on how to support Saylani Welfare International Trust.
             </p>
-            <Link style={{ fontSize: ".9em" }} to="Donation">
+            <Link to="Donation" class="btn btn-primary" style={{ fontSize: ".9em", backgroundColor: "#084E97", margin: "10px 0" }}>
               SUPPORT US NOW
             </Link>
           </div>

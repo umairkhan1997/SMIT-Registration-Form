@@ -12,12 +12,12 @@ export default class Lodhran extends React.Component {
         <div className="container py-4">
           <div className="row">
             <div className="col-md-6 py-3">
-              <h2 style={{ color: "#0066b3" }}>
+              <h3 className="color font-weight-bold">
                 CM KP Mehmood Khan and SAPM Sania Nishtar open Ehsaas Langar in
                 Peshawar
-              </h2>
+              </h3>
               <hr />
-              <h4>
+              <h6 className="font-weight-bold text-muted">
                 Chief Minister KP, Mehmood Khan along with Dr. Sania Nishtar,
                 Prime Minister’s Special Assistant on Social Protection and
                 Poverty Alleviation inaugurated the Ehsaas Langar in Peshawar on{" "}
@@ -27,8 +27,8 @@ export default class Lodhran extends React.Component {
                 >
                   June 24, 2020
                 </span>{" "}
-              </h4>
-              <h2 className="py-5">
+              </h6>
+              <h4 className="font-weight-bold">
                 <a
                   style={{ color: "#0066b3" }}
                   target="_blank"
@@ -36,7 +36,7 @@ export default class Lodhran extends React.Component {
                 >
                   <i class="fas fa-map-marked-alt"></i> Location
                 </a>
-              </h2>
+              </h4>
             </div>
             <div className="col-md-6 py-3">
               <div className="row">

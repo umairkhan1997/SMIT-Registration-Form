@@ -9,42 +9,21 @@ import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
 import Table from "../components/medical/table";
 import SideList from "../smallcomponents/sidelist";
-
+import Navbar from "../smallcomponents/navbar";
 export default class Medical extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      listItem: [
-        {
-          listText: "Introduction",
-          listIcon: "fas fa-door-open",
-          id: "medicalIntro",
-        },
-        {
-          listText: "Services",
-          listIcon: "fas fa-briefcase-medical",
-          id: "medicalServices",
-        },
-        {
-          listText: "Consultant OPD",
-          listIcon: "fas fa-user-md",
-          id: "MedicalOPD",
-        },
-        {
-          listText: "Hijama",
-          listIcon: "fas fa-tint",
-          id: "medicalHijama",
-        },
-      ],
     };
   }
   render() {
     return (
       <div>
-        <SideList item={this.state.listItem} />
+
         <MainHeader />
-        <Table />
+        <Navbar />
         <Intro />
+        <Table />
         <MedicalServices />
         <MedicalOPD />
         {/* <MedicalClinics /> */}

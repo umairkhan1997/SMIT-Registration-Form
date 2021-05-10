@@ -20,9 +20,9 @@ class Collaboration extends React.Component {
         <div className="py-5 ">
           <div className="container">
             <div className="pt-5">
-              <h1 className="pb-4" style={{ color: "#1371b8" }}>
-                Collaboration and Partners
-              </h1>
+              <h3 className="pb-4 color" >
+                <b><u>COLLABORATION AND PARTNERS</u></b>
+              </h3>
             </div>
             <div className="row">
               {this.props.SmitCollaborationGets &&

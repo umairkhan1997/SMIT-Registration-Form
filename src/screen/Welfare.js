@@ -5,8 +5,7 @@ import Services from "../components/welfare/services";
 import DataTable from "../components/welfare/data";
 import Steps from "../components/welfare/steps";
 import Footer from "../components/Footer";
-import SideList from "../smallcomponents/sidelist";
-
+import Navbar from "../smallcomponents/navbar";
 export default class Welfare extends React.Component {
   constructor(props) {
     super(props);
@@ -36,8 +35,9 @@ export default class Welfare extends React.Component {
       <div>
         {/* <SideList item={this.state.listItem} /> */}
         <MainHeader />
+        <Navbar />
         <DataTable />
-        <Services />
+        {/* <Services /> */}
         <Steps />
         <Footer />
       </div>

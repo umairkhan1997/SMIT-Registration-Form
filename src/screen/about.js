@@ -16,37 +16,36 @@ export default class About extends React.Component {
           <div className="container py-5">
             <div className="row">
               <div className="col-md-4">
-                <ul className="aboutList">
-                  <li>
-                    <HashLink to="/aboutus#ourMission">Over Mission</HashLink>
+                <ul className="aboutList" >
+                  <li >
+                    <HashLink to="/aboutus#ourMission" style={{ color: 'black' }}>Our Mission</HashLink>
                   </li>
                   <li>
                     {" "}
-                    <HashLink to="/aboutus#ourVision">Over Vision</HashLink>
+                    <HashLink to="/aboutus#ourVision" style={{ color: 'black' }}>Our Vision</HashLink>
                   </li>
                   <li>
                     {" "}
-                    <HashLink to="/aboutus#chairmanMessage">
+                    <HashLink to="/aboutus#chairmanMessage" style={{ color: 'black' }}>
                       Chairman Message
                     </HashLink>
                   </li>
                   <li>
                     {" "}
-                    <HashLink to="/aboutus#ourHistory">Our History</HashLink>
+                    <HashLink to="/aboutus#ourHistory" style={{ color: 'black' }}>Our History</HashLink>
                   </li>
                   <li>
                     {" "}
-                    <HashLink to="/aboutus#thematicArea">
+                    <HashLink to="/aboutus#thematicArea" style={{ color: 'black' }}>
                       Thematic Area
                     </HashLink>
                   </li>
                 </ul>
               </div>
-              <div className="col-md-8">
-                <h2 id="ourMission" className="text-underline">
-                  Our Mission
-                </h2>
-                <p>
+              <div className="col-md-8 " style={{ marginTop: -5 }}>
+
+                <h3 className=" color text-underline mr-5" ><b><u>Our Mission</u></b></h3>
+                <p >
                   Alhamdo-llilah! By the grace of Allah, this organization is
                   serving the poor and the distressed people of our society
                   since 5th May 1999. We are a part of a society where the
@@ -67,7 +66,7 @@ export default class About extends React.Component {
                   impossible for them to pay for their electricity, children’s
                   education and any medical treatment of any family member.
                 </p>
-                <h2 id="ourVision">Our Vision</h2>
+                <h3 className=" color text-underline " ><b><u>Our Vision</u></b></h3>
                 <p>
                   Alhamdo-llilah! By the grace of Allah, this organization is
                   serving the poor and the distressed people of our society
@@ -90,10 +89,11 @@ export default class About extends React.Component {
                   education and any medical treatment of any family member.
                 </p>
                 <div className="row py-2">
-                  <div className="col-md-4 text-center">
+                  <div className="col-md-12 text-center">
                     <img
                       src="https://saylani-welfare-uk.netlify.app/1501745011.jpeg"
                       width="100%"
+                      height="100%"
                     />
                     <h4>Hazrat Allama Muhammad Basheer Farooq Qadri</h4>
                     <a
@@ -104,8 +104,8 @@ export default class About extends React.Component {
                       <FaTwitter /> BashirFarooq786
                     </a>
                   </div>
-                  <div className="col-md-8">
-                    <h2 id="chairmanMessage">Chairman Message</h2>
+                  <div className="col-md-8 " style={{ marginLeft: -5, marginTop: 60 }}>
+                    <h3 className=" color text-underline " ><b><u>Chairman Message</u></b></h3>
                     <p>
                       Alhamdo-llilah! By the grace of Allah, this organization
                       is serving the poor and the distressed people of our
@@ -130,7 +130,7 @@ export default class About extends React.Component {
                     </p>
                   </div>
                 </div>
-                <h2 id="ourHistory">Our History</h2>
+                <h3 className=" color text-underline " ><b><u>Our History</u></b></h3>
                 <p>
                   Alhamdo-llilah! By the grace of Allah, this organization is
                   serving the poor and the distressed people of our society
@@ -152,7 +152,7 @@ export default class About extends React.Component {
                   impossible for them to pay for their electricity, children’s
                   education and any medical treatment of any family member.
                 </p>
-                <h2 id="thematicArea">Thematic Area</h2>
+                <h3 className=" color text-underline " ><b><u>Thematic Area</u></b></h3>
                 <p>
                   Alhamdo-llilah! By the grace of Allah, this organization is
                   serving the poor and the distressed people of our society

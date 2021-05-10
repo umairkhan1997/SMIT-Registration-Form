@@ -15,7 +15,7 @@ export default class Courses extends React.Component {
         <div className="py-5">
           <div className="container">
             <div>
-              <h3 className="font-weight-bold">Courses</h3>
+              <h3 className="font-weight-bold color">Courses</h3>
             </div>
             <div className="row">
               <div className="col-md-3 py-3">

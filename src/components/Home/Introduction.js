@@ -43,18 +43,18 @@ class Introduction extends React.Component {
         <div className="">
           <div>
             <div className="border-top border-bottom border-dark py-4 px-3 bg-light">
-              <div className="row">
-                <div className="col-md-2 text-center">
-                  <div className="displayheading">
-                    <h2>Our Impact</h2>
-                  </div>
+
+              <div className="col-md-12 ">
+                <div className="displayheading Heading">
+                  <h3 className="text-center color"><b><u>OUR IMPACT</u></b></h3>
                 </div>
-                <hr />
-                <div className="col-md-10">
+              </div>
+              <div className="container-fluid">
+                <div className="col-md-12 mt-3 ">
                   <div>
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-2 mx-1 col-sm-6 col-xs-6">
+                    <div className="container-fluid">
+                      <div className="row justify-content-center ">
+                        <div className="col-md-2 mx-1 col-sm-6 col-xs-6 ">
                           <HomeService
                             imageSrc={house}
                             countStart={100}
@@ -142,6 +142,7 @@ class Introduction extends React.Component {
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
 
@@ -149,7 +150,7 @@ class Introduction extends React.Component {
               <div className="row">
                 <div className="col-md-5">
                   <div className="displayheading">
-                    <h3>Ways To Donate</h3>
+                    <h3 className="color" style={{ marginLeft: -5 }}><b><u>WAYS TO DONATE</u></b></h3>
                   </div>
                   <ul className="donationWaysList">
                     <Link to="/Donation">
@@ -218,11 +219,11 @@ class Introduction extends React.Component {
                 </div>
                 <div className="col-md-7">
                   <div className="displayheading">
-                    <h3>Our Introduction</h3>
+                    <h3 className="color" ><b><u>OUR INTRODUCTION</u></b></h3>
                   </div>
                   <Reveal effect="fadeInUp">
                     <div className="homeIntro bg-white">
-                      <p className="text-justify introText">
+                      <p className="text-justify introText mt-3">
                         Alhamdo-llilah! By the grace of Allah, this organization
                         is serving the poor and the distressed people of our
                         society since 5th May 1999. We are a part of a society
@@ -266,10 +267,10 @@ class Introduction extends React.Component {
                     Doorstep Collection
                   </h5>
                 ) : (
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Cash Collection Points
-                  </h5>
-                )}
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Cash Collection Points
+                      </h5>
+                    )}
                 <button
                   type="button"
                   class="close"
