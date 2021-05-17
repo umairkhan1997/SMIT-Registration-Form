@@ -23,35 +23,11 @@ import {
 export default class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      listItem: [
-        {
-          listText: "Introduction",
-          listIcon: [<FaDoorOpen />],
-          id: "homeIntro",
-        },
-        {
-          listText: "Latest",
-          listIcon: [<FaNewspaper />],
-          id: "homeNews",
-        },
-        {
-          listText: "Partners",
-          listIcon: [<FaHandshake />],
-          id: "saylaniPartners",
-        },
-        {
-          listText: "Saylani Dept",
-          listIcon: [<FaCodeBranch />],
-          id: "saylanidepart",
-        },
-      ],
-    };
+    this.state = {};
   }
   render() {
     return (
       <div>
-        {/* <SideList item={this.state.listItem} /> */}
         <MainHeader />
         <div className="bg-white shadow sticky-top">
           <Navbar />

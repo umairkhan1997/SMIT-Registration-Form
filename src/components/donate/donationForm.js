@@ -467,7 +467,11 @@ class DonationForm extends React.Component {
         {/* Steps of Donation Form */}
         <div className="container-fluid backgroundLight">
           <div className="container pt-5 backgroundLight">
-            <h3 className="color mb-5"><b><u>SELECT YOUR DONATION WITH EASY STEPS</u></b></h3>
+            <h3 className="color mb-5">
+              <b>
+                <u>SELECT YOUR DONATION WITH EASY STEPS</u>
+              </b>
+            </h3>
             {/* select your donation with easy steps . */}
             <div className="row">
               <div className="col-md-3">
@@ -489,13 +493,15 @@ class DonationForm extends React.Component {
                         className="qtyn"
                       >
                         1
-                    </span>{" "}
-                      <span className="color font-weight-bold">Donation Type</span>
+                      </span>{" "}
+                      <span className="color font-weight-bold">
+                        Donation Type
+                      </span>
                     </p>
                   </div>
                 ) : (
-                    false
-                  )}
+                  false
+                )}
               </div>
               <div className="col-md-3">
                 {this.state.dntionCategoryControl ? (
@@ -513,17 +519,16 @@ class DonationForm extends React.Component {
                     <p className="color font-weight-bold">
                       <span
                         style={{ fontSize: "1.3em", margin: 0 }}
-
                         className=" qtyn"
                       >
                         2
-                    </span >{" "}
-                    Donation Category
-                  </p>
+                      </span>{" "}
+                      Donation Category
+                    </p>
                   </div>
                 ) : (
-                    false
-                  )}
+                  false
+                )}
               </div>
               <div className="col-md-3">
                 {this.state.dntionQuantityControl ? (
@@ -544,13 +549,13 @@ class DonationForm extends React.Component {
                         className="qtyn"
                       >
                         3
-                    </span>{" "}
-                    Donation Quantity
-                  </p>
+                      </span>{" "}
+                      Donation Quantity
+                    </p>
                   </div>
                 ) : (
-                    false
-                  )}
+                  false
+                )}
               </div>
               <div className="col-md-3">
                 {this.state.dntionDetailControl ? (
@@ -571,13 +576,13 @@ class DonationForm extends React.Component {
                         className="qtyn"
                       >
                         4
-                    </span>{" "}
-                    Personal Details
-                  </p>
+                      </span>{" "}
+                      Personal Details
+                    </p>
                   </div>
                 ) : (
-                    false
-                  )}
+                  false
+                )}
               </div>
             </div>
           </div>
@@ -615,8 +620,8 @@ class DonationForm extends React.Component {
             </div>
           </div>
         ) : (
-            false
-          )}
+          false
+        )}
         {/* Donatin Detail Form */}
         {this.state.donationDetailForm ? (
           <div className="backgroundLight p-5">
@@ -649,52 +654,52 @@ class DonationForm extends React.Component {
                   <div className="row amountCard">
                     <div className="col-md-6 px-5 py-2 text-center">
                       {this.state.currentDropDownValue === "Other Donation" ||
-                        this.state.currentDropDownValue === "Campaign" ? (
-                          <p
-                            style={{
-                              fontSize: "2em",
-                              padding: "10px",
-                              height: "100%",
-                              borderRadius: "8px",
-                              display: "flex",
-                              justifyContent: "center",
-                              alignItems: "center",
-                              color: "rgb(0, 102, 179)",
-                              border: "2px solid rgb(0, 102, 179)",
-                            }}
-                          >
-                            {this.state.donationSubCategory}
-                          </p>
-                        ) : (
-                          <div className="amountDes py-5">
-                            {this.state.donationQuantity > 0 ? (
-                              <button
-                                onClick={() =>
-                                  this.setState({
-                                    donationQuantity:
-                                      this.state.donationQuantity - 1,
-                                  })
-                                }
-                              >
-                                -
-                              </button>
-                            ) : null}
-                            <span>
-                              {this.state.donationQuantity}{" "}
-                              {this.state.currentDropDownValue}
-                            </span>
+                      this.state.currentDropDownValue === "Campaign" ? (
+                        <p
+                          style={{
+                            fontSize: "2em",
+                            padding: "10px",
+                            height: "100%",
+                            borderRadius: "8px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            color: "rgb(0, 102, 179)",
+                            border: "2px solid rgb(0, 102, 179)",
+                          }}
+                        >
+                          {this.state.donationSubCategory}
+                        </p>
+                      ) : (
+                        <div className="amountDes py-5">
+                          {this.state.donationQuantity > 0 ? (
                             <button
                               onClick={() =>
                                 this.setState({
                                   donationQuantity:
-                                    this.state.donationQuantity + 1,
+                                    this.state.donationQuantity - 1,
                                 })
                               }
                             >
-                              +
+                              -
+                            </button>
+                          ) : null}
+                          <span>
+                            {this.state.donationQuantity}{" "}
+                            {this.state.currentDropDownValue}
+                          </span>
+                          <button
+                            onClick={() =>
+                              this.setState({
+                                donationQuantity:
+                                  this.state.donationQuantity + 1,
+                              })
+                            }
+                          >
+                            +
                           </button>
-                          </div>
-                        )}
+                        </div>
+                      )}
                     </div>
                     <div className="col-md-6 px-5 py-2 text-center ">
                       <div className="amount">
@@ -702,34 +707,34 @@ class DonationForm extends React.Component {
                           Rs <br />
                           {this.state.currentDropDownValue ===
                             "Other Donation" ||
-                            this.state.currentDropDownValue === "Campaign" ? (
-                              <input
-                                onChange={(e) =>
-                                  this.setState({
-                                    categoryAmount: e.target.value,
-                                  })
-                                }
-                                value={this.state.categoryAmount}
-                                type="number"
-                                className="amountInp"
-                                placeholder="Amount"
-                              />
-                            ) : (
-                              <>
-                                {" "}
-                                <p
-                                  style={{
-                                    fontSize: "1.5em",
-                                    fontWeight: "bold",
-                                  }}
-                                >
-                                  {(
-                                    this.state.categoryAmount *
-                                    this.state.donationQuantity
-                                  ).toLocaleString()}
-                                </p>
-                              </>
-                            )}
+                          this.state.currentDropDownValue === "Campaign" ? (
+                            <input
+                              onChange={(e) =>
+                                this.setState({
+                                  categoryAmount: e.target.value,
+                                })
+                              }
+                              value={this.state.categoryAmount}
+                              type="number"
+                              className="amountInp"
+                              placeholder="Amount"
+                            />
+                          ) : (
+                            <>
+                              {" "}
+                              <p
+                                style={{
+                                  fontSize: "1.5em",
+                                  fontWeight: "bold",
+                                }}
+                              >
+                                {(
+                                  this.state.categoryAmount *
+                                  this.state.donationQuantity
+                                ).toLocaleString()}
+                              </p>
+                            </>
+                          )}
                           /-
                         </p>
                       </div>
@@ -772,7 +777,9 @@ class DonationForm extends React.Component {
                 ></div>
                 <div className="col-md-4 shadow">
                   <div className="p-3">
-                    <h3 className="color font-weight-bold ">Personal Details</h3>
+                    <h3 className="color font-weight-bold ">
+                      Personal Details
+                    </h3>
                     <div className="row">
                       <div className="col-md-12 mt-3 mb-3">
                         <div className="pb-2">
@@ -853,8 +860,8 @@ class DonationForm extends React.Component {
             </div>
           </div>
         ) : (
-            false
-          )}
+          false
+        )}
         <div
           class="modal fade"
           id="exampleModal"

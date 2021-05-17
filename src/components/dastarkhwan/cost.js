@@ -19,7 +19,9 @@ export default class Cost extends React.Component {
         >
           <div className="container">
             <div className="">
-              <h3 className="color"><b>COST</b></h3>
+              <h3 className="color">
+                <b>COST</b>
+              </h3>
             </div>
             <div className="bg-white rounded shadow p-3">
               <table
@@ -28,10 +30,10 @@ export default class Cost extends React.Component {
               >
                 <thead>
                   <tr>
-                    <td style={{ color: 'black' }}>Description</td>
-                    <td style={{ color: 'black' }}>Per Day</td>
-                    <td style={{ color: 'black' }}>Per Month</td>
-                    <td style={{ color: 'black' }}>Per Year</td>
+                    <td style={{ color: "black" }}>Description</td>
+                    <td style={{ color: "black" }}>Per Day</td>
+                    <td style={{ color: "black" }}>Per Month</td>
+                    <td style={{ color: "black" }}>Per Year</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -64,10 +66,10 @@ export default class Cost extends React.Component {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <td style={{ color: 'black' }}>Total</td>
-                    <td style={{ color: 'black' }}>PKR 60,000</td>
-                    <td style={{ color: 'black' }}>PKR 1,800,000</td>
-                    <td style={{ color: 'black' }}>PKR 21,600,000</td>
+                    <td style={{ color: "black" }}>Total</td>
+                    <td style={{ color: "black" }}>PKR 60,000</td>
+                    <td style={{ color: "black" }}>PKR 1,800,000</td>
+                    <td style={{ color: "black" }}>PKR 21,600,000</td>
                   </tr>
                 </tfoot>
               </table>

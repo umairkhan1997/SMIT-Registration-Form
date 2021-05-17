@@ -13,13 +13,11 @@ import Navbar from "../smallcomponents/navbar";
 export default class Medical extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
   render() {
     return (
       <div>
-
         <MainHeader />
         <Navbar />
         <Intro />
