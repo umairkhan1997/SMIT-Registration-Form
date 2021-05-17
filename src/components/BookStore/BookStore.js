@@ -27,6 +27,7 @@ class BookStore extends React.Component {
     this.props.bookAllSpec();
   }
   render() {
+    const { catType } = this.state;
     return (
       <div>
         <img src={bookStore} width="100%" alt="Bara Maah k Aurad-O-Wazaif" />
@@ -34,27 +35,27 @@ class BookStore extends React.Component {
           <div className="row">
             <div className="col-md-3 mt-5">
               <div className="Heading">
-                <h4>Category</h4>
+                <h3 className="color"><b><u>CATEGORY</u></b></h3>
               </div>
               <ul className="sidelist">
-                <li onClick={() => this.setState({ catType: "" })}>
+                <li style={{ backgroundColor: catType == "" ? "#034f9c" : 'white', color: catType == "" ? "white" : '#034f9c', }} onClick={() => this.setState({ catType: "" })}>
                   All Books
                 </li>
-                <li onClick={() => this.setState({ catType: "hazrat" })}>
+                <li style={{ backgroundColor: catType == "hazrat" ? "#034f9c" : 'white', color: catType == "hazrat" ? "white" : '#034f9c', }} onClick={() => this.setState({ catType: "hazrat" })}>
                   Hazrat Basheer Farooqui
                 </li>
-                <li onClick={() => this.setState({ catType: "Rohani" })}>
+                <li style={{ backgroundColor: catType == "Rohani" ? "#034f9c" : 'white', color: catType == "Rohani" ? "white" : '#034f9c', }} onClick={() => this.setState({ catType: "Rohani" })}>
                   Rohani Wazaef
                 </li>
               </ul>
 
               <div className="Heading">
-                <h4>Special</h4>
+                <h3 className="color"><b><u>SPECIAL</u></b></h3>
                 {this.props.bookAllSpe.map((filteredName) => {
                   return (
                     <div className="col-md-10 my-3">
                       <div className="singleBook">
-                        <img src={filteredName.imgCollection} width="100%" />
+                        <img src={filteredName.imgCollection} width="100%" height="400px" />
                         <div className="p-3 bookDetails">
                           <h4>{filteredName.bookName}</h4>
                           <p>
@@ -96,11 +97,12 @@ class BookStore extends React.Component {
                     })
                     .map((filteredName) => {
                       return (
-                        <div className="col-md-3 my-3">
-                          <div className="singleBook">
+                        <div className="col-md-3 my-3 " >
+                          <div className="singleBook" >
                             <img
                               src={filteredName.imgCollection}
                               width="100%"
+                              height="400px"
                             />
                             <div className="p-3 bookDetails">
                               <h4>{filteredName.bookName}</h4>

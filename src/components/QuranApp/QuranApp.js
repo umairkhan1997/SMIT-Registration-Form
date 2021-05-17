@@ -7,6 +7,7 @@ import { withRouter } from "react-router-dom";
 import imgOne from "../../images/apptafseer.jpeg";
 import { QuranAppAndroidGet, QuranAppIosGet } from '../../Redux/action/QuranApp';
 import { connect } from "react-redux";
+import Navbar from "../../smallcomponents/navbar";
 class QuranApp extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,7 @@ class QuranApp extends React.Component {
     return (
       <div>
         <MainHeader />
+        <Navbar />
         <div style={{ backgroundImage: `url(${imgOne})` }} className="back">
           <div style={{ backgroundColor: "rgba(0,0,0,.5)" }}>
             <div className="container py-5">
@@ -30,8 +32,8 @@ class QuranApp extends React.Component {
           </div>
         </div>
         <div className="container">
-          <h3 className="head">Quran Application SOP</h3>
-          <p className="para">
+          <h3 className="head"><b><u>QURAN APPLICATION SOP</u></b></h3>
+          <p className="para text-muted font-weight-bold">
             Quran Application Many organisations and individuals have uploaded
             whole Quran on Play Store and Apple Store. Many download and recite
             the same. Errors and omissions have been noted. These errors and
@@ -43,8 +45,8 @@ class QuranApp extends React.Component {
             whether with errors or without errors. We request you to please
             download only Quran verified and found without errors.
           </p>
-          <h3 className="head pb-3">Quran Application Esaal-e-Sawaab</h3>
-          <p className="para">
+          <h3 className="head pb-3"><b><u>QURAN APPLICATION ESAAL-E-SAWAB</u></b></h3>
+          <p className="para text-muted font-weight-bold">
             Quran Esaal-e-Sawab Saylani has employed Quran Huffaz to verify
             correctness of QURAN uploaded on mobile. Every Hafiz completes
             Recitation of whole Quran in one week. Esal e Sawab of These will be
@@ -55,7 +57,7 @@ class QuranApp extends React.Component {
             Huffaz besides Sawab BY Allah.
           </p>
 
-          <h3 className="head pb-3">Android</h3>
+          <h3 className="head pb-3"><b><u>ANDROID</u></b></h3>
 
           <table
             className="text-left mt-5 mb-5 table-responsive-sm"
@@ -89,7 +91,7 @@ class QuranApp extends React.Component {
             </tbody>
             <tfoot></tfoot>
           </table>
-          <h3 className="head pb-3">IOS </h3>
+          <h3 className="head pb-3"><b><u>IOS</u></b></h3>
 
           <table
             className="text-left mt-5 mb-5 table-responsive-sm"

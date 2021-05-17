@@ -17,6 +17,7 @@ export default class Lodhran extends React.Component {
                   <img
                     className="rounded"
                     width="100%"
+                    height="180"
                     src="https://www.pass.gov.pk/userfiles1/images/3_%20Third%20Langar.jpg"
                   />
                 </div>
@@ -24,17 +25,18 @@ export default class Lodhran extends React.Component {
                   <img
                     className="rounded"
                     width="100%"
+                    height="180"
                     src="https://www.pass.gov.pk/userfiles1/images/4_%20Third%20Langar.jpg"
                   />
                 </div>
               </div>
             </div>
             <div className="col-md-6 py-3">
-              <h2 style={{ color: "#0066b3" }}>
+              <h3 className="color font-weight-bold">
                 Opening of third Ehsaas Saylani Langar in Lodhran
-              </h2>
+              </h3>
               <hr />
-              <h4>
+              <h6 className="font-weight-bold text-muted">
                 Third Ehsaas Saylani Langar opened on{" "}
                 <span
                   style={{ backgroundColor: "#0066b3" }}
@@ -43,8 +45,8 @@ export default class Lodhran extends React.Component {
                   February 27, 2020
                 </span>{" "}
                 in Lodhran, South Punjab.
-              </h4>
-              <h2 className="py-5">
+              </h6>
+              <h4 className="font-weight-bold">
                 <a
                   style={{ color: "#0066b3" }}
                   target="_blank"
@@ -52,7 +54,7 @@ export default class Lodhran extends React.Component {
                 >
                   <i class="fas fa-map-marked-alt"></i> Location
                 </a>
-              </h2>
+              </h4>
             </div>
           </div>
         </div>

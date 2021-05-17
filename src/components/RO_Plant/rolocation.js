@@ -23,7 +23,7 @@ class ROLocation extends React.Component {
   }
   render() {
     return (
-      <div id="roPlantLocation">
+      <div >
         <div
           style={{
             backgroundColor: "#d8dfe6",
@@ -31,11 +31,11 @@ class ROLocation extends React.Component {
           className="bg-image"
         >
           <div
-            style={{ borderBottom: "1.5px solid dodgerblue" }}
+            // style={{ borderBottom: "1.5px solid dodgerblue" }}
             className="container-fluid"
           >
             <div className="container p-4">
-              <h2 className="Heading">Ro Plant Location In Pakistan</h2>
+              <h3 className="color"><b>RO PLANT LOCATION IN PAKISTAN</b></h3>
             </div>
           </div>
         </div>
@@ -65,8 +65,8 @@ class ROLocation extends React.Component {
                         }
                         onClick={() => this.setState({ currentLocation: item })}
                       >
-                        <h4>{item.name}</h4>
-                        <p className="text-muted">{item.area}</p>
+                        <h4 className="text-center color"><u><b>{item.name}</b></u></h4>
+                        <p className="text-muted text-center">{item.area}</p>
 
                         {item.underConstruction ? (
                           <div

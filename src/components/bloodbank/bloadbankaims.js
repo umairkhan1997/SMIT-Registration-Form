@@ -27,7 +27,7 @@ export default class BloodBankServices extends React.Component {
                 </div>
                 <div className="col-md-6 p-3">
                   <div className="aims">
-                    <div className=" p-5">
+                    <div className="p-5">
                       Providing awareness about Thalassemia.
                     </div>
                   </div>

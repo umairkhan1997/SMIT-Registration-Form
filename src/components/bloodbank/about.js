@@ -12,9 +12,10 @@ export default class AboutBloodBank extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6 p-2">
-              <div className="py-5 px-4 bg-white shadow rounded introCard">
-                <h2 className="dataHeading">About Blood Bank</h2>
-                <p>
+              <div className="py-4 px-4 bg-white shadow rounded introCard">
+                {/* <h2 className="dataHeading">About Blood Bank</h2> */}
+                <h3 className="dataHeading"><b><u>INTRODUCTION</u></b></h3>
+                <p className="mt-4 text-muted font-weight-bold">
                   The recently established, state of the art Saylani Blood Bank
                   and Thalassemia Centre is furnished with modern equipment,
                   well trained technicians, leading Hematologists,

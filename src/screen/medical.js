@@ -9,7 +9,7 @@ import MainHeader from "../components/Home/MainHeader";
 import Footer from "../components/Footer";
 import Table from "../components/medical/table";
 import SideList from "../smallcomponents/sidelist";
-
+import Navbar from "../smallcomponents/navbar";
 export default class Medical extends React.Component {
   constructor(props) {
     super(props);
@@ -19,8 +19,9 @@ export default class Medical extends React.Component {
     return (
       <div>
         <MainHeader />
-        <Table />
+        <Navbar />
         <Intro />
+        <Table />
         <MedicalServices />
         <MedicalOPD />
         {/* <MedicalClinics /> */}

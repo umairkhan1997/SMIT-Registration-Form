@@ -37,11 +37,11 @@ export default class Islamabad extends React.Component {
               </div>
             </div>
             <div className="col-md-6 py-3">
-              <h2 style={{ color: "#0066b3" }}>
+              <h3 className="font-weight-bold color">
                 Launch of Ehsaas Saylani Langar
-              </h2>
+              </h3>
               <hr />
-              <h4>
+              <h6 className="font-weight-bold text-muted">
                 Prime Minister Imran launched Ehsaas Saylani Langar on{" "}
                 <span
                   style={{ backgroundColor: "#0066b3" }}
@@ -50,8 +50,8 @@ export default class Islamabad extends React.Component {
                   October 7, 2019
                 </span>{" "}
                 in Islamabad.
-              </h4>
-              <h2 className="py-5">
+              </h6>
+              <h4 className="font-weight-bold">
                 <a
                   style={{ color: "#0066b3" }}
                   target="_blank"
@@ -59,7 +59,7 @@ export default class Islamabad extends React.Component {
                 >
                   <i class="fas fa-map-marked-alt"></i> Location
                 </a>
-              </h2>
+              </h4>
             </div>
           </div>
         </div>

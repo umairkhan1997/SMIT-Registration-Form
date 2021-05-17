@@ -29,7 +29,7 @@ class Table extends React.Component {
                   {this.props.benificiariesCountGets && this.props.benificiariesCountGets.slice(0, this.props.benificiariesCountGets.length - 1).map((e) => {
                     return (
                       <div className="col-md-4 my-5">
-                        <h4>{e.head}</h4>
+                        <h4 style={{ height: 60 }}>{e.head}</h4>
                         <hr />
                         <h2
                           style={{ backgroundColor: "rgba(0,0,0,.5)" }}
@@ -64,21 +64,21 @@ class Table extends React.Component {
           </div>
         </div>
         <div className="container">
-          <div className="Heading">
-            <h2>Saylani Medical and Diagnostic Center</h2>
-            <h3>Patient Treated in 2020</h3>
+          <div className="Heading mt-4">
+            <h3 className="color"><b><u>Saylani Medical and Diagnostic Center</u></b></h3>
+            <h3 className="color"><b><u>Patient Treated in 2020</u></b></h3>
           </div>
           <div className="row">
             {this.props.patientTreatedGets && this.props.patientTreatedGets.map((e) => {
               return (
                 <div className="col-md-4">
-                  <h4>{e.head}</h4>
+                  <h3 className="mt-4" style={{ height: 60 }}><b><u>{e.head}</u></b></h3>
                   <table className="medicalTable">
                     {
                       e.detail && e.detail.map((f) => {
                         return (
                           <tr>
-                            <td>{f.name}</td>
+                            <td >{f.name}</td>
                             <td>{f.count}</td>
                           </tr>
                         )

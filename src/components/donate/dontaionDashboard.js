@@ -4,6 +4,7 @@ import collectioncenter from "../../images/homeimages/collectioncenter.png";
 import banktransfer from "../../images/homeimages/banktransfer.png";
 import MainDonationForm from "./mainDonationForm";
 import { FaDonate } from "react-icons/fa";
+import winterblacnket from "../../images/winter-blanket.png";
 import Modal from "react-awesome-modal";
 
 export default class DonationDashboard extends React.Component {
@@ -12,6 +13,60 @@ export default class DonationDashboard extends React.Component {
     this.state = {
       formStatus: this.props.status,
       visible: false,
+      aqiqaDropDown: [
+        { value: 8000, donationCate: "Aqiqa Goat (8000)" },
+        { value: 9000, donationCate: "Aqiqa Goat (9000)" },
+        { value: 10000, donationCate: "Aqiqa Goat (10000)" },
+        { value: 12000, donationCate: "Aqiqa Goat (12000)" },
+        { value: 15000, donationCate: "Aqiqa Goat (15000)" },
+        { value: 40000, donationCate: "Aqiqa Cow (40000)" },
+        { value: 45000, donationCate: "Aqiqa Cow (45000)" },
+        { value: 50000, donationCate: "Aqiqa Cow (50000)" },
+        { value: 55000, donationCate: "Aqiqa Camel (55000)" },
+        { value: 60000, donationCate: "Aqiqa Camel (60000)" },
+        { value: 65000, donationCate: "Aqiqa Camel (65000)" },
+      ],
+      sadqaDropDown: [
+        { value: 5500, donationCate: "Sadqa Goat (5500)" },
+        { value: 6000, donationCate: "Sadqa Goat (6000)" },
+        { value: 7000, donationCate: "Sadqa Goat (7000)" },
+        { value: 8000, donationCate: "Sadqa Goat (8000)" },
+        { value: 9000, donationCate: "Sadqa Goat (9000)" },
+        { value: 10000, donationCate: "Sadqa Goat (10000)" },
+        { value: 12000, donationCate: "Sadqa Goat (12000)" },
+        { value: 15000, donationCate: "Sadqa Goat (15000)" },
+        { value: 30000, donationCate: "Sadqa Cow (30000)" },
+        { value: 35000, donationCate: "Sadqa Cow (35000)" },
+        { value: 40000, donationCate: "Sadqa Cow (40000)" },
+        { value: 45000, donationCate: "Sadqa Cow (45000)" },
+        { value: 50000, donationCate: "Sadqa Cow (50000)" },
+        { value: 55000, donationCate: "Sadqa Camel (55000)" },
+        { value: 60000, donationCate: "Sadqa Camel (60000)" },
+        { value: 65000, donationCate: "Sadqa Camel (65000)" },
+        { value: 400, donationCate: "Sadqa Hen (400)" },
+      ],
+      coronaDropDown: ["Corona Effecties Rashan Bag Rs.(1500)"],
+      otherDonationDropDown: [
+        "Donation",
+        "Marriage",
+        "Zakat",
+        "Food",
+        "Education",
+        "Water Well",
+        "Monthly Rashan",
+        "Thar Fund",
+        "Flood Victim",
+        "Fitra (Overseas)",
+        "Saaf Pani",
+        "Heat Stroke",
+        "Syrian Crisis",
+        "Masjid Construction",
+        "Medical Projects",
+      ],
+      kifalat: 2500,
+      donationType: "",
+      donateCategoryName: "",
+      currentDropdownList: [],
     };
   }
   openModal() {
@@ -29,51 +84,180 @@ export default class DonationDashboard extends React.Component {
     return (
       <div>
         {this.state.formStatus ? <MainDonationForm /> : null}
-
+        {/* <div>
+          <img
+            width="100%"
+            height="600"
+            alt=""
+            src="http://flood-rescue.com/img/essay-help-needy-people-35.jpg"
+          />
+        </div> */}
         {/* Campaign Start */}
-        <div className="p-3">
-          <div className="row p-0 m-0">
+        <div className="container py-5">
+          <h3 className="color">
+            <b>
+              <u>DONATION DRIVE OF RAMAZAN</u>
+            </b>
+          </h3>
+          <div className="row">
             <div className="col-md-6">
-              <div className="shadow">
-                <div className="py-2">
-                  <ul className="donationHead">
-                    <li onClick={() => this.openModal()}>
-                      Sadqa and Aqeeqa Animals
-                    </li>
-                    <li onClick={() => this.openModal()}>kifalat Program</li>
-                    <li onClick={() => this.openModal()}>
-                      Ramzan Rashan Package
-                    </li>
-                    <li onClick={() => this.openModal()}>
-                      Sehri & Aftari Support
-                    </li>
-                    <li onClick={() => this.openModal()}>
-                      Education Support Programm
-                    </li>
-                    <li onClick={() => this.openModal()}>SMIT Program</li>
-                    <li onClick={() => this.openModal()}>
-                      Wedding Support Program
-                    </li>
-                    <li onClick={() => this.openModal()}>
-                      Vocational Training
-                    </li>
-                    <li onClick={() => this.openModal()}>
-                      Saylani Dastarkhwan
-                    </li>
-                    <li onClick={() => this.openModal()}>
-                      Monthly Rashan Support Program
-                    </li>
-                    <li onClick={() => this.openModal()}>
-                      Support Hepaptitis Patients
-                    </li>
-                  </ul>
+              <div className="">
+                <div className="p-5" style={{ backgroundColor: "#e2e2e2" }}>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "sadqa&aqeeqa",
+                        donateCategoryName: "Sadqa & Aqeeqa",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Sadqa & Aqeeqa Animals
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "kifalatProgram",
+                        donateCategoryName: "Kifalat Program",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Kifalat programm
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "ramzanRashan",
+                        donateCategoryName: "Ramzan Rashan Program",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Ramzan Rashan Package
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "sehriAftari",
+                        donateCategoryName: "Sehri And Aftari",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Sehri & Aftari Support
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "educationProgram",
+                        donateCategoryName: "Education Program",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Education Support Program
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "eyePatients",
+                        donateCategoryName: "Eye Patients Support",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Eye Patients
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "ramzanRashan",
+                        donateCategoryName: "Ramzan Rashan Program",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    SMIT Program
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "weddingSupport",
+                        donateCategoryName: "Weddign Support Program",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Weddign Support Program
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "vocationalTraining",
+                        donateCategoryName: "Vocational Training Program",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Vocational training Programm
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "saylaniDasterkhwan",
+                        donateCategoryName: "Saylani Dastarkhwan Support",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Saylani Dastarkhwan
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "monthlyPackage",
+                        donateCategoryName: "Monthly Rashan Package",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Monthly Rashan Support
+                  </button>
+                  <button
+                    className="catBtn"
+                    onClick={() => {
+                      this.setState({
+                        donationType: "supportHepatitis",
+                        donateCategoryName: "Support Hepatitis Program",
+                      });
+                      this.openModal();
+                    }}
+                  >
+                    Support Hepatitis Patients
+                  </button>
                 </div>
               </div>
             </div>
+            {/* Campaign Details */}
             <div className="col-md-6">
-              <div className="shadow heavyRadius backgroundLight mb-3 p-3">
+              <div
+                className=" backgroundLight mb-3 p-3"
+                style={{ backgroundColor: "#e2e2e2" }}
+              >
                 <div>
-                  <label>
+                  <label className="font-weight-bold">
                     <input
                       type="radio"
                       value="General Support Donation"
@@ -83,7 +267,7 @@ export default class DonationDashboard extends React.Component {
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label className="font-weight-bold">
                     <input
                       type="radio"
                       value="Donate a Blanket"
@@ -93,7 +277,7 @@ export default class DonationDashboard extends React.Component {
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label className="font-weight-bold">
                     <input
                       type="radio"
                       value="Donate Two Blanket"
@@ -103,41 +287,77 @@ export default class DonationDashboard extends React.Component {
                   </label>
                 </div>
               </div>
-              <div className="shadow heavyRadius backgroundLight mb-3 p-3">
-                <h3>I Want to Donate</h3>
+              <div
+                className="  backgroundLight mb-3 p-3 font-weight-bold"
+                style={{ backgroundColor: "#e2e2e2" }}
+              >
+                <h5 className="font-weight-bold">I Want to Donate</h5>
                 <input maxLength="5" min="0" size="2" type="number" /> Blanket
               </div>
-              <div className="shadow heavyRadius backgroundLight mb-3 p-3">
+              <div
+                className="  backgroundLight mb-3 p-3"
+                style={{ backgroundColor: "#e2e2e2" }}
+              >
                 <div>
-                  <button className="btn-fluid">Give Once</button>
-                  <button className="btn-fluid">Monthly</button>
+                  <button
+                    className="btn-fluid"
+                    style={{
+                      backgroundColor: "#0863ce",
+                      color: "white",
+                      border: "none",
+                    }}
+                  >
+                    Give Once
+                  </button>
+                  <button
+                    className="btn-fluid"
+                    style={{
+                      backgroundColor: "white",
+                      color: "#0863ce",
+                      border: "none",
+                    }}
+                  >
+                    Monthly
+                  </button>
                 </div>
                 <div className="py-4">
-                  <h4>
-                    Bank tax <span className="text-primary text-bold">PKR</span>
-                  </h4>
-                  <h4>
-                    My donation amount is <br />{" "}
-                    <span className="text-primary text-bold">PKR</span>
-                  </h4>
+                  <h5>
+                    <b>
+                      Bank tax{" "}
+                      <span className="text-primary text-bold">PKR</span>
+                    </b>
+                  </h5>
+                  <h5>
+                    <b>My donation amount is </b>
+                    <br />{" "}
+                    <span className="text-primary text-bold">
+                      <b>PKR</b>
+                    </span>
+                  </h5>
                 </div>
-                <div className="py-3">
+                <div className="py-1">
                   <label>
                     <input
                       type="radio"
                       value="Treat this as Zakat"
                       name="DonationCategory"
                     />{" "}
-                    Treat this as Zakat
+                    <b>Treat this as Zakat </b>
                   </label>
                 </div>
               </div>
-              <div className="text-right">
-                <button className="prevbtn px-5">Next</button>
-              </div>
-              <div className="mb-3 p-3">
-                <div className="py-3 text-center">
-                  <p>Ways to Donate This is a secure SSL encrypted payment.</p>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="text-center text-muted">
+                    <p>
+                      <b>
+                        Ways to Donate This is a secure SSL encrypted payment.
+                      </b>
+                    </p>
+                  </div>
+                </div>
+                <div className="text-right col-md-6">
+                  <button className="prevbtn px-5">Next</button>
                 </div>
               </div>
             </div>
@@ -145,9 +365,14 @@ export default class DonationDashboard extends React.Component {
         </div>
         {/* Campaign End */}
         {/* Ways to Donate Start */}
-        <div className="container py-5">
-          <div className="displayheading">
-            <h2 className="text-center">Ways To donate</h2>
+        <div
+          className="container-fluid py-5"
+          style={{ backgroundColor: "#e2e2e2" }}
+        >
+          <div className="">
+            <h2 className="text-center color">
+              <b>WAYS TO DONATE</b>
+            </h2>
           </div>
           <div className="row py-5">
             <div className="col-md-4 mb-5">
@@ -158,13 +383,17 @@ export default class DonationDashboard extends React.Component {
                 <div>
                   <img className="donatewaysicon" src={doorstep} />
                 </div>
-                <h4>Cheque or Cash Pickup</h4>
+                <h4>
+                  <b>Cheque or Cash Pickup</b>
+                </h4>
                 <p>
-                  To have your donation in the form of a cheque or cash picked
-                  from your doorstep, call our toll-free helpline at
-                  <a style={{ fontSize: "1.3em" }} href="tel:+92311729526">
-                    03-111-729-526
-                  </a>
+                  <b>
+                    To have your donation in the form of a cheque or cash picked
+                    from your doorstep, call our toll-free helpline at
+                    <a style={{ fontSize: "1.3em" }} href="tel:+92311729526">
+                      &nbsp; 03-111-729-526
+                    </a>
+                  </b>
                 </p>
               </div>
             </div>
@@ -176,12 +405,17 @@ export default class DonationDashboard extends React.Component {
                 <div>
                   <img className="donatewaysicon" src={collectioncenter} />
                 </div>
-                <h4>Collection Center</h4>
+                <h4>
+                  <b>Collection Center</b>
+                </h4>
                 <p>
-                  Visit our collection centers in all over Pakistan.
-                  <a style={{ fontSize: "1.3em" }} href="tel:+92311729526">
-                    Find your nearest center now!
-                  </a>
+                  <b>
+                    {" "}
+                    Visit our collection centers in all over Pakistan.
+                    <a style={{ fontSize: "1.3em" }} href="tel:+92311729526">
+                      &nbsp; Find your nearest center now!
+                    </a>
+                  </b>
                 </p>
               </div>
             </div>
@@ -193,20 +427,291 @@ export default class DonationDashboard extends React.Component {
                 <div>
                   <img className="donatewaysicon" src={banktransfer} />
                 </div>
-                <h4>Direct Bank Deposits or Transfer</h4>
-
+                <h4>
+                  <b>Direct Bank Deposits or Transfer</b>
+                </h4>
                 <p>
-                  Transfer your Zakat or donations in favour of The Citizens
-                  Foundation in our
-                  <a style={{ fontSize: "1.3em" }} href="#">
-                    selected banks
-                  </a>
+                  <b>
+                    {" "}
+                    Transfer your Zakat or donations in favour of The Citizens
+                    Foundation in our
+                    <a style={{ fontSize: "1.3em" }} href="#">
+                      &nbsp; selected banks
+                    </a>
+                  </b>
                 </p>
               </div>
             </div>
           </div>
         </div>
         {/* Ways to Donate End */}
+
+        <Modal
+          visible={this.state.visible}
+          effect="fadeInUp"
+          onClickAway={() => this.closeModal()}
+        >
+          <div
+            className="modalParent"
+            style={{ height: "95vh", width: "70vw", overflow: "scroll" }}
+          >
+            <div className="container p-4">
+              <h1>{this.state.donateCategoryName}</h1>
+              {(this.state.donationType = "sadqa&aqeeqa") ? (
+                <div className="row">
+                  <div className="col-md-6 p-3">
+                    <div>
+                      <label>
+                        <input
+                          onChange={() =>
+                            this.setState({
+                              currentDropdownList: this.state.aqiqaDropDown,
+                            })
+                          }
+                          type="radio"
+                          name="sadqa&Aqeeqa"
+                        />{" "}
+                        Aqeeqa
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input
+                          onChange={() =>
+                            this.setState({
+                              currentDropdownList: this.state.sadqaDropDown,
+                            })
+                          }
+                          type="radio"
+                          name="sadqa&Aqeeqa"
+                        />{" "}
+                        Sadqa
+                      </label>
+                    </div>
+                  </div>
+                  <div className="col-md-6 p-3">
+                    <select className="inp">
+                      {this.state.currentDropdownList.map((e, i) => {
+                        return <option key={i}>{e.donationCate}</option>;
+                      })}
+                    </select>
+                  </div>
+                  <div className="col-md-6 p-3">
+                    <button>+</button>
+                    <input type="number" min="0" />
+                    <button>-</button>
+                  </div>
+                  <div className="col-md-6 p-3">
+                    Amount Payable:{" "}
+                    <input placeholder="0" type="number" disabled min="0" />
+                    <div>
+                      {" "}
+                      <button className="prevbtn">Donate</button>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+              {(this.state.donationType = "kifalatProgram") ? (
+                <div>
+                  <h3>One Family Kifalat Expense Monthly PKR 25,000</h3>
+                  <div>
+                    <p>
+                      I want to Sponser{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              ) : null}
+              {
+                (this.state.donationType = "ramzanRashan" ? (
+                  <div>
+                    <h3>One Ramzan Rashan package Expense PKR 4500/-</h3>
+                    <div>
+                      <p>
+                        I want to Support the{" "}
+                        <input type="number" size="2" min="0" placeholder="0" />{" "}
+                        families
+                      </p>
+                    </div>
+                    <p className="text-success">Amount payable</p>
+                    <button className="prevbtn">Donate</button>
+                  </div>
+                ) : null)
+              }
+              {
+                <div>
+                  <h3>One Ramzan Rashan package Expense PKR 4500/-</h3>
+                  <div>
+                    <p>
+                      I want to Support the{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      families
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>Sehri and Aftari for on person expense is 600</h3>
+                  <div>
+                    <p>
+                      <label>
+                        {" "}
+                        <input type="radio" name="sehri&aftari" />
+                        Sehri
+                      </label>
+                      <br />
+                      <label>
+                        <input type="radio" name="sehri&aftari" />
+                        Aftari + Dinner{" "}
+                      </label>
+                    </p>
+                    <p>
+                      I Want to Sponser{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      person
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>Education Support</h3>
+                  <div>
+                    <p>
+                      <label>
+                        {" "}
+                        <input name="educationSupport" type="radio" />
+                        Support a children Education
+                      </label>
+                      <br />
+                      <label>
+                        <input name="educationSupport" type="radio" />
+                        Support a Classroom{" "}
+                      </label>
+                    </p>
+                    <p>
+                      I want to support the Education of{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      Child
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>Eye patients expense PKR</h3>
+                  <div>
+                    <p>
+                      I want to support the{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      Eye patients
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>One student expense PKR 50,000 Monthly</h3>
+                  <div>
+                    <p>
+                      I want to Sponsor{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      SMIT Students
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>One Poor girl Wedding Expense PKR 35,000 - 50,000</h3>
+                  <div>
+                    <p>
+                      I want to Sponsor{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      girl Wedding
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>One Student Technical Course Expense PKR 25,000</h3>
+                  <div>
+                    <p>
+                      I want to support the{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      Hepatitis patients
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>One Person food for 01 time PKR 50</h3>
+                  <div>
+                    <p>
+                      I want to Sponsor{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      People
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>One Family Ration Expense Monthly PKR 3,000 - 12,000</h3>
+                  <div>
+                    <p>
+                      I want to Sponsor{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      Families monthly Ration
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+              {
+                <div>
+                  <h3>One Family Ration Expense Monthly PKR 3,000 - 12,000</h3>
+                  <div>
+                    <p>
+                      I want to Sponsor{" "}
+                      <input type="number" size="2" min="0" placeholder="0" />{" "}
+                      Families monthly Ration
+                    </p>
+                  </div>
+                  <p className="text-success">Amount payable</p>
+                  <button className="prevbtn">Donate</button>
+                </div>
+              }
+            </div>
+
+            <button className="closebtn" onClick={() => this.closeModal()}>
+              X
+            </button>
+          </div>
+        </Modal>
+
         {/* Donate Cards Start */}
 
         {/* =============================================================== */}
@@ -214,7 +719,7 @@ export default class DonationDashboard extends React.Component {
         {/* =========================Drawer================================ */}
         {/* =============================================================== */}
         {/* =============================================================== */}
-        <div className="row p-0 py-5 bg-light m-0">
+        {/* <div className="row p-0 py-5 bg-light m-0">
           <div className="col-md-4">
             <div id="accordion">
               <div class="card drawerCard border-0 mb-2 shadow">
@@ -1096,23 +1601,11 @@ export default class DonationDashboard extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-
-        <Modal
-          visible={this.state.visible}
-          width="400"
-          height="300"
-          effect="fadeInUp"
-          onClickAway={() => this.closeModal()}
-        >
-          <div>
-            <h1>Title</h1>
-            <p>Some Contents</p>
-            <a href="javascript:void(0);" onClick={() => this.closeModal()}>
-              Close
-            </a>
+          <div className="col-md-4">
+            <div id="accordion"></div>
           </div>
-        </Modal>
+        </div> */}
+
         {/* Donate Cards End */}
       </div>
     );

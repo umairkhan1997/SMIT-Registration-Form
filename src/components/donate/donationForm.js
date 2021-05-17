@@ -398,7 +398,7 @@ class DonationForm extends React.Component {
     return (
       <div>
         {/* Campaign Cover */}
-        <div
+        {/* <div
           style={{
             backgroundImage:
               "url('https://img.freepik.com/free-photo/christmas-background-with-falling-snow-snowflake-holiday-winter-merry-christmas-happy-new-year_52701-32.jpg?size=626&ext=jpg')",
@@ -410,7 +410,7 @@ class DonationForm extends React.Component {
           <div className="container p-5">
             <div className="row">
               <div className="col-md-5">
-                {/* <img src={cover} width="100%" /> */}
+                <img src={cover} width="100%" />
               </div>
               <div className="col-md-7">
                 <h1 className="p-2">
@@ -463,123 +463,133 @@ class DonationForm extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Steps of Donation Form */}
-        <div className="container pt-5">
-          <div className="row">
-            <div className="col-md-3">
-              {this.state.dntionTypeControl ? (
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationForm: true,
-                      donationDetailForm: false,
-                      amountBox: false,
-                      donationFormDetail: false,
-                    })
-                  }
-                  className="donationStep"
-                >
-                  <p>
-                    <span
-                      style={{ fontSize: "1.3em", margin: 0 }}
-                      className="qtyn"
-                    >
-                      1
-                    </span>{" "}
-                    <span>Donation Type</span>
-                  </p>
-                </div>
-              ) : (
-                false
-              )}
-            </div>
-            <div className="col-md-3">
-              {this.state.dntionCategoryControl ? (
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationForm: false,
-                      donationDetailForm: true,
-                      amountBox: false,
-                      donationFormDetail: false,
-                    })
-                  }
-                  className="donationStep"
-                >
-                  <p>
-                    <span
-                      style={{ fontSize: "1.3em", margin: 0 }}
-                      className="qtyn"
-                    >
-                      2
-                    </span>{" "}
-                    Donation Category
-                  </p>
-                </div>
-              ) : (
-                false
-              )}
-            </div>
-            <div className="col-md-3">
-              {this.state.dntionQuantityControl ? (
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationForm: false,
-                      donationDetailForm: false,
-                      amountBox: true,
-                      donationFormDetail: false,
-                    })
-                  }
-                  className="donationStep"
-                >
-                  <p>
-                    <span
-                      style={{ fontSize: "1.3em", margin: 0 }}
-                      className="qtyn"
-                    >
-                      3
-                    </span>{" "}
-                    Donation Quantity
-                  </p>
-                </div>
-              ) : (
-                false
-              )}
-            </div>
-            <div className="col-md-3">
-              {this.state.dntionDetailControl ? (
-                <div
-                  onClick={() =>
-                    this.setState({
-                      donationForm: false,
-                      donationDetailForm: false,
-                      amountBox: false,
-                      donationFormDetail: true,
-                    })
-                  }
-                  className="donationStep"
-                >
-                  <p>
-                    <span
-                      style={{ fontSize: "1.3em", margin: 0 }}
-                      className="qtyn"
-                    >
-                      4
-                    </span>{" "}
-                    Personal Details
-                  </p>
-                </div>
-              ) : (
-                false
-              )}
+        <div className="container-fluid backgroundLight">
+          <div className="container pt-5 backgroundLight">
+            <h3 className="color mb-5">
+              <b>
+                <u>SELECT YOUR DONATION WITH EASY STEPS</u>
+              </b>
+            </h3>
+            {/* select your donation with easy steps . */}
+            <div className="row">
+              <div className="col-md-3">
+                {this.state.dntionTypeControl ? (
+                  <div
+                    onClick={() =>
+                      this.setState({
+                        donationForm: true,
+                        donationDetailForm: false,
+                        amountBox: false,
+                        donationFormDetail: false,
+                      })
+                    }
+                    className="donationStep"
+                  >
+                    <p>
+                      <span
+                        style={{ fontSize: "1.3em", margin: 0 }}
+                        className="qtyn"
+                      >
+                        1
+                      </span>{" "}
+                      <span className="color font-weight-bold">
+                        Donation Type
+                      </span>
+                    </p>
+                  </div>
+                ) : (
+                  false
+                )}
+              </div>
+              <div className="col-md-3">
+                {this.state.dntionCategoryControl ? (
+                  <div
+                    onClick={() =>
+                      this.setState({
+                        donationForm: false,
+                        donationDetailForm: true,
+                        amountBox: false,
+                        donationFormDetail: false,
+                      })
+                    }
+                    className="donationStep"
+                  >
+                    <p className="color font-weight-bold">
+                      <span
+                        style={{ fontSize: "1.3em", margin: 0 }}
+                        className=" qtyn"
+                      >
+                        2
+                      </span>{" "}
+                      Donation Category
+                    </p>
+                  </div>
+                ) : (
+                  false
+                )}
+              </div>
+              <div className="col-md-3">
+                {this.state.dntionQuantityControl ? (
+                  <div
+                    onClick={() =>
+                      this.setState({
+                        donationForm: false,
+                        donationDetailForm: false,
+                        amountBox: true,
+                        donationFormDetail: false,
+                      })
+                    }
+                    className="donationStep"
+                  >
+                    <p className="color font-weight-bold">
+                      <span
+                        style={{ fontSize: "1.3em", margin: 0 }}
+                        className="qtyn"
+                      >
+                        3
+                      </span>{" "}
+                      Donation Quantity
+                    </p>
+                  </div>
+                ) : (
+                  false
+                )}
+              </div>
+              <div className="col-md-3">
+                {this.state.dntionDetailControl ? (
+                  <div
+                    onClick={() =>
+                      this.setState({
+                        donationForm: false,
+                        donationDetailForm: false,
+                        amountBox: false,
+                        donationFormDetail: true,
+                      })
+                    }
+                    className="donationStep"
+                  >
+                    <p className="color font-weight-bold">
+                      <span
+                        style={{ fontSize: "1.3em", margin: 0 }}
+                        className="qtyn"
+                      >
+                        4
+                      </span>{" "}
+                      Personal Details
+                    </p>
+                  </div>
+                ) : (
+                  false
+                )}
+              </div>
             </div>
           </div>
         </div>
         {/* Donation Form */}
         {this.state.donationForm ? (
-          <div className="p-5 backgroundLight">
+          <div className="pr-5 pb-5 pl-5 pt-2 backgroundLight">
             <div className="container">
               <div className="row">
                 <div className="col-md-3 col-sm-4 text-center donationCard">
@@ -767,7 +777,9 @@ class DonationForm extends React.Component {
                 ></div>
                 <div className="col-md-4 shadow">
                   <div className="p-3">
-                    <h3>Personal Details</h3>
+                    <h3 className="color font-weight-bold ">
+                      Personal Details
+                    </h3>
                     <div className="row">
                       <div className="col-md-12 mt-3 mb-3">
                         <div className="pb-2">
@@ -817,7 +829,7 @@ class DonationForm extends React.Component {
                             <p className="text-danger">Field is Emply</p>
                           ) : null}
                           <textarea
-                            placeholder="Enter Special Request"
+                            placeholder="Enter Special Request / Remarks"
                             className="inp"
                             rows="6"
                             value={remarks}
@@ -1112,7 +1124,7 @@ class DonationForm extends React.Component {
           </div>
         </div>
         {/* <div dangerouslySetInnerHTML={{ __html: this.state.portalView }} /> */}
-        <form
+        {/* <form
           action="https://demo-ipg.ctdev.comtrust.ae/PaymentEx/MerchantPay/Payment?lang=en&layout=C0STCBVLEI"
           method="POST"
           id="MerchantRequest"
@@ -1124,7 +1136,7 @@ class DonationForm extends React.Component {
             value="215760716170"
           />
           <input type="submit" id="submit" name="submit" value="Submit" />
-        </form>
+        </form> */}
         {/* <div>
           {this.state.portalView}
         </div> */}

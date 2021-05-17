@@ -21,8 +21,8 @@ class HomeNews extends React.Component {
     return (
       <div id="homeNews" className="pt-3 pb-3">
         <div className="container">
-          <div className="displayheading">
-            <h2>News</h2>
+          <div className="displayheading Heading">
+            <h3 className="color" style={{ marginLeft: -10 }}><b><u>NEWS</u></b></h3>
           </div>
           {this.props.SaylaniHomeNewsGets &&
             this.props.SaylaniHomeNewsGets.length > 0 &&

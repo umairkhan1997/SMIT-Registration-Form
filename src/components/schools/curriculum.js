@@ -6,7 +6,7 @@ export default class Curriculum extends React.Component {
       <div id="saylaniSchoolPartner">
         <div className="container my-5 py-5">
           <div className="Heading">
-            <h2>Books Curriculum</h2>
+            <h3 className="color"><b><u>BOOKS CURRICULUM</u></b></h3>
           </div>
           <div className="row">
             <div style={{ height: "100%" }} className="col-md-4 p-5">

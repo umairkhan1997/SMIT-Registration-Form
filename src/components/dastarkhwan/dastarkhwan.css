@@ -8,6 +8,10 @@ th {
 td {
   padding: 7px;
 }
+tr td {
+  padding: 7px;
+  color:#034f9c
+}
 .tableList {
   border-bottom: 1px solid lightgrey;
   margin-bottom: 5px;

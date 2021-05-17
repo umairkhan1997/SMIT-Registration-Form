@@ -17,7 +17,7 @@ class Campus extends React.Component {
   render() {
     return (
       <div id="saylaniSchoolCampus" className="container mainDiv mt-5">
-        <h2>Campus</h2>
+        <h3 className="color"><b><u>CAMPUS</u></b></h3>
         <div className="container mt-5">
           <div className="row">
             {this.props.schoolCampusGets &&
@@ -30,9 +30,9 @@ class Campus extends React.Component {
                       className="locationCard"
                       onClick={() => this.setState({ currentMap: e })}
                     >
-                      <h4>{e.name}</h4>
+                      <h4 style={{ height: 100 }}>{e.name}</h4>
                       <br />
-                      <p>{e.address}</p>
+                      <p style={{ height: 60 }}>{e.address}</p>
                     </div>
                   </div>
                 );

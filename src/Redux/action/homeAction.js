@@ -1,8 +1,8 @@
 import ActionTypes from "../constant/constant";
 import axios from 'axios';
 
-const api = "https://swit-app.herokuapp.com/";
-// const api = "http://localhost:3000/"
+// const api = "https://swit-app.herokuapp.com/";
+const api = "http://localhost:5000/"
 
 
 function jobFormSubmit(e) {

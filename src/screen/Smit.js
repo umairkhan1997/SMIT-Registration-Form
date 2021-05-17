@@ -19,7 +19,7 @@ import SuccessStories from "../components/SMIT/suuccesStories";
 import Workshop from "../components/SMIT/workshop";
 import Vocational from "../components/SMIT/vocationaltraining";
 import Intro from "../components/SMIT/intro";
-
+import Navbar from "../smallcomponents/navbar";
 export default class Smit extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +30,7 @@ export default class Smit extends React.Component {
   }
   componentDidMount() {
     this.setState({
-      visible: true,
+      visible: false,
     });
   }
   render() {
@@ -108,15 +108,16 @@ export default class Smit extends React.Component {
           </div>
         </Modal>
         <MainHeader />
-        <Cover city={this.state.city} />
-        <TableData />
+        <Navbar />
+        {/* <Cover city={this.state.city} /> */}
         <Intro />
+        <TableData />
         <SuccessStories />
-        <Workshop />
         <Faculty />
         <Vocational />
         <MainCourses />
         <SMITeacher />
+        <Workshop />
         <Collaboration />
         <Footer />
       </div>

@@ -1,5 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+<<<<<<< HEAD:build/precache-manifest.252cc028800868bde12a1f574e92de85.js
     "revision": "11f3e6dcb75c844e8cba900bcc824a1a",
     "url": "/index.html"
   },
@@ -22,6 +23,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cca9662b2dfea70883f9",
     "url": "/static/js/main.5d17bd6e.chunk.js"
+=======
+    "revision": "20f39f851302bf42d3740eba7bfe4de4",
+    "url": "/index.html"
+  },
+  {
+    "revision": "8509be2a08c20b17f5ea",
+    "url": "/static/css/2.14e6b765.chunk.css"
+  },
+  {
+    "revision": "16ba545a29e4d0614914",
+    "url": "/static/css/main.6132f402.chunk.css"
+  },
+  {
+    "revision": "8509be2a08c20b17f5ea",
+    "url": "/static/js/2.71261486.chunk.js"
+  },
+  {
+    "revision": "6e7a615ff981e276b16fa08d92b0044a",
+    "url": "/static/js/2.71261486.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "16ba545a29e4d0614914",
+    "url": "/static/js/main.7d5c1d3c.chunk.js"
+>>>>>>> 50186da39ccb22d8054400b97699a90c097b0860:build/public/precache-manifest.8f113b3f4f91d77741c6aa1a8f02c3d8.js
   },
   {
     "revision": "9c0ff38e90f64445b966",
@@ -430,6 +455,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e10a1bc623c0c00a2807ac01937bce5c",
     "url": "/static/media/welfareform.e10a1bc6.pdf"
+  },
+  {
+    "revision": "2c41fe35f1859507cb42eb5c7e240984",
+    "url": "/static/media/winter-blanket.2c41fe35.png"
   },
   {
     "revision": "662c489194c361d274ba4880f94690d8",

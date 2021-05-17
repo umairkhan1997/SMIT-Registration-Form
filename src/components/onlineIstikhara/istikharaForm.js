@@ -121,7 +121,7 @@ class IstikharaForm extends React.Component {
 
           <div className="row">
             <div className="col-md-8">
-              <label className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>Select Istikhara Type</label>
+              <label className="inpLab font-weight-bold" style={{ color: "#034f9c", fontSize: 18 }}>Select Istikhara Type</label>
               <select className="inp" onChange={e => this.setState({ istType: e.target.value })}>
                 <option selected>Select Istikhara Type</option>
                 <option value="Shadi">Shadi</option>
@@ -139,7 +139,7 @@ class IstikharaForm extends React.Component {
                 : null
             }
             <div className="col-md-6 pt-3 pb-3">
-              <label for="maleName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+              <label for="maleName" className="inpLab font-weight-bold" style={{ color: "#034f9c", fontSize: 18 }}>
                 Enter Male Name
                 </label>
               <input
@@ -158,7 +158,7 @@ class IstikharaForm extends React.Component {
                 : null
             }
             <div className="col-md-6 pt-3 pb-3">
-              <label for="maleMotherName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+              <label for="maleMotherName" className="inpLab font-weight-bold" style={{ color: "#034f9c", fontSize: 18 }}>
                 Enter Male Mother Name
                 </label>
               <input
@@ -179,7 +179,7 @@ class IstikharaForm extends React.Component {
           }
           <div className="row">
             <div className="col-md-6 pt-3 pb-3">
-              <label for="femaleName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+              <label for="femaleName" className="inpLab font-weight-bold" style={{ color: "#034f9c", fontSize: 18 }}>
                 Enter Female Name
                 </label>
               <input
@@ -198,7 +198,7 @@ class IstikharaForm extends React.Component {
                 : null
             }
             <div className="col-md-6 pt-3 pb-3">
-              <label for="femaleMotherName" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+              <label for="femaleMotherName" className="inpLab font-weight-bold" style={{ color: "#034f9c", fontSize: 18 }}>
                 Enter Female Mother Name
                 </label>
               <input
@@ -219,7 +219,7 @@ class IstikharaForm extends React.Component {
           }
           <div className="row">
             <div className="col-md-6 pt-3 pb-3">
-              <label for="contact" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+              <label for="contact" className="inpLab font-weight-bold" style={{ color: "#034f9c", fontSize: 18 }}>
                 Contact
                 </label>
               <input type="number" id="contact" className="inp inputNumber" placeholder="Contact"
@@ -235,7 +235,7 @@ class IstikharaForm extends React.Component {
                 : null
             }
             <div className="col-md-6 pt-3 pb-3">
-              <label for="contact" className="inpLab font-weight-bold" style={{ color: "#1371b8", fontSize: 18 }}>
+              <label for="contact" className="inpLab font-weight-bold" style={{ color: "#034f9c", fontSize: 18 }}>
                 Enter Istikhara Details
                 </label>
               <textarea

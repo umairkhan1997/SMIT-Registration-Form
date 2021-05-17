@@ -8,7 +8,7 @@ export default class Steps extends React.Component {
       <div id="welfareSteps" className="py-5 my-5 backgroundLight">
         <div className="container">
           <div className="Heading">
-            <h2>Steps to get Welfare Help</h2>
+            <h3><u><b>STEPS TO GET WELFARE HELP</b></u></h3>
           </div>
           <div className="row">
             <div className="col-md-4 py-5">

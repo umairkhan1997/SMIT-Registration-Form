@@ -53,13 +53,29 @@ export default class Navbar extends React.Component {
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
                       <HashLink
-                        className="dropdown-item"
-                        to="/aboutus#ourMission"
+                        className="dropdown-item color font-weight-bold"
+                        to="/aboutus"
                       >
-                        Over Mission
+                        INTRODUCTION
                       </HashLink>
                     </li>
                     <li>
+                      <HashLink
+                        className="dropdown-item color  font-weight-bold"
+                        to="/annualreport"
+                      >
+                        ANNUAL REPORTS
+                      </HashLink>
+                    </li>
+                    <li>
+                      <HashLink
+                        className="dropdown-item color  font-weight-bold"
+                        to="/aboutus#chairmanMessage"
+                      >
+                        NTN REPORT
+                      </HashLink>
+                    </li>
+                    {/* <li>
                       <HashLink
                         className="dropdown-item"
                         to="/aboutus#ourVision"
@@ -90,7 +106,7 @@ export default class Navbar extends React.Component {
                       >
                         Thematic Area
                       </HashLink>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li className="nav-item">

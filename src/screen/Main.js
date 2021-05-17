@@ -36,7 +36,7 @@ export default class Main extends React.Component {
         <Introduction />
         {/* <HomeCover /> */}
         {/* <HomeData /> */}
-        <div className="row m-0 p-3">
+        <div className="row m-0 p-1">
           <div className="col-md-6">
             <HomeNews />
           </div>

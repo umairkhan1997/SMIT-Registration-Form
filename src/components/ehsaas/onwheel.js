@@ -12,12 +12,12 @@ export default class MobleLangar extends React.Component {
         <div className="container py-4 text-white">
           <div className="row">
             <div className="col-md-6 py-3">
-              <h2>
+              <h3 className="font-weight-bold">
                 Ehsaas Saylani Langar on Wheels introduced in Islamabad and
                 Lahore
-              </h2>
-              <hr />
-              <h4>
+              </h3>
+              <hr style={{ borderBottom: "1px solid white" }} />
+              <h6>
                 SAPM on Social Protection and Poverty Alleviation, Dr. Sania
                 Nishtar inaugurated Ehsaas-Saylani Langar-on-Wheels initiative
                 on{" "}
@@ -25,7 +25,7 @@ export default class MobleLangar extends React.Component {
                 at the junction of twin cities in Islamabad. The joint
                 initiative had been introduced simultaneously in Islamabad and
                 Lahore. in Islamabad.
-              </h4>
+              </h6>
             </div>
             <div className="col-md-6 py-3">
               <div className="row">

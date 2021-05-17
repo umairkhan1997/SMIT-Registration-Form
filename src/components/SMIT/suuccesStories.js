@@ -20,13 +20,13 @@ class SuccessStories extends React.Component {
       <div id="smitSuccessStories">
         <div className="container py-5">
           <div className="Heading">
-            <h2>Success Stories</h2>
+            <h3 className="color"><b><u>SUCCESS STORIES</u></b></h3>
           </div>
           <div className="row">
             {this.props.SmitsucessGets &&
               this.props.SmitsucessGets.map((e, i) => {
                 return (
-                  <div className="col-md-3 py-3">
+                  <div className="col-md-3 ">
                     <div className="succesCard text-center">
                       <img className="successImg" src={e.image} width="200px" />
                       <div className="p-5">
@@ -37,6 +37,7 @@ class SuccessStories extends React.Component {
                             className="text-success"
                             target="_black"
                             href={e.link}
+
                           >
                             Click for details <i class="fas fa-arrow-right"></i>
                           </a>
