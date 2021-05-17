@@ -3,7 +3,18 @@ import doorstep from "../../images/homeimages/doorstep.png";
 import collectioncenter from "../../images/homeimages/collectioncenter.png";
 import banktransfer from "../../images/homeimages/banktransfer.png";
 import MainDonationForm from "./mainDonationForm";
-import { FaDonate } from "react-icons/fa";
+import {
+  FaDonate,
+  FaBreadSlice,
+  FaCheese,
+  FaBookOpen,
+  FaEye,
+  FaLaptop,
+  FaCouch,
+  FaCogs,
+  FaUtensils,
+  FaPills,
+} from "react-icons/fa";
 import winterblacnket from "../../images/winter-blanket.png";
 import Modal from "react-awesome-modal";
 
@@ -113,6 +124,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaDonate />
+                    </span>
                     Sadqa & Aqeeqa Animals
                   </button>
                   <button
@@ -125,6 +139,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaBreadSlice />
+                    </span>
                     Kifalat programm
                   </button>
                   <button
@@ -137,6 +154,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaCheese />
+                    </span>
                     Ramzan Rashan Package
                   </button>
                   <button
@@ -149,6 +169,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaBreadSlice />
+                    </span>
                     Sehri & Aftari Support
                   </button>
                   <button
@@ -161,6 +184,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaBookOpen />
+                    </span>
                     Education Support Program
                   </button>
                   <button
@@ -173,6 +199,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaEye />
+                    </span>
                     Eye Patients
                   </button>
                   <button
@@ -185,6 +214,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaLaptop />
+                    </span>
                     SMIT Program
                   </button>
                   <button
@@ -197,6 +229,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaCouch />
+                    </span>
                     Weddign Support Program
                   </button>
                   <button
@@ -209,6 +244,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaCogs />
+                    </span>
                     Vocational training Programm
                   </button>
                   <button
@@ -221,6 +259,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaUtensils />
+                    </span>
                     Saylani Dastarkhwan
                   </button>
                   <button
@@ -233,6 +274,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaBreadSlice />
+                    </span>
                     Monthly Rashan Support
                   </button>
                   <button
@@ -245,6 +289,9 @@ export default class DonationDashboard extends React.Component {
                       this.openModal();
                     }}
                   >
+                    <span className="catIcon">
+                      <FaPills />
+                    </span>
                     Support Hepatitis Patients
                   </button>
                 </div>

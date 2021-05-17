@@ -340,16 +340,30 @@
   background-color: #032e50;
 }
 .catBtn {
-  padding: 10px;
+  padding: 5px;
   width: 100%;
   vertical-align: top;
-  margin: 5px;
-  background: linear-gradient(white, lightgrey) rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  background: linear-gradient(white, rgb(240, 240, 240));
   border: none;
   color: #013761;
-  border-radius: 20px;
+  border-radius: 30px;
   /* font-weight: bold; */
   font-size: 1.2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.catIcon {
+  background: linear-gradient(rgb(240, 240, 240), white);
+  padding: 10px;
+  font-size: 1em;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 25px;
+  /* border: 1px solid #013761; */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 .modalParent {
   position: relative;
@@ -370,5 +384,12 @@
   }
   .bankCard {
     width: 50%;
+  }
+  .catIcon {
+    display: block;
+    margin: auto;
+  }
+  .catBtn {
+    display: block;
   }
 }
