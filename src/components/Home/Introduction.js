@@ -223,7 +223,7 @@ class Introduction extends React.Component {
                   </div>
                   <Reveal effect="fadeInUp">
                     <div className="homeIntro bg-white">
-                      <p className="text-justify introText mt-3">
+                      <p className="text-justify introText mt-3 text-muted text-bold">
                         Alhamdo-llilah! By the grace of Allah, this organization
                         is serving the poor and the distressed people of our
                         society since 5th May 1999. We are a part of a society

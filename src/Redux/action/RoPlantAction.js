@@ -1,7 +1,9 @@
 import ActionTypes from "../constant/constant";
 
-const api = "https://swit-app.herokuapp.com/";
-// const api = "http://localhost:3000/"
+import api from '../../components/apiList/apiList'
+
+// // const api = "https://swit-app.herokuapp.com/";
+// const api = "http://localhost:5000/"
 
 function roPlantBranchGet() {
   return (dispatch) => {

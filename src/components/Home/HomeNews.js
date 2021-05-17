@@ -34,7 +34,7 @@ class HomeNews extends React.Component {
                       <img key={index} alt="" src={each} width="100%" />
                     ))}
                   </div>
-                  <div className="col-md-9 text-left p-2">
+                  <div className="col-md-9 text-left p-2 text-muted font-weight-bold">
                     <p className="text-black">{data.name}</p>
                     {/* <p className="text-muted homeNewsDetail">
                       {data.description.slice(0, 100) + "..."}

@@ -36,6 +36,7 @@ export default class Smit extends React.Component {
   render() {
     return (
       <div>
+
         <Modal
           visible={this.state.visible}
           width="90%"

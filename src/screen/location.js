@@ -4,6 +4,171 @@ import Navbar from "../smallcomponents/navbar";
 
 export default class Location extends React.Component {
   state = {
+    pakistanBranches: [
+      {
+        city: 'KARACHI',
+        zone: '(Head Office)',
+        address: 'A-25, Main Bahadurabad,Karachi-Pakistan. P.O. Box # 3417',
+        ph: 'Ph: (92-21) 34130786 (5 Lines)',
+        fax: 'Fax: (92-21) 34127693',
+        charity: 'Charity # DSW-3772-K'
+
+      },
+      {
+        city: 'THATTA',
+        zone: '(Zonal Office)',
+        address: 'Civil Hospital, Makli District Thatta.',
+        ph: 'Ph: (92-333) 1201837',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'HYDERABAD',
+        zone: '(Zonal Office)',
+        address: 'Sarfaraz Colony, Opp. Bin Tayyab Hospital,Hyderabad',
+        ph: 'Ph: (92-22) 2611429 \n (92-22) 2621284',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'UMERKOT',
+        zone: '(Zonal Office)',
+        address: 'Chor Road, Main UmerKot Bus Stop, Football Ground,UmerKot',
+        ph: 'Ph: 0322-2847411',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'TANDO MUHAMMAD K',
+        zone: '(Zonal Office)',
+        address: 'Shop No. 67, Sajawal Chowk, Near Wapda Grid Station, Tando M. Khan',
+        ph: 'Ph: 92-317-1112880',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'QUETTA',
+        zone: '(Zonal Office)',
+        address: 'Bolan Medical Complex Hospital, Quetta.',
+        ph: 'Ph: (92-333) 1201841',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'FAISALABAD',
+        zone: '(Zonal Office)',
+        address: 'Factory Area, Lal Mill Chowk, Saylani House, Faisalabad.',
+        ph: 'Ph: (92-41) 2417272 \n (92-41) 2417373',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'CHINIOT',
+        zone: '(Zonal Office)',
+        address: 'Near Purani Saddar Chungi, Opp. Railway Station, Sargodha Road. Chiniot.',
+        ph: 'Ph: (92-332) 7068410',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'ISLAMABAD',
+        zone: '(Zonal Office)',
+        address: 'Shop No. 7-J Unit No. 5 Al Sagheer Plaza. F-10 Markaz, Islamabad.',
+        ph: 'Ph: (92-51) 2223191',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'RAWALPINDI',
+        zone: '(Zonal Office)',
+        address: 'S-25 A, Asghar Mall scheme, National Market, Rawalpindi.',
+        ph: 'Ph: (92-51) 4940669',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'LAHORE',
+        zone: '(Zonal Office)',
+        address: 'Main Boy Scout Stop, Walton Road, Lahore.',
+        ph: 'Ph: (92-42) 36616577-78',
+        fax: '',
+        charity: ''
+
+      },
+      {
+        city: 'SAMUNDRI',
+        zone: '(Zonal Office)',
+        address: 'Civil Hospital,Main Gujra Road Samundari.',
+        ph: 'Ph: (92-300) -0652260',
+        fax: '',
+        charity: ''
+      },
+      {
+        city: 'MULTAN',
+        zone: '(Zonal Office)',
+        address: 'Near Faisal Movers Bus stop Inner Ring Road, Tughlaq Town, Multan. ',
+        ph: 'Ph: (92-61) 6771997',
+        fax: '',
+        charity: ''
+      },
+      {
+        city: 'LODHRAN',
+        zone: '(Zonal Office)',
+        address: 'Outside Old HQ Hospital, Multan Road, Lodhran.',
+        ph: 'Ph : 0608-361988',
+        fax: '',
+        charity: ''
+      },
+      {
+        city: 'SAWABI',
+        zone: '(Zonal Office)',
+        address: 'Bacha Khan Hospital complex, Swabi',
+        ph: 'Ph: (92-336) 6660215',
+        fax: '',
+        charity: ''
+      },
+      {
+        city: 'LANDI KOTAL',
+        zone: '(Zonal Office)',
+        address: 'Near Landi Kotal Bazar',
+        ph: 'Ph: (92-91) 2261866',
+        fax: '',
+        charity: ''
+      },
+      {
+        city: 'TORKHAM',
+        zone: '(Zonal Office)',
+        address: 'Bacha Meena',
+        ph: 'Ph: (92-91) 2261864',
+        fax: '',
+        charity: ''
+      },
+      {
+        city: 'SAWAT',
+        zone: '(Zonal Office)',
+        address: 'Outside Football Playground opposite Cedar Golf Club.Kabal, Sawat',
+        ph: 'Ph: 0946755156',
+        fax: '',
+        charity: ''
+      },
+      {
+        city: 'PESHAWAR',
+        zone: '(Zonal Office)',
+        address: 'Old Haji Camp, Bus Stop Warisabad Service Rd, Sikander Town , Peshawar',
+        ph: 'Ph: (92-91) 2261864',
+        fax: '',
+        charity: ''
+      },
+    ],
     locations: [
       {
         locationName: "Bahadurabad",
@@ -183,7 +348,7 @@ export default class Location extends React.Component {
     ],
   };
   render() {
-    const { locations } = this.state;
+    const { locations, pakistanBranches } = this.state;
     return (
       <div>
         <MainHeader />
@@ -198,32 +363,58 @@ export default class Location extends React.Component {
             {/* <h3 className="color">PAKISTAN OFFICES</h3> */}
             <h3 className=" color"><b><u>PAKISTAN OFFICES</u></b></h3>
           </div>
-          <div>
-            <div>
-              <div className="row p-0 m-0">
-                <div className="col-md-3 border-right border-primary">
-                  <div className="d-flex justify-content-center align-items-center">
-                    <h3 className=" color"><b><u>KARACHI</u></b></h3>
-                  </div>
-                </div>
-                <div className="col-md-9">
-                  <div className="row">
-                    {locations.map((e, i) => {
-                      return (
-                        <div className="col-md-3">
-                          <div className="mb-5">
-                            <h4 className="color"><b>{e.locationName}</b></h4>
-                            <span className="text-muted " >{e.area}</span><br />
-                            <span className="text-muted">{e.number}</span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
+
+          <div className="row p-0 m-0">
+            <div className="col-md-3 border-right border-primary">
+              <div className="d-flex justify-content-center align-items-center">
+                <h3 className=" color"><b><u>KARACHI BRANCHES</u></b></h3>
               </div>
             </div>
+            <div className="col-md-9">
+              <div className="row">
+                {locations.map((e, i) => {
+                  return (
+                    <div className="col-md-3">
+                      <div className="mb-5">
+                        <h4 className="color" style={{ height: 50 }}><b>{e.locationName}</b></h4>
+                        <span className="text-muted font-weight-bold" >{e.area}</span><br />
+                        <span className="text-muted font-weight-bold">{e.number}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
           </div>
+
+
+          {/* PAKISTAN BRANCHES */}
+          <div className="row p-0 m-0 mt-5">
+            <div className="col-md-3 border-right border-primary">
+              <div className="d-flex justify-content-center align-items-center">
+                <h3 className=" color"><b><u>OTHER BRANCHES</u></b></h3>
+              </div>
+            </div>
+            <div className="col-md-9">
+              <div className="row">
+                {pakistanBranches.map((e, i) => {
+                  return (
+                    <div className="col-md-3">
+                      <div className="mb-5">
+                        <h4 className="color" style={{ height: 50 }}><b>{e.city}</b></h4>
+                        <span className="text-muted font-weight-bold" >{e.zone}</span><br />
+                        <span className="text-muted font-weight-bold">{e.ph}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+          </div>
+
+
         </div>
         <div className="container py-5">
           <div className="text-center p-5">

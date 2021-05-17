@@ -73,7 +73,7 @@ export default class Donation extends React.Component {
             </div>
           </div>
         </div> */}
-        {showScreen ? <DonationForm /> : <BankDetails />}
+        {/* {showScreen ? <DonationForm /> : <BankDetails />} */}
         <Footer />
       </div>
     );

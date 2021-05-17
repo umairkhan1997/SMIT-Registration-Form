@@ -67,12 +67,13 @@ export default class Main extends React.Component {
           <div className="col-md-6">
             <SaylaniChampions />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-12">
             <Events />
+
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <NewsLater />
-          </div>
+          </div> */}
         </div>
         <p className="partnerHeading">CORPORATE EMBESSADOR PROGRAM</p>
         <PartnerScreen />

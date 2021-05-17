@@ -1,5 +1,8 @@
 import ActionTypes from "../constant/constant";
-const api = "https://swit-app.herokuapp.com/";
+import api from '../../components/apiList/apiList'
+
+// // const api = "https://swit-app.herokuapp.com/";
+// const api = "http://localhost:5000/"
 const istikharaAdd = (obj) => {
     return async function (dispatch) {
         try {

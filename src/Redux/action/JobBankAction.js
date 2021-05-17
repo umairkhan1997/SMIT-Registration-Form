@@ -1,7 +1,8 @@
 import ActionTypes from "../constant/constant";
+import api from '../../components/apiList/apiList'
 
-const api = "https://swit-app.herokuapp.com/";
-// const api = "http://localhost:3000/";
+// // const api = "https://swit-app.herokuapp.com/";
+// const api = "http://localhost:5000/"
 
 function JobBankHuntGet() {
     return (dispatch) => {

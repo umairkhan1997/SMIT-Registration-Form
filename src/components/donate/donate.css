@@ -121,7 +121,7 @@
   height: 80px;
   border-radius: 20px;
   font-size: 1.1em;
-  font-family: 'Franklin Gothic Medium';
+  font-family: "Franklin Gothic Medium";
   color: white;
   display: flex;
   font-weight: bold;
@@ -317,6 +317,62 @@
   justify-content: center;
   align-items: center;
 }
+.donationHead {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.donationHead li {
+  padding: 15px;
+  margin: 5px;
+  background-color: #0267b4;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  cursor: pointer;
+}
+.donationHead li:hover {
+  background-color: #032e50;
+}
+.catBtn {
+  padding: 5px;
+  width: 100%;
+  vertical-align: top;
+  margin: 8px;
+  background: linear-gradient(white, rgb(240, 240, 240));
+  border: none;
+  color: #013761;
+  border-radius: 30px;
+  /* font-weight: bold; */
+  font-size: 1.2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.catIcon {
+  background: linear-gradient(rgb(240, 240, 240), white);
+  padding: 10px;
+  font-size: 1em;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 25px;
+  /* border: 1px solid #013761; */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+.modalParent {
+  position: relative;
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 @media screen and (max-width: 600px) {
   .donationCard {
     width: 50%;
@@ -328,5 +384,12 @@
   }
   .bankCard {
     width: 50%;
+  }
+  .catIcon {
+    display: block;
+    margin: auto;
+  }
+  .catBtn {
+    display: block;
   }
 }

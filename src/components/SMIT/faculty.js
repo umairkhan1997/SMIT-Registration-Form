@@ -4,7 +4,10 @@ import Fade from "react-reveal/Fade";
 export default class Faculty extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+
+
+    };
   }
   render() {
     return (
@@ -53,26 +56,25 @@ export default class Faculty extends React.Component {
               <Fade left>
                 <img
                   className="facultyImg"
-                  src="https://res.cloudinary.com/di3ippvmb/image/upload/v1611386394/67443203_2383834045036882_4906259752037646336_n_mdrerp.jpg"
+                  src="https://res.cloudinary.com/di3ippvmb/image/upload/v1620816822/11906728_10207983240963735_3037437866944121625_o_ual4v4.jpg"
                   alt="Muhammad Zunaib Afzal"
                   title="Muhammad Zunaib Afzal"
                 />
               </Fade>
               <Fade right>
                 <div className="facultyName p-3 pt-5">
-                  <h2 className="color"><b><u>Muhammad Zunaib Afzal</u></b></h2>
-                  <p className="text-muted">(Manager SMIT)</p>
+                  <h2 className="color"><b><u>Zeeshan Hanif</u></b></h2>
+                  <p className="text-muted">(Head of Software Development)</p>
                 </div>
               </Fade>
             </div>
             <div className="facultyContent  ml-5 pt-5 p-3 rounded shadow">
               <Fade right>
                 <p>
-                  I have a decade of experience in developing Web and Mobile
-                  apps. Extensive documented track record of building apps using
-                  the Java/J2EE platform, MEAN Stack, HTML5 Hybrid mobile apps
-                  and Android Native apps. I have over 10 years of experience in
-                  teaching software programming and Finance courses
+                  I have a decade of experience in developing Web and Mobile apps.
+                  Extensive documented track record of building apps using the Java/J2EE platform,
+                  MEAN Stack, HTML5 Hybrid mobile apps and Android Native apps.
+                  I have over 10 years of experience in teaching software programming and Finance courses
                 </p>
               </Fade>
             </div>

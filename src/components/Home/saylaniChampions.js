@@ -33,7 +33,7 @@ export default class SaylaniChampions extends React.Component {
             </div>
           </div>
           <div>
-            <p style={{ fontSize: "1em" }}>
+            <p style={{ fontSize: "0.9em", fontWeight: 'bold' }} className="text-muted text-bold">
               Connect with our Corporate Relations Officer for more information
               on how to support Saylani Welfare International Trust.
             </p>

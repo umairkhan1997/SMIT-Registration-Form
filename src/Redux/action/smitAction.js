@@ -1,7 +1,8 @@
 import ActionTypes from "../constant/constant";
+import api from '../../components/apiList/apiList'
 
-const api = "https://swit-app.herokuapp.com/";
-// const api = "http://localhost:3000/"
+// // const api = "https://swit-app.herokuapp.com/";
+// const api = "http://localhost:5000/"
 
 
 
@@ -124,9 +125,9 @@ function smitCoursesGet() {
   };
 }
 
-function stdData(e,a,b,c){
-  return (dispatch)=>{
-    dispatch({ type: ActionTypes.stdData, payload: e,data:a,b:b,c:c });
+function stdData(e, a, b, c) {
+  return (dispatch) => {
+    dispatch({ type: ActionTypes.stdData, payload: e, data: a, b: b, c: c });
   }
 }
 
