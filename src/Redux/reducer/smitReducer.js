@@ -8,10 +8,11 @@ const initial_state = {
     SmitCounGets: [],
     SmitsucessGets: [],
     smitCoursesGets: [],
-    stdDatas:[],
-    stdDatasImg:[],
-    courseId:'',
-    year:''
+    stdDatas: [],
+    stdDatasImg: [],
+    courseId: '',
+    year: '',
+    cityCode: ''
 
 };
 
@@ -43,7 +44,7 @@ const reducerSmit = (state = initial_state, action) => {
             return { ...state, smitCoursesGets: action.payload.data };
         }
         case ActionTypes.stdData: {
-            return { ...state, stdDatas: action.payload,stdDatasImg:action.data,courseId:action.b,year:action.c };
+            return { ...state, stdDatas: action.payload, stdDatasImg: action.data, courseId: action.b, year: action.c, cityCode: action.d };
         }
 
         default: {

@@ -125,9 +125,9 @@ function smitCoursesGet() {
   };
 }
 
-function stdData(e, a, b, c) {
+function stdData(e, a, b, c, d) {
   return (dispatch) => {
-    dispatch({ type: ActionTypes.stdData, payload: e, data: a, b: b, c: c });
+    dispatch({ type: ActionTypes.stdData, payload: e, data: a, b: b, c: c, d: d });
   }
 }
 

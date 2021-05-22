@@ -21,7 +21,7 @@ class AdmitCard extends React.Component {
   }
   componentWillMount() {
     if (!this.props.stdDatas.data) {
-      this.props.history.push("/smit");
+      this.props.history.push("/");
     }
   }
 
@@ -48,24 +48,24 @@ class AdmitCard extends React.Component {
       rollNo,
       multiple_image,
     } = this.props.stdDatas.data.data;
-    const { courseId, year } = this.props;
+    const { courseId, year, cityCode } = this.props;
     let imgOne = multiple_image[0];
     return (
-      <div>
+      <div className="backgroundLight">
         <div
           className="backgroundLight py-3"
-          style={{ height: "100%", minHeight: "100vh" }}
+          style={{ height: "100%", minHeight: "100vh", }}
         >
-          <Pdf targetRef={ref} filename="smit_admit_card.pdf">
+          <Pdf targetRef={ref} filename="smit_admit_card.pdf" >
             {({ toPdf }) => (
-              <button onClick={() => this.down(toPdf)}>Generate Pdf</button>
+              <button onClick={() => this.down(toPdf)} className="prevbtn" style={{ marginTop: 0, marginLeft: '45%' }}>Generate Pdf</button>
             )}
           </Pdf>
           {this.state.idCard ? (
             <div ref={ref} id="divIdToPrint">
               <div className="border m-5 p-3 inrollmentCard">
                 <div className="row">
-                  <div className=" col-md-3 p-3">
+                  <div className=" col-md-3 pt-3 pb-3 pr-3" style={{ marginLeft: -20 }}>
                     <img src={logo} width="100px" />
                   </div>
                   <div className="col-md-9 text-right p-3">
@@ -80,7 +80,7 @@ class AdmitCard extends React.Component {
                   <div>
                     <QRCode
                       className="rounded shadow"
-                      value={`${courseId}${year}${batchName}${rollNo}`}
+                      value={`${cityCode}${courseId}${year}${batchName}${rollNo}`}
                       bgColor="#f5f8ff"
                       fgColor="#000"
                       includeMargin={true}
@@ -100,7 +100,7 @@ class AdmitCard extends React.Component {
                       <th>CNIC</th>
                     </tr>
                     <tr>
-                      <td>{`${courseId}${year}${batchName}${rollNo}`}</td>
+                      <td>{`${cityCode}${courseId}${year}${batchName}${rollNo}`}</td>
                       <td>{fullName}</td>
                       <td>{fatherName}</td>
                       <td>{courseName}</td>
@@ -158,7 +158,7 @@ class AdmitCard extends React.Component {
                   </div>
                   <div className="shortDetail">
                     <p className="name numberHeading">{fullName}</p>
-                    <p className="rollNumber">{`${courseId}${year}${batchName}${rollNo}`}</p>
+                    <p className="rollNumber">{`${cityCode}${courseId}${year}${batchName}${rollNo}`}</p>
                     <p className="course">{courseName}</p>
                   </div>
                 </div>
@@ -173,8 +173,12 @@ class AdmitCard extends React.Component {
                 >
                   <table className="cardTable backgroundLight">
                     <tr>
-                      <td>Father Name:</td>
+                      <td>Student Name:</td>
                       <td>{fullName}</td>
+                    </tr>
+                    <tr>
+                      <td>Father Name:</td>
+                      <td>{fatherName}</td>
                     </tr>
                     <tr>
                       <td>Course:</td>
@@ -182,15 +186,11 @@ class AdmitCard extends React.Component {
                     </tr>
                     <tr>
                       <td>Student ID:</td>
-                      <td>{`${courseId}${year}${batchName}${rollNo}`}</td>
+                      <td>{`${cityCode}${courseId}${year}${batchName}${rollNo}`}</td>
                     </tr>
                     <tr>
                       <td>Batch:</td>
                       <td>{batchName}</td>
-                    </tr>
-                    <tr>
-                      <td>CNIC:</td>
-                      <td>{cnic}</td>
                     </tr>
                   </table>
                   <div
@@ -200,7 +200,7 @@ class AdmitCard extends React.Component {
                     <div>
                       <QRCode
                         className="rounded shadow border"
-                        value={`${courseId}${year}${batchName}${rollNo}`}
+                        value={`${cityCode}${courseId}${year}${batchName}${rollNo}`}
                         bgColor="#fff"
                         fgColor="#000"
                         includeMargin={true}
@@ -235,7 +235,7 @@ class AdmitCard extends React.Component {
               <div>
                 <div className="text-left p-0">
                   <h3 className="p-3">
-                    Form has been Successfully Your further details will be
+                    Form has been Successfully Submitted, Your further details will be
                     publiched on facebook page{" "}
                     <a
                       target="_blank"
@@ -260,7 +260,7 @@ class AdmitCard extends React.Component {
                     </li>
                   </ol>
                   <div className="color p-3" style={{ fontSize: "1.5em" }}>
-                    <Link to="/smit">Go Back To Mass Training Page</Link>
+                    <Link to="/">Go Back To Admission Form Page</Link>
                   </div>
                 </div>
               </div>
@@ -278,11 +278,14 @@ function mapStateToProp(state) {
     stdDatasImg: state.reducerSmit.stdDatasImg,
     year: state.reducerSmit.year,
     courseId: state.reducerSmit.courseId,
+    cityCode: state.reducerSmit.cityCode,
   };
 }
 function mapDispatchToProp(dispatch) {
   return {};
 }
-export default withRouter(
-  connect(mapStateToProp, mapDispatchToProp)(AdmitCard)
-);
+export default
+  withRouter(
+
+    connect(mapStateToProp, mapDispatchToProp)(AdmitCard)
+  );

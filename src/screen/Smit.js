@@ -24,7 +24,7 @@ export default class Smit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false,
+      visible: true,
       city: "Karachi",
     };
   }
@@ -110,7 +110,7 @@ export default class Smit extends React.Component {
         </Modal>
         <MainHeader />
         <Navbar />
-        {/* <Cover city={this.state.city} /> */}
+        <Cover city={this.state.city} />
         <Intro />
         <TableData />
         <SuccessStories />
