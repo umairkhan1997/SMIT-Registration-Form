@@ -209,6 +209,8 @@ class CourseRegistration extends React.Component {
       formData.append("batchName", datas[0].batchName);
       formData.append("cityName", datas[0].cityName);
       formData.append("courseName", datas[0].courseName);
+      formData.append("generatedId", datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName);
+      // ${cityCode}${courseId}${year}${batchName}${rollNo}
       axios
         .post(
           "https://swit-app.herokuapp.com/smit/SmitAdmissFormadd",
@@ -216,6 +218,34 @@ class CourseRegistration extends React.Component {
           {}
         )
         .then((res) => {
+          console.log(res, 'resssss', datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName + res.data.data.rollNo)
+
+          // var formDatas = new FormData();
+          // formDatas.append("rollNo", res.data.data.rollNo)
+          // formDatas.append("generatedId", datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName + res.data.data.rollNo);
+          // axios
+          //   .post(
+          //     "http://localhost:3000/smit/smitAdmissUpdateId",
+          //     formDatas,
+          //     {}
+          //   )
+          const obj = {
+            rollNo: res.data.data.rollNo,
+            generatedId: datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName + res.data.data.rollNo
+          }
+          const options = {
+            method: "POST",
+            headers: {
+              "Accept": "application/json"
+            },
+            data: obj,
+            url: "http://localhost:3000/smit/smitAdmissUpdateId",
+          };
+          axios(options)
+            .then((res) => {
+              console.log(res, 'resssssssssssssssssssss')
+            }).catch((err) => { console.log(err) })
+
           window.scrollTo(0, 100);
           this.setState({
             fullName: "",

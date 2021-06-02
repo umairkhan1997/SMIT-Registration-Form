@@ -20,7 +20,7 @@ class AdmitCard extends React.Component {
     this.setState({ idCard: true });
   }
   componentWillMount() {
-    if (!this.props.stdDatas.data) {
+    if (this.props.stdDatas.data === undefined) {
       this.props.history.push("/");
     }
   }
