@@ -1,0 +1,395 @@
+.quantity {
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid grey;
+  outline: none;
+}
+.incrementbtn {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: #1371b8;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 10px 10px lightgrey;
+}
+.incrementbtn:focus {
+  outline: none;
+}
+.bankDetailsCard {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px lightgrey;
+  background-color: white;
+  height: 100%;
+}
+.grad {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(215, 215, 215, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.bankDetails {
+  width: 100%;
+  text-align: left;
+}
+
+.selectBtn {
+  cursor: pointer;
+  padding: 10px;
+  border: 1.5px solid #1371b8;
+  background-color: #1371b8;
+  box-shadow: 0 8px 10px lightgrey;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.5s ease;
+}
+.selectBtn:hover {
+  border: 1.5px solid #1371b8;
+  box-shadow: 0 12px 15px lightgrey;
+  background-color: rgb(250, 250, 250);
+  color: #1371b8;
+}
+.bankTable th {
+  color: black;
+}
+.bankTable td {
+  color: #1371b8;
+}
+.donorLink {
+  font-size: 3em;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 8px;
+  text-align: center;
+}
+.donorLink:hover {
+  background-color: white;
+  color: #1371b8;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.donorLink i {
+  margin: 10px;
+}
+
+.categorybtn {
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.categorybtn:hover {
+  background-color: white;
+  color: #0066b3;
+  box-shadow: 0 0 10px rgba(0, 102, 179, 0.5);
+}
+.donationCategory {
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  margin: 5px 0;
+}
+.donationCategory:hover .categorybtn {
+  color: white;
+  background-color: #0066b3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.donationCard {
+  text-align: center;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donationCard div {
+  padding-top: 10px;
+  margin: 5px;
+  background-color: #0066b3;
+  width: 160px;
+  height: 80px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  font-family: "Franklin Gothic Medium";
+  color: white;
+  display: flex;
+  font-weight: bold;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  /* border-radius: 5px; */
+}
+.donationCard div:hover {
+  background-color: #013761;
+}
+
+.categoryList {
+  padding: 10px;
+  margin: 5px;
+  background-color: #1371b8;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.categoryList:hover {
+  background-color: #0c436d;
+}
+.amountCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 5px;
+
+  height: 100%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.amount {
+  /* border: 2px solid rgb(0, 102, 179); */
+  background-color: rgba(0, 102, 179, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  /* color: white; */
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.amount p {
+  font-size: 1.5em;
+  text-align: center;
+}
+.amountDes {
+  font-size: 1.5em;
+  padding: 20px 10px;
+  /* text-align: center; */
+  font-weight: bold;
+  border-bottom: 2px solid #0066b3;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.amountDes button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: #0066b3;
+  color: white;
+  font-weight: bold;
+  padding: 0;
+  /* margin: 2px; */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.amountInp {
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+  /* color: white; */
+  outline: none;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  font-size: 1.5em;
+}
+
+.donationStep {
+  padding: 5px;
+  border-radius: 15px 15px 0 0;
+  /* margin-top: 20px; */
+  /* background-color: rgb(0, 102, 179); */
+  text-align: center;
+  /* box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+  /* color: white; */
+}
+.donationStep p {
+  padding: 7px;
+  font-size: 1.1em;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.donationStep:hover p {
+  background-color: rgb(181, 220, 250);
+  /* color: white; */
+}
+.casCollectionCard {
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.casCollectionCard a {
+  display: inline-block;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 5px;
+}
+.donatewaysicon {
+  /* margin-top: -70px; */
+  width: 70px;
+}
+.donationCardColor {
+  background-color: transparent;
+  border-radius: 15px;
+}
+.heavyRadius {
+  border-radius: 15px;
+}
+.donationCardColor:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.donationCegoryCard {
+  height: 100%;
+}
+.mainDonationForm {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1001;
+}
+.drawerCard {
+  background-color: white;
+  cursor: pointer;
+}
+.drawerCard:hover {
+  background-color: #dbecfe;
+}
+.donationCardHeading {
+  /* display: flex; */
+  text-align: left;
+  padding: 10px;
+}
+.bankCard div {
+  background-color: rgb(212, 234, 252);
+  text-align: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.bankCardDetails {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(212, 234, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donationHead {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.donationHead li {
+  padding: 15px;
+  margin: 5px;
+  background-color: #0267b4;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  cursor: pointer;
+}
+.donationHead li:hover {
+  background-color: #032e50;
+}
+.catBtn {
+  padding: 5px;
+  width: 100%;
+  vertical-align: top;
+  margin: 8px;
+  background: linear-gradient(white, rgb(240, 240, 240));
+  border: none;
+  color: #013761;
+  border-radius: 30px;
+  /* font-weight: bold; */
+  font-size: 1.2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.catIcon {
+  background: linear-gradient(rgb(240, 240, 240), white);
+  padding: 10px;
+  font-size: 1em;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 25px;
+  /* border: 1px solid #013761; */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+.modalParent {
+  position: relative;
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 600px) {
+  .donationCard {
+    width: 50%;
+  }
+  .donationCard div {
+    width: 120px;
+    height: 120px;
+    font-size: 1.2em;
+  }
+  .bankCard {
+    width: 50%;
+  }
+  .catIcon {
+    display: block;
+    margin: auto;
+  }
+  .catBtn {
+    display: block;
+  }
+}

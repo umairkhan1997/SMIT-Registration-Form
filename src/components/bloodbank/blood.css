@@ -1,0 +1,83 @@
+.aims {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  border: 2px solid maroon;
+  color: maroon;
+  font-size: 1.4em;
+  border-radius: 8px;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.topRight {
+  border-radius: 20px 0 0 0;
+}
+.topLeft {
+  border-radius: 0 20px 0 0;
+}
+.bottomRight {
+  border-radius: 0 0 0 20px;
+}
+.bottomLeft {
+  border-radius: 0 0 20px 0;
+}
+
+.backImg {
+  background-image: "../../images/BloodBankBack.jpg";
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.custom-underline {
+  /* font-weight: bold; */
+  color: #fff;
+  font-size: 3em;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 3px solid #8c1515;
+}
+.donorbtn {
+  padding: 15px;
+  font-size: 1.5em;
+  margin: 10px 0;
+  border: none;
+  background-color: #8c1515;
+  color: white;
+}
+.donorbtn:focus {
+  outline: none;
+}
+.bloodServiceCard {
+  color: #8c1515;
+  font-size: 1.5em;
+  height: 100%;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f7edee;
+}
+.dataVal {
+  padding: 15px;
+  background-color: rgb(140, 21, 21);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+.dataHeading {
+  /* border-bottom: 2px solid #8c1515; */
+  color: #8c1515;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.backImg {
+  background-image: url("https://1.bp.blogspot.com/-5P8eMdBmREQ/Uut1CCwM_II/AAAAAAAAJeI/zQLOQpmoe8w/s1600/goals-dart-bullseye.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+.inpInline {
+  width: 100px;
+  padding: 10px;
+  font-size: 1em;
+}

@@ -1,0 +1,196 @@
+.coursesBlog {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.messageBoxTxt {
+  /* background-color: rgb(240, 240, 240) ; */
+  /* border-color: #e1e1e1; */
+  border: 1px solid #c0c0c0;
+  margin-top: 30px;
+  margin-left: -80px;
+}
+
+.recentpOst {
+  /* borderTop:1,borderTopColor:'gray',borderTopWidth:2 */
+  border: 1px solid gainsboro;
+  margin-bottom: 5px;
+}
+
+.courseDateInfo {
+  margin-left: 40px;
+  color: dodgerblue;
+}
+
+.courseCard {
+  display: inline-block;
+  border-top: 4px solid black;
+  background-color: white;
+  box-shadow: 3px 3px 20px lightgrey;
+  margin-top: 10px;
+  border-radius: 0 0 8px 8px;
+  background-color: #f5f8ff;
+}
+.courseCard:hover img {
+  transform: scale(1.1, 1.1);
+  border-radius: 8px;
+  box-shadow: 0 0 12px lightgrey;
+}
+.facultyImg {
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: -30px;
+  margin-left: 20px;
+  display: inline-block;
+  /* border: 1px solid lightgrey; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.facultyName {
+  display: inline-block;
+}
+.facultyContent {
+  background-color: #0066b3;
+  color: white;
+  text-align: justify;
+}
+.facultyContent p {
+  font-size: 1.1em;
+}
+.smitCounter {
+  background-image: url("../../images/achieve.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.achieve {
+  border: 3px solid white;
+  border-radius: 7px;
+}
+.achieve:hover {
+  border: 3px solid dodgerblue;
+}
+.collaborationPartner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 0 15px lightgrey;
+  background-color: rgb(250, 250, 250);
+}
+.teacher {
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.teacher div {
+  color: transparent;
+}
+.teacher:hover {
+  background-size: 120%;
+}
+.teacher:hover div {
+  background-color: rgba(30, 144, 255, 0.5);
+  color: white;
+}
+.courseimg {
+  border-radius: 10px;
+  box-shadow: 0 10px 15px lightgrey;
+  border: 1.5px solid lightgrey;
+  height: 100%;
+  cursor: pointer;
+}
+.courseimg:hover {
+  background-color: rgb(250, 250, 250);
+  border: 1.5px solid #0066b3;
+}
+.coverText {
+  border-radius: 8px;
+  /* border: 2px solid rgb(2, 103, 180); */
+  /* color: rgb(2, 103, 180); */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, .5); */
+}
+.teacherDetails {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 85%;
+  padding: 30% 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  transition: 0.5s;
+  color: #033e6b;
+}
+@media only screen and (max-width: 600px) {
+  .allTeacher {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  .coverImage {
+    width: "100%";
+  }
+}
+.allTeacher:hover .teacherDetails {
+  display: block;
+  transition: 0.5s;
+}
+.successImg {
+  border-radius: 10px;
+  border: 3px solid white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+.succesCard {
+  border-top: 3px solid #6fda44;
+  /* border-radius: 5px; */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.workshopCard {
+  background-color: white;
+  padding: 10px;
+  margin: 12px 0;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  border-radius: 8px;
+  vertical-align: middle;
+  border: 2.5px solid white;
+}
+.workshopCard:hover {
+  border: 2.5px solid #1371b8;
+}
+.icoPosition {
+  position: absolute;
+  top: 0;
+  left: 42%;
+  margin-top: -25px;
+}
+.vocationalIcon {
+  background-color: #f0f4ff;
+  color: #0066b3;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  width: 180px;
+  height: 180px;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .workshopCard {
+    padding: 8px;
+    margin: 5px 0;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    /* height: 100%; */
+    border-radius: 8px;
+    border: 2.5px solid white;
+  }
+  .workshopCard p {
+    display: none;
+  }
+}
+.em1-5 {
+  font-size: 1.5em;
+}

@@ -1,0 +1,12 @@
+.socialLink{
+    font-size: 1.8em;
+    padding: 10px;
+    display: inline-block;
+    color: white;
+}
+.socialLink a{
+    color: white;
+}
+.socialLink a:hover{
+    color: rgba(255, 255, 255, .5);
+}

@@ -1,0 +1,187 @@
+d.jobre {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url("../../images/jobrecru.jpg");
+  background-blend-mode: lighten;
+  height: 250px;
+  width: 100%;
+}
+
+.jobse {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url("../../images/incu.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  height: 250px;
+  width: 100%;
+}
+
+.featDiv {
+  background-color: rgb(244, 245, 250);
+}
+.viePro {
+  padding: 6px 20px;
+  border: none;
+  border-width: 0px;
+  background-color: white;
+  color: #1371b8;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.viewProf {
+  color: #0267b4 !important;
+}
+
+.divStl {
+  box-shadow: 10px 10px 15px lightgrey;
+}
+
+.feaDiv {
+  background-color: rgb(244, 245, 250);
+
+  box-shadow: 10px 10px 15px lightgrey;
+}
+.vieMor {
+  padding: 6px 60px;
+  border: 2px solid #0267b4;
+  background-color: transparent;
+  color: black;
+  border-radius: 25px;
+  margin: 10px 0;
+}
+.vieMor:hover {
+  padding: 6px 60px;
+  border: 2px solid white;
+  background-color: #0267b4;
+  color: white;
+  border-radius: 25px;
+}
+.countDiv {
+  background-color: rgb(244, 245, 250);
+}
+
+.jobTable {
+  width: 100%;
+}
+
+.roundadd {
+  padding: 10px;
+  border: none;
+  background-color: lightgrey;
+  color: #0267b4;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.jobInput {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #0267b4;
+  outline: none;
+  color: #0267b4;
+}
+.jobInputTextarea {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #0267b4;
+  outline: none;
+  color: #0267b4;
+}
+.jobInput::-webkit-outer-spin-button,
+.jobInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}
+.jobInputTextarea:focus {
+  border: 2px solid #0267b4;
+}
+.jobInput:focus {
+  border-bottom: 2px solid #0267b4;
+}
+.jobInputTextarea::placeholder {
+  color: #0267b4;
+}
+.jobInput::placeholder {
+  color: #0267b4;
+}
+.formClose {
+  border: 1.5px solid #0267b4;
+  border-radius: 0 0 12px 12px;
+}
+.formTag {
+  padding: 15px;
+  background-color: #0267b4;
+  color: white;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+.formTagdisable {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: transparent;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+.prevbtn {
+  background-color: #0267b4;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.prevbtn:focus {
+  outline: none;
+}
+.prevbtn:hover {
+  background-color: #033861;
+}
+.uploadCV {
+  width: 100%;
+  border: 2px dashed #0267b4;
+  padding: 50px;
+}
+
+hr.style1 {
+  border: 1px solid #8c8b8b;
+  height: 50px;
+  width: 1px;
+}
+.imgOne {
+  margin-right: 5px;
+  border-right: 2px solid #bbb8b0 !important;
+}
+
+.jobList {
+  background-image: url("../../images/jobbank.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.TheadStyle {
+  background-color: white;
+}
+
+tr > th {
+  color: #1371b8;
+  font-size: 18px;
+}
+tr > td {
+  color: #1371b8;
+  font-weight: bold;
+}
+.mainCoverCard {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .categoryCard {
+    width: 50%;
+  }
+}

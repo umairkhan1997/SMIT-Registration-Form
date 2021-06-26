@@ -1,0 +1,11 @@
+.inpLab{
+    display: block;
+    padding: 8px 0;
+    text-align: left;
+}
+
+.inputNumber::-webkit-outer-spin-button,
+.inputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}

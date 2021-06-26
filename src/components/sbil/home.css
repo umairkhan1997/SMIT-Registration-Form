@@ -1,0 +1,26 @@
+
+.formInp {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+.sendbtn {
+  padding: 10px;
+  border: 1.5px solid white;
+  color: #0c4c9d;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 1.2em;
+}
+.sendbtn:focus {
+  outline: none;
+}
+.sendbtn:hover {
+  background-color: transparent;
+  color: white;
+}

@@ -1,0 +1,41 @@
+
+.incuMainhead{
+    margin-top: -5px;
+    text-align: left;
+    color: dodgerblue;
+}
+
+
+
+.img2{
+    /* background-color: rgba(255, 0, 0, 0.3); */
+    background-image: url("../../images/incu2.jpg");
+    /* margin-left: 10%; */
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  height: 400px;
+  background-size: cover;
+}
+.iconHover{
+    border-radius: 8px;
+    border: 1.5px solid dodgerblue;
+}
+.iconHover img {
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+.iconHover:hover{
+    text-decoration: none !important;
+    transform: scale(1.1,1.1);
+    background-color: white;
+    box-shadow: 0 0 15px lightgrey;
+    border: 2px solid white;
+}
+.mentorCard{
+    border-radius: 8px;
+    overflow: hidden;
+}
+.mentorCard:hover{
+    box-shadow: 0 10px 15px lightgrey;
+}

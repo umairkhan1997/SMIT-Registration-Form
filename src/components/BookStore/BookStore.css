@@ -1,0 +1,40 @@
+.download {
+  background-color: #1371b8;
+  color: white;
+}
+.singleBook {
+  border-radius: 8px;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.bookDetails {
+  /* height: 0; */
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 85%;
+  color: white;
+  height: 90%;
+}
+.singleBook:hover .bookDetails {
+  display: block;
+  /* height: auto; */
+}
+
+.sidelist {
+  list-style: none;
+}
+.sidelist li {
+  padding: 10px;
+  margin: 5px 0;
+  border-bottom: 1.5px solid grey;
+}
+.sidelist li:hover {
+  background-color: #1371b8;
+  color: white;
+  border-bottom: 1.5px solid #0066b3;
+  cursor: pointer;
+}

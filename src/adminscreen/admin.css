@@ -1,0 +1,76 @@
+.list {
+  list-style: none;
+}
+.list li {
+  padding: 10px;
+  border-bottom: 1.5px solid dodgerblue;
+  text-align: left;
+  cursor: pointer;
+}
+.uploadImg {
+  visibility: hidden;
+}
+.whiteLable {
+  color: dodgerblue;
+  font-size: 2.5em;
+}
+.delete {
+  background-color: dodgerblue;
+  text-align: right;
+  padding: 10px;
+  color: white;
+  display: none;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+.delete button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 1;
+}
+.content:hover .delete {
+  display: block;
+}
+.add {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 2.3em;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+.add:focus {
+  border-bottom: 2px solid dodgerblue;
+}
+.addSub {
+  padding: 10px 0;
+  font-size: 1.5em;
+  border: none;
+  border: 1.5px solid white;
+  outline: none;
+  width: 100%;
+}
+.addSub:focus {
+  border-bottom: 1.5px solid dodgerblue;
+}
+.box {
+  border: 2px solid dodgerblue;
+  margin: 10px;
+}
+.roundIco {
+  border: 2px solid dodgerblue;
+  padding: 12px;
+  border-radius: 25px;
+}
+.count {
+  padding: 15px;
+  width: 100%;
+  border: none;
+  font-size: 2.5em;
+}
+
