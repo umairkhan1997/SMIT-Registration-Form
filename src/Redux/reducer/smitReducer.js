@@ -12,8 +12,8 @@ const initial_state = {
     stdDatasImg: [],
     courseId: '',
     year: '',
-    cityCode: ''
-
+    cityCode: '',
+    searchStdDatas: 'umair'
 };
 
 const reducerSmit = (state = initial_state, action) => {
@@ -46,7 +46,9 @@ const reducerSmit = (state = initial_state, action) => {
         case ActionTypes.stdData: {
             return { ...state, stdDatas: action.payload, stdDatasImg: action.data, courseId: action.b, year: action.c, cityCode: action.d };
         }
-
+        case ActionTypes.searchStdData: {
+            return { ...state, searchStdDatas: action.payload };
+        }
         default: {
             return state;
         }

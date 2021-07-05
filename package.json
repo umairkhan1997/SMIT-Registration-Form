@@ -29,6 +29,7 @@
     "react-full-screen": "^0.3.1",
     "react-grid-gallery": "^0.5.5",
     "react-gsap": "^2.2.1",
+    "react-html-table-to-excel": "^2.0.0",
     "react-icons": "^4.2.0",
     "react-lightbox-component": "^1.2.1",
     "react-loader-spinner": "^4.0.0",

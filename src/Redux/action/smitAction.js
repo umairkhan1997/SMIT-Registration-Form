@@ -131,6 +131,12 @@ function stdData(e, a, b, c, d) {
   }
 }
 
+function searchStdData(data) {
+  return (dispatch) => {
+    dispatch({ type: ActionTypes.searchStdData, payload: data });
+  }
+}
+
 export {
   smitCoursesGet,
   smitNotificationGet,
@@ -140,5 +146,6 @@ export {
   smitWorkshopGet,
   SmitCounGet,
   smitSuccessStoriesGet,
-  stdData
+  stdData,
+  searchStdData
 };

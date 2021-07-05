@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import "../App.css";
 import "./course.css";
-import MainHeader from "../components/Home/MainHeader";
 import axios from "axios";
 import { connect } from "react-redux";
 import { stdData } from "../Redux/action/smitAction";
@@ -47,24 +46,38 @@ class CourseRegistration extends React.Component {
       chkcourse: false,
       chkCity: false,
       city: "Karachi",
+      cyberSecurity: false,
+      organizationName: "",
+      chkOrganizationName: false,
+      position: '',
+      chkPosition: false,
+      nameProfessional: '',
+      chkNameProfessional: false,
+      laptopAvailable: '',
+      chkLaptopAvailable: false,
+      memberInstitution: '',
+      chkMemberInstitution: false,
+      membershipNumber: '',
+      chkMembershipNumber: false,
+      totalExperience: '',
+      chkTotalExperience: false,
+      areaOfExperience: '',
+      chkAreaOfExperience: false,
+      rateSkills: '',
+      chkRateSkills: false,
       styles: {
         slideInRight: {
           animation: "x 1.5s",
-          animationName: Radium.keyframes(slideInRight, "slideInRight")
+          animationName: Radium.keyframes(slideInRight, "slideInRight"),
         },
         slideInDown: {
           animation: "x 1s",
-          animationName: Radium.keyframes(slideInDown, "slideInDown")
-        }
-      }
+          animationName: Radium.keyframes(slideInDown, "slideInDown"),
+        },
+      },
     };
   }
 
-  // componentWillMount() {
-  //   if (!this.props.location.state) {
-  //     this.props.history.push("/smit");
-  //   }
-  // }
 
   onSiteChanged = (e) => {
     this.setState({
@@ -86,7 +99,6 @@ class CourseRegistration extends React.Component {
   };
 
   toAdminCard = (e, a, b, c, d) => {
-
     this.props.stdData(e, a, b, c, d);
     this.props.history.push("/admitcard");
   };
@@ -108,7 +120,8 @@ class CourseRegistration extends React.Component {
   // }
   Submit = () => {
     this.setState({ loading: true });
-    const { smitNotificationGets } = this.props
+
+    const { smitNotificationGets } = this.props;
     // const { filteredName } = this.props.location.state;
     let {
       city,
@@ -124,17 +137,71 @@ class CourseRegistration extends React.Component {
       address,
       lastQualification,
       profileImg,
+      organizationName,
+      position,
+      nameProfessional,
+      laptopAvailable,
+      memberInstitution,
+      membershipNumber,
+      totalExperience,
+      areaOfExperience,
+      rateSkills,
     } = this.state;
     if (this.checkField(city)) {
       this.setState({ chkCity: true });
       window.scrollTo(0, 100);
       this.setState({ loading: false });
-    }
-    else if (this.checkField(course)) {
+    } else if (this.checkField(course)) {
       this.setState({ chkcourse: true });
       window.scrollTo(0, 100);
       this.setState({ loading: false });
     }
+    else if (this.checkField(organizationName) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkOrganizationName: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(nameProfessional) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkNameProfessional: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(position) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkPosition: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(laptopAvailable) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkLaptopAvailable: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(memberInstitution) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkMemberInstitution: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(membershipNumber) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkMembershipNumber: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(totalExperience) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkTotalExperience: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(rateSkills) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkRateSkills: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(areaOfExperience) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkAreaOfExperience: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
+
     else if (this.checkField(fullName)) {
       this.setState({ chkfullName: true });
       window.scrollTo(0, 100);
@@ -147,15 +214,21 @@ class CourseRegistration extends React.Component {
       this.setState({ chkfatherName: true });
       window.scrollTo(0, 300);
       this.setState({ loading: false });
-    } else if (this.checkField(ContactNumber)) {
+    } else if (this.checkField(ContactNumber) ||
+      ContactNumber.length > 12 ||
+      ContactNumber.length < 11) {
       this.setState({ chkContactNumber: true });
       window.scrollTo(0, 300);
       this.setState({ loading: false });
-    } else if (this.checkField(cnic)) {
+    } else if (this.checkField(cnic) ||
+      cnic.length > 17 ||
+      cnic.length < 13) {
       this.setState({ chkcnic: true });
       window.scrollTo(0, 300);
       this.setState({ loading: false });
-    } else if (this.checkField(fatherCnic)) {
+    } else if (this.checkField(fatherCnic) ||
+      fatherCnic.length > 17 ||
+      fatherCnic.length < 13) {
       this.setState({ chkfatherCnic: true });
       window.scrollTo(0, 300);
       this.setState({ loading: false });
@@ -180,17 +253,11 @@ class CourseRegistration extends React.Component {
       window.scrollTo(0, 700);
       this.setState({ loading: false });
     } else {
-      this.setState({ loading: false });
       // console.log('this.state.profileImg', this.state.profileImg)
-
-      var datas = smitNotificationGets
-        .filter((name) => {
-          return (
-            name.cityName
-              .toLowerCase()
-              .indexOf(city.toLowerCase()) >= 0
-          );
-        })
+      this.setState({ loading: true });
+      var datas = smitNotificationGets.filter((name) => {
+        return name.courseName.toLowerCase().indexOf(course.toLowerCase()) >= 0;
+      });
       // console.log(datas[0].cityName, 'datasdatas')
       var formData = new FormData();
       for (const key of Object.keys(this.state.profileImg)) {
@@ -209,7 +276,22 @@ class CourseRegistration extends React.Component {
       formData.append("batchName", datas[0].batchName);
       formData.append("cityName", datas[0].cityName);
       formData.append("courseName", datas[0].courseName);
-      formData.append("generatedId", datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName);
+      formData.append(
+        "generatedId",
+        datas[0].cityCode +
+        datas[0].courseId +
+        datas[0].year +
+        datas[0].batchName
+      );
+      formData.append("organizationName", organizationName);
+      formData.append("position", position);
+      formData.append("nameProfessional", nameProfessional);
+      formData.append("laptopAvailable", laptopAvailable);
+      formData.append("memberInstitution", memberInstitution);
+      formData.append("membershipNumber", membershipNumber);
+      formData.append("totalExperience", totalExperience);
+      formData.append("areaOfExperience", areaOfExperience);
+      formData.append("rateSkills", rateSkills);
       // ${cityCode}${courseId}${year}${batchName}${rollNo}
       axios
         .post(
@@ -218,33 +300,41 @@ class CourseRegistration extends React.Component {
           {}
         )
         .then((res) => {
-          console.log(res, 'resssss', datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName + res.data.data.rollNo)
+          // console.log(
+          //   res,
+          //   "resssss",
+          //   datas[0].cityCode +
+          //   datas[0].courseId +
+          //   datas[0].year +
+          //   datas[0].batchName +
+          //   res.data.data.rollNo,
+          //   datas
+          // );
 
-          // var formDatas = new FormData();
-          // formDatas.append("rollNo", res.data.data.rollNo)
-          // formDatas.append("generatedId", datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName + res.data.data.rollNo);
-          // axios
-          //   .post(
-          //     "http://localhost:3000/smit/smitAdmissUpdateId",
-          //     formDatas,
-          //     {}
-          //   )
           const obj = {
             rollNo: res.data.data.rollNo,
-            generatedId: datas[0].cityCode + datas[0].courseId + datas[0].year + datas[0].batchName + res.data.data.rollNo
-          }
+            generatedId:
+              datas[0].cityCode +
+              datas[0].courseId +
+              datas[0].year +
+              datas[0].batchName +
+              res.data.data.rollNo,
+          };
           const options = {
             method: "POST",
             headers: {
-              "Accept": "application/json"
+              Accept: "application/json",
             },
             data: obj,
-            url: "http://localhost:3000/smit/smitAdmissUpdateId",
+            url: "https://swit-app.herokuapp.com/smit/smitAdmissUpdateId",
           };
           axios(options)
             .then((res) => {
-              console.log(res, 'resssssssssssssssssssss')
-            }).catch((err) => { console.log(err) })
+              // console.log(res, "resssssssssssssssssssss");
+            })
+            .catch((err) => {
+              // console.log(err);
+            });
 
           window.scrollTo(0, 100);
           this.setState({
@@ -258,49 +348,40 @@ class CourseRegistration extends React.Component {
             dob: "",
             address: "",
             lastQualification: "",
+            loading: false,
+            organizationName: '',
+            position: '',
+            nameProfessional: '',
+            laptopAvailable: '',
+            memberInstitution: '',
+            membershipNumber: '',
+            totalExperience: '',
+            areaOfExperience: '',
+            rateSkills: '',
           });
           // console.log(res, this.state.profileImg[0], datas[0].courseId, datas[0].year)
-          this.toAdminCard(
-            res,
-            URL.createObjectURL(this.state.profileImg[0]),
-            datas[0].courseId,
-            datas[0].year,
-            datas[0].cityCode
-          );
-          alert("Form Submitted");
-
+          if (course == 'DATA ANALYTICS BOOTCAMP') {
+            alert("Form Submitted");
+          } else {
+            this.toAdminCard(
+              res,
+              URL.createObjectURL(this.state.profileImg[0]),
+              datas[0].courseId,
+              datas[0].year,
+              datas[0].cityCode
+            );
+            alert("Form Submitted");
+          }
         })
         .catch((err) => {
           // console.log(err, "errerrerr")
           alert("Form not Submitted");
+
           this.setState({ loading: false });
         });
     }
-    this.setState({ loading: false });
   };
-  // searchStringInArray = (str, strArray) => {
-  //   var __FOUND = strArray.find(function (post, index) {
 
-  //     if (post.cityName == str)
-  //       console.log(__FOUND, '__FOUND')
-  //     //   // return __FOUND;
-  //   });
-  //   return __FOUND;
-  // }
-  // changeCourse = () => {
-  //   const { city } = this.state;
-  //   let that = this;
-  //   var __FOUND = this.props.smitNotificationGets.find(function (post, index) {
-  //     if (post.cityName == city) {
-  //       // console.log(__FOUND, '__FOUND')
-  //       // return post.courseName;
-  //       return that.setState({ course: post.courseName })
-  //     }
-  //   });
-  //   console.log(__FOUND)
-  //   // const courseSleect = this.searchStringInArray(this.state.city, this.props.smitNotificationGets)
-  //   // console.log(courseSleect, 'courseSleect');
-  // }
   render() {
     const {
       fullName,
@@ -313,91 +394,48 @@ class CourseRegistration extends React.Component {
       dob,
       address,
       lastQualification,
-      city
+      city,
+      loading,
+      organizationName,
+      position
     } = this.state;
-    const { smitNotificationGets } = this.props
-    // console.log(this.state, "smitNotificationGets", smitNotificationGets)
+    const { smitNotificationGets } = this.props;
+    // console.log(loading, "loadingloading");
     return (
       <>
-        {/* <MainHeader /> */}
         <div style={{ backgroundColor: "rgb(1 103 179)" }} className="py-5">
           <div className="container py-3">
             <h1 className="text-white">Course Registration Form</h1>
           </div>
-          <div className="logoCircle"
-            style={this.state.styles.slideInDown}
-          >
-            <img src={LOGO} className="main-logo" alt="LOGO" style={{ position: 'absolute', top: 70 }} />
+          <div className="logoCircle" style={this.state.styles.slideInDown}>
+            <img
+              src={LOGO}
+              className="main-logo"
+              alt="LOGO"
+              style={{ position: "absolute", top: 70 }}
+            />
           </div>
         </div>
-        {/* {this.props.location.state &&
-          this.props.location.state.filteredName.viewForm ? ( */}
+
         <div>
-          {/* {this.state.loading ? (
-            <div
-              class="spinner-border text-primary"
-              style="width: 3rem; height: 3rem;"
-              role="status"
-              style={{
-                position: "absolute",
-                left: "50%",
-                top: "50%",
-                width: "50px",
-                height: "50px",
-              }}
-            >
-              <span class="sr-only">Loading...</span>
-            </div>
-          ) : ( */}
           <div className="container p-5">
-            {/* <p>
-                  <button
-                    className="prevbtn"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapseExample"
-                    aria-expanded="false"
-                    aria-controls="collapseExample"
-                  >
-                    Download Admit card
-                  </button>
-                </p>
-                <div className="collapse" id="collapseExample">
-                  <div className="card card-body">
-                    <form>
-                      <input
-                        size="13"
-                        className="jobInput"
-                        type="text"
-                        onChange={(e) => this.checkNumber(e)}
-                        placeholder="Enter CNIC"
-                      />
-                      <button className="prevbtn my-3 btn-block ">
-                        <i class="fas fa-search"></i> Search
-                      </button>
-                    </form>
-                  </div>
-                </div> */}
             <div className="row">
               <div className="col-md-6 py-4">
-                <label className="color title" >Select City</label>
+                <label className="color title">Select City</label>
                 <select
                   className="jobInput"
                   // value={course}
                   onChange={(e) => {
                     this.setFieldVal(e.target.value, "city");
-                    // this.changeCourse()
                     this.setState({ chkCity: false });
                   }}
                 >
-                  {smitNotificationGets
-                    .map((filteredName, i) => {
-                      return filteredName.viewForm ? (
-                        <option key={i}>{filteredName.cityName}</option>
-                      ) : (
-                          <option key={i}>No City Available</option>
-                        );
-                    })}
+                  <option key={0} value="Karachi">
+                    Karachi
+                  </option>
+                  {/* <option key={1} value="Hyderabad">
+                    Hyderabad
+                  </option> */}
                 </select>
                 {this.state.chkCity ? (
                   <p className="text-danger">Select City</p>
@@ -409,6 +447,9 @@ class CourseRegistration extends React.Component {
                   className="jobInput"
                   // value={course}
                   onChange={(e) => {
+                    if (e.target.value === "Cyber Security") {
+                      this.setState({ cyberSecurity: true });
+                    }
                     this.setFieldVal(e.target.value, "course");
                     this.setState({ chkcourse: false });
                   }}
@@ -425,9 +466,7 @@ class CourseRegistration extends React.Component {
                     .map((filteredName, i) => {
                       return filteredName.viewForm ? (
                         <option key={i}>{filteredName.courseName}</option>
-                      ) : (
-                          <option key={i}>No Courses Available</option>
-                        );
+                      ) : null;
                     })}
                 </select>
 
@@ -437,6 +476,221 @@ class CourseRegistration extends React.Component {
               </div>
             </div>
             <div className="row">
+
+              {this.state.course == 'DATA ANALYTICS BOOTCAMP' ?
+                <>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Organization Name</label>
+                    <input
+                      className="jobInput"
+                      placeholder="Enter Organization Name"
+                      type="text"
+                      value={organizationName}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "organizationName");
+                        this.setState({ chkOrganizationName: false });
+                      }}
+                    />
+                    {this.state.chkOrganizationName ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Select the name of the professional</label>
+                    <select
+                      className="jobInput"
+                      // value={course}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "nameProfessional");
+                        this.setState({ chkNameProfessional: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Institute of Chartered Accountants of Pakistan">
+                        Institute of Chartered Accountants of Pakistan
+                  </option>
+                      <option key={1} value="Institute of Cost and Management Accounts of Pakistan">
+                        Institute of Cost and Management Accounts of Pakistan
+                  </option>
+                      <option key={0} value="Association of Chartered Certified Accountants">
+                        Association of Chartered Certified Accountants
+                  </option>
+                      <option key={1} value="Chartered Institute of Management Accountants">
+                        Chartered Institute of Management Accountants
+                  </option>
+                      <option key={0} value="Pakistan Institute of Public Finance Accountants">
+                        Pakistan Institute of Public Finance Accountants
+                  </option>
+                      <option key={1} value="Other">
+                        Other
+                  </option>
+                    </select>
+                    {this.state.chkNameProfessional ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Current position / designation in the aforementioned organization</label>
+                    <input
+                      className="jobInput"
+                      placeholder="Enter Current position / Designation"
+                      type="text"
+                      value={position}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "position");
+                        this.setState({ chkPosition: false });
+                      }}
+                    />
+                    {this.state.chkPosition ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Do you have a laptop available to use in the training</label>
+                    <select
+                      className="jobInput"
+                      // value={course}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "laptopAvailable");
+                        this.setState({ chkLaptopAvailable: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Yes">
+                        Yes
+                  </option>
+                      <option key={1} value="No">
+                        No
+                  </option>
+                    </select>
+                    {this.state.chkLaptopAvailable ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Are you a member of professional institution</label>
+                    <select
+                      className="jobInput"
+                      // value={course}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "memberInstitution");
+                        this.setState({ chkMemberInstitution: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Yes">
+                        Yes
+                  </option>
+                      <option key={1} value="No">
+                        No
+                  </option>
+                    </select>
+                    {this.state.chkMemberInstitution ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Your Membership number </label>
+                    <input
+                      className="jobInput"
+                      placeholder="Enter Your Membership number "
+                      type="text"
+                      // value={membershipNumber}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "membershipNumber");
+                        this.setState({ chkMembershipNumber: false });
+                      }}
+                    />
+                    {this.state.chkMembershipNumber ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">How many years of total experience do you have in the finance or related areas</label>
+                    <input
+                      className="jobInput"
+                      placeholder="Enter total experience"
+                      type="text"
+                      // value={fullName}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "totalExperience");
+                        this.setState({ chkTotalExperience: false });
+                      }}
+                    />
+                    {this.state.chkTotalExperience ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">How do you rate your existing skills with reference to the subject training ?</label>
+                    <select
+                      className="jobInput"
+                      // value={course}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "rateSkills");
+                        this.setState({ chkRateSkills: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Basic ">
+                        Basic
+                  </option>
+                      <option key={1} value="1">
+                        1
+                  </option>
+                      <option key={1} value="2">
+                        2
+                  </option>
+                      <option key={1} value="3">
+                        3
+                  </option>
+                      <option key={1} value="4">
+                        4
+                  </option>
+                      <option key={1} value="5">
+                        5
+                  </option>
+                      <option key={1} value="Expert">
+                        Expert
+                  </option>
+                    </select>
+                    {this.state.chkRateSkills ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Current Area of Experience</label>
+                    <select
+                      className="jobInput"
+                      // value={course}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "areaOfExperience");
+                        this.setState({ chkAreaOfExperience: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Finance / Accounting">
+                        Finance / Accounting
+                  </option>
+                      <option key={1} value="taxation">
+                        taxation
+                  </option>
+                      <option key={1} value="Audit">
+                        Audit
+                  </option>
+                      <option key={1} value="Business Advisory">
+                        Business Advisory
+                  </option>
+                      <option key={1} value="Other">
+                        Other
+                  </option>
+                    </select>
+                    {this.state.chkAreaOfExperience ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+                </> :
+                null}
               <div className="col-md-6 py-4">
                 <label className="color title">Full Name</label>
                 <input
@@ -463,9 +717,14 @@ class CourseRegistration extends React.Component {
                     this.setState({ chkgender: false });
                   }}
                 >
-                  <option>Gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
+                  <option value="">Gender</option>
+                  {this.state.cyberSecurity ? null : (
+                    <option value="Male">Male</option>
+                  )}
+                  {this.state.courseName === "IT Essential" ||
+                    this.state.cyberSecurity ? (
+                      <option value="Female">Female</option>
+                    ) : null}
                 </select>
                 {this.state.chkgender ? (
                   <p className="text-danger">Select Gender</p>
@@ -493,7 +752,7 @@ class CourseRegistration extends React.Component {
                   className="jobInput"
                   placeholder="03xx-xxxxxxx"
                   type="text"
-                  maxLength="11"
+                  maxLength="12"
                   value={ContactNumber}
                   onChange={(e) => {
                     this.setFieldVal(e.target.value, "ContactNumber");
@@ -512,7 +771,7 @@ class CourseRegistration extends React.Component {
                   placeholder="e.g 42101-1111111-1"
                   type="text"
                   value={cnic}
-                  maxLength="13"
+                  maxLength="15"
                   onChange={(e) => {
                     this.setFieldVal(e.target.value, "cnic");
                     this.setState({ chkcnic: false });
@@ -529,7 +788,7 @@ class CourseRegistration extends React.Component {
                   className="jobInput"
                   placeholder="e.g 42101-1111111-1"
                   type="text"
-                  maxLength="13"
+                  maxLength="15"
                   value={fatherCnic}
                   onChange={(e) => {
                     this.setFieldVal(e.target.value, "fatherCnic");
@@ -578,7 +837,9 @@ class CourseRegistration extends React.Component {
                 ) : null}
               </div>
               <div className="col-md-12 py-4">
-                <label className="color title">Full and Permanent Address</label>
+                <label className="color title">
+                  Full and Permanent Address
+                </label>
                 <input
                   className="jobInput"
                   placeholder=""
@@ -608,8 +869,8 @@ class CourseRegistration extends React.Component {
                           this.setState({ chklastQualification: false });
                         }}
                       />{" "}
-                          Matric
-                        </label>
+                      Matric
+                    </label>
                   </div>
                   <div className="col-md-3">
                     <label>
@@ -623,8 +884,8 @@ class CourseRegistration extends React.Component {
                           this.setState({ chklastQualification: false });
                         }}
                       />{" "}
-                          Intermediate
-                        </label>
+                      Intermediate
+                    </label>
                   </div>
                   <div className="col-md-3">
                     <label>
@@ -638,8 +899,8 @@ class CourseRegistration extends React.Component {
                           this.setState({ chklastQualification: false });
                         }}
                       />{" "}
-                          Graduate
-                        </label>
+                      Graduate
+                    </label>
                   </div>
                   <div className="col-md-3">
                     <label>
@@ -653,8 +914,8 @@ class CourseRegistration extends React.Component {
                           this.setState({ chklastQualification: false });
                         }}
                       />{" "}
-                          Undergraduate
-                        </label>
+                      Undergraduate
+                    </label>
                   </div>
                   <div className="col-md-3">
                     <label>
@@ -668,8 +929,8 @@ class CourseRegistration extends React.Component {
                           this.setState({ chklastQualification: false });
                         }}
                       />{" "}
-                          Masters
-                        </label>
+                      Masters
+                    </label>
                   </div>
                   <div className="col-md-3">
                     <label>
@@ -683,8 +944,8 @@ class CourseRegistration extends React.Component {
                           this.setState({ chklastQualification: false });
                         }}
                       />{" "}
-                          PHD
-                        </label>
+                      PHD
+                    </label>
                   </div>
                 </div>
                 {this.state.chklastQualification ? (
@@ -692,7 +953,9 @@ class CourseRegistration extends React.Component {
                 ) : null}
               </div>
               <div className="col-md-12 py-4">
-                <label className="color title">Passport Size Profile Image</label>
+                <label className="color title">
+                  Passport Size Profile Image
+                </label>
                 <input
                   type="file"
                   className="uploadCV"
@@ -709,60 +972,49 @@ class CourseRegistration extends React.Component {
               <div>
                 <ol>
                   <li>
-                    I hereby, solemnly declare that the data and facts
-                    mentioned herein are true and correct to the best of my
-                    knowledge. Further, I will abide by my all the establish
-                    and future regulation and policies of SWIT
-                      </li>
+                    I hereby, solemnly declare that the data and facts mentioned
+                    herein are true and correct to the best of my knowledge.
+                    Further, I will abide by my all the establish and future
+                    regulation and policies of SWIT
+                  </li>
                   <li>
-                    I hereby accept the responsibilites of the good conduct
-                    and guarantee that I will not be involved in any other
-                    activity, polical or ethic, but learning during my stay
-                    in the program.
-                      </li>
+                    I hereby accept the responsibilites of the good conduct and
+                    guarantee that I will not be involved in any other activity,
+                    polical or ethic, but learning during my stay in the
+                    program.
+                  </li>
                   <li>
-                    Defiance will render my admission cancelled at any point
-                    in time.
-                      </li>
+                    Defiance will render my admission cancelled at any point in
+                    time.
+                  </li>
                   <li>
                     Upon completion of course, I will complete the required
                     project by SWIT.
-                      </li>
+                  </li>
                 </ol>
               </div>
               <div className="col-md-12 py-4">
-
                 {this.state.loading ? (
-                  <div className="spinner-border" role="status" style={{ marginLeft: '50%' }}>
+                  <div
+                    className="spinner-border"
+                    role="status"
+                    style={{ marginLeft: "50%" }}
+                  >
                     <span className="visually-hidden"></span>
                   </div>
-                ) :
-                  <button
-                    className="prevbtn btn-block"
-                    onClick={() => this.Submit()}
-                  >
-                    Submit
+                ) : (
+                    <button
+                      className="prevbtn btn-block"
+                      onClick={() => this.Submit()}
+                    >
+                      Submit
                     </button>
-                }
+                  )}
               </div>
             </div>
           </div>
           {/* )} */}
         </div>
-        {/* ) : (
-            <div className="container p-5">
-              <p className="text-muted" style={{ fontSize: "3em" }}>
-                Registration has been closed
-            </p>
-              <p className="text-muted" style={{ fontSize: "2em" }}>
-                For More Details Please Visit{" "}
-                <a href="https://www.facebook.com/SaylaniMassTraining/">
-                  Saylani Mass Training
-              </a>
-              </p>
-              <p className="text-muted">Created by M Umair</p>
-            </div>
-          )} */}
         {this.state.cond ? <AdmitCard data={this.state.stdData} /> : null}
       </>
     );
@@ -784,7 +1036,6 @@ function mapDispatchToProp(dispatch) {
     },
   };
 }
-export default
-  withRouter(
-    connect(mapStateToProp, mapDispatchToProp)(CourseRegistration)
-  );
+export default withRouter(
+  connect(mapStateToProp, mapDispatchToProp)(CourseRegistration)
+);

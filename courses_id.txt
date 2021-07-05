@@ -1,0 +1,71 @@
+web and mobile = 01
+graphic designign  = 02 
+it essesntial = 03
+CCO = 04
+CCA = 05
+Cyber Security = 06
+Mobile Repairing = 07
+DATA ANALYTICS BOOTCAMP = 08
+
+
+"cityName": "Karachi",
+    "courseName": "DATA ANALYTICS BOOTCAMP",
+    "batchName": "01",
+    "viewForm": true,
+    "courseId": "07",
+    "year": "21",
+    "duration": "4 Months",
+    "admissionLastDate": "5th July 2021",
+    "cityCode": "KHI",
+
+
+
+Organization name = field 
+
+Current position / designation in the aforementioned organization = field
+
+Do you have a laptop available to use in the training = dropdown  yes or no
+
+Are you a member of professional institution = yes or no dropdown 
+
+
+Please select the name of the professional
+
+dropdown = 
+
+i) Institute of Chartered Accountants of Pakistan 
+ii) Institute of Cost and Management Accounts of Pakistan
+iii) Association of Chartered Certified Accountants
+iv) Chartered Institute of Management Accountants
+v) Pakistan Institute of Public Finance Accountants
+vi) Other
+
+
+Your Membership number ? field
+
+How many years of total experience do yuou have in the finance or related areas ?  field
+
+Current Area of Experience = dropdown
+i) Finance / Accounting
+ii) taxation
+iii) Audit
+iv) business Advisory
+v) Other
+
+How do you rate your existing skills with reference to the subject training ? dropdown 
+
+i) Basic 
+ii) 1
+iii) 2
+iv) 3
+v) 4
+vi) 5
+vii) Expert
+
+
+
+
+
+
+
+

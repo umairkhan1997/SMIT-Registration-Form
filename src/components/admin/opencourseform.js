@@ -115,7 +115,7 @@ function OpenForm() {
     // setSearchItem(result);
     !searchText ? setSearchItem([]) : setSearchItem(result);
   };
-  console.log(searchItem);
+  // console.log(searchItem);
   return (
     <div className="container">
       <div className="row justify-content-center">

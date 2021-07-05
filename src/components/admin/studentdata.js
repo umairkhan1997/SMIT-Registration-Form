@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-function StudentData() {
+import { useSelector, useDispatch } from "react-redux";
+import { searchStdData } from "../../Redux/action/smitAction";
+import { useHistory } from "react-router-dom";
+import ReactToExcel from "react-html-table-to-excel";
+function StudentData(props) {
   const [course, setCourse] = useState("");
   const [batch, setBatch] = useState("");
   const [data, setData] = useState([]);
   const [checkCity, setCheckCity] = useState(localStorage.getItem('city'));
   const [city, setCity] = useState("Karachi");
   const [loading, setLoading] = useState(false);
-
+  const [enteredRollNumber, setEnteredRollNumber] = useState("");
+  const history = useHistory();
+  const dispatch = useDispatch();
   let searchData = () => {
     setLoading(true);
     if (batch == "") {
@@ -25,7 +31,7 @@ function StudentData() {
     }
     else {
       setLoading(false);
-      console.log(checkCity == "All" ? city : checkCity, course, batch)
+      // console.log(checkCity == "All" ? city : checkCity, course, batch)
       const obj = {
         city: checkCity == "All" ? city : checkCity,
         course: course,
@@ -39,14 +45,52 @@ function StudentData() {
         data: obj,
         url: "https://swit-app.herokuapp.com/smit/smitAdmissfindData",
       };
+
+      const historys = history
       axios(options).then((res) => {
         setData(res.data.result)
-        console.log(res.data.result, 'ressssss')
+        // console.log(res.data.result, 'ressssss')
       }).catch((err) => {
-        console.log(err, 'err')
+        // console.log(err, 'err')
       })
     }
   };
+  // const toAdminCard = () => {
+
+  //   // dispatch(courseAnnouceGet());
+  // //  props.searchStdDatas();
+  // props.history.push("/admitcard");
+  // };
+
+  const searchStd = () => {
+    var rollNo = enteredRollNumber.slice(8)
+    alert(rollNo)
+    const obj = {
+      rollNo: rollNo
+    }
+    const options = {
+      method: "POST",
+      headers: {
+        "Accept": "application/json"
+      },
+      data: obj,
+      url: "https://swit-app.herokuapp.com/smit/SmitAdmissFormGetOne",
+    };
+    // let KR032103267
+    axios(options).then((res) => {
+      // setData(res.data.result)
+      dispatch(searchStdData(res.data.data));
+      // console.log(res, 'ressssss')
+      history.push("/searchPdf");
+    }).catch((err) => {
+      alert('No Result Found')
+      // console.log(err, 'err');
+    })
+  }
+  const { searchStdDatas } = useSelector(
+    (state) => state.reducerSmit
+  );
+  // console.log(searchStdDatas, 'searchStdDatas')
   return (
     <div>
       <div className="container">
@@ -71,7 +115,13 @@ function StudentData() {
             <select onChange={(e) => setCourse(e.target.value)} className="inp">
               <option>Select Course</option>
               <option>Web and Mobile</option>
+              <option>Cyber Security</option>
               <option>Graphic Designing</option>
+              <option>IT Essential</option>
+              <option>Certified Computer Operator</option>
+              <option>Certified Computerized Accountancy</option>
+              <option>Mobile Repairing</option>
+              <option>DATA ANALYTICS BOOTCAMP</option>
             </select>
           </div>
           <div className="col-md-3">
@@ -91,9 +141,32 @@ function StudentData() {
             <button type="button" class="btn btn-primary btn-lg" style={{ width: 150, height: 45, marginTop: 5 }} onClick={() => searchData()}>Search</button>
           </div>
         </div>
+        <div className="d-flex" >
+          <input
+            className="inp"
+            onChange={(e) => setEnteredRollNumber(e.target.value)}
+            placeholder="Search Roll Number"
+            style={{ height: 50, }}
+          />
+          <button className="prevbtn" style={{ width: 80, height: 50, marginLeft: 10, marginTop: 5 }} onClick={() => searchStd()} >Search</button>
+        </div>
         <div>
+          {data.length > 0 ? (
+            <ReactToExcel
+              className="btn btn-primary"
+              table="studentData"
+              filename="Student_data_sheet"
+              sheet="sheet 1"
+              buttonText="Download Excel"
+            />
+          ) : null}
           {city && course && batch ? (
-            <table className="table">
+            <table className="table" id="studentData"
+              style={{
+                height: "80vh",
+                overflow: "scroll",
+                overflowX: "scroll",
+              }}>
               <thead>
                 <tr>
                   <th>ID</th>
@@ -104,15 +177,25 @@ function StudentData() {
                   <th>CNIC</th>
                   <th>Contact</th>
                   <th>Address</th>
+                  <th>Organization Name</th>
+                  <th>Position</th>
+                  <th>Name Professional</th>
+                  <th>laptop Available</th>
+                  <th>Member Institution</th>
+                  <th>Member ShipNumber</th>
+                  <th>Total Experience</th>
+                  <th>Area Of Experience</th>
+                  <th>Rate Skills</th>
                 </tr>
               </thead>
               <tbody>
-                {data.length == 0 ? <p>No Data</p> :
+                {data.length == 0 ? <tr >
+                  <td>No Data</td></tr> :
                   <>
                     {data.map((e, i) => {
                       return (
                         <tr key={e.i}>
-                          <td>{e.generatedId}</td>
+                          <td>{e.generatedId}{e.rollNo}</td>
                           <td>{e.fullName}</td>
                           <td>{e.fatherName}</td>
                           <td>{e.courseName}</td>
@@ -120,6 +203,15 @@ function StudentData() {
                           <td>{e.cnic}</td>
                           <td>{e.ContactNumber}</td>
                           <td>{e.address}</td>
+                          <td>{e.organizationName}</td>
+                          <td>{e.position}</td>
+                          <td>{e.nameProfessional}</td>
+                          <td>{e.laptopAvailable}</td>
+                          <td>{e.memberInstitution}</td>
+                          <td>{e.membershipNumber}</td>
+                          <td>{e.totalExperience}</td>
+                          <td>{e.areaOfExperience}</td>
+                          <td>{e.rateSkills}</td>
                         </tr>
                       );
                     }

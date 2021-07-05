@@ -1,4 +1,3 @@
-
 import React from "react";
 import QRCode from "qrcode.react";
 import Zia from "../images/ziaKhan.png";
@@ -54,18 +53,31 @@ class AdmitCard extends React.Component {
       <div className="backgroundLight">
         <div
           className="backgroundLight py-3"
-          style={{ height: "100%", minHeight: "100vh", }}
+          style={{ height: "100%", minHeight: "100vh" }}
         >
-          <Pdf targetRef={ref} filename="smit_admit_card.pdf" >
-            {({ toPdf }) => (
-              <button onClick={() => this.down(toPdf)} className="prevbtn" style={{ marginTop: 0, marginLeft: '45%' }}>Generate Pdf</button>
-            )}
-          </Pdf>
+          {this.state.instruction ? (
+
+            null) :
+            <Pdf targetRef={ref} filename="smit_admit_card.pdf">
+              {({ toPdf }) => (
+                <button
+                  onClick={() => this.down(toPdf)}
+                  className="prevbtn"
+                  style={{ marginTop: 0, marginLeft: "45%" }}
+                >
+                  Generate Pdf
+                </button>
+              )}
+            </Pdf>
+          }
           {this.state.idCard ? (
             <div ref={ref} id="divIdToPrint">
-              <div className="border m-5 p-3 inrollmentCard">
+              <div className="border mx-5 my-2 p-3 inrollmentCard">
                 <div className="row">
-                  <div className=" col-md-3 pt-3 pb-3 pr-3" style={{ marginLeft: -20 }}>
+                  <div
+                    className=" col-md-3 pt-3 pb-3 pr-3"
+                    style={{ marginLeft: -20 }}
+                  >
                     <img src={logo} width="100px" />
                   </div>
                   <div className="col-md-9 text-right p-3">
@@ -108,12 +120,18 @@ class AdmitCard extends React.Component {
                     </tr>
                   </table>
                 </div>
-                <div style={{ fontSize: ".9em" }} className="text-left p-0">
+                <div style={{ fontSize: ".9em" }} className="text-justify p-0">
                   <ol>
                     <li>Please colour print of this Admit / ID card</li>
                     <li>
+                      {/* {console.log(cityName)} */}
                       Attestation of ID / Admit Card is extremely mandatory from
-                      Saylani Head Office, A-25 Bahadurabad Chowrangi.
+                      {cityName.toLowerCase() === "karachi" && courseName.toLowerCase() === "cyber security"
+                        ? " Saylani Gulshan Campus (2nd Floor, Mumtaz Mobile Mall, Gulshan Chowrangi)"
+                        : cityName.toLowerCase() === "hyderabad"
+                          ? " Saylani Sarfaraz Branch, Opposite Bin Tayyab Hospital, Hyderabad"
+                          : " Saylani Head Office, A-25 Bahadurabad Chowrangi"}
+                      .
                     </li>
                     <li>
                       No student will be allowed to enter in Entry Test without
@@ -121,7 +139,7 @@ class AdmitCard extends React.Component {
                     </li>
                     <li>
                       Bring CNIC and Last qualification marksheet/cert. (both
-                      original) at the time of Entry Test
+                      original) at the time of Attestation
                     </li>
                   </ol>
                 </div>
@@ -171,9 +189,12 @@ class AdmitCard extends React.Component {
                   }}
                   className="admit text-white"
                 >
-                  <table className="cardTable backgroundLight">
+                  <table
+                    style={{ fontSize: ".8em" }}
+                    className="cardTable backgroundLight"
+                  >
                     <tr>
-                      <td>Student Name:</td>
+                      <td>Name:</td>
                       <td>{fullName}</td>
                     </tr>
                     <tr>
@@ -185,7 +206,7 @@ class AdmitCard extends React.Component {
                       <td>{courseName}</td>
                     </tr>
                     <tr>
-                      <td>Student ID:</td>
+                      <td>ID:</td>
                       <td>{`${cityCode}${courseId}${year}${batchName}${rollNo}`}</td>
                     </tr>
                     <tr>
@@ -235,8 +256,8 @@ class AdmitCard extends React.Component {
               <div>
                 <div className="text-left p-0">
                   <h3 className="p-3">
-                    Form has been Successfully Submitted, Your further details will be
-                    publiched on facebook page{" "}
+                    Form has been Successfully Submitted, Your further details
+                    will be publiched on facebook page{" "}
                     <a
                       target="_blank"
                       href="https://www.facebook.com/SaylaniMassTraining/"
@@ -256,7 +277,7 @@ class AdmitCard extends React.Component {
                     </li>
                     <li>
                       Bring CNIC and Last qualification marksheet/cert. (both
-                      original) at the time of Entry Test
+                      original) at the time of Attestation
                     </li>
                   </ol>
                   <div className="color p-3" style={{ fontSize: "1.5em" }}>
@@ -284,8 +305,6 @@ function mapStateToProp(state) {
 function mapDispatchToProp(dispatch) {
   return {};
 }
-export default
-  withRouter(
-
-    connect(mapStateToProp, mapDispatchToProp)(AdmitCard)
-  );
+export default withRouter(
+  connect(mapStateToProp, mapDispatchToProp)(AdmitCard)
+);
