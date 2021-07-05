@@ -169,6 +169,7 @@ function StudentData(props) {
               }}>
               <thead>
                 <tr>
+                  <th>Roll No</th>
                   <th>ID</th>
                   <th>Name</th>
                   <th>Father Name</th>
@@ -195,7 +196,8 @@ function StudentData(props) {
                     {data.map((e, i) => {
                       return (
                         <tr key={e.i}>
-                          <td>{e.generatedId}{e.rollNo}</td>
+                          <td>{e.rollNo}</td>
+                          <td>{e.generatedId}</td>
                           <td>{e.fullName}</td>
                           <td>{e.fatherName}</td>
                           <td>{e.courseName}</td>

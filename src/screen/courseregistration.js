@@ -156,6 +156,15 @@ class CourseRegistration extends React.Component {
       window.scrollTo(0, 100);
       this.setState({ loading: false });
     }
+    else if (this.checkField(fullName)) {
+      this.setState({ chkfullName: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    } else if (this.checkField(gender)) {
+      this.setState({ chkgender: true });
+      window.scrollTo(0, 100);
+      this.setState({ loading: false });
+    }
     else if (this.checkField(organizationName) && course == 'DATA ANALYTICS BOOTCAMP') {
       this.setState({ chkOrganizationName: true });
       window.scrollTo(0, 100);
@@ -188,69 +197,61 @@ class CourseRegistration extends React.Component {
     }
     else if (this.checkField(totalExperience) && course == 'DATA ANALYTICS BOOTCAMP') {
       this.setState({ chkTotalExperience: true });
-      window.scrollTo(0, 100);
-      this.setState({ loading: false });
-    }
-    else if (this.checkField(rateSkills) && course == 'DATA ANALYTICS BOOTCAMP') {
-      this.setState({ chkRateSkills: true });
-      window.scrollTo(0, 100);
+      window.scrollTo(0, 200);
       this.setState({ loading: false });
     }
     else if (this.checkField(areaOfExperience) && course == 'DATA ANALYTICS BOOTCAMP') {
       this.setState({ chkAreaOfExperience: true });
-      window.scrollTo(0, 100);
+      window.scrollTo(0, 300);
+      this.setState({ loading: false });
+    }
+    else if (this.checkField(rateSkills) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkRateSkills: true });
+      window.scrollTo(0, 300);
       this.setState({ loading: false });
     }
 
-    else if (this.checkField(fullName)) {
-      this.setState({ chkfullName: true });
-      window.scrollTo(0, 100);
-      this.setState({ loading: false });
-    } else if (this.checkField(gender)) {
-      this.setState({ chkgender: true });
-      window.scrollTo(0, 100);
-      this.setState({ loading: false });
-    } else if (this.checkField(fatherName)) {
+    else if (this.checkField(fatherName)) {
       this.setState({ chkfatherName: true });
-      window.scrollTo(0, 300);
+      window.scrollTo(0, 500);
       this.setState({ loading: false });
     } else if (this.checkField(ContactNumber) ||
       ContactNumber.length > 12 ||
       ContactNumber.length < 11) {
       this.setState({ chkContactNumber: true });
-      window.scrollTo(0, 300);
+      window.scrollTo(0, 600);
       this.setState({ loading: false });
     } else if (this.checkField(cnic) ||
       cnic.length > 17 ||
       cnic.length < 13) {
       this.setState({ chkcnic: true });
-      window.scrollTo(0, 300);
+      window.scrollTo(0, 600);
       this.setState({ loading: false });
     } else if (this.checkField(fatherCnic) ||
       fatherCnic.length > 17 ||
       fatherCnic.length < 13) {
       this.setState({ chkfatherCnic: true });
-      window.scrollTo(0, 300);
+      window.scrollTo(0, 600);
       this.setState({ loading: false });
     } else if (this.checkField(email)) {
       this.setState({ chkemail: true });
-      window.scrollTo(0, 300);
+      window.scrollTo(0, 600);
       this.setState({ loading: false });
     } else if (this.checkField(dob)) {
       this.setState({ chkdob: true });
-      window.scrollTo(0, 300);
+      window.scrollTo(0, 700);
       this.setState({ loading: false });
     } else if (this.checkField(address)) {
       this.setState({ chkaddress: true });
-      window.scrollTo(0, 300);
+      window.scrollTo(0, 700);
       this.setState({ loading: false });
     } else if (this.checkField(lastQualification)) {
       this.setState({ chklastQualification: true });
-      window.scrollTo(0, 500);
+      window.scrollTo(0, 800);
       this.setState({ loading: false });
     } else if (this.checkField(profileImg)) {
       this.setState({ chkprofileImg: true });
-      window.scrollTo(0, 700);
+      window.scrollTo(0, 900);
       this.setState({ loading: false });
     } else {
       // console.log('this.state.profileImg', this.state.profileImg)
@@ -358,6 +359,7 @@ class CourseRegistration extends React.Component {
             totalExperience: '',
             areaOfExperience: '',
             rateSkills: '',
+
           });
           // console.log(res, this.state.profileImg[0], datas[0].courseId, datas[0].year)
           if (course == 'DATA ANALYTICS BOOTCAMP') {
@@ -397,7 +399,13 @@ class CourseRegistration extends React.Component {
       city,
       loading,
       organizationName,
-      position
+      position,
+      rateSkills,
+      totalExperience,
+      areaOfExperience,
+      membershipNumber,
+      memberInstitution,
+      laptopAvailable,
     } = this.state;
     const { smitNotificationGets } = this.props;
     // console.log(loading, "loadingloading");
@@ -476,7 +484,45 @@ class CourseRegistration extends React.Component {
               </div>
             </div>
             <div className="row">
-
+              <div className="col-md-6 py-4">
+                <label className="color title">Full Name</label>
+                <input
+                  className="jobInput"
+                  placeholder="Enter Full Name"
+                  type="text"
+                  value={fullName}
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "fullName");
+                    this.setState({ chkfullName: false });
+                  }}
+                />
+                {this.state.chkfullName ? (
+                  <p className="text-danger">Field is Emply</p>
+                ) : null}
+              </div>
+              <div className="col-md-6 py-4">
+                <label className="color title">Gender</label>
+                <select
+                  className="jobInput"
+                  value={gender}
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "gender");
+                    this.setState({ chkgender: false });
+                  }}
+                >
+                  <option value="">Gender</option>
+                  {this.state.cyberSecurity ? null : (
+                    <option value="Male">Male</option>
+                  )}
+                  {this.state.course === "IT Essential" || this.state.course === "DATA ANALYTICS BOOTCAMP" ||
+                    this.state.cyberSecurity ? (
+                      <option value="Female">Female</option>
+                    ) : null}
+                </select>
+                {this.state.chkgender ? (
+                  <p className="text-danger">Select Gender</p>
+                ) : null}
+              </div>
               {this.state.course == 'DATA ANALYTICS BOOTCAMP' ?
                 <>
                   <div className="col-md-6 py-4">
@@ -549,7 +595,7 @@ class CourseRegistration extends React.Component {
                     <label className="color title">Do you have a laptop available to use in the training</label>
                     <select
                       className="jobInput"
-                      // value={course}
+                      value={laptopAvailable}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "laptopAvailable");
                         this.setState({ chkLaptopAvailable: false });
@@ -571,7 +617,7 @@ class CourseRegistration extends React.Component {
                     <label className="color title">Are you a member of professional institution</label>
                     <select
                       className="jobInput"
-                      // value={course}
+                      value={memberInstitution}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "memberInstitution");
                         this.setState({ chkMemberInstitution: false });
@@ -595,7 +641,7 @@ class CourseRegistration extends React.Component {
                       className="jobInput"
                       placeholder="Enter Your Membership number "
                       type="text"
-                      // value={membershipNumber}
+                      value={membershipNumber}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "membershipNumber");
                         this.setState({ chkMembershipNumber: false });
@@ -611,7 +657,7 @@ class CourseRegistration extends React.Component {
                       className="jobInput"
                       placeholder="Enter total experience"
                       type="text"
-                      // value={fullName}
+                      value={totalExperience}
                       onChange={(e) => {
                         this.setFieldVal(e.target.value, "totalExperience");
                         this.setState({ chkTotalExperience: false });
@@ -622,6 +668,126 @@ class CourseRegistration extends React.Component {
                     ) : null}
                   </div>
                   <div className="col-md-6 py-4">
+                    <label className="color title">Current Area of Experience</label>
+                    <select
+                      className="jobInput"
+                      style={{ marginTop: 32 }}
+                      value={areaOfExperience}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "areaOfExperience");
+                        this.setState({ chkAreaOfExperience: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Finance / Accounting">
+                        Finance / Accounting
+                  </option>
+                      <option key={1} value="Taxation">
+                        Taxation
+                  </option>
+                      <option key={1} value="Audit">
+                        Audit
+                  </option>
+                      <option key={1} value="Business Advisory">
+                        Business Advisory
+                  </option>
+                      <option key={1} value="Other">
+                        Other
+                  </option>
+                    </select>
+                    {this.state.chkAreaOfExperience ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+
+                  <div className="col-md-12 py-4">
+                    <h4 className="color title">How do you rate your existing skills with reference to the subject training</h4>
+                    <div className="row">
+
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="rateSkills"
+                            type="radio"
+                            value="1"
+                            checked={rateSkills === "1"}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "rateSkills");
+                              this.setState({ chkRateSkills: false });
+                            }}
+                          />{" "}
+                      1
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="rateSkills"
+                            type="radio"
+                            value="2"
+                            checked={rateSkills === "2"}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "rateSkills");
+                              this.setState({ chkRateSkills: false });
+                            }}
+                          />{" "}
+                      2
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="rateSkills"
+                            type="radio"
+                            value="3"
+                            checked={rateSkills === "3"}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "rateSkills");
+                              this.setState({ chkRateSkills: false });
+                            }}
+                          />{" "}
+                      3
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="rateSkills"
+                            type="radio"
+                            value="4"
+                            checked={rateSkills === "4"}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "rateSkills");
+                              this.setState({ chkRateSkills: false });
+                            }}
+                          />{" "}
+                      4
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="rateSkills"
+                            type="radio"
+                            value="5"
+                            checked={rateSkills === "5"}
+                            onChange={(e) => {
+                              this.setFieldVal(e.target.value, "rateSkills");
+                              this.setState({ chkRateSkills: false });
+                            }}
+                          />{" "}
+                      5
+                    </label>
+                      </div>
+
+                    </div>
+                    {this.state.chkRateSkills ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+                </> :
+                null}
+              {/* <div className="col-md-6 py-4">
                     <label className="color title">How do you rate your existing skills with reference to the subject training ?</label>
                     <select
                       className="jobInput"
@@ -657,79 +823,7 @@ class CourseRegistration extends React.Component {
                     {this.state.chkRateSkills ? (
                       <p className="text-danger">Select First</p>
                     ) : null}
-                  </div>
-                  <div className="col-md-6 py-4">
-                    <label className="color title">Current Area of Experience</label>
-                    <select
-                      className="jobInput"
-                      // value={course}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "areaOfExperience");
-                        this.setState({ chkAreaOfExperience: false });
-                      }}
-                    >
-                      <option>Select</option>
-                      <option key={0} value="Finance / Accounting">
-                        Finance / Accounting
-                  </option>
-                      <option key={1} value="taxation">
-                        taxation
-                  </option>
-                      <option key={1} value="Audit">
-                        Audit
-                  </option>
-                      <option key={1} value="Business Advisory">
-                        Business Advisory
-                  </option>
-                      <option key={1} value="Other">
-                        Other
-                  </option>
-                    </select>
-                    {this.state.chkAreaOfExperience ? (
-                      <p className="text-danger">Select First</p>
-                    ) : null}
-                  </div>
-                </> :
-                null}
-              <div className="col-md-6 py-4">
-                <label className="color title">Full Name</label>
-                <input
-                  className="jobInput"
-                  placeholder="Enter Full Name"
-                  type="text"
-                  value={fullName}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "fullName");
-                    this.setState({ chkfullName: false });
-                  }}
-                />
-                {this.state.chkfullName ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
-              <div className="col-md-6 py-4">
-                <label className="color title">Gender</label>
-                <select
-                  className="jobInput"
-                  value={gender}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "gender");
-                    this.setState({ chkgender: false });
-                  }}
-                >
-                  <option value="">Gender</option>
-                  {this.state.cyberSecurity ? null : (
-                    <option value="Male">Male</option>
-                  )}
-                  {this.state.courseName === "IT Essential" ||
-                    this.state.cyberSecurity ? (
-                      <option value="Female">Female</option>
-                    ) : null}
-                </select>
-                {this.state.chkgender ? (
-                  <p className="text-danger">Select Gender</p>
-                ) : null}
-              </div>
+                  </div> */}
               <div className="col-md-6 py-4">
                 <label className="color title">Father Name</label>
                 <input
