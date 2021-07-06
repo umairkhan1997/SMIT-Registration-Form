@@ -227,9 +227,9 @@ class CourseRegistration extends React.Component {
       this.setState({ chkcnic: true });
       window.scrollTo(0, 600);
       this.setState({ loading: false });
-    } else if (this.checkField(fatherCnic) ||
+    } else if ((this.checkField(fatherCnic) ||
       fatherCnic.length > 17 ||
-      fatherCnic.length < 13) {
+      fatherCnic.length < 13) && course != "DATA ANALYTICS BOOTCAMP") {
       this.setState({ chkfatherCnic: true });
       window.scrollTo(0, 600);
       this.setState({ loading: false });
@@ -364,6 +364,7 @@ class CourseRegistration extends React.Component {
           // console.log(res, this.state.profileImg[0], datas[0].courseId, datas[0].year)
           if (course == 'DATA ANALYTICS BOOTCAMP') {
             alert("Form Submitted");
+            this.props.history.push("/message")
           } else {
             this.toAdminCard(
               res,
@@ -373,6 +374,7 @@ class CourseRegistration extends React.Component {
               datas[0].cityCode
             );
             alert("Form Submitted");
+
           }
         })
         .catch((err) => {
@@ -876,24 +878,28 @@ class CourseRegistration extends React.Component {
                   <p className="text-danger">Field is Emply</p>
                 ) : null}
               </div>
-              <div className="col-md-6 py-4">
-                <label className="color title">Father's CNIC</label>
-                <input
-                  className="jobInput"
-                  placeholder="e.g 42101-1111111-1"
-                  type="text"
-                  maxLength="15"
-                  value={fatherCnic}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "fatherCnic");
-                    this.setState({ chkfatherCnic: false });
-                    this.checkNumber(e, 13);
-                  }}
-                />
-                {this.state.chkfatherCnic ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
+              {
+                this.state.course == 'DATA ANALYTICS BOOTCAMP' ? null :
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Father's CNIC</label>
+                    <input
+                      className="jobInput"
+                      placeholder="e.g 42101-1111111-1"
+                      type="text"
+                      maxLength="15"
+                      value={fatherCnic}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "fatherCnic");
+                        this.setState({ chkfatherCnic: false });
+                        this.checkNumber(e, 13);
+                      }}
+                    />
+                    {this.state.chkfatherCnic ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+              }
+
               <div className="col-md-6 py-4">
                 <label className="color title">Email</label>
 

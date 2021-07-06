@@ -47,6 +47,7 @@ import CourseRegistration from "./screen/courseregistration";
 import AdmitCard from "./screen/admitCard";
 import Admin from "./screen/admin";
 import Login from "./screen/login";
+import DataCourseMessgeBox from './screen/dataCourseMessgeBox'
 import SearchPdf from "./screen/searchPdf";
 
 // ************* Private Route ************
@@ -102,6 +103,8 @@ function AppRouter() {
         <PublicRoute exact path="/" exact component={CourseRegistration} />
         {/* <Route path="/smit" component={Smit} /> */}
         <PublicRoute path="/admitcard" component={AdmitCard} />
+        <PublicRoute exact path="/message" component={DataCourseMessgeBox} />
+
         <PrivateRoute path="/adminsmit" component={SMITAdmin} />
         <PrivateRoute path="/uploadImage" component={UploadImage} />
         <PrivateRoute path="/searchPdf" component={SearchPdf} />
