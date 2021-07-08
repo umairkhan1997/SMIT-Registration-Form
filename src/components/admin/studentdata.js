@@ -100,7 +100,7 @@ function StudentData(props) {
               <div className="col-md-3">
                 <select onChange={(e) => {
                   setCity(e.target.value);
-                  console.log(e.target.value)
+                  // console.log(e.target.value)
                 }} className="inp">
                   <option>Select City</option>
                   <option>Karachi</option>

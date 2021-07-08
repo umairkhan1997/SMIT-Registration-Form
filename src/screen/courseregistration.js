@@ -418,7 +418,7 @@ class CourseRegistration extends React.Component {
   }
 
   render() {
-    console.log(this.state.modulesList, 'modulesList')
+    // console.log(this.state.modulesList, 'modulesList')
     const {
       fullName,
       gender,
