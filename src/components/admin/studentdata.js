@@ -187,6 +187,8 @@ function StudentData(props) {
                   <th>Total Experience</th>
                   <th>Area Of Experience</th>
                   <th>Rate Skills</th>
+                  <th>Module</th>
+                  <th>Module Price</th>
                 </tr>
               </thead>
               <tbody>
@@ -214,6 +216,8 @@ function StudentData(props) {
                           <td>{e.totalExperience}</td>
                           <td>{e.areaOfExperience}</td>
                           <td>{e.rateSkills}</td>
+                          <td>{e.Modules}</td>
+                          <td>{e.ModulePrice}</td>
                         </tr>
                       );
                     }

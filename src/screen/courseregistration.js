@@ -12,10 +12,16 @@ import { smitNotificationGet } from "../Redux/action/smitAction";
 import LOGO from "../images/logo.jpg";
 import { slideInRight, slideInDown } from "react-animations";
 import Radium, { StyleRoot } from "radium";
+import CheckBox from './checkBoxes';
 class CourseRegistration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      modulesList: [
+        { id: 1, value: "Module A ", isChecked: false, price: 5000 },
+        { id: 2, value: "Module B ", isChecked: false, price: 5000 },
+        { id: 3, value: "Module C ", isChecked: false, price: 2000 }
+      ],
       formOpen: true,
       fullName: "",
       gender: "",
@@ -65,6 +71,7 @@ class CourseRegistration extends React.Component {
       chkAreaOfExperience: false,
       rateSkills: '',
       chkRateSkills: false,
+      chkModules: false,
       styles: {
         slideInRight: {
           animation: "x 1.5s",
@@ -146,7 +153,19 @@ class CourseRegistration extends React.Component {
       totalExperience,
       areaOfExperience,
       rateSkills,
+      modulesList
     } = this.state;
+
+    var modules = "";
+    var moduleFinalprice = 0;
+
+    for (var i = 0; i < modulesList.length; i++) {
+      if (modulesList[i].isChecked) {
+        modules += modulesList[i].value;
+        moduleFinalprice += modulesList[i].price;
+      }
+    }
+
     if (this.checkField(city)) {
       this.setState({ chkCity: true });
       window.scrollTo(0, 100);
@@ -185,8 +204,8 @@ class CourseRegistration extends React.Component {
       window.scrollTo(0, 100);
       this.setState({ loading: false });
     }
-    else if (this.checkField(memberInstitution) && course == 'DATA ANALYTICS BOOTCAMP') {
-      this.setState({ chkMemberInstitution: true });
+    else if (this.checkField(modules) && course == 'DATA ANALYTICS BOOTCAMP') {
+      this.setState({ chkModules: true });
       window.scrollTo(0, 100);
       this.setState({ loading: false });
     }
@@ -293,6 +312,8 @@ class CourseRegistration extends React.Component {
       formData.append("totalExperience", totalExperience);
       formData.append("areaOfExperience", areaOfExperience);
       formData.append("rateSkills", rateSkills);
+      formData.append("Modules", modules);
+      formData.append("ModulePrice", moduleFinalprice);
       // ${cityCode}${courseId}${year}${batchName}${rollNo}
       axios
         .post(
@@ -386,7 +407,18 @@ class CourseRegistration extends React.Component {
     }
   };
 
+
+  handleCheckChieldElement = (event) => {
+    let modulesList = this.state.modulesList
+    modulesList.forEach(fruite => {
+      if (fruite.value === event.target.value)
+        fruite.isChecked = event.target.checked
+    })
+    this.setState({ modulesList: modulesList })
+  }
+
   render() {
+    console.log(this.state.modulesList, 'modulesList')
     const {
       fullName,
       gender,
@@ -544,7 +576,7 @@ class CourseRegistration extends React.Component {
                     ) : null}
                   </div>
                   <div className="col-md-6 py-4">
-                    <label className="color title">Select the name of the professional</label>
+                    <label className="color title">Select the name of the professional Institute</label>
                     <select
                       className="jobInput"
                       // value={course}
@@ -560,16 +592,16 @@ class CourseRegistration extends React.Component {
                       <option key={1} value="Institute of Cost and Management Accounts of Pakistan">
                         Institute of Cost and Management Accounts of Pakistan
                   </option>
-                      <option key={0} value="Association of Chartered Certified Accountants">
+                      <option key={2} value="Association of Chartered Certified Accountants">
                         Association of Chartered Certified Accountants
                   </option>
-                      <option key={1} value="Chartered Institute of Management Accountants">
+                      <option key={3} value="Chartered Institute of Management Accountants">
                         Chartered Institute of Management Accountants
                   </option>
-                      <option key={0} value="Pakistan Institute of Public Finance Accountants">
+                      <option key={4} value="Pakistan Institute of Public Finance Accountants">
                         Pakistan Institute of Public Finance Accountants
                   </option>
-                      <option key={1} value="Other">
+                      <option key={5} value="Other">
                         Other
                   </option>
                     </select>
@@ -615,7 +647,7 @@ class CourseRegistration extends React.Component {
                       <p className="text-danger">Select First</p>
                     ) : null}
                   </div>
-                  <div className="col-md-6 py-4">
+                  {/* <div className="col-md-6 py-4">
                     <label className="color title">Are you a member of professional institution</label>
                     <select
                       className="jobInput"
@@ -636,7 +668,7 @@ class CourseRegistration extends React.Component {
                     {this.state.chkMemberInstitution ? (
                       <p className="text-danger">Select First</p>
                     ) : null}
-                  </div>
+                  </div> */}
                   <div className="col-md-6 py-4">
                     <label className="color title">Your Membership number </label>
                     <input
@@ -687,13 +719,13 @@ class CourseRegistration extends React.Component {
                       <option key={1} value="Taxation">
                         Taxation
                   </option>
-                      <option key={1} value="Audit">
+                      <option key={12} value="Audit">
                         Audit
                   </option>
-                      <option key={1} value="Business Advisory">
+                      <option key={13} value="Business Advisory">
                         Business Advisory
                   </option>
-                      <option key={1} value="Other">
+                      <option key={14} value="Other">
                         Other
                   </option>
                     </select>
@@ -704,24 +736,24 @@ class CourseRegistration extends React.Component {
 
                   <div className="col-md-12 py-4">
                     <h4 className="color title">How do you rate your existing skills with reference to the subject training</h4>
-                    <div className="row">
+                    <div className="row mt-5">
 
-                      <div className="col-md-3">
+                      <div className="col-md-2">
                         <label>
                           <input
                             name="rateSkills"
                             type="radio"
-                            value="1"
-                            checked={rateSkills === "1"}
+                            value="Basic"
+                            checked={rateSkills === "Basic"}
                             onChange={(e) => {
                               this.setFieldVal(e.target.value, "rateSkills");
                               this.setState({ chkRateSkills: false });
                             }}
                           />{" "}
-                      1
+                      Basic
                     </label>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-md-2">
                         <label>
                           <input
                             name="rateSkills"
@@ -736,7 +768,7 @@ class CourseRegistration extends React.Component {
                       2
                     </label>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-md-2">
                         <label>
                           <input
                             name="rateSkills"
@@ -751,7 +783,7 @@ class CourseRegistration extends React.Component {
                       3
                     </label>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-md-2">
                         <label>
                           <input
                             name="rateSkills"
@@ -766,19 +798,19 @@ class CourseRegistration extends React.Component {
                       4
                     </label>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-md-2">
                         <label>
                           <input
                             name="rateSkills"
                             type="radio"
-                            value="5"
-                            checked={rateSkills === "5"}
+                            value="Expert"
+                            checked={rateSkills === "Expert"}
                             onChange={(e) => {
                               this.setFieldVal(e.target.value, "rateSkills");
                               this.setState({ chkRateSkills: false });
                             }}
                           />{" "}
-                      5
+                      Expert
                     </label>
                       </div>
 
@@ -787,8 +819,25 @@ class CourseRegistration extends React.Component {
                       <p className="text-danger">Select First</p>
                     ) : null}
                   </div>
+                  <div className="col-md-12 py-4">
+                    <h4 className="color title">Select Modules</h4>
+                    <div className="row mt-5">
+                      <ul style={{ listStyle: 'none', display: 'flex' }}>
+                        {
+                          this.state.modulesList.map((fruite) => {
+                            return (<CheckBox handleCheckChieldElement={this.handleCheckChieldElement}  {...fruite} />)
+                          })
+                        }
+                      </ul>
+                    </div>
+                    {this.state.chkModules ? (
+                      <p className="text-danger">Select Module FirstFirst</p>
+                    ) : null}
+                  </div>
                 </> :
                 null}
+
+
               {/* <div className="col-md-6 py-4">
                     <label className="color title">How do you rate your existing skills with reference to the subject training ?</label>
                     <select
