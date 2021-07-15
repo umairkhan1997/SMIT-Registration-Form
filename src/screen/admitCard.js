@@ -130,7 +130,7 @@ class AdmitCard extends React.Component {
                         ? " Saylani Gulshan Campus (2nd Floor, Mumtaz Mobile Mall, Gulshan Chowrangi)"
                         : cityName.toLowerCase() === "hyderabad"
                           ? " Saylani Sarfaraz Branch, Opposite Bin Tayyab Hospital, Hyderabad"
-                          : " Saylani Head Office, A-25 Bahadurabad Chowrangi"}
+                          : cityName.toLowerCase() === "faisalabad" ? " Laal Mill, Chowk, Factory Area, Faisalabad, Punjab" : " Saylani Head Office, A-25 Bahadurabad Chowrangi"}
                       .
                     </li>
                     <li>
