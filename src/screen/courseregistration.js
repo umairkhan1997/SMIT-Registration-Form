@@ -472,12 +472,10 @@ class CourseRegistration extends React.Component {
                     this.setState({ chkCity: false });
                   }}
                 >
-                  <option key={0} value="Karachi">
-                    Karachi
-                  </option>
-                  {/* <option key={1} value="Hyderabad">
-                    Hyderabad
-                  </option> */}
+                  {
+
+                    [...new Set(smitNotificationGets.map((a) => a.cityName))].map((a) => { return <option>{a}</option> })
+                  }
                 </select>
                 {this.state.chkCity ? (
                   <p className="text-danger">Select City</p>
@@ -535,10 +533,46 @@ class CourseRegistration extends React.Component {
                 ) : null}
               </div>
               <div className="col-md-6 py-4">
+                <label className="color title">Father Name</label>
+                <input
+                  className="jobInput"
+                  placeholder="Father Name"
+                  type="text"
+                  value={fatherName}
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "fatherName");
+                    this.setState({ chkfatherName: false });
+                  }}
+                />
+                {this.state.chkfatherName ? (
+                  <p className="text-danger">Field is Emply</p>
+                ) : null}
+              </div>
+              <div className="col-md-6 py-4">
+                <label className="color title">DOB ( Date of Birth )</label>
+                <br />
+                <br />
+                <input
+
+                  type="date"
+                  className="jobInput"
+                  style={{ width: "100%" }}
+                  value={dob}
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "dob");
+                    this.setState({ chkdob: false });
+                  }}
+                />
+                {this.state.chkdob ? (
+                  <p className="text-danger">Field is Emply</p>
+                ) : null}
+              </div>
+              <div className="col-md-6 py-4">
                 <label className="color title">Gender</label>
                 <select
                   className="jobInput"
                   value={gender}
+                  style={{ marginTop: 30 }}
                   onChange={(e) => {
                     this.setFieldVal(e.target.value, "gender");
                     this.setState({ chkgender: false });
@@ -557,11 +591,148 @@ class CourseRegistration extends React.Component {
                   <p className="text-danger">Select Gender</p>
                 ) : null}
               </div>
+
+
+              <div className="col-md-6 py-4">
+                <label className="color title">Email</label>
+
+                <input
+                  className="jobInput"
+                  placeholder="example@gmail.com"
+                  tyoe="email"
+                  style={{ marginTop: 10 }}
+                  value={email}
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "email");
+                    this.setState({ chkemail: false });
+                  }}
+                />
+                {this.state.chkemail ? (
+                  <p className="text-danger">Field is Emply</p>
+                ) : null}
+              </div>
+
+              {/* <div className="col-md-6 py-4">
+                    <label className="color title">How do you rate your existing skills with reference to the subject training ?</label>
+                    <select
+                      className="jobInput"
+                      // value={course}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "rateSkills");
+                        this.setState({ chkRateSkills: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Basic ">
+                        Basic
+                  </option>
+                      <option key={1} value="1">
+                        1
+                  </option>
+                      <option key={1} value="2">
+                        2
+                  </option>
+                      <option key={1} value="3">
+                        3
+                  </option>
+                      <option key={1} value="4">
+                        4
+                  </option>
+                      <option key={1} value="5">
+                        5
+                  </option>
+                      <option key={1} value="Expert">
+                        Expert
+                  </option>
+                    </select>
+                    {this.state.chkRateSkills ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div> */}
+
+              <div className="col-md-6 py-4">
+                <label className="color title">Contact Number</label>
+                <input
+                  className="jobInput"
+                  placeholder="03xx-xxxxxxx"
+                  type="text"
+                  maxLength="12"
+                  value={ContactNumber}
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "ContactNumber");
+                    this.setState({ chkContactNumber: false });
+                    this.checkNumber(e);
+                  }}
+                />
+                {this.state.chkContactNumber ? (
+                  <p className="text-danger">Field is Emply</p>
+                ) : null}
+              </div>
+              <div className="col-md-6 py-4">
+                <label className="color title">CNIC</label>
+                <input
+                  className="jobInput"
+                  placeholder="e.g 42101-1111111-1"
+                  type="text"
+                  value={cnic}
+                  maxLength="15"
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "cnic");
+                    this.setState({ chkcnic: false });
+                    this.checkNumber(e, 13);
+                  }}
+                />
+                {this.state.chkcnic ? (
+                  <p className="text-danger">Field is Emply</p>
+                ) : null}
+              </div>
+              {
+                this.state.course == 'DATA ANALYTICS BOOTCAMP' ? null :
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Father's CNIC</label>
+                    <input
+                      className="jobInput"
+                      placeholder="e.g 42101-1111111-1"
+                      type="text"
+                      maxLength="15"
+                      value={fatherCnic}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "fatherCnic");
+                        this.setState({ chkfatherCnic: false });
+                        this.checkNumber(e, 13);
+                      }}
+                    />
+                    {this.state.chkfatherCnic ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+              }
+
+
+              <div className="col-md-12 py-4">
+                <label className="color title">
+                  Full and Permanent Address
+                </label>
+                <input
+                  className="jobInput"
+                  placeholder=""
+                  type="text"
+                  value={address}
+                  onChange={(e) => {
+                    this.setFieldVal(e.target.value, "address");
+                    this.setState({ chkaddress: false });
+                  }}
+                />
+                {this.state.chkaddress ? (
+                  <p className="text-danger">Field is Emply</p>
+                ) : null}
+              </div>
               {this.state.course == 'DATA ANALYTICS BOOTCAMP' ?
                 <>
                   <div className="col-md-6 py-4">
                     <label className="color title">Organization Name</label>
                     <input
+                      style={{ marginTop: 30 }}
                       className="jobInput"
                       placeholder="Enter Organization Name"
                       type="text"
@@ -572,6 +743,120 @@ class CourseRegistration extends React.Component {
                       }}
                     />
                     {this.state.chkOrganizationName ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Current position / designation in the aforementioned organization</label>
+                    <input
+                      className="jobInput"
+                      placeholder="Enter Current position / Designation"
+                      type="text"
+                      value={position}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "position");
+                        this.setState({ chkPosition: false });
+                      }}
+                    />
+                    {this.state.chkPosition ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
+                  <div className="col-md-12 py-4">
+                    <h4 className="color title">Last Qualification</h4>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="qualification"
+                            type="radio"
+                            value="Matric"
+                            checked={lastQualification === "Matric"}
+                            onChange={(e) => {
+                              this.onSiteChanged(e);
+                              this.setState({ chklastQualification: false });
+                            }}
+                          />{" "}
+                      Matric
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="qualification"
+                            type="radio"
+                            value="Intermediate"
+                            checked={lastQualification === "Intermediate"}
+                            onChange={(e) => {
+                              this.onSiteChanged(e);
+                              this.setState({ chklastQualification: false });
+                            }}
+                          />{" "}
+                      Intermediate
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="qualification"
+                            type="radio"
+                            value="Graduate"
+                            checked={lastQualification === "Graduate"}
+                            onChange={(e) => {
+                              this.onSiteChanged(e);
+                              this.setState({ chklastQualification: false });
+                            }}
+                          />{" "}
+                      Graduate
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="qualification"
+                            type="radio"
+                            value="Undergraduate"
+                            checked={lastQualification === "Undergraduate"}
+                            onChange={(e) => {
+                              this.onSiteChanged(e);
+                              this.setState({ chklastQualification: false });
+                            }}
+                          />{" "}
+                      Undergraduate
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="qualification"
+                            type="radio"
+                            value="Masters"
+                            checked={lastQualification === "Masters"}
+                            onChange={(e) => {
+                              this.onSiteChanged(e);
+                              this.setState({ chklastQualification: false });
+                            }}
+                          />{" "}
+                      Masters
+                    </label>
+                      </div>
+                      <div className="col-md-3">
+                        <label>
+                          <input
+                            name="qualification"
+                            type="radio"
+                            value="PHD"
+                            checked={lastQualification === "PHD"}
+                            onChange={(e) => {
+                              this.onSiteChanged(e);
+                              this.setState({ chklastQualification: false });
+                            }}
+                          />{" "}
+                      PHD
+                    </label>
+                      </div>
+                    </div>
+                    {this.state.chklastQualification ? (
                       <p className="text-danger">Field is Emply</p>
                     ) : null}
                   </div>
@@ -610,66 +895,6 @@ class CourseRegistration extends React.Component {
                     ) : null}
                   </div>
                   <div className="col-md-6 py-4">
-                    <label className="color title">Current position / designation in the aforementioned organization</label>
-                    <input
-                      className="jobInput"
-                      placeholder="Enter Current position / Designation"
-                      type="text"
-                      value={position}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "position");
-                        this.setState({ chkPosition: false });
-                      }}
-                    />
-                    {this.state.chkPosition ? (
-                      <p className="text-danger">Field is Emply</p>
-                    ) : null}
-                  </div>
-                  <div className="col-md-6 py-4">
-                    <label className="color title">Do you have a laptop available to use in the training</label>
-                    <select
-                      className="jobInput"
-                      value={laptopAvailable}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "laptopAvailable");
-                        this.setState({ chkLaptopAvailable: false });
-                      }}
-                    >
-                      <option>Select</option>
-                      <option key={0} value="Yes">
-                        Yes
-                  </option>
-                      <option key={1} value="No">
-                        No
-                  </option>
-                    </select>
-                    {this.state.chkLaptopAvailable ? (
-                      <p className="text-danger">Select First</p>
-                    ) : null}
-                  </div>
-                  {/* <div className="col-md-6 py-4">
-                    <label className="color title">Are you a member of professional institution</label>
-                    <select
-                      className="jobInput"
-                      value={memberInstitution}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "memberInstitution");
-                        this.setState({ chkMemberInstitution: false });
-                      }}
-                    >
-                      <option>Select</option>
-                      <option key={0} value="Yes">
-                        Yes
-                  </option>
-                      <option key={1} value="No">
-                        No
-                  </option>
-                    </select>
-                    {this.state.chkMemberInstitution ? (
-                      <p className="text-danger">Select First</p>
-                    ) : null}
-                  </div> */}
-                  <div className="col-md-6 py-4">
                     <label className="color title">Your Membership number </label>
                     <input
                       className="jobInput"
@@ -682,22 +907,6 @@ class CourseRegistration extends React.Component {
                       }}
                     />
                     {this.state.chkMembershipNumber ? (
-                      <p className="text-danger">Field is Emply</p>
-                    ) : null}
-                  </div>
-                  <div className="col-md-6 py-4">
-                    <label className="color title">How many years of total experience do you have in the finance or related areas</label>
-                    <input
-                      className="jobInput"
-                      placeholder="Enter total experience"
-                      type="text"
-                      value={totalExperience}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "totalExperience");
-                        this.setState({ chkTotalExperience: false });
-                      }}
-                    />
-                    {this.state.chkTotalExperience ? (
                       <p className="text-danger">Field is Emply</p>
                     ) : null}
                   </div>
@@ -733,7 +942,22 @@ class CourseRegistration extends React.Component {
                       <p className="text-danger">Select First</p>
                     ) : null}
                   </div>
-
+                  <div className="col-md-6 py-4">
+                    <label className="color title">How many years of total experience do you have in the finance or related areas</label>
+                    <input
+                      className="jobInput"
+                      placeholder="Enter total experience"
+                      type="text"
+                      value={totalExperience}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "totalExperience");
+                        this.setState({ chkTotalExperience: false });
+                      }}
+                    />
+                    {this.state.chkTotalExperience ? (
+                      <p className="text-danger">Field is Emply</p>
+                    ) : null}
+                  </div>
                   <div className="col-md-12 py-4">
                     <h4 className="color title">How do you rate your existing skills with reference to the subject training</h4>
                     <div className="row mt-5">
@@ -819,6 +1043,33 @@ class CourseRegistration extends React.Component {
                       <p className="text-danger">Select First</p>
                     ) : null}
                   </div>
+                  <div className="col-md-6 py-4">
+                    <label className="color title">Do you have a laptop available to use in the training</label>
+                    <select
+                      className="jobInput"
+                      value={laptopAvailable}
+                      onChange={(e) => {
+                        this.setFieldVal(e.target.value, "laptopAvailable");
+                        this.setState({ chkLaptopAvailable: false });
+                      }}
+                    >
+                      <option>Select</option>
+                      <option key={0} value="Yes">
+                        Yes
+                  </option>
+                      <option key={1} value="No">
+                        No
+                  </option>
+                    </select>
+                    {this.state.chkLaptopAvailable ? (
+                      <p className="text-danger">Select First</p>
+                    ) : null}
+                  </div>
+
+
+
+
+
                   <div className="col-md-12 py-4">
                     <h4 className="color title">Select Modules</h4>
                     <div className="row mt-5">
@@ -836,271 +1087,107 @@ class CourseRegistration extends React.Component {
                   </div>
                 </> :
                 null}
-
-
-              {/* <div className="col-md-6 py-4">
-                    <label className="color title">How do you rate your existing skills with reference to the subject training ?</label>
-                    <select
-                      className="jobInput"
-                      // value={course}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "rateSkills");
-                        this.setState({ chkRateSkills: false });
-                      }}
-                    >
-                      <option>Select</option>
-                      <option key={0} value="Basic ">
-                        Basic
-                  </option>
-                      <option key={1} value="1">
-                        1
-                  </option>
-                      <option key={1} value="2">
-                        2
-                  </option>
-                      <option key={1} value="3">
-                        3
-                  </option>
-                      <option key={1} value="4">
-                        4
-                  </option>
-                      <option key={1} value="5">
-                        5
-                  </option>
-                      <option key={1} value="Expert">
-                        Expert
-                  </option>
-                    </select>
-                    {this.state.chkRateSkills ? (
-                      <p className="text-danger">Select First</p>
-                    ) : null}
-                  </div> */}
-              <div className="col-md-6 py-4">
-                <label className="color title">Father Name</label>
-                <input
-                  className="jobInput"
-                  placeholder="Father Name"
-                  type="text"
-                  value={fatherName}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "fatherName");
-                    this.setState({ chkfatherName: false });
-                  }}
-                />
-                {this.state.chkfatherName ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
-              <div className="col-md-6 py-4">
-                <label className="color title">Contact Number</label>
-                <input
-                  className="jobInput"
-                  placeholder="03xx-xxxxxxx"
-                  type="text"
-                  maxLength="12"
-                  value={ContactNumber}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "ContactNumber");
-                    this.setState({ chkContactNumber: false });
-                    this.checkNumber(e);
-                  }}
-                />
-                {this.state.chkContactNumber ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
-              <div className="col-md-6 py-4">
-                <label className="color title">CNIC</label>
-                <input
-                  className="jobInput"
-                  placeholder="e.g 42101-1111111-1"
-                  type="text"
-                  value={cnic}
-                  maxLength="15"
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "cnic");
-                    this.setState({ chkcnic: false });
-                    this.checkNumber(e, 13);
-                  }}
-                />
-                {this.state.chkcnic ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
-              {
-                this.state.course == 'DATA ANALYTICS BOOTCAMP' ? null :
-                  <div className="col-md-6 py-4">
-                    <label className="color title">Father's CNIC</label>
-                    <input
-                      className="jobInput"
-                      placeholder="e.g 42101-1111111-1"
-                      type="text"
-                      maxLength="15"
-                      value={fatherCnic}
-                      onChange={(e) => {
-                        this.setFieldVal(e.target.value, "fatherCnic");
-                        this.setState({ chkfatherCnic: false });
-                        this.checkNumber(e, 13);
-                      }}
-                    />
-                    {this.state.chkfatherCnic ? (
-                      <p className="text-danger">Field is Emply</p>
-                    ) : null}
-                  </div>
-              }
-
-              <div className="col-md-6 py-4">
-                <label className="color title">Email</label>
-
-                <input
-                  className="jobInput"
-                  placeholder="example@gmail.com"
-                  tyoe="email"
-                  style={{ marginTop: 10 }}
-                  value={email}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "email");
-                    this.setState({ chkemail: false });
-                  }}
-                />
-                {this.state.chkemail ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
-              <div className="col-md-6 py-4">
-                <label className="color title">DOB ( Date of Birth )</label>
-                <br />
-                <br />
-                <input
-                  type="date"
-                  className="dob"
-                  style={{ width: "100%" }}
-                  value={dob}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "dob");
-                    this.setState({ chkdob: false });
-                  }}
-                />
-                {this.state.chkdob ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
-              <div className="col-md-12 py-4">
-                <label className="color title">
-                  Full and Permanent Address
-                </label>
-                <input
-                  className="jobInput"
-                  placeholder=""
-                  type="text"
-                  value={address}
-                  onChange={(e) => {
-                    this.setFieldVal(e.target.value, "address");
-                    this.setState({ chkaddress: false });
-                  }}
-                />
-                {this.state.chkaddress ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
-              <div className="col-md-12 py-4">
-                <h4 className="color title">Last Qualification</h4>
-                <div className="row">
-                  <div className="col-md-3">
-                    <label>
-                      <input
-                        name="qualification"
-                        type="radio"
-                        value="Matric"
-                        checked={lastQualification === "Matric"}
-                        onChange={(e) => {
-                          this.onSiteChanged(e);
-                          this.setState({ chklastQualification: false });
-                        }}
-                      />{" "}
+              {this.state.course != "DATA ANALYTICS BOOTCAMP" ?
+                <div className="col-md-12 py-4">
+                  <h4 className="color title">Last Qualification</h4>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <label>
+                        <input
+                          name="qualification"
+                          type="radio"
+                          value="Matric"
+                          checked={lastQualification === "Matric"}
+                          onChange={(e) => {
+                            this.onSiteChanged(e);
+                            this.setState({ chklastQualification: false });
+                          }}
+                        />{" "}
                       Matric
                     </label>
-                  </div>
-                  <div className="col-md-3">
-                    <label>
-                      <input
-                        name="qualification"
-                        type="radio"
-                        value="Intermediate"
-                        checked={lastQualification === "Intermediate"}
-                        onChange={(e) => {
-                          this.onSiteChanged(e);
-                          this.setState({ chklastQualification: false });
-                        }}
-                      />{" "}
+                    </div>
+                    <div className="col-md-3">
+                      <label>
+                        <input
+                          name="qualification"
+                          type="radio"
+                          value="Intermediate"
+                          checked={lastQualification === "Intermediate"}
+                          onChange={(e) => {
+                            this.onSiteChanged(e);
+                            this.setState({ chklastQualification: false });
+                          }}
+                        />{" "}
                       Intermediate
                     </label>
-                  </div>
-                  <div className="col-md-3">
-                    <label>
-                      <input
-                        name="qualification"
-                        type="radio"
-                        value="Graduate"
-                        checked={lastQualification === "Graduate"}
-                        onChange={(e) => {
-                          this.onSiteChanged(e);
-                          this.setState({ chklastQualification: false });
-                        }}
-                      />{" "}
+                    </div>
+                    <div className="col-md-3">
+                      <label>
+                        <input
+                          name="qualification"
+                          type="radio"
+                          value="Graduate"
+                          checked={lastQualification === "Graduate"}
+                          onChange={(e) => {
+                            this.onSiteChanged(e);
+                            this.setState({ chklastQualification: false });
+                          }}
+                        />{" "}
                       Graduate
                     </label>
-                  </div>
-                  <div className="col-md-3">
-                    <label>
-                      <input
-                        name="qualification"
-                        type="radio"
-                        value="Undergraduate"
-                        checked={lastQualification === "Undergraduate"}
-                        onChange={(e) => {
-                          this.onSiteChanged(e);
-                          this.setState({ chklastQualification: false });
-                        }}
-                      />{" "}
+                    </div>
+                    <div className="col-md-3">
+                      <label>
+                        <input
+                          name="qualification"
+                          type="radio"
+                          value="Undergraduate"
+                          checked={lastQualification === "Undergraduate"}
+                          onChange={(e) => {
+                            this.onSiteChanged(e);
+                            this.setState({ chklastQualification: false });
+                          }}
+                        />{" "}
                       Undergraduate
                     </label>
-                  </div>
-                  <div className="col-md-3">
-                    <label>
-                      <input
-                        name="qualification"
-                        type="radio"
-                        value="Masters"
-                        checked={lastQualification === "Masters"}
-                        onChange={(e) => {
-                          this.onSiteChanged(e);
-                          this.setState({ chklastQualification: false });
-                        }}
-                      />{" "}
+                    </div>
+                    <div className="col-md-3">
+                      <label>
+                        <input
+                          name="qualification"
+                          type="radio"
+                          value="Masters"
+                          checked={lastQualification === "Masters"}
+                          onChange={(e) => {
+                            this.onSiteChanged(e);
+                            this.setState({ chklastQualification: false });
+                          }}
+                        />{" "}
                       Masters
                     </label>
-                  </div>
-                  <div className="col-md-3">
-                    <label>
-                      <input
-                        name="qualification"
-                        type="radio"
-                        value="PHD"
-                        checked={lastQualification === "PHD"}
-                        onChange={(e) => {
-                          this.onSiteChanged(e);
-                          this.setState({ chklastQualification: false });
-                        }}
-                      />{" "}
+                    </div>
+                    <div className="col-md-3">
+                      <label>
+                        <input
+                          name="qualification"
+                          type="radio"
+                          value="PHD"
+                          checked={lastQualification === "PHD"}
+                          onChange={(e) => {
+                            this.onSiteChanged(e);
+                            this.setState({ chklastQualification: false });
+                          }}
+                        />{" "}
                       PHD
                     </label>
+                    </div>
                   </div>
+                  {this.state.chklastQualification ? (
+                    <p className="text-danger">Field is Emply</p>
+                  ) : null}
                 </div>
-                {this.state.chklastQualification ? (
-                  <p className="text-danger">Field is Emply</p>
-                ) : null}
-              </div>
+
+                : null}
               <div className="col-md-12 py-4">
                 <label className="color title">
                   Passport Size Profile Image

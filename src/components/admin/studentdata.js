@@ -116,6 +116,7 @@ function StudentData(props) {
               <option>Select Course</option>
               <option>Web and Mobile</option>
               <option>Cyber Security</option>
+              <option>CCNA</option>
               <option>Graphic Designing</option>
               <option>IT Essential</option>
               <option>Certified Computer Operator</option>
@@ -135,6 +136,8 @@ function StudentData(props) {
               <option>06</option>
               <option>07</option>
               <option>08</option>
+              <option>09</option>
+              <option>10</option>
             </select>
           </div>
           <div className="col-md-3">
