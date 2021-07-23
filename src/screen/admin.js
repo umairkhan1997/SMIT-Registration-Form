@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import OpenForm from "../components/admin/opencourseform";
 import StudentData from "../components/admin/studentdata";
+import UpdateCourse from "../components/admin/updateCourse";
 import { useHistory } from "react-router-dom";
 
 function Admin() {
@@ -26,8 +27,9 @@ function Admin() {
             </div>
             <div className="p-5">
               <ul className="sideMenu">
-                <li onClick={() => setPanel("openForm")}>Course open</li>
                 <li onClick={() => setPanel("studentData")}>Student Data</li>
+                <li onClick={() => setPanel("openForm")}>Add New Course</li>
+                <li onClick={() => setPanel("updateCourse")}>Update Courses</li>
               </ul>
             </div>
             <div className="p-5 text-center">
@@ -42,6 +44,7 @@ function Admin() {
           >
             {panel == "openForm" ? <OpenForm /> : null}
             {panel == "studentData" ? <StudentData /> : null}
+            {panel == "updateCourse" ? <UpdateCourse /> : null}
           </div>
         </div>
       </div>

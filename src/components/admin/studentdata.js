@@ -5,6 +5,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { searchStdData } from "../../Redux/action/smitAction";
 import { useHistory } from "react-router-dom";
 import ReactToExcel from "react-html-table-to-excel";
+import { smitNotificationGet } from "../../Redux/action/smitAction";
+
+
 function StudentData(props) {
   const [course, setCourse] = useState("");
   const [batch, setBatch] = useState("");
@@ -15,6 +18,15 @@ function StudentData(props) {
   const [enteredRollNumber, setEnteredRollNumber] = useState("");
   const history = useHistory();
   const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    dispatch(smitNotificationGet())
+  }, [])
+  const { smitNotificationGets } = useSelector(
+    (state) => state.reducerSmit
+  );
+
   let searchData = () => {
     setLoading(true);
     if (batch == "") {
@@ -55,12 +67,6 @@ function StudentData(props) {
       })
     }
   };
-  // const toAdminCard = () => {
-
-  //   // dispatch(courseAnnouceGet());
-  // //  props.searchStdDatas();
-  // props.history.push("/admitcard");
-  // };
 
   const searchStd = () => {
     var rollNo = enteredRollNumber.slice(8)
@@ -90,6 +96,7 @@ function StudentData(props) {
   const { searchStdDatas } = useSelector(
     (state) => state.reducerSmit
   );
+  // const { smitNotificationGets } = this.props;
   // console.log(searchStdDatas, 'searchStdDatas')
   return (
     <div>
@@ -102,11 +109,15 @@ function StudentData(props) {
                   setCity(e.target.value);
                   // console.log(e.target.value)
                 }} className="inp">
-                  <option>Select City</option>
+                  {
+
+                    [...new Set(smitNotificationGets.map((a) => a.cityName))].map((a) => { return <option>{a}</option> })
+                  }
+                  {/* <option>Select City</option>
                   <option>Karachi</option>
                   <option>Faisalabad</option>
                   <option>Hyderabad</option>
-                  <option>Islamabad</option>
+                  <option>Islamabad</option> */}
                 </select>
               </div>
               : null
@@ -114,30 +125,16 @@ function StudentData(props) {
           <div className="col-md-3">
             <select onChange={(e) => setCourse(e.target.value)} className="inp">
               <option>Select Course</option>
-              <option>Web and Mobile</option>
-              <option>Cyber Security</option>
-              <option>CCNA</option>
-              <option>Graphic Designing</option>
-              <option>IT Essential</option>
-              <option>Certified Computer Operator</option>
-              <option>Certified Computerized Accountancy</option>
-              <option>Mobile Repairing</option>
-              <option>DATA ANALYTICS BOOTCAMP</option>
+              {
+
+                [...new Set(smitNotificationGets.map((a) => a.courseName))].map((a) => { return <option>{a}</option> })
+              }
             </select>
           </div>
           <div className="col-md-3">
             <select onChange={(e) => setBatch(e.target.value)} className="inp">
               <option>Select Batch</option>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
+              {[...new Set(smitNotificationGets.map((a) => a.batchName))].map((a) => { return <option>{a}</option> })}
             </select>
           </div>
           <div className="col-md-3">
@@ -235,4 +232,23 @@ function StudentData(props) {
     </div>
   );
 }
+
+// function mapStateToProp(state) {
+//   return {
+//     smitNotificationGets: state.reducerSmit.smitNotificationGets,
+//   };
+// }
+// function mapDispatchToProp(dispatch) {
+//   return {
+//     // stdData: (e, a, b, c, d) => {
+//     //   dispatch(stdData(e, a, b, c, d));
+//     // },
+//     smitNotificationGet: () => {
+//       dispatch(smitNotificationGet());
+//     },
+//   };
+// }
+// export default withRouter(
+//   connect(mapStateToProp, mapDispatchToProp)(StudentData)
+// );
 export default StudentData;

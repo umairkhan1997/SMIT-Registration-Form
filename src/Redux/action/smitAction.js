@@ -1,7 +1,7 @@
 import ActionTypes from "../constant/constant";
 import api from '../../components/apiList/apiList'
 
-// // const api = "https://swit-app.herokuapp.com/";
+// const api = "https://swit-app.herokuapp.com/";
 // const api = "http://localhost:5000/"
 
 

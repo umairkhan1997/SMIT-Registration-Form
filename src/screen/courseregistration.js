@@ -276,7 +276,7 @@ class CourseRegistration extends React.Component {
       // console.log('this.state.profileImg', this.state.profileImg)
       this.setState({ loading: true });
       var datas = smitNotificationGets.filter((name) => {
-        return name.courseName.toLowerCase().indexOf(course.toLowerCase()) >= 0;
+        return name.courseName.toLowerCase().indexOf(course.toLowerCase()) >= 0 && name.cityName.toLowerCase().indexOf(city.toLowerCase()) >= 0 && name.viewForm;
       });
       // console.log(datas[0].cityName, 'datasdatas')
       var formData = new FormData();
