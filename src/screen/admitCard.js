@@ -126,7 +126,7 @@ class AdmitCard extends React.Component {
                     <li>
                       {/* {console.log(cityName)} */}
                       Attestation of ID / Admit Card is extremely mandatory from
-                      {cityName.toLowerCase() === "karachi" && courseName.toLowerCase() === "cyber security"
+                      {cityName.toLowerCase() === "karachi" && gender.toLowerCase() === "female"
                         ? " Saylani Gulshan Campus (2nd Floor, Mumtaz Mobile Mall, Gulshan Chowrangi)"
                         : cityName.toLowerCase() === "hyderabad"
                           ? " Saylani Sarfaraz Branch, Opposite Bin Tayyab Hospital, Hyderabad"

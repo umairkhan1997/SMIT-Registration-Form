@@ -111,6 +111,7 @@ function AppRouter() {
         <PrivateRoute path="/admin" component={Admin} />
         <PublicRoute path="/login" component={Login} />
       </Switch>
+      <div style={{ backgroundColor: '#0066b3', height: 30, color: 'white', textAlign: 'center', paddingTop: 5 }}>Developed By : M Umair Khan , mohumairkhan36@gmail.com</div>
     </Router>
   );
 }

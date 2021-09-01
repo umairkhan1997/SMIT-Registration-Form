@@ -85,7 +85,7 @@ class SearchPdf extends React.Component {
                                     <div>
                                         <QRCode
                                             className="rounded shadow"
-                                            value={`${generatedId}${rollNo}`}
+                                            value={`${generatedId}`}
                                             bgColor="#f5f8ff"
                                             fgColor="#000"
                                             includeMargin={true}
@@ -105,7 +105,7 @@ class SearchPdf extends React.Component {
                                             <th>CNIC</th>
                                         </tr>
                                         <tr>
-                                            <td>{`${generatedId}${rollNo}`}</td>
+                                            <td>{`${generatedId}`}</td>
                                             <td>{fullName}</td>
                                             <td>{fatherName}</td>
                                             <td>{courseName}</td>
@@ -119,7 +119,7 @@ class SearchPdf extends React.Component {
                                         <li>
                                             {/* {console.log(cityName)} */}
                       Attestation of ID / Admit Card is extremely mandatory from
-                      {cityName.toLowerCase() === "karachi" && courseName.toLowerCase() === "cyber security"
+                      {cityName.toLowerCase() === "karachi" && gender.toLowerCase() === "female"
                                                 ? " Saylani Gulshan Campus (2nd Floor, Mumtaz Mobile Mall, Gulshan Chowrangi)"
                                                 : cityName.toLowerCase() === "hyderabad"
                                                     ? " Saylani Sarfaraz Branch, Opposite Bin Tayyab Hospital, Hyderabad"
@@ -169,7 +169,7 @@ class SearchPdf extends React.Component {
                                     </div>
                                     <div className="shortDetail">
                                         <p className="name numberHeading">{fullName}</p>
-                                        <p className="rollNumber">{`${generatedId}${rollNo}`}</p>
+                                        <p className="rollNumber">{`${generatedId}`}</p>
                                         <p className="course">{courseName}</p>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@ class SearchPdf extends React.Component {
                                         </tr>
                                         <tr>
                                             <td>Student ID:</td>
-                                            <td>{`${generatedId}${rollNo}`}</td>
+                                            <td>{`${generatedId}`}</td>
                                         </tr>
                                         <tr>
                                             <td>Batch:</td>
@@ -211,7 +211,7 @@ class SearchPdf extends React.Component {
                                         <div>
                                             <QRCode
                                                 className="rounded shadow border"
-                                                value={`${generatedId}${rollNo}`}
+                                                value={`${generatedId}`}
                                                 bgColor="#fff"
                                                 fgColor="#000"
                                                 includeMargin={true}

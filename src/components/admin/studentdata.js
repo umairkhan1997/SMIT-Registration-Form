@@ -42,7 +42,7 @@ function StudentData(props) {
       alert('Select City Name')
     }
     else {
-      setLoading(false);
+
       // console.log(checkCity == "All" ? city : checkCity, course, batch)
       const obj = {
         city: checkCity == "All" ? city : checkCity,
@@ -60,9 +60,11 @@ function StudentData(props) {
 
       const historys = history
       axios(options).then((res) => {
+        setLoading(false);
         setData(res.data.result)
         // console.log(res.data.result, 'ressssss')
       }).catch((err) => {
+        setLoading(false);
         // console.log(err, 'err')
       })
     }
@@ -138,7 +140,16 @@ function StudentData(props) {
             </select>
           </div>
           <div className="col-md-3">
-            <button type="button" class="btn btn-primary btn-lg" style={{ width: 150, height: 45, marginTop: 5 }} onClick={() => searchData()}>Search</button>
+            {loading ? (
+              <div
+                className="spinner-border"
+                role="status"
+              >
+                <span className="visually-hidden"></span>
+              </div>
+            ) : (
+                <button type="button" class="btn btn-primary btn-lg" style={{ width: 150, height: 45, marginTop: 5 }} onClick={() => searchData()}>Search</button>
+              )}
           </div>
         </div>
         <div className="d-flex" >

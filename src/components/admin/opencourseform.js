@@ -146,28 +146,35 @@ function OpenForm() {
   const [chkLastDate, setChkLastDate] = useState(false)
   const [chkCourseStatus, setChkCourseStatus] = useState(false)
   const [chkCourseDura, setChkCourseDura] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const setCityData = (e) => { setCity(cityList[e]['city']); setCityCode(cityList[e]['code']) }
   const setCourseData = (e) => { setCourse(courseList[e]['course']); setCourseId(courseList[e]['code']) };
 
   const addCourse = () => {
-
+    setLoading(true);
     if (!city || city == "Select City") {
+      setLoading(false);
       setChkCity(true)
     }
     else if (!course || course == "Select Course") {
+      setLoading(false);
       setChkCourse(true)
     }
     else if (!batch) {
+      setLoading(false);
       setChkbatch(true)
     }
     else if (!lastDate) {
+      setLoading(false);
       setChkLastDate(true)
     }
     else if (!courseDura) {
+      setLoading(false);
       setChkCourseDura(true)
     }
     else if (!courseStatus) {
+      setLoading(false);
       setChkCourseStatus(true)
     }
     else {
@@ -191,6 +198,7 @@ function OpenForm() {
       };
       axios(options)
         .then((res) => {
+          setLoading(false);
           alert('Course Added Successfully');
           setCity("")
           setCourse("")
@@ -202,6 +210,7 @@ function OpenForm() {
           setCityCode("")
         })
         .catch((err) => {
+          setLoading(false);
           alert('Course Not Added Successfully')
         });
     }
@@ -297,8 +306,16 @@ function OpenForm() {
           </div>
         </div>
         <div className="d-flex" >
-
-          <button className="prevbtn" style={{ width: 150, height: 40, marginTop: 20 }} onClick={() => { addCourse() }} >add Course</button>
+          {loading ? (
+            <div
+              className="spinner-border"
+              role="status"
+            >
+              <span className="visually-hidden"></span>
+            </div>
+          ) : (
+              <button className="prevbtn" style={{ width: 150, height: 40, marginTop: 20 }} onClick={() => { addCourse() }} >add Course</button>
+            )}
         </div>
       </div>
     </div>

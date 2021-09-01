@@ -579,13 +579,13 @@ class CourseRegistration extends React.Component {
                   }}
                 >
                   <option value="">Gender</option>
-                  {this.state.cyberSecurity ? null : (
+                  {this.state.city == 'Karachi' && this.state.course == 'Web and Mobile' ? null : (
                     <option value="Male">Male</option>
                   )}
-                  {this.state.course === "IT Essential" || this.state.course === "DATA ANALYTICS BOOTCAMP" ||
-                    this.state.cyberSecurity ? (
-                      <option value="Female">Female</option>
-                    ) : null}
+                  {/* {this.state.course === "IT Essential" || this.state.course === "DATA ANALYTICS BOOTCAMP" ||
+                    this.state.cyberSecurity ? ( */}
+                  <option value="Female">Female</option>
+                  {/* ) : null} */}
                 </select>
                 {this.state.chkgender ? (
                   <p className="text-danger">Select Gender</p>
