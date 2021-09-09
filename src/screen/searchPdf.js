@@ -51,8 +51,8 @@ class SearchPdf extends React.Component {
         } = this.props.searchStdDatas;
         // const { courseId, year, cityCode } = this.props;
         let imgOne = multiple_image[0];
-
-        console.log(this.props.searchStdDatas, 'searchStdDatas')
+        let addresses = this.props.location.state.datas[0].address
+        // console.log(this.props.searchStdDatas, 'searchStdDatas')
         return (
             <div className="backgroundLight">
                 <div
@@ -119,11 +119,12 @@ class SearchPdf extends React.Component {
                                         <li>
                                             {/* {console.log(cityName)} */}
                       Attestation of ID / Admit Card is extremely mandatory from
-                      {cityName.toLowerCase() === "karachi" && gender.toLowerCase() === "female"
+                      {addresses}
+                                            {/* {cityName.toLowerCase() === "karachi" 
                                                 ? " Saylani Gulshan Campus (2nd Floor, Mumtaz Mobile Mall, Gulshan Chowrangi)"
                                                 : cityName.toLowerCase() === "hyderabad"
                                                     ? " Saylani Sarfaraz Branch, Opposite Bin Tayyab Hospital, Hyderabad"
-                                                    : " Saylani Head Office, A-25 Bahadurabad Chowrangi"}
+                                                    : " Saylani Head Office, A-25 Bahadurabad Chowrangi"} */}
                       .
                     </li>
                                         <li>

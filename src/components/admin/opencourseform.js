@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 function OpenForm() {
   const [cityList, setCityList] = useState([
@@ -140,6 +140,11 @@ function OpenForm() {
   const [courseId, setCourseId] = useState("");
   const [year, setYear] = useState("21");
   const [cityCode, setCityCode] = useState("");
+  const [gender, setGender] = useState("");
+  const [chkGender, setChkGender] = useState(false)
+  const [genderArr, setGenderArr] = useState([]);
+  const [address, setAddress] = useState("");
+  const [chkAddress, setChkAddress] = useState(false)
   const [chkCity, setChkCity] = useState(false)
   const [chkCourse, setChkCourse] = useState(false)
   const [chkBatch, setChkbatch] = useState(false)
@@ -177,6 +182,14 @@ function OpenForm() {
       setLoading(false);
       setChkCourseStatus(true)
     }
+    else if (genderArr.length == 0) {
+      setLoading(false);
+      setChkGender(true)
+    }
+    else if (!address) {
+      setLoading(false);
+      setChkAddress(true)
+    }
     else {
       const obj = {
         cityName: city,
@@ -187,6 +200,8 @@ function OpenForm() {
         year,
         duration: courseDura,
         admissionLastDate: lastDate, cityCode,
+        gender: genderArr,
+        address
       };
       const options = {
         method: "POST",
@@ -194,7 +209,7 @@ function OpenForm() {
           Accept: "application/json",
         },
         data: obj,
-        url: "https://swit-app.herokuapp.com/smit/SaylaniNotificationAdd",
+        url: "http://localhost:3001/smit/SaylaniNotificationAdd",
       };
       axios(options)
         .then((res) => {
@@ -208,6 +223,8 @@ function OpenForm() {
           setCourseStatus("")
           setCourseId("")
           setCityCode("")
+          setGenderArr([]);
+          setAddress('')
         })
         .catch((err) => {
           setLoading(false);
@@ -215,8 +232,26 @@ function OpenForm() {
         });
     }
   }
+  const addGenderSlots = () => {
+    if (!gender) {
+      setChkGender(true)
+    }
+    else {
+      // console.log(gender);
+      setGenderArr([...genderArr, gender]);
+      setGender('');
+
+    }
+  }
+
+  const editGender = (ind) => {
+    let arr = genderArr;
+    arr.splice(ind, 1)
+    setGenderArr(arr);
+  }
 
 
+  // console.log(gender, genderArr, 'asdhask');
 
 
 
@@ -304,18 +339,73 @@ function OpenForm() {
               ) : null}
             </div>
           </div>
-        </div>
-        <div className="d-flex" >
-          {loading ? (
-            <div
-              className="spinner-border"
-              role="status"
-            >
-              <span className="visually-hidden"></span>
+
+          {/* STARTING */}
+          <div>
+
+            <div className="col-md-5 py-3 row">
+              <div className="col-md-10">
+
+                <p className="color title">Add Gender</p>
+                <input type="text"
+                  value={gender}
+                  className="inp" placeholder="Enter Gender"
+                  onChange={(e) => { setGender(e.target.value); }}
+                />
+              </div>
+              <div className="col-md-2">
+                <button className="btn btn-success"
+                  onClick={() => { addGenderSlots(); setChkGender(false) }}
+                  style={{ width: 80, height: 48, marginTop: 45 }}
+                >Add</button>
+              </div>
+              {chkGender ? (
+                <p className="text-danger">Enter Gender</p>
+              ) : null}
             </div>
-          ) : (
-              <button className="prevbtn" style={{ width: 150, height: 40, marginTop: 20 }} onClick={() => { addCourse() }} >add Course</button>
-            )}
+            <div className="col-md-10">
+              <p className="color title">Gender List</p>
+              <div className="row ">
+                {
+                  genderArr && genderArr.map((val, ind) => {
+                    return <span key={ind} className='row' style={{ marginRight: 10 }}><li className="mr-2 mt-3">{ind + 1}) {val}</li><i
+                      onClick={() => { editGender(ind) }}
+                      className="fa fa-times mr-4 mt-4 " style={{ color: 'red', fontSize: 10 }} aria-hidden="true"></i></span>
+                  })
+                }
+              </div>
+              {/* setState({...state,courseSlots:state.courseSlots.slice(state.courseSlots.indexOf(val, 1))}) */}
+            </div>
+          </div>
+          {/* ENDING */}
+          <div className="row">
+            <div className="col-md-6 py-3">
+              <p className="color title">Enter Address</p>
+              <input
+                type="text"
+                value={address}
+                className="inp"
+                placeholder="Enter Address"
+                onChange={(e) => { setAddress(e.target.value); setChkAddress(false) }}
+              />
+              {chkAddress ? (
+                <p className="text-danger">Enter Address</p>
+              ) : null}
+            </div>
+            <div className="mt-5 ml-5" >
+              {loading ? (
+                <div
+                  className="spinner-border"
+                  role="status"
+                >
+                  <span className="visually-hidden"></span>
+                </div>
+              ) : (
+                  <button className="prevbtn" style={{ width: 150, height: 40, marginTop: 20 }} onClick={() => { addCourse() }} >add Course</button>
+                )}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

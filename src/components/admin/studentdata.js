@@ -89,9 +89,13 @@ function StudentData(props) {
       // setData(res.data.result)
       dispatch(searchStdData(res.data.data));
       // console.log(res, 'ressssss')
-      history.push("/searchPdf");
+      var datas = smitNotificationGets.filter((name) => {
+        return name.courseName.toLowerCase().indexOf(res.data.data.courseName.toLowerCase()) >= 0 && name.cityName.toLowerCase().indexOf(res.data.data.cityName.toLowerCase()) >= 0 && name.viewForm;
+      });
+      // console.log(datas, 'datasdatas')
+      history.push("/searchPdf", { datas });
     }).catch((err) => {
-      alert('No Result Found')
+      alert('No Result Found', err)
       // console.log(err, 'err');
     })
   }
@@ -184,6 +188,7 @@ function StudentData(props) {
                   <th>ID</th>
                   <th>Name</th>
                   <th>Father Name</th>
+                  <th>Email</th>
                   <th>Course</th>
                   <th>Batch</th>
                   <th>CNIC</th>
@@ -213,6 +218,7 @@ function StudentData(props) {
                           <td>{e.generatedId}</td>
                           <td>{e.fullName}</td>
                           <td>{e.fatherName}</td>
+                          <td>{e.email}</td>
                           <td>{e.courseName}</td>
                           <td>{e.batchName}</td>
                           <td>{e.cnic}</td>

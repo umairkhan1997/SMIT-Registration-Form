@@ -48,7 +48,10 @@ class AdmitCard extends React.Component {
       multiple_image,
     } = this.props.stdDatas.data.data;
     const { courseId, year, cityCode } = this.props;
+
     let imgOne = multiple_image[0];
+    let addresses = this.props.location.state.datas[0].address
+    console.log(this.props, 'datasdatas')
     return (
       <div className="backgroundLight">
         <div
@@ -124,14 +127,15 @@ class AdmitCard extends React.Component {
                   <ol>
                     <li>Please colour print of this Admit / ID card</li>
                     <li>
-                      {/* {console.log(cityName)} */}
+                      Attestation of ID / Admit Card is extremely mandatory from {addresses}.
+                      {/* {console.log(cityName)}
                       Attestation of ID / Admit Card is extremely mandatory from
-                      {cityName.toLowerCase() === "karachi" && gender.toLowerCase() === "female"
+                      {cityName.toLowerCase() === "karachi"
                         ? " Saylani Gulshan Campus (2nd Floor, Mumtaz Mobile Mall, Gulshan Chowrangi)"
                         : cityName.toLowerCase() === "hyderabad"
                           ? " Saylani Sarfaraz Branch, Opposite Bin Tayyab Hospital, Hyderabad"
                           : cityName.toLowerCase() === "faisalabad" ? " Laal Mill, Chowk, Factory Area, Faisalabad, Punjab" : " Saylani Head Office, A-25 Bahadurabad Chowrangi"}
-                      .
+                      . */}
                     </li>
                     <li>
                       No student will be allowed to enter in Entry Test without

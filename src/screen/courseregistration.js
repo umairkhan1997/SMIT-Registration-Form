@@ -105,9 +105,9 @@ class CourseRegistration extends React.Component {
     return true;
   };
 
-  toAdminCard = (e, a, b, c, d) => {
+  toAdminCard = (e, a, b, c, d, datas) => {
     this.props.stdData(e, a, b, c, d);
-    this.props.history.push("/admitcard");
+    this.props.history.push("/admitcard", { datas });
   };
   checkNumber = (e, reference) => {
     let b = e.target.value;
@@ -392,7 +392,7 @@ class CourseRegistration extends React.Component {
               URL.createObjectURL(this.state.profileImg[0]),
               datas[0].courseId,
               datas[0].year,
-              datas[0].cityCode
+              datas[0].cityCode, datas
             );
             alert("Form Submitted");
 
@@ -440,6 +440,7 @@ class CourseRegistration extends React.Component {
       membershipNumber,
       memberInstitution,
       laptopAvailable,
+      course
     } = this.state;
     const { smitNotificationGets } = this.props;
     // console.log(loading, "loadingloading");
@@ -579,13 +580,29 @@ class CourseRegistration extends React.Component {
                   }}
                 >
                   <option value="">Gender</option>
-                  {this.state.city == 'Karachi' && this.state.course == 'Web and Mobile' ? null : (
-                    <option value="Male">Male</option>
+                  {smitNotificationGets
+                    .filter((name) => {
+                      return (
+                        name.cityName
+                          .toLowerCase()
+                          .indexOf(city.toLowerCase()) >= 0 &&
+                        name.courseName.toLowerCase().indexOf(course.toLowerCase()) >= 0 && name.viewForm
+                      );
+                    })
+                    .map((filteredName, i) => {
+                      return filteredName.viewForm ? (
+                        <option key={i}>{filteredName.gender}</option>
+                      ) : null;
+                    })}
+                  {/* {this.state.course == 'CCNA' ? null : (
+                    <option value="female">Female</option>
                   )}
-                  {/* {this.state.course === "IT Essential" || this.state.course === "DATA ANALYTICS BOOTCAMP" ||
-                    this.state.cyberSecurity ? ( */}
-                  <option value="Female">Female</option>
-                  {/* ) : null} */}
+                  {this.state.course === "Web and Mobile" || this.state.course === "DATA ANALYTICS BOOTCAMP" ||
+                    this.state.cyberSecurity ? (
+                  {this.state.course == 'Web and Mobile' ? null : (
+                    <option value="male">Male</option>
+                  )}
+                   ) : null} */}
                 </select>
                 {this.state.chkgender ? (
                   <p className="text-danger">Select Gender</p>
