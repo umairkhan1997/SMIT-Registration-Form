@@ -90,7 +90,7 @@ function StudentData(props) {
       dispatch(searchStdData(res.data.data));
       // console.log(res, 'ressssss')
       var datas = smitNotificationGets.filter((name) => {
-        return name.courseName.toLowerCase().indexOf(res.data.data.courseName.toLowerCase()) >= 0 && name.cityName.toLowerCase().indexOf(res.data.data.cityName.toLowerCase()) >= 0 && name.viewForm;
+        return name.courseName.toLowerCase().indexOf(res.data.data.courseName.toLowerCase()) >= 0 && name.cityName.toLowerCase().indexOf(res.data.data.cityName.toLowerCase()) >= 0;
       });
       // console.log(datas, 'datasdatas')
       history.push("/searchPdf", { datas });

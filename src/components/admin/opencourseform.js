@@ -41,6 +41,10 @@ function OpenForm() {
       code: "01",
     },
     {
+      course: "AI and Chatbot",
+      code: "23",
+    },
+    {
       course: "Graphic Designing",
       code: "02",
     },
@@ -209,7 +213,7 @@ function OpenForm() {
           Accept: "application/json",
         },
         data: obj,
-        url: "http://localhost:3001/smit/SaylaniNotificationAdd",
+        url: "https://swit-app.herokuapp.com/smit/SaylaniNotificationAdd",
       };
       axios(options)
         .then((res) => {

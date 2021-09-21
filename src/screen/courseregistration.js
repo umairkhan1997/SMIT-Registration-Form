@@ -590,9 +590,13 @@ class CourseRegistration extends React.Component {
                       );
                     })
                     .map((filteredName, i) => {
-                      return filteredName.viewForm ? (
-                        <option key={i}>{filteredName.gender}</option>
-                      ) : null;
+                      // console.log(filteredName.gender, 'asdsad');
+                      return filteredName.gender.map((val, ind) => {
+                        return <option key={i}>{val}</option>
+                      })
+                      // return filteredName.viewForm ? (
+                      //   <option key={i}>{filteredName.gender}</option>
+                      // ) : null;
                     })}
                   {/* {this.state.course == 'CCNA' ? null : (
                     <option value="female">Female</option>
